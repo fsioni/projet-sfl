@@ -2,7 +2,7 @@ EXECS_NAME = bin/exec bin/exampletmx bin/maptest
 OBJ_FILES = obj/main.o obj/exampletmx.o obj/maptest.o
 
 CC = g++
-CFLAGS = -Wall -ggdb
+CFLAGS = -Wall -ggdb -std=c++14
 
 INCLUDE_SFML = -I./extern/SFML/include 
 INCLUDE_TMX = -Iextern/tmxlite/include
