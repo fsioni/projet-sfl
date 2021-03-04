@@ -41,7 +41,7 @@ int main()
 
     MapLayer layerZero(map, 0);
     MapLayer layerOne(map, 1);
-    MapLayer layerTwo(map, 2);
+    //MapLayer layerTwo(map, 2);
 
     sf::Clock globalClock;
     while (window.isOpen())
@@ -59,7 +59,7 @@ int main()
         window.clear(sf::Color::Black);
         window.draw(layerZero);
         window.draw(layerOne);
-        window.draw(layerTwo);
+        //window.draw(layerTwo);
         window.display();
     }
 
