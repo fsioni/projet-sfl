@@ -8,20 +8,17 @@ Layer::Layer(){
     height = -1;
 }
 
-Layer::Layer(int id_, std::string name_, int width_,
-             int height_, std::vector<int> data_){
-    id = id_;
-    name = name_;
-    width = width_;
-    height = height_;
-    data = data_;
-}
 
 Layer::~Layer(){
 
 }
 
 void Layer::rawDataToLayer(std::string rawData){
+    // std::stoi => string to int
+    // getAttributeValue du module tmxParsing
+    // => prend un attribut et renvoie sa valeur
+    // ex : attribut = id="2" => 2
+
     id = std::stoi(getAttributeValue(rawData, "id"));
     height = std::stoi(getAttributeValue(rawData, "height"));
     width = std::stoi(getAttributeValue(rawData, "width"));
@@ -29,15 +26,20 @@ void Layer::rawDataToLayer(std::string rawData){
 
     int startData, endData;
     startData = rawData.find("<data ");
-    // on ne sait pas combien de caractère dans <data .... >
+    // Recherche de la fin de la balise ouvrante car il y a des
+    // des paramètres dedans donc longueur variable
     startData = rawData.find(">", startData); 
-    // prochain char + retour à la ligne
-    startData+=3; 
+    // Ajout de +2 pour avancer la position juste avant le premier entier
+    startData+=2; 
+    // Position de la balise fermantes
     endData = rawData.find("</data>");
 
-    // on recupère les caractères entre <data> et </data>
+    // Recupère les caractères entre <data> et </data>
     std::string strData = rawData.substr(startData, endData-startData);
     
+    // Appel de la fonction du module tmxParsing pour transformer
+    // une string sous format CSV (Comma separated values) en un
+    // tableau dynamique d'entier.
     data = csvToInt(strData);
 }
 
