@@ -1,11 +1,12 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include <fstream>
+//#include <fstream>
 #include <string>
 #include <vector>
-#include <sstream>
+
 
 #include "Layer.h"
+#include "Tileset.h"
 
    
 std::vector<Layer>  tmxToLayersVector(std::string filename){
@@ -39,6 +40,10 @@ int main(void){
         vect[i].display();
     }
 
+    std::string tileset = fileToString("data/maps/tilesets/tmxLiteExample.tsx");
+    Tileset ts;
+    ts.rawDataToTileset(tileset);
+    ts.display();
     
     // Affichage SFML
     sf::Texture tileTexture;
