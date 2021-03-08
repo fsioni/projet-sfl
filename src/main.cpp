@@ -75,7 +75,7 @@ int main(void){
         int w = ts.tileWidth;
         int h =ts.tileHeight;
         int x, y, data;
-        // Affichage de seulement 1 couche
+        
         for(int k = 0; k < vect.size(); k++){
             for(int i = 0; i < vect[k].width; i++){
                 for(int j = 0; j<vect[k].height; j++){
