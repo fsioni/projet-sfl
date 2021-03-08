@@ -3,6 +3,7 @@
 #include "tmxParsing.h"
 
 class Tileset{
+public:
     std::string name;
     int tileWidth;
     int tileHeight;
@@ -11,7 +12,7 @@ class Tileset{
     std::string tileMapPath;
     int tileMapWidth;
     int tileMapHeight;
-public:
+
     Tileset();
     ~Tileset();
 

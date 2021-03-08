@@ -26,7 +26,7 @@ void Tileset::rawDataToTileset(std::string rawData){
     // au repertoire racine du projet
     std::string tsxPath = getAttributeValue(rawData, "source");
     tileMapPath = tsxPath.substr(5, tsxPath.length());
-    tileMapPath = "/data"+tileMapPath;
+    tileMapPath = "./data"+tileMapPath;
 
 
     // Reduction du champs de recherche à partir de la balise <image>

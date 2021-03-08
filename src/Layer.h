@@ -11,6 +11,7 @@
 */ 
 
 class Layer{
+public :
     /*! \brief Idententifiant de la couche représenté par un entier. */
     int id;
     /*! \brief Nom de la couche. */
@@ -22,7 +23,7 @@ class Layer{
     /*! \brief Tableau dynamique contenant les données de la couche */
     std::vector<int> data;
 
-public :
+
     /*! \brief Constructeur par défaut.
     *   Initialise id, width et height à -1,
     *   le nom est égale à "NULL".
