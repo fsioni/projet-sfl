@@ -4,3 +4,5 @@
 callgrind*
 .git*
 .vscode
+bin/*
+obj/*
