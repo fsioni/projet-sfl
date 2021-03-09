@@ -11,6 +11,9 @@ int main(void){
     std::string tmxFile = "data/maps/tilemaps/tmxLiteExample.tmx";
     std::string tsxFile = "data/maps/tilesets/tmxLiteExample.tsx";
 
+    tmxFile = "data/maps/tilemaps/mainTilemap.tmx";
+    tsxFile = "data/maps/tilesets/mainTileSet.tsx";
+
     Map map(tmxFile, tsxFile);
     
 
@@ -24,7 +27,8 @@ int main(void){
 
     sf::RenderWindow window(sf::VideoMode(800, 800, 32), "Tilemap loadind and displaying");
     
-   
+    int px=40;
+    int py=40;
 
     while(window.isOpen()){
         sf::Event Event;
@@ -35,6 +39,29 @@ int main(void){
             case sf::Event::Closed:
                 window.close();
                 break;
+
+            case sf::Event::KeyPressed:
+                switch (Event.key.code)
+                {
+                case sf::Keyboard::Right:
+                    px ++;
+                    break;
+                
+                case sf::Keyboard::Left:
+                    px --;
+                    break;
+                
+                case sf::Keyboard::Up:
+                    py --;
+                    break;
+
+                case sf::Keyboard::Down:
+                    py ++;
+                    break;            
+                
+                default:
+                    break;
+                }
             
             default:
                 break;
@@ -48,8 +75,7 @@ int main(void){
         int x, y, data;
 
         // """"Camera"""""
-        int px=40;
-        int py=40;
+        
         int winWidth, winHeight;
         
         winHeight = 800;
