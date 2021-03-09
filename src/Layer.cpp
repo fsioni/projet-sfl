@@ -16,6 +16,25 @@ Layer::~Layer(){
 }
 
 
+Layer::Layer(const Layer & layer){
+    id = layer.id;
+    name = layer.name;
+    width = layer.width;
+    height = layer.height;
+    data = layer.data;
+}
+
+Layer & Layer::operator=(const Layer & layer){
+    if(&layer != this){
+        id = layer.id;
+        name = layer.name;
+        width = layer.width;
+        height = layer.height;
+        data = layer.data;
+    }
+    return *this;
+}
+
 // ==== SETERS ====
 
 void Layer::SetId(int id_){
@@ -37,7 +56,7 @@ void Layer::SetData(std::vector<int> data_){
     data = data_;
 }
 void Layer::SetData(int x, int y, int value){
-    data[y * width + x];
+    data[y * width + x] = value;
 }
 
 // ==== GETERS ====
