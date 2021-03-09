@@ -18,6 +18,62 @@ Tileset::~Tileset(){
 
 }
 
+
+// ====== SETERS ET GETERS =======
+void Tileset::SetName(std::string name_){
+    name = name_;
+}    
+void Tileset::SetTileWidth(int tw){
+    tileWidth = tw;
+}
+void Tileset::SetTileHeight(int th){
+    tileHeight = th;
+}
+void Tileset::SetTileCount(int tc){
+    tileCount = tc;
+}
+void Tileset::SetColumn(int col){
+    column = col;
+}
+void Tileset::SetTileMapPath(int tmp){
+    tileMapPath = tmp;
+}
+void Tileset::SetTileMapWidth(int tmw){
+    tileMapWidth = tmw;
+}
+void Tileset::SetTileMapHeight(int tmh){
+    tileMapHeight = tmh;
+}
+
+
+std::string Tileset::GetName() const{
+    return name;
+}
+int Tileset::GetTileWidth() const{
+    return tileWidth;
+}
+int Tileset::GetTileHeight() const{
+    return tileHeight;
+}
+int Tileset::GetTileCount() const{
+    return tileCount;
+}
+int Tileset::GetColumn() const{
+    return column;
+}
+std::string Tileset::GetTileMapPath() const{
+    return tileMapPath;
+}
+int Tileset::GetTileMapWidth() const{
+    return tileMapWidth;
+}
+int Tileset::GetTileMapHeight() const{
+    return tileMapHeight;
+}
+
+
+
+
 void Tileset::rawDataToTileset(std::string rawData){
     name = getAttributeValue(rawData, "name");
     tileWidth = stoi(getAttributeValue(rawData, "tilewidth"));

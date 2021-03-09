@@ -51,7 +51,7 @@ int main(void){
     sf::Sprite tiles;
 
     // Chargement de la tileMap
-    tileTexture.loadFromFile(ts.tileMapPath);
+    tileTexture.loadFromFile(ts.GetTileMapPath());
     tiles.setTexture(tileTexture);
 
     sf::RenderWindow window(sf::VideoMode(800, 800, 32), "Tilemap loadind and displaying");
@@ -75,8 +75,8 @@ int main(void){
         }
         window.clear();
         
-        int w = ts.tileWidth;
-        int h =ts.tileHeight;
+        int w = ts.GetTileWidth();
+        int h =ts.GetTileHeight();
         int x, y, data;
 
         // """"Camera"""""
@@ -93,16 +93,14 @@ int main(void){
         int maxY = py + winHeight/h;
         
         for(int k = 0; k < vect.size(); k++){
-            /*
-            for(int i = 0; i < vect[k].width; i++){
-                for(int j = 0; j<vect[k].height; j++){ */
+
             for(int i = minX; i<maxX; i++){
                 for(int j=minY; j<maxY; j++){
-                    data = vect[k].data[i* vect[k].width + j];
+                    data = vect[k].GetData(i, j);
                     if(data!=0){
                         x = ((data-1) % 8)*w;
                         y = ((data-1) / 8)*h;
-                        //tiles.setPosition(i*w, j*h);
+
                         tiles.setPosition((i-minX)*w, (j-minY)*h);
                         tiles.setTextureRect(sf::IntRect(x, y, w, h));
                         window.draw(tiles);

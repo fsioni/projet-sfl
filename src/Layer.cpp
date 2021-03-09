@@ -15,6 +15,54 @@ Layer::~Layer(){
 
 }
 
+
+// ==== SETERS ====
+
+void Layer::SetId(int id_){
+    id = id_;
+}
+
+void Layer::SetName(std::string name_){
+    name = name_;
+}
+
+void Layer::SetWidth(int width_){
+    width = width_;
+}
+
+void Layer::SetHeight(int height_){
+    height = height_;
+}
+void Layer::SetData(std::vector<int> data_){
+    data = data_;
+}
+void Layer::SetData(int x, int y, int value){
+    data[y * width + x];
+}
+
+// ==== GETERS ====
+
+int Layer::GetID() const{
+    return id;
+}
+std::string Layer::GetName() const{
+    return name;
+}
+int Layer::GetWidth() const{
+    return width;
+}
+int Layer::GetHeight() const{
+    return height;
+}
+int Layer::GetData(int x, int y) const{
+    return data[y * width + x];
+}
+std::vector<int> Layer::GetVectData() const{
+    return data;
+}
+
+
+
 void Layer::rawDataToLayer(std::string rawData){
     // std::stoi => string to int
     // getAttributeValue du module tmxParsing

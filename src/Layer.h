@@ -10,7 +10,7 @@
 */ 
 
 class Layer{
-public :
+
     /*! \brief Idententifiant de la couche représenté par un entier. */
     int id;
     /*! \brief Nom de la couche. */
@@ -22,7 +22,7 @@ public :
     /*! \brief Tableau dynamique contenant les données de la couche */
     std::vector<int> data;
 
-
+public:
     /*! \brief Constructeur par défaut.
     *   Initialise id, width et height à -1,
     *   le nom est égale à "NULL".
@@ -30,6 +30,24 @@ public :
     Layer();
     /*! \brief Destructeur. */
     ~Layer();
+
+
+    // TODO ======== SETER ET GETER A COMMENTER =======
+    void SetId(int id_);
+    void SetName(std::string name_);
+    void SetWidth(int width_);
+    void SetHeight(int height_);
+    void SetData(std::vector<int> data_);
+    void SetData(int x, int y, int value);
+
+    int GetID() const;
+    std::string GetName() const;
+    int GetWidth() const;
+    int GetHeight() const;
+    int GetData(int x, int y) const;
+    std::vector<int> GetVectData() const;
+
+    
 
     /*! \brief Assigne des données brut aux membres.
     *   \param [in] rawData : std::string, contenu brut des balises <layer></layer> d'un fichier .tmx.
