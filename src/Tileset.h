@@ -15,7 +15,10 @@ class Tileset{
 
 public:
     Tileset();
+    Tileset(const Tileset & ts);
     ~Tileset();
+
+    Tileset & operator=(const Tileset & ts);
 
     // ====== SETERS ET GETERS =======
     void SetName(std::string name_);    

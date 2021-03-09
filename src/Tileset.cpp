@@ -14,10 +14,34 @@ Tileset::Tileset(){
     tileMapHeight = -1;
 }
 
+Tileset::Tileset(const Tileset & ts){
+    name = ts.name;
+    tileHeight = ts.tileHeight;
+    tileWidth = ts.tileWidth;
+    tileCount = ts.tileCount;
+    column = ts.column;
+    tileMapPath = ts.tileMapPath;
+    tileMapWidth = ts.tileMapWidth;
+    tileMapHeight = ts.tileMapHeight;
+}
+
 Tileset::~Tileset(){
 
 }
 
+Tileset & Tileset::operator=(const Tileset & ts){
+    if(&ts != this){
+        name = ts.name;
+        tileHeight = ts.tileHeight;
+        tileWidth = ts.tileWidth;
+        tileCount = ts.tileCount;
+        column = ts.column;
+        tileMapPath = ts.tileMapPath;
+        tileMapWidth = ts.tileMapWidth;
+        tileMapHeight = ts.tileMapHeight;
+    }
+    return *this;
+}
 
 // ====== SETERS ET GETERS =======
 void Tileset::SetName(std::string name_){
