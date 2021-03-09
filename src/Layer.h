@@ -28,9 +28,11 @@ public:
     *   le nom est égale à "NULL".
     * */
     Layer();
+    Layer(const Layer & layer);
     /*! \brief Destructeur. */
     ~Layer();
 
+    Layer & operator=(const Layer & layer);
 
     // TODO ======== SETER ET GETER A COMMENTER =======
     void SetId(int id_);
