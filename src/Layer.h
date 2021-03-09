@@ -1,9 +1,8 @@
-#include <iostream>
-#include <fstream>
+#ifndef _LAYER_
+
 #include <string>
 #include <vector>
-#include <sstream>
-#include "tmxParsing.h"
+
 
 /*! \class Layer
 *   \brief Classe représentant une couche (layer).
@@ -47,7 +46,7 @@ public :
     *   la console.
     */
     void display() const;
-
-
 };
+
+#endif
 

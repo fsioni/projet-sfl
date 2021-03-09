@@ -1,3 +1,6 @@
+#include <iostream>
+#include "tmxParsing.h"
+
 #include "Tileset.h"
 
 Tileset::Tileset(){

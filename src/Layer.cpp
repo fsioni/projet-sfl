@@ -1,5 +1,7 @@
-#include "Layer.h"
+#include <iostream>
 #include "tmxParsing.h"
+
+#include "Layer.h"
 
 Layer::Layer(){
     id = -1;

@@ -1,6 +1,7 @@
+#ifndef _TILESET_
+
 #include <string>
-#include <iostream>
-#include "tmxParsing.h"
+
 
 class Tileset{
 public:
@@ -19,3 +20,5 @@ public:
     void rawDataToTileset(std::string rawData);
     void display() const;
 };
+
+#endif

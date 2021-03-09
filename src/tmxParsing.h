@@ -1,8 +1,8 @@
-#include <iostream>
-#include <fstream>
+#ifndef _TMX_PARSING_
+
 #include <string>
 #include <vector>
-#include <sstream>
+
 
 /*! \brief Retourne un fichier dans une std::string.
 *   \param [in] fileName : std::string, chemin et nom du fichier à lire.
@@ -26,3 +26,5 @@ std::string getAttributeValue(std::string str, std::string attribute);
 *   \param [in] data : std::string, donnée sous forme "1, 2, 3, 4, 5"
 */
 std::vector<int> csvToInt(std::string data);
+
+#endif

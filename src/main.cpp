@@ -6,6 +6,7 @@
 
 #include "Layer.h"
 #include "Tileset.h"
+#include "tmxParsing.h"
 
    
 std::vector<Layer>  tmxToLayersVector(std::string filename){
@@ -53,8 +54,10 @@ int main(void){
     tileTexture.loadFromFile(ts.tileMapPath);
     tiles.setTexture(tileTexture);
 
-    sf::RenderWindow window(sf::VideoMode(1300, 900, 32), "Tilemap loadind and displaying");
+    sf::RenderWindow window(sf::VideoMode(800, 800, 32), "Tilemap loadind and displaying");
     
+   
+
     while(window.isOpen()){
         sf::Event Event;
         while(window.pollEvent(Event)){
@@ -75,16 +78,32 @@ int main(void){
         int w = ts.tileWidth;
         int h =ts.tileHeight;
         int x, y, data;
+
+        // """"Camera"""""
+        int px=40;
+        int py=40;
+        int winWidth, winHeight;
+        
+        winHeight = 800;
+        winWidth = 800;
+
+        int minX = px - winWidth/w;
+        int maxX = px + winWidth/w;
+        int minY = py - winHeight/h;
+        int maxY = py + winHeight/h;
         
         for(int k = 0; k < vect.size(); k++){
+            /*
             for(int i = 0; i < vect[k].width; i++){
-                for(int j = 0; j<vect[k].height; j++){
+                for(int j = 0; j<vect[k].height; j++){ */
+            for(int i = minX; i<maxX; i++){
+                for(int j=minY; j<maxY; j++){
                     data = vect[k].data[i* vect[k].width + j];
                     if(data!=0){
                         x = ((data-1) % 8)*w;
                         y = ((data-1) / 8)*h;
-
-                        tiles.setPosition(i*w, j*h);
+                        //tiles.setPosition(i*w, j*h);
+                        tiles.setPosition((i-minX)*w, (j-minY)*h);
                         tiles.setTextureRect(sf::IntRect(x, y, w, h));
                         window.draw(tiles);
                     }
@@ -94,7 +113,6 @@ int main(void){
         window.display();
     }
     
-
     return 0;
 }
 
