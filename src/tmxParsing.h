@@ -1,4 +1,5 @@
 #ifndef _TMX_PARSING_
+#define _TMX_PARSING_
 
 #include <string>
 #include <vector>

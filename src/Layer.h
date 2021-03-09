@@ -1,17 +1,18 @@
 #ifndef _LAYER_
+#define _LAYER_
 
 #include <string>
 #include <vector>
 
 
 /*! \class Layer
-*   \brief Classe représentant une couche (layer).
+*   \brief Classe représentant une couche de tuiles (layer).
 *
 */ 
 
 class Layer{
-
-    /*! \brief Idententifiant de la couche représenté par un entier. */
+private:
+    /*! \brief Identifiant de la couche représenté par un entier. */
     int id;
     /*! \brief Nom de la couche. */
     std::string name;

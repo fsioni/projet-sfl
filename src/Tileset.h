@@ -1,4 +1,5 @@
 #ifndef _TILESET_
+#define _TILESET_
 
 #include <string>
 
