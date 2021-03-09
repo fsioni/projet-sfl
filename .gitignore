@@ -2,6 +2,7 @@
 .DS_Store
 *.out
 callgrind*
+<<<<<<< HEAD
 .git*
 .vscode
 bin/*
