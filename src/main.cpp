@@ -1,57 +1,25 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <string>
-#include <vector>
 
-
-#include "Layer.h"
-#include "Tileset.h"
-#include "tmxParsing.h"
-
-   
-std::vector<Layer>  tmxToLayersVector(std::string filename){
-    std::vector<Layer> vectLayer;
-    std::string strLayer;
-    std::string strFile = fileToString(filename);
-    Layer tmp;
-    int start, end;
-    start = strFile.find("<layer ", 0);
-    end = strFile.find("</layer>", 0);
-    
-    while(start != std::string::npos && end != std::string::npos){
-        strLayer = strFile.substr(start, end-start);
-        tmp.rawDataToLayer(strLayer);
-        vectLayer.push_back(tmp);
-
-        start = strFile.find("<layer ", end+1);
-        end = strFile.find("</layer>", end+1);
-    }
-
-    return vectLayer;
-}
-
+#include "Map.h"
 
 
 
 int main(void){
-
-    std::vector<Layer> vect = tmxToLayersVector("data/maps/tilemaps/tmxLiteExample.tmx");
     
-    for(int i=0; i < vect.size(); i++){
-        vect[i].display();
-    }
+    std::string tmxFile = "data/maps/tilemaps/tmxLiteExample.tmx";
+    std::string tsxFile = "data/maps/tilesets/tmxLiteExample.tsx";
 
-    std::string tileset = fileToString("data/maps/tilesets/tmxLiteExample.tsx");
-    Tileset ts;
-    ts.rawDataToTileset(tileset);
-    ts.display();
+    Map map(tmxFile, tsxFile);
     
+
     // ================== Affichage SFML  ==================
     sf::Texture tileTexture;
     sf::Sprite tiles;
 
     // Chargement de la tileMap
-    tileTexture.loadFromFile(ts.GetTileMapPath());
+    tileTexture.loadFromFile(map.GetTileset().GetTileMapPath());
     tiles.setTexture(tileTexture);
 
     sf::RenderWindow window(sf::VideoMode(800, 800, 32), "Tilemap loadind and displaying");
@@ -75,8 +43,8 @@ int main(void){
         }
         window.clear();
         
-        int w = ts.GetTileWidth();
-        int h =ts.GetTileHeight();
+        int w = map.GetTileset().GetTileWidth();
+        int h = map.GetTileset().GetTileHeight();
         int x, y, data;
 
         // """"Camera"""""
@@ -92,11 +60,12 @@ int main(void){
         int minY = py - winHeight/h;
         int maxY = py + winHeight/h;
         
-        for(int k = 0; k < vect.size(); k++){
-
+        for(int k = 0; k < map.GetNbLayers(); k++){
+            Layer layer = map.GetLayers()[k];
             for(int i = minX; i<maxX; i++){
                 for(int j=minY; j<maxY; j++){
-                    data = vect[k].GetData(i, j);
+
+                    data = layer.GetData(i, j);
                     if(data!=0){
                         x = ((data-1) % 8)*w;
                         y = ((data-1) / 8)*h;
