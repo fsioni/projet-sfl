@@ -1,11 +1,11 @@
 #ifndef _SPAWNS_LAYER_
 #define _SPAWNS_LAYER_
 
-#include "ObjectLayer.h"
-#include "SpawnPoint.h"
+#include "Layer.h"
+#include "../SpawnPoint.h"
 #include <vector>
 
-class SpawnsLayer:ObjectLayer
+class SpawnsLayer
 {
 private:
     SpawnPoint playerSpawn;
@@ -14,14 +14,5 @@ public:
     SpawnsLayer(/* args */);
     ~SpawnsLayer();
 };
-
-SpawnsLayer::SpawnsLayer(/* args */)
-{
-}
-
-SpawnsLayer::~SpawnsLayer()
-{
-}
-
 
 #endif

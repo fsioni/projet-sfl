@@ -1,13 +1,18 @@
 #ifndef _MAP_
+#define _MAP_
 
 #include <vector>
 
-#include "Layer.h"
 #include "Tileset.h"
-
+#include "Layers/CollisionLayer.h"
+#include "Layers/MapLayer.h"
+#include "Layers/SpawnsLayer.h"
 
 class Map{
-    std::vector<Layer> layers;
+    std::vector<MapLayer> mapLayers;
+    CollisionLayer * collisionLayer;
+    SpawnsLayer * spawnsLayer;
+    
     Tileset tileset;
     int nbLayers;
 
@@ -17,11 +22,11 @@ public:
     ~Map();
 
     void SetTileset(const Tileset & ts);
-    void AddLayer(const Layer & l);
+    void AddLayer(const MapLayer & l);
 
     Tileset GetTileset() const;
-    std::vector<Layer> GetLayers() const;
-    int GetNbLayers() const;
+    std::vector<MapLayer> GetMapLayers() const;
+    int GetNbMapLayers() const;
 
     void TmxLoadLayers(std::string fileName);
     void TsxLoadTileset(std::string fileName);

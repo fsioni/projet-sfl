@@ -20,8 +20,8 @@ void Map::SetTileset(const Tileset & ts){
     tileset = ts;
 }
 
-void Map::AddLayer(const Layer & layer){
-    layers.push_back(layer);
+void Map::AddLayer(const MapLayer & layer){
+    mapLayers.push_back(layer);
     nbLayers++;
 }
 
@@ -29,18 +29,18 @@ Tileset Map::GetTileset() const{
     return tileset;
 }
 
-std::vector<Layer> Map::GetLayers() const{
-    return layers;
+std::vector<MapLayer> Map::GetMapLayers() const{
+    return mapLayers;
 }
 
-int Map::GetNbLayers() const{
+int Map::GetNbMapLayers() const{
     return nbLayers;
 }
 
 void Map::TmxLoadLayers(std::string fileName){
     std::string strLayer;
     std::string strFile = fileToString(fileName);
-    Layer tmp;
+    MapLayer tmp;
     int start, end;
     start = strFile.find("<layer ", 0);
     end = strFile.find("</layer>", 0);

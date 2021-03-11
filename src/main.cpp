@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-#include "Map.h"
+#include "Map/Map.h"
 
 
 
@@ -60,8 +60,8 @@ int main(void){
         int minY = py - winHeight/h;
         int maxY = py + winHeight/h;
         
-        for(int k = 0; k < map.GetNbLayers(); k++){
-            Layer layer = map.GetLayers()[k];
+        for(int k = 0; k < map.GetNbMapLayers(); k++){
+            MapLayer layer = map.GetMapLayers()[k];
             for(int i = minX; i<maxX; i++){
                 for(int j=minY; j<maxY; j++){
 

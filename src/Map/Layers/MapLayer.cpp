@@ -1,9 +1,9 @@
 #include <iostream>
-#include "tmxParsing.h"
+#include "../tmxParsing.h"
 
-#include "Layer.h"
+#include "MapLayer.h"
 
-Layer::Layer(){
+MapLayer::MapLayer(){
     id = -1;
     name = "NULL";
     width = -1;
@@ -11,12 +11,12 @@ Layer::Layer(){
 }
 
 
-Layer::~Layer(){
+MapLayer::~MapLayer(){
 
 }
 
 
-Layer::Layer(const Layer & layer){
+MapLayer::MapLayer(const MapLayer & layer){
     id = layer.id;
     name = layer.name;
     width = layer.width;
@@ -24,7 +24,7 @@ Layer::Layer(const Layer & layer){
     data = layer.data;
 }
 
-Layer & Layer::operator=(const Layer & layer){
+MapLayer& MapLayer::operator=(const MapLayer & layer){
     if(&layer != this){
         id = layer.id;
         name = layer.name;
@@ -37,52 +37,41 @@ Layer & Layer::operator=(const Layer & layer){
 
 // ==== SETERS ====
 
-void Layer::SetId(int id_){
-    id = id_;
-}
 
-void Layer::SetName(std::string name_){
-    name = name_;
-}
 
-void Layer::SetWidth(int width_){
+void MapLayer::SetWidth(int width_){
     width = width_;
 }
 
-void Layer::SetHeight(int height_){
+void MapLayer::SetHeight(int height_){
     height = height_;
 }
-void Layer::SetData(std::vector<int> data_){
+void MapLayer::SetData(std::vector<int> data_){
     data = data_;
 }
-void Layer::SetData(int x, int y, int value){
+void MapLayer::SetData(int x, int y, int value){
     data[y * width + x] = value;
 }
 
 // ==== GETERS ====
 
-int Layer::GetID() const{
-    return id;
-}
-std::string Layer::GetName() const{
-    return name;
-}
-int Layer::GetWidth() const{
+
+int MapLayer::GetWidth() const{
     return width;
 }
-int Layer::GetHeight() const{
+int MapLayer::GetHeight() const{
     return height;
 }
-int Layer::GetData(int x, int y) const{
+int MapLayer::GetData(int x, int y) const{
     return data[y * width + x];
 }
-std::vector<int> Layer::GetVectData() const{
+std::vector<int> MapLayer::GetVectData() const{
     return data;
 }
 
 
 
-void Layer::rawDataToLayer(std::string rawData){
+void MapLayer::rawDataToLayer(std::string rawData){
     // std::stoi => string to int
     // getAttributeValue du module tmxParsing
     // => prend un attribut et renvoie sa valeur
@@ -112,7 +101,7 @@ void Layer::rawDataToLayer(std::string rawData){
     data = csvToInt(strData);
 }
 
-void Layer::display() const{
+void MapLayer::Display() const{
     std::cout << "Name : " << name << std::endl;
     std::cout << "Id : " << id << std::endl;
     std::cout << "Height : " << height << std::endl;

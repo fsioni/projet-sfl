@@ -1,21 +1,19 @@
-#ifndef _LAYER_
-#define _LAYER_
+#ifndef _MAP_LAYER_
+#define _MAP_LAYER_
 
 #include <string>
 #include <vector>
+#include "Layer.h"
 
 
-/*! \class Layer
-*   \brief Classe représentant une couche de tuiles (layer).
+
+/*! \class MapLayer
+*   \brief Classe représentant une couche de tuiles.
 *
 */ 
 
-class Layer{
+class MapLayer:Layer{
 private:
-    /*! \brief Identifiant de la couche représenté par un entier. */
-    int id;
-    /*! \brief Nom de la couche. */
-    std::string name;
     /*! \brief Largeur de la couche en nombre de tile */
     int width;
     /*! \brief Hauteur de la couche en nombre de tile */
@@ -28,23 +26,20 @@ public:
     *   Initialise id, width et height à -1,
     *   le nom est égale à "NULL".
     * */
-    Layer();
-    Layer(const Layer & layer);
+    MapLayer();
+    MapLayer(const MapLayer & layer);
     /*! \brief Destructeur. */
-    ~Layer();
+    ~MapLayer();
 
-    Layer & operator=(const Layer & layer);
+    MapLayer & operator=(const MapLayer & layer);
 
     // TODO ======== SETER ET GETER A COMMENTER =======
-    void SetId(int id_);
-    void SetName(std::string name_);
+    
     void SetWidth(int width_);
     void SetHeight(int height_);
     void SetData(std::vector<int> data_);
     void SetData(int x, int y, int value);
 
-    int GetID() const;
-    std::string GetName() const;
     int GetWidth() const;
     int GetHeight() const;
     int GetData(int x, int y) const;
@@ -66,7 +61,7 @@ public:
     *   pour éviter la surcharge d'information dans
     *   la console.
     */
-    void display() const;
+    void Display() const;
 };
 
 #endif
