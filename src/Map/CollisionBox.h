@@ -8,11 +8,10 @@ class CollisionBox:Box
 private:
     /* data */
 public:
-    CollisionBox
-(/* args */);
-    ~CollisionBox
-();
+    CollisionBox(/* args */);
+    ~CollisionBox();
 
+    void Test() const;
 };
 
 #endif

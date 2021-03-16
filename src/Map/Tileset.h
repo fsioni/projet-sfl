@@ -27,7 +27,7 @@ public:
     void SetTileHeight(int th);
     void SetTileCount(int tc);
     void SetColumn(int col);
-    void SetTileMapPath(int tmp);
+    void SetTileMapPath(std::string tmp);
     void SetTileMapWidth(int tmw);
     void SetTileMapHeight(int tmh);
 

@@ -1,5 +1,5 @@
 EXECS_NAME = bin/exec 
-OBJ_FILES = obj/main.o obj/Layer.o obj/tmxParsing.o obj/Tileset.o obj/Map.o obj/MapLayer.o
+OBJ_FILES = obj/main.o obj/Layer.o obj/tmxParsing.o obj/Tileset.o obj/Map.o obj/MapLayer.o obj/CollisionLayer.o obj/SpawnPoint.o obj/SpawnPoint.o obj/SpawnsLayer.o obj/Box.o obj/CollisionBox.o
 
 CC = g++
 CFLAGS = -Wall -ggdb -std=c++14
@@ -17,7 +17,7 @@ bin/exec : $(OBJ_FILES)
 
 obj/main.o: src/main.cpp src/Map/tmxParsing.h src/Map/Layers/Layer.h src/Map/Tileset.h src/Map/Map.h src/Map/Layers/MapLayer.h
 	$(COMPILATIONOBJ)
-obj/Map.o : src/Map/Map.cpp src/Map/Map.h src/Map/Tileset.h src/Map/Layers/Layer.h src/Map/tmxParsing.h
+obj/Map.o : src/Map/Map.cpp src/Map/Map.h src/Map/Tileset.h src/Map/Layers/Layer.h src/Map/tmxParsing.h src/Map/Box.h
 	$(COMPILATIONOBJ)
 
 obj/Tileset.o : src/Map/Tileset.cpp src/Map/Tileset.h src/Map/tmxParsing.h
@@ -29,19 +29,19 @@ obj/Layer.o : src/Map/Layers/Layer.cpp src/Map/Layers/Layer.h src/Map/tmxParsing
 obj/MapLayer.o : src/Map/Layers/MapLayer.cpp src/Map/Layers/MapLayer.h  src/Map/Layers/Layer.h src/Map/tmxParsing.h
 	$(COMPILATIONOBJ)
 
-obj/Box.o : src/Collision/Box.cpp src/Box.h
+obj/Box.o : src/Map/Box.cpp src/Map/Box.h
 	$(COMPILATIONOBJ)
 
-obj/CollisionBox.o : src/CollisionBox.cpp src/CollisionBox.h src/Box.h
+obj/CollisionBox.o : src/Map/CollisionBox.cpp src/Map/CollisionBox.h src/Map/Box.h
 	$(COMPILATIONOBJ)
 
-obj/CollisionLayer.o : src/Layers/CollisionLayer.cpp src/Layers/CollisionLayer.h src/Layers/Layer.h src/Layers/CollisionBox.h
+obj/CollisionLayer.o : src/Map/Layers/CollisionLayer.cpp src/Map/Layers/CollisionLayer.h src/Map/Layers/Layer.h src/Map/CollisionBox.h
 	$(COMPILATIONOBJ)
 
-obj/SpawnPoint.o : src/Map/SpawnPoint.cpp src/Map/SpawnPoint.h srx/Box.h
+obj/SpawnPoint.o : src/Map/SpawnPoint.cpp src/Map/SpawnPoint.h src/Map/Box.h
 	$(COMPILATIONOBJ)
 
-obj/SpawnsLayer.o : src/Layers/SpawnsLayer.cpp src/Layers/SpawnsLayer.h src/Layers/Layer.h src/SpawnPoint.h
+obj/SpawnsLayer.o : src/Map/Layers/SpawnsLayer.cpp src/Map/Layers/SpawnsLayer.h src/Map/Layers/Layer.h src/Map/SpawnPoint.h
 	$(COMPILATIONOBJ)
 
 obj/tmxParsing.o: src/Map/tmxParsing.cpp src/Map/tmxParsing.h

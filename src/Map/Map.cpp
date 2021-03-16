@@ -10,23 +10,31 @@ Map::Map(std::string tmxFile, std::string tsxFile){
     nbLayers = 0;
     TmxLoadLayers(tmxFile);
     TsxLoadTileset(tsxFile);
+    collisionLayer = new CollisionLayer;
+    tileset = new Tileset;
+
 }
 
 Map::~Map(){
-
+    delete collisionLayer;
+    delete tileset;
 }
 
-void Map::SetTileset(const Tileset & ts){
-    tileset = ts;
+void Map::SetTileset(Tileset& ts){
+    tileset = &ts;
 }
 
-void Map::AddLayer(const MapLayer & layer){
+void Map::AddMapLayer(const MapLayer & layer){
     mapLayers.push_back(layer);
     nbLayers++;
 }
 
+void Map::AddSpawnLayer(const SpawnsLayer& nLayer){
+    spawnsLayer.push_back(nLayer);
+}
+
 Tileset Map::GetTileset() const{
-    return tileset;
+    return *tileset;
 }
 
 std::vector<MapLayer> Map::GetMapLayers() const{
@@ -49,7 +57,7 @@ void Map::TmxLoadLayers(std::string fileName){
         strLayer = strFile.substr(start, end-start);
         tmp.rawDataToLayer(strLayer);
 
-        AddLayer(tmp);
+        AddMapLayer(tmp);
 
         start = strFile.find("<layer ", end+1);
         end = strFile.find("</layer>", end+1);

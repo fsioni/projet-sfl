@@ -62,6 +62,8 @@ public:
     *   la console.
     */
     void Display() const;
+
+    void Test() const;
 };
 
 #endif

@@ -59,7 +59,7 @@ void Tileset::SetTileCount(int tc){
 void Tileset::SetColumn(int col){
     column = col;
 }
-void Tileset::SetTileMapPath(int tmp){
+void Tileset::SetTileMapPath(std::string tmp){
     tileMapPath = tmp;
 }
 void Tileset::SetTileMapWidth(int tmw){

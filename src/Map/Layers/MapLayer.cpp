@@ -113,5 +113,9 @@ void MapLayer::Display() const{
     std::cout << std::endl << std::endl;
 }
 
+void MapLayer::Test() const{
+    
+}
+
 
 

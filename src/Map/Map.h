@@ -11,9 +11,9 @@
 class Map{
     std::vector<MapLayer> mapLayers;
     CollisionLayer * collisionLayer;
-    SpawnsLayer * spawnsLayer;
+    std::vector<SpawnsLayer> spawnsLayer;
     
-    Tileset tileset;
+    Tileset* tileset;
     int nbLayers;
 
 public:
@@ -21,8 +21,9 @@ public:
     Map(std::string tmxFile, std::string tsxFile);
     ~Map();
 
-    void SetTileset(const Tileset & ts);
-    void AddLayer(const MapLayer & l);
+    void SetTileset(Tileset& ts);
+    void AddMapLayer(const MapLayer & l);
+    void AddSpawnLayer(const SpawnsLayer& nLayer);
 
     Tileset GetTileset() const;
     std::vector<MapLayer> GetMapLayers() const;

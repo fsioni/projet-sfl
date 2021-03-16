@@ -13,6 +13,8 @@ private:
 public:
     SpawnsLayer(/* args */);
     ~SpawnsLayer();
+    void ChangePlayerSpawn(SpawnPoint const &newSpawn);
+    void AddEnemy(SpawnPoint const &newSpawn);
 };
 
 #endif

@@ -1,6 +1,8 @@
 #ifndef _COLLISION_LAYER_
 #define _COLLISION_LAYER_
 
+#include <vector>
+
 #include "Layer.h"
 #include "../CollisionBox.h"
 
@@ -10,6 +12,7 @@ private:
 public:
     CollisionLayer(/* args */);
     ~CollisionLayer();
+    void AddCollisionBox(const CollisionBox& newColBox);
 };
 
 
