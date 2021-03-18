@@ -68,6 +68,10 @@ std::string getFullTag(std::string data, std::string tag, int indice){
         openTag = data.find("<"+tag+" ", openTag);
         closeTag = data.find("</"+tag+">", openTag);
 
+        // Gestion du cas où <tag/> au lieu de <tag></tag>
+        if(closeTag == (int)std::string::npos)
+            closeTag = data.find("\n", openTag);
+   
         // On incrémente pour ne pas retrouver la même balise
         openTag++;
     }

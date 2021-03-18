@@ -69,6 +69,3 @@ void Map::TsxLoadTileset(std::string fileName){
     SetTileset(tmp);
 }
 
-
-
-

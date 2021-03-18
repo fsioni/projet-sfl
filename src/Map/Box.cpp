@@ -5,6 +5,14 @@ Box::Box(/* args */)
 {
 }
 
+Box::Box(int nId, int nX, int nY, int nWidth, int nHeight){
+    id = nId;
+    x = nX;
+    y = nY;
+    width = nWidth;
+    height = nHeight;
+}
+
 Box::~Box()
 {
 }

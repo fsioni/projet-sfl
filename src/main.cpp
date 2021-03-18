@@ -4,23 +4,53 @@
 
 #include "Map/Map.h"
 #include "Map/tmxParsing.h"
+#include "Map/Box.h"
+
+/* TODO :
+   - Gestion des cas : <tag></tag> et <tag/> dans parsing
+
+*/
+
+void afficherBox(const Box & b){
+    std::cout << "Id : " << b.GetId() << std::endl;
+    std::cout << "X : " << b.GetX() << std::endl;
+    std::cout << "Y : " << b.GetY() << std::endl;
+    std::cout << "W : " << b.GetWidth() << std::endl;
+    std::cout << "H : " << b.GetHeight() << std::endl << std::endl;
+}
 
 
-/*
 int main(void){
 
-    std::string data = fileToString("data/maps/tilemaps/mainTilemap.tmx");
+    std::string strFile = fileToString("data/maps/tilemaps/mainTilemap.tmx");
 
+    std::string strObjGrpCollision = getFullTag(strFile, "objectgroup", 2);
+    std::string strObject;
     
-    std::cout << getFullTag(data, "object", 0) << std::endl;
+    int count = countTag(strObjGrpCollision, "object");
+
+
+    int id, x, y, w, h;
+
+    for(int i =0; i<count; i++){
+        strObject = getInsideTag(strObjGrpCollision, "object", i);
+        id = stoi(getAttributeValue(strObject, "id"));
+        x = stoi(getAttributeValue(strObject, "x"));
+        y = stoi(getAttributeValue(strObject, "y"));
+        w = stoi(getAttributeValue(strObject, "w"));
+        h = stoi(getAttributeValue(strObject, "h"));
+        Box b(id, x, y, w, h);
+        afficherBox(b); 
+    }
+
     
    
     return 0;
 }
 
-*/
 
 
+/*
 int main(void){
     
     std::string tmxFile = "data/maps/tilemaps/tmxLiteExample.tmx";
@@ -124,3 +154,4 @@ int main(void){
     return 0;
 }
 
+*/
