@@ -61,20 +61,35 @@ std::vector<int> csvToInt(std::string data){
     return vect;
 }
 
+std::string getFullTag(std::string data, std::string tag, int indice){
+    int openTag = 0, closeTag;
+    
+    for(int i=0; i<=indice; i++){
+        openTag = data.find("<"+tag+" ", openTag);
+        closeTag = data.find("</"+tag+">", openTag);
+
+        // On incrémente pour ne pas retrouver la même balise
+        openTag++;
+    }
+    // Décremente à la fin pour remettre la bonne valeur 
+    openTag--;
+    // On ajoute la longueur de la balise + 3 pour <, / et >
+    int len = closeTag-openTag + tag.length() + 3;
+
+    return data.substr(openTag, len);
+}
+
 // Si tag pas trouvé alors retourne un espace 
 // les indices vont de 0 à n-1 occurence du tag
 std::string getInsideTag(std::string data, std::string tag, int indice){
     int startTag = 0, endTag;
 
-    for(int i=0; i<=indice; i++){
-        startTag = data.find("<"+tag+" ", startTag);
-        startTag++; // pour ne pas retrouver la même balise à l'itération suivante
-        // string::find retourne string::npos quand ne trouve pas
-        if(startTag== std::string::npos)
-            return " ";
+    data = getFullTag(data, tag, indice);
 
-        endTag = data.find(">", startTag);
-    }
+    startTag = data.find("<"+tag+" ", startTag);
+    endTag = data.find(">", startTag);
+     
+    
 
     return data.substr(startTag, endTag-startTag);
 }
@@ -83,24 +98,16 @@ std::string getDataTag(std::string data, std::string tag, int indice){
     int startOpenTag=0, endOpenTag;
     int startCloseTag;
 
-    for(int i=0; i<=indice; i++){
-        startOpenTag = data.find("<"+tag+" ", startOpenTag);
-        endOpenTag   = data.find(">", startOpenTag);
+    data = getFullTag(data, tag, indice);
 
-        if(startOpenTag == std::string::npos || endOpenTag == std::string::npos){
-            std::cout << "Balise ouvrante introuvable" << std::endl;
-        }
+    startOpenTag = data.find("<"+tag+" ", startOpenTag);
+    endOpenTag   = data.find(">", startOpenTag);
+    startCloseTag = data.find("</"+tag+">", endOpenTag);
 
-        startCloseTag = data.find("</"+tag+">", endOpenTag);
-
-        if(startCloseTag == std::string::npos){
-            std::cout << "Balise ouvrante introuvable" << std::endl;
-        }
-        startOpenTag++;
-    }
 
     return data.substr(endOpenTag+2, startCloseTag-endOpenTag-2);
 }
+
 
 
 int countTag(std::string data, std::string tag){

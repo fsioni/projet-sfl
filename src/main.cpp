@@ -5,21 +5,20 @@
 #include "Map/Map.h"
 #include "Map/tmxParsing.h"
 
-// Faire la fonction de tmxParsing getDataTag
+
 /*
 int main(void){
 
     std::string data = fileToString("data/maps/tilemaps/mainTilemap.tmx");
 
-    std::string tag = getDataTag(data, "layer", 1);
-    std::string inside = getDataTag(tag, "data", 0);
-    std::cout << inside << std::endl;
+    
+    std::cout << getFullTag(data, "object", 0) << std::endl;
     
    
     return 0;
 }
-*/
 
+*/
 
 
 int main(void){

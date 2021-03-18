@@ -51,18 +51,13 @@ void Map::TmxLoadLayers(std::string fileName){
     std::string strLayer;
     std::string strFile = fileToString(fileName);
     MapLayer tmp;
-    int start, end;
-    start = strFile.find("<layer ", 0);
-    end = strFile.find("</layer>", 0);
 
-    while(start != (int)std::string::npos && end != (int)std::string::npos){
-        strLayer = strFile.substr(start, end-start);
+    int nbLayer = countTag(strFile, "layer");
+
+    for(int i=0; i<nbLayer; i++){
+        strLayer = getFullTag(strFile, "layer", i);
         tmp.rawDataToLayer(strLayer);
-
         AddMapLayer(tmp);
-
-        start = strFile.find("<layer ", end+1);
-        end = strFile.find("</layer>", end+1);
     }
 }
 
