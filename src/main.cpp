@@ -2,11 +2,11 @@
 #include <iostream>
 #include <string>
 
-#include "Map.h"
-#include "tmxParsing.h"
+#include "Map/Map.h"
+#include "Map/tmxParsing.h"
 
 // Faire la fonction de tmxParsing getDataTag
-/*
+
 int main(void){
 
     std::string data = fileToString("data/maps/tilemaps/mainTilemap.tmx");
@@ -20,9 +20,9 @@ int main(void){
     return 0;
 }
 
-*/
 
 
+/*
 int main(void){
     
     std::string tmxFile = "data/maps/tilemaps/tmxLiteExample.tmx";
@@ -103,8 +103,8 @@ int main(void){
         int minY = py - winHeight/h;
         int maxY = py + winHeight/h;
         
-        for(int k = 0; k < map.GetNbLayers(); k++){
-            Layer layer = map.GetLayers()[k];
+        for(int k = 0; k < map.GetNbMapLayers(); k++){
+            MapLayer layer = map.GetMapLayers()[k];
             for(int i = minX; i<maxX; i++){
                 for(int j=minY; j<maxY; j++){
 
@@ -126,3 +126,4 @@ int main(void){
     return 0;
 }
 
+*/
