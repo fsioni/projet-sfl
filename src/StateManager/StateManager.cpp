@@ -44,7 +44,7 @@ void StateManager::PopState()
 
     if (!sStates.empty())
     {
-        sStates.back()->Resume;
+        sStates.back()->Resume();
     }
 }
 
