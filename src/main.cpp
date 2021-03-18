@@ -3,7 +3,24 @@
 #include <string>
 
 #include "Map.h"
+#include "tmxParsing.h"
 
+// Faire la fonction de tmxParsing getDataTag
+/*
+int main(void){
+
+    std::string data = fileToString("data/maps/tilemaps/mainTilemap.tmx");
+
+    int pos = countTag(data, "layer");
+    std::cout << getDataTag(data, "layer", 0)<< std::endl;
+    
+    for(int i=0; i<pos; i++){
+    //    std::cout << getInsideTag(data, "layer", i) << std::endl;
+    }
+    return 0;
+}
+
+*/
 
 
 int main(void){

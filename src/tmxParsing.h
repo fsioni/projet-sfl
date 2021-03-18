@@ -4,6 +4,11 @@
 #include <vector>
 
 
+
+std::string getInsideTag(std::string data, std::string tag, int indice);
+int countTag(std::string data, std::string tag);
+std::string getDataTag(std::string data, std::string tag, int indice);
+
 /*! \brief Retourne un fichier dans une std::string.
 *   \param [in] fileName : std::string, chemin et nom du fichier à lire.
 *   
