@@ -1,5 +1,5 @@
 EXECS_NAME = bin/exec 
-OBJ_FILES = obj/main.o obj/Layer.o obj/tmxParsing.o obj/Tileset.o obj/Map.o obj/MapLayer.o obj/CollisionLayer.o obj/SpawnPoint.o obj/SpawnPoint.o obj/SpawnsLayer.o obj/Box.o obj/CollisionBox.o
+OBJ_FILES = obj/main.o obj/Layer.o obj/tmxParsing.o obj/Tileset.o obj/Map.o obj/MapLayer.o obj/CollisionLayer.o obj/SpawnPoint.o obj/SpawnPoint.o obj/SpawnsLayer.o obj/Box.o obj/CollisionBox.o obj/StateManager.o
 
 CC = g++
 CFLAGS = -Wall -ggdb -std=c++14
@@ -45,6 +45,9 @@ obj/SpawnsLayer.o : src/Map/Layers/SpawnsLayer.cpp src/Map/Layers/SpawnsLayer.h 
 	$(COMPILATIONOBJ)
 
 obj/tmxParsing.o: src/Map/tmxParsing.cpp src/Map/tmxParsing.h
+	$(COMPILATIONOBJ)
+
+obj/StateManager.o : src/StateManager/StateManager.cpp src/StateManager/State.h
 	$(COMPILATIONOBJ)
 
 clean:
