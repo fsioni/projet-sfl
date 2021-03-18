@@ -99,25 +99,28 @@ int Tileset::GetTileMapHeight() const{
 
 
 void Tileset::rawDataToTileset(std::string rawData){
-    name = getAttributeValue(rawData, "name");
-    tileWidth = stoi(getAttributeValue(rawData, "tilewidth"));
-    tileHeight = stoi(getAttributeValue(rawData, "tileheight"));
-    tileCount = stoi(getAttributeValue(rawData, "tilecount"));
-    column = stoi(getAttributeValue(rawData, "column"));
+    // On recupère ce qu'il y a dans la balise ouvrante <tileset>
+    std::string tileSet = getInsideTag(rawData, "tileset", 0);
+
+    name = getAttributeValue(tileSet, "name");
+    // std::stoi(std::string) => int
+    tileWidth = stoi(getAttributeValue(tileSet, "tilewidth"));
+    tileHeight = stoi(getAttributeValue(tileSet, "tileheight"));
+    tileCount = stoi(getAttributeValue(tileSet, "tilecount"));
+    column = stoi(getAttributeValue(tileSet, "column"));
+
+    // On recupère ce qu'il y a dans la balise ouvrante <image>
+    std::string img = getInsideTag(rawData, "image", 0);
+
+    tileMapHeight = stoi(getAttributeValue(img, "height"));
+    tileMapWidth = stoi(getAttributeValue(img, "width"));
 
     // Chemin relatif au fichier tsx => chemin relatif 
     // au repertoire racine du projet
-    std::string tsxPath = getAttributeValue(rawData, "source");
+    std::string tsxPath = getAttributeValue(img, "source");
     tileMapPath = tsxPath.substr(5, tsxPath.length());
     tileMapPath = "./data"+tileMapPath;
 
-
-    // Reduction du champs de recherche à partir de la balise <image>
-    int posImage = rawData.find("<image ");
-    rawData = rawData.substr(posImage, rawData.length());
-
-    tileMapHeight = stoi(getAttributeValue(rawData, "height"));
-    tileMapWidth = stoi(getAttributeValue(rawData, "width"));
 }
 
 void Tileset::display() const{

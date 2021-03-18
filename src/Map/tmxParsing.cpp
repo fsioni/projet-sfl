@@ -80,23 +80,24 @@ std::string getInsideTag(std::string data, std::string tag, int indice){
 }
 
 std::string getDataTag(std::string data, std::string tag, int indice){
-    int startOpenTag, endOpenTag;
+    int startOpenTag=0, endOpenTag;
     int startCloseTag;
 
+    for(int i=0; i<=indice; i++){
+        startOpenTag = data.find("<"+tag+" ", startOpenTag);
+        endOpenTag   = data.find(">", startOpenTag);
 
-    startOpenTag = data.find("<"+tag+" ", 0);
-    endOpenTag   = data.find(">", startOpenTag);
+        if(startOpenTag == std::string::npos || endOpenTag == std::string::npos){
+            std::cout << "Balise ouvrante introuvable" << std::endl;
+        }
 
-    if(startOpenTag == std::string::npos || endOpenTag == std::string::npos){
-        std::cout << "Balise ouvrante introuvable" << std::endl;
+        startCloseTag = data.find("</"+tag+">", endOpenTag);
+
+        if(startCloseTag == std::string::npos){
+            std::cout << "Balise ouvrante introuvable" << std::endl;
+        }
+        startOpenTag++;
     }
-
-    startCloseTag = data.find("</"+tag+">", endOpenTag);
-
-    if(startCloseTag == std::string::npos){
-        std::cout << "Balise ouvrante introuvable" << std::endl;
-    }
-    
 
     return data.substr(endOpenTag+2, startCloseTag-endOpenTag-2);
 }

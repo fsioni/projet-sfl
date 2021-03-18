@@ -72,29 +72,16 @@ std::vector<int> MapLayer::GetVectData() const{
 
 
 void MapLayer::rawDataToLayer(std::string rawData){
-    // std::stoi => string to int
-    // getAttributeValue du module tmxParsing
-    // => prend un attribut et renvoie sa valeur
-    // ex : attribut = id="2" => 2
-
+    // std::stoi(std::string) => int
+    
     id = std::stoi(getAttributeValue(rawData, "id"));
     height = std::stoi(getAttributeValue(rawData, "height"));
     width = std::stoi(getAttributeValue(rawData, "width"));
     name = getAttributeValue(rawData, "name");
 
-    int startData, endData;
-    startData = rawData.find("<data ");
-    // Recherche de la fin de la balise ouvrante car il y a des
-    // des paramètres dedans donc longueur variable
-    startData = rawData.find(">", startData); 
-    // Ajout de +2 pour avancer la position juste avant le premier entier
-    startData+=2; 
-    // Position de la balise fermantes
-    endData = rawData.find("</data>");
+    // On recupère les données entre <data> et </data>
+    std::string strData = getDataTag(rawData, "data", 0);
 
-    // Recupère les caractères entre <data> et </data>
-    std::string strData = rawData.substr(startData, endData-startData);
-    
     // Appel de la fonction du module tmxParsing pour transformer
     // une string sous format CSV (Comma separated values) en un
     // tableau dynamique d'entier.

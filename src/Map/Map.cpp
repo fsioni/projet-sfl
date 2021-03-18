@@ -1,7 +1,7 @@
 #include "Map.h"
 #include "tmxParsing.h"
 
-#include <iostream>
+
 
 Map::Map(){
     nbLayers = 0;
@@ -22,7 +22,7 @@ Map::~Map(){
     delete tileset;
 }
 
-void Map::SetTileset(Tileset& ts){
+void Map::SetTileset(const Tileset& ts){
     *tileset = ts;
 }
 
