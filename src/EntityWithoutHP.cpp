@@ -37,7 +37,7 @@ void EntityWithoutHP::SetName(string newn){
     name = newn;
 }
 
-string EntityWithoutHP::GetName(){
+string EntityWithoutHP::GetName() const{
 
     return name;
 }
@@ -47,7 +47,7 @@ void EntityWithoutHP::SetPos_x(int newx){
     x = newx;
 }
 
-int EntityWithoutHP::GetPos_x(){
+int EntityWithoutHP::GetPos_x() const{
 
     return x;
 }
@@ -57,7 +57,7 @@ void EntityWithoutHP::SetPos_y(int newy){
     y = newy;
 }
 
-int EntityWithoutHP::GetPos_y(){
+int EntityWithoutHP::GetPos_y() const{
 
     return y;
 }
