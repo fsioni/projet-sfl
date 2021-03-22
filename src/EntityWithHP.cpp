@@ -31,14 +31,14 @@ void EntityWithHP::SetHP(unsigned int newHp){
     hp = newHp;
 }
 
-int EntityWithHP::GetHP(){
+int EntityWithHP::GetHP() const{
 
     return hp;
 }
 
 void EntityWithHP::PrintEntityInfo() {
 
-    cout<< "x = " << x << ", y = " << y << ", nom : " << name << ", points de vie : " << hp << ", Damage : "<< damage <<endl;
+    cout<< "x = " << x << ", y = " << y << ", nom : " << name << ", points de vie : " << hp << ",  Dégâts : "<< damage <<endl;
 }
 
 void EntityWithHP::EntityMove(unsigned int vx, unsigned int vy){
@@ -47,9 +47,9 @@ void EntityWithHP::EntityMove(unsigned int vx, unsigned int vy){
     y += vy;
 }
 
-int EntityWithHP::GetDamage(){
+int EntityWithHP::GetDamage() const{
 
-        return damage;
+    return damage;
 }
 
 void EntityWithHP::SetDamage(unsigned int newDmg){
@@ -57,12 +57,12 @@ void EntityWithHP::SetDamage(unsigned int newDmg){
     damage = newDmg;
 }
 
-/*void EntityWithHP::Attack(unsigned int ){
+void EntityWithHP::TakeDamage(unsigned int damage){
 
-
+    hp -= damage;
 }
 
-void EntityWithHP::TakeDamage(unsigned int dmg){
+void EntityWithHP::Attack(EntityWithHP &target, unsigned int damage) const{
 
-
-}*/
+    target.TakeDamage(damage);
+}
