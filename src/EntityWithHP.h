@@ -22,32 +22,17 @@ public:
 
     void SetHP(unsigned int newHp);
 
-    int GetHP();
+    int GetHP() const;
 
     void SetDamage(unsigned int newDmg);
 
-    int GetDamage();
-
-    int GetPos_x();
-
-    void SetPos_x(int newX);
-
-    int GetPos_y();
-
-    void SetPos_y(int newY);
-
-    string GetName();
-
-    void SetName(string newN);
+    int GetDamage() const;
 
     void PrintEntityInfo() override;
 
-    //int TakeDamage(unsigned int damage);
+    void TakeDamage(unsigned int damage);
 
-
-    //void Attack(EntityWithHP e);
-
-
+    void Attack(EntityWithHP &target, unsigned int damage) const;
 
 };
 
