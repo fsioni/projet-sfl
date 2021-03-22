@@ -21,17 +21,17 @@ public:
 
     ~EntityWithoutHP();
 
-    virtual int GetPos_x();
+    int GetPos_x() const;
 
-    virtual void SetPos_x(int newX);
+    void SetPos_x(int newX);
 
-    virtual int GetPos_y();
+    int GetPos_y() const;
 
-    virtual void SetPos_y(int newY);
+    void SetPos_y(int newY);
 
-    virtual string GetName();
+    string GetName() const;
 
-    virtual void SetName(string newN);
+    void SetName(string newN);
 
     virtual void PrintEntityInfo();
 
