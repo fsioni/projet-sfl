@@ -19,21 +19,11 @@
 
 int main(void){
 
-    std::string strFile = fileToString("data/maps/tilemaps/mainTilemap.tmx");
+    std::string tmxFile = "data/maps/tilemaps/mainTilemap.tmx";
+    std::string tsxFile = "data/maps/tilesets/mainTileSet.tsx";
 
-    std::string strObjGrpSpawnEnnemy = getFullTag(strFile, "objectgroup", 2);
-    std::string strObjGrpSpawnPlayer = getFullTag(strFile, "objectgroup", 1);
-    std::string strObjGrpCollision   = getFullTag(strFile, "objectgroup", 3);
-    
-
-    SpawnsLayer SpL(strObjGrpSpawnPlayer, strObjGrpSpawnEnnemy);
-    CollisionLayer CL(strObjGrpCollision);
-
-    SpL.Display();
-    std::cout << "===== COLLIOSION LAYER=====" << std::endl;
-    CL.Display();
-
-   
+    Map map(tmxFile, tsxFile);
+    map.Display();
     
     return 0;
 }
@@ -43,11 +33,9 @@ int main(void){
 /*
 int main(void){
     
-    std::string tmxFile = "data/maps/tilemaps/tmxLiteExample.tmx";
-    std::string tsxFile = "data/maps/tilesets/tmxLiteExample.tsx";
 
-    tmxFile = "data/maps/tilemaps/mainTilemap.tmx";
-    tsxFile = "data/maps/tilesets/mainTileSet.tsx";
+    std::string tmxFile = "data/maps/tilemaps/mainTilemap.tmx";
+    std::string tsxFile = "data/maps/tilesets/mainTileSet.tsx";
 
     Map map(tmxFile, tsxFile);
     
