@@ -6,12 +6,12 @@
 
 EntityWithoutHP::EntityWithoutHP(){
 
-    this->x = 0;
-    this->y = 0;
+    this->x = 0.0;
+    this->y = 0.0;
     this->name = "Unknown";
 }
 
-EntityWithoutHP::EntityWithoutHP(unsigned int x, unsigned int y, string name){
+EntityWithoutHP::EntityWithoutHP(float x, float y, string name){
 
     this->x = x;
     this->y = y;
@@ -21,9 +21,9 @@ EntityWithoutHP::EntityWithoutHP(unsigned int x, unsigned int y, string name){
 
 EntityWithoutHP::~EntityWithoutHP(){
 
-    this->x = 0;
-    this->y= 0;
-    this->name = "le boug est supp";
+    this->x = 0.0;
+    this->y= 0.0;
+    this->name = "delete";
 }
 
 
@@ -32,9 +32,9 @@ void EntityWithoutHP::PrintEntityInfo(){
     cout<< "x = " << x << ", y = " << y << ", nom : " << name <<endl;
 }
 
-void EntityWithoutHP::SetName(string newn){
+void EntityWithoutHP::SetName(string newName){
 
-    name = newn;
+    name = newName;
 }
 
 string EntityWithoutHP::GetName() const{
@@ -42,22 +42,22 @@ string EntityWithoutHP::GetName() const{
     return name;
 }
 
-void EntityWithoutHP::SetPos_x(int newx){
+void EntityWithoutHP::SetPos_x(float newx){
 
     x = newx;
 }
 
-int EntityWithoutHP::GetPos_x() const{
+float EntityWithoutHP::GetPos_x() const{
 
     return x;
 }
 
-void EntityWithoutHP::SetPos_y(int newy){
+void EntityWithoutHP::SetPos_y(float newy){
 
     y = newy;
 }
 
-int EntityWithoutHP::GetPos_y() const{
+float EntityWithoutHP::GetPos_y() const{
 
     return y;
 }
