@@ -225,11 +225,11 @@
  <objectgroup id="6" name="PlayerSpawn">
   <object id="8" x="45" y="1035"/>
  </objectgroup>
- <objectgroup id="7" name="EnemySpawn">
-  <object id="9" x="80.0547" y="816.167"/>
-  <object id="10" x="398.321" y="719.516"/>
-  <object id="11" x="399.297" y="942.107"/>
-  <object id="12" x="589.671" y="815.191"/>
+ <objectgroup id="7" name="EnnemySpawn">
+  <object id="9" x="80" y="816"/>
+  <object id="10" x="398" y="719"/>
+  <object id="11" x="399" y="942"/>
+  <object id="12" x="589" y="815"/>
  </objectgroup>
  <objectgroup id="8" name="Collision">
   <object id="13" x="192" y="896" width="64" height="64"/>
