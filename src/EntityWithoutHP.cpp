@@ -43,6 +43,7 @@ string EntityWithoutHP::GetName() const{
 }
 
 void EntityWithoutHP::SetPos_x(float newx){
+    assert (newx >= 0)
 
     x = newx;
 }
@@ -53,6 +54,7 @@ float EntityWithoutHP::GetPos_x() const{
 }
 
 void EntityWithoutHP::SetPos_y(float newy){
+    assert (newy >= 0)
 
     y = newy;
 }
