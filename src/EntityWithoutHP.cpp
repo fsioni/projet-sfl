@@ -12,6 +12,7 @@ EntityWithoutHP::EntityWithoutHP(){
 }
 
 EntityWithoutHP::EntityWithoutHP(float x, float y, string name){
+    assert (x >= 0.0 && y >= 0.0)
 
     this->x = x;
     this->y = y;
@@ -43,7 +44,7 @@ string EntityWithoutHP::GetName() const{
 }
 
 void EntityWithoutHP::SetPos_x(float newx){
-    assert (newx >= 0)
+    assert (newx >= 0.0);
 
     x = newx;
 }
@@ -54,7 +55,7 @@ float EntityWithoutHP::GetPos_x() const{
 }
 
 void EntityWithoutHP::SetPos_y(float newy){
-    assert (newy >= 0)
+    assert (newy >= 0.0);
 
     y = newy;
 }
