@@ -1,11 +1,12 @@
 #include "CollisionBox.h"
 
-CollisionBox::CollisionBox(/* args */)
-{
+CollisionBox::CollisionBox() : Box(){
 }
 
-CollisionBox::~CollisionBox()
-{
+CollisionBox::CollisionBox(const std::string& objectTag): Box(objectTag){
+}
+
+CollisionBox::~CollisionBox(){
 }
 
 void CollisionBox::Test() const{}

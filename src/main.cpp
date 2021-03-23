@@ -5,46 +5,36 @@
 #include "Map/Map.h"
 #include "Map/tmxParsing.h"
 #include "Map/Box.h"
+#include "Map/Layers/SpawnsLayer.h"
 
-/* TODO :
-   - Gestion des cas : <tag></tag> et <tag/> dans parsing
-
+/* TODO : 
+    Gestion des erreurs dans getAttributeValue
+    Fonctions de tests
+    Initialisation CollisionBox, SpawnPoint et ensuite 
+        CollisionLayer, SpawnLayer et enfin Map
+        avec les collisions+spawn+mapLayer
 */
 
-void afficherBox(const Box & b){
-    std::cout << "Id : " << b.GetId() << std::endl;
-    std::cout << "X : " << b.GetX() << std::endl;
-    std::cout << "Y : " << b.GetY() << std::endl;
-    std::cout << "W : " << b.GetWidth() << std::endl;
-    std::cout << "H : " << b.GetHeight() << std::endl << std::endl;
-}
 
 
 int main(void){
 
     std::string strFile = fileToString("data/maps/tilemaps/mainTilemap.tmx");
 
-    std::string strObjGrpCollision = getFullTag(strFile, "objectgroup", 2);
-    std::string strObject;
+    std::string strObjGrpSpawnEnnemy = getFullTag(strFile, "objectgroup", 2);
+    std::string strObjGrpSpawnPlayer = getFullTag(strFile, "objectgroup", 1);
+    std::string strObjGrpCollision   = getFullTag(strFile, "objectgroup", 3);
     
-    int count = countTag(strObjGrpCollision, "object");
 
+    SpawnsLayer SpL(strObjGrpSpawnPlayer, strObjGrpSpawnEnnemy);
+    CollisionLayer CL(strObjGrpCollision);
 
-    int id, x, y, w, h;
+    SpL.Display();
+    std::cout << "===== COLLIOSION LAYER=====" << std::endl;
+    CL.Display();
 
-    for(int i =0; i<count; i++){
-        strObject = getInsideTag(strObjGrpCollision, "object", i);
-        id = stoi(getAttributeValue(strObject, "id"));
-        x = stoi(getAttributeValue(strObject, "x"));
-        y = stoi(getAttributeValue(strObject, "y"));
-        w = stoi(getAttributeValue(strObject, "w"));
-        h = stoi(getAttributeValue(strObject, "h"));
-        Box b(id, x, y, w, h);
-        afficherBox(b); 
-    }
-
-    
    
+    
     return 0;
 }
 

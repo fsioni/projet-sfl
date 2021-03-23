@@ -5,12 +5,12 @@
 #include <vector>
 
 
-// TODO : rajouter des asserts indice < countTag
+// TODO : fonction de test + valeur retour en cas d'erreur
 std::string getInsideTag(std::string data, std::string tag, int indice);
 int countTag(std::string data, std::string tag);
 std::string getDataTag(std::string data, std::string tag, int indice);
 std::string getFullTag(std::string data, std::string tag, int indice);
-
+int getIntAttributeValue(std::string str, std::string attribute);
 
 
 

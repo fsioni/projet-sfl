@@ -36,7 +36,11 @@ std::string fileToString(std::string filename){
 
 std::string getAttributeValue(std::string str, std::string attribute){
     // Recherche de la position de début de l'attribut
-    int pos = str.find(attribute);
+    // on ajoute un espace car par exemple si on cherche "id" et q'un 
+    // "width" se trouve avant et qu'il contient "id" alors on renvoira
+    // la position du "id" dans "width"
+    int pos = str.find(" "+attribute);
+    if(pos==std::string::npos) return "NULL";
     // Recherche position du premier " qui suit l'attribut <=> ouverture pour la valeur
     int start = str.find("\"", pos+attribute.length());
     // Recherche position du deuxième " qui suit l'attribut <=> fermeture pour la valeur
@@ -45,6 +49,14 @@ std::string getAttributeValue(std::string str, std::string attribute){
     std::string res = str.substr(start+1, end-start-1);
     return res;
 }
+
+
+int getIntAttributeValue(std::string str, std::string attribute){
+    std::string strRes=getAttributeValue(str, attribute);
+    if(strRes == "NULL") return -1;
+    return stoi(strRes);
+}
+
 
 std::vector<int> csvToInt(std::string data){
     
@@ -98,6 +110,9 @@ std::string getInsideTag(std::string data, std::string tag, int indice){
     return data.substr(startTag, endTag-startTag);
 }
 
+// TODO : Gestion des erreur car pour l'instant ne marche 
+//        que sur les tag de la forme <tag></tag> et pas
+//        <tag/>
 std::string getDataTag(std::string data, std::string tag, int indice){
     int startOpenTag=0, endOpenTag;
     int startCloseTag;

@@ -15,7 +15,7 @@ all: $(EXECS_NAME)
 bin/exec : $(OBJ_FILES)
 	$(CC) $(CFLAGS) $^ -o $@ $(LIBS_SFML)
 
-obj/main.o: src/main.cpp src/Map/tmxParsing.h src/Map/Layers/Layer.h src/Map/Tileset.h src/Map/Map.h src/Map/Layers/MapLayer.h
+obj/main.o: src/main.cpp src/Map/tmxParsing.h src/Map/Layers/Layer.h src/Map/Tileset.h src/Map/Map.h src/Map/Layers/MapLayer.h 
 	$(COMPILATIONOBJ)
 obj/Map.o : src/Map/Map.cpp src/Map/Map.h src/Map/Tileset.h src/Map/Layers/Layer.h src/Map/tmxParsing.h src/Map/Box.h
 	$(COMPILATIONOBJ)

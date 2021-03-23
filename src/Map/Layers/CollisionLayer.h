@@ -2,6 +2,7 @@
 #define _COLLISION_LAYER_
 
 #include <vector>
+#include <string>
 
 #include "Layer.h"
 #include "../CollisionBox.h"
@@ -11,8 +12,10 @@ private:
     std::vector<CollisionBox> collisionBoxes;
 public:
     CollisionLayer(/* args */);
+    CollisionLayer(const std::string & objectgroupTagCollision);
     ~CollisionLayer();
     void AddCollisionBox(const CollisionBox& newColBox);
+    void Display() const;
 };
 
 

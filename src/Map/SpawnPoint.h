@@ -4,13 +4,13 @@
 #include "Box.h"
 #include <string>
 
-class SpawnPoint:Box
+class SpawnPoint: public Box
 {
 private:
     std::string name;
 public:
     SpawnPoint(/* args */);
-    SpawnPoint(const std::string& name);
+    SpawnPoint(const std::string& _name, const std::string& objectTag);
     ~SpawnPoint();
 
     void SetName(const std::string& nName);

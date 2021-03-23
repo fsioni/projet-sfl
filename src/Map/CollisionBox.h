@@ -3,12 +3,15 @@
 
 #include "Box.h"
 
-class CollisionBox:Box
+#include <string>
+
+class CollisionBox: public Box
 {
 private:
     /* data */
 public:
     CollisionBox(/* args */);
+    CollisionBox(const std::string& objectTag);
     ~CollisionBox();
 
     void Test() const;
