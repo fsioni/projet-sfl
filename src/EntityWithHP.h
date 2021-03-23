@@ -11,18 +11,25 @@ public:
 
     unsigned int hp;
     unsigned int damage;
+    bool livingStatus;
+    unsigned int maxHealth;
+    float speed;
 
     EntityWithHP();
 
-    EntityWithHP(unsigned int x, unsigned int y, string name, unsigned int hp, unsigned int damage);
+    EntityWithHP(float x, float y, string name, unsigned int hp, unsigned int damage, float speed, unsigned int maxHealth);
 
     ~EntityWithHP();
 
-    void EntityMove(unsigned int vx, unsigned int vy);
+    void Move();
 
     void SetHP(unsigned int newHp);
 
     int GetHP() const;
+
+    void SetSpeed(float newSpeed);
+
+    float GetSpeed() const;
 
     void SetDamage(unsigned int newDmg);
 
@@ -33,6 +40,10 @@ public:
     void TakeDamage(unsigned int damage);
 
     void Attack(EntityWithHP &target, unsigned int damage) const;
+
+    void SetLivingStatus (bool newStatus);
+
+    bool GetLivingStatus() const;
 
 };
 
