@@ -11,27 +11,27 @@ class EntityWithoutHP
 {
 public:
 
-    unsigned int x;
-    unsigned int y;
+    float x;
+    float y;
     string name;
 
     EntityWithoutHP();
 
-    EntityWithoutHP(unsigned int x, unsigned int y, string name);
+    EntityWithoutHP(float x, float y, string name);
 
     ~EntityWithoutHP();
 
-    int GetPos_x() const;
+    float GetPos_x() const;
 
-    void SetPos_x(int newX);
+    void SetPos_x(float newX);
 
-    int GetPos_y() const;
+    float GetPos_y() const;
 
-    void SetPos_y(int newY);
+    void SetPos_y(float newY);
 
     string GetName() const;
 
-    void SetName(string newN);
+    void SetName(string newName);
 
     virtual void PrintEntityInfo();
 
