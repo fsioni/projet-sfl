@@ -123,7 +123,7 @@ void Tileset::rawDataToTileset(std::string rawData){
 
 }
 
-void Tileset::display() const{
+void Tileset::Display() const{
     std::cout << "Name : " << name << std::endl;
     std::cout << "TileWidth : " << tileWidth << std::endl;
     std::cout << "TileHeight : " << tileHeight << std::endl;

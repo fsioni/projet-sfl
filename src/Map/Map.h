@@ -11,10 +11,8 @@
 class Map{
     std::vector<MapLayer> mapLayers;
     CollisionLayer * collisionLayer;
-    std::vector<SpawnsLayer> spawnsLayer;
-    
+    SpawnsLayer * spawnsLayer;
     Tileset * tileset;
-    int nbLayers;
 
 public:
     Map();
@@ -23,14 +21,15 @@ public:
 
     void SetTileset(const Tileset& ts);
     void AddMapLayer(const MapLayer & l);
-    void AddSpawnLayer(const SpawnsLayer& nLayer);
+    void SetSpawnLayer(const SpawnsLayer& nLayer);
 
     Tileset GetTileset() const;
     std::vector<MapLayer> GetMapLayers() const;
-    int GetNbMapLayers() const;
 
     void TmxLoadLayers(std::string fileName);
     void TsxLoadTileset(std::string fileName);
+
+    void Display() const;
 };
 
 #endif
