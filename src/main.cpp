@@ -95,9 +95,16 @@ int main(int argc, char* argv[]){
     }else if (argv[1] == std::string("1")) /////////////// MODE TEXTE
     {
         std::cout << "txt mode" << std::endl;
+
         termClear();
+
+        std::string tmxFile = "data/maps/tilemaps/tmxLiteExample.tmx";
+        std::string tsxFile = "data/maps/tilesets/tmxLiteExample.tsx";
+        Map map(tmxFile, tsxFile);
         Game game;
+        game.SetMap(map);
         txtLoop(game);
+
         termClear();
 
     }else /////////L'ARGUMENT NE CORRESPOND A AUCUN MODE

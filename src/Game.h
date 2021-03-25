@@ -20,6 +20,7 @@ public:
     void Run(int mode); //mode = 0 for SFML, 1 for txt 
     void KeyboardPressed(const char key);
     EntityWithHP GetPlayerConst() const;
+    void SetMap(Map nMap);
     void Test();
 
 };

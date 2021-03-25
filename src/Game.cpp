@@ -6,6 +6,7 @@ Game::Game(/* args */)
 {
 }
 
+
 Game::~Game()
 {
 }
@@ -52,6 +53,11 @@ void Game::KeyboardPressed(const char key)
 EntityWithHP Game::GetPlayerConst() const
 {
     return player;
+}
+
+void Game::SetMap(Map nMap) 
+{
+    this->map = nMap;
 }
 
 void Game::Test() 
