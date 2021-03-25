@@ -4,7 +4,7 @@
 
 void txtLoop(Game & g) 
 {
-    WinTXT win(20, 20);
+    WinTXT win(30, 30);
     system("setterm -cursor off");
 
     bool ok = true;
@@ -39,7 +39,6 @@ void txtAff(WinTXT & win, const Game & game)
     win.print(player.GetPos_x(), player.GetPos_y(), 'O');
     std::cout << endl << "'" << player.GetPos_x() << ", " << player.GetPos_y() << "'" << endl << "Player HP : " << player.GetHP() << endl;
 
-    win.print(1, 1, 'X');
     cout<< collisionBoxes.size();
     //Affichage des collisions boxes
     for (unsigned int i=0; i < collisionBoxes.size(); i++){

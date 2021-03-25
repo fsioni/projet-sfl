@@ -21,6 +21,7 @@ public:
     void KeyboardPressed(const char key);
     EntityWithHP GetPlayerConst() const;
     Map& GetMapConst() const;
+    void MoveWithCollision(EntityWithHP &entity, float vx, float vy);
     void Test();
 
 };
