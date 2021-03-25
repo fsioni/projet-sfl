@@ -4,8 +4,7 @@
 
 #include "Map/Map.h"
 #include "Map/tmxParsing.h"
-#include "Map/Box.h"
-#include "Map/Layers/SpawnsLayer.h"
+
 
 /* TODO : 
     Gestion des erreurs dans getAttributeValue
@@ -23,8 +22,8 @@ int main(void){
     std::string tsxFile = "data/maps/tilesets/mainTileSet.tsx";
 
     Map map(tmxFile, tsxFile);
-    map.Display();
-    
+    //map.Display();
+    testRegression();
     return 0;
 }
 

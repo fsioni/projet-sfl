@@ -5,6 +5,8 @@
 #include <vector>
 
 
+void testRegression();
+
 // TODO : fonction de test + valeur retour en cas d'erreur
 std::string getInsideTag(std::string data, std::string tag, int indice);
 int countTag(std::string data, std::string tag);
