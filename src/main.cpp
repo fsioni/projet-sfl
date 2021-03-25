@@ -3,33 +3,9 @@
 #include <string>
 
 #include "Map/Map.h"
-#include "Map/tmxParsing.h"
-
-
-/* TODO : 
-    Gestion des erreurs dans getAttributeValue
-    Fonctions de tests
-    Initialisation CollisionBox, SpawnPoint et ensuite 
-        CollisionLayer, SpawnLayer et enfin Map
-        avec les collisions+spawn+mapLayer
-*/
 
 
 
-int main(void){
-
-    std::string tmxFile = "data/maps/tilemaps/mainTilemap.tmx";
-    std::string tsxFile = "data/maps/tilesets/mainTileSet.tsx";
-
-    Map map(tmxFile, tsxFile);
-    //map.Display();
-    testRegression();
-    return 0;
-}
-
-
-
-/*
 int main(void){
     
 
@@ -108,7 +84,7 @@ int main(void){
         int minY = py - winHeight/h;
         int maxY = py + winHeight/h;
         
-        for(int k = 0; k < map.GetNbMapLayers(); k++){
+        for(int k = 0; k < map.GetMapLayers().size(); k++){
             MapLayer layer = map.GetMapLayers()[k];
             for(int i = minX; i<maxX; i++){
                 for(int j=minY; j<maxY; j++){
@@ -131,4 +107,3 @@ int main(void){
     return 0;
 }
 
-*/
