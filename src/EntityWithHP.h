@@ -21,7 +21,7 @@ public:
 
     ~EntityWithHP();
 
-    void Move();
+    void Move(float vx, float vy);
 
     void SetHP(unsigned int newHp);
 
