@@ -38,6 +38,10 @@ Tileset Map::GetTileset() const{
     return *tileset;
 }
 
+CollisionLayer Map::GetCollisionLayer() const{
+    return *collisionLayer;
+}
+
 std::vector<MapLayer> Map::GetMapLayers() const{
     return mapLayers;
 }

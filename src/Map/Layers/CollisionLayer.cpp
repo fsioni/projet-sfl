@@ -36,3 +36,8 @@ void CollisionLayer::Display() const{
         std::cout << std::endl;
     }
 }
+
+std::vector<CollisionBox> CollisionLayer::GetCollisionBoxes() const 
+{
+    return collisionBoxes;
+}

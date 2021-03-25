@@ -12,7 +12,7 @@ EntityWithoutHP::EntityWithoutHP(){
 }
 
 EntityWithoutHP::EntityWithoutHP(float x, float y, string name){
-    assert (x >= 0.0 && y >= 0.0)
+    assert (x >= 0.0 && y >= 0.0);
 
     this->x = x;
     this->y = y;
