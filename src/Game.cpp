@@ -4,8 +4,8 @@
 
 Game::Game(/* args */)
 {
-    std::string tmxFile = "data/maps/tilemaps/tmxLiteExample.tmx";
-    std::string tsxFile = "data/maps/tilesets/tmxLiteExample.tsx";
+    std::string tmxFile = "data/maps/tilemaps/mainTilemap.tmx";
+    std::string tsxFile = "data/maps/tilesets/mainTileSet.tsx";
     map = new Map(tmxFile, tsxFile);
 }
 

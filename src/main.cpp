@@ -127,7 +127,14 @@ int main(int argc, char* argv[]){
 
         termClear();
 
-    }else /////////L'ARGUMENT NE CORRESPOND A AUCUN MODE
+    }
+    else if(argv[1] == std::string("2")){
+        Game game;
+        
+        std::cout << game.GetMapConst().GetCollisionLayer().GetCollisionBoxes().size() << std::endl;
+    }
+    
+    else /////////L'ARGUMENT NE CORRESPOND A AUCUN MODE
     {
         cerr << "The argument need to be 0 for SFML or 1 for txt" << endl;
     }
