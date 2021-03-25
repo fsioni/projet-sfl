@@ -36,16 +36,16 @@ void Game::KeyboardPressed(const char key)
     switch (key)
     {
     case 'z':
-        player.Move(0,-1);
+        MoveWithCollision(player, 0, -1);
         break;
     case 's':
-        player.Move(0,1);
+        MoveWithCollision(player, 0, 1);
         break;
     case 'q':
-        player.Move(-1,0);
+        MoveWithCollision(player, -1, 0);
         break;
     case 'd':
-        player.Move(1,0);
+        MoveWithCollision(player, 1, 0);
         break;
     
     default:
@@ -61,6 +61,22 @@ EntityWithHP Game::GetPlayerConst() const
 Map& Game::GetMapConst() const
 {
     return *map;
+}
+
+void Game::MoveWithCollision(EntityWithHP &entity, float vx, float vy) 
+{
+    bool iscolliding = false;
+    std::vector<CollisionBox> cb = map->GetCollisionLayer().GetCollisionBoxes();
+    for (long unsigned int i = 0; i < cb.size(); i++)
+    {
+        if (entity.GetPos_x() + vx >= cb[i].GetX() && cb[i].GetX() >= entity.GetPos_x() + vx &&
+            entity.GetPos_y() + vy >= cb[i].GetY() && cb[i].GetY() >= entity.GetPos_y() + vy)
+            iscolliding = true;
+    }
+    if (!iscolliding)
+    {
+        entity.Move(vx, vy);
+    }
 }
 
 void Game::Test() 

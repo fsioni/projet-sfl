@@ -1,4 +1,5 @@
 #include "EntityWithoutHP.h"
+#include <cassert>
 #include <iostream>
 #include <string>
 
