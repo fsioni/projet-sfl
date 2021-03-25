@@ -71,10 +71,17 @@ void EntityWithHP::PrintEntityInfo() {
 
 }
 
-void EntityWithHP::Move(){
+void EntityWithHP::Move(float vx, float vy){
 
-    x += speed;
-    y += speed;
+    x += vx*speed;
+    y += vy*speed;
+
+    if (x < 0.0){
+        x = 0.0;
+    }
+    if (y < 0.0){
+        y = 0.0;
+    }
 }
 
 int EntityWithHP::GetDamage() const{
