@@ -3,7 +3,7 @@
 
 #include "Box.h"
 
-class CollisionBox:Box
+class CollisionBox:public Box
 {
 private:
     /* data */

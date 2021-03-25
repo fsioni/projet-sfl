@@ -4,6 +4,9 @@
 
 Game::Game(/* args */)
 {
+    std::string tmxFile = "data/maps/tilemaps/tmxLiteExample.tmx";
+    std::string tsxFile = "data/maps/tilesets/tmxLiteExample.tsx";
+    this->map = new Map(tmxFile, tsxFile);
 }
 
 
@@ -55,9 +58,9 @@ EntityWithHP Game::GetPlayerConst() const
     return player;
 }
 
-void Game::SetMap(Map nMap) 
+Map& Game::GetMapConst() const
 {
-    this->map = nMap;
+    return *map;
 }
 
 void Game::Test() 

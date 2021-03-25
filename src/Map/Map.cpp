@@ -1,6 +1,7 @@
 #include "Map.h"
 #include "tmxParsing.h"
 
+#include <iostream>
 
 Map::Map(){
     nbLayers = 0;
@@ -8,10 +9,11 @@ Map::Map(){
 
 Map::Map(std::string tmxFile, std::string tsxFile){
     nbLayers = 0;
+    tileset = new Tileset;
     TmxLoadLayers(tmxFile);
     TsxLoadTileset(tsxFile);
     collisionLayer = new CollisionLayer;
-    tileset = new Tileset;
+    
 
 }
 
@@ -21,7 +23,7 @@ Map::~Map(){
 }
 
 void Map::SetTileset(Tileset& ts){
-    tileset = &ts;
+    *tileset = ts;
 }
 
 void Map::AddMapLayer(const MapLayer & layer){
@@ -35,6 +37,10 @@ void Map::AddSpawnLayer(const SpawnsLayer& nLayer){
 
 Tileset Map::GetTileset() const{
     return *tileset;
+}
+
+CollisionLayer Map::GetCollisionLayer() const{
+    return *collisionLayer;
 }
 
 std::vector<MapLayer> Map::GetMapLayers() const{
@@ -68,6 +74,7 @@ void Map::TsxLoadTileset(std::string fileName){
     std::string strTileset = fileToString(fileName);
     Tileset tmp;
     tmp.rawDataToTileset(strTileset);
+    
     SetTileset(tmp);
 }
 

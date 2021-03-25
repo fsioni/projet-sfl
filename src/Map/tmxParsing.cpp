@@ -60,3 +60,57 @@ std::vector<int> csvToInt(std::string data){
     }
     return vect;
 }
+
+// Si tag pas trouvé alors retourne un espace 
+// les indices vont de 0 à n-1 occurence du tag
+std::string getInsideTag(std::string data, std::string tag, int indice){
+    int startTag = 0, endTag;
+
+    for(int i=0; i<=indice; i++){
+        startTag = data.find("<"+tag+" ", startTag);
+        startTag++; // pour ne pas retrouver la même balise à l'itération suivante
+        // string::find retourne string::npos quand ne trouve pas
+        if(startTag== std::string::npos)
+            return " ";
+
+        endTag = data.find(">", startTag);
+    }
+
+    return data.substr(startTag, endTag-startTag);
+}
+
+std::string getDataTag(std::string data, std::string tag, int indice){
+    int startOpenTag, endOpenTag;
+    int startCloseTag;
+
+
+    startOpenTag = data.find("<"+tag+" ", 0);
+    endOpenTag   = data.find(">", startOpenTag);
+
+    if(startOpenTag == std::string::npos || endOpenTag == std::string::npos){
+        std::cout << "Balise ouvrante introuvable" << std::endl;
+    }
+
+    startCloseTag = data.find("</"+tag+">", endOpenTag);
+
+    if(startCloseTag == std::string::npos){
+        std::cout << "Balise ouvrante introuvable" << std::endl;
+    }
+    
+
+    return data.substr(endOpenTag+2, startCloseTag-endOpenTag-2);
+}
+
+
+int countTag(std::string data, std::string tag){
+    int count = 0;
+    int pos = 0;
+    tag = "<"+tag+" ";
+    pos = data.find(tag, pos);
+    while(pos != std::string::npos){
+        count++;
+        pos = data.find(tag, pos+1);
+        
+    }
+    return count;
+}

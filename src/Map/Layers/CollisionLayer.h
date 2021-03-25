@@ -13,6 +13,8 @@ public:
     CollisionLayer(/* args */);
     ~CollisionLayer();
     void AddCollisionBox(const CollisionBox& newColBox);
+    std::vector<CollisionBox> GetCollisionBoxes() const;
+
 };
 
 

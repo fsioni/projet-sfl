@@ -98,11 +98,7 @@ int main(int argc, char* argv[]){
 
         termClear();
 
-        std::string tmxFile = "data/maps/tilemaps/tmxLiteExample.tmx";
-        std::string tsxFile = "data/maps/tilesets/tmxLiteExample.tsx";
-        Map map(tmxFile, tsxFile);
         Game game;
-        game.SetMap(map);
         txtLoop(game);
 
         termClear();

@@ -26,6 +26,7 @@ public:
     void AddSpawnLayer(const SpawnsLayer& nLayer);
 
     Tileset GetTileset() const;
+    CollisionLayer GetCollisionLayer() const;
     std::vector<MapLayer> GetMapLayers() const;
     int GetNbMapLayers() const;
 
