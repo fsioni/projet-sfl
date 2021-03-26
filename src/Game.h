@@ -3,7 +3,7 @@
 
 #include "StateManager/StateManager.h"
 #include "Map/Map.h"
-#include "EntityWithHP.h"
+#include "Player.h"
 
 
 class Game
@@ -11,7 +11,7 @@ class Game
 private:
     StateManager stateMan;
     Map *map;
-    EntityWithHP player;
+    Player player;
 
 public:
     Game(/* args */);

@@ -1,5 +1,5 @@
-#ifndef ENEMY_H
-#define ENEMY_H
+#ifndef __ENEMY_H__
+#define __ENEMY_H__
 
 #include "EntityWithHP.h"
 #include <string>
@@ -16,5 +16,6 @@ public :
 
     ~Enemy();
 
-}
-#endif
+};
+
+#endif // __ENEMY_H__

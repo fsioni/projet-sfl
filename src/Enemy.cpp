@@ -1,5 +1,4 @@
-#include "Player.h"
-#include "EntityWithHP.h"
+#include "Enemy.h"
 
 #include <iostream>
 #include <string>

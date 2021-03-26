@@ -16,5 +16,6 @@ public :
 
     ~Player();
 
-}
+};
+
 #endif
