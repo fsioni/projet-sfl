@@ -8,6 +8,10 @@
 Open a terminal.
 - Compile using Make.
 - Execute ./bin/exec 0 for SFML or ./bin/exec 1 for txt.
+### For SFML mode :
+blabla
+### For txt mode :
+Use ZQSD to move along all axis. Press 'x' to quit.
 
 ## Specification 
 You can find our specification [here](https://docs.google.com/document/d/1M3ReGvUai9tsUhxqgG_X2tHgvNp70VFRoiY18aw6FXw/edit#heading=h.z6ne0og04bp5).
