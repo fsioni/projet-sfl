@@ -3,7 +3,7 @@
 
 #include "StateManager/StateManager.h"
 #include "Map/Map.h"
-#include "Player.h"
+#include "Entity/Player.h"
 
 
 class Game

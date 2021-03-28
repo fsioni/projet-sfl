@@ -2,8 +2,8 @@
 #include <iostream>
 #include <string>
 
-#include "Map/Map.h"
-#include "Game.h"
+#include "Core/Map/Map.h"
+#include "Core/Game.h"
 #include "txt/winTxt.h"
 #include "txt/gameTxt.h"
 
@@ -33,7 +33,7 @@ int main(int argc, char* argv[]){
         tileTexture.loadFromFile(map.GetTileset().GetTileMapPath());
         tiles.setTexture(tileTexture);
 
-        sf::RenderWindow window(sf::VideoMode(800, 800, 32), "Tilemap loadind and displaying");
+        sf::RenderWindow window(sf::VideoMode(800, 800, 32), "Tilemap loading and displaying");
         
         int px=40;
         int py=40;
