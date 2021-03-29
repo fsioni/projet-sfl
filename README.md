@@ -7,10 +7,10 @@
 ## How to use
 Open a terminal.
 - Compile using 'Make'.
-- Execute ./bin/exec 0 for SFML or ./bin/exec 1 for txt.
+- Execute ./bin/exec 0 for SFML, ./bin/exec 1 for txt, ./bin/exec/2 for all the tests running
 - Clean all the object files and executables with 'Make clean'.
 ### For SFML mode :
-blabla
+Use ZQSD to move along all axis. Press 'X' or 'Escape' to quit.
 ### For txt mode :
 Use ZQSD to move along all axis. Press 'X' to quit.
 
