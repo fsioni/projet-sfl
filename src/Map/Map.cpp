@@ -42,6 +42,10 @@ CollisionLayer Map::GetCollisionLayer() const{
     return *collisionLayer;
 }
 
+SpawnsLayer Map::GetSpawnsLayer() const{
+    return *spawnsLayer;
+}
+
 std::vector<MapLayer> Map::GetMapLayers() const{
     return mapLayers;
 }

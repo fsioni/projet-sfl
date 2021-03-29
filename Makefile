@@ -1,5 +1,5 @@
 EXECS_NAME = bin/exec 
-OBJ_FILES = obj/main.o obj/Layer.o obj/tmxParsing.o obj/Tileset.o obj/Map.o obj/MapLayer.o obj/CollisionLayer.o obj/SpawnPoint.o obj/SpawnPoint.o obj/SpawnsLayer.o obj/Box.o obj/CollisionBox.o obj/StateManager.o obj/Game.o obj/EntityWithHP.o obj/EntityWithoutHP.o obj/winTxt.o obj/gameTxt.o 
+OBJ_FILES = obj/main.o obj/Layer.o obj/tmxParsing.o obj/Tileset.o obj/Map.o obj/MapLayer.o obj/CollisionLayer.o obj/SpawnPoint.o obj/SpawnPoint.o obj/SpawnsLayer.o obj/Box.o obj/CollisionBox.o obj/StateManager.o obj/Game.o obj/EntityWithHP.o obj/EntityWithoutHP.o obj/Player.o obj/winTxt.o obj/gameTxt.o 
 
 CC = g++
 CFLAGS = -Wall -ggdb -std=c++14
@@ -50,7 +50,10 @@ obj/tmxParsing.o: src/Map/tmxParsing.cpp src/Map/tmxParsing.h
 obj/StateManager.o : src/StateManager/StateManager.cpp src/StateManager/State.h
 	$(COMPILATIONOBJ)
 
-obj/Game.o : src/Game.cpp src/StateManager/StateManager.h src/EntityWithHP.h
+obj/Game.o : src/Game.cpp src/StateManager/StateManager.h src/Player.h
+	$(COMPILATIONOBJ)
+
+obj/Player.o : src/Player.cpp src/Player.h
 	$(COMPILATIONOBJ)
 
 obj/EntityWithHP.o : src/EntityWithHP.cpp src/EntityWithoutHP.h 

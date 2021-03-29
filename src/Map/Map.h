@@ -26,6 +26,7 @@ public:
     Tileset GetTileset() const;
     CollisionLayer GetCollisionLayer() const;
     std::vector<MapLayer> GetMapLayers() const;
+    SpawnsLayer GetSpawnsLayer() const;
 
     void TmxLoadLayers(std::string fileName);
     void TsxLoadTileset(std::string fileName);
