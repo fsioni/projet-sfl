@@ -218,7 +218,7 @@
 </data>
  </layer>
  <objectgroup id="6" name="PlayerSpawn">
-  <object id="8" x="159.692" y="1025.09"/>
+  <object id="8" x="3" y="5"/>
  </objectgroup>
  <objectgroup id="7" name="EnemySpawn">
   <object id="9" x="80" y="816"/>

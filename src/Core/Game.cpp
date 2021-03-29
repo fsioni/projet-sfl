@@ -11,7 +11,7 @@ Game::Game(/* args */)
     int x = map->GetSpawnsLayer().getPlayerSpawn().GetX();
     int y = map->GetSpawnsLayer().getPlayerSpawn().GetY();
 
-    player = Player(x, y, "Player", 10, 10, 5, 10);
+    player = Player(x, y, "Player", 10, 10, 1, 10);
 }
 
 

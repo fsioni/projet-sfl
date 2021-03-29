@@ -1,5 +1,5 @@
 #include "Box.h"
-
+#include <cassert>
 #include "tmxParsing.h"
 
 Box::Box(){
