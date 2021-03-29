@@ -28,9 +28,17 @@ Box::~Box()
 
 
 
-void Box::SetId(int nId){}
-void Box::SetPosition(int nX, int nY){}
-void Box::SetDimensions(int nWidth, int nHeight){}
+void Box::SetId(int nId){
+    id=nId;
+}
+void Box::SetPosition(int nX, int nY){
+    x = nX;
+    y = nY;
+}
+void Box::SetDimensions(int nWidth, int nHeight){
+    width = nWidth;
+    height = nHeight;
+}
 
 int Box::GetId() const{return id;}
 int Box::GetX() const{return x;}
