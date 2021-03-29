@@ -3,7 +3,9 @@
 #include <string>
 
 
-#include "Game.h"
+
+#include "Core/Map/Map.h"
+#include "Core/Game.h"
 #include "txt/winTxt.h"
 #include "txt/gameTxt.h"
 
@@ -151,7 +153,7 @@ int main(int argc, char* argv[]){
 
     if (argc == 1 || argc>2) //////CHECK DU NOMBRE D'ARGUMENTS
     {
-        cerr << "You need one argument : 0 for SFML, 1 for txt" << endl;
+        cerr << "You need one argument : 0 for SFML, 1 for txt, 2 for test" << endl;
 
     }else if (argv[1] == std::string("0")) ////////MODE SFML
     {
@@ -173,9 +175,8 @@ int main(int argc, char* argv[]){
 
     }
     else if(argv[1] == std::string("2")){
-        Game game;
-        
-        std::cout << game.GetMapConst().GetCollisionLayer().GetCollisionBoxes().size() << std::endl;
+        Box b;
+        b.Test();
     }
     
     else /////////L'ARGUMENT NE CORRESPOND A AUCUN MODE

@@ -1,7 +1,7 @@
 #ifndef __GAMETXT_H__
 #define __GAMETXT_H__
 
-#include "../Game.h"
+#include "../Core/Game.h"
 #include "winTxt.h"
 
 void txtLoop (Game & g);

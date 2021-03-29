@@ -26,7 +26,7 @@ Box::~Box()
 {
 }
 
-void Box::Test() const{}
+
 
 void Box::SetId(int nId){}
 void Box::SetPosition(int nX, int nY){}
@@ -37,3 +37,24 @@ int Box::GetX() const{return x;}
 int Box::GetY() const{return y;}
 int Box::GetWidth() const{return width;}
 int Box::GetHeight() const{return height;}
+
+
+void Box::Test() const{
+    Box b(1, 2, 3, 4, 5);
+    assert(b.id==1 && b.x == 2 && b.y == 3 
+           && b.width==4 && b.height == 5);
+
+    b.SetId(10);
+    assert(b.GetId()==10);
+
+    b.SetPosition(1, 2);
+    assert(b.GetX()==1 && b.GetY()==2);
+    
+
+    b.SetDimensions(11, 12);
+    assert(b.GetWidth()==11 && b.GetHeight()==12);
+
+    Box b2;
+    assert(b2.id == -1 && b2.x == -1 && b2.y == -1
+           && b2.height == -1 && b2.width == -1);
+}
