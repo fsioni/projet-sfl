@@ -177,6 +177,8 @@ int main(int argc, char* argv[]){
     else if(argv[1] == std::string("2")){
         Box b;
         b.Test();
+        Tileset ts;
+        ts.Test();
     }
     
     else /////////L'ARGUMENT NE CORRESPOND A AUCUN MODE

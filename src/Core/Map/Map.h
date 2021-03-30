@@ -32,6 +32,7 @@ public:
     void TsxLoadTileset(std::string fileName);
 
     void Display() const;
+    void Test() const;
 };
 
 #endif
