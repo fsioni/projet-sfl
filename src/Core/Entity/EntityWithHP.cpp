@@ -114,7 +114,7 @@ bool EntityWithHP::GetLivingStatus() const{
     return livingStatus;
 }
 
-/* EntityWithHP::GetDirection(){
+int EntityWithHP::GetMaxHealth() const{
 
-
-}*/
+    return maxHealth;
+}
