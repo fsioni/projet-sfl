@@ -7,6 +7,12 @@ Game::Game(/* args */)
     std::string tmxFile = "data/maps/tilemaps/mainTilemap.tmx";
     std::string tsxFile = "data/maps/tilesets/mainTileSet.tsx";
     map = new Map(tmxFile, tsxFile);
+    
+    int x = map->GetSpawnsLayer().getPlayerSpawn().GetX();
+    int y = map->GetSpawnsLayer().getPlayerSpawn().GetY();
+
+    player = Player(x, y, "Player", 10, 10, 1, 10);
+    isDebug = false;
 }
 
 
@@ -77,6 +83,16 @@ void Game::MoveWithCollision(EntityWithHP &entity, float vx, float vy)
     {
         entity.Move(vx, vy);
     }
+}
+
+void Game::ChangeDebug() 
+{
+    isDebug = !isDebug;
+}
+
+int Game::GetDebug() 
+{
+    return isDebug;
 }
 
 void Game::Test() 

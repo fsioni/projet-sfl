@@ -31,6 +31,11 @@ SpawnsLayer::SpawnsLayer(const std::string & objectgroupTagPlayer,
 SpawnsLayer::~SpawnsLayer(){
 }
 
+SpawnPoint SpawnsLayer::getPlayerSpawn() const{
+    return playerSpawn;
+}
+
+
 void SpawnsLayer::ChangePlayerSpawn(SpawnPoint const &newSpawn){
     playerSpawn = newSpawn;
 }

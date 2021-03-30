@@ -1,5 +1,6 @@
 #include <iostream>
 #include "tmxParsing.h"
+#include "assert.h"
 
 #include "Tileset.h"
 
@@ -132,4 +133,23 @@ void Tileset::Display() const{
     std::cout << "TileMapPath : " << tileMapPath << std::endl;
     std::cout << "TileMapWidth : " << tileMapWidth << std::endl;
     std::cout << "TileMapHeight : " << tileMapHeight << std::endl; 
+}
+
+void Tileset::Test() const{
+    std::string rawData = "<tileset version=\"1.4\" tiledversion=\"1.4.3\"";
+    rawData +=  " name=\"mainTileSet\" tilewidth=\"32\" tileheight=\"32\"";
+    rawData +=  " tilecount=\"1064\" columns=\"8\">\n";
+    rawData += " <image source=\"../../textures/tilesets/mainTileset.png\"";
+    rawData += " width=\"256\" height=\"4256\"/>\n";
+    rawData += "  </tileset>";
+    Tileset ts;
+    ts.rawDataToTileset(rawData);
+    assert(ts.GetName()=="mainTileSet");
+    assert(ts.GetColumn()==8);
+    assert(ts.GetTileCount()==1064);
+    assert(ts.GetTileWidth()==32);
+    assert(ts.GetTileHeight()==32);
+    assert(ts.GetTileMapPath()=="./data/textures/tilesets/mainTileset.png");
+    assert(ts.GetTileMapWidth()==256);
+    assert(ts.GetTileMapHeight()==4256);
 }

@@ -7,10 +7,10 @@
 ## How to use
 Open a terminal.
 - Compile using 'Make'.
-- Execute ./bin/exec 0 for SFML or ./bin/exec 1 for txt.
+- Execute ./bin/exec 0 for SFML, ./bin/exec 1 for txt, ./bin/exec/2 for all the tests running
 - Clean all the object files and executables with 'Make clean'.
 ### For SFML mode :
-blabla
+Use ZQSD to move along all axis. Press 'P' for Debug mode. Press 'X' or 'Escape' to quit.
 ### For txt mode :
 Use ZQSD to move along all axis. Press 'X' to quit.
 
@@ -19,6 +19,9 @@ You can find our specifications [here](https://docs.google.com/document/d/1M3ReG
 
 ## UML Class Diagram
 You can find our UML Class Diagram [here](https://app.diagrams.net/?state=%7B%22ids%22:%5B%221cDj2nZ69OLlIY6NArtj_65bF8BKCwmA5%22%5D,%22action%22:%22open%22,%22userId%22:%22101499938783679469280%22,%22resourceKeys%22:%7B%7D%7D).
+
+## Trello Board
+You can find our Trello Board [here](https://trello.com/b/tu5E8z0s/projet-sfl).
 
 
 ## Creating your own maps with the Tiled software :

@@ -1,7 +1,7 @@
 #include "Map.h"
 #include "tmxParsing.h"
 #include <iostream>
-
+#include "assert.h"
 
 Map::Map(){
 
@@ -40,6 +40,10 @@ Tileset Map::GetTileset() const{
 
 CollisionLayer Map::GetCollisionLayer() const{
     return *collisionLayer;
+}
+
+SpawnsLayer Map::GetSpawnsLayer() const{
+    return *spawnsLayer;
 }
 
 std::vector<MapLayer> Map::GetMapLayers() const{
@@ -105,4 +109,13 @@ void Map::Display() const{
     spawnsLayer->Display();
     std::cout << "======== TILESET ========" << std::endl;
     tileset->Display();
+}
+
+
+
+void Map::Test() const{
+    std::string tmxFile = "data/maps/tilemaps/mainTilemap.tmx";
+    std::string tsxFile = "data/maps/tilesets/mainTileSet.tsx";
+    Map map(tmxFile, tsxFile);
+
 }

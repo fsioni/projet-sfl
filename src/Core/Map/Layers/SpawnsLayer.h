@@ -18,6 +18,8 @@ public:
     void ChangePlayerSpawn(SpawnPoint const &newSpawn);
     void AddEnemy(SpawnPoint const &newSpawn);
 
+    SpawnPoint getPlayerSpawn() const;
+
     void Display()const;
 };
 

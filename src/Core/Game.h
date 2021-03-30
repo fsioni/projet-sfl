@@ -12,6 +12,7 @@ private:
     StateManager stateMan;
     Map *map;
     Player player;
+    int isDebug;
 
 public:
     Game(/* args */);
@@ -22,6 +23,8 @@ public:
     EntityWithHP GetPlayerConst() const;
     Map& GetMapConst() const;
     void MoveWithCollision(EntityWithHP &entity, float vx, float vy);
+    void ChangeDebug();
+    int GetDebug();
     void Test();
 
 };
