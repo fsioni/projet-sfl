@@ -13,6 +13,8 @@ public:
 
     float x;
     float y;
+    float width;
+    float height;
     string name;
 
     EntityWithoutHP();
@@ -28,6 +30,18 @@ public:
     float GetPos_y() const;
 
     void SetPos_y(float newY);
+
+    
+
+    int GetWidth() const;
+
+    void SetWidth(int newW);
+
+    int GetHeight() const;
+
+    void SetHeight(int newH);
+
+    
 
     string GetName() const;
 
