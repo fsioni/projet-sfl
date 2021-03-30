@@ -9,11 +9,13 @@ using namespace std;
 
 class EntityWithoutHP
 {
-public:
+protected :
 
     float x;
     float y;
     string name;
+
+public:
 
     EntityWithoutHP();
 

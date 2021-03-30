@@ -7,13 +7,15 @@ using namespace std;
 
 class EntityWithHP : public EntityWithoutHP
 {
-public:
+protected :
 
     unsigned int hp;
     unsigned int damage;
     bool livingStatus;
     unsigned int maxHealth;
     float speed;
+
+public:
 
     EntityWithHP();
 
