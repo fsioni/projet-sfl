@@ -20,7 +20,8 @@ public:
     void draw (int x=0, int y=0);
     void pause();
     char getCh();
-
+    int getDimx() const;
+    int getDimy() const;
 };
 
 void termClear ();
