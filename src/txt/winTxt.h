@@ -1,14 +1,14 @@
 #ifndef WINTXT_H
 #define WINTXT_H
 
-//! \brief une fen�tre texte est un tableau 2D de caract�res
+//! \brief une fenètre texte est un tableau 2D de caractères
 class WinTXT
 {
 private:
 
     int dimx;       //!< \brief largeur
     int dimy;       //!< \brief heuteur
-    char* win;      //!< \brief stocke le contenu de la fen�tre dans un tableau 1D mais on y accede en 2D
+    char* win;      //!< \brief stocke le contenu de la fenètre dans un tableau 1D mais on y accede en 2D
 
 public:
 
