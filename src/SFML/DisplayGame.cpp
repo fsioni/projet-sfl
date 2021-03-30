@@ -73,8 +73,12 @@ void DisplayGame::DisplaySFML() const{
                     case sf::Keyboard::D:
                         game->KeyboardPressed('d');
                         direction = 2;
-                        break;          
+                        break;        
 
+                    case sf::Keyboard::P:
+                        game->ChangeDebug();
+                        break;
+                    
                     case sf::Keyboard::X:
                         window.close();  
                     
@@ -158,6 +162,8 @@ void DisplayGame::DisplaySFML() const{
                 
                 clock.restart();
             }
+
+            
             
            
 
@@ -167,7 +173,32 @@ void DisplayGame::DisplaySFML() const{
             charSprite.scale(w/32, h/32);
             window.draw(charSprite);
 
+            if (game->GetDebug()) //Affichage DEBUG
+            {
+                //Affichage collision joueur
+                Player p = game->GetPlayerConst();
+                int pOffset = p.getOffset();
+
+                sf::RectangleShape pb(sf::Vector2f(p.GetWidth() - pOffset*2, p.GetHeight() -pOffset*2));
+                pb.setPosition(p.GetPos_x() + pOffset, p.GetPos_y() + pOffset);
+                pb.setFillColor(sf::Color(0, 130, 255, 200));
+                window.draw(pb);
+
+                // Affichage des collision boxes
+                const std::vector<CollisionBox> collisionBoxes = game->GetMapConst().GetCollisionLayer().GetCollisionBoxes();
+    
+                for (long unsigned int i=0; i < collisionBoxes.size(); i++)
+                {
+                    sf::RectangleShape cb(sf::Vector2f(collisionBoxes[i].GetWidth(), collisionBoxes[i].GetHeight()));
+                    cb.setPosition(collisionBoxes[i].GetX(), collisionBoxes[i].GetY());
+                    cb.setFillColor(sf::Color(0, 190, 255, 200));
+                    window.draw(cb);                
+                }            
+            }
+
 
             window.display();
         }
 }
+
+

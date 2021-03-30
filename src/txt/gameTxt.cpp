@@ -36,14 +36,17 @@ void txtAff(WinTXT & win, const Game & game)
     win.clear();
 
     //Affichage du joueur
-    win.print(player.GetPos_x(), player.GetPos_y(), 'O');
+    win.print(win.getDimx()/2, win.getDimx()/2, 'O');
+
     //Affichage des données du joueurs
     std::cout << endl << player.GetName() << " Informations : " << endl << "Position : (" << player.GetPos_x() << ", " << player.GetPos_y() << ")" << endl 
     << "HP : " << player.GetHP() << "/" << player.maxHealth << endl << "Speed : " << player.GetSpeed() << endl << "Is Alive " << player.livingStatus;
 
     //Affichage des collisions boxes
     for (unsigned int i=0; i < collisionBoxes.size(); i++){
-        win.print(collisionBoxes[i].GetX(), collisionBoxes[i].GetY(), 'X');
+        win.print( (win.getDimx()/2 - player.GetPos_x() + collisionBoxes[i].GetX()), (win.getDimy()/2 - player.GetPos_y() + collisionBoxes[i].GetY()), 'X');
+
+        cout << "C" << i << "(" <<(15 + collisionBoxes[i].GetX()) << ", " << (15 + collisionBoxes[i].GetY()) << ")" << endl;
     }
     
 

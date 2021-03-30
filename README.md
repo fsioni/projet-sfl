@@ -10,7 +10,7 @@ Open a terminal.
 - Execute ./bin/exec 0 for SFML, ./bin/exec 1 for txt, ./bin/exec/2 for all the tests running
 - Clean all the object files and executables with 'Make clean'.
 ### For SFML mode :
-Use ZQSD to move along all axis. Press 'X' or 'Escape' to quit.
+Use ZQSD to move along all axis. Press 'P' for Debug mode. Press 'X' or 'Escape' to quit.
 ### For txt mode :
 Use ZQSD to move along all axis. Press 'X' to quit.
 

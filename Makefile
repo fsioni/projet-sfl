@@ -24,7 +24,7 @@ bin/exec : $(OBJ_FILES)
 obj/main.o: src/main.cpp  src/SFML/DisplayGame.h 
 	$(COMPILATIONOBJ)
 
-obj/DisplayGame.o : src/SFML/DisplayGame.cpp src/SFML/DisplayGame.h src/SFML/AssetManager.h src/core/Game.h
+obj/DisplayGame.o : src/SFML/DisplayGame.cpp src/SFML/DisplayGame.h src/SFML/AssetManager.h src/Core/Game.h
 	$(COMPILATIONOBJ)
 
 obj/AssetManager.o : src/SFML/AssetManager.cpp src/SFML/AssetManager.h 

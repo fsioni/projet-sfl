@@ -12,6 +12,7 @@ private:
     StateManager stateMan;
     Map *map;
     Player player;
+    int isDebug;
 
 public:
     Game(/* args */);
@@ -19,9 +20,11 @@ public:
 
     void Run(int mode); //mode = 0 for SFML, 1 for txt 
     void KeyboardPressed(const char key);
-    EntityWithHP GetPlayerConst() const;
+    Player GetPlayerConst() const;
     Map& GetMapConst() const;
     void MoveWithCollision(EntityWithHP &entity, float vx, float vy);
+    void ChangeDebug();
+    int GetDebug();
     void Test();
 
 };
