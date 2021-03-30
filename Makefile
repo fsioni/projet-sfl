@@ -1,5 +1,11 @@
 EXECS_NAME = bin/exec 
-OBJ_FILES = obj/main.o obj/Layer.o obj/tmxParsing.o obj/Tileset.o obj/Map.o obj/MapLayer.o obj/CollisionLayer.o obj/SpawnPoint.o obj/SpawnPoint.o obj/SpawnsLayer.o obj/Box.o obj/CollisionBox.o obj/StateManager.o obj/Game.o obj/EntityWithHP.o obj/EntityWithoutHP.o obj/Player.o obj/Enemy.o obj/winTxt.o obj/gameTxt.o 
+OBJ_FILES = obj/main.o obj/Layer.o obj/tmxParsing.o obj/Tileset.o obj/Map.o 
+OBJ_FILES += obj/MapLayer.o obj/CollisionLayer.o obj/SpawnPoint.o obj/SpawnPoint.o
+OBJ_FILES += obj/SpawnsLayer.o obj/Box.o obj/CollisionBox.o obj/StateManager.o
+OBJ_FILES += obj/Game.o obj/EntityWithHP.o obj/EntityWithoutHP.o obj/Player.o
+OBJ_FILES += obj/Enemy.o obj/winTxt.o obj/gameTxt.o obj/AssetManager.o
+OBJ_FILES += obj/DisplayGame.o
+
 
 CC = g++
 CFLAGS = -Wall -ggdb -std=c++14
@@ -15,7 +21,13 @@ all: $(EXECS_NAME)
 bin/exec : $(OBJ_FILES)
 	$(CC) $(CFLAGS) $^ -o $@ $(LIBS_SFML)
 
-obj/main.o: src/main.cpp src/Core/Map/tmxParsing.h src/Core/Map/Layers/Layer.h src/Core/Map/Tileset.h src/Core/Map/Map.h src/Core/Map/Layers/MapLayer.h src/Core/Game.h
+obj/main.o: src/main.cpp  src/SFML/DisplayGame.h 
+	$(COMPILATIONOBJ)
+
+obj/DisplayGame.o : src/SFML/DisplayGame.cpp src/SFML/DisplayGame.h src/SFML/AssetManager.h src/core/Game.h
+	$(COMPILATIONOBJ)
+
+obj/AssetManager.o : src/SFML/AssetManager.cpp src/SFML/AssetManager.h 
 	$(COMPILATIONOBJ)
 
 obj/Map.o : src/Core/Map/Map.cpp src/Core/Map/Map.h src/Core/Map/Tileset.h src/Core/Map/Layers/Layer.h src/Core/Map/tmxParsing.h src/Core/Map/Box.h
