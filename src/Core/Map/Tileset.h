@@ -43,6 +43,7 @@ public:
 
 
     void rawDataToTileset(std::string rawData);
+    void Test() const;
     void Display() const;
 };
 
