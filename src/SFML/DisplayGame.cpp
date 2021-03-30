@@ -31,6 +31,10 @@ void DisplayGame::DisplaySFML() const{
         int winHeight = 800;
         sf::RenderWindow window(sf::VideoMode(winWidth, winHeight, 32), "Legend Of Nautibus");
 
+        // Horloge
+        sf::Clock clock;
+        int posX = 0;
+
         // Direction du joueur 
         // 0 : bas
         // 1 : gauche
@@ -145,7 +149,7 @@ void DisplayGame::DisplaySFML() const{
             }
 
             
-            /*
+            
 
             
             if(clock.getElapsedTime().asSeconds() > 0.3){
@@ -154,8 +158,8 @@ void DisplayGame::DisplaySFML() const{
                 
                 clock.restart();
             }
-            */
-           int posX =0;
+            
+           
 
             // Affichage du joueur
             charSprite.setPosition(playerX-substX, playerY-substY);
