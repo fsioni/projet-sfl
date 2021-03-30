@@ -59,7 +59,7 @@ void Game::KeyboardPressed(const char key)
     }
 }
 
-EntityWithHP Game::GetPlayerConst() const
+Player Game::GetPlayerConst() const
 {
     return player;
 }
@@ -71,12 +71,19 @@ Map& Game::GetMapConst() const
 
 void Game::MoveWithCollision(EntityWithHP &entity, float vx, float vy) 
 {
+    if (vx == 0 && vy == 0)
+    {
+        return;
+    }
     bool iscolliding = false;
     std::vector<CollisionBox> cb = map->GetCollisionLayer().GetCollisionBoxes();
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
-        if (entity.GetPos_x() + entity.GetWidth() + vx >= cb[i].GetX() && cb[i].GetX() + cb[i].GetWidth() >= entity.GetPos_x() + vx &&
-            entity.GetPos_y() + entity.GetHeight() + vy >= cb[i].GetY() && cb[i].GetY() + cb[i].GetHeight() >= entity.GetPos_y() + vy)
+        //Detection collision
+        if (entity.GetPos_x() + entity.GetWidth() - entity.getOffset() + vx >= cb[i].GetX()
+        && cb[i].GetX() + cb[i].GetWidth() >= entity.GetPos_x() + entity.getOffset() + vx
+        && entity.GetPos_y() + entity.GetHeight() - entity.getOffset() + vy >= cb[i].GetY()
+        && cb[i].GetY() + cb[i].GetHeight() >= entity.GetPos_y() + entity.getOffset() + vy)
             iscolliding = true;
     }
     if (!iscolliding)

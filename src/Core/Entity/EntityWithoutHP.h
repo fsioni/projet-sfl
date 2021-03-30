@@ -15,6 +15,7 @@ public:
     float y;
     float width;
     float height;
+    int offset; // For collision detection
     string name;
 
     EntityWithoutHP();
@@ -40,6 +41,10 @@ public:
     int GetHeight() const;
 
     void SetHeight(int newH);
+
+    int getOffset();
+
+    void setOffset(int newO);
 
     
 

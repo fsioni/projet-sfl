@@ -202,7 +202,14 @@ void DisplaySFML(Game & game){
 
             if (game.GetDebug()) //Affichage DEBUG
             {
+                //Affichage collision joueur
+                Player p = game.GetPlayerConst();
+                int pOffset = p.getOffset();
 
+                sf::RectangleShape pb(sf::Vector2f(p.GetWidth() - pOffset*2, p.GetHeight() -pOffset*2));
+                pb.setPosition(p.GetPos_x() + pOffset, p.GetPos_y() + pOffset);
+                pb.setFillColor(sf::Color(0, 130, 255, 200));
+                window.draw(pb);
 
                 // Affichage des collision boxes
                 const std::vector<CollisionBox> collisionBoxes = game.GetMapConst().GetCollisionLayer().GetCollisionBoxes();
