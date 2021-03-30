@@ -75,8 +75,8 @@ void Game::MoveWithCollision(EntityWithHP &entity, float vx, float vy)
     std::vector<CollisionBox> cb = map->GetCollisionLayer().GetCollisionBoxes();
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
-        if (entity.GetPos_x() + vx >= cb[i].GetX() && cb[i].GetX() >= entity.GetPos_x() + vx &&
-            entity.GetPos_y() + vy >= cb[i].GetY() && cb[i].GetY() >= entity.GetPos_y() + vy)
+        if (entity.GetPos_x() + entity.GetWidth() + vx >= cb[i].GetX() && cb[i].GetX() + cb[i].GetWidth() >= entity.GetPos_x() + vx &&
+            entity.GetPos_y() + entity.GetHeight() + vy >= cb[i].GetY() && cb[i].GetY() + cb[i].GetHeight() >= entity.GetPos_y() + vy)
             iscolliding = true;
     }
     if (!iscolliding)
