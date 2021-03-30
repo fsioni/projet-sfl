@@ -47,6 +47,8 @@ public:
 
     bool GetLivingStatus() const;
 
+    int GetMaxHealth() const;
+
 };
 
 #endif
