@@ -20,6 +20,9 @@ You can find our specifications [here](https://docs.google.com/document/d/1M3ReG
 ## UML Class Diagram
 You can find our UML Class Diagram [here](https://app.diagrams.net/?state=%7B%22ids%22:%5B%221cDj2nZ69OLlIY6NArtj_65bF8BKCwmA5%22%5D,%22action%22:%22open%22,%22userId%22:%22101499938783679469280%22,%22resourceKeys%22:%7B%7D%7D).
 
+## Trello Board
+You can find our Trello Board [here](https://trello.com/b/tu5E8z0S/projet/SFL).
+
 
 ## Creating your own maps with the Tiled software :
 ### Collision and spawn layers :
