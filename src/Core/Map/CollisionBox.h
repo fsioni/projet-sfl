@@ -5,11 +5,11 @@
 
 #include <string>
 
-/*! \class Box 
+/*! \class CollisionBox 
 *   \brief Classe représentant une boîte de collision dans un monde 2D
 *
 *   Possède des propriété basiques comme la position, dimension, ID. 
-*   Hérite de la classe Box.
+*   Hérité de la classe Box.
 */
 class CollisionBox: public Box
 {
