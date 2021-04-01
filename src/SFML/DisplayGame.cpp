@@ -180,7 +180,7 @@ void DisplayGame::DisplaySFML() const{
                 int pOffset = p.getOffset();
 
                 sf::RectangleShape pb(sf::Vector2f(p.GetWidth() - pOffset*2, p.GetHeight() -pOffset*2));
-                pb.setPosition(p.GetPos_x() + pOffset, p.GetPos_y() + pOffset);
+                pb.setPosition(p.GetPos_x() + pOffset -substX, p.GetPos_y() + pOffset -substY);
                 pb.setFillColor(sf::Color(0, 130, 255, 200));
                 window.draw(pb);
 
@@ -190,7 +190,7 @@ void DisplayGame::DisplaySFML() const{
                 for (long unsigned int i=0; i < collisionBoxes.size(); i++)
                 {
                     sf::RectangleShape cb(sf::Vector2f(collisionBoxes[i].GetWidth(), collisionBoxes[i].GetHeight()));
-                    cb.setPosition(collisionBoxes[i].GetX(), collisionBoxes[i].GetY());
+                    cb.setPosition(collisionBoxes[i].GetX() -substX, collisionBoxes[i].GetY()-substY);
                     cb.setFillColor(sf::Color(0, 190, 255, 200));
                     window.draw(cb);                
                 }            

@@ -11,7 +11,7 @@ Game::Game(/* args */)
     int x = map->GetSpawnsLayer().getPlayerSpawn().GetX();
     int y = map->GetSpawnsLayer().getPlayerSpawn().GetY();
 
-    player = Player(x, y, "Player", 10, 10, 1, 10);
+    player = Player(x, y, "Player", 10, 10, 4, 10);
     isDebug = false;
 }
 
@@ -80,10 +80,10 @@ void Game::MoveWithCollision(EntityWithHP &entity, float vx, float vy)
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
         //Detection collision
-        if (entity.GetPos_x() + entity.GetWidth() - entity.getOffset() + vx >= cb[i].GetX()
-        && cb[i].GetX() + cb[i].GetWidth() >= entity.GetPos_x() + entity.getOffset() + vx
-        && entity.GetPos_y() + entity.GetHeight() - entity.getOffset() + vy >= cb[i].GetY()
-        && cb[i].GetY() + cb[i].GetHeight() >= entity.GetPos_y() + entity.getOffset() + vy)
+        if (entity.GetPos_x() + entity.GetWidth() - entity.getOffset() + (vx*entity.GetSpeed()) >= cb[i].GetX()
+        && cb[i].GetX() + cb[i].GetWidth() >= entity.GetPos_x() + entity.getOffset() + (vx*entity.GetSpeed())
+        && entity.GetPos_y() + entity.GetHeight() - entity.getOffset() + (vy*entity.GetSpeed()) >= cb[i].GetY()
+        && cb[i].GetY() + cb[i].GetHeight() >= entity.GetPos_y() + entity.getOffset() + (vy*entity.GetSpeed()))
             iscolliding = true;
     }
     if (!iscolliding)
