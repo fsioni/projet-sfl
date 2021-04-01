@@ -11,7 +11,7 @@ StateManager::~StateManager()
     
 }
 
-void StateManager::ChangeState(State* state) 
+void StateManager::ChangeState(State* nState) 
 {
     //Efface l'ancien état
     if (!sStates.empty())
@@ -21,16 +21,16 @@ void StateManager::ChangeState(State* state)
     }
 
     //Ajoute le nouvel état à la pile et l'initialise
-    sStates.push_back(state);
+    sStates.push_back(nState);
     sStates.back()->Init();
 }
 
-void StateManager::PushState(State* state) 
+void StateManager::PushState(State* nState) 
 {
     if (!sStates.empty())
         sStates.back()->Pause();
 
-    sStates.push_back(state);
+    sStates.push_back(nState);
     sStates.back()->Init();
 }
 
