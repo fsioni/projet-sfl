@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Legends of Nautibus:  Fichier source de src/Core/StateManager/StateManager.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -34,10 +34,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.17 -->
+<!-- Généré par Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -115,27 +115,24 @@ $(document).ready(function(){initNavTree('StateManager_8h_source.html',''); init
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif // __STATEMANAGER_H__</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// __STATEMANAGER_H__</span></div>
+<div class="ttc" id="aState_8h_html"><div class="ttname"><a href="State_8h.html">State.h</a></div></div>
+<div class="ttc" id="aclassStateManager_html"><div class="ttname"><a href="classStateManager.html">StateManager</a></div><div class="ttdoc">Classe représentant un gestionnaire d'états (State)</div><div class="ttdef"><b>Definition:</b> StateManager.h:15</div></div>
+<div class="ttc" id="aclassStateManager_html_a01cd6f5dafc0add0633b0be231cce665"><div class="ttname"><a href="classStateManager.html#a01cd6f5dafc0add0633b0be231cce665">StateManager::PopState</a></div><div class="ttdeci">void PopState()</div><div class="ttdoc">Passe au prochain State.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:37</div></div>
+<div class="ttc" id="aclassStateManager_html_a05a43504a033f1befad5c5118249ec6f"><div class="ttname"><a href="classStateManager.html#a05a43504a033f1befad5c5118249ec6f">StateManager::~StateManager</a></div><div class="ttdeci">~StateManager()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:9</div></div>
+<div class="ttc" id="aclassStateManager_html_a07c11985d7cc1d518725d50a7c0ddf28"><div class="ttname"><a href="classStateManager.html#a07c11985d7cc1d518725d50a7c0ddf28">StateManager::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdoc">Vide le tas de State.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:51</div></div>
+<div class="ttc" id="aclassStateManager_html_a15ebedc829436d326e1f00a3b0f057df"><div class="ttname"><a href="classStateManager.html#a15ebedc829436d326e1f00a3b0f057df">StateManager::sStates</a></div><div class="ttdeci">std::vector&lt; State * &gt; sStates</div><div class="ttdef"><b>Definition:</b> StateManager.h:18</div></div>
+<div class="ttc" id="aclassStateManager_html_a3e2be96d935eb56813b096a885d58587"><div class="ttname"><a href="classStateManager.html#a3e2be96d935eb56813b096a885d58587">StateManager::StateManager</a></div><div class="ttdeci">StateManager()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:3</div></div>
+<div class="ttc" id="aclassStateManager_html_a979be39d4450f8c916ae5bef541c02d2"><div class="ttname"><a href="classStateManager.html#a979be39d4450f8c916ae5bef541c02d2">StateManager::ChangeState</a></div><div class="ttdeci">void ChangeState(State *nState)</div><div class="ttdoc">Change le State courant par celui en paramètre.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:14</div></div>
+<div class="ttc" id="aclassStateManager_html_ad9ffd8f6009468363bc82db4f7ed4294"><div class="ttname"><a href="classStateManager.html#ad9ffd8f6009468363bc82db4f7ed4294">StateManager::PushState</a></div><div class="ttdeci">void PushState(State *nState)</div><div class="ttdoc">Pause le State courant. Lance celui en paramètre.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:28</div></div>
+<div class="ttc" id="aclassState_html"><div class="ttname"><a href="classState.html">State</a></div><div class="ttdoc">Classe représentant un état de l'application.</div><div class="ttdef"><b>Definition:</b> State.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassState_html"><div class="ttname"><a href="classState.html">State</a></div><div class="ttdoc">Classe représentant un état de l'application.</div><div class="ttdef"><b>Definition:</b> State.h:11</div></div>
-<div class="ttc" id="aclassStateManager_html_a01cd6f5dafc0add0633b0be231cce665"><div class="ttname"><a href="classStateManager.html#a01cd6f5dafc0add0633b0be231cce665">StateManager::PopState</a></div><div class="ttdeci">void PopState()</div><div class="ttdoc">Passe au prochain State.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:37</div></div>
-<div class="ttc" id="aclassStateManager_html_a3e2be96d935eb56813b096a885d58587"><div class="ttname"><a href="classStateManager.html#a3e2be96d935eb56813b096a885d58587">StateManager::StateManager</a></div><div class="ttdeci">StateManager()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:3</div></div>
-<div class="ttc" id="aclassStateManager_html"><div class="ttname"><a href="classStateManager.html">StateManager</a></div><div class="ttdoc">Classe représentant un gestionnaire d'états (State)</div><div class="ttdef"><b>Definition:</b> StateManager.h:14</div></div>
-<div class="ttc" id="aStateManager_8h_html"><div class="ttname"><a href="StateManager_8h.html">StateManager.h</a></div></div>
-<div class="ttc" id="aclassStateManager_html_a15ebedc829436d326e1f00a3b0f057df"><div class="ttname"><a href="classStateManager.html#a15ebedc829436d326e1f00a3b0f057df">StateManager::sStates</a></div><div class="ttdeci">std::vector&lt; State * &gt; sStates</div><div class="ttdef"><b>Definition:</b> StateManager.h:18</div></div>
-<div class="ttc" id="aclassStateManager_html_ad9ffd8f6009468363bc82db4f7ed4294"><div class="ttname"><a href="classStateManager.html#ad9ffd8f6009468363bc82db4f7ed4294">StateManager::PushState</a></div><div class="ttdeci">void PushState(State *nState)</div><div class="ttdoc">Pause le State courant. Lance celui en paramètre.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:28</div></div>
-<div class="ttc" id="aclassStateManager_html_a07c11985d7cc1d518725d50a7c0ddf28"><div class="ttname"><a href="classStateManager.html#a07c11985d7cc1d518725d50a7c0ddf28">StateManager::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdoc">Vide le tas de State.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:51</div></div>
-<div class="ttc" id="aclassStateManager_html_a979be39d4450f8c916ae5bef541c02d2"><div class="ttname"><a href="classStateManager.html#a979be39d4450f8c916ae5bef541c02d2">StateManager::ChangeState</a></div><div class="ttdeci">void ChangeState(State *nState)</div><div class="ttdoc">Change le State courant par celui en paramètre.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:14</div></div>
-<div class="ttc" id="aState_8h_html"><div class="ttname"><a href="State_8h.html">State.h</a></div></div>
-<div class="ttc" id="aclassStateManager_html_a05a43504a033f1befad5c5118249ec6f"><div class="ttname"><a href="classStateManager.html#a05a43504a033f1befad5c5118249ec6f">StateManager::~StateManager</a></div><div class="ttdeci">~StateManager()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:9</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a2f0e5642e47e7ed59fe0f0829eafb5f.html">Core</a></li><li class="navelem"><a class="el" href="dir_7214f3075b7e54abe449413ecb03e635.html">StateManager</a></li><li class="navelem"><a class="el" href="StateManager_8h.html">StateManager.h</a></li>
-    <li class="footer">Généré par
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
