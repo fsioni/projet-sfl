@@ -1,4 +1,4 @@
 <map id="CollisionBox" name="CollisionBox">
-<area shape="rect" id="node1" title=" " alt="" coords="9,365,147,487"/>
+<area shape="rect" id="node1" title="Classe représentant une boîte de collision dans un monde 2D." alt="" coords="9,365,147,487"/>
 <area shape="rect" id="node2" href="$classBox.html" title="Classe représentant une boîte dans un monde 2D." alt="" coords="5,5,151,317"/>
 </map>

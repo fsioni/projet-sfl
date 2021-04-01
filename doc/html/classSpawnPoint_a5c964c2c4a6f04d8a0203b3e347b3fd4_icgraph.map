@@ -1,5 +1,5 @@
 <map id="SpawnPoint::GetName" name="SpawnPoint::GetName">
-<area shape="rect" id="node1" title=" " alt="" coords="373,5,541,32"/>
+<area shape="rect" id="node1" title="Retourne anme." alt="" coords="373,5,541,32"/>
 <area shape="rect" id="node2" href="$classSpawnsLayer.html#a17c4259447d4853da63179ee8e9e057e" title=" " alt="" coords="160,5,325,32"/>
 <area shape="rect" id="node3" href="$classMap.html#a88353e04db090336b830c1353cff7f71" title=" " alt="" coords="5,5,112,32"/>
 </map>

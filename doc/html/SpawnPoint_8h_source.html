@@ -92,33 +92,41 @@ $(document).ready(function(){initNavTree('SpawnPoint_8h_source.html',''); initRe
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Box_8h.html">Box.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classSpawnPoint.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSpawnPoint.html">SpawnPoint</a>: <span class="keyword">public</span> <a class="code" href="classBox.html">Box</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classSpawnPoint.html#a22b5e2c7fe566095b8e27755a1bd57c7">   10</a></span>&#160;    std::string <a class="code" href="classSpawnPoint.html#a22b5e2c7fe566095b8e27755a1bd57c7">name</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classSpawnPoint.html#a4892f73607a88a6dc39ac94526993681">SpawnPoint</a>(<span class="comment">/* args */</span>);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classSpawnPoint.html#a4892f73607a88a6dc39ac94526993681">SpawnPoint</a>(<span class="keyword">const</span> std::string&amp; _name, <span class="keyword">const</span> std::string&amp; objectTag);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classSpawnPoint.html#a210b35f8fff9576acbcc2d12de76fd9a">~SpawnPoint</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSpawnPoint.html#af18d38897bcee75e0ef78c19c302da02">SetName</a>(<span class="keyword">const</span> std::string&amp; nName);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::string <a class="code" href="classSpawnPoint.html#a5c964c2c4a6f04d8a0203b3e347b3fd4">GetName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classSpawnPoint.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSpawnPoint.html">SpawnPoint</a>: <span class="keyword">public</span> <a class="code" href="classBox.html">Box</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">/*// === Données membres privées === //*/</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSpawnPoint.html#a1f65d03e003ddc89378b5571c52ff8c5">Test</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classSpawnPoint.html#a22b5e2c7fe566095b8e27755a1bd57c7">   20</a></span>&#160;    std::string <a class="code" href="classSpawnPoint.html#a22b5e2c7fe566095b8e27755a1bd57c7">name</a>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">/*// === Fonctions membres publiques === //*/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classSpawnPoint.html#a4892f73607a88a6dc39ac94526993681">SpawnPoint</a>(<span class="comment">/* args */</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classSpawnPoint.html#a4892f73607a88a6dc39ac94526993681">SpawnPoint</a>(<span class="keyword">const</span> std::string&amp; _name, <span class="keyword">const</span> std::string&amp; objectTag);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classSpawnPoint.html#a210b35f8fff9576acbcc2d12de76fd9a">~SpawnPoint</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSpawnPoint.html#af18d38897bcee75e0ef78c19c302da02">SetName</a>(<span class="keyword">const</span> std::string&amp; nName);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::string <a class="code" href="classSpawnPoint.html#a5c964c2c4a6f04d8a0203b3e347b3fd4">GetName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSpawnPoint.html#a1f65d03e003ddc89378b5571c52ff8c5">Test</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassSpawnPoint_html_a210b35f8fff9576acbcc2d12de76fd9a"><div class="ttname"><a href="classSpawnPoint.html#a210b35f8fff9576acbcc2d12de76fd9a">SpawnPoint::~SpawnPoint</a></div><div class="ttdeci">~SpawnPoint()</div><div class="ttdef"><b>Definition:</b> SpawnPoint.cpp:11</div></div>
-<div class="ttc" id="aclassSpawnPoint_html_a5c964c2c4a6f04d8a0203b3e347b3fd4"><div class="ttname"><a href="classSpawnPoint.html#a5c964c2c4a6f04d8a0203b3e347b3fd4">SpawnPoint::GetName</a></div><div class="ttdeci">std::string GetName() const</div><div class="ttdef"><b>Definition:</b> SpawnPoint.cpp:16</div></div>
-<div class="ttc" id="aclassSpawnPoint_html"><div class="ttname"><a href="classSpawnPoint.html">SpawnPoint</a></div><div class="ttdef"><b>Definition:</b> SpawnPoint.h:7</div></div>
-<div class="ttc" id="aclassSpawnPoint_html_a1f65d03e003ddc89378b5571c52ff8c5"><div class="ttname"><a href="classSpawnPoint.html#a1f65d03e003ddc89378b5571c52ff8c5">SpawnPoint::Test</a></div><div class="ttdeci">void Test() const</div><div class="ttdef"><b>Definition:</b> SpawnPoint.cpp:18</div></div>
+<div class="ttc" id="aclassSpawnPoint_html_a210b35f8fff9576acbcc2d12de76fd9a"><div class="ttname"><a href="classSpawnPoint.html#a210b35f8fff9576acbcc2d12de76fd9a">SpawnPoint::~SpawnPoint</a></div><div class="ttdeci">~SpawnPoint()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> SpawnPoint.cpp:11</div></div>
+<div class="ttc" id="aclassSpawnPoint_html_a5c964c2c4a6f04d8a0203b3e347b3fd4"><div class="ttname"><a href="classSpawnPoint.html#a5c964c2c4a6f04d8a0203b3e347b3fd4">SpawnPoint::GetName</a></div><div class="ttdeci">std::string GetName() const</div><div class="ttdoc">Retourne anme.</div><div class="ttdef"><b>Definition:</b> SpawnPoint.cpp:16</div></div>
+<div class="ttc" id="aclassSpawnPoint_html"><div class="ttname"><a href="classSpawnPoint.html">SpawnPoint</a></div><div class="ttdoc">Classe représentant un point d'apparition dans un monde 2D.</div><div class="ttdef"><b>Definition:</b> SpawnPoint.h:14</div></div>
+<div class="ttc" id="aclassSpawnPoint_html_a1f65d03e003ddc89378b5571c52ff8c5"><div class="ttname"><a href="classSpawnPoint.html#a1f65d03e003ddc89378b5571c52ff8c5">SpawnPoint::Test</a></div><div class="ttdeci">void Test() const</div><div class="ttdoc">Fonction test de la classe Box.</div><div class="ttdef"><b>Definition:</b> SpawnPoint.cpp:18</div></div>
 <div class="ttc" id="aclassBox_html"><div class="ttname"><a href="classBox.html">Box</a></div><div class="ttdoc">Classe représentant une boîte dans un monde 2D.</div><div class="ttdef"><b>Definition:</b> Box.h:11</div></div>
-<div class="ttc" id="aclassSpawnPoint_html_a4892f73607a88a6dc39ac94526993681"><div class="ttname"><a href="classSpawnPoint.html#a4892f73607a88a6dc39ac94526993681">SpawnPoint::SpawnPoint</a></div><div class="ttdeci">SpawnPoint()</div><div class="ttdef"><b>Definition:</b> SpawnPoint.cpp:3</div></div>
+<div class="ttc" id="aclassSpawnPoint_html_a4892f73607a88a6dc39ac94526993681"><div class="ttname"><a href="classSpawnPoint.html#a4892f73607a88a6dc39ac94526993681">SpawnPoint::SpawnPoint</a></div><div class="ttdeci">SpawnPoint()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition:</b> SpawnPoint.cpp:3</div></div>
 <div class="ttc" id="aSpawnPoint_8h_html"><div class="ttname"><a href="SpawnPoint_8h.html">SpawnPoint.h</a></div></div>
-<div class="ttc" id="aclassSpawnPoint_html_a22b5e2c7fe566095b8e27755a1bd57c7"><div class="ttname"><a href="classSpawnPoint.html#a22b5e2c7fe566095b8e27755a1bd57c7">SpawnPoint::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> SpawnPoint.h:10</div></div>
-<div class="ttc" id="aclassSpawnPoint_html_af18d38897bcee75e0ef78c19c302da02"><div class="ttname"><a href="classSpawnPoint.html#af18d38897bcee75e0ef78c19c302da02">SpawnPoint::SetName</a></div><div class="ttdeci">void SetName(const std::string &amp;nName)</div><div class="ttdef"><b>Definition:</b> SpawnPoint.cpp:15</div></div>
+<div class="ttc" id="aclassSpawnPoint_html_a22b5e2c7fe566095b8e27755a1bd57c7"><div class="ttname"><a href="classSpawnPoint.html#a22b5e2c7fe566095b8e27755a1bd57c7">SpawnPoint::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Nom du SpawnPoint.</div><div class="ttdef"><b>Definition:</b> SpawnPoint.h:20</div></div>
+<div class="ttc" id="aclassSpawnPoint_html_af18d38897bcee75e0ef78c19c302da02"><div class="ttname"><a href="classSpawnPoint.html#af18d38897bcee75e0ef78c19c302da02">SpawnPoint::SetName</a></div><div class="ttdeci">void SetName(const std::string &amp;nName)</div><div class="ttdoc">Modifie le du SpawnPoint par celui en paramètre.</div><div class="ttdef"><b>Definition:</b> SpawnPoint.cpp:15</div></div>
 <div class="ttc" id="aBox_8h_html"><div class="ttname"><a href="Box_8h.html">Box.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
