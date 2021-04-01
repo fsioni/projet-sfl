@@ -90,21 +90,30 @@ $(document).ready(function(){initNavTree('classStateManager.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 
+<p>Classe représentant un gestionnaire d'états (<a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>)  
+ <a href="classStateManager.html#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="StateManager_8h_source.html">StateManager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a3e2be96d935eb56813b096a885d58587"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a3e2be96d935eb56813b096a885d58587">StateManager</a> ()</td></tr>
+<tr class="memdesc:a3e2be96d935eb56813b096a885d58587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut.  <a href="classStateManager.html#a3e2be96d935eb56813b096a885d58587">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3e2be96d935eb56813b096a885d58587"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05a43504a033f1befad5c5118249ec6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a05a43504a033f1befad5c5118249ec6f">~StateManager</a> ()</td></tr>
+<tr class="memdesc:a05a43504a033f1befad5c5118249ec6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="classStateManager.html#a05a43504a033f1befad5c5118249ec6f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a05a43504a033f1befad5c5118249ec6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abebe93e5a8ae4ff19c20969009f7e943"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#abebe93e5a8ae4ff19c20969009f7e943">ChangeState</a> (<a class="el" href="classState.html">State</a> *state)</td></tr>
-<tr class="separator:abebe93e5a8ae4ff19c20969009f7e943"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c6248e6e74dc09736dcc0ed5a622177"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a7c6248e6e74dc09736dcc0ed5a622177">PushState</a> (<a class="el" href="classState.html">State</a> *state)</td></tr>
-<tr class="separator:a7c6248e6e74dc09736dcc0ed5a622177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a979be39d4450f8c916ae5bef541c02d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a979be39d4450f8c916ae5bef541c02d2">ChangeState</a> (<a class="el" href="classState.html">State</a> *nState)</td></tr>
+<tr class="memdesc:a979be39d4450f8c916ae5bef541c02d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> courant par celui en paramètre.  <a href="classStateManager.html#a979be39d4450f8c916ae5bef541c02d2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a979be39d4450f8c916ae5bef541c02d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9ffd8f6009468363bc82db4f7ed4294"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#ad9ffd8f6009468363bc82db4f7ed4294">PushState</a> (<a class="el" href="classState.html">State</a> *nState)</td></tr>
+<tr class="memdesc:ad9ffd8f6009468363bc82db4f7ed4294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> courant. Lance celui en paramètre.  <a href="classStateManager.html#ad9ffd8f6009468363bc82db4f7ed4294">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad9ffd8f6009468363bc82db4f7ed4294"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01cd6f5dafc0add0633b0be231cce665"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a01cd6f5dafc0add0633b0be231cce665">PopState</a> ()</td></tr>
+<tr class="memdesc:a01cd6f5dafc0add0633b0be231cce665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passe au prochain <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>.  <a href="classStateManager.html#a01cd6f5dafc0add0633b0be231cce665">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a01cd6f5dafc0add0633b0be231cce665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07c11985d7cc1d518725d50a7c0ddf28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a07c11985d7cc1d518725d50a7c0ddf28">Clear</a> ()</td></tr>
+<tr class="memdesc:a07c11985d7cc1d518725d50a7c0ddf28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vide le tas de <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>.  <a href="classStateManager.html#a07c11985d7cc1d518725d50a7c0ddf28">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a07c11985d7cc1d518725d50a7c0ddf28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -112,7 +121,10 @@ Attributs privés</h2></td></tr>
 <tr class="memitem:a15ebedc829436d326e1f00a3b0f057df"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classState.html">State</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a15ebedc829436d326e1f00a3b0f057df">sStates</a></td></tr>
 <tr class="separator:a15ebedc829436d326e1f00a3b0f057df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Classe représentant un gestionnaire d'états (<a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>) </p>
+<p>Possède un tas de <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> Gère tous les passages d'un état à un autre Exemple : Passage du SplashScreen au MainMenu, Pause du jeu pendant modification dans le menu... </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="a3e2be96d935eb56813b096a885d58587"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e2be96d935eb56813b096a885d58587">&#9670;&nbsp;</a></span>StateManager()</h2>
 
@@ -127,6 +139,8 @@ Attributs privés</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructeur par défaut. </p>
 
 </div>
 </div>
@@ -145,11 +159,14 @@ Attributs privés</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Destructeur. </p>
+<p>Destructeur de l'objet <a class="el" href="classStateManager.html" title="Classe représentant un gestionnaire d&#39;états (State)">StateManager</a> </p>
+
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="abebe93e5a8ae4ff19c20969009f7e943"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abebe93e5a8ae4ff19c20969009f7e943">&#9670;&nbsp;</a></span>ChangeState()</h2>
+<a id="a979be39d4450f8c916ae5bef541c02d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a979be39d4450f8c916ae5bef541c02d2">&#9670;&nbsp;</a></span>ChangeState()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -158,11 +175,19 @@ Attributs privés</h2></td></tr>
           <td class="memname">void StateManager::ChangeState </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classState.html">State</a> *&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
+          <td class="paramname"><em>nState</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Change le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> courant par celui en paramètre. </p>
+<p>Supprime le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> courant et ajoute le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> en paramètre à la pile avant de le lancer </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nState</td><td>: <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> qui est lancé </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -181,6 +206,8 @@ Attributs privés</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Vide le tas de <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>. </p>
+
 </div>
 </div>
 <a id="a01cd6f5dafc0add0633b0be231cce665"></a>
@@ -198,10 +225,13 @@ Attributs privés</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Passe au prochain <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>. </p>
+<p>Supprime le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> courant et lance le suivant dans la pile </p>
+
 </div>
 </div>
-<a id="a7c6248e6e74dc09736dcc0ed5a622177"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c6248e6e74dc09736dcc0ed5a622177">&#9670;&nbsp;</a></span>PushState()</h2>
+<a id="ad9ffd8f6009468363bc82db4f7ed4294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9ffd8f6009468363bc82db4f7ed4294">&#9670;&nbsp;</a></span>PushState()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,11 +240,19 @@ Attributs privés</h2></td></tr>
           <td class="memname">void StateManager::PushState </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classState.html">State</a> *&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
+          <td class="paramname"><em>nState</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Pause le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> courant. Lance celui en paramètre. </p>
+<p>Met en pause l'état actuel et ajoute l'état en paramètre à la pile avant de le lancer </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nID</td><td>: <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> qui est lancé </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -2,7 +2,7 @@ var searchData=
 [
   ['changedebug_294',['ChangeDebug',['../classGame.html#a74e8a1c9364e0b82613739ecc302cd57',1,'Game']]],
   ['changeplayerspawn_295',['ChangePlayerSpawn',['../classSpawnsLayer.html#a187426d0aa634922c8a7224278efd924',1,'SpawnsLayer']]],
-  ['changestate_296',['ChangeState',['../classStateManager.html#abebe93e5a8ae4ff19c20969009f7e943',1,'StateManager']]],
+  ['changestate_296',['ChangeState',['../classStateManager.html#a979be39d4450f8c916ae5bef541c02d2',1,'StateManager']]],
   ['cleanup_297',['CleanUp',['../classState.html#a84035975da30b3a8883b5624f66e0524',1,'State']]],
   ['clear_298',['Clear',['../classStateManager.html#a07c11985d7cc1d518725d50a7c0ddf28',1,'StateManager::Clear()'],['../classWinTXT.html#a1b4cb203533f78bed29498591631f436',1,'WinTXT::clear()']]],
   ['collisionbox_299',['CollisionBox',['../classCollisionBox.html#a11e887724dd21a42caa87411018de342',1,'CollisionBox::CollisionBox()'],['../classCollisionBox.html#ae7e1a6ea3352bfc343e52a02a508a245',1,'CollisionBox::CollisionBox(const std::string &amp;objectTag)']]],
