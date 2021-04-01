@@ -15,8 +15,8 @@ DisplayGame::~DisplayGame(){
 
 void DisplayGame::DisplaySFML() const{
     // ================== Affichage SFML  ==================
-        sf::Texture tileTexture, charTextures;
-        sf::Sprite tileSprite, charSprite;
+        sf::Texture tileTexture, charTextures, shadowTexture;
+        sf::Sprite tileSprite, charSprite, shadowSprite;
 
         // Chargement de la tileMap
         tileTexture.loadFromFile(game->GetMapConst().GetTileset().GetTileMapPath());
@@ -25,6 +25,10 @@ void DisplayGame::DisplaySFML() const{
         // Chargement des charactères
         charTextures.loadFromFile("data/textures/characters/Male/Male 01-1.png");
         charSprite.setTexture(charTextures);
+
+        // Chargement de l'ombre
+        shadowTexture.loadFromFile("data/textures/characters/Shadow/Shadow 1.png");
+        shadowSprite.setTexture(shadowTexture);
 
         // Initialisation de la fenetre
         int winWidth = 800;
@@ -164,14 +168,18 @@ void DisplayGame::DisplaySFML() const{
             }
 
             
-            
+            // Affichage de l'ombre
+            shadowSprite.setPosition(playerX-substX, playerY-substY +2);
+            shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
+            window.draw(shadowSprite);
            
 
             // Affichage du joueur
             charSprite.setPosition(playerX-substX, playerY-substY);
             charSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
-            charSprite.scale(w/32, h/32);
             window.draw(charSprite);
+
+            
 
             if (game->GetDebug()) //Affichage DEBUG
             {
