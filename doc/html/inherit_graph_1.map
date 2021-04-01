@@ -1,0 +1,5 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$classBox.html" title="Classe représentant une boîte dans un monde 2D." alt="" coords="5,31,52,57"/>
+<area shape="rect" id="node2" href="$classCollisionBox.html" title=" " alt="" coords="100,5,203,32"/>
+<area shape="rect" id="node3" href="$classSpawnPoint.html" title=" " alt="" coords="102,56,201,83"/>
+</map>

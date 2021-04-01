@@ -1,0 +1,12 @@
+<map id="Game::MoveWithCollision" name="Game::MoveWithCollision">
+<area shape="rect" id="node1" title=" " alt="" coords="5,223,196,250"/>
+<area shape="rect" id="node2" href="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title=" " alt="" coords="245,5,446,47"/>
+<area shape="rect" id="node3" href="$classMap.html#a3f49418fd08dff9bf56722251627df2b" title=" " alt="" coords="259,71,432,98"/>
+<area shape="rect" id="node4" href="$classEntityWithoutHP.html#af9e33c4eb6b3a6c8e5a3208cd18ea19d" title=" " alt="" coords="244,122,447,149"/>
+<area shape="rect" id="node5" href="$classEntityWithoutHP.html#a16ab1c93543eb44548d6d951f7a2e655" title=" " alt="" coords="247,173,444,199"/>
+<area shape="rect" id="node6" href="$classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792" title=" " alt="" coords="246,223,445,250"/>
+<area shape="rect" id="node7" href="$classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92" title=" " alt="" coords="246,274,445,301"/>
+<area shape="rect" id="node8" href="$classEntityWithHP.html#a0316748815da894bf85862d268d67ba0" title=" " alt="" coords="256,325,435,351"/>
+<area shape="rect" id="node9" href="$classEntityWithoutHP.html#a72a456c7bbaf8f66544292edf37f5e0e" title=" " alt="" coords="246,375,445,402"/>
+<area shape="rect" id="node10" href="$classEntityWithHP.html#a41fc1a9c9af67ea53b4c1c709c1c19b8" title=" " alt="" coords="269,426,421,453"/>
+</map>

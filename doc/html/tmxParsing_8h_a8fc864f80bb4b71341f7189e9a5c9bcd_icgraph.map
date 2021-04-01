@@ -1,0 +1,15 @@
+<map id="getFullTag" name="getFullTag">
+<area shape="rect" id="node1" title=" " alt="" coords="752,249,840,276"/>
+<area shape="rect" id="node2" href="$tmxParsing_8h.html#afe8a4464102791b21b37cc37f76eb1c9" title=" " alt="" coords="604,275,700,301"/>
+<area shape="rect" id="node4" href="$classMap.html#ab57f33273034a118bb9434befbeb4263" title=" " alt="" coords="140,224,301,251"/>
+<area shape="rect" id="node6" href="$tmxParsing_8h.html#a317f87c9a3888b89d04c33aa204600c2" title=" " alt="" coords="391,224,510,251"/>
+<area shape="rect" id="node7" href="$tmxParsing_8h.html#a01a1670c28de93ece461380677bb7d89" title=" " alt="" coords="600,148,704,175"/>
+<area shape="rect" id="node3" href="$classMapLayer.html#ac365bf88ef144708fe208368700b10c6" title="Assigne des données brut aux membres." alt="" coords="351,275,550,301"/>
+<area shape="rect" id="node5" href="$classMap.html#aabdba839fca85548ccc15926cdb5f68a" title=" " alt="" coords="5,140,92,167"/>
+<area shape="rect" id="node8" href="$classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1" title=" " alt="" coords="361,57,540,98"/>
+<area shape="rect" id="node9" href="$classTileset.html#a808673f17cb250f8dc67f7983c74401e" title=" " alt="" coords="357,5,544,32"/>
+<area shape="rect" id="node13" href="$classSpawnsLayer.html#afb32cd60ca05e87e9b55a503529c484e" title=" " alt="" coords="349,123,552,149"/>
+<area shape="rect" id="node10" href="$classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9" title=" " alt="" coords="171,5,271,32"/>
+<area shape="rect" id="node12" href="$classMap.html#a731bab75a964df89b6568831f3824df7" title=" " alt="" coords="143,97,298,124"/>
+<area shape="rect" id="node11" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="21,5,76,32"/>
+</map>

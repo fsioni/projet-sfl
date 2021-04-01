@@ -1,0 +1,24 @@
+<map id="DisplayGame::DisplaySFML" name="DisplayGame::DisplaySFML">
+<area shape="rect" id="node1" title=" " alt="" coords="5,451,208,478"/>
+<area shape="rect" id="node2" href="$classGame.html#a74e8a1c9364e0b82613739ecc302cd57" title=" " alt="" coords="267,21,427,47"/>
+<area shape="rect" id="node3" href="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title=" " alt="" coords="725,5,926,47"/>
+<area shape="rect" id="node4" href="$classMap.html#a3f49418fd08dff9bf56722251627df2b" title=" " alt="" coords="739,71,912,98"/>
+<area shape="rect" id="node5" href="$classMapLayer.html#a9710e1d180cac781c1a407251ef763a9" title=" " alt="" coords="273,477,421,503"/>
+<area shape="rect" id="node6" href="$classGame.html#aacba5a8b3d7216440069bb092e01c288" title=" " alt="" coords="279,527,414,554"/>
+<area shape="rect" id="node7" href="$classEntityWithoutHP.html#af9e33c4eb6b3a6c8e5a3208cd18ea19d" title=" " alt="" coords="724,122,927,149"/>
+<area shape="rect" id="node8" href="$classGame.html#a4c5b10b65e8b655c96ac51db93d9fbc3" title=" " alt="" coords="268,578,425,605"/>
+<area shape="rect" id="node9" href="$classMap.html#aebd77205d790f0794048a1562b8b9d77" title=" " alt="" coords="271,629,423,655"/>
+<area shape="rect" id="node10" href="$classEntityWithoutHP.html#a16ab1c93543eb44548d6d951f7a2e655" title=" " alt="" coords="727,274,924,301"/>
+<area shape="rect" id="node11" href="$classGame.html#a11f40bc1afd5bb48ebab49467b7ed0ad" title=" " alt="" coords="261,679,432,706"/>
+<area shape="rect" id="node12" href="$classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792" title=" " alt="" coords="726,325,925,351"/>
+<area shape="rect" id="node13" href="$classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92" title=" " alt="" coords="726,375,925,402"/>
+<area shape="rect" id="node14" href="$classTileset.html#a586d2ecc83c354bcc981e49ed579d359" title=" " alt="" coords="265,730,429,757"/>
+<area shape="rect" id="node15" href="$classTileset.html#a937a18ca2f53d7261d3eff752e8afb91" title=" " alt="" coords="258,781,435,807"/>
+<area shape="rect" id="node16" href="$classMap.html#af23e6cbceec8a1f8a6fb6c51612b1488" title=" " alt="" coords="284,831,409,858"/>
+<area shape="rect" id="node17" href="$classTileset.html#a91f1063653764e3e799a0331336d9e00" title=" " alt="" coords="267,882,426,909"/>
+<area shape="rect" id="node18" href="$classEntityWithoutHP.html#a72a456c7bbaf8f66544292edf37f5e0e" title=" " alt="" coords="726,426,925,453"/>
+<area shape="rect" id="node19" href="$classGame.html#a7266c4385f5c306926054fb9f9aa56d1" title=" " alt="" coords="256,223,437,250"/>
+<area shape="rect" id="node20" href="$classGame.html#abe59a4dd98dc7ef34141aec822dfc20f" title=" " alt="" coords="485,223,676,250"/>
+<area shape="rect" id="node21" href="$classEntityWithHP.html#a0316748815da894bf85862d268d67ba0" title=" " alt="" coords="736,223,915,250"/>
+<area shape="rect" id="node22" href="$classEntityWithHP.html#a41fc1a9c9af67ea53b4c1c709c1c19b8" title=" " alt="" coords="749,173,901,199"/>
+</map>
