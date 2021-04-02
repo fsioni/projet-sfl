@@ -2,16 +2,33 @@
 #include <stdio.h>
 #include <assert.h>
 
+#include <iostream>
+
 Game::Game(/* args */)
 {
     std::string tmxFile = "data/maps/tilemaps/mainTilemap.tmx";
     std::string tsxFile = "data/maps/tilesets/mainTileSet.tsx";
     map = new Map(tmxFile, tsxFile);
     
+    // Initialisation du joueur
     int x = map->GetSpawnsLayer().getPlayerSpawn().GetX();
     int y = map->GetSpawnsLayer().getPlayerSpawn().GetY();
 
     player = Player(x, y, "Player", 10, 10, 4, 10);
+
+    // Initialisation des ennemies
+    int count = map->GetSpawnsLayer().getEnemySpawns().size();
+
+    for(int i = 0; i<count; i++){
+        x = map->GetSpawnsLayer().getEnemySpawns()[i].GetX();
+        y = map->GetSpawnsLayer().getEnemySpawns()[i].GetY();
+
+        Enemy tmpEnemy(x, y, "Enemy", 10, 3, 5, 100);
+
+        enemies.push_back(tmpEnemy);
+    }
+
+
     isDebug = false;
 }
 
@@ -62,6 +79,10 @@ void Game::KeyboardPressed(const char key)
 Player Game::GetPlayerConst() const
 {
     return player;
+}
+
+std::vector<Enemy> Game::GetEnemiesConst() const{
+    return enemies;
 }
 
 Map& Game::GetMapConst() const

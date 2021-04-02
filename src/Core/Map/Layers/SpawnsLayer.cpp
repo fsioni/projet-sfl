@@ -21,7 +21,7 @@ SpawnsLayer::SpawnsLayer(const std::string & objectgroupTagPlayer,
     
     for(int i=0; i<count; i++){
         objectTag = getInsideTag(objectgroupTagEnnemy, "object", i);
-    
+
         SpawnPoint s("EnemySpawn", objectTag);
         ennemySpawns.push_back(s);
     }

@@ -77,7 +77,7 @@ void Map::TmxLoadLayers(std::string fileName){
         name = getAttributeValue(tmpObjectGroup, "name");
         
         if(name == "Collision") indCollision = i;
-        if(name == "EnnemySpawn") indSpawnEnnemy = i;
+        if(name == "EnemySpawn") indSpawnEnnemy = i;
         if(name == "PlayerSpawn") indSpawnPlayer = i;
     }
 
