@@ -5,6 +5,8 @@
 #include "../SpawnPoint.h"
 #include <vector>
 #include <string>
+
+
 class SpawnsLayer
 {
 private:
