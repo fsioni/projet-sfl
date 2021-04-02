@@ -1,8 +1,0 @@
-<map id="Box::GetX" name="Box::GetX">
-<area shape="rect" id="node1" title="Retourne x." alt="" coords="373,56,460,83"/>
-<area shape="rect" id="node2" href="$classSpawnsLayer.html#a17c4259447d4853da63179ee8e9e057e" title=" " alt="" coords="160,5,325,32"/>
-<area shape="rect" id="node4" href="$classGame.html#ad59df6562a58a614fda24622d3715b65" title=" " alt="" coords="189,56,297,83"/>
-<area shape="rect" id="node5" href="$classBox.html#ab30d8d08bfff9e0505d1baa518b01fba" title="Fonction test de la classe Box." alt="" coords="202,107,283,133"/>
-<area shape="rect" id="node3" href="$classMap.html#a88353e04db090336b830c1353cff7f71" title=" " alt="" coords="5,5,112,32"/>
-<area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="31,107,86,133"/>
-</map>

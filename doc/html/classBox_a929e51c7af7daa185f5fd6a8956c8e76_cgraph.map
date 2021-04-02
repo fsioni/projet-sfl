@@ -1,5 +1,0 @@
-<map id="Box::Box" name="Box::Box">
-<area shape="rect" id="node1" title="Constructeur depuis balise d&#39;une map .tmx." alt="" coords="5,5,85,32"/>
-<area shape="rect" id="node2" href="$tmxParsing_8cpp.html#a948722115df7fcc4021dea32c47a19b5" title=" " alt="" coords="133,5,287,32"/>
-<area shape="rect" id="node3" href="$tmxParsing_8cpp.html#a7f798bd46c19c61d7e3f0356018bc0c9" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="335,5,471,32"/>
-</map>

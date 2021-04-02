@@ -1,0 +1,17 @@
+digraph "Game::Game"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Game::Game",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SpawnsLayer::getPlayerSpawn",height=0.2,width=0.4,color="black",URL="$classSpawnsLayer.html#a59fe362bf99c208d7dfa6b742b4a2683",tooltip="Retourne playerSpawn."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Map::GetSpawnsLayer",height=0.2,width=0.4,color="black",URL="$classMap.html#a6ba6c1b6d64086a8912dc329fec10336",tooltip="Retourne spawnsLayers."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Box::GetX",height=0.2,width=0.4,color="black",URL="$classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29",tooltip="Retourne x."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Box::GetY",height=0.2,width=0.4,color="black",URL="$classBox.html#af86b090508898469761c0d61c8230133",tooltip="Retourne y."];
+}

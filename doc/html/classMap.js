@@ -4,7 +4,6 @@ var classMap =
     [ "Map", "classMap.html#aabdba839fca85548ccc15926cdb5f68a", null ],
     [ "~Map", "classMap.html#aa403fbe09394ccf39747588f5168e3b2", null ],
     [ "AddMapLayer", "classMap.html#aae4d9bae8f573536c7d9b410edf4aefb", null ],
-    [ "Display", "classMap.html#a88353e04db090336b830c1353cff7f71", null ],
     [ "GetCollisionLayer", "classMap.html#a3f49418fd08dff9bf56722251627df2b", null ],
     [ "GetMapLayers", "classMap.html#aebd77205d790f0794048a1562b8b9d77", null ],
     [ "GetSpawnsLayer", "classMap.html#a6ba6c1b6d64086a8912dc329fec10336", null ],

@@ -2,8 +2,8 @@ var classTileset =
 [
     [ "Tileset", "classTileset.html#a9b75b605d834e3c9e25fb1c2429a36f6", null ],
     [ "Tileset", "classTileset.html#a805ea43035842b61962c0d7e9c5cec25", null ],
+    [ "Tileset", "classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54", null ],
     [ "~Tileset", "classTileset.html#afbb53f34f87b8b9c1f575349e89a6cd5", null ],
-    [ "Display", "classTileset.html#ae5b6fbeb1e95927376961914e13c2b35", null ],
     [ "GetColumn", "classTileset.html#ad636679bf81f2aa5ad00beff2d5c9ef2", null ],
     [ "GetName", "classTileset.html#a8015df88b62c9b7cf6e19c55dc398f69", null ],
     [ "GetTileCount", "classTileset.html#a060020f7a21a85d854f1b8fdf6ea192a", null ],
@@ -13,7 +13,6 @@ var classTileset =
     [ "GetTileMapWidth", "classTileset.html#ae109a25be64886c5139162186da7919b", null ],
     [ "GetTileWidth", "classTileset.html#a91f1063653764e3e799a0331336d9e00", null ],
     [ "operator=", "classTileset.html#afe577c2af89a7596fa62772ca9f5930b", null ],
-    [ "rawDataToTileset", "classTileset.html#a808673f17cb250f8dc67f7983c74401e", null ],
     [ "SetColumn", "classTileset.html#a09fa40bb633c78919f0da4a99a4d66c7", null ],
     [ "SetName", "classTileset.html#a22dac9b067b004a9f9c52ca984af33b4", null ],
     [ "SetTileCount", "classTileset.html#aa0f601faed9f3c6042cfe032b5191c3d", null ],
