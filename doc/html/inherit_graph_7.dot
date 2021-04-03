@@ -5,9 +5,5 @@ digraph "Graphe hiérarchique des classes"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-<<<<<<< HEAD
   Node0 [label="State",height=0.2,width=0.4,color="black",URL="$classState.html",tooltip="Classe représentant un état de l'application."];
-=======
-  Node0 [label="SpawnsLayer",height=0.2,width=0.4,color="black",URL="$classSpawnsLayer.html",tooltip=" "];
->>>>>>> 5178cc95d1d1c7c5b71c200075a86d8100530669
 }

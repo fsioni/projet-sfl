@@ -1,26 +1,5 @@
 var searchData=
 [
-<<<<<<< HEAD
-  ['_7eassetmanager_222',['~AssetManager',['../classAssetManager.html#a9c89817cbf3516f1451c116e89f47d30',1,'AssetManager']]],
-  ['_7ebox_223',['~Box',['../classBox.html#a6a5e09398e85d602a046b429062fb9c2',1,'Box']]],
-  ['_7ecollisionbox_224',['~CollisionBox',['../classCollisionBox.html#aeb743d5c3c5b54d2648281a4782f8a40',1,'CollisionBox']]],
-  ['_7ecollisionlayer_225',['~CollisionLayer',['../classCollisionLayer.html#a1696687967b8c498fd3bc8b94f7cf925',1,'CollisionLayer']]],
-  ['_7edisplaygame_226',['~DisplayGame',['../classDisplayGame.html#a117f935d2b01013162a88edb31ad7efd',1,'DisplayGame']]],
-  ['_7eenemy_227',['~Enemy',['../classEnemy.html#ac0eec4755e28c02688065f9657150ac3',1,'Enemy']]],
-  ['_7eentitywithhp_228',['~EntityWithHP',['../classEntityWithHP.html#a3898bba6518b7bf7464d98e0d839d604',1,'EntityWithHP']]],
-  ['_7eentitywithouthp_229',['~EntityWithoutHP',['../classEntityWithoutHP.html#a1438af015635e857cba0c84a15860318',1,'EntityWithoutHP']]],
-  ['_7egame_230',['~Game',['../classGame.html#ae3d112ca6e0e55150d2fdbc704474530',1,'Game']]],
-  ['_7elayer_231',['~Layer',['../classLayer.html#a1b1ba4804451dfe6cc357194e42762ae',1,'Layer']]],
-  ['_7emap_232',['~Map',['../classMap.html#aa403fbe09394ccf39747588f5168e3b2',1,'Map']]],
-  ['_7emaplayer_233',['~MapLayer',['../classMapLayer.html#a94609aba07cd4a3afb940d6256e3f366',1,'MapLayer']]],
-  ['_7eplayer_234',['~Player',['../classPlayer.html#a749d2c00e1fe0f5c2746f7505a58c062',1,'Player']]],
-  ['_7espawnpoint_235',['~SpawnPoint',['../classSpawnPoint.html#a210b35f8fff9576acbcc2d12de76fd9a',1,'SpawnPoint']]],
-  ['_7espawnslayer_236',['~SpawnsLayer',['../classSpawnsLayer.html#a296acfab6006a4079fe2d9191bc9ca91',1,'SpawnsLayer']]],
-  ['_7estate_237',['~State',['../classState.html#afab438d92b90dc18d194dbd9c9c8bab3',1,'State']]],
-  ['_7estatemanager_238',['~StateManager',['../classStateManager.html#a05a43504a033f1befad5c5118249ec6f',1,'StateManager']]],
-  ['_7etileset_239',['~Tileset',['../classTileset.html#afbb53f34f87b8b9c1f575349e89a6cd5',1,'Tileset']]],
-  ['_7ewintxt_240',['~WinTXT',['../classWinTXT.html#a29c0c3c2286de3a95c23d43e32e86630',1,'WinTXT']]]
-=======
   ['_7eassetmanager_217',['~AssetManager',['../classAssetManager.html#a9c89817cbf3516f1451c116e89f47d30',1,'AssetManager']]],
   ['_7ebox_218',['~Box',['../classBox.html#a6a5e09398e85d602a046b429062fb9c2',1,'Box']]],
   ['_7ecollisionbox_219',['~CollisionBox',['../classCollisionBox.html#aeb743d5c3c5b54d2648281a4782f8a40',1,'CollisionBox']]],
@@ -40,5 +19,4 @@ var searchData=
   ['_7estatemanager_233',['~StateManager',['../classStateManager.html#a05a43504a033f1befad5c5118249ec6f',1,'StateManager']]],
   ['_7etileset_234',['~Tileset',['../classTileset.html#afbb53f34f87b8b9c1f575349e89a6cd5',1,'Tileset']]],
   ['_7ewintxt_235',['~WinTXT',['../classWinTXT.html#a29c0c3c2286de3a95c23d43e32e86630',1,'WinTXT']]]
->>>>>>> 5178cc95d1d1c7c5b71c200075a86d8100530669
 ];

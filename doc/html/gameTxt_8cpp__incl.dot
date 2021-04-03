@@ -62,5 +62,10 @@ digraph "src/txt/gameTxt.cpp"
   Node21 [label="iostream",height=0.2,width=0.4,color="grey75",tooltip=" "];
   Node19 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node18 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="Entity/Enemy.h",height=0.2,width=0.4,color="black",URL="$Enemy_8h.html",tooltip=" "];
+  Node22 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

@@ -1,33 +1,5 @@
 var searchData=
 [
-<<<<<<< HEAD
-  ['takedamage_188',['TakeDamage',['../classEntityWithHP.html#a95a2c2671104ca91e328f9d2b5c17a35',1,'EntityWithHP']]],
-  ['termclear_189',['termClear',['../winTxt_8h.html#abfddca010a6ceb2c5292c98247a434ce',1,'termClear():&#160;winTxt.cpp'],['../winTxt_8cpp.html#abfddca010a6ceb2c5292c98247a434ce',1,'termClear():&#160;winTxt.cpp']]],
-  ['terminit_190',['termInit',['../winTxt_8cpp.html#a67191e6d920e10b82b0868cb240228ae',1,'winTxt.cpp']]],
-  ['termmove_191',['termMove',['../winTxt_8cpp.html#a0038303af38e1a50f24e3d4e33a4635b',1,'winTxt.cpp']]],
-  ['test_192',['Test',['../classGame.html#a4f1be1e913b5f2df3af95417017185ea',1,'Game::Test()'],['../classBox.html#ab30d8d08bfff9e0505d1baa518b01fba',1,'Box::Test()'],['../classCollisionBox.html#a7ff1898829497e2344a65404a4cc4901',1,'CollisionBox::Test()'],['../classMapLayer.html#a518003984f69ae63b7e7392184799c42',1,'MapLayer::Test()'],['../classMap.html#a5a8b1d219211664f0df882e35104d035',1,'Map::Test()'],['../classSpawnPoint.html#a1f65d03e003ddc89378b5571c52ff8c5',1,'SpawnPoint::Test()'],['../classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9',1,'Tileset::Test()'],['../classState.html#a2833dc2e88aa75284f23caaf4f0e4154',1,'State::Test()']]],
-  ['testregression_193',['testRegression',['../tmxParsing_8h.html#a317f87c9a3888b89d04c33aa204600c2',1,'testRegression():&#160;tmxParsing.cpp'],['../tmxParsing_8cpp.html#a317f87c9a3888b89d04c33aa204600c2',1,'testRegression():&#160;tmxParsing.cpp']]],
-  ['textureenemy_194',['textureEnemy',['../classAssetManager.html#a475ef8e5521d2a2f2090c1fc6017dbfb',1,'AssetManager']]],
-  ['texturenpc_195',['textureNPC',['../classAssetManager.html#ad149543187cba52a29d33965d3d5f1d8',1,'AssetManager']]],
-  ['textureplayer_196',['texturePlayer',['../classAssetManager.html#a07761e9d8c5e55b002ca35748486eb33',1,'AssetManager']]],
-  ['tilecount_197',['tileCount',['../classTileset.html#a1e8902719ac12548c2c6dfc6902c49a2',1,'Tileset']]],
-  ['tileheight_198',['tileHeight',['../classTileset.html#a62c8b00674890f60189f1ace74aeee88',1,'Tileset']]],
-  ['tilemapheight_199',['tileMapHeight',['../classTileset.html#a60c38db68abc1f946673db7d183003e7',1,'Tileset']]],
-  ['tilemappath_200',['tileMapPath',['../classTileset.html#a0fb98e1845e3cf7281ccf31cc0e87755',1,'Tileset']]],
-  ['tilemapwidth_201',['tileMapWidth',['../classTileset.html#a3f1d1e233caf30f65879e06455b60ca3',1,'Tileset']]],
-  ['tileset_202',['Tileset',['../classTileset.html#a9b75b605d834e3c9e25fb1c2429a36f6',1,'Tileset::Tileset()'],['../classTileset.html#a805ea43035842b61962c0d7e9c5cec25',1,'Tileset::Tileset(const Tileset &amp;ts)']]],
-  ['tileset_203',['tileset',['../classMap.html#a54a817824c3c4d40e5344b4db0900048',1,'Map']]],
-  ['tileset_204',['Tileset',['../classTileset.html',1,'']]],
-  ['tileset_2ecpp_205',['Tileset.cpp',['../Tileset_8cpp.html',1,'']]],
-  ['tileset_2eh_206',['Tileset.h',['../Tileset_8h.html',1,'']]],
-  ['tilewidth_207',['tileWidth',['../classTileset.html#a477770a6cc81a9a53bf5928ebd5c88a9',1,'Tileset']]],
-  ['tmxloadlayers_208',['TmxLoadLayers',['../classMap.html#ab57f33273034a118bb9434befbeb4263',1,'Map']]],
-  ['tmxparsing_2ecpp_209',['tmxParsing.cpp',['../tmxParsing_8cpp.html',1,'']]],
-  ['tmxparsing_2eh_210',['tmxParsing.h',['../tmxParsing_8h.html',1,'']]],
-  ['tsxloadtileset_211',['TsxLoadTileset',['../classMap.html#a731bab75a964df89b6568831f3824df7',1,'Map']]],
-  ['txtaff_212',['txtAff',['../gameTxt_8cpp.html#a8660cc91c8dc47b28c5bf324284499e9',1,'txtAff(WinTXT &amp;win, const Game &amp;game):&#160;gameTxt.cpp'],['../gameTxt_8h.html#a8660cc91c8dc47b28c5bf324284499e9',1,'txtAff(WinTXT &amp;win, const Game &amp;game):&#160;gameTxt.cpp']]],
-  ['txtloop_213',['txtLoop',['../gameTxt_8cpp.html#a5eeb0d13b5fe5eba2c9d7415842d36d9',1,'txtLoop(Game &amp;g):&#160;gameTxt.cpp'],['../gameTxt_8h.html#a5eeb0d13b5fe5eba2c9d7415842d36d9',1,'txtLoop(Game &amp;g):&#160;gameTxt.cpp']]]
-=======
   ['takedamage_183',['TakeDamage',['../classEntityWithHP.html#a95a2c2671104ca91e328f9d2b5c17a35',1,'EntityWithHP']]],
   ['termclear_184',['termClear',['../winTxt_8h.html#abfddca010a6ceb2c5292c98247a434ce',1,'termClear():&#160;winTxt.cpp'],['../winTxt_8cpp.html#abfddca010a6ceb2c5292c98247a434ce',1,'termClear():&#160;winTxt.cpp']]],
   ['terminit_185',['termInit',['../winTxt_8cpp.html#a67191e6d920e10b82b0868cb240228ae',1,'winTxt.cpp']]],
@@ -42,9 +14,9 @@ var searchData=
   ['tilemapheight_194',['tileMapHeight',['../classTileset.html#a60c38db68abc1f946673db7d183003e7',1,'Tileset']]],
   ['tilemappath_195',['tileMapPath',['../classTileset.html#a0fb98e1845e3cf7281ccf31cc0e87755',1,'Tileset']]],
   ['tilemapwidth_196',['tileMapWidth',['../classTileset.html#a3f1d1e233caf30f65879e06455b60ca3',1,'Tileset']]],
-  ['tileset_197',['Tileset',['../classTileset.html#a9b75b605d834e3c9e25fb1c2429a36f6',1,'Tileset::Tileset()'],['../classTileset.html#a805ea43035842b61962c0d7e9c5cec25',1,'Tileset::Tileset(const Tileset &amp;ts)'],['../classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54',1,'Tileset::Tileset(std::string rawData)']]],
+  ['tileset_197',['Tileset',['../classTileset.html#a805ea43035842b61962c0d7e9c5cec25',1,'Tileset::Tileset(const Tileset &amp;ts)'],['../classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54',1,'Tileset::Tileset(std::string rawData)']]],
   ['tileset_198',['tileset',['../classMap.html#a54a817824c3c4d40e5344b4db0900048',1,'Map']]],
-  ['tileset_199',['Tileset',['../classTileset.html',1,'']]],
+  ['tileset_199',['Tileset',['../classTileset.html#a9b75b605d834e3c9e25fb1c2429a36f6',1,'Tileset::Tileset()'],['../classTileset.html',1,'Tileset']]],
   ['tileset_2ecpp_200',['Tileset.cpp',['../Tileset_8cpp.html',1,'']]],
   ['tileset_2eh_201',['Tileset.h',['../Tileset_8h.html',1,'']]],
   ['tilewidth_202',['tileWidth',['../classTileset.html#a477770a6cc81a9a53bf5928ebd5c88a9',1,'Tileset']]],
@@ -54,5 +26,4 @@ var searchData=
   ['tsxloadtileset_206',['TsxLoadTileset',['../classMap.html#a731bab75a964df89b6568831f3824df7',1,'Map']]],
   ['txtaff_207',['txtAff',['../gameTxt_8cpp.html#a8660cc91c8dc47b28c5bf324284499e9',1,'txtAff(WinTXT &amp;win, const Game &amp;game):&#160;gameTxt.cpp'],['../gameTxt_8h.html#a8660cc91c8dc47b28c5bf324284499e9',1,'txtAff(WinTXT &amp;win, const Game &amp;game):&#160;gameTxt.cpp']]],
   ['txtloop_208',['txtLoop',['../gameTxt_8cpp.html#a5eeb0d13b5fe5eba2c9d7415842d36d9',1,'txtLoop(Game &amp;g):&#160;gameTxt.cpp'],['../gameTxt_8h.html#a5eeb0d13b5fe5eba2c9d7415842d36d9',1,'txtLoop(Game &amp;g):&#160;gameTxt.cpp']]]
->>>>>>> 5178cc95d1d1c7c5b71c200075a86d8100530669
 ];

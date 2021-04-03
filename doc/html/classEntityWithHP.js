@@ -9,7 +9,6 @@ var classEntityWithHP =
     [ "GetLivingStatus", "classEntityWithHP.html#a500d3f8c3a23e1a2cf43abb28bf3a3fe", null ],
     [ "GetSpeed", "classEntityWithHP.html#a0316748815da894bf85862d268d67ba0", null ],
     [ "Move", "classEntityWithHP.html#a41fc1a9c9af67ea53b4c1c709c1c19b8", null ],
-    [ "PrintEntityInfo", "classEntityWithHP.html#a69df0481331828602496977649c0b45d", null ],
     [ "SetDamage", "classEntityWithHP.html#a14cefe33b7469d69c5493df26d4e021f", null ],
     [ "SetHP", "classEntityWithHP.html#a44566e1e10c17e55475a1d2f7ac37375", null ],
     [ "SetLivingStatus", "classEntityWithHP.html#abe560d6a4c2c7cc80d228857a7a34785", null ],

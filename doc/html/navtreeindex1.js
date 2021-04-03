@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"classStateManager.html#a3e2be96d935eb56813b096a885d58587":[0,0,16,0],
 "classStateManager.html#a979be39d4450f8c916ae5bef541c02d2":[0,0,16,2],
 "classStateManager.html#ad9ffd8f6009468363bc82db4f7ed4294":[0,0,16,5],
 "classTileset.html":[0,0,17],
