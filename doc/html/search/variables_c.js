@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['spawnslayer_472',['spawnsLayer',['../classMap.html#a06d8f18e6085bbf0d105ab693f4fe75e',1,'Map']]],
-  ['speed_473',['speed',['../classEntityWithHP.html#a354e4ce839f5f4dc15f415ce94095a21',1,'EntityWithHP']]],
-  ['sstates_474',['sStates',['../classStateManager.html#a15ebedc829436d326e1f00a3b0f057df',1,'StateManager']]],
-  ['stateman_475',['stateMan',['../classGame.html#acc428cc54c465d2186ae9939b488d6cb',1,'Game']]]
+  ['spawnslayer_474',['spawnsLayer',['../classMap.html#a06d8f18e6085bbf0d105ab693f4fe75e',1,'Map']]],
+  ['speed_475',['speed',['../classEntityWithHP.html#a354e4ce839f5f4dc15f415ce94095a21',1,'EntityWithHP']]],
+  ['sstates_476',['sStates',['../classStateManager.html#a15ebedc829436d326e1f00a3b0f057df',1,'StateManager']]],
+  ['stateman_477',['stateMan',['../classGame.html#acc428cc54c465d2186ae9939b488d6cb',1,'Game']]]
 ];

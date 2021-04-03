@@ -226,7 +226,7 @@ var NAVTREEINDEX0 =
 "classSpawnPoint.html#a9654b564352e9b858e0dbd06c3ec6c2f":[0,0,13,1],
 "classSpawnPoint.html#af18d38897bcee75e0ef78c19c302da02":[0,0,13,4],
 "classSpawnsLayer.html":[0,0,14],
-"classSpawnsLayer.html#a17c4259447d4853da63179ee8e9e057e":[0,0,14,5],
+"classSpawnsLayer.html#a01bc8a162fdd988b0dc9978ba06200cf":[0,0,14,5],
 "classSpawnsLayer.html#a187426d0aa634922c8a7224278efd924":[0,0,14,4],
 "classSpawnsLayer.html#a212ce62f6d8d3c48800df0c43604261b":[0,0,14,3],
 "classSpawnsLayer.html#a296acfab6006a4079fe2d9191bc9ca91":[0,0,14,2],

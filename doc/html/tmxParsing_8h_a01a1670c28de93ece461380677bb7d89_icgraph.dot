@@ -19,7 +19,7 @@ digraph "getInsideTag"
   Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node7 [label="Map::Map",height=0.2,width=0.4,color="black",URL="$classMap.html#aabdba839fca85548ccc15926cdb5f68a",tooltip=" "];
   Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 [label="SpawnsLayer::SpawnsLayer",height=0.2,width=0.4,color="black",URL="$classSpawnsLayer.html#afb32cd60ca05e87e9b55a503529c484e",tooltip=" "];
+  Node8 [label="SpawnsLayer::SpawnsLayer",height=0.2,width=0.4,color="black",URL="$classSpawnsLayer.html#afb32cd60ca05e87e9b55a503529c484e",tooltip="Constructeur par balises."];
   Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node9 [label="testRegression",height=0.2,width=0.4,color="black",URL="$tmxParsing_8cpp.html#a317f87c9a3888b89d04c33aa204600c2",tooltip=" "];
   Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
