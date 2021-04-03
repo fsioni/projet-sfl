@@ -1,0 +1,6 @@
+<map id="Tileset::Tileset" name="Tileset::Tileset">
+<area shape="rect" id="node1" title="Constructeur par copie." alt="" coords="5,31,124,57"/>
+<area shape="rect" id="node2" href="$tmxParsing_8cpp.html#a7f798bd46c19c61d7e3f0356018bc0c9" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="172,5,308,32"/>
+<area shape="rect" id="node3" href="$tmxParsing_8cpp.html#a01a1670c28de93ece461380677bb7d89" title=" " alt="" coords="188,56,292,83"/>
+<area shape="rect" id="node4" href="$tmxParsing_8cpp.html#a8fc864f80bb4b71341f7189e9a5c9bcd" title=" " alt="" coords="356,56,444,83"/>
+</map>
