@@ -8,14 +8,16 @@
 
 /*! \class SpawnsLayer 
 *   \brief Classe représentant une couche de SpawnPoint
-*
+*   Hérité de Layer
 *   Représente tous les SpawnPoint du jeu, ceux des ennemis, du joueurs, des PNJ...
 */
-class SpawnsLayer
+class SpawnsLayer:Layer
 {
 private:
     /*// === Données membres privées === //*/
+    /*! \brief SpawnPoint du joueur. */
     SpawnPoint playerSpawn;
+    /*! \brief Les SpawnPoint des Ennemy. Un SpawnPoint = Un Ennemy */
     std::vector<SpawnPoint> ennemySpawns;
 
 public:

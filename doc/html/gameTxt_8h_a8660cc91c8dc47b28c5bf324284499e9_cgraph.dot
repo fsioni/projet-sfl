@@ -1,0 +1,40 @@
+digraph "txtAff"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="txtAff",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="WinTXT::clear",height=0.2,width=0.4,color="black",URL="$classWinTXT.html#a1b4cb203533f78bed29498591631f436",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="WinTXT::print",height=0.2,width=0.4,color="black",URL="$classWinTXT.html#a407cce45e7f81546540f4f8a9b85ce45",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="WinTXT::draw",height=0.2,width=0.4,color="black",URL="$classWinTXT.html#af83a18827593465fc397983c97b4e886",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="termMove",height=0.2,width=0.4,color="black",URL="$winTxt_8cpp.html#a0038303af38e1a50f24e3d4e33a4635b",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CollisionLayer::GetCollision\lBoxes",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435",tooltip="Fonction permettant de récupérer les CollisionBox de l'objet."];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Map::GetCollisionLayer",height=0.2,width=0.4,color="black",URL="$classMap.html#a3f49418fd08dff9bf56722251627df2b",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="WinTXT::getDimx",height=0.2,width=0.4,color="black",URL="$classWinTXT.html#a91635aa5b10cbf5542dac294b06f3afc",tooltip=" "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="WinTXT::getDimy",height=0.2,width=0.4,color="black",URL="$classWinTXT.html#a6c5141e41eea71eb62bf9e397b1b5d3c",tooltip=" "];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="EntityWithHP::GetHP",height=0.2,width=0.4,color="black",URL="$classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa",tooltip=" "];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Game::GetMapConst",height=0.2,width=0.4,color="black",URL="$classGame.html#a4c5b10b65e8b655c96ac51db93d9fbc3",tooltip=" "];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="EntityWithoutHP::GetName",height=0.2,width=0.4,color="black",URL="$classEntityWithoutHP.html#a72e23e567e9c46abcce65abe980cf932",tooltip=" "];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Game::GetPlayerConst",height=0.2,width=0.4,color="black",URL="$classGame.html#a11f40bc1afd5bb48ebab49467b7ed0ad",tooltip=" "];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="EntityWithoutHP::GetPos_x",height=0.2,width=0.4,color="black",URL="$classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792",tooltip=" "];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="EntityWithoutHP::GetPos_y",height=0.2,width=0.4,color="black",URL="$classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92",tooltip=" "];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="EntityWithHP::GetSpeed",height=0.2,width=0.4,color="black",URL="$classEntityWithHP.html#a0316748815da894bf85862d268d67ba0",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

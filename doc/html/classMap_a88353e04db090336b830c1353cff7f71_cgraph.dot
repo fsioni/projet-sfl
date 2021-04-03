@@ -7,7 +7,5 @@ digraph "Map::Display"
   rankdir="LR";
   Node1 [label="Map::Display",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="CollisionLayer::Display",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#a7385df5b3f1760c1915e2310a276fe48",tooltip=" "];
-  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="Tileset::Display",height=0.2,width=0.4,color="black",URL="$classTileset.html#ae5b6fbeb1e95927376961914e13c2b35",tooltip=" "];
+  Node2 [label="Tileset::Display",height=0.2,width=0.4,color="black",URL="$classTileset.html#ae5b6fbeb1e95927376961914e13c2b35",tooltip=" "];
 }

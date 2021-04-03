@@ -7,7 +7,7 @@ digraph "getInsideTag"
   rankdir="RL";
   Node1 [label="getInsideTag",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="CollisionLayer::Collision\lLayer",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1",tooltip=" "];
+  Node2 [label="CollisionLayer::Collision\lLayer",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1",tooltip="Constructeur par balise."];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="Tileset::rawDataToTileset",height=0.2,width=0.4,color="black",URL="$classTileset.html#a808673f17cb250f8dc67f7983c74401e",tooltip=" "];
   Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
