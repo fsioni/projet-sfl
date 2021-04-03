@@ -61,6 +61,12 @@ public:
     */
     SpawnPoint getPlayerSpawn() const;
 
+    /*! \brief Fonction permettant de récupérer les SpawnPoint des Ennemy
+    *
+    *   \return Retourne le tableau dynamique de SpawnPoint des joueurs
+    */
+    std::vector<SpawnPoint> getEnemySpawns() const;
+
 };
 
 #endif
