@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classStateManager.html#a3e2be96d935eb56813b096a885d58587":[0,0,16,0],
 "classStateManager.html#a979be39d4450f8c916ae5bef541c02d2":[0,0,16,2],
 "classStateManager.html#ad9ffd8f6009468363bc82db4f7ed4294":[0,0,16,5],
 "classTileset.html":[0,0,17],
@@ -57,8 +58,8 @@ var NAVTREEINDEX1 =
 "dir_a2f0e5642e47e7ed59fe0f0829eafb5f.html":[1,0,0,0],
 "dir_df763860f9a7635c92b0132615e20a87.html":[1,0,0,1],
 "files.html":[1,0],
-"functions.html":[0,3,0],
 "functions.html":[0,3,0,0],
+"functions.html":[0,3,0],
 "functions_b.html":[0,3,0,1],
 "functions_c.html":[0,3,0,2],
 "functions_d.html":[0,3,0,3],
