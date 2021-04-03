@@ -1,7 +1,0 @@
-<map id="Game::Game" name="Game::Game">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,113,108"/>
-<area shape="rect" id="node2" href="$classSpawnsLayer.html#a59fe362bf99c208d7dfa6b742b4a2683" title=" " alt="" coords="161,5,383,32"/>
-<area shape="rect" id="node3" href="$classMap.html#a6ba6c1b6d64086a8912dc329fec10336" title=" " alt="" coords="189,56,355,83"/>
-<area shape="rect" id="node4" href="$classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="229,107,315,133"/>
-<area shape="rect" id="node5" href="$classBox.html#af86b090508898469761c0d61c8230133" title="Retourne y." alt="" coords="229,157,315,184"/>
-</map>

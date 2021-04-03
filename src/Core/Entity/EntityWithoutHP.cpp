@@ -37,12 +37,12 @@ EntityWithoutHP::~EntityWithoutHP(){
     this->name = "delete";
 }
 
-
+/*
 void EntityWithoutHP::PrintEntityInfo(){
 
     cout<< "x = " << x << ", y = " << y << ", nom : " << name <<endl;
 }
-
+*/
 void EntityWithoutHP::SetName(string newName){
 
     name = newName;

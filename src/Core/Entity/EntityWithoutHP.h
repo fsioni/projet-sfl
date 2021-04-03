@@ -52,7 +52,7 @@ public:
 
     void SetName(string newName);
 
-    virtual void PrintEntityInfo();
+    //virtual void PrintEntityInfo();
 
 };
 

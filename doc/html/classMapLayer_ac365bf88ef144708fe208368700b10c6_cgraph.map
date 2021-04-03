@@ -1,7 +1,0 @@
-<map id="MapLayer::rawDataToLayer" name="MapLayer::rawDataToLayer">
-<area shape="rect" id="node1" title="Assigne des données brut aux membres." alt="" coords="5,56,204,83"/>
-<area shape="rect" id="node2" href="$tmxParsing_8cpp.html#a4cce2d96dd209722a445091ace78dae4" title="Transforme une std::string sous format csv en tableau dynamique d&#39;entiers." alt="" coords="283,5,357,32"/>
-<area shape="rect" id="node3" href="$tmxParsing_8cpp.html#a7f798bd46c19c61d7e3f0356018bc0c9" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="252,56,388,83"/>
-<area shape="rect" id="node4" href="$tmxParsing_8cpp.html#afe8a4464102791b21b37cc37f76eb1c9" title=" " alt="" coords="272,107,368,133"/>
-<area shape="rect" id="node5" href="$tmxParsing_8cpp.html#a8fc864f80bb4b71341f7189e9a5c9bcd" title=" " alt="" coords="436,107,524,133"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="EntityWithoutHP" name="EntityWithoutHP">
-<area shape="rect" id="node1" title=" " alt="" coords="37,5,202,376"/>
-<area shape="rect" id="node2" href="$classEntityWithHP.html" title=" " alt="" coords="44,424,195,765"/>
-<area shape="rect" id="node3" href="$classEnemy.html" title=" " alt="" coords="5,813,108,920"/>
-<area shape="rect" id="node4" href="$classPlayer.html" title=" " alt="" coords="133,813,231,920"/>
-</map>

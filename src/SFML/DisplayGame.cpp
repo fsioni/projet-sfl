@@ -15,8 +15,8 @@ DisplayGame::~DisplayGame(){
 
 void DisplayGame::DisplaySFML() const{
     // ================== Affichage SFML  ==================
-        sf::Texture tileTexture, charTextures, shadowTexture;
-        sf::Sprite tileSprite, charSprite, shadowSprite;
+        sf::Texture tileTexture, charTextures, shadowTexture, enemyTexture;
+        sf::Sprite tileSprite, charSprite, shadowSprite, enemySprite;
 
         // Chargement de la tileMap
         tileTexture.loadFromFile(game->GetMapConst().GetTileset().GetTileMapPath());
@@ -25,6 +25,10 @@ void DisplayGame::DisplaySFML() const{
         // Chargement des charactères
         charTextures.loadFromFile("data/textures/characters/Male/Male 01-1.png");
         charSprite.setTexture(charTextures);
+
+        // Chargement des ennemies
+        enemyTexture.loadFromFile("data/textures/characters/Soldier/Soldier 01-1.png");
+        enemySprite.setTexture(enemyTexture);
 
         // Chargement de l'ombre
         shadowTexture.loadFromFile("data/textures/characters/Shadow/Shadow 1.png");
@@ -178,6 +182,16 @@ void DisplayGame::DisplaySFML() const{
             charSprite.setPosition(playerX-substX, playerY-substY);
             charSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
             window.draw(charSprite);
+
+            // Affichage des ennemies
+            int count = game->GetEnemiesConst().size();
+            for(int i=0; i<count; i++){
+                int enX = game->GetEnemiesConst()[i].GetPos_x();
+                int enY = game->GetEnemiesConst()[i].GetPos_x();
+                enemySprite.setPosition(enX, enY);
+                enemySprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
+                window.draw(enemySprite);
+            }
 
             
 

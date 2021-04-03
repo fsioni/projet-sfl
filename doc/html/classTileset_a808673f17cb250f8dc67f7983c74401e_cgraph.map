@@ -1,6 +1,0 @@
-<map id="Tileset::rawDataToTileset" name="Tileset::rawDataToTileset">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,192,57"/>
-<area shape="rect" id="node2" href="$tmxParsing_8cpp.html#a7f798bd46c19c61d7e3f0356018bc0c9" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="240,5,376,32"/>
-<area shape="rect" id="node3" href="$tmxParsing_8cpp.html#a01a1670c28de93ece461380677bb7d89" title=" " alt="" coords="256,56,360,83"/>
-<area shape="rect" id="node4" href="$tmxParsing_8cpp.html#a8fc864f80bb4b71341f7189e9a5c9bcd" title=" " alt="" coords="424,56,512,83"/>
-</map>

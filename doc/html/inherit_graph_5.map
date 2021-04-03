@@ -1,5 +1,0 @@
-<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$classLayer.html" title=" " alt="" coords="5,31,64,57"/>
-<area shape="rect" id="node2" href="$classCollisionLayer.html" title=" " alt="" coords="112,5,227,32"/>
-<area shape="rect" id="node3" href="$classMapLayer.html" title="Classe représentant une couche de tuiles." alt="" coords="126,56,213,83"/>
-</map>

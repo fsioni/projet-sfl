@@ -22,18 +22,15 @@ private:
 
 public:
     /*// === Fonctions membres privées === //*/
-
-    /*! \brief Constructeur par défaut 
-    *
-    *   Ne suffit pas pour utilisation.
-    */
+    
+    /*! \brief Constructeur par défaut. */
     SpawnsLayer(/* args */);
 
-    /*! \brief Constructeur par balises
-    *
-    *   Créer un SpawnsLayer depuis les balises object d'une Tilemap.
-    *   \param [in] objectgroupTagPlayer : balise object du SpawnPoint du Player 
-    *   \param [in] objectgroupTagEnnemy : balise object du SpawnPoint des Ennemy
+    /*! \brief Constructeur avec la balise des spawns du joueur et 
+    *           celle des ennemis.
+    *   
+    *   \param [in] objectgroupTagPlayer : balise brut <objectgroup> contenant le spawn du joueur.
+    *   \param [in] objectgroupTagEnnemy : balise brut <objectgroup> contenant les spawns des ennemis.
     */
     SpawnsLayer(const std::string & objectgroupTagPlayer, 
                 const std::string & objectgroupTagEnnemy);
@@ -64,11 +61,6 @@ public:
     */
     SpawnPoint getPlayerSpawn() const;
 
-    /*! \brief Fonction d'affichage de l'objet en mode texte
-    *
-    *   Affiche toutes les données de l'objet dans le terminal
-    */
-    void DisplayTXT()const;
 };
 
 #endif

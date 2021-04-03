@@ -35,7 +35,7 @@ public:
 
     int GetDamage() const;
 
-    void PrintEntityInfo() override;
+    //void PrintEntityInfo() override;
 
     void TakeDamage(unsigned int damage);
 

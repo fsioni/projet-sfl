@@ -1,0 +1,29 @@
+digraph "Map::Map"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Map::Map",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Constructeur prennant en parametre un fichier .tmx et un .tsx."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Map::TmxLoadLayers",height=0.2,width=0.4,color="black",URL="$classMap.html#ab57f33273034a118bb9434befbeb4263",tooltip="Charge les données d'un fichier .tmx."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Map::AddMapLayer",height=0.2,width=0.4,color="black",URL="$classMap.html#aae4d9bae8f573536c7d9b410edf4aefb",tooltip="Ajout d'un MapLayer dans le tableau dynamique mapLayers."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="countTag",height=0.2,width=0.4,color="black",URL="$tmxParsing_8cpp.html#ae74660aeef7041eda55965e62997a6e8",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="fileToString",height=0.2,width=0.4,color="black",URL="$tmxParsing_8cpp.html#a6b9ffd87ce2b45473317a2a57e0750ee",tooltip="Retourne un fichier dans une std::string."];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="getAttributeValue",height=0.2,width=0.4,color="black",URL="$tmxParsing_8cpp.html#a7f798bd46c19c61d7e3f0356018bc0c9",tooltip="Retourne la valeur d'un attribut d'un balise XML."];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="getFullTag",height=0.2,width=0.4,color="black",URL="$tmxParsing_8cpp.html#a8fc864f80bb4b71341f7189e9a5c9bcd",tooltip=" "];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="getInsideTag",height=0.2,width=0.4,color="black",URL="$tmxParsing_8cpp.html#a01a1670c28de93ece461380677bb7d89",tooltip=" "];
+  Node8 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Map::TsxLoadTileset",height=0.2,width=0.4,color="black",URL="$classMap.html#a731bab75a964df89b6568831f3824df7",tooltip="Charge les données d'un fichier .tsx."];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Map::SetTileset",height=0.2,width=0.4,color="black",URL="$classMap.html#af77b94a8baf896afbda493bf4ac2cd57",tooltip="Modifie tileset par celui en paramètre."];
+}

@@ -55,7 +55,7 @@ void EntityWithHP::SetSpeed(float newSpeed){
 
     speed = newSpeed;
 }
-
+/*
 void EntityWithHP::PrintEntityInfo() {
 
     cout<< "x = " << x << ", y = " << y <<endl;
@@ -69,7 +69,7 @@ void EntityWithHP::PrintEntityInfo() {
     else{
         cout<<"Le personnage est mort"<<endl;}
 
-}
+}*/
 
 void EntityWithHP::Move(float vx, float vy){
 
