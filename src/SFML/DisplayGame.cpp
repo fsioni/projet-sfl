@@ -1,19 +1,40 @@
 #include "DisplayGame.h"
 
 
-DisplayGame::DisplayGame(){
+DisplayGame::DisplayGame()
+{
+    DisplayGame::Init();
+}
+
+DisplayGame::~DisplayGame()
+{
+    DisplayGame::CleanUp();
+}
+
+void DisplayGame::Init()
+{
     game = new Game();
     assets = new AssetManager();
 }
 
-DisplayGame::~DisplayGame(){
+void DisplayGame::CleanUp()
+{
     delete game;
     game = nullptr;
     delete assets;
     assets = nullptr;
 }
 
-void DisplayGame::DisplaySFML() const{
+void DisplayGame::Pause(){}
+
+void DisplayGame::Resume(){}
+
+void DisplayGame::GetEvents(){}
+
+void DisplayGame::Update(){}
+
+void DisplayGame::Display()
+{
     // ================== Affichage SFML  ==================
         sf::Texture tileTexture, charTextures, shadowTexture, enemyTexture;
         sf::Sprite tileSprite, charSprite, shadowSprite, enemySprite;
@@ -222,4 +243,4 @@ void DisplayGame::DisplaySFML() const{
         }
 }
 
-
+void DisplayGame::Test(){}

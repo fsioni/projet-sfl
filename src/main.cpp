@@ -14,7 +14,7 @@ int main(int argc, char* argv[]){
     {
         std::cout << "SFML mode" << std::endl;
         DisplayGame game;
-        game.DisplaySFML();
+        game.Display();
 
     }else if (argv[1] == std::string("1")) /////////////// MODE TEXTE
     {

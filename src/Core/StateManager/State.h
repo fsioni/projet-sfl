@@ -17,16 +17,6 @@ public:
 
     /*// === Fonctions membres publiques === //*/
 
-    /*! \brief Constructeur par défaut
-    *
-    */
-    State(/* args */);
-
-    /*! \brief Destructeur
-    *
-    * Destructeur de l'objet State
-    */
-    ~State();
 
     /*! \brief Fonction d'initialisation du State
     *
@@ -70,21 +60,13 @@ public:
     */
     virtual void Update()=0;
     
-    /*! \brief Fonction d'affichage en mode texte du State
+    /*! \brief Fonction d'affichage du State
     *
     *   Est appelée à chaque mise à jour de l'application
-    *   Permet un affichage dans la console
+    *   Permet un affichage dans la console ou en mode graphique selon le State associé
     *   Fonction virtuelle pure : doit être implémentée par l'enfant
     */
-    virtual void DisplayText()=0;
-
-    /*! \brief Fonction d'affichage en mode graphique du State
-    *
-    *   Est appelée à chaque mise à jour de l'application
-    *   Permet un affichage dans une fenêtre SFML
-    *   Fonction virtuelle pure : doit être implémentée par l'enfant
-    */
-    virtual void DisplayGUI()=0; 
+    virtual void Display()=0;
 
     /*! \brief Fonction test de la classe State
     *
