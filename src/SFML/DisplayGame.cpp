@@ -186,8 +186,8 @@ void DisplayGame::DisplaySFML() const{
             // Affichage des ennemies
             int count = game->GetEnemiesConst().size();
             for(int i=0; i<count; i++){
-                int enX = game->GetEnemiesConst()[i].GetPos_x();
-                int enY = game->GetEnemiesConst()[i].GetPos_x();
+                int enX = game->GetEnemiesConst()[i].GetPos_x()-substX;
+                int enY = game->GetEnemiesConst()[i].GetPos_y()-substY;
                 enemySprite.setPosition(enX, enY);
                 enemySprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
                 window.draw(enemySprite);
