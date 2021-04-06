@@ -35,8 +35,8 @@ void DisplayGame::DisplaySFML(sf::RenderWindow  & window) const{
         shadowSprite.setTexture(shadowTexture);
 
         // Initialisation de la fenetre
-        int winWidth = 800;
-        int winHeight = 800;
+        int winWidth = window.getSize().x;
+        int winHeight = window.getSize().y;
         //sf::RenderWindow window(sf::VideoMode(winWidth, winHeight, 32), "Legend Of Nautibus");
 
         // Horloge
