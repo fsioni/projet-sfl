@@ -97,12 +97,12 @@ void StateGameSFML::Update()
     nbMapLayer = context->map->GetMapLayers().size();
 
     // Taille de la map
-    int mapWidth = context->map->GetMapLayers()[0].GetWidth();
-    int mapHeight = context->map->GetMapLayers()[0].GetHeight();
+    mapWidth = context->map->GetMapLayers()[0].GetWidth();
+    mapHeight = context->map->GetMapLayers()[0].GetHeight();
     
     // Gestion de camera qui suit le joueur
-    substX = playerX-400;
-    substY = playerY-400;
+    substX = playerX - winWidth/2;
+    substY = playerY - winHeight/2;
 
     // Taille de la fenetre
     winWidth = (int)context->renderWin->getSize().x;
@@ -131,8 +131,8 @@ void StateGameSFML::Display()
     // Affichage de la map
     for(int k=0; k<nbMapLayer; k++){
         MapLayer layer = context->map->GetMapLayers()[k];
-        for(int i=0; i<50; i++){
-            for(int j=0; j<50; j++){
+        for(int i=0; i<mapWidth; i++){
+            for(int j=0; j<mapHeight; j++){
                 data = layer.GetData(i, j);
                 if(data!=0){
                     x = ((data-1) % 8)*w;
@@ -150,10 +150,7 @@ void StateGameSFML::Display()
                         tileSprite.setPosition(tileX, tileY);
 
                         tileSprite.setTextureRect(sf::IntRect(x, y, w, h));
-                        /*
-                        tileSprite.setPosition(0, 0);
-                        tileSprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
-                        */
+                      
                         context->renderWin->draw(tileSprite);       
                     }
 

@@ -35,6 +35,9 @@ private:
     //Taille de la fenêtre
     int winWidth, winHeight;
 
+    //Taille de la map
+    int mapWidth, mapHeight;
+
 public:
     StateGameSFML(/* args */);
     StateGameSFML(std::shared_ptr<Context> &context);
