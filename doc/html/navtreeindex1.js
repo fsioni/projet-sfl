@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"classStateGameSFML.html#a96d3fb072ec1a9ec9e1fe4a264db35ce":[0,0,16,23],
+"classStateGameSFML.html#aa0702a645708d454986af982ca16b6b3":[0,0,16,19],
+"classStateGameSFML.html#aa13076059243f2048f702a5a44d717d4":[0,0,16,30],
 "classStateGameSFML.html#aa287b6671b32bd707bae39805b5dfb7c":[0,0,16,25],
 "classStateGameSFML.html#aa442c147ff5168fd94d121815f7b7907":[0,0,16,32],
 "classStateGameSFML.html#aa7664f05c9e2da4f359096b158a870bc":[0,0,16,5],

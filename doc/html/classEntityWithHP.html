@@ -84,11 +84,14 @@ $(document).ready(function(){initNavTree('classEntityWithHP.html',''); initResiz
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
-<a href="#pub-attribs">Champs de données</a>  </div>
+<a href="#pro-attribs">Attributs protégés</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe EntityWithHP</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.  
+ <a href="classEntityWithHP.html#details">Plus de détails...</a></p>
 
 <p><code>#include &lt;<a class="el" href="EntityWithHP_8h_source.html">EntityWithHP.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -96,57 +99,84 @@ Graphe d'héritage de EntityWithHP:</div>
 <div class="dyncontent">
 <div class="center"><img src="classEntityWithHP__inherit__graph.png" border="0" usemap="#EntityWithHP_inherit__map" alt="Inheritance graph"/></div>
 <map name="EntityWithHP_inherit__map" id="EntityWithHP_inherit__map">
-<area shape="rect" title=" " alt="" coords="44,409,195,736"/>
-<area shape="rect" href="classEnemy.html" title=" " alt="" coords="5,784,108,891"/>
-<area shape="rect" href="classPlayer.html" title=" " alt="" coords="133,784,231,891"/>
-<area shape="rect" href="classEntityWithoutHP.html" title=" " alt="" coords="37,5,202,361"/>
+<area shape="rect" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer." alt="" coords="44,424,195,780"/>
+<area shape="rect" href="classEnemy.html" title="Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer." alt="" coords="5,828,108,935"/>
+<area shape="rect" href="classPlayer.html" title="Classe représentant un joueur qui peut infliger/subir des dégats et se déplacer." alt="" coords="133,828,231,935"/>
+<area shape="rect" href="classEntityWithoutHP.html" title="Classe représentant une entité immobile et immortel." alt="" coords="37,5,202,376"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a6c871524778adffcdf9fcd9a514244d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a6c871524778adffcdf9fcd9a514244d3">EntityWithHP</a> ()</td></tr>
+<tr class="memdesc:a6c871524778adffcdf9fcd9a514244d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut.  <a href="classEntityWithHP.html#a6c871524778adffcdf9fcd9a514244d3">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6c871524778adffcdf9fcd9a514244d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af553ff43583a3dfb48e6e6e17beb7dcf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#af553ff43583a3dfb48e6e6e17beb7dcf">EntityWithHP</a> (float <a class="el" href="classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e">x</a>, float <a class="el" href="classEntityWithoutHP.html#afb0507fc1b3a17bf87bc3012958b54a2">y</a>, string <a class="el" href="classEntityWithoutHP.html#a10246feff1be3c070dea700e9fac46a3">name</a>, unsigned int <a class="el" href="classEntityWithHP.html#ab4b01c7ff1afbf673a9a5ee5d68b8579">hp</a>, unsigned int <a class="el" href="classEntityWithHP.html#a5904eb85ea84777e494b325b2eddb07d">damage</a>, float <a class="el" href="classEntityWithHP.html#a354e4ce839f5f4dc15f415ce94095a21">speed</a>, unsigned int <a class="el" href="classEntityWithHP.html#a143332c2b7c3856f009758b886c9d919">maxHealth</a>)</td></tr>
+<tr class="memdesc:af553ff43583a3dfb48e6e6e17beb7dcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur avec spécifités de l'entité en paramètre.  <a href="classEntityWithHP.html#af553ff43583a3dfb48e6e6e17beb7dcf">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af553ff43583a3dfb48e6e6e17beb7dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3898bba6518b7bf7464d98e0d839d604"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a3898bba6518b7bf7464d98e0d839d604">~EntityWithHP</a> ()</td></tr>
+<tr class="memdesc:a3898bba6518b7bf7464d98e0d839d604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="classEntityWithHP.html#a3898bba6518b7bf7464d98e0d839d604">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3898bba6518b7bf7464d98e0d839d604"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41fc1a9c9af67ea53b4c1c709c1c19b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a41fc1a9c9af67ea53b4c1c709c1c19b8">Move</a> (float vx, float vy)</td></tr>
+<tr class="memdesc:a41fc1a9c9af67ea53b4c1c709c1c19b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de deplacer l'entité.  <a href="classEntityWithHP.html#a41fc1a9c9af67ea53b4c1c709c1c19b8">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a41fc1a9c9af67ea53b4c1c709c1c19b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44566e1e10c17e55475a1d2f7ac37375"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a44566e1e10c17e55475a1d2f7ac37375">SetHP</a> (unsigned int newHp)</td></tr>
+<tr class="memdesc:a44566e1e10c17e55475a1d2f7ac37375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permets de modifier le nombre de points de vie d'une entité <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a>.  <a href="classEntityWithHP.html#a44566e1e10c17e55475a1d2f7ac37375">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a44566e1e10c17e55475a1d2f7ac37375"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a064f838fa6ae5e4a2b6c2fcb92f576fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa">GetHP</a> () const</td></tr>
+<tr class="memdesc:a064f838fa6ae5e4a2b6c2fcb92f576fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le nombre de points de vie de l'entité.  <a href="classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a064f838fa6ae5e4a2b6c2fcb92f576fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf874f542f5c7e7a7ae1b65043ed35dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#acf874f542f5c7e7a7ae1b65043ed35dc">SetSpeed</a> (float newSpeed)</td></tr>
+<tr class="memdesc:acf874f542f5c7e7a7ae1b65043ed35dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permets de modifier la vitesse de déplacement de l'entité EntitywithHP.  <a href="classEntityWithHP.html#acf874f542f5c7e7a7ae1b65043ed35dc">Plus de détails...</a><br /></td></tr>
 <tr class="separator:acf874f542f5c7e7a7ae1b65043ed35dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0316748815da894bf85862d268d67ba0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a0316748815da894bf85862d268d67ba0">GetSpeed</a> () const</td></tr>
+<tr class="memdesc:a0316748815da894bf85862d268d67ba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la vitesse de déplacement de l'entité <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a>.  <a href="classEntityWithHP.html#a0316748815da894bf85862d268d67ba0">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a0316748815da894bf85862d268d67ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14cefe33b7469d69c5493df26d4e021f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a14cefe33b7469d69c5493df26d4e021f">SetDamage</a> (unsigned int newDmg)</td></tr>
+<tr class="memdesc:a14cefe33b7469d69c5493df26d4e021f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de modofier les dégats infligés par l'entité <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a>.  <a href="classEntityWithHP.html#a14cefe33b7469d69c5493df26d4e021f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a14cefe33b7469d69c5493df26d4e021f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2141d7cca91bd206e229efcc1c02d4d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a2141d7cca91bd206e229efcc1c02d4d0">GetDamage</a> () const</td></tr>
+<tr class="memdesc:a2141d7cca91bd206e229efcc1c02d4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de retourner le nombre de dégats q'inflige l'entité <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a>.  <a href="classEntityWithHP.html#a2141d7cca91bd206e229efcc1c02d4d0">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2141d7cca91bd206e229efcc1c02d4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69df0481331828602496977649c0b45d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a69df0481331828602496977649c0b45d">PrintEntityInfo</a> () override</td></tr>
+<tr class="memdesc:a69df0481331828602496977649c0b45d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'imprimer sur la console des informations générales concernant l'entité.  <a href="classEntityWithHP.html#a69df0481331828602496977649c0b45d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a69df0481331828602496977649c0b45d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95a2c2671104ca91e328f9d2b5c17a35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a95a2c2671104ca91e328f9d2b5c17a35">TakeDamage</a> (unsigned int <a class="el" href="classEntityWithHP.html#a5904eb85ea84777e494b325b2eddb07d">damage</a>)</td></tr>
+<tr class="memdesc:a95a2c2671104ca91e328f9d2b5c17a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de faire en sorte qu'une entité subisse le nombre "damage" dégats.  <a href="classEntityWithHP.html#a95a2c2671104ca91e328f9d2b5c17a35">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a95a2c2671104ca91e328f9d2b5c17a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38e7796f71ca496f1db9e0873493f7d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a38e7796f71ca496f1db9e0873493f7d0">Attack</a> (<a class="el" href="classEntityWithHP.html">EntityWithHP</a> &amp;target, unsigned int <a class="el" href="classEntityWithHP.html#a5904eb85ea84777e494b325b2eddb07d">damage</a>) const</td></tr>
+<tr class="memdesc:a38e7796f71ca496f1db9e0873493f7d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'infliger damage dégats à l'entité target.  <a href="classEntityWithHP.html#a38e7796f71ca496f1db9e0873493f7d0">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a38e7796f71ca496f1db9e0873493f7d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe560d6a4c2c7cc80d228857a7a34785"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#abe560d6a4c2c7cc80d228857a7a34785">SetLivingStatus</a> (bool newStatus)</td></tr>
+<tr class="memdesc:abe560d6a4c2c7cc80d228857a7a34785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie l'état de vie/mort de l'entité.  <a href="classEntityWithHP.html#abe560d6a4c2c7cc80d228857a7a34785">Plus de détails...</a><br /></td></tr>
 <tr class="separator:abe560d6a4c2c7cc80d228857a7a34785"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a500d3f8c3a23e1a2cf43abb28bf3a3fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a500d3f8c3a23e1a2cf43abb28bf3a3fe">GetLivingStatus</a> () const</td></tr>
+<tr class="memdesc:a500d3f8c3a23e1a2cf43abb28bf3a3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne l'état de vie/mort de l'entité.  <a href="classEntityWithHP.html#a500d3f8c3a23e1a2cf43abb28bf3a3fe">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a500d3f8c3a23e1a2cf43abb28bf3a3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3ca9a9884e17ddac24e771af585e0cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#ae3ca9a9884e17ddac24e771af585e0cb">GetMaxHealth</a> () const</td></tr>
+<tr class="memdesc:ae3ca9a9884e17ddac24e771af585e0cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le cap maximum de points de vie de l'entité.  <a href="classEntityWithHP.html#ae3ca9a9884e17ddac24e771af585e0cb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae3ca9a9884e17ddac24e771af585e0cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classEntityWithoutHP"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classEntityWithoutHP')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="classEntityWithoutHP.html">EntityWithoutHP</a></td></tr>
 <tr class="memitem:a07bf9bfc465bb7b3d11788bb6c2371bf inherit pub_methods_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a07bf9bfc465bb7b3d11788bb6c2371bf">EntityWithoutHP</a> ()</td></tr>
+<tr class="memdesc:a07bf9bfc465bb7b3d11788bb6c2371bf inherit pub_methods_classEntityWithoutHP"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut.  <a href="classEntityWithoutHP.html#a07bf9bfc465bb7b3d11788bb6c2371bf">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a07bf9bfc465bb7b3d11788bb6c2371bf inherit pub_methods_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fab677ba875e7845b86e96dd25ed4a2 inherit pub_methods_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a1fab677ba875e7845b86e96dd25ed4a2">EntityWithoutHP</a> (float <a class="el" href="classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e">x</a>, float <a class="el" href="classEntityWithoutHP.html#afb0507fc1b3a17bf87bc3012958b54a2">y</a>, string <a class="el" href="classEntityWithoutHP.html#a10246feff1be3c070dea700e9fac46a3">name</a>)</td></tr>
+<tr class="memdesc:a1fab677ba875e7845b86e96dd25ed4a2 inherit pub_methods_classEntityWithoutHP"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur avec spécifités de l'entité en paramètre.  <a href="classEntityWithoutHP.html#a1fab677ba875e7845b86e96dd25ed4a2">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1fab677ba875e7845b86e96dd25ed4a2 inherit pub_methods_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1438af015635e857cba0c84a15860318 inherit pub_methods_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a1438af015635e857cba0c84a15860318">~EntityWithoutHP</a> ()</td></tr>
+<tr class="memdesc:a1438af015635e857cba0c84a15860318 inherit pub_methods_classEntityWithoutHP"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="classEntityWithoutHP.html#a1438af015635e857cba0c84a15860318">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1438af015635e857cba0c84a15860318 inherit pub_methods_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa919d21efd6f9e28bcbd71696b418792 inherit pub_methods_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792">GetPos_x</a> () const</td></tr>
+<tr class="memdesc:aa919d21efd6f9e28bcbd71696b418792 inherit pub_methods_classEntityWithoutHP"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la position sur l'axe des x de l'entité (horizontale).  <a href="classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa919d21efd6f9e28bcbd71696b418792 inherit pub_methods_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71d0f35f8ec801afca2b0a3d1c5e8c60 inherit pub_methods_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a71d0f35f8ec801afca2b0a3d1c5e8c60">SetPos_x</a> (float newX)</td></tr>
+<tr class="memdesc:a71d0f35f8ec801afca2b0a3d1c5e8c60 inherit pub_methods_classEntityWithoutHP"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permets de modifier la position sur l'axe des x de l'entité (horizontale).  <a href="classEntityWithoutHP.html#a71d0f35f8ec801afca2b0a3d1c5e8c60">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a71d0f35f8ec801afca2b0a3d1c5e8c60 inherit pub_methods_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5fa20e8f737d5c7eee11ebafeee3d92 inherit pub_methods_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92">GetPos_y</a> () const</td></tr>
+<tr class="memdesc:ac5fa20e8f737d5c7eee11ebafeee3d92 inherit pub_methods_classEntityWithoutHP"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la position sur l'axe des y de l'entité (verticale).  <a href="classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac5fa20e8f737d5c7eee11ebafeee3d92 inherit pub_methods_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2911e0307397dde003fdcfa71b738495 inherit pub_methods_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a2911e0307397dde003fdcfa71b738495">SetPos_y</a> (float newY)</td></tr>
+<tr class="memdesc:a2911e0307397dde003fdcfa71b738495 inherit pub_methods_classEntityWithoutHP"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permets de modifier la position sur l'axe des y de l'entité (verticale).  <a href="classEntityWithoutHP.html#a2911e0307397dde003fdcfa71b738495">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2911e0307397dde003fdcfa71b738495 inherit pub_methods_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72a456c7bbaf8f66544292edf37f5e0e inherit pub_methods_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a72a456c7bbaf8f66544292edf37f5e0e">GetWidth</a> () const</td></tr>
 <tr class="separator:a72a456c7bbaf8f66544292edf37f5e0e inherit pub_methods_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,37 +191,50 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:aae6ff3096909720eccd5a87159c6440b inherit pub_methods_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#aae6ff3096909720eccd5a87159c6440b">setOffset</a> (int newO)</td></tr>
 <tr class="separator:aae6ff3096909720eccd5a87159c6440b inherit pub_methods_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72e23e567e9c46abcce65abe980cf932 inherit pub_methods_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a72e23e567e9c46abcce65abe980cf932">GetName</a> () const</td></tr>
+<tr class="memdesc:a72e23e567e9c46abcce65abe980cf932 inherit pub_methods_classEntityWithoutHP"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le nom de l'entité.  <a href="classEntityWithoutHP.html#a72e23e567e9c46abcce65abe980cf932">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a72e23e567e9c46abcce65abe980cf932 inherit pub_methods_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8781419d89c30722793ec3abec1dd81f inherit pub_methods_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a8781419d89c30722793ec3abec1dd81f">SetName</a> (string newName)</td></tr>
+<tr class="memdesc:a8781419d89c30722793ec3abec1dd81f inherit pub_methods_classEntityWithoutHP"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permets de modifier le nom de l'entité.  <a href="classEntityWithoutHP.html#a8781419d89c30722793ec3abec1dd81f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8781419d89c30722793ec3abec1dd81f inherit pub_methods_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Champs de données</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Attributs protégés</h2></td></tr>
 <tr class="memitem:ab4b01c7ff1afbf673a9a5ee5d68b8579"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#ab4b01c7ff1afbf673a9a5ee5d68b8579">hp</a></td></tr>
+<tr class="memdesc:ab4b01c7ff1afbf673a9a5ee5d68b8579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre entier de points de vie de l'entité  <a href="classEntityWithHP.html#ab4b01c7ff1afbf673a9a5ee5d68b8579">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ab4b01c7ff1afbf673a9a5ee5d68b8579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5904eb85ea84777e494b325b2eddb07d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a5904eb85ea84777e494b325b2eddb07d">damage</a></td></tr>
+<tr class="memdesc:a5904eb85ea84777e494b325b2eddb07d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre entier de points de vie infligé lors d'un attaque.  <a href="classEntityWithHP.html#a5904eb85ea84777e494b325b2eddb07d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5904eb85ea84777e494b325b2eddb07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0b3bd3c92721330bd95734782ab3884"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#ac0b3bd3c92721330bd95734782ab3884">livingStatus</a></td></tr>
+<tr class="memdesc:ac0b3bd3c92721330bd95734782ab3884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen définissant si l'entité est morte ou pas.  <a href="classEntityWithHP.html#ac0b3bd3c92721330bd95734782ab3884">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac0b3bd3c92721330bd95734782ab3884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a143332c2b7c3856f009758b886c9d919"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a143332c2b7c3856f009758b886c9d919">maxHealth</a></td></tr>
+<tr class="memdesc:a143332c2b7c3856f009758b886c9d919"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre entier maximal de points de vie de l'entité  <a href="classEntityWithHP.html#a143332c2b7c3856f009758b886c9d919">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a143332c2b7c3856f009758b886c9d919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a354e4ce839f5f4dc15f415ce94095a21"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithHP.html#a354e4ce839f5f4dc15f415ce94095a21">speed</a></td></tr>
+<tr class="memdesc:a354e4ce839f5f4dc15f415ce94095a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vitesse de l'entité  <a href="classEntityWithHP.html#a354e4ce839f5f4dc15f415ce94095a21">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a354e4ce839f5f4dc15f415ce94095a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_classEntityWithoutHP"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classEntityWithoutHP')"><img src="closed.png" alt="-"/>&#160;Champs de données hérités de <a class="el" href="classEntityWithoutHP.html">EntityWithoutHP</a></td></tr>
-<tr class="memitem:a2bfca945eaafc069d6ccdf814a94dd5e inherit pub_attribs_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e">x</a></td></tr>
-<tr class="separator:a2bfca945eaafc069d6ccdf814a94dd5e inherit pub_attribs_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb0507fc1b3a17bf87bc3012958b54a2 inherit pub_attribs_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#afb0507fc1b3a17bf87bc3012958b54a2">y</a></td></tr>
-<tr class="separator:afb0507fc1b3a17bf87bc3012958b54a2 inherit pub_attribs_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ec8ce114f991d9c653506594c56e870 inherit pub_attribs_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a5ec8ce114f991d9c653506594c56e870">width</a></td></tr>
-<tr class="separator:a5ec8ce114f991d9c653506594c56e870 inherit pub_attribs_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac15e6a5827948da39848484c772d7bcd inherit pub_attribs_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#ac15e6a5827948da39848484c772d7bcd">height</a></td></tr>
-<tr class="separator:ac15e6a5827948da39848484c772d7bcd inherit pub_attribs_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c7ed81350ce164f7c5206d773411bac inherit pub_attribs_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac">offset</a></td></tr>
-<tr class="separator:a8c7ed81350ce164f7c5206d773411bac inherit pub_attribs_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10246feff1be3c070dea700e9fac46a3 inherit pub_attribs_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a10246feff1be3c070dea700e9fac46a3">name</a></td></tr>
-<tr class="separator:a10246feff1be3c070dea700e9fac46a3 inherit pub_attribs_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classEntityWithoutHP"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classEntityWithoutHP')"><img src="closed.png" alt="-"/>&#160;Attributs protégés hérités de <a class="el" href="classEntityWithoutHP.html">EntityWithoutHP</a></td></tr>
+<tr class="memitem:a2bfca945eaafc069d6ccdf814a94dd5e inherit pro_attribs_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e">x</a></td></tr>
+<tr class="memdesc:a2bfca945eaafc069d6ccdf814a94dd5e inherit pro_attribs_classEntityWithoutHP"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position sur l'axe des x de l'entité (horizontal).  <a href="classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2bfca945eaafc069d6ccdf814a94dd5e inherit pro_attribs_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0507fc1b3a17bf87bc3012958b54a2 inherit pro_attribs_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#afb0507fc1b3a17bf87bc3012958b54a2">y</a></td></tr>
+<tr class="memdesc:afb0507fc1b3a17bf87bc3012958b54a2 inherit pro_attribs_classEntityWithoutHP"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position sur l'axe des y de l'entité (vertical).  <a href="classEntityWithoutHP.html#afb0507fc1b3a17bf87bc3012958b54a2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afb0507fc1b3a17bf87bc3012958b54a2 inherit pro_attribs_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec8ce114f991d9c653506594c56e870 inherit pro_attribs_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a5ec8ce114f991d9c653506594c56e870">width</a></td></tr>
+<tr class="separator:a5ec8ce114f991d9c653506594c56e870 inherit pro_attribs_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac15e6a5827948da39848484c772d7bcd inherit pro_attribs_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#ac15e6a5827948da39848484c772d7bcd">height</a></td></tr>
+<tr class="separator:ac15e6a5827948da39848484c772d7bcd inherit pro_attribs_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c7ed81350ce164f7c5206d773411bac inherit pro_attribs_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac">offset</a></td></tr>
+<tr class="separator:a8c7ed81350ce164f7c5206d773411bac inherit pro_attribs_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10246feff1be3c070dea700e9fac46a3 inherit pro_attribs_classEntityWithoutHP"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a10246feff1be3c070dea700e9fac46a3">name</a></td></tr>
+<tr class="memdesc:a10246feff1be3c070dea700e9fac46a3 inherit pro_attribs_classEntityWithoutHP"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nom de l'entité  <a href="classEntityWithoutHP.html#a10246feff1be3c070dea700e9fac46a3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a10246feff1be3c070dea700e9fac46a3 inherit pro_attribs_classEntityWithoutHP"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Classe représentant une entité qui peut infliger/subir des dégats et se déplacer. </p>
+<p>La classe représente une entité avec un nom, des points de vie, une position, des dégats d'attaque, une vitesse et un cap maximum de points de vie. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="a6c871524778adffcdf9fcd9a514244d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c871524778adffcdf9fcd9a514244d3">&#9670;&nbsp;</a></span>EntityWithHP() <span class="overload">[1/2]</span></h2>
 
@@ -206,6 +249,9 @@ Champs de données</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructeur par défaut. </p>
+<p>Créer une entité <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a> avec une position x 0.0, une position y 0.0, un nom "Unknown", 200 hp, 20 de damage, 200 de maxHealth et une vitesse de 1,0 (entité vide). </p>
 
 </div>
 </div>
@@ -265,6 +311,22 @@ Champs de données</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructeur avec spécifités de l'entité en paramètre. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>: réel positif, position de l'entité sur l'axe X (horizontal). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>: réel positif, position de l'entité sur l'axe Y (vertical). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>: chaine de caractères, nom de l'entité. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hp</td><td>: entier positif, nombre de points de vie de l'entité. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dammage</td><td>: entier positif, nombre de points de vie infligé lors d'une attaque. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">maxHealth</td><td>: entier positif, maximum de points de vie qu'une entité peut avoir. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">livingStatus</td><td>: Booléen, définissant si l'entité est morte ou pas. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">speed</td><td>: réel positif, vitesse de déplacement de l'entité.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Créer une <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a> (x, y, name, hp, dammage, maxHealth, livingStatus, speed) </p>
+
 </div>
 </div>
 <a id="a3898bba6518b7bf7464d98e0d839d604"></a>
@@ -281,6 +343,9 @@ Champs de données</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destructeur. </p>
+<p>Destructeur de la classe <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a>. </p>
 
 </div>
 </div>
@@ -310,13 +375,22 @@ Champs de données</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Permet d'infliger damage dégats à l'entité target. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>: <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a> qui va subir le nombre "damage" dégats. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">damage</td><td>: entier positif, nombre de dégats à infligerà l'entité target. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classEntityWithHP_a38e7796f71ca496f1db9e0873493f7d0_cgraph.png" border="0" usemap="#classEntityWithHP_a38e7796f71ca496f1db9e0873493f7d0_cgraph" alt=""/></div>
 <map name="classEntityWithHP_a38e7796f71ca496f1db9e0873493f7d0_cgraph" id="classEntityWithHP_a38e7796f71ca496f1db9e0873493f7d0_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,164,32"/>
-<area shape="rect" href="classEntityWithHP.html#a95a2c2671104ca91e328f9d2b5c17a35" title=" " alt="" coords="212,5,412,32"/>
+<area shape="rect" title="Permet d&#39;infliger damage dégats à l&#39;entité target." alt="" coords="5,5,164,32"/>
+<area shape="rect" href="classEntityWithHP.html#a95a2c2671104ca91e328f9d2b5c17a35" title="Permet de faire en sorte qu&#39;une entité subisse le nombre &quot;damage&quot; dégats." alt="" coords="212,5,412,32"/>
 </map>
 </div>
 
@@ -337,6 +411,9 @@ Voici le graphe d'appel pour cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
+<p>Permet de retourner le nombre de dégats q'inflige l'entité <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a>. </p>
+<p>Retourne damage le nombre de points de vie qu'inflige une entité lors d'une attaque. </p>
+
 </div>
 </div>
 <a id="a064f838fa6ae5e4a2b6c2fcb92f576fa"></a>
@@ -353,12 +430,15 @@ Voici le graphe d'appel pour cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retourne le nombre de points de vie de l'entité. </p>
+<p>Retourne le nombre de points de vie Hp actuelle de l'entité <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a>. </p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classEntityWithHP_a064f838fa6ae5e4a2b6c2fcb92f576fa_icgraph.png" border="0" usemap="#classEntityWithHP_a064f838fa6ae5e4a2b6c2fcb92f576fa_icgraph" alt=""/></div>
 <map name="classEntityWithHP_a064f838fa6ae5e4a2b6c2fcb92f576fa_icgraph" id="classEntityWithHP_a064f838fa6ae5e4a2b6c2fcb92f576fa_icgraph">
-<area shape="rect" title=" " alt="" coords="333,5,491,32"/>
+<area shape="rect" title="Retourne le nombre de points de vie de l&#39;entité." alt="" coords="333,5,491,32"/>
 <area shape="rect" href="gameTxt_8h.html#a8660cc91c8dc47b28c5bf324284499e9" title=" " alt="" coords="227,5,285,32"/>
 <area shape="rect" href="gameTxt_8h.html#a5eeb0d13b5fe5eba2c9d7415842d36d9" title=" " alt="" coords="108,5,179,32"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
@@ -382,6 +462,51 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
+<p>Retourne l'état de vie/mort de l'entité. </p>
+<p>Retourne l'état de vie/mort de l'entité. </p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classEntityWithHP_a500d3f8c3a23e1a2cf43abb28bf3a3fe_icgraph.png" border="0" usemap="#classEntityWithHP_a500d3f8c3a23e1a2cf43abb28bf3a3fe_icgraph" alt=""/></div>
+<map name="classEntityWithHP_a500d3f8c3a23e1a2cf43abb28bf3a3fe_icgraph" id="classEntityWithHP_a500d3f8c3a23e1a2cf43abb28bf3a3fe_icgraph">
+<area shape="rect" title="Retourne l&#39;état de vie/mort de l&#39;entité." alt="" coords="333,5,552,32"/>
+<area shape="rect" href="gameTxt_8h.html#a8660cc91c8dc47b28c5bf324284499e9" title=" " alt="" coords="227,5,285,32"/>
+<area shape="rect" href="gameTxt_8h.html#a5eeb0d13b5fe5eba2c9d7415842d36d9" title=" " alt="" coords="108,5,179,32"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae3ca9a9884e17ddac24e771af585e0cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3ca9a9884e17ddac24e771af585e0cb">&#9670;&nbsp;</a></span>GetMaxHealth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EntityWithHP::GetMaxHealth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne le cap maximum de points de vie de l'entité. </p>
+<p>Retourne le cap maximum de points de vie de l'entité. </p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classEntityWithHP_ae3ca9a9884e17ddac24e771af585e0cb_icgraph.png" border="0" usemap="#classEntityWithHP_ae3ca9a9884e17ddac24e771af585e0cb_icgraph" alt=""/></div>
+<map name="classEntityWithHP_ae3ca9a9884e17ddac24e771af585e0cb_icgraph" id="classEntityWithHP_ae3ca9a9884e17ddac24e771af585e0cb_icgraph">
+<area shape="rect" title="Retourne le cap maximum de points de vie de l&#39;entité." alt="" coords="333,5,544,32"/>
+<area shape="rect" href="gameTxt_8h.html#a8660cc91c8dc47b28c5bf324284499e9" title=" " alt="" coords="227,5,285,32"/>
+<area shape="rect" href="gameTxt_8h.html#a5eeb0d13b5fe5eba2c9d7415842d36d9" title=" " alt="" coords="108,5,179,32"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a0316748815da894bf85862d268d67ba0"></a>
@@ -398,12 +523,15 @@ Voici le graphe des appelants de cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retourne la vitesse de déplacement de l'entité <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a>. </p>
+<p>Retourne la vitesse de déplacement Speed de l'entité <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a>. </p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classEntityWithHP_a0316748815da894bf85862d268d67ba0_icgraph.png" border="0" usemap="#classEntityWithHP_a0316748815da894bf85862d268d67ba0_icgraph" alt=""/></div>
 <map name="classEntityWithHP_a0316748815da894bf85862d268d67ba0_icgraph" id="classEntityWithHP_a0316748815da894bf85862d268d67ba0_icgraph">
-<area shape="rect" title=" " alt="" coords="333,5,512,32"/>
+<area shape="rect" title="Retourne la vitesse de déplacement de l&#39;entité EntityWithHP." alt="" coords="333,5,512,32"/>
 <area shape="rect" href="gameTxt_8h.html#a8660cc91c8dc47b28c5bf324284499e9" title=" " alt="" coords="227,5,285,32"/>
 <area shape="rect" href="gameTxt_8h.html#a5eeb0d13b5fe5eba2c9d7415842d36d9" title=" " alt="" coords="108,5,179,32"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
@@ -438,6 +566,39 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
+<p>Permet de deplacer l'entité. </p>
+<p>Permet de deplacer l'entité avec une vitesse vx sur l'axe x et une vitesse vy sur l'axe y. </p>
+
+</div>
+</div>
+<a id="a69df0481331828602496977649c0b45d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69df0481331828602496977649c0b45d">&#9670;&nbsp;</a></span>PrintEntityInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EntityWithHP::PrintEntityInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Permet d'imprimer sur la console des informations générales concernant l'entité. </p>
+<p>Imprime sur la console des informations concernant l'entité. </p>
+
+<p>Réimplémentée à partir de <a class="el" href="classEntityWithoutHP.html#acc5ec216f36f84be9931ff9f246ffe93">EntityWithoutHP</a>.</p>
+
 </div>
 </div>
 <a id="a14cefe33b7469d69c5493df26d4e021f"></a>
@@ -455,6 +616,15 @@ Voici le graphe des appelants de cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Permet de modofier les dégats infligés par l'entité <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a>. </p>
+<p>Modifie la quantité de dégats qu'inflige l'entité EntityWithP.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">newDmg</td><td>: entier positif, nouveau nombre de points de vie de l'entité. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -474,6 +644,15 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
+<p>Permets de modifier le nombre de points de vie d'une entité <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a>. </p>
+<p>Permet de remplacer la valeur actuelle de Hp de l'entité en une valeur newHp.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">newHp</td><td>: entier positif, nouveau nombre de points de vie de l'entité. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="abe560d6a4c2c7cc80d228857a7a34785"></a>
@@ -491,6 +670,15 @@ Voici le graphe des appelants de cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Modifie l'état de vie/mort de l'entité. </p>
+<p>Modifie l'état de vie/mort de l'entité.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">newStatus</td><td>: booléen : indique si l'entitté <a class="el" href="classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.">EntityWithHP</a> est en vie ou pas. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -510,6 +698,14 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
+<p>Permets de modifier la vitesse de déplacement de l'entité EntitywithHP. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">newSpeed</td><td>réel positif, nouvelle vitesse de déplacement de l'entité. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a95a2c2671104ca91e328f9d2b5c17a35"></a>
@@ -527,13 +723,21 @@ Voici le graphe des appelants de cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Permet de faire en sorte qu'une entité subisse le nombre "damage" dégats. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">damage</td><td>: entier positif, dégats à infliger. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classEntityWithHP_a95a2c2671104ca91e328f9d2b5c17a35_icgraph.png" border="0" usemap="#classEntityWithHP_a95a2c2671104ca91e328f9d2b5c17a35_icgraph" alt=""/></div>
 <map name="classEntityWithHP_a95a2c2671104ca91e328f9d2b5c17a35_icgraph" id="classEntityWithHP_a95a2c2671104ca91e328f9d2b5c17a35_icgraph">
-<area shape="rect" title=" " alt="" coords="212,5,412,32"/>
-<area shape="rect" href="classEntityWithHP.html#a38e7796f71ca496f1db9e0873493f7d0" title=" " alt="" coords="5,5,164,32"/>
+<area shape="rect" title="Permet de faire en sorte qu&#39;une entité subisse le nombre &quot;damage&quot; dégats." alt="" coords="212,5,412,32"/>
+<area shape="rect" href="classEntityWithHP.html#a38e7796f71ca496f1db9e0873493f7d0" title="Permet d&#39;infliger damage dégats à l&#39;entité target." alt="" coords="5,5,164,32"/>
 </map>
 </div>
 
@@ -545,12 +749,22 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned int EntityWithHP::damage</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Nombre entier de points de vie infligé lors d'un attaque. </p>
 
 </div>
 </div>
@@ -559,12 +773,22 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned int EntityWithHP::hp</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Nombre entier de points de vie de l'entité </p>
 
 </div>
 </div>
@@ -573,12 +797,22 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool EntityWithHP::livingStatus</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Booléen définissant si l'entité est morte ou pas. </p>
 
 </div>
 </div>
@@ -587,12 +821,22 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned int EntityWithHP::maxHealth</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Nombre entier maximal de points de vie de l'entité </p>
 
 </div>
 </div>
@@ -601,12 +845,22 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">float EntityWithHP::speed</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Vitesse de l'entité </p>
 
 </div>
 </div>
