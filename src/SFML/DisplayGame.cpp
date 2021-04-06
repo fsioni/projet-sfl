@@ -14,6 +14,7 @@ DisplayGame::~DisplayGame(){
 }
 
 void DisplayGame::DisplaySFML(sf::RenderWindow  & window) const{
+    /*
     // ================== Affichage SFML  ==================
         sf::Texture tileTexture;
         sf::Sprite tileSprite, playerSprite, shadowSprite, enemySprite;
@@ -219,6 +220,7 @@ void DisplayGame::DisplaySFML(sf::RenderWindow  & window) const{
 
             window.display();
         }
+        */
 }
 
 

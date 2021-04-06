@@ -20,17 +20,25 @@ Map::Map(std::string tmxFile, std::string tsxFile){
     int tileH = tileset->GetTileHeight();
 
     // Ajout de collisionBox tout autour de la Map
-    // pas besoin pour le haut et gauche car les
-    // entité ne peuvent pas avoir de coordonnée < 0
     CollisionBox colBox;
-    int offSet = 10;
+
     // bottom colBox
-    colBox.SetPosition(0, h*tileH - offSet);
+    colBox.SetPosition(0, h*tileH - 10);
+    colBox.SetDimensions(w*tileW, 1);
+    collisionLayer->AddCollisionBox(colBox);
+
+    // top colBox
+    colBox.SetPosition(0, 5);
     colBox.SetDimensions(w*tileW, 1);
     collisionLayer->AddCollisionBox(colBox);
 
     // right colBox
-    colBox.SetPosition(w*tileW - offSet, 0);
+    colBox.SetPosition(w*tileW, 0);
+    colBox.SetDimensions(1, h*tileH);
+    collisionLayer->AddCollisionBox(colBox);
+
+    // left colBox
+    colBox.SetPosition(0, 0);
     colBox.SetDimensions(1, h*tileH);
     collisionLayer->AddCollisionBox(colBox);
 }

@@ -10,8 +10,8 @@ class StateGameSFML : public State
 private:
     std::shared_ptr<Context> context;
 
-    sf::Texture tileTexture, charTextures, shadowTexture, enemyTexture;
-    sf::Sprite tileSprite, charSprite, shadowSprite, enemySprite;
+    sf::Texture tileTexture;
+    sf::Sprite tileSprite, playerSprite, shadowSprite, enemySprite;
 
     // Horloge
     sf::Clock clock;

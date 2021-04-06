@@ -17,20 +17,17 @@ StateGameSFML::~StateGameSFML()
 void StateGameSFML::Init()
 {
     // Chargement de la tileMap
-        tileTexture.loadFromFile(context->map->GetTileset().GetTileMapPath());
-        tileSprite.setTexture(tileTexture);
+    tileTexture.loadFromFile(context->map->GetTileset().GetTileMapPath());
+    tileSprite.setTexture(tileTexture);
 
-        // Chargement des charactères
-        charTextures.loadFromFile("data/textures/characters/Male/Male 01-1.png");
-        charSprite.setTexture(charTextures);
+    // Chargement de la texture du joueur
+    playerSprite.setTexture(context->assetMan->GetPlayerTexture());
 
-        // Chargement des ennemies
-        enemyTexture.loadFromFile("data/textures/characters/Soldier/Soldier 01-1.png");
-        enemySprite.setTexture(enemyTexture);
+    // Chargement de la texture des ennemies
+    enemySprite.setTexture(context->assetMan->GetTextureEnemy()[0]);
 
-        // Chargement de l'ombre
-        shadowTexture.loadFromFile("data/textures/characters/Shadow/Shadow 1.png");
-        shadowSprite.setTexture(shadowTexture);
+    // Chargement de la texture de l'ombre
+    shadowSprite.setTexture(context->assetMan->GetShadowTexture());
 }
 
 void StateGameSFML::ProcessInput()
@@ -91,32 +88,40 @@ void StateGameSFML::ProcessInput()
 void StateGameSFML::Update()
 {
     // Position du joueur
-        playerX = context->player->GetPos_x();
-        playerY = context->player->GetPos_y();
+    playerX = context->player->GetPos_x();
+    playerY = context->player->GetPos_y();
 
     // Info sur la tilemap
-        w = context->map->GetTileset().GetTileWidth();
-        h = context->map->GetTileset().GetTileHeight();
-        nbMapLayer = context->map->GetMapLayers().size();
+    w = context->map->GetTileset().GetTileWidth();
+    h = context->map->GetTileset().GetTileHeight();
+    nbMapLayer = context->map->GetMapLayers().size();
+
+    // Taille de la map
+    int mapWidth = context->map->GetMapLayers()[0].GetWidth();
+    int mapHeight = context->map->GetMapLayers()[0].GetHeight();
     
     // Gestion de camera qui suit le joueur
-        substX = playerX-400;
-        substY = playerY-400;
+    substX = playerX-400;
+    substY = playerY-400;
+
+    // Taille de la fenetre
+    winWidth = (int)context->renderWin->getSize().x;
+    winHeight =(int)context->renderWin->getSize().y;
+
+    
 
     // Gestion des bords de map
-        if(substX<0) substX = 0;
-        winWidth = (int)context->renderWin->getSize().x;
-        winHeight =(int)context->renderWin->getSize().y;
-        if(substX>winWidth) substX = winWidth;
-        if(substY<0) substY = 0;
-        if(substY>winHeight) substY = winHeight;
+    if(substX < 0) substX = 0;
+    if(substX > mapWidth*w - winWidth) substX = mapWidth*w - winWidth;
+    if(substY < 0) substY = 0;
+    if(substY > mapHeight*h - winHeight) substY = mapHeight*h - winHeight;
 
     if(clock.getElapsedTime().asSeconds() > 0.3){
-            if(posX==64) posX=0;
-            else posX +=32;
+        if(posX==64) posX=0;
+        else posX +=32;
             
-            clock.restart();
-        }
+        clock.restart();
+    }
 }
 
 void StateGameSFML::Display()
@@ -132,21 +137,23 @@ void StateGameSFML::Display()
                 if(data!=0){
                     x = ((data-1) % 8)*w;
                     y = ((data-1) / 8)*h;
-
+                    
                     // Ne pas afficher les tiles non-visibles
                     int tileX = i*w - substX;
                     int tileY = j*h - substY;
+                    
                     if(tileX > -w && tileX < winWidth+w && 
                         tileY > -h && tileY < winHeight+h ){
+                        
+                       
 
-                        tileSprite.setPosition(
-                            i*w-substX, j*h-substY
-                        );
+                        tileSprite.setPosition(tileX, tileY);
 
-                        tileSprite.setTextureRect(
-                            sf::IntRect(x, y, w, h)
-                        );
-
+                        tileSprite.setTextureRect(sf::IntRect(x, y, w, h));
+                        /*
+                        tileSprite.setPosition(0, 0);
+                        tileSprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
+                        */
                         context->renderWin->draw(tileSprite);       
                     }
 
@@ -156,22 +163,23 @@ void StateGameSFML::Display()
         }
     }
 
+    // -h/2 et -w/2 pour recentrer l'origine des entités
     // Affichage de l'ombre
-    shadowSprite.setPosition(playerX-substX, playerY-substY +2);
+    shadowSprite.setPosition(playerX-substX - w/2, playerY-substY -h/2 +2);
     shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
     context->renderWin->draw(shadowSprite);
     
 
     // Affichage du joueur
-    charSprite.setPosition(playerX-substX, playerY-substY);
-    charSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
-    context->renderWin->draw(charSprite);
+    playerSprite.setPosition(playerX-substX -w/2, playerY-substY -h/2);
+    playerSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
+    context->renderWin->draw(playerSprite);
 
     // Affichage des ennemies
     for(int i=0; i<(int)context->enemies.size(); i++){
         int enX = context->enemies[i].GetPos_x()-substX;
         int enY = context->enemies[i].GetPos_y()-substY;
-        enemySprite.setPosition(enX, enY);
+        enemySprite.setPosition(enX -w/2, enY -h/2);
         enemySprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
         context->renderWin->draw(enemySprite);
     }
@@ -185,8 +193,8 @@ void StateGameSFML::Display()
 
         sf::RectangleShape pb(sf::Vector2f(context->player->GetWidth() - pOffset*2,
             context->player->GetHeight() -pOffset*2));
-        pb.setPosition(context->player->GetPos_x() + pOffset -substX, 
-            context->player->GetPos_y() + pOffset -substY);
+        pb.setPosition(context->player->GetPos_x() + pOffset -substX -w/2, 
+            context->player->GetPos_y() + pOffset -substY -h/2);
         pb.setFillColor(sf::Color(0, 130, 255, 200));
         context->renderWin->draw(pb);
 
@@ -230,12 +238,24 @@ void StateGameSFML::MoveWithCollision(float vx, float vy)
     std::vector<CollisionBox> cb = context->map->GetCollisionLayer().GetCollisionBoxes();
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
-        //Detection collision
-        if (context->player->GetPos_x() + context->player->GetWidth() - context->player->getOffset() + (vx*context->player->GetSpeed()) >= cb[i].GetX()
-        && cb[i].GetX() + cb[i].GetWidth() >= context->player->GetPos_x() + context->player->getOffset() + (vx*context->player->GetSpeed())
-        && context->player->GetPos_y() + context->player->GetHeight() - context->player->getOffset() + (vy*context->player->GetSpeed()) >= cb[i].GetY()
-        && cb[i].GetY() + cb[i].GetHeight() >= context->player->GetPos_y() + context->player->getOffset() + (vy*context->player->GetSpeed()))
-            iscolliding = true;
+
+        // -w/2 et -h/2 pour centrer l'origine 
+        int posX = context->player->GetPos_x() + 
+                   vx*context->player->GetSpeed() - w/2;
+        int posY = context->player->GetPos_y() + 
+                   vy*context->player->GetSpeed() - h/2;
+
+        int offset = context->player->getOffset();
+        //Detection collision axe X
+        if (posX + context->player->GetWidth() - offset >= cb[i].GetX()
+            && cb[i].GetX() + cb[i].GetWidth() >= posX + offset){
+            //Detection collision axe Y
+            if(posY + context->player->GetHeight() - offset >= cb[i].GetY()
+               && cb[i].GetY() + cb[i].GetHeight() >= posY + offset){
+
+                iscolliding = true;
+            }   
+        }
     }
     if (!iscolliding)
     {
