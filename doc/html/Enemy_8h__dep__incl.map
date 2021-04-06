@@ -1,11 +1,11 @@
 <map id="src/Core/Entity/Enemy.h" name="src/Core/Entity/Enemy.h">
-<area shape="rect" id="node1" title=" " alt="" coords="105,5,281,32"/>
-<area shape="rect" id="node2" href="$Enemy_8cpp.html" title=" " alt="" coords="5,80,196,107"/>
-<area shape="rect" id="node3" href="$Game_8h.html" title=" " alt="" coords="221,80,351,107"/>
-<area shape="rect" id="node4" href="$Game_8cpp.html" title=" " alt="" coords="48,155,193,181"/>
-<area shape="rect" id="node5" href="$gameTxt_8h.html" title=" " alt="" coords="217,155,355,181"/>
-<area shape="rect" id="node8" href="$DisplayGame_8h.html" title=" " alt="" coords="379,155,563,181"/>
-<area shape="rect" id="node6" href="$main_8cpp.html" title=" " alt="" coords="315,229,420,256"/>
-<area shape="rect" id="node7" href="$gameTxt_8cpp.html" title=" " alt="" coords="138,229,290,256"/>
-<area shape="rect" id="node9" href="$DisplayGame_8cpp.html" title=" " alt="" coords="444,229,643,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="142,5,318,32"/>
+<area shape="rect" id="node2" href="$Enemy_8cpp.html" title=" " alt="" coords="43,80,233,107"/>
+<area shape="rect" id="node3" href="$Game_8h.html" title=" " alt="" coords="258,80,389,107"/>
+<area shape="rect" id="node4" href="$Game_8cpp.html" title=" " alt="" coords="5,229,151,256"/>
+<area shape="rect" id="node5" href="$StateGameSFML_8h.html" title=" " alt="" coords="152,155,356,181"/>
+<area shape="rect" id="node7" href="$gameTxt_8h.html" title=" " alt="" coords="432,155,569,181"/>
+<area shape="rect" id="node8" href="$main_8cpp.html" title=" " alt="" coords="419,229,524,256"/>
+<area shape="rect" id="node6" href="$StateGameSFML_8cpp.html" title=" " alt="" coords="175,229,394,256"/>
+<area shape="rect" id="node9" href="$gameTxt_8cpp.html" title=" " alt="" coords="549,229,701,256"/>
 </map>

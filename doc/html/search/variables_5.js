@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['height_445',['height',['../classEntityWithoutHP.html#ac15e6a5827948da39848484c772d7bcd',1,'EntityWithoutHP::height()'],['../classBox.html#a6851eb8f64b4cbe58488f7dcfe04bdb8',1,'Box::height()'],['../classMapLayer.html#a269ac7861c78aa6934ac627d29b4277b',1,'MapLayer::height()']]],
-  ['hp_446',['hp',['../classEntityWithHP.html#ab4b01c7ff1afbf673a9a5ee5d68b8579',1,'EntityWithHP']]]
+  ['id_474',['id',['../classBox.html#aaa58eab76ed5927841ac1e0773f8ca08',1,'Box::id()'],['../classLayer.html#ad8c4d484a5efce0cbbd0cf81b3958d17',1,'Layer::id()']]],
+  ['isdebug_475',['isDebug',['../structContext.html#a2ff03b7f35e62b990bd6a81972c1350b',1,'Context']]]
 ];

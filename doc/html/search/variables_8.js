@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['map_450',['map',['../classGame.html#acef3a39fdf14be2c980b0dc11e7be402',1,'Game']]],
-  ['maplayers_451',['mapLayers',['../classMap.html#a4a1c7371d5ce96ca28ba28553382fb43',1,'Map']]],
-  ['maxhealth_452',['maxHealth',['../classEntityWithHP.html#a143332c2b7c3856f009758b886c9d919',1,'EntityWithHP']]]
+  ['name_480',['name',['../classEntityWithoutHP.html#a10246feff1be3c070dea700e9fac46a3',1,'EntityWithoutHP::name()'],['../classLayer.html#a2071349b5667273725ae7f05a42db7a6',1,'Layer::name()'],['../classSpawnPoint.html#a22b5e2c7fe566095b8e27755a1bd57c7',1,'SpawnPoint::name()'],['../classTileset.html#a18d4be506284b7ab3cf2e2b7e688042a',1,'Tileset::name()']]],
+  ['nbmaplayer_481',['nbMapLayer',['../classStateGameSFML.html#aa0702a645708d454986af982ca16b6b3',1,'StateGameSFML']]]
 ];

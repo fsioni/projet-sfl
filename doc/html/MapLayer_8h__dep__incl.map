@@ -1,13 +1,13 @@
 <map id="src/Core/Map/Layers/MapLayer.h" name="src/Core/Map/Layers/MapLayer.h">
-<area shape="rect" id="node1" title=" " alt="" coords="341,5,495,47"/>
-<area shape="rect" id="node2" href="$Map_8h.html" title=" " alt="" coords="255,102,405,129"/>
-<area shape="rect" id="node11" href="$MapLayer_8cpp.html" title=" " alt="" coords="430,95,585,136"/>
-<area shape="rect" id="node3" href="$Game_8h.html" title=" " alt="" coords="178,184,309,211"/>
-<area shape="rect" id="node10" href="$Map_8cpp.html" title=" " alt="" coords="333,184,500,211"/>
-<area shape="rect" id="node4" href="$Game_8cpp.html" title=" " alt="" coords="5,259,151,285"/>
-<area shape="rect" id="node5" href="$gameTxt_8h.html" title=" " alt="" coords="175,259,312,285"/>
-<area shape="rect" id="node8" href="$DisplayGame_8h.html" title=" " alt="" coords="337,259,521,285"/>
-<area shape="rect" id="node6" href="$main_8cpp.html" title=" " alt="" coords="272,333,377,360"/>
-<area shape="rect" id="node7" href="$gameTxt_8cpp.html" title=" " alt="" coords="95,333,247,360"/>
-<area shape="rect" id="node9" href="$DisplayGame_8cpp.html" title=" " alt="" coords="401,333,600,360"/>
+<area shape="rect" id="node1" title=" " alt="" coords="421,5,575,47"/>
+<area shape="rect" id="node2" href="$Map_8h.html" title=" " alt="" coords="335,102,485,129"/>
+<area shape="rect" id="node11" href="$MapLayer_8cpp.html" title=" " alt="" coords="510,95,665,136"/>
+<area shape="rect" id="node3" href="$Game_8h.html" title=" " alt="" coords="258,184,389,211"/>
+<area shape="rect" id="node10" href="$Map_8cpp.html" title=" " alt="" coords="413,184,580,211"/>
+<area shape="rect" id="node4" href="$Game_8cpp.html" title=" " alt="" coords="5,333,151,360"/>
+<area shape="rect" id="node5" href="$StateGameSFML_8h.html" title=" " alt="" coords="152,259,356,285"/>
+<area shape="rect" id="node7" href="$gameTxt_8h.html" title=" " alt="" coords="432,259,569,285"/>
+<area shape="rect" id="node8" href="$main_8cpp.html" title=" " alt="" coords="419,333,524,360"/>
+<area shape="rect" id="node6" href="$StateGameSFML_8cpp.html" title=" " alt="" coords="175,333,394,360"/>
+<area shape="rect" id="node9" href="$gameTxt_8cpp.html" title=" " alt="" coords="549,333,701,360"/>
 </map>

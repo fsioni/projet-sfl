@@ -5,7 +5,7 @@ var hierarchy =
       [ "CollisionBox", "classCollisionBox.html", null ],
       [ "SpawnPoint", "classSpawnPoint.html", null ]
     ] ],
-    [ "DisplayGame", "classDisplayGame.html", null ],
+    [ "Context", "structContext.html", null ],
     [ "EntityWithoutHP", "classEntityWithoutHP.html", [
       [ "EntityWithHP", "classEntityWithHP.html", [
         [ "Enemy", "classEnemy.html", null ],
@@ -19,7 +19,9 @@ var hierarchy =
       [ "SpawnsLayer", "classSpawnsLayer.html", null ]
     ] ],
     [ "Map", "classMap.html", null ],
-    [ "State", "classState.html", null ],
+    [ "State", "classState.html", [
+      [ "StateGameSFML", "classStateGameSFML.html", null ]
+    ] ],
     [ "StateManager", "classStateManager.html", null ],
     [ "Tileset", "classTileset.html", null ],
     [ "WinTXT", "classWinTXT.html", null ]

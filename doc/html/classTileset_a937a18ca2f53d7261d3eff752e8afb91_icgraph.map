@@ -1,6 +1,5 @@
 <map id="Tileset::GetTileMapPath" name="Tileset::GetTileMapPath">
-<area shape="rect" id="node1" title="Retourne tileMapPath." alt="" coords="359,31,536,57"/>
-<area shape="rect" id="node2" href="$classDisplayGame.html#ab3b126865a8753817993063f7f1c2a3f" title=" " alt="" coords="108,5,311,32"/>
-<area shape="rect" id="node4" href="$classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9" title="Fonction de test de la classe Tileset." alt="" coords="159,56,259,83"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node1" title="Retourne tileMapPath." alt="" coords="256,5,433,32"/>
+<area shape="rect" id="node2" href="$classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9" title="Fonction de test de la classe Tileset." alt="" coords="108,5,208,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
 </map>

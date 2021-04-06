@@ -2,9 +2,13 @@ var classStateManager =
 [
     [ "StateManager", "classStateManager.html#a3e2be96d935eb56813b096a885d58587", null ],
     [ "~StateManager", "classStateManager.html#a05a43504a033f1befad5c5118249ec6f", null ],
-    [ "ChangeState", "classStateManager.html#a979be39d4450f8c916ae5bef541c02d2", null ],
-    [ "Clear", "classStateManager.html#a07c11985d7cc1d518725d50a7c0ddf28", null ],
-    [ "PopState", "classStateManager.html#a01cd6f5dafc0add0633b0be231cce665", null ],
-    [ "PushState", "classStateManager.html#ad9ffd8f6009468363bc82db4f7ed4294", null ],
-    [ "sStates", "classStateManager.html#a15ebedc829436d326e1f00a3b0f057df", null ]
+    [ "Add", "classStateManager.html#a500718340627bb0c4ac3a28b23dc3fcd", null ],
+    [ "GetCurrent", "classStateManager.html#afafbb0471dab93222bee37b6be6d2d0d", null ],
+    [ "PopCurrent", "classStateManager.html#a1738b442d5a7e3a38ff06bace098f157", null ],
+    [ "ProcessStateChange", "classStateManager.html#a5dd6d7a9b1262c22bb860820716745c4", null ],
+    [ "add", "classStateManager.html#a6960665b6b872d158f6286656876a799", null ],
+    [ "remove", "classStateManager.html#a1a3387efb8b70dbb46d55b4459407eba", null ],
+    [ "replace", "classStateManager.html#ae75d92b664a69e724568f9cbd1615b3a", null ],
+    [ "sNewState", "classStateManager.html#a3638556d408204bf6b9386c40ddd771e", null ],
+    [ "sStates", "classStateManager.html#abc8b2d54658982fb970a9fd006b77ebf", null ]
 ];

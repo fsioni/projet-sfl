@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Legends of Nautibus:  Fichier source de src/SFML/StateGameSFML.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Legends of Nautibus
+   </div>
+   <div id="projectbrief">2D Game, Explore the world and fight with your ennemies</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('StateGameSFML_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">StateGameSFML.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="StateGameSFML_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __STATEGAMESFML_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __STATEGAMESFML_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../Core/Game.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../Core/StateManager/State.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classStateGameSFML.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStateGameSFML.html">StateGameSFML</a> : <span class="keyword">public</span> <a class="code" href="classState.html">State</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classStateGameSFML.html#a563ef5f25f63ea6a2df16b4321a61e73">   11</a></span>&#160;    std::shared_ptr&lt;Context&gt; <a class="code" href="classStateGameSFML.html#a563ef5f25f63ea6a2df16b4321a61e73">context</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classStateGameSFML.html#a1a809c09d955c8bfca50d1358cb96a10">   13</a></span>&#160;    sf::Texture <a class="code" href="classStateGameSFML.html#a1a809c09d955c8bfca50d1358cb96a10">tileTexture</a>, <a class="code" href="classStateGameSFML.html#aa996c5953168d7d118d569994708e2b9">charTextures</a>, <a class="code" href="classStateGameSFML.html#a52d94554f79ca3b59f20cffa0d0b0973">shadowTexture</a>, <a class="code" href="classStateGameSFML.html#a84d90594aa1702af71742798afaf8fa9">enemyTexture</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classStateGameSFML.html#afdcbd11b260a353410bfbb951fe48e08">   14</a></span>&#160;    sf::Sprite <a class="code" href="classStateGameSFML.html#afdcbd11b260a353410bfbb951fe48e08">tileSprite</a>, <a class="code" href="classStateGameSFML.html#aaf22a2ab6cbb6c5c620fa3bc16b67207">charSprite</a>, <a class="code" href="classStateGameSFML.html#a96d3fb072ec1a9ec9e1fe4a264db35ce">shadowSprite</a>, <a class="code" href="classStateGameSFML.html#a1d1e8e5c8bca9ff4e25577b40ed0ea2f">enemySprite</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">// Horloge</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classStateGameSFML.html#ac904e00cc332126dbf3d23a382d65a52">   17</a></span>&#160;    sf::Clock <a class="code" href="classStateGameSFML.html#ac904e00cc332126dbf3d23a382d65a52">clock</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classStateGameSFML.html#a81e6c121c0b9030196825a63fac38eb3">   18</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classStateGameSFML.html#a81e6c121c0b9030196825a63fac38eb3">posX</a> = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// Direction du joueur </span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// 0 : bas</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// 1 : gauche</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// 2 : droite </span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// 3 : haut</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classStateGameSFML.html#a6d07895f31e6f3a1d2053700cc670103">   25</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classStateGameSFML.html#a6d07895f31e6f3a1d2053700cc670103">direction</a> = 2;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// Position du joueur</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classStateGameSFML.html#a733b528636a6d8185718890e32898794">   28</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classStateGameSFML.html#ab130b0964f2ee8243691aa7f7a9868d2">playerX</a>, <a class="code" href="classStateGameSFML.html#a733b528636a6d8185718890e32898794">playerY</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// Info sur la tilemap</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classStateGameSFML.html#a92bd7c32ad6ffe87087826049d2e8185">   30</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classStateGameSFML.html#a2575dbd63a006583ca61777165ac098a">w</a>, <a class="code" href="classStateGameSFML.html#a47261667f88159849c3ccb7e36a1ecb6">h</a>, <a class="code" href="classStateGameSFML.html#aa0702a645708d454986af982ca16b6b3">nbMapLayer</a>, <a class="code" href="classStateGameSFML.html#aa442c147ff5168fd94d121815f7b7907">x</a>, <a class="code" href="classStateGameSFML.html#a92bd7c32ad6ffe87087826049d2e8185">y</a>, <a class="code" href="classStateGameSFML.html#ad1e67b6f2cc974cab8ef51518cdc726b">data</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// Gestion de camera qui suit le joueur</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classStateGameSFML.html#af1ab46f790133eaee742ede834519797">   33</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classStateGameSFML.html#aa287b6671b32bd707bae39805b5dfb7c">substX</a>, <a class="code" href="classStateGameSFML.html#af1ab46f790133eaee742ede834519797">substY</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//Taille de la fenêtre</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classStateGameSFML.html#ae9e4b12b2a1bf539f6ef776baf6a5f36">   36</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classStateGameSFML.html#ae9e4b12b2a1bf539f6ef776baf6a5f36">winWidth</a>, <a class="code" href="classStateGameSFML.html#aa13076059243f2048f702a5a44d717d4">winHeight</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classStateGameSFML.html#a5071544b65d80f9ecc2201bffa8057cf">StateGameSFML</a>(<span class="comment">/* args */</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classStateGameSFML.html#a5071544b65d80f9ecc2201bffa8057cf">StateGameSFML</a>(std::shared_ptr&lt;Context&gt; &amp;<a class="code" href="classStateGameSFML.html#a563ef5f25f63ea6a2df16b4321a61e73">context</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classStateGameSFML.html#af3bd1d1f61f2217fc94c2425b0f9b325">~StateGameSFML</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStateGameSFML.html#a23f1e10132bed64d1e6c0bb36894d41c">Init</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStateGameSFML.html#a69502c694d866bce70c460e42f6b2d66">ProcessInput</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2">Update</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a">Display</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStateGameSFML.html#a2fcbe81293cbf704722897e92760ea95">Pause</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStateGameSFML.html#ade470ee70456341d9487d277fa01ca64">Start</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classStateGameSFML.html#aa7664f05c9e2da4f359096b158a870bc">MoveWithCollision</a>(<span class="keywordtype">float</span> vx, <span class="keywordtype">float</span> vy);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif // __STATEGAMESFML_H__</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassState_html"><div class="ttname"><a href="classState.html">State</a></div><div class="ttdoc">Classe représentant un état de l'application.</div><div class="ttdef"><b>Definition:</b> State.h:11</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_aa996c5953168d7d118d569994708e2b9"><div class="ttname"><a href="classStateGameSFML.html#aa996c5953168d7d118d569994708e2b9">StateGameSFML::charTextures</a></div><div class="ttdeci">sf::Texture charTextures</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:13</div></div>
+<div class="ttc" id="aclassStateGameSFML_html"><div class="ttname"><a href="classStateGameSFML.html">StateGameSFML</a></div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:8</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a69502c694d866bce70c460e42f6b2d66"><div class="ttname"><a href="classStateGameSFML.html#a69502c694d866bce70c460e42f6b2d66">StateGameSFML::ProcessInput</a></div><div class="ttdeci">void ProcessInput()</div><div class="ttdoc">Fonction de gestion des touches du State.</div><div class="ttdef"><b>Definition:</b> StateGameSFML.cpp:36</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a52d94554f79ca3b59f20cffa0d0b0973"><div class="ttname"><a href="classStateGameSFML.html#a52d94554f79ca3b59f20cffa0d0b0973">StateGameSFML::shadowTexture</a></div><div class="ttdeci">sf::Texture shadowTexture</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:13</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a6d07895f31e6f3a1d2053700cc670103"><div class="ttname"><a href="classStateGameSFML.html#a6d07895f31e6f3a1d2053700cc670103">StateGameSFML::direction</a></div><div class="ttdeci">int direction</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:25</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_aa7664f05c9e2da4f359096b158a870bc"><div class="ttname"><a href="classStateGameSFML.html#aa7664f05c9e2da4f359096b158a870bc">StateGameSFML::MoveWithCollision</a></div><div class="ttdeci">void MoveWithCollision(float vx, float vy)</div><div class="ttdef"><b>Definition:</b> StateGameSFML.cpp:223</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_ad1e67b6f2cc974cab8ef51518cdc726b"><div class="ttname"><a href="classStateGameSFML.html#ad1e67b6f2cc974cab8ef51518cdc726b">StateGameSFML::data</a></div><div class="ttdeci">int data</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:30</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_ade470ee70456341d9487d277fa01ca64"><div class="ttname"><a href="classStateGameSFML.html#ade470ee70456341d9487d277fa01ca64">StateGameSFML::Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">Fonction de remise en marche du State.</div><div class="ttdef"><b>Definition:</b> StateGameSFML.cpp:216</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_af1ab46f790133eaee742ede834519797"><div class="ttname"><a href="classStateGameSFML.html#af1ab46f790133eaee742ede834519797">StateGameSFML::substY</a></div><div class="ttdeci">int substY</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:33</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_aa0702a645708d454986af982ca16b6b3"><div class="ttname"><a href="classStateGameSFML.html#aa0702a645708d454986af982ca16b6b3">StateGameSFML::nbMapLayer</a></div><div class="ttdeci">int nbMapLayer</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:30</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_ae9e4b12b2a1bf539f6ef776baf6a5f36"><div class="ttname"><a href="classStateGameSFML.html#ae9e4b12b2a1bf539f6ef776baf6a5f36">StateGameSFML::winWidth</a></div><div class="ttdeci">int winWidth</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:36</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a47261667f88159849c3ccb7e36a1ecb6"><div class="ttname"><a href="classStateGameSFML.html#a47261667f88159849c3ccb7e36a1ecb6">StateGameSFML::h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:30</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_af3bd1d1f61f2217fc94c2425b0f9b325"><div class="ttname"><a href="classStateGameSFML.html#af3bd1d1f61f2217fc94c2425b0f9b325">StateGameSFML::~StateGameSFML</a></div><div class="ttdeci">~StateGameSFML()</div><div class="ttdef"><b>Definition:</b> StateGameSFML.cpp:13</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a23f1e10132bed64d1e6c0bb36894d41c"><div class="ttname"><a href="classStateGameSFML.html#a23f1e10132bed64d1e6c0bb36894d41c">StateGameSFML::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">Fonction d'initialisation du State.</div><div class="ttdef"><b>Definition:</b> StateGameSFML.cpp:17</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_aa442c147ff5168fd94d121815f7b7907"><div class="ttname"><a href="classStateGameSFML.html#aa442c147ff5168fd94d121815f7b7907">StateGameSFML::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:30</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_aa287b6671b32bd707bae39805b5dfb7c"><div class="ttname"><a href="classStateGameSFML.html#aa287b6671b32bd707bae39805b5dfb7c">StateGameSFML::substX</a></div><div class="ttdeci">int substX</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:33</div></div>
+<div class="ttc" id="aclassMapLayer_html"><div class="ttname"><a href="classMapLayer.html">MapLayer</a></div><div class="ttdoc">Classe représentant une couche de tuiles.</div><div class="ttdef"><b>Definition:</b> MapLayer.h:15</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_afdcbd11b260a353410bfbb951fe48e08"><div class="ttname"><a href="classStateGameSFML.html#afdcbd11b260a353410bfbb951fe48e08">StateGameSFML::tileSprite</a></div><div class="ttdeci">sf::Sprite tileSprite</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:14</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a1a809c09d955c8bfca50d1358cb96a10"><div class="ttname"><a href="classStateGameSFML.html#a1a809c09d955c8bfca50d1358cb96a10">StateGameSFML::tileTexture</a></div><div class="ttdeci">sf::Texture tileTexture</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:13</div></div>
+<div class="ttc" id="aStateGameSFML_8h_html"><div class="ttname"><a href="StateGameSFML_8h.html">StateGameSFML.h</a></div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a4b3d8bb0ea49142cc712a59db6da566a"><div class="ttname"><a href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a">StateGameSFML::Display</a></div><div class="ttdeci">void Display()</div><div class="ttdoc">Fonction d'affichage du State.</div><div class="ttdef"><b>Definition:</b> StateGameSFML.cpp:122</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a84d90594aa1702af71742798afaf8fa9"><div class="ttname"><a href="classStateGameSFML.html#a84d90594aa1702af71742798afaf8fa9">StateGameSFML::enemyTexture</a></div><div class="ttdeci">sf::Texture enemyTexture</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:13</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a92bd7c32ad6ffe87087826049d2e8185"><div class="ttname"><a href="classStateGameSFML.html#a92bd7c32ad6ffe87087826049d2e8185">StateGameSFML::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:30</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a1d1e8e5c8bca9ff4e25577b40ed0ea2f"><div class="ttname"><a href="classStateGameSFML.html#a1d1e8e5c8bca9ff4e25577b40ed0ea2f">StateGameSFML::enemySprite</a></div><div class="ttdeci">sf::Sprite enemySprite</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:14</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a2fcbe81293cbf704722897e92760ea95"><div class="ttname"><a href="classStateGameSFML.html#a2fcbe81293cbf704722897e92760ea95">StateGameSFML::Pause</a></div><div class="ttdeci">void Pause()</div><div class="ttdoc">Fonction de mise en pause du State.</div><div class="ttdef"><b>Definition:</b> StateGameSFML.cpp:211</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_aaf22a2ab6cbb6c5c620fa3bc16b67207"><div class="ttname"><a href="classStateGameSFML.html#aaf22a2ab6cbb6c5c620fa3bc16b67207">StateGameSFML::charSprite</a></div><div class="ttdeci">sf::Sprite charSprite</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:14</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a733b528636a6d8185718890e32898794"><div class="ttname"><a href="classStateGameSFML.html#a733b528636a6d8185718890e32898794">StateGameSFML::playerY</a></div><div class="ttdeci">int playerY</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:28</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a81e6c121c0b9030196825a63fac38eb3"><div class="ttname"><a href="classStateGameSFML.html#a81e6c121c0b9030196825a63fac38eb3">StateGameSFML::posX</a></div><div class="ttdeci">int posX</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:18</div></div>
+<div class="ttc" id="aclassMapLayer_html_a9710e1d180cac781c1a407251ef763a9"><div class="ttname"><a href="classMapLayer.html#a9710e1d180cac781c1a407251ef763a9">MapLayer::GetData</a></div><div class="ttdeci">int GetData(int x, int y) const</div><div class="ttdef"><b>Definition:</b> MapLayer.cpp:82</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_ab130b0964f2ee8243691aa7f7a9868d2"><div class="ttname"><a href="classStateGameSFML.html#ab130b0964f2ee8243691aa7f7a9868d2">StateGameSFML::playerX</a></div><div class="ttdeci">int playerX</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:28</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a5071544b65d80f9ecc2201bffa8057cf"><div class="ttname"><a href="classStateGameSFML.html#a5071544b65d80f9ecc2201bffa8057cf">StateGameSFML::StateGameSFML</a></div><div class="ttdeci">StateGameSFML()</div><div class="ttdef"><b>Definition:</b> StateGameSFML.cpp:4</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_aee4825df0279125785ce4cb6dea1cdf2"><div class="ttname"><a href="classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2">StateGameSFML::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Fonction de mise à jour du State.</div><div class="ttdef"><b>Definition:</b> StateGameSFML.cpp:91</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_aa13076059243f2048f702a5a44d717d4"><div class="ttname"><a href="classStateGameSFML.html#aa13076059243f2048f702a5a44d717d4">StateGameSFML::winHeight</a></div><div class="ttdeci">int winHeight</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:36</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a96d3fb072ec1a9ec9e1fe4a264db35ce"><div class="ttname"><a href="classStateGameSFML.html#a96d3fb072ec1a9ec9e1fe4a264db35ce">StateGameSFML::shadowSprite</a></div><div class="ttdeci">sf::Sprite shadowSprite</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:14</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a2575dbd63a006583ca61777165ac098a"><div class="ttname"><a href="classStateGameSFML.html#a2575dbd63a006583ca61777165ac098a">StateGameSFML::w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:30</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_ac904e00cc332126dbf3d23a382d65a52"><div class="ttname"><a href="classStateGameSFML.html#ac904e00cc332126dbf3d23a382d65a52">StateGameSFML::clock</a></div><div class="ttdeci">sf::Clock clock</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:17</div></div>
+<div class="ttc" id="aclassStateGameSFML_html_a563ef5f25f63ea6a2df16b4321a61e73"><div class="ttname"><a href="classStateGameSFML.html#a563ef5f25f63ea6a2df16b4321a61e73">StateGameSFML::context</a></div><div class="ttdeci">std::shared_ptr&lt; Context &gt; context</div><div class="ttdef"><b>Definition:</b> StateGameSFML.h:11</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_df763860f9a7635c92b0132615e20a87.html">SFML</a></li><li class="navelem"><a class="el" href="StateGameSFML_8h.html">StateGameSFML.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>
