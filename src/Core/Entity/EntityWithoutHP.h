@@ -6,15 +6,16 @@
 
 using namespace std;
 
-
 /*! \class EntityWithoutHP
 *   \brief Classe représentant une entité immobile et immortel.
 *
 *   La classe représente une entité avec une position et un nom.
 *
 */
+
 class EntityWithoutHP
 {
+
 protected :
     /*// ==== Données membres protégées === //*/
 
@@ -24,10 +25,17 @@ protected :
     /*! \brief Position sur l'axe des y de l'entité (vertical). */
     float y;
 
+    float width;
+
+    float height;
+
+    int offset; // For collision detection
+
     /*! \brief Nom de l'entité */
     string name;
 
 public:
+
     /*// ==== Fonctions membres publiques === //*/
 
     /*! \brief Constructeur par défaut.
@@ -36,6 +44,7 @@ public:
     *   Créer une entité EntityWithoutHP avec une position x 0.0, une position y 0.0, un nom "Unknown" (entité vide).
     *
     */
+
     EntityWithoutHP();
 
 
@@ -47,6 +56,7 @@ public:
     *   Créer une EntityWithoutHP (x, y, name)
     *
     */
+
     EntityWithoutHP(float x, float y, string name);
 
 
@@ -55,7 +65,8 @@ public:
     *  Destructeur de la classe EntityWithoutHP.
     *
     */
-    ~EntityWithoutHP();
+
+    virtual ~EntityWithoutHP();
 
 
     /*! \brief Retourne la position sur l'axe des x de l'entité (horizontale).
@@ -64,6 +75,7 @@ public:
     *
     *
     */
+
     float GetPos_x() const;
 
 
@@ -73,6 +85,7 @@ public:
     *   \param [in] newX: réel positif, nouvelle position sur l'axe des x de l'entité.
     *
     */
+
     void SetPos_x(float newX);
 
 
@@ -82,6 +95,7 @@ public:
     *
     *
     */
+
     float GetPos_y() const;
 
 
@@ -91,6 +105,7 @@ public:
     *   \param [in] newY: réel positif, nouvelle position sur l'axe des y de l'entité.
     *
     */
+
     void SetPos_y(float newY);
 
     /*! \brief Retourne le nom de l'entité.
@@ -99,6 +114,7 @@ public:
     *
     *
     */
+
     string GetName() const;
 
     /*! \brief Permets de modifier le nom de l'entité.
@@ -107,7 +123,9 @@ public:
     *   \param [in] newName: chaine de caractères, nouveau nom de l'entité.
     *
     */
+
     void SetName(string newName);
+
 
 
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.
@@ -116,7 +134,21 @@ public:
     *
     *
     */
+
     virtual void PrintEntityInfo();
+
+
+    int GetWidth() const;
+
+    void SetWidth(int newW);
+
+    int GetHeight() const;
+
+    void SetHeight(int newH);
+
+    int getOffset();
+
+    void setOffset(int newO);
 
 };
 

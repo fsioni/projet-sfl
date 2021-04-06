@@ -24,6 +24,23 @@ MapLayer::MapLayer(const MapLayer & layer){
     data = layer.data;
 }
 
+MapLayer::MapLayer(std::string rawData){
+    // std::stoi(std::string) => int
+    
+    id = std::stoi(getAttributeValue(rawData, "id"));
+    height = std::stoi(getAttributeValue(rawData, "height"));
+    width = std::stoi(getAttributeValue(rawData, "width"));
+    name = getAttributeValue(rawData, "name");
+
+    // On recupère les données entre <data> et </data>
+    std::string strData = getDataTag(rawData, "data", 0);
+
+    // Appel de la fonction du module tmxParsing pour transformer
+    // une string sous format CSV (Comma separated values) en un
+    // tableau dynamique d'entier.
+    data = csvToInt(strData);
+}
+
 MapLayer& MapLayer::operator=(const MapLayer & layer){
     if(&layer != this){
         id = layer.id;
@@ -70,35 +87,6 @@ std::vector<int> MapLayer::GetVectData() const{
 }
 
 
-
-void MapLayer::rawDataToLayer(std::string rawData){
-    // std::stoi(std::string) => int
-    
-    id = std::stoi(getAttributeValue(rawData, "id"));
-    height = std::stoi(getAttributeValue(rawData, "height"));
-    width = std::stoi(getAttributeValue(rawData, "width"));
-    name = getAttributeValue(rawData, "name");
-
-    // On recupère les données entre <data> et </data>
-    std::string strData = getDataTag(rawData, "data", 0);
-
-    // Appel de la fonction du module tmxParsing pour transformer
-    // une string sous format CSV (Comma separated values) en un
-    // tableau dynamique d'entier.
-    data = csvToInt(strData);
-}
-
-void MapLayer::Display() const{
-    std::cout << "Name : " << name << std::endl;
-    std::cout << "Id : " << id << std::endl;
-    std::cout << "Height : " << height << std::endl;
-    std::cout << "Width : " << width << std::endl;
-
-    std::cout << "Affichage de la première ligne de données :" << std::endl;
-    for(int i =0; i<width; i++) std::cout << data[i];
-    
-    std::cout << std::endl << std::endl;
-}
 
 void MapLayer::Test() const{
     

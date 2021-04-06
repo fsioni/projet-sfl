@@ -26,7 +26,7 @@ void CollisionLayer::AddCollisionBox(const CollisionBox& newColBox){
     collisionBoxes.push_back(newColBox);
 }
 
-void CollisionLayer::Display() const{
+void CollisionLayer::DisplayTXT() const{
     for(int i = 0; i<collisionBoxes.size(); i++){
         std::cout << "Id : " << collisionBoxes[i].GetId() << std::endl;
         std::cout << "X : " << collisionBoxes[i].GetX() << std::endl;

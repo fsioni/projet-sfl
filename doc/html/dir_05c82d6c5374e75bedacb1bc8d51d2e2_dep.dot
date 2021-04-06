@@ -1,0 +1,10 @@
+digraph "src/Core/Map/Layers" {
+  bgcolor=transparent;
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_38d5e71d7d94264356c8b2e5ffa968dc {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Map" fontname="Helvetica", fontsize="10", URL="dir_38d5e71d7d94264356c8b2e5ffa968dc.html"]
+  dir_05c82d6c5374e75bedacb1bc8d51d2e2 [shape=box, label="Layers", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_05c82d6c5374e75bedacb1bc8d51d2e2.html"];
+  }
+}

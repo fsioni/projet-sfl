@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Legends of Nautibus:  Fichier source de src/SFML/DisplayGame.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Legends of Nautibus
+   </div>
+   <div id="projectbrief">2D Game, Explore the world and fight with your ennemies</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('DisplayGame_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">DisplayGame.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="DisplayGame_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __DISPLAY_GAME_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __DISPLAY_GAME_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../Core/Game.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="AssetManager_8h.html">AssetManager.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classDisplayGame.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDisplayGame.html">DisplayGame</a>{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classDisplayGame.html#aa357ad09da6395bd5a2d557809d39a20">    8</a></span>&#160;    <a class="code" href="classGame.html">Game</a> * <a class="code" href="classDisplayGame.html#aa357ad09da6395bd5a2d557809d39a20">game</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classDisplayGame.html#a3850d0958ec3015aefe82c5542ea5688">    9</a></span>&#160;    <a class="code" href="classAssetManager.html">AssetManager</a> * <a class="code" href="classDisplayGame.html#a3850d0958ec3015aefe82c5542ea5688">assets</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classDisplayGame.html#a40b286a1a5ec159ad9cb131b6ce253d0">DisplayGame</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classDisplayGame.html#a117f935d2b01013162a88edb31ad7efd">~DisplayGame</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDisplayGame.html#ab3b126865a8753817993063f7f1c2a3f">DisplaySFML</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aAssetManager_8h_html"><div class="ttname"><a href="AssetManager_8h.html">AssetManager.h</a></div></div>
+<div class="ttc" id="aclassAssetManager_html"><div class="ttname"><a href="classAssetManager.html">AssetManager</a></div><div class="ttdef"><b>Definition:</b> AssetManager.h:9</div></div>
+<div class="ttc" id="aclassDisplayGame_html"><div class="ttname"><a href="classDisplayGame.html">DisplayGame</a></div><div class="ttdef"><b>Definition:</b> DisplayGame.h:7</div></div>
+<div class="ttc" id="aclassDisplayGame_html_a117f935d2b01013162a88edb31ad7efd"><div class="ttname"><a href="classDisplayGame.html#a117f935d2b01013162a88edb31ad7efd">DisplayGame::~DisplayGame</a></div><div class="ttdeci">~DisplayGame()</div><div class="ttdef"><b>Definition:</b> DisplayGame.cpp:9</div></div>
+<div class="ttc" id="aclassDisplayGame_html_a3850d0958ec3015aefe82c5542ea5688"><div class="ttname"><a href="classDisplayGame.html#a3850d0958ec3015aefe82c5542ea5688">DisplayGame::assets</a></div><div class="ttdeci">AssetManager * assets</div><div class="ttdef"><b>Definition:</b> DisplayGame.h:9</div></div>
+<div class="ttc" id="aclassDisplayGame_html_a40b286a1a5ec159ad9cb131b6ce253d0"><div class="ttname"><a href="classDisplayGame.html#a40b286a1a5ec159ad9cb131b6ce253d0">DisplayGame::DisplayGame</a></div><div class="ttdeci">DisplayGame()</div><div class="ttdef"><b>Definition:</b> DisplayGame.cpp:4</div></div>
+<div class="ttc" id="aclassDisplayGame_html_aa357ad09da6395bd5a2d557809d39a20"><div class="ttname"><a href="classDisplayGame.html#aa357ad09da6395bd5a2d557809d39a20">DisplayGame::game</a></div><div class="ttdeci">Game * game</div><div class="ttdef"><b>Definition:</b> DisplayGame.h:8</div></div>
+<div class="ttc" id="aclassDisplayGame_html_ab3b126865a8753817993063f7f1c2a3f"><div class="ttname"><a href="classDisplayGame.html#ab3b126865a8753817993063f7f1c2a3f">DisplayGame::DisplaySFML</a></div><div class="ttdeci">void DisplaySFML() const</div><div class="ttdef"><b>Definition:</b> DisplayGame.cpp:16</div></div>
+<div class="ttc" id="aclassGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdef"><b>Definition:</b> Game.h:13</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_df763860f9a7635c92b0132615e20a87.html">SFML</a></li><li class="navelem"><a class="el" href="DisplayGame_8h.html">DisplayGame.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -2,16 +2,34 @@
 #include <stdio.h>
 #include <assert.h>
 
+#include <iostream>
+
 Game::Game(/* args */)
 {
     std::string tmxFile = "data/maps/tilemaps/mainTilemap.tmx";
     std::string tsxFile = "data/maps/tilesets/mainTileSet.tsx";
     map = new Map(tmxFile, tsxFile);
     
+    // Initialisation du joueur
     int x = map->GetSpawnsLayer().getPlayerSpawn().GetX();
     int y = map->GetSpawnsLayer().getPlayerSpawn().GetY();
 
-    player = Player(x, y, "Player", 10, 10, 1, 10);
+    player = Player(x, y, "Player", 10, 10, 4, 10);
+
+    // Initialisation des ennemies
+    int count = map->GetSpawnsLayer().getEnemySpawns().size();
+
+    for(int i = 0; i<count; i++){
+        x = map->GetSpawnsLayer().getEnemySpawns()[i].GetX();
+        y = map->GetSpawnsLayer().getEnemySpawns()[i].GetY();
+
+        Enemy tmpEnemy(x, y, "Enemy", 10, 3, 5, 100);
+
+        enemies.push_back(tmpEnemy);
+    }
+
+
+    isDebug = false;
 }
 
 
@@ -58,9 +76,13 @@ void Game::KeyboardPressed(const char key)
     }
 }
 
-EntityWithHP Game::GetPlayerConst() const
+Player Game::GetPlayerConst() const
 {
     return player;
+}
+
+std::vector<Enemy> Game::GetEnemiesConst() const{
+    return enemies;
 }
 
 Map& Game::GetMapConst() const
@@ -70,18 +92,35 @@ Map& Game::GetMapConst() const
 
 void Game::MoveWithCollision(EntityWithHP &entity, float vx, float vy) 
 {
+    if (vx == 0 && vy == 0)
+    {
+        return;
+    }
     bool iscolliding = false;
     std::vector<CollisionBox> cb = map->GetCollisionLayer().GetCollisionBoxes();
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
-        if (entity.GetPos_x() + vx >= cb[i].GetX() && cb[i].GetX() >= entity.GetPos_x() + vx &&
-            entity.GetPos_y() + vy >= cb[i].GetY() && cb[i].GetY() >= entity.GetPos_y() + vy)
+        //Detection collision
+        if (entity.GetPos_x() + entity.GetWidth() - entity.getOffset() + (vx*entity.GetSpeed()) >= cb[i].GetX()
+        && cb[i].GetX() + cb[i].GetWidth() >= entity.GetPos_x() + entity.getOffset() + (vx*entity.GetSpeed())
+        && entity.GetPos_y() + entity.GetHeight() - entity.getOffset() + (vy*entity.GetSpeed()) >= cb[i].GetY()
+        && cb[i].GetY() + cb[i].GetHeight() >= entity.GetPos_y() + entity.getOffset() + (vy*entity.GetSpeed()))
             iscolliding = true;
     }
     if (!iscolliding)
     {
         entity.Move(vx, vy);
     }
+}
+
+void Game::ChangeDebug() 
+{
+    isDebug = !isDebug;
+}
+
+int Game::GetDebug() 
+{
+    return isDebug;
 }
 
 void Game::Test() 

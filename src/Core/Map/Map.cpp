@@ -57,12 +57,12 @@ void Map::TmxLoadLayers(std::string fileName){
 
     // MapLayers
     std::string strLayer;
-    MapLayer tmp;
+    
     int nbLayer = countTag(strFile, "layer");
 
     for(int i=0; i<nbLayer; i++){
         strLayer = getFullTag(strFile, "layer", i);
-        tmp.rawDataToLayer(strLayer);
+        MapLayer tmp(strLayer);
         AddMapLayer(tmp);
     }
 
@@ -77,7 +77,7 @@ void Map::TmxLoadLayers(std::string fileName){
         name = getAttributeValue(tmpObjectGroup, "name");
         
         if(name == "Collision") indCollision = i;
-        if(name == "EnnemySpawn") indSpawnEnnemy = i;
+        if(name == "EnemySpawn") indSpawnEnnemy = i;
         if(name == "PlayerSpawn") indSpawnPlayer = i;
     }
 
@@ -91,24 +91,9 @@ void Map::TmxLoadLayers(std::string fileName){
 
 void Map::TsxLoadTileset(std::string fileName){
     std::string strTileset = fileToString(fileName);
-    Tileset tmp;
-    tmp.rawDataToTileset(strTileset);
+    Tileset tmp(strTileset);
     
     SetTileset(tmp);
-}
-
-
-void Map::Display() const{
-    std::cout << "======== MAP LAYER ========" << std::endl;
-    for(int i=0; i<mapLayers.size(); i++){
-        mapLayers[i].Display();
-    }
-    std::cout << "======== COLLISION LAYER ========" << std::endl;
-    collisionLayer->Display();
-    std::cout << "======== SPAWN LAYER ========" << std::endl;
-    spawnsLayer->Display();
-    std::cout << "======== TILESET ========" << std::endl;
-    tileset->Display();
 }
 
 
