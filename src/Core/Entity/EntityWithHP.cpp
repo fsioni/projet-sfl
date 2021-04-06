@@ -30,7 +30,9 @@ EntityWithHP::~EntityWithHP(){
     this->name = "deleted";
     this->hp = 0;
     this->damage = 0;
+    this->maxHealth =0;
     this->livingStatus = false;
+    this->speed = 0.0;
 
 }
 
@@ -114,7 +116,7 @@ bool EntityWithHP::GetLivingStatus() const{
     return livingStatus;
 }
 
-/* EntityWithHP::GetDirection(){
+int EntityWithHP::GetMaxHealth() const{
 
-
-}*/
+    return maxHealth;
+}

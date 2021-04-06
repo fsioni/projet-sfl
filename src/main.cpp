@@ -39,6 +39,8 @@ int main(int argc, char* argv[]){
     else if(argv[1] == std::string("2")){
         Box b;
         b.Test();
+        Tileset ts;
+        ts.Test();
         cout << "Tests réalisés avec succès !" << endl;
     }
     
@@ -199,3 +201,5 @@ void DisplaySFML(Game & game){
         }
 
 }
+
+
