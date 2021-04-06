@@ -9,6 +9,33 @@ digraph "getFullTag"
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="getDataTag",height=0.2,width=0.4,color="black",URL="$tmxParsing_8cpp.html#afe8a4464102791b21b37cc37f76eb1c9",tooltip=" "];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+<<<<<<< HEAD
+  Node3 [label="MapLayer::rawDataToLayer",height=0.2,width=0.4,color="black",URL="$classMapLayer.html#ac365bf88ef144708fe208368700b10c6",tooltip="Assigne des données brut aux membres."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Map::TmxLoadLayers",height=0.2,width=0.4,color="black",URL="$classMap.html#ab57f33273034a118bb9434befbeb4263",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Map::Map",height=0.2,width=0.4,color="black",URL="$classMap.html#aabdba839fca85548ccc15926cdb5f68a",tooltip=" "];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="testRegression",height=0.2,width=0.4,color="black",URL="$tmxParsing_8cpp.html#a317f87c9a3888b89d04c33aa204600c2",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="getInsideTag",height=0.2,width=0.4,color="black",URL="$tmxParsing_8cpp.html#a01a1670c28de93ece461380677bb7d89",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CollisionLayer::Collision\lLayer",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1",tooltip="Constructeur par balise."];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Tileset::rawDataToTileset",height=0.2,width=0.4,color="black",URL="$classTileset.html#a808673f17cb250f8dc67f7983c74401e",tooltip=" "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Tileset::Test",height=0.2,width=0.4,color="black",URL="$classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9",tooltip=" "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="main",height=0.2,width=0.4,color="black",URL="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+  Node9 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Map::TsxLoadTileset",height=0.2,width=0.4,color="black",URL="$classMap.html#a731bab75a964df89b6568831f3824df7",tooltip=" "];
+  Node12 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="SpawnsLayer::SpawnsLayer",height=0.2,width=0.4,color="black",URL="$classSpawnsLayer.html#afb32cd60ca05e87e9b55a503529c484e",tooltip="Constructeur par balises."];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+=======
   Node3 [label="MapLayer::MapLayer",height=0.2,width=0.4,color="black",URL="$classMapLayer.html#aaa68e0a5062ae9f9dc97383d3687b19e",tooltip="Constructeur avec data brut comme parametre."];
   Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="testRegression",height=0.2,width=0.4,color="black",URL="$tmxParsing_8cpp.html#a317f87c9a3888b89d04c33aa204600c2",tooltip=" "];
@@ -25,6 +52,7 @@ digraph "getFullTag"
   Node9 [label="Map::TmxLoadLayers",height=0.2,width=0.4,color="black",URL="$classMap.html#ab57f33273034a118bb9434befbeb4263",tooltip="Charge les données d'un fichier .tmx."];
   Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node10 [label="Map::Map",height=0.2,width=0.4,color="black",URL="$classMap.html#aabdba839fca85548ccc15926cdb5f68a",tooltip="Constructeur prennant en parametre un fichier .tmx et un .tsx."];
+>>>>>>> 5178cc95d1d1c7c5b71c200075a86d8100530669
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

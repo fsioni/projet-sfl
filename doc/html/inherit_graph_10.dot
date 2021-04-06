@@ -5,5 +5,5 @@ digraph "Graphe hiérarchique des classes"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="Tileset",height=0.2,width=0.4,color="black",URL="$classTileset.html",tooltip="Classe représentant un tileset (ensemble de tuile stocké sur une image)."];
+  Node0 [label="WinTXT",height=0.2,width=0.4,color="black",URL="$classWinTXT.html",tooltip="une fenêtre texte est un tableau 2D de caractères"];
 }

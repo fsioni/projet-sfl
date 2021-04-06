@@ -7,7 +7,15 @@ digraph "Graphe hiérarchique des classes"
   rankdir="LR";
   Node0 [label="Layer",height=0.2,width=0.4,color="black",URL="$classLayer.html",tooltip=" "];
   Node0 -> Node1 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+<<<<<<< HEAD
+  Node1 [label="CollisionLayer",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html",tooltip="Classe représentant une couche de CollisionBox Hérité de Layer Représente toutes les CollisionBox d'u..."];
+  Node0 -> Node2 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="MapLayer",height=0.2,width=0.4,color="black",URL="$classMapLayer.html",tooltip="Classe représentant une couche de tuiles."];
+  Node0 -> Node3 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SpawnsLayer",height=0.2,width=0.4,color="black",URL="$classSpawnsLayer.html",tooltip="Classe représentant une couche de SpawnPoint Hérité de Layer Représente tous les SpawnPoint du jeu,..."];
+=======
   Node1 [label="CollisionLayer",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html",tooltip=" "];
   Node0 -> Node2 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="MapLayer",height=0.2,width=0.4,color="black",URL="$classMapLayer.html",tooltip="Classe représentant une couche de tuiles."];
+>>>>>>> 5178cc95d1d1c7c5b71c200075a86d8100530669
 }

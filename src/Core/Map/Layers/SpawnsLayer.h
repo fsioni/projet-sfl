@@ -6,16 +6,23 @@
 #include <vector>
 #include <string>
 
-
-class SpawnsLayer
+/*! \class SpawnsLayer 
+*   \brief Classe représentant une couche de SpawnPoint
+*   Hérité de Layer
+*   Représente tous les SpawnPoint du jeu, ceux des ennemis, du joueurs, des PNJ...
+*/
+class SpawnsLayer:Layer
 {
 private:
+    /*// === Données membres privées === //*/
     /*! \brief SpawnPoint du joueur. */
     SpawnPoint playerSpawn;
-
-    /*! \brief Tableau dynamique des SpawnPoint des ennemis. */
+    /*! \brief Les SpawnPoint des Ennemy. Un SpawnPoint = Un Ennemy */
     std::vector<SpawnPoint> ennemySpawns;
+
 public:
+    /*// === Fonctions membres privées === //*/
+    
     /*! \brief Constructeur par défaut. */
     SpawnsLayer(/* args */);
 
@@ -28,32 +35,32 @@ public:
     SpawnsLayer(const std::string & objectgroupTagPlayer, 
                 const std::string & objectgroupTagEnnemy);
 
-    /*! \brief Destructeur. */
+     /*! \brief Destructeur
+    *
+    * Destructeur de l'objet SpawnsPoint
+    */
     ~SpawnsLayer();
 
-    /*! \brief Modifie le spawn du joueur.
-    * 
-    *   \param [in] newSpawn : SpawnPoint affecté à playerSpawn.
+    /*! \brief Fonction permettant de modifier le SpawnPoint du joueur
+    *
+    *   Remplace le SpawnPoint du Player actuel par celui en paramètre.
+    *   \param [in] newSpawn : nouveau spawn du joueur 
     */
     void ChangePlayerSpawn(SpawnPoint const &newSpawn);
 
-    /*! \brief Ajout d'un spawn au Tableau Dynamique des spawns des ennemis.
-    * 
-    *   \param [in] newSpawn : SpawnPoint à ajouter à ennemySpawns
+    /*! \brief Fonction permettant d'ajouter un ennemi 
+    *
+    *   Un ennemi est ajouté en ajoutant un SpawnPoint pour un Ennemy
+    *   \param [in] newSpawn : nouveau spawn du nouvel Ennemy
     */
     void AddEnemy(SpawnPoint const &newSpawn);
 
-    /*! \brief Retourne playerSpawn.
+    /*! \brief Fonction permettant de récupérer le SpawnPoint du joueur
     *
-    * \return Le SpawnPoint du joueur
+    *   \return Retourne le SpawnPoint du Player en mode donnée 
     */
     SpawnPoint getPlayerSpawn() const;
 
-    /*! \brief Retourne enemySpawns.
-    *
-    * \return Le Tableau Dynamique de SpawnPoint des ennemis.
-    */
-    std::vector<SpawnPoint> getEnemySpawns() const;
 };
 
 #endif

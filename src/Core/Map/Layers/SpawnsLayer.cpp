@@ -4,7 +4,7 @@
 #include <iostream>
 
 SpawnsLayer::SpawnsLayer(){
-
+    playerSpawn = NULL;
 }
 
 SpawnsLayer::SpawnsLayer(const std::string & objectgroupTagPlayer, 
@@ -45,4 +45,5 @@ void SpawnsLayer::ChangePlayerSpawn(SpawnPoint const &newSpawn){
 
 void SpawnsLayer::AddEnemy(SpawnPoint const &newSpawn){
     ennemySpawns.push_back(newSpawn);
+}
 }

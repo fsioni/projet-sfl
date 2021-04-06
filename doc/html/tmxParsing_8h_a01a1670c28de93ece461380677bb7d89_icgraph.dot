@@ -7,7 +7,7 @@ digraph "getInsideTag"
   rankdir="RL";
   Node1 [label="getInsideTag",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="CollisionLayer::Collision\lLayer",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1",tooltip=" "];
+  Node2 [label="CollisionLayer::Collision\lLayer",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1",tooltip="Constructeur par balise."];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="SpawnsLayer::SpawnsLayer",height=0.2,width=0.4,color="black",URL="$classSpawnsLayer.html#afb32cd60ca05e87e9b55a503529c484e",tooltip="Constructeur avec la balise des spawns du joueur et celle des ennemis."];
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
@@ -17,5 +17,16 @@ digraph "getInsideTag"
   Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="Map::TmxLoadLayers",height=0.2,width=0.4,color="black",URL="$classMap.html#ab57f33273034a118bb9434befbeb4263",tooltip="Charge les données d'un fichier .tmx."];
   Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+<<<<<<< HEAD
+  Node7 [label="Map::Map",height=0.2,width=0.4,color="black",URL="$classMap.html#aabdba839fca85548ccc15926cdb5f68a",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="SpawnsLayer::SpawnsLayer",height=0.2,width=0.4,color="black",URL="$classSpawnsLayer.html#afb32cd60ca05e87e9b55a503529c484e",tooltip="Constructeur par balises."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="testRegression",height=0.2,width=0.4,color="black",URL="$tmxParsing_8cpp.html#a317f87c9a3888b89d04c33aa204600c2",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Map::TmxLoadLayers",height=0.2,width=0.4,color="black",URL="$classMap.html#ab57f33273034a118bb9434befbeb4263",tooltip=" "];
+  Node10 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+=======
   Node7 [label="Map::Map",height=0.2,width=0.4,color="black",URL="$classMap.html#aabdba839fca85548ccc15926cdb5f68a",tooltip="Constructeur prennant en parametre un fichier .tmx et un .tsx."];
+>>>>>>> 5178cc95d1d1c7c5b71c200075a86d8100530669
 }

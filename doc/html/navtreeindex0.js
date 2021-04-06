@@ -92,10 +92,10 @@ var NAVTREEINDEX0 =
 "classCollisionLayer.html":[0,0,3],
 "classCollisionLayer.html#a1696687967b8c498fd3bc8b94f7cf925":[0,0,3,2],
 "classCollisionLayer.html#a39439492123edff0f23523354237606c":[0,0,3,0],
-"classCollisionLayer.html#a7385df5b3f1760c1915e2310a276fe48":[0,0,3,4],
 "classCollisionLayer.html#a818d3c9c83d99a9b13bd9fb04fda9cef":[0,0,3,3],
 "classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435":[0,0,3,5],
 "classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1":[0,0,3,1],
+"classCollisionLayer.html#aeb41b649549775405e6f20cf92c2dda9":[0,0,3,4],
 "classCollisionLayer.html#af5b1ba7c0f9bcf5a37baa60e5e373ef6":[0,0,3,6],
 "classDisplayGame.html":[0,0,4],
 "classDisplayGame.html#a117f935d2b01013162a88edb31ad7efd":[0,0,4,1],
@@ -224,6 +224,10 @@ var NAVTREEINDEX0 =
 "classSpawnPoint.html#a9654b564352e9b858e0dbd06c3ec6c2f":[0,0,13,1],
 "classSpawnPoint.html#af18d38897bcee75e0ef78c19c302da02":[0,0,13,4],
 "classSpawnsLayer.html":[0,0,14],
+<<<<<<< HEAD
+"classSpawnsLayer.html#a01bc8a162fdd988b0dc9978ba06200cf":[0,0,14,5],
+=======
+>>>>>>> 5178cc95d1d1c7c5b71c200075a86d8100530669
 "classSpawnsLayer.html#a187426d0aa634922c8a7224278efd924":[0,0,14,4],
 "classSpawnsLayer.html#a212ce62f6d8d3c48800df0c43604261b":[0,0,14,3],
 "classSpawnsLayer.html#a296acfab6006a4079fe2d9191bc9ca91":[0,0,14,2],

@@ -15,10 +15,10 @@ var hierarchy =
     [ "Game", "classGame.html", null ],
     [ "Layer", "classLayer.html", [
       [ "CollisionLayer", "classCollisionLayer.html", null ],
-      [ "MapLayer", "classMapLayer.html", null ]
+      [ "MapLayer", "classMapLayer.html", null ],
+      [ "SpawnsLayer", "classSpawnsLayer.html", null ]
     ] ],
     [ "Map", "classMap.html", null ],
-    [ "SpawnsLayer", "classSpawnsLayer.html", null ],
     [ "State", "classState.html", null ],
     [ "StateManager", "classStateManager.html", null ],
     [ "Tileset", "classTileset.html", null ],

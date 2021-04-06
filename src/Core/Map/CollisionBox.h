@@ -21,8 +21,8 @@ public:
 
     /*! \brief Constructeur par défaut 
     *
-    * Créer une CollisionBox quelconque avec ses données membres à -1.
-    * Ne suffit pas pour utilisation.
+    *   Créer une CollisionBox quelconque avec ses données membres à -1.
+    *   Ne suffit pas pour utilisation.
     */
     CollisionBox(/* args */);
 

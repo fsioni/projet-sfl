@@ -7,9 +7,13 @@ digraph "countTag"
   rankdir="RL";
   Node1 [label="countTag",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="CollisionLayer::Collision\lLayer",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1",tooltip=" "];
+  Node2 [label="CollisionLayer::Collision\lLayer",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1",tooltip="Constructeur par balise."];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+<<<<<<< HEAD
+  Node3 [label="SpawnsLayer::SpawnsLayer",height=0.2,width=0.4,color="black",URL="$classSpawnsLayer.html#afb32cd60ca05e87e9b55a503529c484e",tooltip="Constructeur par balises."];
+=======
   Node3 [label="SpawnsLayer::SpawnsLayer",height=0.2,width=0.4,color="black",URL="$classSpawnsLayer.html#afb32cd60ca05e87e9b55a503529c484e",tooltip="Constructeur avec la balise des spawns du joueur et celle des ennemis."];
+>>>>>>> 5178cc95d1d1c7c5b71c200075a86d8100530669
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="testRegression",height=0.2,width=0.4,color="black",URL="$tmxParsing_8cpp.html#a317f87c9a3888b89d04c33aa204600c2",tooltip=" "];
   Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

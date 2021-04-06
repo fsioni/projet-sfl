@@ -13,9 +13,15 @@ digraph "txtLoop"
   Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="Game::MoveWithCollision",height=0.2,width=0.4,color="black",URL="$classGame.html#abe59a4dd98dc7ef34141aec822dfc20f",tooltip=" "];
   Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+<<<<<<< HEAD
+  Node5 [label="CollisionLayer::GetCollision\lBoxes",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435",tooltip="Fonction permettant de récupérer les CollisionBox de l'objet."];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Map::GetCollisionLayer",height=0.2,width=0.4,color="black",URL="$classMap.html#a3f49418fd08dff9bf56722251627df2b",tooltip=" "];
+=======
   Node5 [label="CollisionLayer::GetCollision\lBoxes",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435",tooltip=" "];
   Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="Map::GetCollisionLayer",height=0.2,width=0.4,color="black",URL="$classMap.html#a3f49418fd08dff9bf56722251627df2b",tooltip="Retourne collisionLayers."];
+>>>>>>> 5178cc95d1d1c7c5b71c200075a86d8100530669
   Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node7 [label="EntityWithoutHP::GetHeight",height=0.2,width=0.4,color="black",URL="$classEntityWithoutHP.html#af9e33c4eb6b3a6c8e5a3208cd18ea19d",tooltip=" "];
   Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
