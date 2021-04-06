@@ -1,4 +1,4 @@
 <map id="EntityWithHP::Attack" name="EntityWithHP::Attack">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,164,32"/>
-<area shape="rect" id="node2" href="$classEntityWithHP.html#a95a2c2671104ca91e328f9d2b5c17a35" title=" " alt="" coords="212,5,412,32"/>
+<area shape="rect" id="node1" title="Permet d&#39;infliger damage dégats à l&#39;entité target." alt="" coords="5,5,164,32"/>
+<area shape="rect" id="node2" href="$classEntityWithHP.html#a95a2c2671104ca91e328f9d2b5c17a35" title="Permet de faire en sorte qu&#39;une entité subisse le nombre &quot;damage&quot; dégats." alt="" coords="212,5,412,32"/>
 </map>

@@ -11,8 +11,8 @@
 <area shape="rect" id="node10" href="$classMap.html#aebd77205d790f0794048a1562b8b9d77" title="Retourne mapLayers." alt="" coords="237,679,389,706"/>
 <area shape="rect" id="node11" href="$classEntityWithoutHP.html#a16ab1c93543eb44548d6d951f7a2e655" title=" " alt="" coords="695,274,892,301"/>
 <area shape="rect" id="node12" href="$classGame.html#a11f40bc1afd5bb48ebab49467b7ed0ad" title=" " alt="" coords="227,730,398,757"/>
-<area shape="rect" id="node13" href="$classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792" title=" " alt="" coords="694,325,893,351"/>
-<area shape="rect" id="node14" href="$classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92" title=" " alt="" coords="694,375,893,402"/>
+<area shape="rect" id="node13" href="$classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792" title="Retourne la position sur l&#39;axe des x de l&#39;entité (horizontale)." alt="" coords="694,325,893,351"/>
+<area shape="rect" id="node14" href="$classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92" title="Retourne la position sur l&#39;axe des y de l&#39;entité (verticale)." alt="" coords="694,375,893,402"/>
 <area shape="rect" id="node15" href="$classTileset.html#a586d2ecc83c354bcc981e49ed579d359" title="Retourne tileHeight." alt="" coords="231,781,395,807"/>
 <area shape="rect" id="node16" href="$classTileset.html#a937a18ca2f53d7261d3eff752e8afb91" title="Retourne tileMapPath." alt="" coords="224,831,401,858"/>
 <area shape="rect" id="node17" href="$classMap.html#af23e6cbceec8a1f8a6fb6c51612b1488" title="Retourne tileset." alt="" coords="250,882,375,909"/>
@@ -20,6 +20,6 @@
 <area shape="rect" id="node19" href="$classEntityWithoutHP.html#a72a456c7bbaf8f66544292edf37f5e0e" title=" " alt="" coords="694,426,893,453"/>
 <area shape="rect" id="node20" href="$classGame.html#a7266c4385f5c306926054fb9f9aa56d1" title=" " alt="" coords="222,223,403,250"/>
 <area shape="rect" id="node21" href="$classGame.html#abe59a4dd98dc7ef34141aec822dfc20f" title=" " alt="" coords="453,223,644,250"/>
-<area shape="rect" id="node22" href="$classEntityWithHP.html#a0316748815da894bf85862d268d67ba0" title=" " alt="" coords="704,223,883,250"/>
-<area shape="rect" id="node23" href="$classEntityWithHP.html#a41fc1a9c9af67ea53b4c1c709c1c19b8" title=" " alt="" coords="717,173,869,199"/>
+<area shape="rect" id="node22" href="$classEntityWithHP.html#a0316748815da894bf85862d268d67ba0" title="Retourne la vitesse de déplacement de l&#39;entité EntityWithHP." alt="" coords="704,223,883,250"/>
+<area shape="rect" id="node23" href="$classEntityWithHP.html#a41fc1a9c9af67ea53b4c1c709c1c19b8" title="Permet de deplacer l&#39;entité." alt="" coords="717,173,869,199"/>
 </map>

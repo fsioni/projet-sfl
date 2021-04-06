@@ -1,26 +1,28 @@
 <map id="txtLoop" name="txtLoop">
-<area shape="rect" id="node1" title=" " alt="" coords="5,434,76,461"/>
-<area shape="rect" id="node2" href="$classWinTXT.html#a418c66475403586ac57a80eceb409166" title=" " alt="" coords="156,384,273,410"/>
-<area shape="rect" id="node3" href="$classGame.html#a7266c4385f5c306926054fb9f9aa56d1" title=" " alt="" coords="124,540,305,566"/>
-<area shape="rect" id="node14" href="$gameTxt_8cpp.html#a8660cc91c8dc47b28c5bf324284499e9" title=" " alt="" coords="419,354,478,381"/>
-<area shape="rect" id="node4" href="$classGame.html#abe59a4dd98dc7ef34141aec822dfc20f" title=" " alt="" coords="353,649,544,676"/>
-<area shape="rect" id="node5" href="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="593,456,794,498"/>
-<area shape="rect" id="node6" href="$classMap.html#a3f49418fd08dff9bf56722251627df2b" title="Retourne collisionLayers." alt="" coords="607,522,780,549"/>
-<area shape="rect" id="node7" href="$classEntityWithoutHP.html#af9e33c4eb6b3a6c8e5a3208cd18ea19d" title=" " alt="" coords="592,826,795,853"/>
-<area shape="rect" id="node8" href="$classEntityWithoutHP.html#a16ab1c93543eb44548d6d951f7a2e655" title=" " alt="" coords="595,877,792,904"/>
-<area shape="rect" id="node9" href="$classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792" title=" " alt="" coords="594,573,793,600"/>
-<area shape="rect" id="node10" href="$classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92" title=" " alt="" coords="594,624,793,650"/>
-<area shape="rect" id="node11" href="$classEntityWithHP.html#a0316748815da894bf85862d268d67ba0" title=" " alt="" coords="604,674,783,701"/>
-<area shape="rect" id="node12" href="$classEntityWithoutHP.html#a72a456c7bbaf8f66544292edf37f5e0e" title=" " alt="" coords="594,725,793,752"/>
-<area shape="rect" id="node13" href="$classEntityWithHP.html#a41fc1a9c9af67ea53b4c1c709c1c19b8" title=" " alt="" coords="617,776,769,802"/>
-<area shape="rect" id="node15" href="$classWinTXT.html#a1b4cb203533f78bed29498591631f436" title=" " alt="" coords="638,50,749,77"/>
-<area shape="rect" id="node16" href="$classWinTXT.html#a407cce45e7f81546540f4f8a9b85ce45" title=" " alt="" coords="843,25,952,52"/>
-<area shape="rect" id="node17" href="$classWinTXT.html#af83a18827593465fc397983c97b4e886" title=" " alt="" coords="638,101,749,128"/>
-<area shape="rect" id="node19" href="$classWinTXT.html#a91635aa5b10cbf5542dac294b06f3afc" title=" " alt="" coords="626,152,761,178"/>
-<area shape="rect" id="node20" href="$classWinTXT.html#a6c5141e41eea71eb62bf9e397b1b5d3c" title=" " alt="" coords="626,202,761,229"/>
-<area shape="rect" id="node21" href="$classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa" title=" " alt="" coords="615,253,772,280"/>
-<area shape="rect" id="node22" href="$classGame.html#a4c5b10b65e8b655c96ac51db93d9fbc3" title=" " alt="" coords="615,304,772,330"/>
-<area shape="rect" id="node23" href="$classEntityWithoutHP.html#a72e23e567e9c46abcce65abe980cf932" title=" " alt="" coords="594,354,793,381"/>
-<area shape="rect" id="node24" href="$classGame.html#a11f40bc1afd5bb48ebab49467b7ed0ad" title=" " alt="" coords="608,405,779,432"/>
-<area shape="rect" id="node18" href="$winTxt_8cpp.html#a0038303af38e1a50f24e3d4e33a4635b" title=" " alt="" coords="853,101,942,128"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,504,76,531"/>
+<area shape="rect" id="node2" href="$classWinTXT.html#a418c66475403586ac57a80eceb409166" title=" " alt="" coords="156,453,273,480"/>
+<area shape="rect" id="node3" href="$classGame.html#a7266c4385f5c306926054fb9f9aa56d1" title=" " alt="" coords="124,621,305,648"/>
+<area shape="rect" id="node14" href="$gameTxt_8cpp.html#a8660cc91c8dc47b28c5bf324284499e9" title=" " alt="" coords="419,411,478,437"/>
+<area shape="rect" id="node4" href="$classGame.html#abe59a4dd98dc7ef34141aec822dfc20f" title=" " alt="" coords="353,756,544,783"/>
+<area shape="rect" id="node5" href="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="601,614,802,655"/>
+<area shape="rect" id="node6" href="$classMap.html#a3f49418fd08dff9bf56722251627df2b" title="Retourne collisionLayers." alt="" coords="615,680,788,707"/>
+<area shape="rect" id="node7" href="$classEntityWithoutHP.html#af9e33c4eb6b3a6c8e5a3208cd18ea19d" title=" " alt="" coords="600,832,803,859"/>
+<area shape="rect" id="node8" href="$classEntityWithoutHP.html#a16ab1c93543eb44548d6d951f7a2e655" title=" " alt="" coords="603,883,800,909"/>
+<area shape="rect" id="node9" href="$classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792" title="Retourne la position sur l&#39;axe des x de l&#39;entité (horizontale)." alt="" coords="602,731,801,757"/>
+<area shape="rect" id="node10" href="$classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92" title="Retourne la position sur l&#39;axe des y de l&#39;entité (verticale)." alt="" coords="602,781,801,808"/>
+<area shape="rect" id="node11" href="$classEntityWithHP.html#a0316748815da894bf85862d268d67ba0" title="Retourne la vitesse de déplacement de l&#39;entité EntityWithHP." alt="" coords="612,563,791,589"/>
+<area shape="rect" id="node12" href="$classEntityWithoutHP.html#a72a456c7bbaf8f66544292edf37f5e0e" title=" " alt="" coords="602,933,801,960"/>
+<area shape="rect" id="node13" href="$classEntityWithHP.html#a41fc1a9c9af67ea53b4c1c709c1c19b8" title="Permet de deplacer l&#39;entité." alt="" coords="625,984,777,1011"/>
+<area shape="rect" id="node15" href="$classWinTXT.html#a1b4cb203533f78bed29498591631f436" title=" " alt="" coords="646,309,757,336"/>
+<area shape="rect" id="node16" href="$classWinTXT.html#a407cce45e7f81546540f4f8a9b85ce45" title=" " alt="" coords="859,284,968,311"/>
+<area shape="rect" id="node17" href="$classWinTXT.html#af83a18827593465fc397983c97b4e886" title=" " alt="" coords="646,360,757,387"/>
+<area shape="rect" id="node19" href="$classWinTXT.html#a91635aa5b10cbf5542dac294b06f3afc" title=" " alt="" coords="634,411,769,437"/>
+<area shape="rect" id="node20" href="$classWinTXT.html#a6c5141e41eea71eb62bf9e397b1b5d3c" title=" " alt="" coords="634,461,769,488"/>
+<area shape="rect" id="node21" href="$classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa" title="Retourne le nombre de points de vie de l&#39;entité." alt="" coords="623,512,780,539"/>
+<area shape="rect" id="node22" href="$classEntityWithHP.html#a500d3f8c3a23e1a2cf43abb28bf3a3fe" title="Retourne l&#39;état de vie/mort de l&#39;entité." alt="" coords="592,5,811,32"/>
+<area shape="rect" id="node23" href="$classGame.html#a4c5b10b65e8b655c96ac51db93d9fbc3" title=" " alt="" coords="623,56,780,83"/>
+<area shape="rect" id="node24" href="$classEntityWithHP.html#ae3ca9a9884e17ddac24e771af585e0cb" title="Retourne le cap maximum de points de vie de l&#39;entité." alt="" coords="596,107,807,133"/>
+<area shape="rect" id="node25" href="$classEntityWithoutHP.html#a72e23e567e9c46abcce65abe980cf932" title="Retourne le nom de l&#39;entité." alt="" coords="602,157,801,184"/>
+<area shape="rect" id="node26" href="$classGame.html#a11f40bc1afd5bb48ebab49467b7ed0ad" title=" " alt="" coords="616,208,787,235"/>
+<area shape="rect" id="node18" href="$winTxt_8cpp.html#a0038303af38e1a50f24e3d4e33a4635b" title=" " alt="" coords="869,360,958,387"/>
 </map>

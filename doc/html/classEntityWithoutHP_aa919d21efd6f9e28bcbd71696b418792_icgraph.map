@@ -1,5 +1,5 @@
 <map id="EntityWithoutHP::GetPos_x" name="EntityWithoutHP::GetPos_x">
-<area shape="rect" id="node1" title=" " alt="" coords="791,31,989,57"/>
+<area shape="rect" id="node1" title="Retourne la position sur l&#39;axe des x de l&#39;entité (horizontale)." alt="" coords="791,31,989,57"/>
 <area shape="rect" id="node2" href="$classDisplayGame.html#a0f668c30bcbcefeb29ab34614c82e521" title="Fonction d&#39;affichage du State." alt="" coords="108,5,275,32"/>
 <area shape="rect" id="node4" href="$classGame.html#abe59a4dd98dc7ef34141aec822dfc20f" title=" " alt="" coords="552,31,743,57"/>
 <area shape="rect" id="node7" href="$gameTxt_8h.html#a8660cc91c8dc47b28c5bf324284499e9" title=" " alt="" coords="384,81,443,108"/>

@@ -1,5 +1,5 @@
 <map id="EntityWithHP::Move" name="EntityWithHP::Move">
-<area shape="rect" id="node1" title=" " alt="" coords="791,31,943,57"/>
+<area shape="rect" id="node1" title="Permet de deplacer l&#39;entité." alt="" coords="791,31,943,57"/>
 <area shape="rect" id="node2" href="$classGame.html#abe59a4dd98dc7ef34141aec822dfc20f" title=" " alt="" coords="552,31,743,57"/>
 <area shape="rect" id="node3" href="$classGame.html#a7266c4385f5c306926054fb9f9aa56d1" title=" " alt="" coords="323,31,504,57"/>
 <area shape="rect" id="node4" href="$classDisplayGame.html#a0f668c30bcbcefeb29ab34614c82e521" title="Fonction d&#39;affichage du State." alt="" coords="108,5,275,32"/>

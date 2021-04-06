@@ -40,7 +40,7 @@ void txtAff(WinTXT & win, const Game & game)
 
     //Affichage des données du joueurs
     std::cout << endl << player.GetName() << " Informations : " << endl << "Position : (" << player.GetPos_x() << ", " << player.GetPos_y() << ")" << endl 
-    << "HP : " << player.GetHP() << "/" << player.maxHealth << endl << "Speed : " << player.GetSpeed() << endl << "Is Alive " << player.livingStatus;
+    << "HP : " << player.GetHP() << "/" << player.GetMaxHealth() << endl << "Speed : " << player.GetSpeed() << endl << "Is Alive " << player.GetLivingStatus();
 
     //Affichage des collisions boxes
     for (unsigned int i=0; i < collisionBoxes.size(); i++){
