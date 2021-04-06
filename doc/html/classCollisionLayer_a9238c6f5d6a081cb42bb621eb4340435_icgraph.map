@@ -1,9 +1,9 @@
 <map id="CollisionLayer::GetCollisionBoxes" name="CollisionLayer::GetCollisionBoxes">
-<area shape="rect" id="node1" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="827,23,1028,65"/>
-<area shape="rect" id="node2" href="$classDisplayGame.html#ab3b126865a8753817993063f7f1c2a3f" title=" " alt="" coords="108,5,311,32"/>
-<area shape="rect" id="node4" href="$classGame.html#abe59a4dd98dc7ef34141aec822dfc20f" title=" " alt="" coords="588,31,779,57"/>
-<area shape="rect" id="node7" href="$gameTxt_8h.html#a8660cc91c8dc47b28c5bf324284499e9" title=" " alt="" coords="420,81,479,108"/>
+<area shape="rect" id="node1" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="791,23,992,65"/>
+<area shape="rect" id="node2" href="$classDisplayGame.html#a0f668c30bcbcefeb29ab34614c82e521" title="Fonction d&#39;affichage du State." alt="" coords="108,5,275,32"/>
+<area shape="rect" id="node4" href="$classGame.html#abe59a4dd98dc7ef34141aec822dfc20f" title=" " alt="" coords="552,31,743,57"/>
+<area shape="rect" id="node7" href="$gameTxt_8h.html#a8660cc91c8dc47b28c5bf324284499e9" title=" " alt="" coords="384,81,443,108"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,60,57"/>
-<area shape="rect" id="node5" href="$classGame.html#a7266c4385f5c306926054fb9f9aa56d1" title=" " alt="" coords="359,31,540,57"/>
-<area shape="rect" id="node6" href="$gameTxt_8h.html#a5eeb0d13b5fe5eba2c9d7415842d36d9" title=" " alt="" coords="174,56,245,83"/>
+<area shape="rect" id="node5" href="$classGame.html#a7266c4385f5c306926054fb9f9aa56d1" title=" " alt="" coords="323,31,504,57"/>
+<area shape="rect" id="node6" href="$gameTxt_8h.html#a5eeb0d13b5fe5eba2c9d7415842d36d9" title=" " alt="" coords="156,56,227,83"/>
 </map>

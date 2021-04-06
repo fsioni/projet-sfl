@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['collisionbox_227',['CollisionBox',['../classCollisionBox.html',1,'']]],
-  ['collisionlayer_228',['CollisionLayer',['../classCollisionLayer.html',1,'']]]
+  ['collisionbox_235',['CollisionBox',['../classCollisionBox.html',1,'']]],
+  ['collisionlayer_236',['CollisionLayer',['../classCollisionLayer.html',1,'']]]
 ];

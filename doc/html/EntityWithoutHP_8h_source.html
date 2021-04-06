@@ -95,80 +95,93 @@ $(document).ready(function(){initNavTree('EntityWithoutHP_8h_source.html',''); i
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEntityWithoutHP.html">EntityWithoutHP</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e">   14</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e">x</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html#afb0507fc1b3a17bf87bc3012958b54a2">   15</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classEntityWithoutHP.html#afb0507fc1b3a17bf87bc3012958b54a2">y</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html#a5ec8ce114f991d9c653506594c56e870">   16</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classEntityWithoutHP.html#a5ec8ce114f991d9c653506594c56e870">width</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html#ac15e6a5827948da39848484c772d7bcd">   17</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classEntityWithoutHP.html#ac15e6a5827948da39848484c772d7bcd">height</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac">   18</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac">offset</a>; <span class="comment">// For collision detection</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html#a10246feff1be3c070dea700e9fac46a3">   19</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classEntityWithoutHP.html#a10246feff1be3c070dea700e9fac46a3">name</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEntityWithoutHP.html">EntityWithoutHP</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;protected :</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">/*// ==== Données membres protégées === //*/</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classEntityWithoutHP.html">EntityWithoutHP</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classEntityWithoutHP.html">EntityWithoutHP</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">string</span> name);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    ~<a class="code" href="classEntityWithoutHP.html">EntityWithoutHP</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">float</span> GetPos_x() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> SetPos_x(<span class="keywordtype">float</span> newX);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">float</span> GetPos_y() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e">   22</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e">x</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html#afb0507fc1b3a17bf87bc3012958b54a2">   25</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classEntityWithoutHP.html#afb0507fc1b3a17bf87bc3012958b54a2">y</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html#a5ec8ce114f991d9c653506594c56e870">   26</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classEntityWithoutHP.html#a5ec8ce114f991d9c653506594c56e870">width</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html#ac15e6a5827948da39848484c772d7bcd">   27</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classEntityWithoutHP.html#ac15e6a5827948da39848484c772d7bcd">height</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac">   28</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac">offset</a>; <span class="comment">// For collision detection</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classEntityWithoutHP.html#a10246feff1be3c070dea700e9fac46a3">   31</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classEntityWithoutHP.html#a10246feff1be3c070dea700e9fac46a3">name</a>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> SetPos_y(<span class="keywordtype">float</span> newY);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> GetWidth() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> SetWidth(<span class="keywordtype">int</span> newW);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> GetHeight() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> SetHeight(<span class="keywordtype">int</span> newH);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">/*// ==== Fonctions membres publiques === //*/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classEntityWithoutHP.html">EntityWithoutHP</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> getOffset();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> setOffset(<span class="keywordtype">int</span> newO);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">string</span> GetName() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> SetName(<span class="keywordtype">string</span> newName);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classEntityWithoutHP.html">EntityWithoutHP</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">string</span> name);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">//virtual void PrintEntityInfo();</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    ~<a class="code" href="classEntityWithoutHP.html">EntityWithoutHP</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">float</span> GetPos_x() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> SetPos_x(<span class="keywordtype">float</span> newX);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">float</span> GetPos_y() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> SetPos_y(<span class="keywordtype">float</span> newY);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">int</span> GetWidth() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> SetWidth(<span class="keywordtype">int</span> newW);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">int</span> GetHeight() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span> SetHeight(<span class="keywordtype">int</span> newH);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">int</span> getOffset();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> setOffset(<span class="keywordtype">int</span> newO);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">string</span> GetName() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> SetName(<span class="keywordtype">string</span> newName);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrintEntityInfo();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;};</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassEntityWithoutHP_html_a5ec8ce114f991d9c653506594c56e870"><div class="ttname"><a href="classEntityWithoutHP.html#a5ec8ce114f991d9c653506594c56e870">EntityWithoutHP::width</a></div><div class="ttdeci">float width</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:16</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_ac5fa20e8f737d5c7eee11ebafeee3d92"><div class="ttname"><a href="classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92">EntityWithoutHP::GetPos_y</a></div><div class="ttdeci">float GetPos_y() const</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:103</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_a57ca05df54d21d4cfe9f3e76dd48273e"><div class="ttname"><a href="classEntityWithoutHP.html#a57ca05df54d21d4cfe9f3e76dd48273e">EntityWithoutHP::SetWidth</a></div><div class="ttdeci">void SetWidth(int newW)</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:78</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_ac15e6a5827948da39848484c772d7bcd"><div class="ttname"><a href="classEntityWithoutHP.html#ac15e6a5827948da39848484c772d7bcd">EntityWithoutHP::height</a></div><div class="ttdeci">float height</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:17</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_afb0507fc1b3a17bf87bc3012958b54a2"><div class="ttname"><a href="classEntityWithoutHP.html#afb0507fc1b3a17bf87bc3012958b54a2">EntityWithoutHP::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:15</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_a72e23e567e9c46abcce65abe980cf932"><div class="ttname"><a href="classEntityWithoutHP.html#a72e23e567e9c46abcce65abe980cf932">EntityWithoutHP::GetName</a></div><div class="ttdeci">string GetName() const</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:51</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html"><div class="ttname"><a href="classEntityWithoutHP.html">EntityWithoutHP</a></div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:10</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_af9e33c4eb6b3a6c8e5a3208cd18ea19d"><div class="ttname"><a href="classEntityWithoutHP.html#af9e33c4eb6b3a6c8e5a3208cd18ea19d">EntityWithoutHP::GetHeight</a></div><div class="ttdeci">int GetHeight() const</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:83</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_aae6ff3096909720eccd5a87159c6440b"><div class="ttname"><a href="classEntityWithoutHP.html#aae6ff3096909720eccd5a87159c6440b">EntityWithoutHP::setOffset</a></div><div class="ttdeci">void setOffset(int newO)</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:98</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_a72a456c7bbaf8f66544292edf37f5e0e"><div class="ttname"><a href="classEntityWithoutHP.html#a72a456c7bbaf8f66544292edf37f5e0e">EntityWithoutHP::GetWidth</a></div><div class="ttdeci">int GetWidth() const</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:73</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_a16ab1c93543eb44548d6d951f7a2e655"><div class="ttname"><a href="classEntityWithoutHP.html#a16ab1c93543eb44548d6d951f7a2e655">EntityWithoutHP::getOffset</a></div><div class="ttdeci">int getOffset()</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:93</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_a1dad840c4f26186ed0bcba1f754b77e4"><div class="ttname"><a href="classEntityWithoutHP.html#a1dad840c4f26186ed0bcba1f754b77e4">EntityWithoutHP::SetHeight</a></div><div class="ttdeci">void SetHeight(int newH)</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:88</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_a2bfca945eaafc069d6ccdf814a94dd5e"><div class="ttname"><a href="classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e">EntityWithoutHP::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:14</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_a8781419d89c30722793ec3abec1dd81f"><div class="ttname"><a href="classEntityWithoutHP.html#a8781419d89c30722793ec3abec1dd81f">EntityWithoutHP::SetName</a></div><div class="ttdeci">void SetName(string newName)</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:46</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_a07bf9bfc465bb7b3d11788bb6c2371bf"><div class="ttname"><a href="classEntityWithoutHP.html#a07bf9bfc465bb7b3d11788bb6c2371bf">EntityWithoutHP::EntityWithoutHP</a></div><div class="ttdeci">EntityWithoutHP()</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:8</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_a1438af015635e857cba0c84a15860318"><div class="ttname"><a href="classEntityWithoutHP.html#a1438af015635e857cba0c84a15860318">EntityWithoutHP::~EntityWithoutHP</a></div><div class="ttdeci">~EntityWithoutHP()</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:30</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_a71d0f35f8ec801afca2b0a3d1c5e8c60"><div class="ttname"><a href="classEntityWithoutHP.html#a71d0f35f8ec801afca2b0a3d1c5e8c60">EntityWithoutHP::SetPos_x</a></div><div class="ttdeci">void SetPos_x(float newX)</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:56</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_a8c7ed81350ce164f7c5206d773411bac"><div class="ttname"><a href="classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac">EntityWithoutHP::offset</a></div><div class="ttdeci">int offset</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:18</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_a10246feff1be3c070dea700e9fac46a3"><div class="ttname"><a href="classEntityWithoutHP.html#a10246feff1be3c070dea700e9fac46a3">EntityWithoutHP::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:19</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a5ec8ce114f991d9c653506594c56e870"><div class="ttname"><a href="classEntityWithoutHP.html#a5ec8ce114f991d9c653506594c56e870">EntityWithoutHP::width</a></div><div class="ttdeci">float width</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:26</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_ac5fa20e8f737d5c7eee11ebafeee3d92"><div class="ttname"><a href="classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92">EntityWithoutHP::GetPos_y</a></div><div class="ttdeci">float GetPos_y() const</div><div class="ttdoc">Retourne la position sur l'axe des y de l'entité (verticale).</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:104</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a57ca05df54d21d4cfe9f3e76dd48273e"><div class="ttname"><a href="classEntityWithoutHP.html#a57ca05df54d21d4cfe9f3e76dd48273e">EntityWithoutHP::SetWidth</a></div><div class="ttdeci">void SetWidth(int newW)</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:79</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_ac15e6a5827948da39848484c772d7bcd"><div class="ttname"><a href="classEntityWithoutHP.html#ac15e6a5827948da39848484c772d7bcd">EntityWithoutHP::height</a></div><div class="ttdeci">float height</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:27</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_afb0507fc1b3a17bf87bc3012958b54a2"><div class="ttname"><a href="classEntityWithoutHP.html#afb0507fc1b3a17bf87bc3012958b54a2">EntityWithoutHP::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Position sur l'axe des y de l'entité (vertical).</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:25</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a72e23e567e9c46abcce65abe980cf932"><div class="ttname"><a href="classEntityWithoutHP.html#a72e23e567e9c46abcce65abe980cf932">EntityWithoutHP::GetName</a></div><div class="ttdeci">string GetName() const</div><div class="ttdoc">Retourne le nom de l'entité.</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:52</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html"><div class="ttname"><a href="classEntityWithoutHP.html">EntityWithoutHP</a></div><div class="ttdoc">Classe représentant une entité immobile et immortel.</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:16</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_af9e33c4eb6b3a6c8e5a3208cd18ea19d"><div class="ttname"><a href="classEntityWithoutHP.html#af9e33c4eb6b3a6c8e5a3208cd18ea19d">EntityWithoutHP::GetHeight</a></div><div class="ttdeci">int GetHeight() const</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:84</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_aae6ff3096909720eccd5a87159c6440b"><div class="ttname"><a href="classEntityWithoutHP.html#aae6ff3096909720eccd5a87159c6440b">EntityWithoutHP::setOffset</a></div><div class="ttdeci">void setOffset(int newO)</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:99</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a72a456c7bbaf8f66544292edf37f5e0e"><div class="ttname"><a href="classEntityWithoutHP.html#a72a456c7bbaf8f66544292edf37f5e0e">EntityWithoutHP::GetWidth</a></div><div class="ttdeci">int GetWidth() const</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:74</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a16ab1c93543eb44548d6d951f7a2e655"><div class="ttname"><a href="classEntityWithoutHP.html#a16ab1c93543eb44548d6d951f7a2e655">EntityWithoutHP::getOffset</a></div><div class="ttdeci">int getOffset()</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:94</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a1dad840c4f26186ed0bcba1f754b77e4"><div class="ttname"><a href="classEntityWithoutHP.html#a1dad840c4f26186ed0bcba1f754b77e4">EntityWithoutHP::SetHeight</a></div><div class="ttdeci">void SetHeight(int newH)</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:89</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a2bfca945eaafc069d6ccdf814a94dd5e"><div class="ttname"><a href="classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e">EntityWithoutHP::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Position sur l'axe des x de l'entité (horizontal).</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:22</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a8781419d89c30722793ec3abec1dd81f"><div class="ttname"><a href="classEntityWithoutHP.html#a8781419d89c30722793ec3abec1dd81f">EntityWithoutHP::SetName</a></div><div class="ttdeci">void SetName(string newName)</div><div class="ttdoc">Permets de modifier le nom de l'entité.</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:47</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a07bf9bfc465bb7b3d11788bb6c2371bf"><div class="ttname"><a href="classEntityWithoutHP.html#a07bf9bfc465bb7b3d11788bb6c2371bf">EntityWithoutHP::EntityWithoutHP</a></div><div class="ttdeci">EntityWithoutHP()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:9</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a1438af015635e857cba0c84a15860318"><div class="ttname"><a href="classEntityWithoutHP.html#a1438af015635e857cba0c84a15860318">EntityWithoutHP::~EntityWithoutHP</a></div><div class="ttdeci">~EntityWithoutHP()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:31</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a71d0f35f8ec801afca2b0a3d1c5e8c60"><div class="ttname"><a href="classEntityWithoutHP.html#a71d0f35f8ec801afca2b0a3d1c5e8c60">EntityWithoutHP::SetPos_x</a></div><div class="ttdeci">void SetPos_x(float newX)</div><div class="ttdoc">Permets de modifier la position sur l'axe des x de l'entité (horizontale).</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:57</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a8c7ed81350ce164f7c5206d773411bac"><div class="ttname"><a href="classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac">EntityWithoutHP::offset</a></div><div class="ttdeci">int offset</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:28</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a10246feff1be3c070dea700e9fac46a3"><div class="ttname"><a href="classEntityWithoutHP.html#a10246feff1be3c070dea700e9fac46a3">EntityWithoutHP::name</a></div><div class="ttdeci">string name</div><div class="ttdoc">Nom de l'entité</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:31</div></div>
 <div class="ttc" id="aEntityWithoutHP_8h_html"><div class="ttname"><a href="EntityWithoutHP_8h.html">EntityWithoutHP.h</a></div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_aa919d21efd6f9e28bcbd71696b418792"><div class="ttname"><a href="classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792">EntityWithoutHP::GetPos_x</a></div><div class="ttdeci">float GetPos_x() const</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:62</div></div>
-<div class="ttc" id="aclassEntityWithoutHP_html_a2911e0307397dde003fdcfa71b738495"><div class="ttname"><a href="classEntityWithoutHP.html#a2911e0307397dde003fdcfa71b738495">EntityWithoutHP::SetPos_y</a></div><div class="ttdeci">void SetPos_y(float newY)</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:67</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_aa919d21efd6f9e28bcbd71696b418792"><div class="ttname"><a href="classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792">EntityWithoutHP::GetPos_x</a></div><div class="ttdeci">float GetPos_x() const</div><div class="ttdoc">Retourne la position sur l'axe des x de l'entité (horizontale).</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:63</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a2911e0307397dde003fdcfa71b738495"><div class="ttname"><a href="classEntityWithoutHP.html#a2911e0307397dde003fdcfa71b738495">EntityWithoutHP::SetPos_y</a></div><div class="ttdeci">void SetPos_y(float newY)</div><div class="ttdoc">Permets de modifier la position sur l'axe des y de l'entité (verticale).</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:68</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
