@@ -14,7 +14,7 @@ Game::Game(/* args */)
     int x = map->GetSpawnsLayer().getPlayerSpawn().GetX();
     int y = map->GetSpawnsLayer().getPlayerSpawn().GetY();
 
-    player = Player(x, y, "Player", 10, 10, 40, 10);
+    player = Player(x, y, "Player", 10, 10, 4, 10);
 
     // Initialisation des ennemies
     int count = map->GetSpawnsLayer().getEnemySpawns().size();
@@ -92,6 +92,7 @@ Map& Game::GetMapConst() const
 
 void Game::MoveWithCollision(EntityWithHP &entity, float vx, float vy) 
 {
+    int sizeTileEntity= 32;
     if (vx == 0 && vy == 0)
     {
         return;
@@ -100,12 +101,22 @@ void Game::MoveWithCollision(EntityWithHP &entity, float vx, float vy)
     std::vector<CollisionBox> cb = map->GetCollisionLayer().GetCollisionBoxes();
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
-        //Detection collision
-        if (entity.GetPos_x() + entity.GetWidth() - entity.getOffset() + (vx*entity.GetSpeed()) >= cb[i].GetX()
-        && cb[i].GetX() + cb[i].GetWidth() >= entity.GetPos_x() + entity.getOffset() + (vx*entity.GetSpeed())
-        && entity.GetPos_y() + entity.GetHeight() - entity.getOffset() + (vy*entity.GetSpeed()) >= cb[i].GetY()
-        && cb[i].GetY() + cb[i].GetHeight() >= entity.GetPos_y() + entity.getOffset() + (vy*entity.GetSpeed()))
-            iscolliding = true;
+        // -sizeTileEntity/2 pour centrer l'origine 
+        int posX = entity.GetPos_x() + vx*entity.GetSpeed() - sizeTileEntity/2;
+        int posY = entity.GetPos_y() + vy*entity.GetSpeed() - sizeTileEntity/2;
+
+        //Detection collision axe X
+        if (posX + entity.GetWidth() - entity.getOffset() >= cb[i].GetX()
+            && cb[i].GetX() + cb[i].GetWidth() >= posX + entity.getOffset()){
+            //Detection collision axe Y
+            if(posY + entity.GetHeight() - entity.getOffset() >= cb[i].GetY()
+               && cb[i].GetY() + cb[i].GetHeight() >= posY + entity.getOffset()){
+
+                iscolliding = true;
+            }   
+        }
+        
+            
     }
     if (!iscolliding)
     {

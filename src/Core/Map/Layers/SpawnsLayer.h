@@ -60,6 +60,7 @@ public:
     *   \return Retourne le SpawnPoint du Player en mode donnée 
     */
     SpawnPoint getPlayerSpawn() const;
+    std::vector<SpawnPoint> getEnemySpawns() const;
 
 };
 
