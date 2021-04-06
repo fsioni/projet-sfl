@@ -30,7 +30,8 @@ EntityWithHP::~EntityWithHP(){
     this->name = "deleted";
     this->hp = 0;
     this->damage = 0;
-    this->livingStatus = false;
+    this->speed = 0.0;
+    this->maxHealth = 0;
 
 }
 
@@ -55,7 +56,7 @@ void EntityWithHP::SetSpeed(float newSpeed){
 
     speed = newSpeed;
 }
-/*
+
 void EntityWithHP::PrintEntityInfo() {
 
     cout<< "x = " << x << ", y = " << y <<endl;
@@ -69,7 +70,7 @@ void EntityWithHP::PrintEntityInfo() {
     else{
         cout<<"Le personnage est mort"<<endl;}
 
-}*/
+}
 
 void EntityWithHP::Move(float vx, float vy){
 
@@ -114,7 +115,7 @@ bool EntityWithHP::GetLivingStatus() const{
     return livingStatus;
 }
 
-/* EntityWithHP::GetDirection(){
+int EntityWithHP::GetMaxHealth() const{
 
-
-}*/
+    return maxHealth;
+}

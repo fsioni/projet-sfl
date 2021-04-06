@@ -18,7 +18,7 @@ Game::Game(/* args */)
 
     // Initialisation des ennemies
     int count = map->GetSpawnsLayer().getEnemySpawns().size();
-
+    
     for(int i = 0; i<count; i++){
         x = map->GetSpawnsLayer().getEnemySpawns()[i].GetX();
         y = map->GetSpawnsLayer().getEnemySpawns()[i].GetY();

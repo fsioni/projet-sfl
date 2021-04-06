@@ -2,6 +2,7 @@
 #include <cassert>
 #include <iostream>
 #include <string>
+#include <assert.h>
 
 
 
@@ -9,8 +10,8 @@ EntityWithoutHP::EntityWithoutHP(){
 
     this->x = 0.0;
     this->y = 0.0;
-    this->width = 0;
-    this->height = 0;
+    this->width = 0.0;
+    this->height = 0.0;
     this->offset = 0;
     this->name = "Unknown";
 }
@@ -20,9 +21,9 @@ EntityWithoutHP::EntityWithoutHP(float x, float y, string name){
 
     this->x = x;
     this->y = y;
-    this->width = 32;
-    this->height = 32;
-    this->offset = 7; 
+    this->width = 32.0;
+    this->height = 32.0;
+    this->offset = 7;
     this->name = name;
 }
 
@@ -31,18 +32,20 @@ EntityWithoutHP::~EntityWithoutHP(){
 
     this->x = 0.0;
     this->y= 0.0;
-    this->width = 0;
-    this->height = 0;
+    this->width = 0.0;
+    this->height = 0.0;
     this->offset =0;
     this->name = "delete";
+
 }
 
-/*
+
 void EntityWithoutHP::PrintEntityInfo(){
 
     cout<< "x = " << x << ", y = " << y << ", nom : " << name <<endl;
 }
-*/
+
+
 void EntityWithoutHP::SetName(string newName){
 
     name = newName;
@@ -75,7 +78,7 @@ int EntityWithoutHP::GetWidth() const
     return width;
 }
 
-void EntityWithoutHP::SetWidth(int newW) 
+void EntityWithoutHP::SetWidth(int newW)
 {
     width = newW;
 }
@@ -85,17 +88,17 @@ int EntityWithoutHP::GetHeight() const
     return height;
 }
 
-void EntityWithoutHP::SetHeight(int newH) 
+void EntityWithoutHP::SetHeight(int newH)
 {
     height = newH;
 }
 
-int EntityWithoutHP::getOffset() 
+int EntityWithoutHP::getOffset()
 {
     return offset;
 }
 
-void EntityWithoutHP::setOffset(int newO) 
+void EntityWithoutHP::setOffset(int newO)
 {
     offset = newO;
 }

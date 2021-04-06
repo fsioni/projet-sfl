@@ -9,7 +9,6 @@ var classEntityWithoutHP =
     [ "GetPos_x", "classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792", null ],
     [ "GetPos_y", "classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92", null ],
     [ "GetWidth", "classEntityWithoutHP.html#a72a456c7bbaf8f66544292edf37f5e0e", null ],
-    [ "PrintEntityInfo", "classEntityWithoutHP.html#a1d5c016ef15372da66ae0005f5629a69", null ],
     [ "SetHeight", "classEntityWithoutHP.html#a1dad840c4f26186ed0bcba1f754b77e4", null ],
     [ "SetName", "classEntityWithoutHP.html#a8781419d89c30722793ec3abec1dd81f", null ],
     [ "setOffset", "classEntityWithoutHP.html#aae6ff3096909720eccd5a87159c6440b", null ],

@@ -3,6 +3,11 @@
 
 #include <string>
 
+/*! \class Layer 
+*   \brief Classe représentant une couche.
+*   Doit être héritée.
+*   Hérité par CollisionLayer et SpawnsLayer
+*/
 class Layer
 {
 protected:

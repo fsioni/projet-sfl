@@ -2,7 +2,7 @@
 #include "gameTxt.h"
 
 
-void txtLoop(Game & g) 
+void txtLoop(Game & g)
 {
     WinTXT win(30, 30);
     system("setterm -cursor off");
@@ -26,10 +26,10 @@ void txtLoop(Game & g)
             break;
 		}
     } while (ok);
-    
+
 }
 
-void txtAff(WinTXT & win, const Game & game) 
+void txtAff(WinTXT & win, const Game & game)
 {
     const EntityWithHP& player = game.GetPlayerConst();
     const std::vector<CollisionBox> collisionBoxes = game.GetMapConst().GetCollisionLayer().GetCollisionBoxes();
@@ -39,8 +39,8 @@ void txtAff(WinTXT & win, const Game & game)
     win.print(win.getDimx()/2, win.getDimx()/2, 'O');
 
     //Affichage des données du joueurs
-    std::cout << endl << player.GetName() << " Informations : " << endl << "Position : (" << player.GetPos_x() << ", " << player.GetPos_y() << ")" << endl 
-    << "HP : " << player.GetHP() << "/" << player.maxHealth << endl << "Speed : " << player.GetSpeed() << endl << "Is Alive " << player.livingStatus;
+    std::cout << endl << player.GetName() << " Informations : " << endl << "Position : (" << player.GetPos_x() << ", " << player.GetPos_y() << ")" << endl
+    << "HP : " << player.GetHP() << "/" << player.GetMaxHealth() << endl << "Speed : " << player.GetSpeed() << endl << "Is Alive " << player.GetLivingStatus();
 
     //Affichage des collisions boxes
     for (unsigned int i=0; i < collisionBoxes.size(); i++){
@@ -48,7 +48,7 @@ void txtAff(WinTXT & win, const Game & game)
 
         cout << "C" << i << "(" <<(15 + collisionBoxes[i].GetX()) << ", " << (15 + collisionBoxes[i].GetY()) << ")" << endl;
     }
-    
+
 
     win.draw();
 }
