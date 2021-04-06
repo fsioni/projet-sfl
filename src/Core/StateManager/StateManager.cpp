@@ -11,12 +11,12 @@ StateManager::~StateManager()
     
 }
 
-void StateManager::Add(std::unique_ptr<State> nState, bool replace)
+void StateManager::Add(std::unique_ptr<State> nState, bool nreplace)
 {
     add = true;
     sNewState = std::move(nState);
 
-    replace = replace;
+    replace = nreplace;
 }
 
 void StateManager::PopCurrent()
