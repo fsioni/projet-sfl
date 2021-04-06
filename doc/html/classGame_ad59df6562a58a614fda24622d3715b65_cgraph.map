@@ -1,0 +1,8 @@
+<map id="Game::Game" name="Game::Game">
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,113,133"/>
+<area shape="rect" id="node2" href="$classSpawnsLayer.html#a9d63a4d81b48d534b9bec9a5857fae34" title="Fonction permettant de récupérer les SpawnPoint des Ennemy." alt="" coords="161,5,393,32"/>
+<area shape="rect" id="node3" href="$classSpawnsLayer.html#a59fe362bf99c208d7dfa6b742b4a2683" title="Fonction permettant de récupérer le SpawnPoint du joueur." alt="" coords="167,56,388,83"/>
+<area shape="rect" id="node4" href="$classMap.html#a6ba6c1b6d64086a8912dc329fec10336" title="Retourne spawnsLayers." alt="" coords="194,107,361,133"/>
+<area shape="rect" id="node5" href="$classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="234,157,321,184"/>
+<area shape="rect" id="node6" href="$classBox.html#af86b090508898469761c0d61c8230133" title="Retourne y." alt="" coords="234,208,321,235"/>
+</map>

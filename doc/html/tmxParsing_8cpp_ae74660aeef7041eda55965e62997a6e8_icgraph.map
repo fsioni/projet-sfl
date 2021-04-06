@@ -1,0 +1,8 @@
+<map id="countTag" name="countTag">
+<area shape="rect" id="node1" title=" " alt="" coords="391,97,471,123"/>
+<area shape="rect" id="node2" href="$classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1" title="Constructeur par balise." alt="" coords="152,5,331,47"/>
+<area shape="rect" id="node3" href="$classSpawnsLayer.html#afb32cd60ca05e87e9b55a503529c484e" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="140,71,343,98"/>
+<area shape="rect" id="node4" href="$tmxParsing_8h.html#a317f87c9a3888b89d04c33aa204600c2" title=" " alt="" coords="182,122,301,149"/>
+<area shape="rect" id="node5" href="$classMap.html#ab57f33273034a118bb9434befbeb4263" title="Charge les données d&#39;un fichier .tmx." alt="" coords="161,173,322,199"/>
+<area shape="rect" id="node6" href="$classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="5,173,92,199"/>
+</map>

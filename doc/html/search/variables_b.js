@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['player_472',['player',['../classGame.html#a6e48721b0532833b99fd5615a3628792',1,'Game']]],
-  ['playerspawn_473',['playerSpawn',['../classSpawnsLayer.html#a57e507578fd0192588416df860e14c8d',1,'SpawnsLayer']]]
+  ['remove_492',['remove',['../classStateManager.html#a1a3387efb8b70dbb46d55b4459407eba',1,'StateManager']]],
+  ['renderwin_493',['renderWin',['../structContext.html#a2ddca7ce55e946e1685d9fb791bb6c23',1,'Context']]],
+  ['replace_494',['replace',['../classStateManager.html#ae75d92b664a69e724568f9cbd1615b3a',1,'StateManager']]]
 ];

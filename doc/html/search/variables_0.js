@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['assets_451',['assets',['../classDisplayGame.html#a3850d0958ec3015aefe82c5542ea5688',1,'DisplayGame']]]
+  ['add_457',['add',['../classStateManager.html#a6960665b6b872d158f6286656876a799',1,'StateManager']]],
+  ['assetman_458',['assetMan',['../structContext.html#a2cced4183e86a6447b4fd608b1ed6aec',1,'Context']]]
 ];

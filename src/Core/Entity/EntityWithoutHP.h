@@ -24,7 +24,6 @@ protected :
 
     /*! \brief Position sur l'axe des y de l'entité (vertical). */
     float y;
-
     float width;
 
     float height;
@@ -114,7 +113,6 @@ public:
     *
     *
     */
-
     string GetName() const;
 
     /*! \brief Permets de modifier le nom de l'entité.
@@ -125,7 +123,6 @@ public:
     */
 
     void SetName(string newName);
-
 
 
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.

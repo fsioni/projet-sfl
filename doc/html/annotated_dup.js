@@ -4,7 +4,7 @@ var annotated_dup =
     [ "Box", "classBox.html", "classBox" ],
     [ "CollisionBox", "classCollisionBox.html", "classCollisionBox" ],
     [ "CollisionLayer", "classCollisionLayer.html", "classCollisionLayer" ],
-    [ "DisplayGame", "classDisplayGame.html", "classDisplayGame" ],
+    [ "Context", "structContext.html", "structContext" ],
     [ "Enemy", "classEnemy.html", "classEnemy" ],
     [ "EntityWithHP", "classEntityWithHP.html", "classEntityWithHP" ],
     [ "EntityWithoutHP", "classEntityWithoutHP.html", "classEntityWithoutHP" ],
@@ -16,6 +16,7 @@ var annotated_dup =
     [ "SpawnPoint", "classSpawnPoint.html", "classSpawnPoint" ],
     [ "SpawnsLayer", "classSpawnsLayer.html", "classSpawnsLayer" ],
     [ "State", "classState.html", "classState" ],
+    [ "StateGameSFML", "classStateGameSFML.html", "classStateGameSFML" ],
     [ "StateManager", "classStateManager.html", "classStateManager" ],
     [ "Tileset", "classTileset.html", "classTileset" ],
     [ "WinTXT", "classWinTXT.html", "classWinTXT" ]

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Legends of Nautibus: Référence du fichier src/Core/StateManager/StateManager.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -34,10 +34,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.1 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -89,16 +89,34 @@ $(document).ready(function(){initNavTree('StateManager_8h.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="State_8h_source.html">State.h</a>&quot;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;stack&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de StateManager.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="StateManager_8h__incl.png" border="0" usemap="#asrc_2Core_2StateManager_2StateManager_8h" alt=""/></div>
+<div class="center"><img src="StateManager_8h__incl.png" border="0" usemap="#src_2Core_2StateManager_2StateManager_8h" alt=""/></div>
+<map name="src_2Core_2StateManager_2StateManager_8h" id="src_2Core_2StateManager_2StateManager_8h">
+<area shape="rect" title=" " alt="" coords="41,5,211,47"/>
+<area shape="rect" href="State_8h.html" title=" " alt="" coords="5,95,73,121"/>
+<area shape="rect" title=" " alt="" coords="97,95,155,121"/>
+<area shape="rect" title=" " alt="" coords="179,95,257,121"/>
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
 <div class="dyncontent">
-<div class="center"><img src="StateManager_8h__dep__incl.png" border="0" usemap="#asrc_2Core_2StateManager_2StateManager_8hdep" alt=""/></div>
+<div class="center"><img src="StateManager_8h__dep__incl.png" border="0" usemap="#src_2Core_2StateManager_2StateManager_8hdep" alt=""/></div>
+<map name="src_2Core_2StateManager_2StateManager_8hdep" id="src_2Core_2StateManager_2StateManager_8hdep">
+<area shape="rect" title=" " alt="" coords="325,5,495,47"/>
+<area shape="rect" href="Game_8h.html" title=" " alt="" coords="258,102,389,129"/>
+<area shape="rect" href="StateManager_8cpp.html" title=" " alt="" coords="413,95,583,136"/>
+<area shape="rect" href="Game_8cpp.html" title=" " alt="" coords="5,259,151,285"/>
+<area shape="rect" href="StateGameSFML_8h.html" title=" " alt="" coords="152,184,356,211"/>
+<area shape="rect" href="gameTxt_8h.html" title=" " alt="" coords="432,184,569,211"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="419,259,524,285"/>
+<area shape="rect" href="StateGameSFML_8cpp.html" title=" " alt="" coords="175,259,394,285"/>
+<area shape="rect" href="gameTxt_8cpp.html" title=" " alt="" coords="549,259,701,285"/>
+</map>
 </div>
 </div>
 <p><a href="StateManager_8h_source.html">Aller au code source de ce fichier.</a></p>
@@ -115,7 +133,9 @@ Structures de données</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a2f0e5642e47e7ed59fe0f0829eafb5f.html">Core</a></li><li class="navelem"><a class="el" href="dir_7214f3075b7e54abe449413ecb03e635.html">StateManager</a></li><li class="navelem"><a class="el" href="StateManager_8h.html">StateManager.h</a></li>
-    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

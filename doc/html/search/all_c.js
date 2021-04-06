@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['name_128',['name',['../classEntityWithoutHP.html#a10246feff1be3c070dea700e9fac46a3',1,'EntityWithoutHP::name()'],['../classLayer.html#a2071349b5667273725ae7f05a42db7a6',1,'Layer::name()'],['../classSpawnPoint.html#a22b5e2c7fe566095b8e27755a1bd57c7',1,'SpawnPoint::name()'],['../classTileset.html#a18d4be506284b7ab3cf2e2b7e688042a',1,'Tileset::name()']]]
+  ['offset_124',['offset',['../classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac',1,'EntityWithoutHP']]],
+  ['operator_3d_125',['operator=',['../classMapLayer.html#a162027da886152a23431b82cf8b7c813',1,'MapLayer::operator=()'],['../classTileset.html#afe577c2af89a7596fa62772ca9f5930b',1,'Tileset::operator=()']]]
 ];

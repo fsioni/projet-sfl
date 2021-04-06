@@ -1,0 +1,4 @@
+<map id="Map::TsxLoadTileset" name="Map::TsxLoadTileset">
+<area shape="rect" id="node1" title="Charge les données d&#39;un fichier .tsx." alt="" coords="140,5,295,32"/>
+<area shape="rect" id="node2" href="$classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="5,5,92,32"/>
+</map>

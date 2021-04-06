@@ -1,0 +1,13 @@
+<map id="Game::KeyboardPressed" name="Game::KeyboardPressed">
+<area shape="rect" id="node1" title=" " alt="" coords="5,223,187,250"/>
+<area shape="rect" id="node2" href="$classGame.html#abe59a4dd98dc7ef34141aec822dfc20f" title=" " alt="" coords="235,223,425,250"/>
+<area shape="rect" id="node3" href="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="474,5,675,47"/>
+<area shape="rect" id="node4" href="$classMap.html#a3f49418fd08dff9bf56722251627df2b" title="Retourne collisionLayers." alt="" coords="488,71,661,98"/>
+<area shape="rect" id="node5" href="$classEntityWithoutHP.html#af9e33c4eb6b3a6c8e5a3208cd18ea19d" title=" " alt="" coords="473,122,676,149"/>
+<area shape="rect" id="node6" href="$classEntityWithoutHP.html#a16ab1c93543eb44548d6d951f7a2e655" title=" " alt="" coords="476,173,673,199"/>
+<area shape="rect" id="node7" href="$classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792" title="Retourne la position sur l&#39;axe des x de l&#39;entité (horizontale)." alt="" coords="475,223,674,250"/>
+<area shape="rect" id="node8" href="$classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92" title="Retourne la position sur l&#39;axe des y de l&#39;entité (verticale)." alt="" coords="475,274,674,301"/>
+<area shape="rect" id="node9" href="$classEntityWithHP.html#a0316748815da894bf85862d268d67ba0" title="Retourne la vitesse de déplacement de l&#39;entité EntityWithHP." alt="" coords="485,325,664,351"/>
+<area shape="rect" id="node10" href="$classEntityWithoutHP.html#a72a456c7bbaf8f66544292edf37f5e0e" title=" " alt="" coords="475,375,674,402"/>
+<area shape="rect" id="node11" href="$classEntityWithHP.html#a41fc1a9c9af67ea53b4c1c709c1c19b8" title="Permet de deplacer l&#39;entité." alt="" coords="499,426,651,453"/>
+</map>

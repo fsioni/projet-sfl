@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['width_213',['width',['../classEntityWithoutHP.html#a5ec8ce114f991d9c653506594c56e870',1,'EntityWithoutHP::width()'],['../classBox.html#a46c951fd4f07b46a726c8fc38013b0f0',1,'Box::width()'],['../classMapLayer.html#ac01251ac9fc4c02fe41acce40ddaab33',1,'MapLayer::width()']]],
-  ['win_214',['win',['../classWinTXT.html#ace5ef6c746d586385fcea85073bd1d41',1,'WinTXT']]],
-  ['wintxt_215',['WinTXT',['../classWinTXT.html',1,'WinTXT'],['../classWinTXT.html#ad471ddd48d2a7c43acccd1204e419527',1,'WinTXT::WinTXT()']]],
-  ['wintxt_2ecpp_216',['winTxt.cpp',['../winTxt_8cpp.html',1,'']]],
-  ['wintxt_2eh_217',['winTxt.h',['../winTxt_8h.html',1,'']]]
+  ['x_227',['x',['../classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e',1,'EntityWithoutHP::x()'],['../classBox.html#a180c7a450afc2e8cfe4dddb50eeaa4f2',1,'Box::x()'],['../classStateGameSFML.html#aa442c147ff5168fd94d121815f7b7907',1,'StateGameSFML::x()']]]
 ];

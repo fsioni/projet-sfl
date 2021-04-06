@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['collisionbox_241',['CollisionBox',['../classCollisionBox.html',1,'']]],
-  ['collisionlayer_242',['CollisionLayer',['../classCollisionLayer.html',1,'']]]
+  ['collisionbox_250',['CollisionBox',['../classCollisionBox.html',1,'']]],
+  ['collisionlayer_251',['CollisionLayer',['../classCollisionLayer.html',1,'']]],
+  ['context_252',['Context',['../structContext.html',1,'']]]
 ];

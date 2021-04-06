@@ -1,0 +1,4 @@
+<map id="SpawnPoint" name="SpawnPoint">
+<area shape="rect" id="node1" title="Classe représentant un point d&#39;apparition dans un monde 2D." alt="" coords="11,365,145,516"/>
+<area shape="rect" id="node2" href="$classBox.html" title="Classe représentant une boîte dans un monde 2D." alt="" coords="5,5,151,317"/>
+</map>

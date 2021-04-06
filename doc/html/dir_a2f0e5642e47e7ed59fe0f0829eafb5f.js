@@ -5,6 +5,7 @@ var dir_a2f0e5642e47e7ed59fe0f0829eafb5f =
     [ "StateManager", "dir_7214f3075b7e54abe449413ecb03e635.html", "dir_7214f3075b7e54abe449413ecb03e635" ],
     [ "Game.cpp", "Game_8cpp.html", null ],
     [ "Game.h", "Game_8h.html", [
+      [ "Context", "structContext.html", "structContext" ],
       [ "Game", "classGame.html", "classGame" ]
     ] ]
 ];

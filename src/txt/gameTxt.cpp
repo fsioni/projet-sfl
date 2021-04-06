@@ -22,7 +22,7 @@ void txtLoop(Game & g)
                 system("setterm -cursor on");
 				break;
         default:
-            g.KeyboardPressed(c);
+            //g.KeyboardPressed(c);
             break;
 		}
     } while (ok);
@@ -39,7 +39,7 @@ void txtAff(WinTXT & win, const Game & game)
     win.print(win.getDimx()/2, win.getDimx()/2, 'O');
 
     //Affichage des données du joueurs
-    std::cout << endl << player.GetName() << " Informations : " << endl << "Position : (" << player.GetPos_x() << ", " << player.GetPos_y() << ")" << endl
+    std::cout << endl << player.GetName() << " Informations : " << endl << "Position : (" << player.GetPos_x() << ", " << player.GetPos_y() << ")" << endl 
     << "HP : " << player.GetHP() << "/" << player.GetMaxHealth() << endl << "Speed : " << player.GetSpeed() << endl << "Is Alive " << player.GetLivingStatus();
 
     //Affichage des collisions boxes

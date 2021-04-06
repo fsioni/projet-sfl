@@ -4,7 +4,7 @@ OBJ_FILES += obj/MapLayer.o obj/CollisionLayer.o obj/SpawnPoint.o obj/SpawnPoint
 OBJ_FILES += obj/SpawnsLayer.o obj/Box.o obj/CollisionBox.o obj/StateManager.o
 OBJ_FILES += obj/Game.o obj/EntityWithHP.o obj/EntityWithoutHP.o obj/Player.o
 OBJ_FILES += obj/Enemy.o obj/winTxt.o obj/gameTxt.o obj/AssetManager.o
-OBJ_FILES += obj/DisplayGame.o
+OBJ_FILES += obj/StateGameSFML.o
 
 
 CC = g++
@@ -21,10 +21,10 @@ all: $(EXECS_NAME)
 bin/exec : $(OBJ_FILES)
 	$(CC) $(CFLAGS) $^ -o $@ $(LIBS_SFML)
 
-obj/main.o: src/main.cpp  src/SFML/DisplayGame.h 
+obj/main.o: src/main.cpp src/Core/Game.h
 	$(COMPILATIONOBJ)
 
-obj/DisplayGame.o : src/SFML/DisplayGame.cpp src/SFML/DisplayGame.h src/SFML/AssetManager.h src/Core/Game.h
+obj/StateGameSFML.o : src/SFML/StateGameSFML.cpp src/SFML/StateGameSFML.h src/SFML/AssetManager.h src/Core/Game.h src/Core/StateManager/StateManager.cpp src/Core/StateManager/State.h
 	$(COMPILATIONOBJ)
 
 obj/AssetManager.o : src/SFML/AssetManager.cpp src/SFML/AssetManager.h 
