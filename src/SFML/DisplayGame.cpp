@@ -15,29 +15,23 @@ DisplayGame::~DisplayGame(){
 
 void DisplayGame::DisplaySFML(sf::RenderWindow  & window) const{
     // ================== Affichage SFML  ==================
-        sf::Texture tileTexture, charTextures, shadowTexture, enemyTexture;
-        sf::Sprite tileSprite, charSprite, shadowSprite, enemySprite;
+        sf::Texture tileTexture;
+        sf::Sprite tileSprite, playerSprite, shadowSprite, enemySprite;
 
         // Chargement de la tileMap
         tileTexture.loadFromFile(game->GetMapConst().GetTileset().GetTileMapPath());
         tileSprite.setTexture(tileTexture);
 
-        // Chargement des charactères
-        charTextures.loadFromFile("data/textures/characters/Male/Male 01-1.png");
-        charSprite.setTexture(charTextures);
+        // Chargement des assets
+        playerSprite.setTexture(assets->GetPlayerTexture());   
+        enemySprite.setTexture(assets->GetTextureEnemy()[0]);
+        shadowSprite.setTexture(assets->GetShadowTexture());
+        
 
-        // Chargement des ennemies
-        enemyTexture.loadFromFile("data/textures/characters/Soldier/Soldier 01-1.png");
-        enemySprite.setTexture(enemyTexture);
-
-        // Chargement de l'ombre
-        shadowTexture.loadFromFile("data/textures/characters/Shadow/Shadow 1.png");
-        shadowSprite.setTexture(shadowTexture);
-
-        // Initialisation de la fenetre
+        // Taille de la fenetre
         int winWidth = window.getSize().x;
         int winHeight = window.getSize().y;
-        //sf::RenderWindow window(sf::VideoMode(winWidth, winHeight, 32), "Legend Of Nautibus");
+            
 
         // Horloge
         sf::Clock clock;
@@ -181,13 +175,12 @@ void DisplayGame::DisplaySFML(sf::RenderWindow  & window) const{
            
 
             // Affichage du joueur
-            charSprite.setPosition(playerX-substX - 16, playerY-substY - 16);
-            charSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
-            window.draw(charSprite);
+            playerSprite.setPosition(playerX-substX - 16, playerY-substY - 16);
+            playerSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
+            window.draw(playerSprite);
 
             // Affichage des ennemies
             int count = game->GetEnemiesConst().size();
-            
             for(int i=0; i<count; i++){
                 
                 int enX = game->GetEnemiesConst()[i].GetPos_x() - substX;

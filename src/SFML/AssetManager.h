@@ -10,6 +10,7 @@ class AssetManager{
     std::vector<sf::Texture> textureEnemy;
     std::vector<sf::Texture> textureNPC;
     sf::Texture texturePlayer;
+    sf::Texture textureShadow;
 
     // Ajouter son et font
 public:
@@ -22,6 +23,13 @@ public:
     void RemoveTextureNPC(int indice);
 
     void SetPlayerTexture(std::string fileTexture);
+    void SetShadowTexture(std::string fileTexture);
+
+
+    const std::vector<sf::Texture> & GetTextureEnemy() const;
+    const std::vector<sf::Texture> & GetTextureNPC() const;
+    const sf::Texture & GetPlayerTexture() const;
+    const sf::Texture & GetShadowTexture() const;
 
 };
 
