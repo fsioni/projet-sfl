@@ -22,7 +22,7 @@ void txtLoop(Game & g)
                 system("setterm -cursor on");
 				break;
         default:
-            g.KeyboardPressed(c);
+            //g.KeyboardPressed(c);
             break;
 		}
     } while (ok);

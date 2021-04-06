@@ -10,13 +10,12 @@
 */
 class State
 {
-private:
-    /*// === Données membres privées === //*/
-
 public:
 
     /*// === Fonctions membres publiques === //*/
 
+    State(){};
+    virtual ~State(){};
 
     /*! \brief Fonction d'initialisation du State
     *
@@ -25,12 +24,27 @@ public:
     */
     virtual void Init()=0;
 
-    /*! \brief Fonction de nettoyage du State
+        /*! \brief Fonction de gestion des touches du State
     *
-    *   Appelée une seule fois : lorsque le State est quitté
+    *   Une touche peut avoir un comportement différent selon le State
     *   Fonction virtuelle pure : doit être implémentée par l'enfant
     */
-    virtual void CleanUp()=0; 
+    virtual void ProcessInput()=0;
+
+    /*! \brief Fonction de mise à jour du State
+    *
+    *   Est appelée à chaque mise à jour de l'application
+    *   Fonction virtuelle pure : doit être implémentée par l'enfant
+    */
+    virtual void Update()=0;
+
+    /*! \brief Fonction d'affichage du State
+    *
+    *   Est appelée à chaque mise à jour de l'application
+    *   Permet un affichage dans la console ou en mode graphique selon le State associé
+    *   Fonction virtuelle pure : doit être implémentée par l'enfant
+    */
+    virtual void Display()=0;
 
     /*! \brief Fonction de mise en pause du State
     *
@@ -44,36 +58,8 @@ public:
     *   Est appelée lorsque le State se remet en marche
     *   Fonction virtuelle pure : doit être implémentée par l'enfant
     */
-    virtual void Resume()=0;
+    virtual void Start()=0;
 
-    /*! \brief Fonction de gestion des touches du State
-    *
-    *   Une touche peut avoir un comportement différent selon le State
-    *   Fonction virtuelle pure : doit être implémentée par l'enfant
-    */
-    virtual void GetEvents()=0;
-
-    /*! \brief Fonction de boucle du State
-    *
-    *   Est appelée à chaque mise à jour de l'application
-    *   Fonction virtuelle pure : doit être implémentée par l'enfant
-    */
-    virtual void Update()=0;
-    
-    /*! \brief Fonction d'affichage du State
-    *
-    *   Est appelée à chaque mise à jour de l'application
-    *   Permet un affichage dans la console ou en mode graphique selon le State associé
-    *   Fonction virtuelle pure : doit être implémentée par l'enfant
-    */
-    virtual void Display()=0;
-
-    /*! \brief Fonction test de la classe State
-    *
-    *   Effectue des tests pour vérifier l'intégrité de la classe State et son fonctionnement
-    */
-    virtual void Test()=0;
 };
-
 
 #endif // __STATE_H__

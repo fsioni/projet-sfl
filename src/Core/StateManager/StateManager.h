@@ -2,7 +2,8 @@
 #define __STATEMANAGER_H__
 
 #include "State.h"
-#include <vector>
+#include <stack>
+#include <memory>
 
 /*! \class StateManager 
 *   \brief Classe représentant un gestionnaire d'états (State)
@@ -15,7 +16,11 @@ class StateManager
 {
 private:
     /*// === Données membres privées === //*/
-    std::vector<State*> sStates; //Tas d'états représenté par un tableau dynamique. Le dernier état du tableau est celui qui doit être joué
+    std::stack<std::unique_ptr<State>> sStates; //Tas d'états. Le dernier état du tableau est celui qui doit être joué
+    std::unique_ptr<State> sNewState; //State en attente
+    bool add;
+    bool replace;
+    bool remove;
 public:
     /*// === Fonctions membres publiques === //*/
 
@@ -29,31 +34,25 @@ public:
     *   Destructeur de l'objet StateManager
     */
     ~StateManager();
-
-    /*! \brief Change le State courant par celui en paramètre
-    *
-    *   Supprime le State courant et ajoute le State en paramètre à la pile avant de le lancer
-    *   \param [in] nState : State qui est lancé
-    */
-    void ChangeState(State* nState);
     
-    /*! \brief Pause le State courant. Lance celui en paramètre
+    /*! \brief Ajoute le State en paramètre à la pile
     *
     *   Met en pause l'état actuel et ajoute l'état en paramètre à la pile avant de le lancer
     *   \param [in] nID : State qui est lancé
+    *   \param [in] replace : true si il doit remplacé le State actuel
     */
-    void PushState(State* nState);
+    void Add(std::unique_ptr<State> nState, bool replace = false);
     
     /*! \brief Passe au prochain State
     *
     *   Supprime le State courant et lance le suivant dans la pile
     */
-    void PopState();
-    
-    /*! \brief Vide le tas de State
-    *
-    */
-    void Clear();
+    void PopCurrent();
+
+    void ProcessStateChange();
+
+    std::unique_ptr<State>& GetCurrent();
+
 };
 
 
