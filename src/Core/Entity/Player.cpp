@@ -13,10 +13,12 @@ Player::~Player(){
 
     this->x = 0.0;
     this->y= 0.0;
-    this->name = "deleted";
+    this->name = "deletedPlayer";
     this->hp = 0;
     this->damage = 0;
+    this->maxHealth =0;
     this->livingStatus = false;
+    this->speed = 0.0;
 
 }
 
