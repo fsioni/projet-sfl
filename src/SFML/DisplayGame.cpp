@@ -124,9 +124,9 @@ void DisplayGame::DisplaySFML() const{
 
             // Gestion des bords de map
             if(substX<0) substX = 0;
-            if(substX> sizeX*w - winWidth) substX = sizeX*w - winWidth;
+            if(substX> sizeX*w - winWidth + w) substX = sizeX*w - winWidth + w;
             if(substY<0) substY = 0;
-            if(substY> sizeY*h - winHeight) substY = sizeY*h - winHeight;
+            if(substY> sizeY*h - winHeight + h) substY = sizeY*h - winHeight + h;
             
 
             // Affichage de la map
@@ -143,10 +143,10 @@ void DisplayGame::DisplaySFML() const{
                             int tileX = i*w - substX;
                             int tileY = j*h - substY;
                             if(tileX > -w && tileX < winWidth+w && 
-                               tileY > -h && tileY < winHeight+h ){
+                               tileY > -h && tileY < winHeight+2*h ){
 
                                 tileSprite.setPosition(
-                                    i*w-substX, j*h-substY
+                                    tileX, tileY
                                 );
 
                                 tileSprite.setTextureRect(
@@ -216,7 +216,7 @@ void DisplayGame::DisplaySFML() const{
                     sf::RectangleShape cb(sf::Vector2f(collisionBoxes[i].GetWidth(), collisionBoxes[i].GetHeight()));
                     cb.setPosition(collisionBoxes[i].GetX() -substX, collisionBoxes[i].GetY()-substY);
                     cb.setFillColor(sf::Color(0, 190, 255, 200));
-                    window.draw(cb);                
+                    window.draw(cb);              
                 }            
             }
 
