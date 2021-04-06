@@ -13,7 +13,7 @@ DisplayGame::~DisplayGame(){
     assets = nullptr;
 }
 
-void DisplayGame::DisplaySFML() const{
+void DisplayGame::DisplaySFML(sf::RenderWindow  & window) const{
     // ================== Affichage SFML  ==================
         sf::Texture tileTexture, charTextures, shadowTexture, enemyTexture;
         sf::Sprite tileSprite, charSprite, shadowSprite, enemySprite;
@@ -37,7 +37,7 @@ void DisplayGame::DisplaySFML() const{
         // Initialisation de la fenetre
         int winWidth = 800;
         int winHeight = 800;
-        sf::RenderWindow window(sf::VideoMode(winWidth, winHeight, 32), "Legend Of Nautibus");
+        //sf::RenderWindow window(sf::VideoMode(winWidth, winHeight, 32), "Legend Of Nautibus");
 
         // Horloge
         sf::Clock clock;
@@ -175,22 +175,25 @@ void DisplayGame::DisplaySFML() const{
 
             
             // Affichage de l'ombre
-            shadowSprite.setPosition(playerX-substX, playerY-substY +2);
+            shadowSprite.setPosition(playerX-substX - 16, playerY-substY -16 +2);
             shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
             window.draw(shadowSprite);
            
 
             // Affichage du joueur
-            charSprite.setPosition(playerX-substX, playerY-substY);
+            charSprite.setPosition(playerX-substX - 16, playerY-substY - 16);
             charSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
             window.draw(charSprite);
 
             // Affichage des ennemies
             int count = game->GetEnemiesConst().size();
+            
             for(int i=0; i<count; i++){
-                int enX = game->GetEnemiesConst()[i].GetPos_x();
-                int enY = game->GetEnemiesConst()[i].GetPos_x();
-                enemySprite.setPosition(enX, enY);
+                
+                int enX = game->GetEnemiesConst()[i].GetPos_x() - substX;
+                int enY = game->GetEnemiesConst()[i].GetPos_y() - substY;
+          
+                enemySprite.setPosition(enX - 16, enY - 16);
                 enemySprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
                 window.draw(enemySprite);
             }
@@ -204,7 +207,7 @@ void DisplayGame::DisplaySFML() const{
                 int pOffset = p.getOffset();
 
                 sf::RectangleShape pb(sf::Vector2f(p.GetWidth() - pOffset*2, p.GetHeight() -pOffset*2));
-                pb.setPosition(p.GetPos_x() + pOffset -substX, p.GetPos_y() + pOffset -substY);
+                pb.setPosition(p.GetPos_x() + pOffset -substX -16, p.GetPos_y() + pOffset -substY -16);
                 pb.setFillColor(sf::Color(0, 130, 255, 200));
                 window.draw(pb);
 

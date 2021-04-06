@@ -12,7 +12,7 @@ public:
     DisplayGame();
     ~DisplayGame();
 
-    void DisplaySFML() const;
+    void DisplaySFML(sf::RenderWindow  & window) const;
 
 };
 
