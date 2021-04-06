@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Legends of Nautibus:  Fichier source de src/Core/Map/Tileset.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Legends of Nautibus
+   </div>
+   <div id="projectbrief">2D Game, Explore the world and fight with your ennemies</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('Tileset_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Tileset.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Tileset_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _TILESET_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _TILESET_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classTileset.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTileset.html">Tileset</a>{</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classTileset.html#a18d4be506284b7ab3cf2e2b7e688042a">   16</a></span>&#160;    std::string <a class="code" href="classTileset.html#a18d4be506284b7ab3cf2e2b7e688042a">name</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classTileset.html#a477770a6cc81a9a53bf5928ebd5c88a9">   19</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classTileset.html#a477770a6cc81a9a53bf5928ebd5c88a9">tileWidth</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classTileset.html#a62c8b00674890f60189f1ace74aeee88">   22</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classTileset.html#a62c8b00674890f60189f1ace74aeee88">tileHeight</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classTileset.html#a1e8902719ac12548c2c6dfc6902c49a2">   25</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classTileset.html#a1e8902719ac12548c2c6dfc6902c49a2">tileCount</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classTileset.html#a94a7c91f9bb58c1b91cc9e0a9c8b3dc3">   28</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classTileset.html#a94a7c91f9bb58c1b91cc9e0a9c8b3dc3">column</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classTileset.html#a0fb98e1845e3cf7281ccf31cc0e87755">   31</a></span>&#160;    std::string <a class="code" href="classTileset.html#a0fb98e1845e3cf7281ccf31cc0e87755">tileMapPath</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classTileset.html#a3f1d1e233caf30f65879e06455b60ca3">   34</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classTileset.html#a3f1d1e233caf30f65879e06455b60ca3">tileMapWidth</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classTileset.html#a60c38db68abc1f946673db7d183003e7">   37</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classTileset.html#a60c38db68abc1f946673db7d183003e7">tileMapHeight</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classTileset.html#a9b75b605d834e3c9e25fb1c2429a36f6">Tileset</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classTileset.html#a9b75b605d834e3c9e25fb1c2429a36f6">Tileset</a>(<span class="keyword">const</span> <a class="code" href="classTileset.html">Tileset</a> &amp; ts);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classTileset.html#a9b75b605d834e3c9e25fb1c2429a36f6">Tileset</a>(std::string rawData);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classTileset.html#afbb53f34f87b8b9c1f575349e89a6cd5">~Tileset</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classTileset.html">Tileset</a> &amp; <a class="code" href="classTileset.html#afe577c2af89a7596fa62772ca9f5930b">operator=</a>(<span class="keyword">const</span> <a class="code" href="classTileset.html">Tileset</a> &amp; ts);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// TODO : soit à supprimer ou à documenter =&gt; en discuter avec les autres</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTileset.html#a22dac9b067b004a9f9c52ca984af33b4">SetName</a>(std::string name_);    </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTileset.html#af39b8948f4f79fb216a1b3d81815485e">SetTileWidth</a>(<span class="keywordtype">int</span> tw);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTileset.html#a3c505da0c69ae1b70564c07a50872132">SetTileHeight</a>(<span class="keywordtype">int</span> th);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTileset.html#aa0f601faed9f3c6042cfe032b5191c3d">SetTileCount</a>(<span class="keywordtype">int</span> tc);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTileset.html#a09fa40bb633c78919f0da4a99a4d66c7">SetColumn</a>(<span class="keywordtype">int</span> col);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTileset.html#a57f639dbd97728ded9f694fec2c31f2c">SetTileMapPath</a>(std::string tmp);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTileset.html#a2d6544b1cf1a49600bfe9e4b58772a41">SetTileMapWidth</a>(<span class="keywordtype">int</span> tmw);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTileset.html#a46538c42bf435aa6ac6643123da63d93">SetTileMapHeight</a>(<span class="keywordtype">int</span> tmh);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::string <a class="code" href="classTileset.html#a8015df88b62c9b7cf6e19c55dc398f69">GetName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classTileset.html#a91f1063653764e3e799a0331336d9e00">GetTileWidth</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classTileset.html#a586d2ecc83c354bcc981e49ed579d359">GetTileHeight</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classTileset.html#a060020f7a21a85d854f1b8fdf6ea192a">GetTileCount</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classTileset.html#ad636679bf81f2aa5ad00beff2d5c9ef2">GetColumn</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    std::string <a class="code" href="classTileset.html#a937a18ca2f53d7261d3eff752e8afb91">GetTileMapPath</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classTileset.html#ae109a25be64886c5139162186da7919b">GetTileMapWidth</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classTileset.html#adffdd1eda76615393d0d6b085ac61cf9">GetTileMapHeight</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9">Test</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;};</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassTileset_html"><div class="ttname"><a href="classTileset.html">Tileset</a></div><div class="ttdoc">Classe représentant un tileset (ensemble de tuile stocké sur une image).</div><div class="ttdef"><b>Definition:</b> Tileset.h:14</div></div>
+<div class="ttc" id="aclassTileset_html_a060020f7a21a85d854f1b8fdf6ea192a"><div class="ttname"><a href="classTileset.html#a060020f7a21a85d854f1b8fdf6ea192a">Tileset::GetTileCount</a></div><div class="ttdeci">int GetTileCount() const</div><div class="ttdoc">Retourne tileCount.</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:111</div></div>
+<div class="ttc" id="aclassTileset_html_a09fa40bb633c78919f0da4a99a4d66c7"><div class="ttname"><a href="classTileset.html#a09fa40bb633c78919f0da4a99a4d66c7">Tileset::SetColumn</a></div><div class="ttdeci">void SetColumn(int col)</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:85</div></div>
+<div class="ttc" id="aclassTileset_html_a0fb98e1845e3cf7281ccf31cc0e87755"><div class="ttname"><a href="classTileset.html#a0fb98e1845e3cf7281ccf31cc0e87755">Tileset::tileMapPath</a></div><div class="ttdeci">std::string tileMapPath</div><div class="ttdoc">Chemin et nom de la tileset (= image).</div><div class="ttdef"><b>Definition:</b> Tileset.h:31</div></div>
+<div class="ttc" id="aclassTileset_html_a18d4be506284b7ab3cf2e2b7e688042a"><div class="ttname"><a href="classTileset.html#a18d4be506284b7ab3cf2e2b7e688042a">Tileset::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Nom du tileset.</div><div class="ttdef"><b>Definition:</b> Tileset.h:16</div></div>
+<div class="ttc" id="aclassTileset_html_a1e8902719ac12548c2c6dfc6902c49a2"><div class="ttname"><a href="classTileset.html#a1e8902719ac12548c2c6dfc6902c49a2">Tileset::tileCount</a></div><div class="ttdeci">int tileCount</div><div class="ttdoc">Nombre de tuile dans le tileset.</div><div class="ttdef"><b>Definition:</b> Tileset.h:25</div></div>
+<div class="ttc" id="aclassTileset_html_a22dac9b067b004a9f9c52ca984af33b4"><div class="ttname"><a href="classTileset.html#a22dac9b067b004a9f9c52ca984af33b4">Tileset::SetName</a></div><div class="ttdeci">void SetName(std::string name_)</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:73</div></div>
+<div class="ttc" id="aclassTileset_html_a2d6544b1cf1a49600bfe9e4b58772a41"><div class="ttname"><a href="classTileset.html#a2d6544b1cf1a49600bfe9e4b58772a41">Tileset::SetTileMapWidth</a></div><div class="ttdeci">void SetTileMapWidth(int tmw)</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:91</div></div>
+<div class="ttc" id="aclassTileset_html_a3c505da0c69ae1b70564c07a50872132"><div class="ttname"><a href="classTileset.html#a3c505da0c69ae1b70564c07a50872132">Tileset::SetTileHeight</a></div><div class="ttdeci">void SetTileHeight(int th)</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:79</div></div>
+<div class="ttc" id="aclassTileset_html_a3f1d1e233caf30f65879e06455b60ca3"><div class="ttname"><a href="classTileset.html#a3f1d1e233caf30f65879e06455b60ca3">Tileset::tileMapWidth</a></div><div class="ttdeci">int tileMapWidth</div><div class="ttdoc">Largeur de la tileset (= image).</div><div class="ttdef"><b>Definition:</b> Tileset.h:34</div></div>
+<div class="ttc" id="aclassTileset_html_a46538c42bf435aa6ac6643123da63d93"><div class="ttname"><a href="classTileset.html#a46538c42bf435aa6ac6643123da63d93">Tileset::SetTileMapHeight</a></div><div class="ttdeci">void SetTileMapHeight(int tmh)</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:94</div></div>
+<div class="ttc" id="aclassTileset_html_a477770a6cc81a9a53bf5928ebd5c88a9"><div class="ttname"><a href="classTileset.html#a477770a6cc81a9a53bf5928ebd5c88a9">Tileset::tileWidth</a></div><div class="ttdeci">int tileWidth</div><div class="ttdoc">Largeur des tuiles en pixel.</div><div class="ttdef"><b>Definition:</b> Tileset.h:19</div></div>
+<div class="ttc" id="aclassTileset_html_a57f639dbd97728ded9f694fec2c31f2c"><div class="ttname"><a href="classTileset.html#a57f639dbd97728ded9f694fec2c31f2c">Tileset::SetTileMapPath</a></div><div class="ttdeci">void SetTileMapPath(std::string tmp)</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:88</div></div>
+<div class="ttc" id="aclassTileset_html_a586d2ecc83c354bcc981e49ed579d359"><div class="ttname"><a href="classTileset.html#a586d2ecc83c354bcc981e49ed579d359">Tileset::GetTileHeight</a></div><div class="ttdeci">int GetTileHeight() const</div><div class="ttdoc">Retourne tileHeight.</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:107</div></div>
+<div class="ttc" id="aclassTileset_html_a60c38db68abc1f946673db7d183003e7"><div class="ttname"><a href="classTileset.html#a60c38db68abc1f946673db7d183003e7">Tileset::tileMapHeight</a></div><div class="ttdeci">int tileMapHeight</div><div class="ttdoc">Longueur de la tileset (= image).</div><div class="ttdef"><b>Definition:</b> Tileset.h:37</div></div>
+<div class="ttc" id="aclassTileset_html_a62c8b00674890f60189f1ace74aeee88"><div class="ttname"><a href="classTileset.html#a62c8b00674890f60189f1ace74aeee88">Tileset::tileHeight</a></div><div class="ttdeci">int tileHeight</div><div class="ttdoc">Longueur des tuiles en pixel.</div><div class="ttdef"><b>Definition:</b> Tileset.h:22</div></div>
+<div class="ttc" id="aclassTileset_html_a8015df88b62c9b7cf6e19c55dc398f69"><div class="ttname"><a href="classTileset.html#a8015df88b62c9b7cf6e19c55dc398f69">Tileset::GetName</a></div><div class="ttdeci">std::string GetName() const</div><div class="ttdoc">Retourne name.</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:99</div></div>
+<div class="ttc" id="aclassTileset_html_a91f1063653764e3e799a0331336d9e00"><div class="ttname"><a href="classTileset.html#a91f1063653764e3e799a0331336d9e00">Tileset::GetTileWidth</a></div><div class="ttdeci">int GetTileWidth() const</div><div class="ttdoc">Retourne tileWidth.</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:103</div></div>
+<div class="ttc" id="aclassTileset_html_a937a18ca2f53d7261d3eff752e8afb91"><div class="ttname"><a href="classTileset.html#a937a18ca2f53d7261d3eff752e8afb91">Tileset::GetTileMapPath</a></div><div class="ttdeci">std::string GetTileMapPath() const</div><div class="ttdoc">Retourne tileMapPath.</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:119</div></div>
+<div class="ttc" id="aclassTileset_html_a94a7c91f9bb58c1b91cc9e0a9c8b3dc3"><div class="ttname"><a href="classTileset.html#a94a7c91f9bb58c1b91cc9e0a9c8b3dc3">Tileset::column</a></div><div class="ttdeci">int column</div><div class="ttdoc">Nombre de tuile par ligne (= nombre de colonnes).</div><div class="ttdef"><b>Definition:</b> Tileset.h:28</div></div>
+<div class="ttc" id="aclassTileset_html_a9b75b605d834e3c9e25fb1c2429a36f6"><div class="ttname"><a href="classTileset.html#a9b75b605d834e3c9e25fb1c2429a36f6">Tileset::Tileset</a></div><div class="ttdeci">Tileset()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:7</div></div>
+<div class="ttc" id="aclassTileset_html_aa0f601faed9f3c6042cfe032b5191c3d"><div class="ttname"><a href="classTileset.html#aa0f601faed9f3c6042cfe032b5191c3d">Tileset::SetTileCount</a></div><div class="ttdeci">void SetTileCount(int tc)</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:82</div></div>
+<div class="ttc" id="aclassTileset_html_ab5cc1858ffd883c9d32cd42bed9532d9"><div class="ttname"><a href="classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9">Tileset::Test</a></div><div class="ttdeci">void Test() const</div><div class="ttdoc">Fonction de test de la classe Tileset.</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:131</div></div>
+<div class="ttc" id="aclassTileset_html_ad636679bf81f2aa5ad00beff2d5c9ef2"><div class="ttname"><a href="classTileset.html#ad636679bf81f2aa5ad00beff2d5c9ef2">Tileset::GetColumn</a></div><div class="ttdeci">int GetColumn() const</div><div class="ttdoc">Retourne column.</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:115</div></div>
+<div class="ttc" id="aclassTileset_html_adffdd1eda76615393d0d6b085ac61cf9"><div class="ttname"><a href="classTileset.html#adffdd1eda76615393d0d6b085ac61cf9">Tileset::GetTileMapHeight</a></div><div class="ttdeci">int GetTileMapHeight() const</div><div class="ttdoc">Retourne tileMapHeight.</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:127</div></div>
+<div class="ttc" id="aclassTileset_html_ae109a25be64886c5139162186da7919b"><div class="ttname"><a href="classTileset.html#ae109a25be64886c5139162186da7919b">Tileset::GetTileMapWidth</a></div><div class="ttdeci">int GetTileMapWidth() const</div><div class="ttdoc">Retourne tileMapWidth.</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:123</div></div>
+<div class="ttc" id="aclassTileset_html_af39b8948f4f79fb216a1b3d81815485e"><div class="ttname"><a href="classTileset.html#af39b8948f4f79fb216a1b3d81815485e">Tileset::SetTileWidth</a></div><div class="ttdeci">void SetTileWidth(int tw)</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:76</div></div>
+<div class="ttc" id="aclassTileset_html_afbb53f34f87b8b9c1f575349e89a6cd5"><div class="ttname"><a href="classTileset.html#afbb53f34f87b8b9c1f575349e89a6cd5">Tileset::~Tileset</a></div><div class="ttdeci">~Tileset()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:54</div></div>
+<div class="ttc" id="aclassTileset_html_afe577c2af89a7596fa62772ca9f5930b"><div class="ttname"><a href="classTileset.html#afe577c2af89a7596fa62772ca9f5930b">Tileset::operator=</a></div><div class="ttdeci">Tileset &amp; operator=(const Tileset &amp;ts)</div><div class="ttdoc">Surcharge de l'opérateur =.</div><div class="ttdef"><b>Definition:</b> Tileset.cpp:58</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a2f0e5642e47e7ed59fe0f0829eafb5f.html">Core</a></li><li class="navelem"><a class="el" href="dir_38d5e71d7d94264356c8b2e5ffa968dc.html">Map</a></li><li class="navelem"><a class="el" href="Tileset_8h.html">Tileset.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

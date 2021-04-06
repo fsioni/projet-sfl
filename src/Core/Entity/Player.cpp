@@ -16,9 +16,9 @@ Player::~Player(){
     this->name = "deletedPlayer";
     this->hp = 0;
     this->damage = 0;
-    this->maxHealth =0;
-    this->livingStatus = false;
     this->speed = 0.0;
+    this->maxHealth = 0;
+    this->livingStatus = false;
 
 }
 

@@ -155,3 +155,13 @@ char WinTXT::getCh() { // lire un caractere si une touche a ete pressee
 #endif
     return touche;
 }
+
+int WinTXT::getDimx() const
+{
+    return this->dimx;
+}
+
+int WinTXT::getDimy() const
+{
+    return this->dimy;
+}

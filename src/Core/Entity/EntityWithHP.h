@@ -3,6 +3,7 @@
 
 #include "EntityWithoutHP.h"
 #include <string>
+
 using namespace std;
 
 /*! \class EntityWithHP
@@ -13,6 +14,7 @@ using namespace std;
 */
 class EntityWithHP : public EntityWithoutHP
 {
+
 protected :
     /*// ==== Données membres protégées === //*/
 
@@ -66,7 +68,7 @@ public:
     *  Destructeur de la classe EntityWithHP.
     *
     */
-    ~EntityWithHP();
+    virtual ~EntityWithHP();
 
 
     /*! \brief Permet de deplacer l'entité.
@@ -134,6 +136,7 @@ public:
     int GetDamage() const;
 
 
+
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.
     *
     *   Imprime sur la console des informations concernant l'entité.
@@ -141,6 +144,7 @@ public:
     *
     */
     void PrintEntityInfo() override;
+
 
 
     /*! \brief Permet de faire en sorte qu'une entité subisse le nombre "damage" dégats.
