@@ -114,24 +114,26 @@ void DisplayGame::DisplaySFML() const{
             int h = game->GetMapConst().GetTileset().GetTileHeight();
             int nbMapLayer = game->GetMapConst().GetMapLayers().size();
             int x, y, data;
+            int sizeX = game->GetMapConst().GetMapLayers()[0].GetWidth();
+            int sizeY = game->GetMapConst().GetMapLayers()[0].GetHeight();
             
             // Gestion de camera qui suit le joueur
-            int substX = playerX-400;
-            int substY = playerY-400;
+            int substX = playerX- winWidth/2;
+            int substY = playerY- winHeight/2;
 
 
             // Gestion des bords de map
             if(substX<0) substX = 0;
-            if(substX>winWidth) substX = winWidth;
+            if(substX> sizeX*w - winWidth) substX = sizeX*w - winWidth;
             if(substY<0) substY = 0;
-            if(substY>winHeight) substY = winHeight;
+            if(substY> sizeY*h - winHeight) substY = sizeY*h - winHeight;
             
 
             // Affichage de la map
             for(int k=0; k<nbMapLayer; k++){
                 MapLayer layer = game->GetMapConst().GetMapLayers()[k];
-                for(int i=0; i<50; i++){
-                    for(int j=0; j<50; j++){
+                for(int i=0; i<sizeX; i++){
+                    for(int j=0; j<sizeY; j++){
                         data = layer.GetData(i, j);
                         if(data!=0){
                             x = ((data-1) % 8)*w;
