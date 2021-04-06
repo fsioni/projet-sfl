@@ -124,7 +124,7 @@ void DisplayGame::DisplaySFML() const{
 
             // Gestion des bords de map
             if(substX<0) substX = 0;
-            if(substX> sizeX*w - winWidth + w) substX = sizeX*w - winWidth + w;
+            if(substX> sizeX*w - winWidth) substX = sizeX*w - winWidth;
             if(substY<0) substY = 0;
             if(substY> sizeY*h - winHeight + h) substY = sizeY*h - winHeight + h;
             
