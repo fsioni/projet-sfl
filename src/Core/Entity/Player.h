@@ -6,14 +6,47 @@
 
 using namespace std;
 
+/*! \class Player
+*   \brief Classe représentant un joueur qui peut infliger/subir des dégats et se déplacer.
+*
+*   La classe représente un joueur avec un nom, des points de vie, une position, des dégats d'attaque,
+*   une vitesse et un cap maximum de points de vie.
+*/
 class Player : public EntityWithHP
 {
 public :
+    /*// ==== Fonctions membres publiques === //*/
 
+    /*! \brief Constructeur par défaut.
+    *
+    *
+    *   Créer un Player avec une position x 0.0, une position y 0.0, un nom "Unknown", 200 hp, 20 de damage,
+    *   200 de maxHealth et une vitesse de 1,0 (entité vide).
+    *
+    */
     Player();
 
+    /*! \brief Constructeur avec spécifités d'un Player en paramètre.
+    *   \param [in] x : réel positif, position du Player sur l'axe X (horizontal).
+    *   \param [in] y : réel positif, position du Player sur l'axe Y (vertical).
+    *   \param [in] name : chaine de caractères, nom du Player.
+    *   \param [in] hp : entier positif, nombre de points de vie du Player.
+    *   \param [in] dammage : entier positif, nombre de points de vie infligé lors d'une attaque.
+    *   \param [in] maxHealth : entier positif, maximum de points de vie qu'un Player peut avoir.
+    *   \param [in] livingStatus : Booléen, définissant si le Player est mort ou pas.
+    *   \param [in] speed : réel positif, vitesse de déplacement du Player.
+    *
+    *
+    *   Créer un Player (x, y, name, hp, dammage, maxHealth, livingStatus, speed)
+    *
+    */
     Player(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, unsigned int maxHealth);
 
+    /*! \brief Destructeur.
+    *
+    *  Destructeur de la classe Player.
+    *
+    */
     ~Player();
 
 };
