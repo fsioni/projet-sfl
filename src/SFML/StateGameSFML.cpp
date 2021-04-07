@@ -46,22 +46,22 @@ void StateGameSFML::ProcessInput()
             {
             case sf::Keyboard::Z:
                 MoveWithCollision(0, -1);
-                context->player->SetDirection(EntityDirection::Up);
+                context->player->SetDirection(Up);
                 break;
             
             case sf::Keyboard::Q:
                 MoveWithCollision(-1, 0);
-                context->player->SetDirection(EntityDirection::Left);
+                context->player->SetDirection(Left);
                 break;
             
             case sf::Keyboard::S:
                 MoveWithCollision(0, 1);
-                context->player->SetDirection(EntityDirection::Down);
+                context->player->SetDirection(Down);
                 break;
 
             case sf::Keyboard::D:
                 MoveWithCollision(1, 0);
-                context->player->SetDirection(EntityDirection::Right);
+                context->player->SetDirection(Right);
                 break;        
 
             case sf::Keyboard::P:
