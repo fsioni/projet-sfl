@@ -22,7 +22,7 @@ private:
     // 1 : gauche
     // 2 : droite 
     // 3 : haut
-    int direction = 2;
+    //int direction = 2;
 
     // Position du joueur
     int playerX, playerY;

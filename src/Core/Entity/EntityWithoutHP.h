@@ -5,6 +5,13 @@
 #include <iostream>
 
 using namespace std;
+ 
+enum EntityDirection{
+    Down, 
+    Left,
+    Right,
+    Up
+};
 
 /*! \class EntityWithoutHP
 *   \brief Classe représentant une entité immobile et immortel.
@@ -12,7 +19,6 @@ using namespace std;
 *   La classe représente une entité avec une position et un nom.
 *
 */
-
 class EntityWithoutHP
 {
 
@@ -32,6 +38,8 @@ protected :
 
     /*! \brief Nom de l'entité */
     string name;
+
+    EntityDirection direction;
 
 public:
 
@@ -143,9 +151,13 @@ public:
 
     void SetHeight(int newH);
 
-    int getOffset();
+    int getOffset() const;
 
     void setOffset(int newO);
+
+    EntityDirection GetDirection() const;
+
+    void SetDirection(EntityDirection nDirection);
 
 };
 

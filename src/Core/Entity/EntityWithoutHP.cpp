@@ -14,6 +14,8 @@ EntityWithoutHP::EntityWithoutHP(){
     this->height = 0.0;
     this->offset = 0;
     this->name = "Unknown";
+
+    direction = EntityDirection::Right;
 }
 
 EntityWithoutHP::EntityWithoutHP(float x, float y, string name){
@@ -25,6 +27,8 @@ EntityWithoutHP::EntityWithoutHP(float x, float y, string name){
     this->height = 32.0;
     this->offset = 7;
     this->name = name;
+
+    direction = EntityDirection::Right;
 }
 
 
@@ -36,7 +40,7 @@ EntityWithoutHP::~EntityWithoutHP(){
     this->height = 0.0;
     this->offset =0;
     this->name = "delete";
-
+    direction = EntityDirection::Right;
 }
 
 
@@ -93,7 +97,7 @@ void EntityWithoutHP::SetHeight(int newH)
     height = newH;
 }
 
-int EntityWithoutHP::getOffset()
+int EntityWithoutHP::getOffset() const
 {
     return offset;
 }
@@ -106,4 +110,13 @@ void EntityWithoutHP::setOffset(int newO)
 float EntityWithoutHP::GetPos_y() const{
 
     return y;
+}
+
+
+ EntityDirection EntityWithoutHP::GetDirection() const{
+     return direction;
+ }
+
+void EntityWithoutHP::SetDirection(EntityDirection nDirection){
+    direction = nDirection;
 }

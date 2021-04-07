@@ -46,22 +46,22 @@ void StateGameSFML::ProcessInput()
             {
             case sf::Keyboard::Z:
                 MoveWithCollision(0, -1);
-                direction = 3;
+                context->player->SetDirection(EntityDirection::Up);
                 break;
             
             case sf::Keyboard::Q:
                 MoveWithCollision(-1, 0);
-                direction = 1;
+                context->player->SetDirection(EntityDirection::Left);
                 break;
             
             case sf::Keyboard::S:
                 MoveWithCollision(0, 1);
-                direction = 0;
+                context->player->SetDirection(EntityDirection::Down);
                 break;
 
             case sf::Keyboard::D:
                 MoveWithCollision(1, 0);
-                direction = 2;
+                context->player->SetDirection(EntityDirection::Right);
                 break;        
 
             case sf::Keyboard::P:
@@ -162,6 +162,7 @@ void StateGameSFML::Display()
 
     // -h/2 et -w/2 pour recentrer l'origine des entités
     // Affichage de l'ombre
+    int direction = context->player->GetDirection();
     shadowSprite.setPosition(playerX-substX - w/2, playerY-substY -h/2 +2);
     shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
     context->renderWin->draw(shadowSprite);
@@ -174,10 +175,11 @@ void StateGameSFML::Display()
 
     // Affichage des ennemies
     for(int i=0; i<(int)context->enemies.size(); i++){
+        direction = context->enemies[i].GetDirection();
         int enX = context->enemies[i].GetPos_x()-substX;
         int enY = context->enemies[i].GetPos_y()-substY;
         enemySprite.setPosition(enX -w/2, enY -h/2);
-        enemySprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
+        enemySprite.setTextureRect(sf::IntRect(posX, 0, 32, 32));
         context->renderWin->draw(enemySprite);
     }
 
