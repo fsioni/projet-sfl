@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include "../SFML/StateGameSFML.h"
-#include "../txt/StateGameTxt.h"
+#include "../txt/StateSplashScreenTxt.h"
 
 #include <iostream>
 
@@ -54,7 +54,7 @@ void Game::Run(int mode)
     }
     
     case 1: //mode txt
-        context->stateMan->Add(std::make_unique<StateGameTxt>(context));
+        context->stateMan->Add(std::make_unique<StateSplashScreenTxt>(context));
         while (!context->quit)
         {
             context->stateMan->ProcessStateChange();

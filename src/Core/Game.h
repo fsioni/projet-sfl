@@ -11,6 +11,7 @@
 #include <string>
 
 #include<SFML/Graphics.hpp>
+#include "../txt/winTxt.h"
 
 #include <vector>
 

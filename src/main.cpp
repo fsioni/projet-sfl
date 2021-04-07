@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include "txt/gameTxt.h"
 #include "Core/Game.h"
 
 
