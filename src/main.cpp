@@ -21,7 +21,7 @@ int main(int argc, char* argv[]){
         std::cout << "txt mode" << std::endl;
         termClear();
         Game game;
-        txtLoop(game);
+        game.Run(1);
         termClear();
     }
     else if(argv[1] == std::string("2")){

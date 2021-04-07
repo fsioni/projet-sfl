@@ -40,7 +40,7 @@ private:
 
 public:
     StateGameSFML(/* args */);
-    StateGameSFML(std::shared_ptr<Context> &context);
+    StateGameSFML(std::shared_ptr<Context> &cContext);
     ~StateGameSFML();
 
     void Init();

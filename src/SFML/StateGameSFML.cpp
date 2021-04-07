@@ -70,9 +70,13 @@ void StateGameSFML::ProcessInput()
             
             case sf::Keyboard::X:
                 context->renderWin->close();  
+                context->quit = true;
+                break;
             
             case sf::Keyboard::Escape:
                 context->renderWin->close();
+                context->quit = true;
+                break;
             
             default:
                 break;

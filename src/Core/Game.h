@@ -23,6 +23,7 @@ struct Context
     std::unique_ptr<Player> player;
     std::vector<Enemy> enemies;
     bool isDebug;
+    bool quit;
 
     Context(){
         assetMan = std::make_unique<AssetManager>();
@@ -34,6 +35,7 @@ struct Context
         player = std::make_unique<Player>(map->GetSpawnsLayer().getPlayerSpawn().GetX(), 
         map->GetSpawnsLayer().getPlayerSpawn().GetY(), "Player", 10, 10, 4, 10);
         isDebug = false;
+        quit = false;
 
     }
 };

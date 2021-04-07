@@ -3,8 +3,8 @@ OBJ_FILES = obj/main.o obj/Layer.o obj/tmxParsing.o obj/Tileset.o obj/Map.o
 OBJ_FILES += obj/MapLayer.o obj/CollisionLayer.o obj/SpawnPoint.o obj/SpawnPoint.o
 OBJ_FILES += obj/SpawnsLayer.o obj/Box.o obj/CollisionBox.o obj/StateManager.o
 OBJ_FILES += obj/Game.o obj/EntityWithHP.o obj/EntityWithoutHP.o obj/Player.o
-OBJ_FILES += obj/Enemy.o obj/winTxt.o obj/gameTxt.o obj/AssetManager.o
-OBJ_FILES += obj/StateGameSFML.o
+OBJ_FILES += obj/Enemy.o obj/winTxt.o obj/StateGameTxt.o obj/AssetManager.o
+OBJ_FILES += obj/StateGameSFML.o 
 
 
 CC = g++
@@ -81,7 +81,7 @@ obj/Enemy.o : src/Core/Entity/Enemy.cpp src/Core/Entity/EntityWithHP.h
 obj/winTxt.o : src/txt/winTxt.cpp
 	$(COMPILATIONOBJ)
 
-obj/gameTxt.o : src/txt/gameTxt.cpp src/txt/winTxt.h src/Core/Game.h 
+obj/StateGameTxt.o : src/txt/StateGameTxt.cpp src/txt/winTxt.h src/Core/Game.h 
 	$(COMPILATIONOBJ)
 
 clean:
