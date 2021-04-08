@@ -1,7 +1,7 @@
 #include "Game.h"
 #include <stdio.h>
 #include <assert.h>
-#include "../SFML/StateGameSFML.h"
+#include "../SFML/StateSplashScreenSFML.h"
 #include "../txt/StateSplashScreenTxt.h"
 
 #include <iostream>
@@ -42,7 +42,7 @@ void Game::Run(int mode)
         int winWidth = 700;
         int winHeight = 700;
         context->renderWin->create(sf::VideoMode(winWidth, winHeight, 32), "Legend Of Nautibus", sf::Style::Close);
-        context->stateMan->Add(std::make_unique<StateGameSFML>(context));
+        context->stateMan->Add(std::make_unique<StateSplashScreenSFML>(context));
         while (!context->quit)
         {
             context->stateMan->ProcessStateChange();
