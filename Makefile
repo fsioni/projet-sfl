@@ -5,7 +5,7 @@ OBJ_FILES += obj/SpawnsLayer.o obj/Box.o obj/CollisionBox.o obj/StateManager.o
 OBJ_FILES += obj/Game.o obj/EntityWithHP.o obj/EntityWithoutHP.o obj/Player.o
 OBJ_FILES += obj/Enemy.o obj/winTxt.o obj/StateGameTxt.o obj/AssetManager.o
 OBJ_FILES += obj/StateGameSFML.o obj/StateSplashScreenTxt.o obj/StateMenuTxt.o
-OBJ_FILES += obj/StateSplashScreenSFML.o
+OBJ_FILES += obj/StateSplashScreenSFML.o obj/StateMenuSFML.o
 
 
 CC = g++
@@ -64,7 +64,7 @@ obj/tmxParsing.o: src/Core/Map/tmxParsing.cpp src/Core/Map/tmxParsing.h
 obj/StateManager.o : src/Core/StateManager/StateManager.cpp src/Core/StateManager/State.h
 	$(COMPILATIONOBJ)
 
-obj/Game.o : src/Core/Game.cpp src/Core/StateManager/StateManager.h src/txt/StateSplashScreenTxt.h
+obj/Game.o : src/Core/Game.cpp src/Core/StateManager/StateManager.h src/txt/StateSplashScreenTxt.h src/SFML/StateSplashScreenSFML.h
 	$(COMPILATIONOBJ)
 
 obj/EntityWithHP.o : src/Core/Entity/EntityWithHP.cpp src/Core/Entity/EntityWithoutHP.h 
@@ -91,8 +91,12 @@ obj/StateMenuTxt.o : src/txt/StateMenuTxt.cpp src/txt/StateMenuTxt.h
 obj/StateSplashScreenTxt.o : src/txt/StateSplashScreenTxt.cpp src/Core/Game.h src/Core/StateManager/State.h src/txt/StateGameTxt.h
 	$(COMPILATIONOBJ)
 
-obj/StateSplashScreenSFML.o : src/SFML/StateSplashScreenSFML.cpp src/Core/Game.h src/Core/StateManager/State.h src/SFML/StateGameSFML.h
+obj/StateSplashScreenSFML.o : src/SFML/StateSplashScreenSFML.cpp src/Core/Game.h src/Core/StateManager/State.h src/SFML/StateMenuSFML.h
 	$(COMPILATIONOBJ)
+
+obj/StateMenuSFML.o : src/SFML/StateMenuSFML.cpp src/Core/Game.h src/Core/StateManager/State.h src/SFML/StateGameSFML.h
+	$(COMPILATIONOBJ)
+
 clean:
 	rm $(OBJ_FILES) $(EXECS_NAME)
 

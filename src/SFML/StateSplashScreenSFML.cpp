@@ -1,5 +1,5 @@
 #include "StateSplashScreenSFML.h"
-#include "StateGameSFML.h"
+#include "StateMenuSFML.h"
 #include <assert.h>
 
 StateSplashScreenSFML::StateSplashScreenSFML(/* args */) 
@@ -61,13 +61,14 @@ void StateSplashScreenSFML::ProcessInput()
         {
         case sf::Event::Closed:
             context->renderWin->close();
+            context->quit = true;
             break;
 
         case sf::Event::KeyPressed:
             switch (Event.key.code)
             {
             case sf::Keyboard::Space:
-                context->stateMan->Add(std::make_unique<StateGameSFML>(context));
+                context->stateMan->Add(std::make_unique<StateMenuSFML>(context), true);
                 break;
             
             case sf::Keyboard::X:
@@ -97,7 +98,7 @@ void StateSplashScreenSFML::Update()
 
     if (duration > 1)
     {
-        context->stateMan->Add(make_unique<StateGameSFML>(context), true);
+        context->stateMan->Add(make_unique<StateMenuSFML>(context), true);
     }
 }
 
