@@ -88,8 +88,7 @@ void StateSplashScreenSFML::ProcessInput()
         default:
             break;
         }
-
-        }
+    }
 }
 
 void StateSplashScreenSFML::Update() 

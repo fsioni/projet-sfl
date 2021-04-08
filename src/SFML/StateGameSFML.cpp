@@ -39,6 +39,7 @@ void StateGameSFML::ProcessInput()
         {
         case sf::Event::Closed:
             context->renderWin->close();
+            context->quit = true;
             break;
 
         case sf::Event::KeyPressed:
