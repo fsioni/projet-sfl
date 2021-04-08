@@ -48,10 +48,6 @@ public:
     ~Game();
 
     void Run(int mode); //mode = 0 for SFML, 1 for txt 
-    Player GetPlayerConst() const;
-    std::vector<Enemy> GetEnemiesConst() const;
-    Map& GetMapConst() const;
-    sf::RenderWindow* GetWindow();
     void Test();
 private:
     std::shared_ptr<Context> context;

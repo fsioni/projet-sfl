@@ -70,27 +70,6 @@ void Game::Run(int mode)
     }
 }
 
-
-Player Game::GetPlayerConst() const
-{
-    //return context->player;
-}
-
-std::vector<Enemy> Game::GetEnemiesConst() const{
-    return context->enemies;
-}
-
-Map& Game::GetMapConst() const
-{
-    //return context->*map;
-}
-
-
-sf::RenderWindow* Game::GetWindow() 
-{
-    //return &window;
-}
-
 void Game::Test() 
 {
     
