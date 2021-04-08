@@ -62,56 +62,61 @@ void StateMenuSFML::ProcessInput()
     sf::Event event;
     while (context->renderWin->pollEvent(event))
     {
-        if (event.type == sf::Event::Closed)
+        switch (event.type)
         {
-            context->renderWin->close();
-            context->quit = true;
-        }
-        else if (event.type == sf::Event::KeyPressed)
-        {
-            switch (event.key.code)
-            {
-            case sf::Keyboard::Up:
-            {
-                if (!isPlayButSelected)
-                {
-                    isPlayButSelected = true;
-                    isExitButSelected = false;
-                }
+            case sf::Event::Closed:
+                context->renderWin->close();
+                context->quit = true;
                 break;
-            }
-            case sf::Keyboard::Down:
-            {
-                if (!isExitButSelected)
+            
+            case sf::Event::KeyPressed:
+                switch (event.key.code)
                 {
-                    isPlayButSelected = false;
-                    isExitButSelected = true;
+                case sf::Keyboard::Up:
+                {
+                    if (!isPlayButSelected)
+                    {
+                        isPlayButSelected = true;
+                        isExitButSelected = false;
+                    }
+                    break;
                 }
-                break;
-            }
-            case sf::Keyboard::Return:
-            {
-                isPlayButPressed = false;
-                isExitButPressed = false;
+                case sf::Keyboard::Down:
+                {
+                    if (!isExitButSelected)
+                    {
+                        isPlayButSelected = false;
+                        isExitButSelected = true;
+                    }
+                    break;
+                }
+                case sf::Keyboard::Return:
+                {
+                    isPlayButPressed = false;
+                    isExitButPressed = false;
 
-                if (isPlayButSelected)
-                {
-                    isPlayButPressed = true;
-                }
-                else
-                {
-                    isExitButPressed = true;
-                }
+                    if (isPlayButSelected)
+                    {
+                        isPlayButPressed = true;
+                    }
+                    else
+                    {
+                        isExitButPressed = true;
+                    }
 
-                break;
-            }
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+                }
             default:
-            {
                 break;
-            }
-            }
         }
     }
+
+
 }
 
 void StateMenuSFML::Update() 
