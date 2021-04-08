@@ -20,7 +20,6 @@ StateGameTxt::~StateGameTxt()
 
 void StateGameTxt::Init() 
 {
-    win = make_unique<WinTXT>(30, 30); 
     context->player->SetSpeed(1);   
 
     system("setterm -cursor off");
@@ -58,6 +57,7 @@ void StateGameTxt::Update()
                 break;
                                         
 			case 'x':
+                system("clear");
                 system("setterm -cursor on");
 				context->quit = true;
 				break;
@@ -68,6 +68,7 @@ void StateGameTxt::Update()
 
 void StateGameTxt::Display() 
 {
+    win = make_unique<WinTXT>(25, 25);
     win->clear();
 
 
@@ -79,9 +80,7 @@ void StateGameTxt::Display()
     //Affichage des données du joueurs
     std::cout << endl << context->player->GetName() << " Informations : " << endl 
     << "Position : (" << context->player->GetPos_x() << ", " << context->player->GetPos_y() << ")" << endl 
-    << "HP : " << context->player->GetHP() << "/" << context->player->GetMaxHealth() << endl << 
-    "Speed : " << context->player->GetSpeed() << endl << "Is Alive " << context->player->GetLivingStatus()<< endl
-    << context->player->GetWidth() << endl << context->player->GetHeight() << endl;
+    << "HP : " << context->player->GetHP() << "/" << context->player->GetMaxHealth() << endl;
 
     //Affichage des ennemies
         const std::vector<Enemy> enemies = context->enemies;
@@ -89,14 +88,11 @@ void StateGameTxt::Display()
     {
         win->print((pX - context->player->GetPos_x() + enemies[i].GetPos_x()),
             (pY - context->player->GetPos_y() + enemies[i].GetPos_y()), 'E');
-        cout << "Enemy" << i << "s(" << enemies[i].GetPos_x() << ", "
-         << enemies[i].GetPos_y() << ")"<< endl;
     }
     
 
     //Affichage des collisions boxes
         const std::vector<CollisionBox> cb = context->map->GetCollisionLayer().GetCollisionBoxes();
-    cout << "Nb of collisionBox : " << cb.size() << flush;
     for (unsigned int i=0; i < cb.size(); i++){
         unsigned int w = cb[i].GetWidth();
         unsigned int h = cb[i].GetHeight();
@@ -107,9 +103,8 @@ void StateGameTxt::Display()
                 win->print( (pX - context->player->GetPos_x() + j),
                     (pY - context->player->GetPos_y() + k), 'X');
             }
-
         }
-}
+    }
 
 
     win->draw();

@@ -1,5 +1,5 @@
 #include "StateSplashScreenTxt.h"
-#include "StateGameTxt.h"
+#include "StateMenuTxt.h"
 #include <unistd.h>
 #include <memory>
 #include <iostream>
@@ -41,7 +41,7 @@ void StateSplashScreenTxt::Update()
 
     if (duration > 3)
     {
-        context->stateMan->Add(make_unique<StateGameTxt>(context));
+        context->stateMan->Add(make_unique<StateMenuTxt>(context), true);
     }
 }
 
