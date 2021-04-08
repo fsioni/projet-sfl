@@ -8,12 +8,6 @@
 
 class StateSplashScreenTxt : public State
 {
-private:
-    std::shared_ptr<Context> context;
-
-    std::clock_t start;
-    double duration;
-
 public:
     StateSplashScreenTxt(/* args */);
     StateSplashScreenTxt(std::shared_ptr<Context> &cContext);
@@ -30,6 +24,11 @@ public:
     void Pause();
 
     void Start();
+private:
+    std::shared_ptr<Context> context;
+
+    std::clock_t start;
+    double duration;
 };
 
 

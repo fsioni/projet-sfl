@@ -14,13 +14,6 @@
 */
 class StateManager
 {
-private:
-    /*// === Données membres privées === //*/
-    std::stack<std::unique_ptr<State>> sStates; //Tas d'états. Le dernier état du tableau est celui qui doit être joué
-    std::unique_ptr<State> sNewState; //State en attente
-    bool add;
-    bool replace;
-    bool remove;
 public:
     /*// === Fonctions membres publiques === //*/
 
@@ -52,7 +45,13 @@ public:
     void ProcessStateChange();
 
     std::unique_ptr<State>& GetCurrent();
-
+private:
+    /*// === Données membres privées === //*/
+    std::stack<std::unique_ptr<State>> sStates; //Tas d'états. Le dernier état du tableau est celui qui doit être joué
+    std::unique_ptr<State> sNewState; //State en attente
+    bool add;
+    bool replace;
+    bool remove;
 };
 
 

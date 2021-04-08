@@ -13,14 +13,6 @@
 */ 
 
 class MapLayer:Layer{
-private:
-    /*! \brief Largeur de la couche en nombre de tile */
-    int width;
-    /*! \brief Hauteur de la couche en nombre de tile */
-    int height;
-    /*! \brief Tableau dynamique contenant les données de la couche */
-    std::vector<int> data;
-
 public:
     /*! \brief Constructeur par défaut.
     *   Initialise id, width et height à -1,
@@ -64,6 +56,14 @@ public:
 
 
     void Test() const;
+
+private:
+    /*! \brief Largeur de la couche en nombre de tile */
+    int width;
+    /*! \brief Hauteur de la couche en nombre de tile */
+    int height;
+    /*! \brief Tableau dynamique contenant les données de la couche */
+    std::vector<int> data;
 };
 
 #endif

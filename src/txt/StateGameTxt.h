@@ -8,9 +8,6 @@
 
 class StateGameTxt : public State
 {
-private:
-    std::shared_ptr<Context> context;
-    unique_ptr<WinTXT> win;
 public:
     StateGameTxt(/* args */);
     StateGameTxt(std::shared_ptr<Context> &cContext);
@@ -29,6 +26,9 @@ public:
     void Start();
 
     void MoveWithCollision(float vx, float vy);
+private:
+    std::shared_ptr<Context> context;
+    unique_ptr<WinTXT> win;
 };
 
 #endif // __STATEGAMETXT_H__

@@ -43,10 +43,6 @@ struct Context
 
 class Game
 {
-private:
-
-    std::shared_ptr<Context> context;
-
 public:
     Game(/* args */);
     ~Game();
@@ -57,7 +53,8 @@ public:
     Map& GetMapConst() const;
     sf::RenderWindow* GetWindow();
     void Test();
-
+private:
+    std::shared_ptr<Context> context;
 };
 
 

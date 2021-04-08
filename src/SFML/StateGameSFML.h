@@ -7,6 +7,24 @@
 
 class StateGameSFML : public State
 {
+public:
+    StateGameSFML(/* args */);
+    StateGameSFML(std::shared_ptr<Context> &cContext);
+    ~StateGameSFML();
+
+    void Init();
+
+    void ProcessInput();
+
+    void Update();
+
+    void Display();
+
+    void Pause();
+
+    void Start();
+
+    void MoveWithCollision(float vx, float vy);
 private:
     std::shared_ptr<Context> context;
 
@@ -37,25 +55,6 @@ private:
 
     //Taille de la map
     int mapWidth, mapHeight;
-
-public:
-    StateGameSFML(/* args */);
-    StateGameSFML(std::shared_ptr<Context> &cContext);
-    ~StateGameSFML();
-
-    void Init();
-
-    void ProcessInput();
-
-    void Update();
-
-    void Display();
-
-    void Pause();
-
-    void Start();
-
-    void MoveWithCollision(float vx, float vy);
 };
 
 #endif // __STATEGAMESFML_H__

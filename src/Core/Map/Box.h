@@ -10,23 +10,6 @@
 */
 class Box
 {
-private:
-    /*// === Données membres privées === //*/
-
-    /*! \brief ID de la Box (unique car information récupéré de la map .tmx). */
-    int id; 
-
-    /*! \brief Position de la Box sur l'axe x (horizontal, avec l'origine en haut à gauche). */
-    int x;
-
-    /*! \brief Position de la Box sur l'axe y (vertical, avec l'origine en haut à gauche). */
-    int y;
-    
-    /*! \brief  Largeur de la Box. */
-    int width;
-    
-    /*! \brief Hauteur de la Box. */
-    int height;
 public:
     /*// === Fonctions membres publiques === //*/
 
@@ -114,6 +97,24 @@ public:
     *   Effectue des tests pour vérifier l'intégrité de la classe Box et son fonctionnement
     */
     void Test() const;
+
+private:
+    /*// === Données membres privées === //*/
+
+    /*! \brief ID de la Box (unique car information récupéré de la map .tmx). */
+    int id; 
+
+    /*! \brief Position de la Box sur l'axe x (horizontal, avec l'origine en haut à gauche). */
+    int x;
+
+    /*! \brief Position de la Box sur l'axe y (vertical, avec l'origine en haut à gauche). */
+    int y;
+    
+    /*! \brief  Largeur de la Box. */
+    int width;
+    
+    /*! \brief Hauteur de la Box. */
+    int height;
 };
 
 

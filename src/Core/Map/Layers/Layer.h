@@ -10,11 +10,6 @@
 */
 class Layer
 {
-protected:
-    /*! \brief Identifiant de la couche représenté par un entier. */
-    int id;
-    /*! \brief Nom de la couche. */
-    std::string name;
 public:
     /*! \brief Constructeur par défaut. */
     Layer(/* args */);
@@ -45,6 +40,11 @@ public:
     * \return Le nom du Layer.
     */
     std::string GetName() const;
+protected:
+    /*! \brief Identifiant de la couche représenté par un entier. */
+    int id;
+    /*! \brief Nom de la couche. */
+    std::string name;
 };
 
 
