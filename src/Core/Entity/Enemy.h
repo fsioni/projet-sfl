@@ -2,6 +2,8 @@
 #define __ENEMY_H__
 
 #include "EntityWithHP.h"
+#include "FiniteStateMachine/StateMachine.h"
+#include "FiniteStateMachine/EnemyStates.h"
 #include <string>
 
 using namespace std;
@@ -15,6 +17,7 @@ using namespace std;
 */
 class Enemy : public EntityWithHP
 {
+    StateMachine<Enemy> * stateMachine;
 public :
     /*// ==== Fonctions membres publiques === //*/
 
@@ -49,6 +52,10 @@ public :
     *
     */
     ~Enemy();
+
+    StateMachine<Enemy>* GetStateMachine() const{return stateMachine;};
+
+    void Update();
 
 };
 

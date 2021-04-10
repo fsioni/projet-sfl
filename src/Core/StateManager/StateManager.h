@@ -41,7 +41,7 @@ public:
     *   \param [in] nID : State qui est lancé
     *   \param [in] replace : true si il doit remplacé le State actuel
     */
-    void Add(std::unique_ptr<State> nState, bool replace = false);
+    void Add(std::unique_ptr<State> nState, bool replace_ = false);
     
     /*! \brief Passe au prochain State
     *

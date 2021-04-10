@@ -18,14 +18,15 @@ Game::Game(/* args */)
 
     // Initialisation des ennemies
     int count = context->map->GetSpawnsLayer().getEnemySpawns().size();
-
+    
     for(int i = 0; i<count; i++){
         int x = context->map->GetSpawnsLayer().getEnemySpawns()[i].GetX();
         int y = context->map->GetSpawnsLayer().getEnemySpawns()[i].GetY();
 
-        Enemy tmpEnemy(x, y, "Enemy", 10, 3, 5, 100);
+        //Enemy tmpEnemy(x, y, "Enemy", 10, 3, 5, 100);
 
-        context->enemies.push_back(tmpEnemy);
+        //context->enemies.push_back(tmpEnemy);
+        context->enemies.push_back(Enemy(x, y, "Enemy", 10, 3, 5, 100));
     }
 
 

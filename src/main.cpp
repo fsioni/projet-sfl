@@ -3,6 +3,7 @@
 #include "txt/gameTxt.h"
 #include "Core/Game.h"
 
+#include "Core/Entity/FiniteStateMachine/StateMachine.h"
 
 int main(int argc, char* argv[]){
 

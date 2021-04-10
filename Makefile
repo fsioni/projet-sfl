@@ -1,10 +1,16 @@
-EXECS_NAME = bin/exec 
+EXECS_NAME = bin/exec
+ 
 OBJ_FILES = obj/main.o obj/Layer.o obj/tmxParsing.o obj/Tileset.o obj/Map.o 
-OBJ_FILES += obj/MapLayer.o obj/CollisionLayer.o obj/SpawnPoint.o obj/SpawnPoint.o
+OBJ_FILES += obj/MapLayer.o obj/CollisionLayer.o obj/SpawnPoint.o 
 OBJ_FILES += obj/SpawnsLayer.o obj/Box.o obj/CollisionBox.o obj/StateManager.o
 OBJ_FILES += obj/Game.o obj/EntityWithHP.o obj/EntityWithoutHP.o obj/Player.o
 OBJ_FILES += obj/Enemy.o obj/winTxt.o obj/gameTxt.o obj/AssetManager.o
-OBJ_FILES += obj/StateGameSFML.o
+OBJ_FILES += obj/StateGameSFML.o 
+
+# State Machine
+OBJ_FILES += obj/StateBehavior.o obj/EnemyStates.o obj/StateMachine.o
+
+
 
 
 CC = g++
@@ -15,6 +21,9 @@ LIBS_SFML = -Lextern/SFML/lib -lsfml-graphics -lsfml-window -lsfml-system
 
 COMPILATIONOBJ = $(CC) $(CFLAGS) -c $< -o $@ 
 
+FSM = src/Core/Entity/FiniteStateMachine
+
+
 
 all: $(EXECS_NAME)
 
@@ -22,6 +31,16 @@ bin/exec : $(OBJ_FILES)
 	$(CC) $(CFLAGS) $^ -o $@ $(LIBS_SFML)
 
 obj/main.o: src/main.cpp src/Core/Game.h
+	$(COMPILATIONOBJ)
+
+obj/StateMachine.o : $(FSM)/StateMachine.cpp $(FSM)/StateMachine.h $(FSM)/StateBehavior.h src/Core/Entity/Enemy.h
+	$(COMPILATIONOBJ)
+
+obj/EnemyStates.o : $(FSM)/EnemyStates.cpp $(FSM)/EnemyStates.h $(FSM)/StateBehavior.h src/Core/Entity/Enemy.h
+	$(COMPILATIONOBJ)
+
+
+obj/StateBehavior.o : $(FSM)/StateBehavior.cpp $(FSM)/StateBehavior.h src/Core/Entity/Enemy.h
 	$(COMPILATIONOBJ)
 
 obj/StateGameSFML.o : src/SFML/StateGameSFML.cpp src/SFML/StateGameSFML.h src/SFML/AssetManager.h src/Core/Game.h src/Core/StateManager/StateManager.cpp src/Core/StateManager/State.h
@@ -69,16 +88,16 @@ obj/Game.o : src/Core/Game.cpp src/Core/StateManager/StateManager.h src/Core/Ent
 obj/EntityWithHP.o : src/Core/Entity/EntityWithHP.cpp src/Core/Entity/EntityWithoutHP.h 
 	$(COMPILATIONOBJ)
 
-obj/EntityWithoutHP.o : src/Core/Entity/EntityWithoutHP.cpp
+obj/EntityWithoutHP.o : src/Core/Entity/EntityWithoutHP.cpp src/Core/Entity/EntityWithoutHP.h
 	$(COMPILATIONOBJ)
 
-obj/Player.o : src/Core/Entity/Player.cpp src/Core/Entity/EntityWithHP.h
+obj/Player.o : src/Core/Entity/Player.cpp src/Core/Entity/Player.h src/Core/Entity/EntityWithHP.h
 	$(COMPILATIONOBJ)
 
-obj/Enemy.o : src/Core/Entity/Enemy.cpp src/Core/Entity/EntityWithHP.h
+obj/Enemy.o : src/Core/Entity/Enemy.cpp src/Core/Entity/Enemy.h src/Core/Entity/EntityWithHP.h $(FSM)/StateMachine.h
 	$(COMPILATIONOBJ)
 
-obj/winTxt.o : src/txt/winTxt.cpp
+obj/winTxt.o : src/txt/winTxt.cpp src/txt/winTxt.h
 	$(COMPILATIONOBJ)
 
 obj/gameTxt.o : src/txt/gameTxt.cpp src/txt/winTxt.h src/Core/Game.h 

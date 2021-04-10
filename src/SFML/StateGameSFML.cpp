@@ -122,6 +122,13 @@ void StateGameSFML::Update()
             
         clock.restart();
     }
+
+    // Update FSM Enemy
+    int count = context->enemies.size();
+    count = 1;
+    for(int i=0; i<count; i++){
+        context->enemies[i].Update();
+    }
 }
 
 void StateGameSFML::Display()

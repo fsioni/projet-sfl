@@ -65,11 +65,11 @@ void EntityWithHP::PrintEntityInfo() {
     cout<<"Dégâts : "<< damage <<endl;
     cout<<"Speed : "<< speed <<endl;
     cout<<"points de vie max : "<< maxHealth <<endl;
-    if(livingStatus == true){
-        cout<<"Le personnage est en vie "<<endl;}
-    else{
-        cout<<"Le personnage est mort"<<endl;}
 
+    if(livingStatus) cout<<"Le personnage est en vie "<<endl;
+    else cout<<"Le personnage est mort"<<endl;
+    
+    cout << endl;
 }
 
 void EntityWithHP::Move(float vx, float vy){
