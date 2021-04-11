@@ -4,6 +4,7 @@
 #include "Core/Game.h"
 
 #include "Core/Entity/FiniteStateMachine/StateMachine.h"
+#include "Core/Entity/FiniteStateMachine/EnemyStates.h"
 
 int main(int argc, char* argv[]){
 
@@ -31,6 +32,18 @@ int main(int argc, char* argv[]){
         Tileset ts;
         ts.Test();
         cout << "Tests réalisés avec succès !" << endl;
+    }
+    else if(argv[1] == std::string("debug")){    
+        Enemy e(10, 10, "Méchant", 10, 10, 10, 10);
+        
+        std::cout << "Update 1 : " << std::endl;
+        e.Update();
+        std::cout << std::endl << "Update 2 : " << std::endl;
+        e.Update();
+        std::cout << std::endl << "Update 3 : " << std::endl;
+        e.Update();
+        std::cout << std::endl << "Update 4 : " << std::endl;
+        e.Update();
     }
 
     else /////////L'ARGUMENT NE CORRESPOND A AUCUN MODE

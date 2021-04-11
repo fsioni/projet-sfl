@@ -10,13 +10,11 @@ class Enemy;
 // ======== ENEMY PATROL STATE ===========
 
 class EnemyPatrol : public StateBehavior<Enemy>{
+private:
     EnemyPatrol(){};
-    static EnemyPatrol * singleton;
-public:
-    EnemyPatrol(const EnemyPatrol &)=delete;
-    EnemyPatrol & operator=(const EnemyPatrol &)=delete;
 
-    static EnemyPatrol* GetInstance();
+public:
+    static EnemyPatrol* Instance();
     virtual void Enter(Enemy * enemy);
     virtual void Execute(Enemy * enemy);
     virtual void Exit(Enemy * enemy);
@@ -25,6 +23,7 @@ public:
 // ======== ENEMY GLOBAL STATE ===========
 
 class EnemyGlobalState : public StateBehavior<Enemy>{
+private:
     EnemyGlobalState(){}
 
 public:

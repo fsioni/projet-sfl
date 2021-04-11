@@ -7,11 +7,9 @@
 
 
 // ======== ENEMY PATROL STATE ===========
-EnemyPatrol * EnemyPatrol::singleton = nullptr;
-
-EnemyPatrol* EnemyPatrol::GetInstance(){
-    if(!singleton) singleton = new EnemyPatrol;
-    return singleton;
+EnemyPatrol* EnemyPatrol::Instance(){
+    static EnemyPatrol instance;
+    return &instance;
 }
 
 void EnemyPatrol::Enter(Enemy * enemy){
@@ -21,7 +19,7 @@ void EnemyPatrol::Enter(Enemy * enemy){
 void EnemyPatrol::Execute(Enemy * enemy){
     std::cout << "Enemy executing Patrol State." << std::endl;
     
-    enemy->GetStateMachine()->ChangeState(EnemyPatrol::GetInstance());
+    enemy->GetStateMachine()->ChangeState(EnemyGlobalState::Instance());
 }
 
 void EnemyPatrol::Exit(Enemy * enemy){
