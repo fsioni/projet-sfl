@@ -1,4 +1,4 @@
-/*#ifndef NPC_H
+#ifndef NPC_H
 #define NPC_H
 
 #include "EntityWithoutHP.h"
@@ -10,7 +10,7 @@ class NPC : public EntityWithoutHP
 {
 public:
 
-    static const char * DialogTab[9];
+    string DialogTab[9];
 
     char* actuallyTelling;
 
@@ -20,10 +20,13 @@ public:
 
     ~NPC();
 
-    void ReadDialog ();
+    void ReadRandDialog();
 
-    char* GetDialog();
+    string GetRandDialog();
+
+    int RandSentenceLine(int mini, int maxi);
+
 };
 
 #endif
-*/
+
