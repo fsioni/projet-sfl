@@ -32,13 +32,16 @@
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
+
 ## 🧐 About <a name = "about"></a>
 
 2D 'Zelda like' game. Explore the open-world to fight your ennemies and fulfill the request of the NPCs. <br> Available on Linux and MacOS. 
 
+
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
 These instructions will get you a copy of the project up and running on your local machine.
+
 
 ### Prerequisites
 
@@ -52,6 +55,7 @@ You can install them with your favorite package manager like :
 ```
 sudo apt-get install libsfml-dev 
 ```
+
 
 ### Installing
 
@@ -67,6 +71,7 @@ make
 make clean
 ``` 
 
+
 ## 🔧 Running the tests <a name = "tests"></a>
 
 You can run all the class tests by running the following executable
@@ -75,9 +80,11 @@ You can run all the class tests by running the following executable
 ./bin/exec 2
 ``` 
 
+
 ## 🎈 Usage <a name="usage"></a>
 
 After compiling :
+
 
 ### SFML version
 - Execute the SFML version with
@@ -88,6 +95,7 @@ After compiling :
 - To move along all axis use : ̀`Z Q S F`
 - To open the debug mode press : `P`
 - To quit press : `x` or `escape` or the cross button.
+
 
 ### Text version
 
@@ -101,6 +109,7 @@ The player is represented by a 'O', the enemies by 'E' and the collision boxes b
 - To move along all axis use : ̀`Z Q S F`
 - To quit press : `x` or the cross button.
 
+
 ## 📘 Documentation <a name = "documentation"></a>
 
 - You can open the documentations with your favorite navigator : `doc/html/index.html`
@@ -110,6 +119,7 @@ The player is represented by a 'O', the enemies by 'E' and the collision boxes b
 Make docs
 ```
 
+
 ## ⛏️ Built Using <a name = "built_using"></a>
 
 - [SFML](https://www.sfml-dev.org/index-fr.php) - GUI Library
@@ -118,14 +128,18 @@ Make docs
 - [Doxygen](https://www.doxygen.nl/index.html) - Documentation from source code
 - [Graphviz](https://graphviz.org/) - Documentation images
 
+
 ## 🗓️ Specifications 
 You can find our [specifications](https://docs.google.com/document/d/1M3ReGvUai9tsUhxqgG_X2tHgvNp70VFRoiY18aw6FXw/edit#heading=h.z6ne0og04bp5).
+
 
 ## 🔄 UML Class Diagram
 You can find our UML [Class Diagram](https://app.diagrams.net/?state=%7B%22ids%22:%5B%221cDj2nZ69OLlIY6NArtj_65bF8BKCwmA5%22%5D,%22action%22:%22open%22,%22userId%22:%22101499938783679469280%22,%22resourceKeys%22:%7B%7D%7D).
 
+
 ## 📌 Trello Board
 You can find our [Trello Board ](https://trello.com/b/tu5E8z0s/projet-sfl).
+
 
 ## 🗺️ Creating your own maps with the Tiled software :
 ### Collision and spawn layers :
@@ -133,6 +147,7 @@ You should use object layers named :
 - "PlayerSpawn" for the spawn of players
 - "EnemySpawn" for spawns of enemies
 - "Collision" for every objects that players, NPC and enemies couldn't go throught
+
 
 ## ✍️ Authors <a name = "authors"></a>
 
