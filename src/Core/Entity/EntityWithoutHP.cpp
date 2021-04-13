@@ -10,8 +10,6 @@ EntityWithoutHP::EntityWithoutHP(){
 
     this->x = 0.0;
     this->y = 0.0;
-    this->width = 0.0;
-    this->height = 0.0;
     this->offset = 0;
     this->name = "Unknown";
 
@@ -23,8 +21,6 @@ EntityWithoutHP::EntityWithoutHP(float x, float y, string name){
 
     this->x = x;
     this->y = y;
-    this->width = 32.0;
-    this->height = 32.0;
     this->offset = 7;
     this->name = name;
 
@@ -36,8 +32,6 @@ EntityWithoutHP::~EntityWithoutHP(){
 
     this->x = 0.0;
     this->y= 0.0;
-    this->width = 0.0;
-    this->height = 0.0;
     this->offset =0;
     this->name = "delete";
     direction = Right;
