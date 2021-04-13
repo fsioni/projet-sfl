@@ -157,11 +157,13 @@ The player is represented by a 'O', the enemies by 'E' and the collision boxes b
 
 ## 📘 Documentation <a name = "documentation"></a>
 
+- You can access to the actual documentation [here](http://safa.pages.univ-lyon1.fr/projet-sfl/index.html).
+
 - You can open the documentations with your favorite navigator : `doc/html/index.html`
 
 - You can update the documentation with 
 ```
-Make docs
+make docs
 ```
 
 
