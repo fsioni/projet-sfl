@@ -23,14 +23,15 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
+- [Running the tests](#tests)
 - [Usage](#usage)
 - [Documentation](#documentation)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
+- [Specifications](specifications)
+- [UML Class Diagram](diagram)
+- [Trello Board](trello)
+- [Create your own map with Tiled](map)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
 
 
 ## 🧐 About <a name = "about"></a>
@@ -129,19 +130,19 @@ Make docs
 - [Graphviz](https://graphviz.org/) - Documentation images
 
 
-## 🗓️ Specifications 
+## 🗓️ Specifications <a name="specifications"></a>
 You can find our [specifications](https://docs.google.com/document/d/1M3ReGvUai9tsUhxqgG_X2tHgvNp70VFRoiY18aw6FXw/edit#heading=h.z6ne0og04bp5).
 
 
-## 🔄 UML Class Diagram
+## 🔄 UML Class Diagram <a name="diagram"></a>
 You can find our UML [Class Diagram](https://app.diagrams.net/?state=%7B%22ids%22:%5B%221cDj2nZ69OLlIY6NArtj_65bF8BKCwmA5%22%5D,%22action%22:%22open%22,%22userId%22:%22101499938783679469280%22,%22resourceKeys%22:%7B%7D%7D).
 
 
-## 📌 Trello Board
+## 📌 Trello Board <a name="trello"></a>
 You can find our [Trello Board ](https://trello.com/b/tu5E8z0s/projet-sfl).
 
 
-## 🗺️ Creating your own maps with the Tiled software :
+## 🗺️ Create your own maps with the Tiled software : <a name="map"></a>
 ### Collision and spawn layers :
 You should use object layers named :
 - "PlayerSpawn" for the spawn of players
