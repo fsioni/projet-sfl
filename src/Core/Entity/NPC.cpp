@@ -57,8 +57,8 @@ void NPC::ReadRandDialog (){
 void NPC::GiveHP (Player &p, int hpToGive){
 
     int temp;
-    temp = p.GetHP();
-    temp += hpToGive;
+
+    temp = p.GetHP() + hpToGive;
     p.SetHP(temp);
 
 }
@@ -73,30 +73,12 @@ string NPC::GetRandDialog (){
 }
 
 
-int NPC:: RandSentenceLine (int mini, int maxi){
+int NPC:: RandSentenceLine (int minimum, int maximum){
 
     int random;
-
     int plage = maxi - mini + 1;
 
     for (int i = 0; i < 100; i++) random = (rand() % plage) + mini;
 
     return random;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
