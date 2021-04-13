@@ -17,7 +17,12 @@ var annotated_dup =
     [ "SpawnsLayer", "classSpawnsLayer.html", "classSpawnsLayer" ],
     [ "State", "classState.html", "classState" ],
     [ "StateGameSFML", "classStateGameSFML.html", "classStateGameSFML" ],
+    [ "StateGameTxt", "classStateGameTxt.html", "classStateGameTxt" ],
     [ "StateManager", "classStateManager.html", "classStateManager" ],
+    [ "StateMenuSFML", "classStateMenuSFML.html", "classStateMenuSFML" ],
+    [ "StateMenuTxt", "classStateMenuTxt.html", "classStateMenuTxt" ],
+    [ "StateSplashScreenSFML", "classStateSplashScreenSFML.html", "classStateSplashScreenSFML" ],
+    [ "StateSplashScreenTxt", "classStateSplashScreenTxt.html", "classStateSplashScreenTxt" ],
     [ "Tileset", "classTileset.html", "classTileset" ],
     [ "WinTXT", "classWinTXT.html", "classWinTXT" ]
 ];

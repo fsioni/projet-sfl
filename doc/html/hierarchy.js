@@ -20,7 +20,12 @@ var hierarchy =
     ] ],
     [ "Map", "classMap.html", null ],
     [ "State", "classState.html", [
-      [ "StateGameSFML", "classStateGameSFML.html", null ]
+      [ "StateGameSFML", "classStateGameSFML.html", null ],
+      [ "StateGameTxt", "classStateGameTxt.html", null ],
+      [ "StateMenuSFML", "classStateMenuSFML.html", null ],
+      [ "StateMenuTxt", "classStateMenuTxt.html", null ],
+      [ "StateSplashScreenSFML", "classStateSplashScreenSFML.html", null ],
+      [ "StateSplashScreenTxt", "classStateSplashScreenTxt.html", null ]
     ] ],
     [ "StateManager", "classStateManager.html", null ],
     [ "Tileset", "classTileset.html", null ],

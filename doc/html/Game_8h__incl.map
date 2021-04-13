@@ -1,13 +1,14 @@
 <map id="src/Core/Game.h" name="src/Core/Game.h">
-<area shape="rect" id="node1" title=" " alt="" coords="1035,5,1166,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1083,5,1214,32"/>
 <area shape="rect" id="node2" href="$StateManager_8h.html" title=" " alt="" coords="63,80,282,107"/>
 <area shape="rect" id="node6" href="$Map_8h.html" title=" " alt="" coords="655,80,749,107"/>
 <area shape="rect" id="node7" title=" " alt="" coords="897,229,960,256"/>
 <area shape="rect" id="node9" title=" " alt="" coords="794,379,853,405"/>
 <area shape="rect" id="node17" href="$Player_8h.html" title=" " alt="" coords="1091,155,1207,181"/>
 <area shape="rect" id="node21" href="$Enemy_8h.html" title=" " alt="" coords="1231,155,1349,181"/>
-<area shape="rect" id="node22" href="$AssetManager_8h.html" title=" " alt="" coords="1348,80,1525,107"/>
+<area shape="rect" id="node22" href="$AssetManager_8h.html" title=" " alt="" coords="1315,80,1492,107"/>
 <area shape="rect" id="node23" title=" " alt="" coords="1575,155,1722,181"/>
+<area shape="rect" id="node25" href="$winTxt_8h.html" title=" " alt="" coords="1567,80,1679,107"/>
 <area shape="rect" id="node3" href="$State_8h.html" title=" " alt="" coords="5,155,73,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="97,155,155,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="179,155,257,181"/>

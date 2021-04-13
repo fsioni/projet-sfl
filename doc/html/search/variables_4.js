@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['h_475',['h',['../classStateGameSFML.html#a47261667f88159849c3ccb7e36a1ecb6',1,'StateGameSFML']]],
-  ['height_476',['height',['../classEntityWithoutHP.html#ac15e6a5827948da39848484c772d7bcd',1,'EntityWithoutHP::height()'],['../classBox.html#a6851eb8f64b4cbe58488f7dcfe04bdb8',1,'Box::height()'],['../classMapLayer.html#a269ac7861c78aa6934ac627d29b4277b',1,'MapLayer::height()']]],
-  ['hp_477',['hp',['../classEntityWithHP.html#ab4b01c7ff1afbf673a9a5ee5d68b8579',1,'EntityWithHP']]]
+  ['gametext_541',['gameText',['../classStateSplashScreenSFML.html#ad3750f06193ba18acd197a2e36b049c6',1,'StateSplashScreenSFML']]],
+  ['gametitle_542',['gameTitle',['../classStateMenuSFML.html#ad3a40f5cd81e052c62366484c9ce9e54',1,'StateMenuSFML']]]
 ];

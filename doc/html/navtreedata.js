@@ -29,7 +29,7 @@ var NAVTREE =
       [ "Hiérarchie des classes", "hierarchy.html", "hierarchy" ],
       [ "Champs de donnée", "functions.html", [
         [ "Tout", "functions.html", "functions_dup" ],
-        [ "Fonctions", "functions_func.html", null ],
+        [ "Fonctions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
@@ -37,7 +37,9 @@ var NAVTREE =
       [ "Liste des fichiers", "files.html", "files_dup" ],
       [ "Variables globale", "globals.html", [
         [ "Tout", "globals.html", null ],
-        [ "Fonctions", "globals_func.html", null ]
+        [ "Fonctions", "globals_func.html", null ],
+        [ "Énumérations", "globals_enum.html", null ],
+        [ "Valeurs énumérées", "globals_eval.html", null ]
       ] ]
     ] ]
   ] ]
@@ -46,7 +48,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AssetManager_8cpp.html",
-"classStateGameSFML.html#a96d3fb072ec1a9ec9e1fe4a264db35ce"
+"classState.html#a2909b3995940afa2e8fe65d5f8f507ad",
+"tmxParsing_8cpp.html#a948722115df7fcc4021dea32c47a19b5"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

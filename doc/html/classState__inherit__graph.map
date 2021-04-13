@@ -1,4 +1,9 @@
 <map id="State" name="State">
-<area shape="rect" id="node1" title="Classe représentant un état de l&#39;application." alt="" coords="25,5,155,185"/>
-<area shape="rect" id="node2" href="$classStateGameSFML.html" title=" " alt="" coords="5,233,175,780"/>
+<area shape="rect" id="node1" title="Classe représentant un état de l&#39;application." alt="" coords="498,5,629,185"/>
+<area shape="rect" id="node2" href="$classStateGameSFML.html" title=" " alt="" coords="5,233,175,751"/>
+<area shape="rect" id="node3" href="$classStateGameTxt.html" title=" " alt="" coords="199,380,368,604"/>
+<area shape="rect" id="node4" href="$classStateMenuSFML.html" title=" " alt="" coords="393,336,555,648"/>
+<area shape="rect" id="node5" href="$classStateMenuTxt.html" title=" " alt="" coords="579,380,729,604"/>
+<area shape="rect" id="node6" href="$classStateSplashScreenSFML.html" title=" " alt="" coords="753,358,968,626"/>
+<area shape="rect" id="node7" href="$classStateSplashScreenTxt.html" title=" " alt="" coords="993,380,1193,604"/>
 </map>

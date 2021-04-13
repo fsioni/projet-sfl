@@ -1,4 +1,9 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$classState.html" title="Classe représentant un état de l&#39;application." alt="" coords="5,5,61,32"/>
-<area shape="rect" id="node2" href="$classStateGameSFML.html" title=" " alt="" coords="109,5,240,32"/>
+<area shape="rect" id="node1" href="$classState.html" title="Classe représentant un état de l&#39;application." alt="" coords="5,132,61,159"/>
+<area shape="rect" id="node2" href="$classStateGameSFML.html" title=" " alt="" coords="133,5,264,32"/>
+<area shape="rect" id="node3" href="$classStateGameTxt.html" title=" " alt="" coords="141,56,257,83"/>
+<area shape="rect" id="node4" href="$classStateMenuSFML.html" title=" " alt="" coords="135,107,262,133"/>
+<area shape="rect" id="node5" href="$classStateMenuTxt.html" title=" " alt="" coords="142,157,255,184"/>
+<area shape="rect" id="node6" href="$classStateSplashScreenSFML.html" title=" " alt="" coords="109,208,288,235"/>
+<area shape="rect" id="node7" href="$classStateSplashScreenTxt.html" title=" " alt="" coords="117,259,281,285"/>
 </map>
