@@ -3,7 +3,7 @@
  <img width=200px height=200px src="image.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Projet SFL</h3>
+<h2 align="center">Projet SFL</h2>
 
 <div align="center">
 
