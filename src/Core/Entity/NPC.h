@@ -27,7 +27,7 @@ public:
 
     string GetRandDialog();
 
-    int RandSentenceLine(int mini, int maxi);
+    int RandSentenceLine(int minimum, int maximum);
 
 };
 
