@@ -2,6 +2,7 @@
 #define NPC_H
 
 #include "EntityWithoutHP.h"
+#include "Player.h"
 #include <string>
 
 using namespace std;
@@ -21,6 +22,8 @@ public:
     ~NPC();
 
     void ReadRandDialog();
+
+    void GiveHP (Player &p, int hpToGive);
 
     string GetRandDialog();
 
