@@ -1,20 +1,14 @@
 #include "Game.h"
 #include <stdio.h>
 #include <assert.h>
-#include "../SFML/StateGameSFML.h"
+#include "../SFML/StateSplashScreenSFML.h"
+#include "../txt/StateSplashScreenTxt.h"
 
 #include <iostream>
 
 Game::Game(/* args */)
 {
     context = make_shared<Context>();
-
-    // Initialisation de la fenetre
-    int winWidth = 700;
-    int winHeight = 700;
-    context->renderWin->create(sf::VideoMode(winWidth, winHeight, 32), "Legend Of Nautibus", sf::Style::Close);
-
-    context->stateMan->Add(std::make_unique<StateGameSFML>(context));
 
     // Initialisation des ennemies
     int count = context->map->GetSpawnsLayer().getEnemySpawns().size();
@@ -42,43 +36,36 @@ void Game::Run(int mode)
     switch (mode)
     {
     case 0: //mode SFML
-        while (context->renderWin->isOpen())
+    {
+        int winWidth = 700;
+        int winHeight = 700;
+        context->renderWin->create(sf::VideoMode(winWidth, winHeight, 32), "Legend Of Nautibus", sf::Style::Close);
+        context->stateMan->Add(std::make_unique<StateSplashScreenSFML>(context));
+        while (!context->quit)
         {
             context->stateMan->ProcessStateChange();
             context->stateMan->GetCurrent()->ProcessInput();
             context->stateMan->GetCurrent()->Update();
             context->stateMan->GetCurrent()->Display();
         }
-        
-        break;
+    break;
+    }
     
     case 1: //mode txt
-        break;
+        context->stateMan->Add(std::make_unique<StateSplashScreenTxt>(context));
+        while (!context->quit)
+        {
+            context->stateMan->ProcessStateChange();
+            context->stateMan->GetCurrent()->ProcessInput();
+            context->stateMan->GetCurrent()->Update();
+            context->stateMan->GetCurrent()->Display();
+        }
+    break;
 
     default:
-        break;
+    break;
+
     }
-}
-
-
-Player Game::GetPlayerConst() const
-{
-    //return context->player;
-}
-
-std::vector<Enemy> Game::GetEnemiesConst(){
-    return context->enemies;
-}
-
-Map& Game::GetMapConst() const
-{
-    //return context->*map;
-}
-
-
-sf::RenderWindow* Game::GetWindow() 
-{
-    //return &window;
 }
 
 void Game::Test() 

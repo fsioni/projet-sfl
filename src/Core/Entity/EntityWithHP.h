@@ -14,25 +14,6 @@ using namespace std;
 */
 class EntityWithHP : public EntityWithoutHP
 {
-
-protected :
-    /*// ==== Données membres protégées === //*/
-
-    /*! \brief Nombre entier de points de vie de l'entité */
-    int hp;
-
-    /*! \brief Nombre entier de points de vie infligé lors d'un attaque */
-    int damage;
-
-    /*! \brief Booléen définissant si l'entité est morte ou pas */
-    bool livingStatus;
-
-    /*! \brief Nombre entier maximal de points de vie de l'entité */
-    int maxHealth;
-
-    /*! \brief Vitesse de l'entité */
-    float speed;
-
 public:
     /*// ==== Fonctions membres publiques === //*/
 
@@ -188,6 +169,23 @@ public:
     */
     int GetMaxHealth() const;
 
+protected :
+    /*// ==== Données membres protégées === //*/
+
+    /*! \brief Nombre entier de points de vie de l'entité */
+    int hp;
+
+    /*! \brief Nombre entier de points de vie infligé lors d'un attaque */
+    int damage;
+
+    /*! \brief Booléen définissant si l'entité est morte ou pas */
+    bool livingStatus;
+
+    /*! \brief Nombre entier maximal de points de vie de l'entité */
+    int maxHealth;
+
+    /*! \brief Vitesse de l'entité */
+    float speed;
 };
 
 #endif

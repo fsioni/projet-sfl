@@ -13,12 +13,6 @@
 */
 class SpawnPoint: public Box
 {
-private:
-    /*// === Données membres privées === //*/
-
-    /*! \brief Nom du SpawnPoint */
-    std::string name;
-
 public:
     /*// === Fonctions membres publiques === //*/
 
@@ -58,6 +52,12 @@ public:
     *   Effectue des tests pour vérifier l'intégrité de la classe SpawnPoint et son fonctionnement
     */
     void Test() const;
+
+private:
+    /*// === Données membres privées === //*/
+
+    /*! \brief Nom du SpawnPoint */
+    std::string name;
 };
 
 #endif

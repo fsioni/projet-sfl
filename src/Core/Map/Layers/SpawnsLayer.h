@@ -13,13 +13,6 @@
 */
 class SpawnsLayer:Layer
 {
-private:
-    /*// === Données membres privées === //*/
-    /*! \brief SpawnPoint du joueur. */
-    SpawnPoint playerSpawn;
-    /*! \brief Les SpawnPoint des Ennemy. Un SpawnPoint = Un Ennemy */
-    std::vector<SpawnPoint> ennemySpawns;
-
 public:
     /*// === Fonctions membres privées === //*/
     
@@ -67,6 +60,13 @@ public:
     *   \return Retourne le tableau dynamique de SpawnPoint des joueurs
     */
     std::vector<SpawnPoint> getEnemySpawns() const;
+
+private:
+    /*// === Données membres privées === //*/
+    /*! \brief SpawnPoint du joueur. */
+    SpawnPoint playerSpawn;
+    /*! \brief Les SpawnPoint des Ennemy. Un SpawnPoint = Un Ennemy */
+    std::vector<SpawnPoint> ennemySpawns;
 
 };
 

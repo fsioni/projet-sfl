@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include "txt/gameTxt.h"
 #include "Core/Game.h"
 
 #include "Core/Entity/FiniteStateMachine/StateMachine.h"
@@ -23,7 +22,7 @@ int main(int argc, char* argv[]){
         std::cout << "txt mode" << std::endl;
         termClear();
         Game game;
-        txtLoop(game);
+        game.Run(1);
         termClear();
     }
     else if(argv[1] == std::string("2")){
@@ -39,14 +38,6 @@ int main(int argc, char* argv[]){
         pEnemy->PrintEntityInfo();
         pEnemy->Update();
         pEnemy->PrintEntityInfo();
-        
-        std::cout << "================= GAME =================" << std::endl;
-
-        Game game;
-        game.GetEnemiesConst()[0].PrintEntityInfo();
-        game.GetEnemiesConst()[0].Update();
-        game.GetEnemiesConst()[0].PrintEntityInfo();
-        
     }
 
     else /////////L'ARGUMENT NE CORRESPOND A AUCUN MODE

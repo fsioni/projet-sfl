@@ -39,6 +39,7 @@ void StateGameSFML::ProcessInput()
         {
         case sf::Event::Closed:
             context->renderWin->close();
+            context->quit = true;
             break;
 
         case sf::Event::KeyPressed:
@@ -70,9 +71,13 @@ void StateGameSFML::ProcessInput()
             
             case sf::Keyboard::X:
                 context->renderWin->close();  
+                context->quit = true;
+                break;
             
             case sf::Keyboard::Escape:
                 context->renderWin->close();
+                context->quit = true;
+                break;
             
             default:
                 break;

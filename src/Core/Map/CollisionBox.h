@@ -13,9 +13,6 @@
 */
 class CollisionBox: public Box
 {
-private:
-    /*// === Données membres privées === //*/
-
 public:
     /*// === Fonctions membres privées === //*/
 

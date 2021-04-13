@@ -16,22 +16,6 @@
 *   layer ou encore le tileset.
 */
 class Map{
-    /*! \brief Tableau dynamique de mapLayer, lesdifférentes couches de la map. */
-    std::vector<MapLayer> mapLayers;
-
-    /*! \brief  CollisionLayer contenant la couche des objets avec lequel les 
-    *           entités peuvent entrer en collision.
-    */
-    CollisionLayer * collisionLayer;
-
-    /*! \brief   SpawnLayer contenant les positions du spawn du joueur et 
-    *            ceux des ennemis.
-    */
-    SpawnsLayer * spawnsLayer;
-
-    /*! \brief   Tileset contenant des informations sur les tuiles. */
-    Tileset * tileset;
-
 public:
     /*! \brief Constructeur par défaut */
     Map();
@@ -120,6 +104,24 @@ public:
     *   censé faire.
     */
     void Test() const;
+
+private:
+    /*! \brief Tableau dynamique de mapLayer, lesdifférentes couches de la map. */
+    std::vector<MapLayer> mapLayers;
+
+    /*! \brief  CollisionLayer contenant la couche des objets avec lequel les 
+    *           entités peuvent entrer en collision.
+    */
+    CollisionLayer * collisionLayer;
+
+    /*! \brief   SpawnLayer contenant les positions du spawn du joueur et 
+    *            ceux des ennemis.
+    */
+    SpawnsLayer * spawnsLayer;
+
+    /*! \brief   Tileset contenant des informations sur les tuiles. */
+    Tileset * tileset;
+
 };
 
 #endif

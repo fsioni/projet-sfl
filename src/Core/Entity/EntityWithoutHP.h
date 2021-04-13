@@ -21,26 +21,6 @@ enum EntityDirection{
 */
 class EntityWithoutHP
 {
-
-protected :
-    /*// ==== Données membres protégées === //*/
-
-    /*! \brief Position sur l'axe des x de l'entité (horizontal).*/
-    float x;
-
-    /*! \brief Position sur l'axe des y de l'entité (vertical). */
-    float y;
-    float width;
-
-    float height;
-
-    int offset; // For collision detection
-
-    /*! \brief Nom de l'entité */
-    string name;
-
-    EntityDirection direction;
-
 public:
 
     /*// ==== Fonctions membres publiques === //*/
@@ -159,6 +139,24 @@ public:
 
     void SetDirection(EntityDirection nDirection);
 
+protected :
+    /*// ==== Données membres protégées === //*/
+
+    /*! \brief Position sur l'axe des x de l'entité (horizontal).*/
+    float x;
+
+    /*! \brief Position sur l'axe des y de l'entité (vertical). */
+    float y;
+    float width;
+
+    float height;
+
+    int offset; // For collision detection
+
+    /*! \brief Nom de l'entité */
+    string name;
+
+    EntityDirection direction;
 };
 
 #endif

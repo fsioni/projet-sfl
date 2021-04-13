@@ -11,6 +11,7 @@
 #include <string>
 
 #include<SFML/Graphics.hpp>
+#include "../txt/winTxt.h"
 
 #include <vector>
 
@@ -23,6 +24,7 @@ struct Context
     std::unique_ptr<Player> player;
     std::vector<Enemy> enemies;
     bool isDebug;
+    bool quit;
 
     Context(){
         assetMan = std::make_unique<AssetManager>();
@@ -34,27 +36,21 @@ struct Context
         player = std::make_unique<Player>(map->GetSpawnsLayer().getPlayerSpawn().GetX(), 
         map->GetSpawnsLayer().getPlayerSpawn().GetY(), "Player", 10, 10, 4, 10);
         isDebug = false;
+        quit = false;
 
     }
 };
 
 class Game
 {
-private:
-
-    std::shared_ptr<Context> context;
-
 public:
     Game(/* args */);
     ~Game();
 
     void Run(int mode); //mode = 0 for SFML, 1 for txt 
-    Player GetPlayerConst() const;
-    std::vector<Enemy> GetEnemiesConst();
-    Map& GetMapConst() const;
-    sf::RenderWindow* GetWindow();
     void Test();
-
+private:
+    std::shared_ptr<Context> context;
 };
 
 
