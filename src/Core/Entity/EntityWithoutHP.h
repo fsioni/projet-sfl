@@ -147,11 +147,10 @@ protected :
 
     /*! \brief Position sur l'axe des y de l'entité (vertical). */
     float y;
-    float width;
 
-    float height;
-
-    int offset; // For collision detection
+    /*! \brief Décalage de la l'arête de la boite de collision de l'entité par rapport à
+    son centre */
+    int offset;
 
     /*! \brief Nom de l'entité */
     string name;
