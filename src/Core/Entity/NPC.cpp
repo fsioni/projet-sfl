@@ -1,5 +1,7 @@
 #include "NPC.h"
 #include "EntityWithoutHP.h"
+#include "EntityWithHP.h"
+#include "Player.h"
 #include <stdlib.h>
 #include <iostream>
 #include <string>
@@ -49,6 +51,15 @@ void NPC::ReadRandDialog (){
     int n = RandSentenceLine(0, 8);
 
     cout<<DialogTab[n]<<endl;
+
+}
+
+void NPC::GiveHP (Player &p, int hpToGive){
+
+    int temp;
+    temp = p.GetHP();
+    temp += hpToGive;
+    p.SetHP(temp);
 
 }
 
