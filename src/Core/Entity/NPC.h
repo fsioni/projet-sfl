@@ -11,10 +11,6 @@ class NPC : public EntityWithoutHP
 {
 public:
 
-    string DialogTab[9];
-
-    char* actuallyTelling;
-
     NPC();
 
     NPC(float x, float y, string name);
@@ -28,6 +24,10 @@ public:
     string GetRandDialog();
 
     int RandSentenceLine(int minimum, int maximum);
+
+protected:
+
+    string DialogTab[9];
 
 };
 
