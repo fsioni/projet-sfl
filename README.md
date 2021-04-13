@@ -57,6 +57,50 @@ You can install them with your favorite package manager like :
 sudo apt-get install libsfml-dev 
 ```
 
+### Folder structure
+<details>
+<summary>Folders tree</summary>
+
+```
+├── bin
+│
+├── data
+│   ├── fonts
+│   ├── maps
+│   ├── sounds
+│   └── textures
+│
+├── doc
+│   ├── html
+│   │   └── index.html
+│   └── sfl.doxy
+│
+├── extern
+│   └── SFML
+│
+├── image.png
+│
+├── Makefile
+│
+├── obj
+│
+├── README.md
+│
+└── src
+    ├── Core
+    │   ├── Entity
+    │   ├── Game.cpp
+    │   ├── Game.h
+    │   ├── Map
+    │   └── StateManager
+    │
+    ├── main.cpp
+    │
+    ├── SFML
+    │
+    └── txt
+```
+</details>
 
 ### Installing
 
