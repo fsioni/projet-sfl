@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <iostream>
 #include <string>
-#include <cstring>
 #include <assert.h>
 #include <time.h>
 
