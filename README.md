@@ -59,7 +59,7 @@ sudo apt-get install libsfml-dev
 
 ### Installing
 
-- Open a termminal to the project root directory.
+- Open a terminal to the project root directory.
 
 - Compile with 
 ```
