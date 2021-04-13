@@ -130,8 +130,9 @@ void StateGameSFML::Update()
 
     // Update FSM Enemy
     int count = context->enemies.size();
+    
     for(int i=0; i<count; i++){
-        context->enemies[i].Update();
+        context->enemies[i]->Update();
     }
 }
 
@@ -186,9 +187,9 @@ void StateGameSFML::Display()
 
     // Affichage des ennemies
     for(int i=0; i<(int)context->enemies.size(); i++){
-        direction = context->enemies[i].GetDirection();
-        int enX = context->enemies[i].GetPos_x()-substX;
-        int enY = context->enemies[i].GetPos_y()-substY;
+        direction = context->enemies[i]->GetDirection();
+        int enX = context->enemies[i]->GetPos_x()-substX;
+        int enY = context->enemies[i]->GetPos_y()-substY;
         enemySprite.setPosition(enX -w/2, enY -h/2);
         enemySprite.setTextureRect(sf::IntRect(posX, 0, 32, 32));
         context->renderWin->draw(enemySprite);

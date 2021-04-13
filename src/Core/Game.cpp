@@ -17,10 +17,8 @@ Game::Game(/* args */)
         int x = context->map->GetSpawnsLayer().getEnemySpawns()[i].GetX();
         int y = context->map->GetSpawnsLayer().getEnemySpawns()[i].GetY();
 
-        context->enemies.push_back(Enemy(x, y, "Enemy", 10, 3, 5, 100));
+        context->enemies.push_back(new Enemy(x, y, "Enemy", 100, 3, 5, 100));
     }
-
-
 
     context->isDebug = false;
 }
@@ -70,5 +68,8 @@ void Game::Run(int mode)
 
 void Game::Test() 
 {
-    
+    for(int i=0; i<context->enemies.size(); i++){
+        context->enemies[i]->Update();
+    }
+       
 }

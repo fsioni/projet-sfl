@@ -83,11 +83,11 @@ void StateGameTxt::Display()
     << "HP : " << context->player->GetHP() << "/" << context->player->GetMaxHealth() << endl;
 
     //Affichage des ennemies
-        const std::vector<Enemy> enemies = context->enemies;
+        const std::vector<Enemy *> enemies = context->enemies;
         for (unsigned int i = 0; i < enemies.size(); i++)
     {
-        win->print((pX - context->player->GetPos_x() + enemies[i].GetPos_x()),
-            (pY - context->player->GetPos_y() + enemies[i].GetPos_y()), 'E');
+        win->print((pX - context->player->GetPos_x() + enemies[i]->GetPos_x()),
+            (pY - context->player->GetPos_y() + enemies[i]->GetPos_y()), 'E');
     }
     
 

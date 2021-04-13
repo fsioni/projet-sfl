@@ -136,13 +136,13 @@ obj/StateGameSFML.o : src/SFML/StateGameSFML.cpp src/SFML/StateGameSFML.h src/SF
 
 
 ##Finite State Machine
-obj/StateBehavior.o : $(FSM)/StateBehavior.h 
+obj/StateBehavior.o : $(FSM)/StateBehavior.cpp  $(FSM)/StateBehavior.h
 	$(COMPILATIONOBJ)
 
 obj/EnemyStates.o : $(FSM)/EnemyStates.cpp $(FSM)/EnemyStates.h src/Core/Entity/EntityWithHP.h
 	$(COMPILATIONOBJ)
 
-obj/StateMachine.o : $(FSM)/StateMachine.h  $(FSM)/StateMachine.h 
+obj/StateMachine.o : $(FSM)/StateMachine.cpp $(FSM)/StateMachine.h  $(FSM)/StateMachine.h 
 	$(COMPILATIONOBJ)
 
 

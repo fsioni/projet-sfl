@@ -33,11 +33,8 @@ int main(int argc, char* argv[]){
         cout << "Tests réalisés avec succès !" << endl;
     }
     else if(argv[1] == std::string("debug")){    
-        Enemy * pEnemy = new Enemy(10, 10, "Méchant", 2, 10, 10, 10);
-
-        pEnemy->PrintEntityInfo();
-        pEnemy->Update();
-        pEnemy->PrintEntityInfo();
+        Game g;
+        g.Test();
     }
 
     else /////////L'ARGUMENT NE CORRESPOND A AUCUN MODE

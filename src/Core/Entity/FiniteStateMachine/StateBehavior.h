@@ -1,7 +1,7 @@
 #ifndef __STATE_BEHAVIOR__
 #define __STATE_BEHAVIOR__
 
-#include "../EntityWithHP.h"
+
 
 template <class entity_type>
 class StateBehavior{

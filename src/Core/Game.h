@@ -22,7 +22,7 @@ struct Context
     std::unique_ptr<sf::RenderWindow> renderWin;
     std::unique_ptr<Map> map;
     std::unique_ptr<Player> player;
-    std::vector<Enemy> enemies;
+    std::vector<Enemy *> enemies;
     bool isDebug;
     bool quit;
 

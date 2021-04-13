@@ -46,6 +46,7 @@ public :
     */
     Enemy(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, unsigned int maxHealth);
 
+
     /*! \brief Destructeur.
     *
     *  Destructeur de la classe Enemy.
