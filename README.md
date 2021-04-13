@@ -27,10 +27,10 @@
 - [Usage](#usage)
 - [Documentation](#documentation)
 - [Built Using](#built_using)
-- [Specifications](specifications)
-- [UML Class Diagram](diagram)
-- [Trello Board](trello)
-- [Create your own map with Tiled](map)
+- [Specifications](#specifications)
+- [UML Class Diagram](#diagram)
+- [Trello Board](#trello)
+- [Create your own map with Tiled](#map)
 - [Authors](#authors)
 
 
