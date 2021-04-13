@@ -23,9 +23,6 @@ Game::Game(/* args */)
         int x = context->map->GetSpawnsLayer().getEnemySpawns()[i].GetX();
         int y = context->map->GetSpawnsLayer().getEnemySpawns()[i].GetY();
 
-        //Enemy tmpEnemy(x, y, "Enemy", 10, 3, 5, 100);
-
-        //context->enemies.push_back(tmpEnemy);
         context->enemies.push_back(Enemy(x, y, "Enemy", 10, 3, 5, 100));
     }
 
@@ -69,7 +66,7 @@ Player Game::GetPlayerConst() const
     //return context->player;
 }
 
-std::vector<Enemy> Game::GetEnemiesConst() const{
+std::vector<Enemy> Game::GetEnemiesConst(){
     return context->enemies;
 }
 

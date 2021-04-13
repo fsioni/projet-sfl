@@ -19,7 +19,8 @@ void EnemyPatrol::Enter(Enemy * enemy){
 void EnemyPatrol::Execute(Enemy * enemy){
     std::cout << "Enemy executing Patrol State." << std::endl;
     
-    enemy->GetStateMachine()->ChangeState(EnemyGlobalState::Instance());
+    enemy->Move(1, 0);
+    
 }
 
 void EnemyPatrol::Exit(Enemy * enemy){

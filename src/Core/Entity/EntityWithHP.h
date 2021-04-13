@@ -19,16 +19,16 @@ protected :
     /*// ==== Données membres protégées === //*/
 
     /*! \brief Nombre entier de points de vie de l'entité */
-    unsigned int hp;
+    int hp;
 
     /*! \brief Nombre entier de points de vie infligé lors d'un attaque */
-    unsigned int damage;
+    int damage;
 
     /*! \brief Booléen définissant si l'entité est morte ou pas */
     bool livingStatus;
 
     /*! \brief Nombre entier maximal de points de vie de l'entité */
-    unsigned int maxHealth;
+    int maxHealth;
 
     /*! \brief Vitesse de l'entité */
     float speed;
@@ -60,7 +60,7 @@ public:
     *   Créer une EntityWithHP (x, y, name, hp, dammage, maxHealth, livingStatus, speed)
     *
     */
-    EntityWithHP(float x, float y, string name, unsigned int hp, unsigned int damage, float speed, unsigned int maxHealth);
+    EntityWithHP(float x, float y, string name, int hp, int damage, float speed, int maxHealth);
 
 
     /*! \brief Destructeur.
@@ -89,7 +89,7 @@ public:
     *
     *
     */
-    void SetHP(unsigned int newHp);
+    void SetHP(int newHp);
 
     /*! \brief Retourne le nombre de points de vie de l'entité.
     *
@@ -126,7 +126,7 @@ public:
     *
     *
     */
-    void SetDamage(unsigned int newDmg);
+    void SetDamage(int newDmg);
 
 
     /*! \brief Permet de retourner le nombre de dégats q'inflige l'entité EntityWithHP.
@@ -150,7 +150,7 @@ public:
     *   \param [in] damage : entier positif, dégats à infliger.
     *
     */
-    void TakeDamage(unsigned int damage);
+    void TakeDamage(int damage);
 
 
     /*! \brief Permet d'infliger damage dégats à l'entité target.
@@ -160,7 +160,7 @@ public:
     *   \param [in] damage : entier positif, nombre de dégats à infligerà l'entité target.
     *
     */
-    void Attack(EntityWithHP &target, unsigned int damage) const;
+    void Attack(EntityWithHP &target, int damage) const;
 
 
     /*! \brief Modifie l'état de vie/mort de l'entité.

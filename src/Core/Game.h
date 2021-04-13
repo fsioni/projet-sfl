@@ -50,7 +50,7 @@ public:
 
     void Run(int mode); //mode = 0 for SFML, 1 for txt 
     Player GetPlayerConst() const;
-    std::vector<Enemy> GetEnemiesConst() const;
+    std::vector<Enemy> GetEnemiesConst();
     Map& GetMapConst() const;
     sf::RenderWindow* GetWindow();
     void Test();

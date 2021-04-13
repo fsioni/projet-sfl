@@ -34,16 +34,19 @@ int main(int argc, char* argv[]){
         cout << "Tests réalisés avec succès !" << endl;
     }
     else if(argv[1] == std::string("debug")){    
-        Enemy e(10, 10, "Méchant", 10, 10, 10, 10);
+        Enemy * pEnemy = new Enemy(10, 10, "Méchant", 2, 10, 10, 10);
+
+        pEnemy->PrintEntityInfo();
+        pEnemy->Update();
+        pEnemy->PrintEntityInfo();
         
-        std::cout << "Update 1 : " << std::endl;
-        e.Update();
-        std::cout << std::endl << "Update 2 : " << std::endl;
-        e.Update();
-        std::cout << std::endl << "Update 3 : " << std::endl;
-        e.Update();
-        std::cout << std::endl << "Update 4 : " << std::endl;
-        e.Update();
+        std::cout << "================= GAME =================" << std::endl;
+
+        Game game;
+        game.GetEnemiesConst()[0].PrintEntityInfo();
+        game.GetEnemiesConst()[0].Update();
+        game.GetEnemiesConst()[0].PrintEntityInfo();
+        
     }
 
     else /////////L'ARGUMENT NE CORRESPOND A AUCUN MODE
