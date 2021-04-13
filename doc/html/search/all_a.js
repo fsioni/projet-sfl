@@ -3,7 +3,7 @@ var searchData=
   ['madebytext_118',['madeByText',['../classStateSplashScreenSFML.html#a57d7590ce871517cdc89dfe5feb73f5f',1,'StateSplashScreenSFML']]],
   ['main_119',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
   ['main_2ecpp_120',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['map_121',['Map',['../classMap.html',1,'Map'],['../classMap.html#a0f5ad0fd4563497b4214038cbca8b582',1,'Map::Map()'],['../classMap.html#aabdba839fca85548ccc15926cdb5f68a',1,'Map::Map(std::string tmxFile, std::string tsxFile)'],['../structContext.html#a2b343a1064948f57f6ff5cf3413b740d',1,'Context::map()']]],
+  ['map_121',['Map',['../classMap.html',1,'Map'],['../structContext.html#a2b343a1064948f57f6ff5cf3413b740d',1,'Context::map()'],['../classMap.html#a0f5ad0fd4563497b4214038cbca8b582',1,'Map::Map()'],['../classMap.html#aabdba839fca85548ccc15926cdb5f68a',1,'Map::Map(std::string tmxFile, std::string tsxFile)']]],
   ['map_2ecpp_122',['Map.cpp',['../Map_8cpp.html',1,'']]],
   ['map_2eh_123',['Map.h',['../Map_8h.html',1,'']]],
   ['mapheight_124',['mapHeight',['../classStateGameSFML.html#a1ab37a66e072d60b62d224484e5a1e06',1,'StateGameSFML']]],

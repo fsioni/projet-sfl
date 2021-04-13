@@ -1,9 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"tmxParsing_8cpp.html#a948722115df7fcc4021dea32c47a19b5":[1,0,0,0,1,11,7],
-"tmxParsing_8cpp.html#ae74660aeef7041eda55965e62997a6e8":[1,0,0,0,1,11,0],
-"tmxParsing_8cpp.html#afe8a4464102791b21b37cc37f76eb1c9":[1,0,0,0,1,11,4],
-"tmxParsing_8h.html":[1,0,0,0,1,12],
 "tmxParsing_8h.html#a01a1670c28de93ece461380677bb7d89":[1,0,0,0,1,12,6],
 "tmxParsing_8h.html#a317f87c9a3888b89d04c33aa204600c2":[1,0,0,0,1,12,8],
 "tmxParsing_8h.html#a4cce2d96dd209722a445091ace78dae4":[1,0,0,0,1,12,1],

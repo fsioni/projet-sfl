@@ -15,7 +15,7 @@ var searchData=
   ['getdirection_401',['GetDirection',['../classEntityWithoutHP.html#a7642f894c466f34541045454e49ba72d',1,'EntityWithoutHP']]],
   ['getenemyspawns_402',['getEnemySpawns',['../classSpawnsLayer.html#a9d63a4d81b48d534b9bec9a5857fae34',1,'SpawnsLayer']]],
   ['getfulltag_403',['getFullTag',['../tmxParsing_8cpp.html#a8fc864f80bb4b71341f7189e9a5c9bcd',1,'getFullTag(std::string data, std::string tag, int indice):&#160;tmxParsing.cpp'],['../tmxParsing_8h.html#a8fc864f80bb4b71341f7189e9a5c9bcd',1,'getFullTag(std::string data, std::string tag, int indice):&#160;tmxParsing.cpp']]],
-  ['getheight_404',['GetHeight',['../classEntityWithoutHP.html#af9e33c4eb6b3a6c8e5a3208cd18ea19d',1,'EntityWithoutHP::GetHeight()'],['../classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3',1,'Box::GetHeight()'],['../classMapLayer.html#a2202c4093be0ec8e4fb0719b87633f76',1,'MapLayer::GetHeight()']]],
+  ['getheight_404',['GetHeight',['../classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3',1,'Box::GetHeight()'],['../classMapLayer.html#a2202c4093be0ec8e4fb0719b87633f76',1,'MapLayer::GetHeight()']]],
   ['gethp_405',['GetHP',['../classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa',1,'EntityWithHP']]],
   ['getid_406',['GetID',['../classLayer.html#a66e5f1c31b9bf3b4fb50290429319fc3',1,'Layer::GetID()'],['../classBox.html#a463bb5df079ed4e37f237128288ad263',1,'Box::GetId()']]],
   ['getinsidetag_407',['getInsideTag',['../tmxParsing_8cpp.html#a01a1670c28de93ece461380677bb7d89',1,'getInsideTag(std::string data, std::string tag, int indice):&#160;tmxParsing.cpp'],['../tmxParsing_8h.html#a01a1670c28de93ece461380677bb7d89',1,'getInsideTag(std::string data, std::string tag, int indice):&#160;tmxParsing.cpp']]],
@@ -42,7 +42,7 @@ var searchData=
   ['gettileset_428',['GetTileset',['../classMap.html#af23e6cbceec8a1f8a6fb6c51612b1488',1,'Map']]],
   ['gettilewidth_429',['GetTileWidth',['../classTileset.html#a91f1063653764e3e799a0331336d9e00',1,'Tileset']]],
   ['getvectdata_430',['GetVectData',['../classMapLayer.html#a0bf352d663394652d0ad5734fb993714',1,'MapLayer']]],
-  ['getwidth_431',['GetWidth',['../classEntityWithoutHP.html#a72a456c7bbaf8f66544292edf37f5e0e',1,'EntityWithoutHP::GetWidth()'],['../classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04',1,'Box::GetWidth()'],['../classMapLayer.html#a92b9f83ea738bd22ceee375441800b60',1,'MapLayer::GetWidth()']]],
+  ['getwidth_431',['GetWidth',['../classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04',1,'Box::GetWidth()'],['../classMapLayer.html#a92b9f83ea738bd22ceee375441800b60',1,'MapLayer::GetWidth()']]],
   ['getx_432',['GetX',['../classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29',1,'Box']]],
   ['gety_433',['GetY',['../classBox.html#af86b090508898469761c0d61c8230133',1,'Box']]]
 ];

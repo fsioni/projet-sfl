@@ -1,5 +1,5 @@
 <map id="Enemy" name="Enemy">
-<area shape="rect" id="node1" title="Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer." alt="" coords="37,843,139,949"/>
-<area shape="rect" id="node2" href="$classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer." alt="" coords="13,439,163,795"/>
-<area shape="rect" id="node3" href="$classEntityWithoutHP.html" title="Classe représentant une entité immobile et immortel." alt="" coords="5,5,171,391"/>
+<area shape="rect" id="node1" title="Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer." alt="" coords="37,784,139,891"/>
+<area shape="rect" id="node2" href="$classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer." alt="" coords="13,380,163,736"/>
+<area shape="rect" id="node3" href="$classEntityWithoutHP.html" title="Classe représentant une entité immobile et immortel." alt="" coords="5,5,171,332"/>
 </map>

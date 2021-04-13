@@ -109,7 +109,6 @@ public:
     *   \param [in] newName: chaine de caractères, nouveau nom de l'entité.
     *
     */
-
     void SetName(string newName);
 
 
@@ -119,24 +118,29 @@ public:
     *
     *
     */
-
     virtual void PrintEntityInfo();
 
-
-    int GetWidth() const;
-
-    void SetWidth(int newW);
-
-    int GetHeight() const;
-
-    void SetHeight(int newH);
-
+    /*! \brief Retourne l'offset de l'entité
+    *
+    */
     int getOffset() const;
 
+    /*! \brief Modifier l'offset actuel de l'entité
+    *
+    *
+    *   \param [in] newO: Entier, nouvel offset de l'entité.
+    *
+    */
     void setOffset(int newO);
 
     EntityDirection GetDirection() const;
 
+    /*! \brief Modifier la direction actuel de l'entité
+    *
+    *
+    *   \param [in] nDirection: Nouvel direction de l'entité..
+    *
+    */
     void SetDirection(EntityDirection nDirection);
 
 protected :
@@ -155,6 +159,7 @@ protected :
     /*! \brief Nom de l'entité */
     string name;
 
+    /*! \brief Direction vers laquelle l'entité est dirigée. */
     EntityDirection direction;
 };
 
