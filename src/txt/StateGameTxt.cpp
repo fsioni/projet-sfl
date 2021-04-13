@@ -93,9 +93,9 @@ void StateGameTxt::Display()
 
     //Affichage des collisions boxes
         const std::vector<CollisionBox> cb = context->map->GetCollisionLayer().GetCollisionBoxes();
-    for (unsigned int i=0; i < cb.size(); i++){
-        unsigned int w = cb[i].GetWidth();
-        unsigned int h = cb[i].GetHeight();
+    for (int i=0; i < (int)cb.size(); i++){
+        int w = cb[i].GetWidth();
+        int h = cb[i].GetHeight();
         for (int j = cb[i].GetX() - w; j <= cb[i].GetX() + w; j++)
         {
             for (int k = cb[i].GetY() - h; k <= cb[i].GetY() + h; k++)

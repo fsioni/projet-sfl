@@ -42,7 +42,7 @@ std::string getAttributeValue(std::string str, std::string attribute){
     // "width" se trouve avant et qu'il contient "id" alors on renvoira
     // la position du "id" dans "width"
     int pos = str.find(" "+attribute);
-    if(pos==std::string::npos) return "NULL";
+    if(pos == (int)std::string::npos) return "NULL";
     // Recherche position du premier " qui suit l'attribut <=> ouverture pour la valeur
     int start = str.find("\"", pos+attribute.length());
     // Recherche position du deuxième " qui suit l'attribut <=> fermeture pour la valeur
@@ -137,7 +137,7 @@ int countTag(std::string data, std::string tag){
     int pos = 0;
     tag = "<"+tag+" ";
     pos = data.find(tag, pos);
-    while(pos != std::string::npos){
+    while(pos != (int)std::string::npos){
         count++;
         pos = data.find(tag, pos+1);
         
