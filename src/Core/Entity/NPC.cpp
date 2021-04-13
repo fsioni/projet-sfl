@@ -76,9 +76,9 @@ string NPC::GetRandDialog (){
 int NPC:: RandSentenceLine (int minimum, int maximum){
 
     int random;
-    int plage = maxi - mini + 1;
+    int plage = maximum - minimum + 1;
 
-    for (int i = 0; i < 100; i++) random = (rand() % plage) + mini;
+    for (int i = 0; i < 100; i++) random = (rand() % plage) + minimum;
 
     return random;
 }
