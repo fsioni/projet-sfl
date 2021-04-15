@@ -1,5 +1,6 @@
 <map id="Tileset::GetTileWidth" name="Tileset::GetTileWidth">
-<area shape="rect" id="node1" title="Retourne tileWidth." alt="" coords="256,5,415,32"/>
-<area shape="rect" id="node2" href="$classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9" title="Fonction de test de la classe Tileset." alt="" coords="108,5,208,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" title="Retourne tileWidth." alt="" coords="256,31,415,57"/>
+<area shape="rect" id="node2" href="$classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="115,5,201,32"/>
+<area shape="rect" id="node3" href="$classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9" title="Fonction de test de la classe Tileset." alt="" coords="108,56,208,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,60,83"/>
 </map>

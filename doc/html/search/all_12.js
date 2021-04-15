@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['w_219',['w',['../classStateGameSFML.html#a2575dbd63a006583ca61777165ac098a',1,'StateGameSFML']]],
-  ['width_220',['width',['../classEntityWithoutHP.html#a5ec8ce114f991d9c653506594c56e870',1,'EntityWithoutHP::width()'],['../classBox.html#a46c951fd4f07b46a726c8fc38013b0f0',1,'Box::width()'],['../classMapLayer.html#ac01251ac9fc4c02fe41acce40ddaab33',1,'MapLayer::width()']]],
-  ['win_221',['win',['../classWinTXT.html#ace5ef6c746d586385fcea85073bd1d41',1,'WinTXT']]],
-  ['winheight_222',['winHeight',['../classStateGameSFML.html#aa13076059243f2048f702a5a44d717d4',1,'StateGameSFML']]],
-  ['wintxt_223',['WinTXT',['../classWinTXT.html',1,'WinTXT'],['../classWinTXT.html#ad471ddd48d2a7c43acccd1204e419527',1,'WinTXT::WinTXT()']]],
-  ['wintxt_2ecpp_224',['winTxt.cpp',['../winTxt_8cpp.html',1,'']]],
-  ['wintxt_2eh_225',['winTxt.h',['../winTxt_8h.html',1,'']]],
-  ['winwidth_226',['winWidth',['../classStateGameSFML.html#ae9e4b12b2a1bf539f6ef776baf6a5f36',1,'StateGameSFML']]]
+  ['up_252',['Up',['../EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380a57a7edcbc04d6175683383cad5c3e0a2',1,'EntityWithoutHP.h']]],
+  ['update_253',['Update',['../classState.html#a43d4ca30d927c023316c058b700c0716',1,'State::Update()'],['../classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2',1,'StateGameSFML::Update()'],['../classStateMenuSFML.html#a07f52c0a0358da99849f9ea807023d28',1,'StateMenuSFML::Update()'],['../classStateSplashScreenSFML.html#a1156a8e52fef8c377da416a940e1a51e',1,'StateSplashScreenSFML::Update()'],['../classStateGameTxt.html#a14e11db9b9ccea3fcc75829656bb18f4',1,'StateGameTxt::Update()'],['../classStateMenuTxt.html#a474da30974454d2fbbc0b34714198e57',1,'StateMenuTxt::Update()'],['../classStateSplashScreenTxt.html#a04dcbae90515d980fb7c03f561018d33',1,'StateSplashScreenTxt::Update()']]]
 ];

@@ -1,10 +1,9 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,233,60,260"/>
-<area shape="rect" id="node2" href="$classGame.html#a13910abb0107f073d1627043003b909b" title=" " alt="" coords="111,132,205,159"/>
-<area shape="rect" id="node3" href="$winTxt_8cpp.html#abfddca010a6ceb2c5292c98247a434ce" title=" " alt="" coords="115,183,201,209"/>
-<area shape="rect" id="node4" href="$classBox.html#ab30d8d08bfff9e0505d1baa518b01fba" title="Fonction test de la classe Box." alt="" coords="117,233,199,260"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,183,60,209"/>
+<area shape="rect" id="node2" href="$classGame.html#a13910abb0107f073d1627043003b909b" title=" " alt="" coords="111,107,205,133"/>
+<area shape="rect" id="node3" href="$winTxt_8cpp.html#abfddca010a6ceb2c5292c98247a434ce" title=" " alt="" coords="115,157,201,184"/>
+<area shape="rect" id="node4" href="$classBox.html#ab30d8d08bfff9e0505d1baa518b01fba" title="Fonction test de la classe Box." alt="" coords="117,208,199,235"/>
 <area shape="rect" id="node13" href="$classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9" title="Fonction de test de la classe Tileset." alt="" coords="108,563,208,589"/>
-<area shape="rect" id="node22" href="$gameTxt_8cpp.html#a5eeb0d13b5fe5eba2c9d7415842d36d9" title=" " alt="" coords="123,816,193,843"/>
 <area shape="rect" id="node5" href="$classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="291,5,413,32"/>
 <area shape="rect" id="node6" href="$classBox.html#a463bb5df079ed4e37f237128288ad263" title="Retourne id." alt="" coords="307,56,397,83"/>
 <area shape="rect" id="node7" href="$classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="294,107,410,133"/>
@@ -21,23 +20,4 @@
 <area shape="rect" id="node19" href="$classTileset.html#a937a18ca2f53d7261d3eff752e8afb91" title="Retourne tileMapPath." alt="" coords="263,664,441,691"/>
 <area shape="rect" id="node20" href="$classTileset.html#ae109a25be64886c5139162186da7919b" title="Retourne tileMapWidth." alt="" coords="259,715,445,741"/>
 <area shape="rect" id="node21" href="$classTileset.html#a91f1063653764e3e799a0331336d9e00" title="Retourne tileWidth." alt="" coords="273,765,431,792"/>
-<area shape="rect" id="node23" href="$classWinTXT.html#a418c66475403586ac57a80eceb409166" title=" " alt="" coords="293,816,411,843"/>
-<area shape="rect" id="node24" href="$gameTxt_8cpp.html#a8660cc91c8dc47b28c5bf324284499e9" title=" " alt="" coords="323,867,381,893"/>
-<area shape="rect" id="node25" href="$classWinTXT.html#a1b4cb203533f78bed29498591631f436" title=" " alt="" coords="550,471,661,497"/>
-<area shape="rect" id="node26" href="$classWinTXT.html#a407cce45e7f81546540f4f8a9b85ce45" title=" " alt="" coords="763,496,872,523"/>
-<area shape="rect" id="node27" href="$classWinTXT.html#af83a18827593465fc397983c97b4e886" title=" " alt="" coords="550,572,661,599"/>
-<area shape="rect" id="node29" href="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="505,623,706,665"/>
-<area shape="rect" id="node30" href="$classMap.html#a3f49418fd08dff9bf56722251627df2b" title="Retourne collisionLayers." alt="" coords="519,689,692,716"/>
-<area shape="rect" id="node31" href="$classWinTXT.html#a91635aa5b10cbf5542dac294b06f3afc" title=" " alt="" coords="538,740,673,767"/>
-<area shape="rect" id="node32" href="$classWinTXT.html#a6c5141e41eea71eb62bf9e397b1b5d3c" title=" " alt="" coords="538,791,673,817"/>
-<area shape="rect" id="node33" href="$classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa" title="Retourne le nombre de points de vie de l&#39;entité." alt="" coords="527,841,684,868"/>
-<area shape="rect" id="node34" href="$classEntityWithHP.html#a500d3f8c3a23e1a2cf43abb28bf3a3fe" title="Retourne l&#39;état de vie/mort de l&#39;entité." alt="" coords="496,892,715,919"/>
-<area shape="rect" id="node35" href="$classGame.html#a4c5b10b65e8b655c96ac51db93d9fbc3" title=" " alt="" coords="527,943,684,969"/>
-<area shape="rect" id="node36" href="$classEntityWithHP.html#ae3ca9a9884e17ddac24e771af585e0cb" title="Retourne le cap maximum de points de vie de l&#39;entité." alt="" coords="500,993,711,1020"/>
-<area shape="rect" id="node37" href="$classEntityWithoutHP.html#a72e23e567e9c46abcce65abe980cf932" title="Retourne le nom de l&#39;entité." alt="" coords="506,1044,705,1071"/>
-<area shape="rect" id="node38" href="$classGame.html#a11f40bc1afd5bb48ebab49467b7ed0ad" title=" " alt="" coords="520,1095,691,1121"/>
-<area shape="rect" id="node39" href="$classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792" title="Retourne la position sur l&#39;axe des x de l&#39;entité (horizontale)." alt="" coords="506,1145,705,1172"/>
-<area shape="rect" id="node40" href="$classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92" title="Retourne la position sur l&#39;axe des y de l&#39;entité (verticale)." alt="" coords="506,1196,705,1223"/>
-<area shape="rect" id="node41" href="$classEntityWithHP.html#a0316748815da894bf85862d268d67ba0" title="Retourne la vitesse de déplacement de l&#39;entité EntityWithHP." alt="" coords="516,1247,695,1273"/>
-<area shape="rect" id="node28" href="$winTxt_8cpp.html#a0038303af38e1a50f24e3d4e33a4635b" title=" " alt="" coords="773,572,862,599"/>
 </map>

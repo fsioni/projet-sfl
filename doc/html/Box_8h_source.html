@@ -93,61 +93,62 @@ $(document).ready(function(){initNavTree('Box_8h_source.html',''); initResizable
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classBox.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBox.html">Box</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">/*// === Données membres privées === //*/</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">/*// === Fonctions membres publiques === //*/</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classBox.html#aaa58eab76ed5927841ac1e0773f8ca08">   17</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#aaa58eab76ed5927841ac1e0773f8ca08">id</a>; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classBox.html#a180c7a450afc2e8cfe4dddb50eeaa4f2">   20</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#a180c7a450afc2e8cfe4dddb50eeaa4f2">x</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classBox.html#a1b13c5067471d1052c6f3191f260c785">   23</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#a1b13c5067471d1052c6f3191f260c785">y</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classBox.html#a46c951fd4f07b46a726c8fc38013b0f0">   26</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#a46c951fd4f07b46a726c8fc38013b0f0">width</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classBox.html#a6851eb8f64b4cbe58488f7dcfe04bdb8">   29</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#a6851eb8f64b4cbe58488f7dcfe04bdb8">height</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">/*// === Fonctions membres publiques === //*/</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classBox.html#aca78d7db44972bfa78d46b7bbc8796f6">Box</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classBox.html#aca78d7db44972bfa78d46b7bbc8796f6">Box</a>(<span class="keyword">const</span> std::string&amp; objectTag);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classBox.html#aca78d7db44972bfa78d46b7bbc8796f6">Box</a>(<span class="keywordtype">int</span> nId, <span class="keywordtype">int</span> nX, <span class="keywordtype">int</span> nY, <span class="keywordtype">int</span> nWidth, <span class="keywordtype">int</span> nHeight); <span class="comment">// Inutile ?</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classBox.html#a6a5e09398e85d602a046b429062fb9c2">~Box</a>();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBox.html#a7d84cb0e69da66427ae6173ddfbdee48">SetId</a>(<span class="keywordtype">int</span> nId);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBox.html#a0f3f1e3acf82ac45cccb611be4b79206">SetPosition</a>(<span class="keywordtype">int</span> nX, <span class="keywordtype">int</span> nY);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBox.html#abed04a814d9eff8927701b98e486db1c">SetDimensions</a>(<span class="keywordtype">int</span> nWidth, <span class="keywordtype">int</span> nHeight);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#a463bb5df079ed4e37f237128288ad263">GetId</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29">GetX</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#af86b090508898469761c0d61c8230133">GetY</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04">GetWidth</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3">GetHeight</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBox.html#ab30d8d08bfff9e0505d1baa518b01fba">Test</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classBox.html#aca78d7db44972bfa78d46b7bbc8796f6">Box</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classBox.html#aca78d7db44972bfa78d46b7bbc8796f6">Box</a>(<span class="keyword">const</span> std::string&amp; objectTag);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classBox.html#aca78d7db44972bfa78d46b7bbc8796f6">Box</a>(<span class="keywordtype">int</span> nId, <span class="keywordtype">int</span> nX, <span class="keywordtype">int</span> nY, <span class="keywordtype">int</span> nWidth, <span class="keywordtype">int</span> nHeight); <span class="comment">// Inutile ?</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classBox.html#a6a5e09398e85d602a046b429062fb9c2">~Box</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBox.html#a7d84cb0e69da66427ae6173ddfbdee48">SetId</a>(<span class="keywordtype">int</span> nId);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBox.html#a0f3f1e3acf82ac45cccb611be4b79206">SetPosition</a>(<span class="keywordtype">int</span> nX, <span class="keywordtype">int</span> nY);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBox.html#abed04a814d9eff8927701b98e486db1c">SetDimensions</a>(<span class="keywordtype">int</span> nWidth, <span class="keywordtype">int</span> nHeight);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#a463bb5df079ed4e37f237128288ad263">GetId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29">GetX</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#af86b090508898469761c0d61c8230133">GetY</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04">GetWidth</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3">GetHeight</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBox.html#ab30d8d08bfff9e0505d1baa518b01fba">Test</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">/*// === Données membres privées === //*/</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classBox.html#aaa58eab76ed5927841ac1e0773f8ca08">  105</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#aaa58eab76ed5927841ac1e0773f8ca08">id</a>; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classBox.html#a180c7a450afc2e8cfe4dddb50eeaa4f2">  108</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#a180c7a450afc2e8cfe4dddb50eeaa4f2">x</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classBox.html#a1b13c5067471d1052c6f3191f260c785">  111</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#a1b13c5067471d1052c6f3191f260c785">y</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classBox.html#a46c951fd4f07b46a726c8fc38013b0f0">  114</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#a46c951fd4f07b46a726c8fc38013b0f0">width</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classBox.html#a6851eb8f64b4cbe58488f7dcfe04bdb8">  117</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBox.html#a6851eb8f64b4cbe58488f7dcfe04bdb8">height</a>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassBox_html_a463bb5df079ed4e37f237128288ad263"><div class="ttname"><a href="classBox.html#a463bb5df079ed4e37f237128288ad263">Box::GetId</a></div><div class="ttdeci">int GetId() const</div><div class="ttdoc">Retourne id.</div><div class="ttdef"><b>Definition:</b> Box.cpp:43</div></div>
-<div class="ttc" id="aclassBox_html_a6851eb8f64b4cbe58488f7dcfe04bdb8"><div class="ttname"><a href="classBox.html#a6851eb8f64b4cbe58488f7dcfe04bdb8">Box::height</a></div><div class="ttdeci">int height</div><div class="ttdoc">Hauteur de la Box.</div><div class="ttdef"><b>Definition:</b> Box.h:29</div></div>
-<div class="ttc" id="aclassBox_html_a180c7a450afc2e8cfe4dddb50eeaa4f2"><div class="ttname"><a href="classBox.html#a180c7a450afc2e8cfe4dddb50eeaa4f2">Box::x</a></div><div class="ttdeci">int x</div><div class="ttdoc">Position de la Box sur l'axe x (horizontal, avec l'origine en haut à gauche).</div><div class="ttdef"><b>Definition:</b> Box.h:20</div></div>
+<div class="ttc" id="aclassBox_html_a6851eb8f64b4cbe58488f7dcfe04bdb8"><div class="ttname"><a href="classBox.html#a6851eb8f64b4cbe58488f7dcfe04bdb8">Box::height</a></div><div class="ttdeci">int height</div><div class="ttdoc">Hauteur de la Box.</div><div class="ttdef"><b>Definition:</b> Box.h:117</div></div>
+<div class="ttc" id="aclassBox_html_a180c7a450afc2e8cfe4dddb50eeaa4f2"><div class="ttname"><a href="classBox.html#a180c7a450afc2e8cfe4dddb50eeaa4f2">Box::x</a></div><div class="ttdeci">int x</div><div class="ttdoc">Position de la Box sur l'axe x (horizontal, avec l'origine en haut à gauche).</div><div class="ttdef"><b>Definition:</b> Box.h:108</div></div>
 <div class="ttc" id="atmxParsing_8h_html"><div class="ttname"><a href="tmxParsing_8h.html">tmxParsing.h</a></div></div>
 <div class="ttc" id="aclassBox_html"><div class="ttname"><a href="classBox.html">Box</a></div><div class="ttdoc">Classe représentant une boîte dans un monde 2D.</div><div class="ttdef"><b>Definition:</b> Box.h:11</div></div>
 <div class="ttc" id="aclassBox_html_aca78d7db44972bfa78d46b7bbc8796f6"><div class="ttname"><a href="classBox.html#aca78d7db44972bfa78d46b7bbc8796f6">Box::Box</a></div><div class="ttdeci">Box()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition:</b> Box.cpp:5</div></div>
 <div class="ttc" id="atmxParsing_8cpp_html_a948722115df7fcc4021dea32c47a19b5"><div class="ttname"><a href="tmxParsing_8cpp.html#a948722115df7fcc4021dea32c47a19b5">getIntAttributeValue</a></div><div class="ttdeci">int getIntAttributeValue(std::string str, std::string attribute)</div><div class="ttdef"><b>Definition:</b> tmxParsing.cpp:56</div></div>
-<div class="ttc" id="aclassBox_html_a1b13c5067471d1052c6f3191f260c785"><div class="ttname"><a href="classBox.html#a1b13c5067471d1052c6f3191f260c785">Box::y</a></div><div class="ttdeci">int y</div><div class="ttdoc">Position de la Box sur l'axe y (vertical, avec l'origine en haut à gauche).</div><div class="ttdef"><b>Definition:</b> Box.h:23</div></div>
+<div class="ttc" id="aclassBox_html_a1b13c5067471d1052c6f3191f260c785"><div class="ttname"><a href="classBox.html#a1b13c5067471d1052c6f3191f260c785">Box::y</a></div><div class="ttdeci">int y</div><div class="ttdoc">Position de la Box sur l'axe y (vertical, avec l'origine en haut à gauche).</div><div class="ttdef"><b>Definition:</b> Box.h:111</div></div>
 <div class="ttc" id="aclassBox_html_a6a5e09398e85d602a046b429062fb9c2"><div class="ttname"><a href="classBox.html#a6a5e09398e85d602a046b429062fb9c2">Box::~Box</a></div><div class="ttdeci">~Box()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> Box.cpp:25</div></div>
 <div class="ttc" id="aclassBox_html_a0f3f1e3acf82ac45cccb611be4b79206"><div class="ttname"><a href="classBox.html#a0f3f1e3acf82ac45cccb611be4b79206">Box::SetPosition</a></div><div class="ttdeci">void SetPosition(int nX, int nY)</div><div class="ttdoc">Modifie la position de la Box par celle en paramètre.</div><div class="ttdef"><b>Definition:</b> Box.cpp:34</div></div>
 <div class="ttc" id="aclassBox_html_ab30d8d08bfff9e0505d1baa518b01fba"><div class="ttname"><a href="classBox.html#ab30d8d08bfff9e0505d1baa518b01fba">Box::Test</a></div><div class="ttdeci">void Test() const</div><div class="ttdoc">Fonction test de la classe Box.</div><div class="ttdef"><b>Definition:</b> Box.cpp:50</div></div>
@@ -157,9 +158,9 @@ $(document).ready(function(){initNavTree('Box_8h_source.html',''); initResizable
 <div class="ttc" id="aBox_8h_html"><div class="ttname"><a href="Box_8h.html">Box.h</a></div></div>
 <div class="ttc" id="aclassBox_html_ade06873a13d2d1df5eb5d2cfc2a16d29"><div class="ttname"><a href="classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29">Box::GetX</a></div><div class="ttdeci">int GetX() const</div><div class="ttdoc">Retourne x.</div><div class="ttdef"><b>Definition:</b> Box.cpp:44</div></div>
 <div class="ttc" id="aclassBox_html_ac9e53c8e2f33ef5ef0a11c48f979ab04"><div class="ttname"><a href="classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04">Box::GetWidth</a></div><div class="ttdeci">int GetWidth() const</div><div class="ttdoc">Retourne width.</div><div class="ttdef"><b>Definition:</b> Box.cpp:46</div></div>
-<div class="ttc" id="aclassBox_html_a46c951fd4f07b46a726c8fc38013b0f0"><div class="ttname"><a href="classBox.html#a46c951fd4f07b46a726c8fc38013b0f0">Box::width</a></div><div class="ttdeci">int width</div><div class="ttdoc">Largeur de la Box.</div><div class="ttdef"><b>Definition:</b> Box.h:26</div></div>
+<div class="ttc" id="aclassBox_html_a46c951fd4f07b46a726c8fc38013b0f0"><div class="ttname"><a href="classBox.html#a46c951fd4f07b46a726c8fc38013b0f0">Box::width</a></div><div class="ttdeci">int width</div><div class="ttdoc">Largeur de la Box.</div><div class="ttdef"><b>Definition:</b> Box.h:114</div></div>
 <div class="ttc" id="aclassBox_html_abed04a814d9eff8927701b98e486db1c"><div class="ttname"><a href="classBox.html#abed04a814d9eff8927701b98e486db1c">Box::SetDimensions</a></div><div class="ttdeci">void SetDimensions(int nWidth, int nHeight)</div><div class="ttdoc">Modifie la taille de la Box par celle en paramètre.</div><div class="ttdef"><b>Definition:</b> Box.cpp:38</div></div>
-<div class="ttc" id="aclassBox_html_aaa58eab76ed5927841ac1e0773f8ca08"><div class="ttname"><a href="classBox.html#aaa58eab76ed5927841ac1e0773f8ca08">Box::id</a></div><div class="ttdeci">int id</div><div class="ttdoc">ID de la Box (unique car information récupéré de la map .tmx).</div><div class="ttdef"><b>Definition:</b> Box.h:17</div></div>
+<div class="ttc" id="aclassBox_html_aaa58eab76ed5927841ac1e0773f8ca08"><div class="ttname"><a href="classBox.html#aaa58eab76ed5927841ac1e0773f8ca08">Box::id</a></div><div class="ttdeci">int id</div><div class="ttdoc">ID de la Box (unique car information récupéré de la map .tmx).</div><div class="ttdef"><b>Definition:</b> Box.h:105</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

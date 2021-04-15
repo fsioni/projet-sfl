@@ -68,7 +68,7 @@ void StateGameTxt::Update()
 
 void StateGameTxt::Display() 
 {
-    win = make_unique<WinTXT>(25, 25);
+    win = make_unique<WinTXT>(50, 25);
     win->clear();
 
 
@@ -93,12 +93,12 @@ void StateGameTxt::Display()
 
     //Affichage des collisions boxes
         const std::vector<CollisionBox> cb = context->map->GetCollisionLayer().GetCollisionBoxes();
-    for (unsigned int i=0; i < cb.size(); i++){
-        unsigned int w = cb[i].GetWidth();
-        unsigned int h = cb[i].GetHeight();
-        for (int j = cb[i].GetX() - w; j <= cb[i].GetX() + w; j++)
+    for (int i=0; i < (int)cb.size(); i++){
+        int w = cb[i].GetWidth();
+        int h = cb[i].GetHeight();
+        for (int j = cb[i].GetX(); j <= cb[i].GetX() + w; j++)
         {
-            for (int k = cb[i].GetY() - h; k <= cb[i].GetY() + h; k++)
+            for (int k = cb[i].GetY(); k <= cb[i].GetY() + h; k++)
             {
                 win->print( (pX - context->player->GetPos_x() + j),
                     (pY - context->player->GetPos_y() + k), 'X');
@@ -138,10 +138,10 @@ void StateGameTxt::MoveWithCollision(float vx, float vy)
                    vy*context->player->GetSpeed();
 
         //Detection collision axe X
-        if (posX >= cb[i].GetX() - cb[i].GetWidth()
+        if (posX >= cb[i].GetX()
             && cb[i].GetX() + cb[i].GetWidth() >= posX){
             //Detection collision axe Y
-            if(posY >= cb[i].GetY() - cb[i].GetHeight()
+            if(posY >= cb[i].GetY()
                && cb[i].GetY() + cb[i].GetHeight() >= posY){
 
                 iscolliding = true;

@@ -34,54 +34,83 @@ void StateGameSFML::ProcessInput()
 {
     sf::Event Event;
     while(context->renderWin->pollEvent(Event)){
-            
+
+            //Si la touche Z et S sont enfoncées
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+            {
+                isGoingUp = false;
+                isGoingDown = false;
+            }
+            //Si la touche Z est enfoncée
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z)) 
+            {
+                isGoingUp = true;
+                isGoingDown = false;
+                context->player->SetDirection(Up);
+            }
+            //Si la touche S est enfoncée
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+            {
+                isGoingUp = false;
+                isGoingDown = true;
+                context->player->SetDirection(Down);
+            }
+            //Si la touche ni Z ni S n'est enfoncée
+            else
+            {
+                isGoingUp = false;
+                isGoingDown = false;
+            }
+
+            //Si la touche Q et D sont enfoncées
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
+            {
+                isGoingRight = false;
+                isGoingLeft = false;
+            }
+            //Si la touche Q est enfoncée
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q))
+            {
+                isGoingRight = true;
+                isGoingLeft = false;
+                context->player->SetDirection(Left);
+            }
+            //Si la touche D est enfoncée
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
+            {
+                isGoingLeft = true;
+                isGoingRight = false;
+                context->player->SetDirection(Right);
+            }
+            //Si la touche ni Q ni D n'est enfoncée
+            else
+            {
+                isGoingRight = false;
+                isGoingLeft = false;
+            }     
+
         switch (Event.type)
         {
+            //Si l'évènement actuel est celui de fermeture: quitter le jeu
         case sf::Event::Closed:
             context->renderWin->close();
             context->quit = true;
             break;
 
         case sf::Event::KeyPressed:
-            switch (Event.key.code)
-            {
-            case sf::Keyboard::Z:
-                MoveWithCollision(0, -1);
-                context->player->SetDirection(Up);
-                break;
-            
-            case sf::Keyboard::Q:
-                MoveWithCollision(-1, 0);
-                context->player->SetDirection(Left);
-                break;
-            
-            case sf::Keyboard::S:
-                MoveWithCollision(0, 1);
-                context->player->SetDirection(Down);
-                break;
 
-            case sf::Keyboard::D:
-                MoveWithCollision(1, 0);
-                context->player->SetDirection(Right);
-                break;        
-
-            case sf::Keyboard::P:
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::P)) {
                 context->isDebug = (!context->isDebug);
-                break;
-            
-            case sf::Keyboard::X:
-                context->renderWin->close();  
-                context->quit = true;
-                break;
-            
-            case sf::Keyboard::Escape:
+            }
+
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X) 
+            || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape)) {
                 context->renderWin->close();
                 context->quit = true;
-                break;
-            
-            default:
-                break;
             }
+            break;
         
         default:
             break;
@@ -92,6 +121,8 @@ void StateGameSFML::ProcessInput()
 
 void StateGameSFML::Update()
 {
+    deltaTime = deltaClock.restart().asMilliseconds();
+
     // Position du joueur
     playerX = context->player->GetPos_x();
     playerY = context->player->GetPos_y();
@@ -113,6 +144,38 @@ void StateGameSFML::Update()
     winWidth = (int)context->renderWin->getSize().x;
     winHeight =(int)context->renderWin->getSize().y;
 
+    // Gestion mouvement joueur
+    if (isGoingUp && isGoingLeft)
+    {
+        MoveWithCollision(0.5f, -0.5f);
+    }else if (isGoingUp && isGoingRight)
+    {
+        MoveWithCollision(-0.5f, -0.5f);
+    }else if (isGoingUp)
+    {
+        MoveWithCollision(0, -1);
+    }
+
+    if (isGoingDown && isGoingLeft)
+    {
+        MoveWithCollision(0.5f, 0.5f);
+    }else if (isGoingDown && isGoingRight)
+    {
+        MoveWithCollision(-0.5f, 0.5f);
+    }else if (isGoingDown)
+    {
+        MoveWithCollision(0, 1);
+    }
+
+    if (isGoingRight && !isGoingUp && !isGoingDown)
+    {
+        MoveWithCollision(-1,0);
+    }
+    
+    if (isGoingLeft && !isGoingUp && !isGoingDown)
+    {
+        MoveWithCollision(1,0);
+    }
     
 
     // Gestion des bords de map
@@ -121,11 +184,12 @@ void StateGameSFML::Update()
     if(substY < 0) substY = 0;
     if(substY > mapHeight*h - winHeight) substY = mapHeight*h - winHeight;
 
-    if(clock.getElapsedTime().asSeconds() > 0.3){
+    // Gestion animation joueur
+    if(spriteClock.getElapsedTime().asSeconds() > 0.3){
         if(posX==64) posX=0;
         else posX +=32;
             
-        clock.restart();
+        spriteClock.restart();
     }
 
     // Update FSM Enemy
@@ -270,6 +334,6 @@ void StateGameSFML::MoveWithCollision(float vx, float vy)
     }
     if (!iscolliding)
     {
-        context->player->Move(vx, vy);
+        context->player->Move((vx*deltaTime)/30, (vy*deltaTime)/30);
     }
 }

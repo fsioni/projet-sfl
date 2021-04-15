@@ -1,15 +1,6 @@
 var searchData=
 [
-  ['textureenemy_504',['textureEnemy',['../classAssetManager.html#a475ef8e5521d2a2f2090c1fc6017dbfb',1,'AssetManager']]],
-  ['texturenpc_505',['textureNPC',['../classAssetManager.html#ad149543187cba52a29d33965d3d5f1d8',1,'AssetManager']]],
-  ['textureplayer_506',['texturePlayer',['../classAssetManager.html#a07761e9d8c5e55b002ca35748486eb33',1,'AssetManager']]],
-  ['tilecount_507',['tileCount',['../classTileset.html#a1e8902719ac12548c2c6dfc6902c49a2',1,'Tileset']]],
-  ['tileheight_508',['tileHeight',['../classTileset.html#a62c8b00674890f60189f1ace74aeee88',1,'Tileset']]],
-  ['tilemapheight_509',['tileMapHeight',['../classTileset.html#a60c38db68abc1f946673db7d183003e7',1,'Tileset']]],
-  ['tilemappath_510',['tileMapPath',['../classTileset.html#a0fb98e1845e3cf7281ccf31cc0e87755',1,'Tileset']]],
-  ['tilemapwidth_511',['tileMapWidth',['../classTileset.html#a3f1d1e233caf30f65879e06455b60ca3',1,'Tileset']]],
-  ['tileset_512',['tileset',['../classMap.html#a54a817824c3c4d40e5344b4db0900048',1,'Map']]],
-  ['tilesprite_513',['tileSprite',['../classStateGameSFML.html#afdcbd11b260a353410bfbb951fe48e08',1,'StateGameSFML']]],
-  ['tiletexture_514',['tileTexture',['../classStateGameSFML.html#a1a809c09d955c8bfca50d1358cb96a10',1,'StateGameSFML']]],
-  ['tilewidth_515',['tileWidth',['../classTileset.html#a477770a6cc81a9a53bf5928ebd5c88a9',1,'Tileset']]]
+  ['remove_571',['remove',['../classStateManager.html#a1a3387efb8b70dbb46d55b4459407eba',1,'StateManager']]],
+  ['renderwin_572',['renderWin',['../structContext.html#a2ddca7ce55e946e1685d9fb791bb6c23',1,'Context']]],
+  ['replace_573',['replace',['../classStateManager.html#ae75d92b664a69e724568f9cbd1615b3a',1,'StateManager']]]
 ];
