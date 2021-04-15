@@ -109,6 +109,7 @@ public:
     *   \param [in] newName: chaine de caractères, nouveau nom de l'entité.
     *
     */
+
     void SetName(string newName);
 
 
@@ -118,29 +119,24 @@ public:
     *
     *
     */
+
     virtual void PrintEntityInfo();
 
-    /*! \brief Retourne l'offset de l'entité
-    *
-    */
+
+    int GetWidth() const;
+
+    void SetWidth(int newW);
+
+    int GetHeight() const;
+
+    void SetHeight(int newH);
+
     int getOffset() const;
 
-    /*! \brief Modifier l'offset actuel de l'entité
-    *
-    *
-    *   \param [in] newO: Entier, nouvel offset de l'entité.
-    *
-    */
     void setOffset(int newO);
 
     EntityDirection GetDirection() const;
 
-    /*! \brief Modifier la direction actuel de l'entité
-    *
-    *
-    *   \param [in] nDirection: Nouvel direction de l'entité..
-    *
-    */
     void SetDirection(EntityDirection nDirection);
 
 protected :
@@ -151,15 +147,15 @@ protected :
 
     /*! \brief Position sur l'axe des y de l'entité (vertical). */
     float y;
+    float width;
 
-    /*! \brief Décalage de la l'arête de la boite de collision de l'entité par rapport à
-    son centre */
-    int offset;
+    float height;
+
+    int offset; // For collision detection
 
     /*! \brief Nom de l'entité */
     string name;
 
-    /*! \brief Direction vers laquelle l'entité est dirigée. */
     EntityDirection direction;
 };
 
