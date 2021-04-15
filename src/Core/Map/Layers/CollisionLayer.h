@@ -15,12 +15,6 @@
 *   Par exemple : des objets, des ennemis...
 */
 class CollisionLayer:Layer{
-private:
-    /*// === Données membres privées === //*/
-
-    /*! \brief Tableau dyanmique des CollisionBox du Layer. */
-    std::vector<CollisionBox> collisionBoxes;
-
 public:
     /*// === Fonctions membres privées === //*/
     
@@ -61,7 +55,12 @@ public:
     *   \return Retourne le tableau dynamique de CollisionBox
     */
     std::vector<CollisionBox> GetCollisionBoxes() const;
+    
+private:
+    /*// === Données membres privées === //*/
 
+    /*! \brief Tableau dyanmique des CollisionBox du Layer. */
+    std::vector<CollisionBox> collisionBoxes;
 };
 
 

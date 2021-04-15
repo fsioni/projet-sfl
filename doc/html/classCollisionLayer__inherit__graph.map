@@ -1,0 +1,4 @@
+<map id="CollisionLayer" name="CollisionLayer">
+<area shape="rect" id="node1" title="Classe représentant une couche de CollisionBox Hérité de Layer Représente toutes les CollisionBox d&#39;u..." alt="" coords="5,219,171,369"/>
+<area shape="rect" id="node2" href="$classLayer.html" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer." alt="" coords="33,5,143,171"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="getFullTag" name="getFullTag">
+<area shape="rect" id="node1" title=" " alt="" coords="543,136,631,163"/>
+<area shape="rect" id="node2" href="$tmxParsing_8h.html#afe8a4464102791b21b37cc37f76eb1c9" title=" " alt="" coords="395,56,491,83"/>
+<area shape="rect" id="node4" href="$tmxParsing_8h.html#a317f87c9a3888b89d04c33aa204600c2" title=" " alt="" coords="182,56,301,83"/>
+<area shape="rect" id="node5" href="$tmxParsing_8h.html#a01a1670c28de93ece461380677bb7d89" title=" " alt="" coords="391,169,495,196"/>
+<area shape="rect" id="node9" href="$classMap.html#ab57f33273034a118bb9434befbeb4263" title="Charge les données d&#39;un fichier .tmx." alt="" coords="161,275,322,301"/>
+<area shape="rect" id="node3" href="$classMapLayer.html#aaa68e0a5062ae9f9dc97383d3687b19e" title="Constructeur avec data brut comme parametre." alt="" coords="162,5,321,32"/>
+<area shape="rect" id="node6" href="$classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1" title="Constructeur par balise." alt="" coords="152,107,331,149"/>
+<area shape="rect" id="node7" href="$classSpawnsLayer.html#afb32cd60ca05e87e9b55a503529c484e" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="140,173,343,200"/>
+<area shape="rect" id="node8" href="$classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54" title="Constructeur par copie." alt="" coords="182,224,301,251"/>
+<area shape="rect" id="node10" href="$classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="5,275,92,301"/>
+</map>

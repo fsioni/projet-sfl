@@ -2,6 +2,7 @@
 #include "tmxParsing.h"
 #include <iostream>
 #include "assert.h"
+#include "CollisionBox.h"
 
 Map::Map(){
 
@@ -11,6 +12,35 @@ Map::Map(std::string tmxFile, std::string tsxFile){
     tileset = new Tileset;
     TmxLoadLayers(tmxFile);
     TsxLoadTileset(tsxFile);
+    
+    // Info sur la taille de la map
+    int w = mapLayers[0].GetWidth();
+    int h = mapLayers[0].GetHeight();
+    int tileW = tileset->GetTileWidth();
+    int tileH = tileset->GetTileHeight();
+
+    // Ajout de collisionBox tout autour de la Map
+    CollisionBox colBox;
+
+    // bottom colBox
+    colBox.SetPosition(0, h*tileH - 10);
+    colBox.SetDimensions(w*tileW, 1);
+    collisionLayer->AddCollisionBox(colBox);
+
+    // top colBox
+    colBox.SetPosition(0, 5);
+    colBox.SetDimensions(w*tileW, 1);
+    collisionLayer->AddCollisionBox(colBox);
+
+    // right colBox
+    colBox.SetPosition(w*tileW, 0);
+    colBox.SetDimensions(1, h*tileH);
+    collisionLayer->AddCollisionBox(colBox);
+
+    // left colBox
+    colBox.SetPosition(0, 0);
+    colBox.SetDimensions(1, h*tileH);
+    collisionLayer->AddCollisionBox(colBox);
 }
 
 Map::~Map(){

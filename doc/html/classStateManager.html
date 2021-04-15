@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Legends of Nautibus: Référence de la classe StateManager</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -34,10 +34,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.1 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -103,23 +103,29 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a05a43504a033f1befad5c5118249ec6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a05a43504a033f1befad5c5118249ec6f">~StateManager</a> ()</td></tr>
 <tr class="memdesc:a05a43504a033f1befad5c5118249ec6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="classStateManager.html#a05a43504a033f1befad5c5118249ec6f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a05a43504a033f1befad5c5118249ec6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a979be39d4450f8c916ae5bef541c02d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a979be39d4450f8c916ae5bef541c02d2">ChangeState</a> (<a class="el" href="classState.html">State</a> *nState)</td></tr>
-<tr class="memdesc:a979be39d4450f8c916ae5bef541c02d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> courant par celui en paramètre.  <a href="classStateManager.html#a979be39d4450f8c916ae5bef541c02d2">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a979be39d4450f8c916ae5bef541c02d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9ffd8f6009468363bc82db4f7ed4294"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#ad9ffd8f6009468363bc82db4f7ed4294">PushState</a> (<a class="el" href="classState.html">State</a> *nState)</td></tr>
-<tr class="memdesc:ad9ffd8f6009468363bc82db4f7ed4294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> courant. Lance celui en paramètre.  <a href="classStateManager.html#ad9ffd8f6009468363bc82db4f7ed4294">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ad9ffd8f6009468363bc82db4f7ed4294"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01cd6f5dafc0add0633b0be231cce665"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a01cd6f5dafc0add0633b0be231cce665">PopState</a> ()</td></tr>
-<tr class="memdesc:a01cd6f5dafc0add0633b0be231cce665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passe au prochain <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>.  <a href="classStateManager.html#a01cd6f5dafc0add0633b0be231cce665">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a01cd6f5dafc0add0633b0be231cce665"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07c11985d7cc1d518725d50a7c0ddf28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a07c11985d7cc1d518725d50a7c0ddf28">Clear</a> ()</td></tr>
-<tr class="memdesc:a07c11985d7cc1d518725d50a7c0ddf28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vide le tas de <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>.  <a href="classStateManager.html#a07c11985d7cc1d518725d50a7c0ddf28">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a07c11985d7cc1d518725d50a7c0ddf28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500718340627bb0c4ac3a28b23dc3fcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a500718340627bb0c4ac3a28b23dc3fcd">Add</a> (std::unique_ptr&lt; <a class="el" href="classState.html">State</a> &gt; nState, bool <a class="el" href="classStateManager.html#ae75d92b664a69e724568f9cbd1615b3a">replace</a>=false)</td></tr>
+<tr class="memdesc:a500718340627bb0c4ac3a28b23dc3fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> en paramètre à la pile.  <a href="classStateManager.html#a500718340627bb0c4ac3a28b23dc3fcd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a500718340627bb0c4ac3a28b23dc3fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1738b442d5a7e3a38ff06bace098f157"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a1738b442d5a7e3a38ff06bace098f157">PopCurrent</a> ()</td></tr>
+<tr class="memdesc:a1738b442d5a7e3a38ff06bace098f157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passe au prochain <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>.  <a href="classStateManager.html#a1738b442d5a7e3a38ff06bace098f157">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1738b442d5a7e3a38ff06bace098f157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd6d7a9b1262c22bb860820716745c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a5dd6d7a9b1262c22bb860820716745c4">ProcessStateChange</a> ()</td></tr>
+<tr class="separator:a5dd6d7a9b1262c22bb860820716745c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afafbb0471dab93222bee37b6be6d2d0d"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classState.html">State</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#afafbb0471dab93222bee37b6be6d2d0d">GetCurrent</a> ()</td></tr>
+<tr class="separator:afafbb0471dab93222bee37b6be6d2d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
-<tr class="memitem:a15ebedc829436d326e1f00a3b0f057df"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classState.html">State</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a15ebedc829436d326e1f00a3b0f057df">sStates</a></td></tr>
-<tr class="separator:a15ebedc829436d326e1f00a3b0f057df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc8b2d54658982fb970a9fd006b77ebf"><td class="memItemLeft" align="right" valign="top">std::stack&lt; std::unique_ptr&lt; <a class="el" href="classState.html">State</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#abc8b2d54658982fb970a9fd006b77ebf">sStates</a></td></tr>
+<tr class="separator:abc8b2d54658982fb970a9fd006b77ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3638556d408204bf6b9386c40ddd771e"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classState.html">State</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a3638556d408204bf6b9386c40ddd771e">sNewState</a></td></tr>
+<tr class="separator:a3638556d408204bf6b9386c40ddd771e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6960665b6b872d158f6286656876a799"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a6960665b6b872d158f6286656876a799">add</a></td></tr>
+<tr class="separator:a6960665b6b872d158f6286656876a799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75d92b664a69e724568f9cbd1615b3a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#ae75d92b664a69e724568f9cbd1615b3a">replace</a></td></tr>
+<tr class="separator:ae75d92b664a69e724568f9cbd1615b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3387efb8b70dbb46d55b4459407eba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#a1a3387efb8b70dbb46d55b4459407eba">remove</a></td></tr>
+<tr class="separator:a1a3387efb8b70dbb46d55b4459407eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe représentant un gestionnaire d'états (<a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>) </p>
@@ -165,40 +171,51 @@ Attributs privés</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="a979be39d4450f8c916ae5bef541c02d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a979be39d4450f8c916ae5bef541c02d2">&#9670;&nbsp;</a></span>ChangeState()</h2>
+<a id="a500718340627bb0c4ac3a28b23dc3fcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a500718340627bb0c4ac3a28b23dc3fcd">&#9670;&nbsp;</a></span>Add()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void StateManager::ChangeState </td>
+          <td class="memname">void StateManager::Add </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classState.html">State</a> *&#160;</td>
-          <td class="paramname"><em>nState</em></td><td>)</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classState.html">State</a> &gt;&#160;</td>
+          <td class="paramname"><em>nState</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>replace</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Change le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> courant par celui en paramètre. </p>
-<p>Supprime le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> courant et ajoute le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> en paramètre à la pile avant de le lancer </p><dl class="params"><dt>Paramètres</dt><dd>
+<p>Ajoute le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> en paramètre à la pile. </p>
+<p>Met en pause l'état actuel et ajoute l'état en paramètre à la pile avant de le lancer </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nState</td><td>: <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> qui est lancé </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nID</td><td>: <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> qui est lancé </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">replace</td><td>: true si il doit remplacé le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> actuel </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a07c11985d7cc1d518725d50a7c0ddf28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07c11985d7cc1d518725d50a7c0ddf28">&#9670;&nbsp;</a></span>Clear()</h2>
+<a id="afafbb0471dab93222bee37b6be6d2d0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afafbb0471dab93222bee37b6be6d2d0d">&#9670;&nbsp;</a></span>GetCurrent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void StateManager::Clear </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classState.html">State</a> &gt; &amp; StateManager::GetCurrent </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -206,18 +223,16 @@ Attributs privés</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Vide le tas de <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>. </p>
-
 </div>
 </div>
-<a id="a01cd6f5dafc0add0633b0be231cce665"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01cd6f5dafc0add0633b0be231cce665">&#9670;&nbsp;</a></span>PopState()</h2>
+<a id="a1738b442d5a7e3a38ff06bace098f157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1738b442d5a7e3a38ff06bace098f157">&#9670;&nbsp;</a></span>PopCurrent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void StateManager::PopState </td>
+          <td class="memname">void StateManager::PopCurrent </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -230,35 +245,26 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a id="ad9ffd8f6009468363bc82db4f7ed4294"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9ffd8f6009468363bc82db4f7ed4294">&#9670;&nbsp;</a></span>PushState()</h2>
+<a id="a5dd6d7a9b1262c22bb860820716745c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dd6d7a9b1262c22bb860820716745c4">&#9670;&nbsp;</a></span>ProcessStateChange()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void StateManager::PushState </td>
+          <td class="memname">void StateManager::ProcessStateChange </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classState.html">State</a> *&#160;</td>
-          <td class="paramname"><em>nState</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Pause le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> courant. Lance celui en paramètre. </p>
-<p>Met en pause l'état actuel et ajoute l'état en paramètre à la pile avant de le lancer </p><dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nID</td><td>: <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> qui est lancé </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
 <h2 class="groupheader">Documentation des champs</h2>
-<a id="a15ebedc829436d326e1f00a3b0f057df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15ebedc829436d326e1f00a3b0f057df">&#9670;&nbsp;</a></span>sStates</h2>
+<a id="a6960665b6b872d158f6286656876a799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6960665b6b872d158f6286656876a799">&#9670;&nbsp;</a></span>add</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,7 +273,7 @@ Attributs privés</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classState.html">State</a>*&gt; StateManager::sStates</td>
+          <td class="memname">bool StateManager::add</td>
         </tr>
       </table>
   </td>
@@ -279,7 +285,95 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<a id="a1a3387efb8b70dbb46d55b4459407eba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a3387efb8b70dbb46d55b4459407eba">&#9670;&nbsp;</a></span>remove</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateManager::remove</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae75d92b664a69e724568f9cbd1615b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75d92b664a69e724568f9cbd1615b3a">&#9670;&nbsp;</a></span>replace</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateManager::replace</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3638556d408204bf6b9386c40ddd771e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3638556d408204bf6b9386c40ddd771e">&#9670;&nbsp;</a></span>sNewState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classState.html">State</a>&gt; StateManager::sNewState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc8b2d54658982fb970a9fd006b77ebf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc8b2d54658982fb970a9fd006b77ebf">&#9670;&nbsp;</a></span>sStates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::stack&lt;std::unique_ptr&lt;<a class="el" href="classState.html">State</a>&gt; &gt; StateManager::sStates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>src/Core/StateManager/<a class="el" href="StateManager_8h_source.html">StateManager.h</a></li>
 <li>src/Core/StateManager/<a class="el" href="StateManager_8cpp.html">StateManager.cpp</a></li>
 </ul>
@@ -289,7 +383,9 @@ Attributs privés</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classStateManager.html">StateManager</a></li>
-    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

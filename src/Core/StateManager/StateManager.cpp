@@ -1,6 +1,7 @@
 #include "StateManager.h"
+#include <iostream>
 
-StateManager::StateManager(/* args */) 
+StateManager::StateManager() : add(false), replace(false), remove(false) 
 {
     
 }
@@ -11,50 +12,54 @@ StateManager::~StateManager()
     
 }
 
-void StateManager::ChangeState(State* nState) 
+void StateManager::Add(std::unique_ptr<State> nState, bool nreplace)
 {
-    //Efface l'ancien état
-    if (!sStates.empty())
-    {
-        sStates.back()->CleanUp();
-        sStates.pop_back();
-    }
+    add = true;
+    sNewState = std::move(nState);
 
-    //Ajoute le nouvel état à la pile et l'initialise
-    sStates.push_back(nState);
-    sStates.back()->Init();
+    replace = nreplace;
 }
 
-void StateManager::PushState(State* nState) 
+void StateManager::PopCurrent()
 {
-    if (!sStates.empty())
-        sStates.back()->Pause();
-
-    sStates.push_back(nState);
-    sStates.back()->Init();
+    remove = true;
 }
 
-void StateManager::PopState() 
+void StateManager::ProcessStateChange()
 {
-    if (!sStates.empty())
+    if (remove && (!sStates.empty()))
     {
-        sStates.back()->CleanUp();
-        sStates.pop_back();
+        sStates.pop();
+
+        if (sStates.empty())
+        {
+            sStates.top()->Start();
+        }
+
+        remove = false;
     }
 
-    if (!sStates.empty())
+    if (add)
     {
-        sStates.back()->Resume();
+        if (replace && (!sStates.empty()))
+        {
+            sStates.pop();
+            replace = false;
+        }
+
+        if (!sStates.empty())
+        {
+            sStates.top()->Pause();
+        }
+
+        sStates.push(std::move(sNewState));
+        sStates.top()->Init();
+        sStates.top()->Start();
+        add = false;
     }
 }
 
-void StateManager::Clear() 
+std::unique_ptr<State>& StateManager::GetCurrent()
 {
-    while (!sStates.empty())
-    {
-        sStates.back()->CleanUp();
-        sStates.pop_back();
-    }
-    
+    return sStates.top();
 }
-

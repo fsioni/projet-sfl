@@ -16,6 +16,7 @@ Open a terminal.
 Use `Z Q S D` to move along all axis. Press `P` for Debug mode. Press `X` or `Escape` to quit.
 ### For txt mode :
 Use `Z Q S D` to move along all axis. Press `X` to quit.
+The player is represented by a 'O', the enemies by 'E' and the collision boxes by 'X'
 
 ## Specifications 
 You can find our specifications [here](https://docs.google.com/document/d/1M3ReGvUai9tsUhxqgG_X2tHgvNp70VFRoiY18aw6FXw/edit#heading=h.z6ne0og04bp5).

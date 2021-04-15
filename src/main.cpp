@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
-#include "txt/gameTxt.h"
-#include "SFML/DisplayGame.h"
+#include "Core/Game.h"
 
 
 int main(int argc, char* argv[]){
@@ -13,15 +12,15 @@ int main(int argc, char* argv[]){
     }else if (argv[1] == std::string("0")) ////////MODE SFML
     {
         std::cout << "SFML mode" << std::endl;
-        DisplayGame game;
-        game.DisplaySFML();
+        Game game;
+        game.Run(0);
 
     }else if (argv[1] == std::string("1")) /////////////// MODE TEXTE
     {
         std::cout << "txt mode" << std::endl;
         termClear();
         Game game;
-        txtLoop(game);
+        game.Run(1);
         termClear();
     }
     else if(argv[1] == std::string("2")){

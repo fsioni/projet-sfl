@@ -5,6 +5,13 @@
 #include <iostream>
 
 using namespace std;
+ 
+enum EntityDirection{
+    Down, 
+    Left,
+    Right,
+    Up
+};
 
 /*! \class EntityWithoutHP
 *   \brief Classe représentant une entité immobile et immortel.
@@ -12,28 +19,8 @@ using namespace std;
 *   La classe représente une entité avec une position et un nom.
 *
 */
-
 class EntityWithoutHP
 {
-
-protected :
-    /*// ==== Données membres protégées === //*/
-
-    /*! \brief Position sur l'axe des x de l'entité (horizontal).*/
-    float x;
-
-    /*! \brief Position sur l'axe des y de l'entité (vertical). */
-    float y;
-
-    float width;
-
-    float height;
-
-    int offset; // For collision detection
-
-    /*! \brief Nom de l'entité */
-    string name;
-
 public:
 
     /*// ==== Fonctions membres publiques === //*/
@@ -114,7 +101,6 @@ public:
     *
     *
     */
-
     string GetName() const;
 
     /*! \brief Permets de modifier le nom de l'entité.
@@ -125,7 +111,6 @@ public:
     */
 
     void SetName(string newName);
-
 
 
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.
@@ -146,10 +131,32 @@ public:
 
     void SetHeight(int newH);
 
-    int getOffset();
+    int getOffset() const;
 
     void setOffset(int newO);
 
+    EntityDirection GetDirection() const;
+
+    void SetDirection(EntityDirection nDirection);
+
+protected :
+    /*// ==== Données membres protégées === //*/
+
+    /*! \brief Position sur l'axe des x de l'entité (horizontal).*/
+    float x;
+
+    /*! \brief Position sur l'axe des y de l'entité (vertical). */
+    float y;
+    float width;
+
+    float height;
+
+    int offset; // For collision detection
+
+    /*! \brief Nom de l'entité */
+    string name;
+
+    EntityDirection direction;
 };
 
 #endif

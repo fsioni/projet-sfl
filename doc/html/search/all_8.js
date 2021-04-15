@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['id_106',['id',['../classBox.html#aaa58eab76ed5927841ac1e0773f8ca08',1,'Box::id()'],['../classLayer.html#ad8c4d484a5efce0cbbd0cf81b3958d17',1,'Layer::id()']]],
-  ['init_107',['Init',['../classState.html#a7ab4d8c6aa239a17ed579d89a209b156',1,'State']]],
-  ['isdebug_108',['isDebug',['../classGame.html#af10c815f028b584b8395f67d6f5a7a0f',1,'Game']]]
+  ['id_103',['id',['../classBox.html#aaa58eab76ed5927841ac1e0773f8ca08',1,'Box::id()'],['../classLayer.html#ad8c4d484a5efce0cbbd0cf81b3958d17',1,'Layer::id()']]],
+  ['init_104',['Init',['../classState.html#a7ab4d8c6aa239a17ed579d89a209b156',1,'State::Init()'],['../classStateGameSFML.html#a23f1e10132bed64d1e6c0bb36894d41c',1,'StateGameSFML::Init()']]],
+  ['isdebug_105',['isDebug',['../structContext.html#a2ff03b7f35e62b990bd6a81972c1350b',1,'Context']]]
 ];

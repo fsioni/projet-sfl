@@ -14,25 +14,6 @@ using namespace std;
 */
 class EntityWithHP : public EntityWithoutHP
 {
-
-protected :
-    /*// ==== Données membres protégées === //*/
-
-    /*! \brief Nombre entier de points de vie de l'entité */
-    unsigned int hp;
-
-    /*! \brief Nombre entier de points de vie infligé lors d'un attaque */
-    unsigned int damage;
-
-    /*! \brief Booléen définissant si l'entité est morte ou pas */
-    bool livingStatus;
-
-    /*! \brief Nombre entier maximal de points de vie de l'entité */
-    unsigned int maxHealth;
-
-    /*! \brief Vitesse de l'entité */
-    float speed;
-
 public:
     /*// ==== Fonctions membres publiques === //*/
 
@@ -136,7 +117,6 @@ public:
     int GetDamage() const;
 
 
-
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.
     *
     *   Imprime sur la console des informations concernant l'entité.
@@ -144,7 +124,6 @@ public:
     *
     */
     void PrintEntityInfo() override;
-
 
 
     /*! \brief Permet de faire en sorte qu'une entité subisse le nombre "damage" dégats.
@@ -190,6 +169,23 @@ public:
     */
     int GetMaxHealth() const;
 
+protected :
+    /*// ==== Données membres protégées === //*/
+
+    /*! \brief Nombre entier de points de vie de l'entité */
+    unsigned int hp;
+
+    /*! \brief Nombre entier de points de vie infligé lors d'un attaque */
+    unsigned int damage;
+
+    /*! \brief Booléen définissant si l'entité est morte ou pas */
+    bool livingStatus;
+
+    /*! \brief Nombre entier maximal de points de vie de l'entité */
+    unsigned int maxHealth;
+
+    /*! \brief Vitesse de l'entité */
+    float speed;
 };
 
 #endif
