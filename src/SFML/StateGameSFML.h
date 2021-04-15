@@ -56,6 +56,15 @@ private:
 
     //Taille de la map
     int mapWidth, mapHeight;
+
+    // Texte pour l'UI
+    sf::Font textFont;
+    sf::Text hpText;
+
+    // Image pour l'UI
+    sf::Texture heartText;
+    sf::Sprite heartSprite;
+
 };
 
 #endif // __STATEGAMESFML_H__
