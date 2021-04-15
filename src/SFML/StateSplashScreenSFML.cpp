@@ -71,6 +71,10 @@ void StateSplashScreenSFML::ProcessInput()
                 context->stateMan->Add(std::make_unique<StateMenuSFML>(context), true);
                 break;
             
+            case sf::Keyboard::Enter:
+                context->stateMan->Add(std::make_unique<StateMenuSFML>(context), true);
+                break;
+
             case sf::Keyboard::X:
                 context->renderWin->close();  
                 context->quit = true;
