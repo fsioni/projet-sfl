@@ -40,7 +40,8 @@ public :
     *   Créer un Player (x, y, name, hp, dammage, maxHealth, livingStatus, speed)
     *
     */
-    Player(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, unsigned int maxHealth);
+    Player(float x, float y, string name, unsigned int hp, unsigned int damage,
+    float speed, unsigned int maxHealth);
 
     /*! \brief Destructeur.
     *

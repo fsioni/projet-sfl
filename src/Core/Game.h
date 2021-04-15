@@ -30,8 +30,6 @@ struct Context
         assetMan = std::make_unique<AssetManager>();
         stateMan = std::make_unique<StateManager>();
         renderWin = std::make_unique<sf::RenderWindow>();
-        //std::string tmxFile = "data/maps/tilemaps/mainTilemap.tmx";
-        //std::string tsxFile = "data/maps/tilesets/mainTileSet.tsx";
         map = std::make_unique<Map>("data/maps/tilemaps/mainTilemap.tmx", "data/maps/tilesets/mainTileSet.tsx");
         player = std::make_unique<Player>(map->GetSpawnsLayer().getPlayerSpawn().GetX(), 
         map->GetSpawnsLayer().getPlayerSpawn().GetY(), "Player", 10, 10, 4, 10);
