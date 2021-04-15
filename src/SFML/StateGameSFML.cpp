@@ -60,8 +60,8 @@ void StateGameSFML::Init()
 
 void StateGameSFML::ProcessInput()
 {
-    sf::Event Event;
-    while(context->renderWin->pollEvent(Event)){
+    sf::Event event;
+    while(context->renderWin->pollEvent(event)){
 
             //Si la touche Z et S sont enfoncées
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z) &&
@@ -119,7 +119,7 @@ void StateGameSFML::ProcessInput()
                 isGoingLeft = false;
             }     
 
-        switch (Event.type)
+        switch (event.type)
         {
             //Si l'évènement actuel est celui de fermeture: quitter le jeu
         case sf::Event::Closed:
@@ -226,6 +226,7 @@ void StateGameSFML::Update()
     for(int i=0; i<count; i++){
         context->enemies[i]->UpdateStateMachine(context->player);
     }
+
     // Mise à jour texte UI
     std::string hp = std::to_string(context->player->GetHP());
     std::string maxHp = std::to_string(context->player->GetMaxHealth());
