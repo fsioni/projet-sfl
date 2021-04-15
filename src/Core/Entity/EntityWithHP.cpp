@@ -13,9 +13,8 @@ EntityWithHP::EntityWithHP() : EntityWithHP::EntityWithoutHP(){
     this->speed = 1.0;
 }
 
-EntityWithHP::EntityWithHP(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, unsigned int maxHealth)
+EntityWithHP::EntityWithHP(float x, float y, string name, int hp, int damage, float speed, int maxHealth)
 : EntityWithoutHP::EntityWithoutHP(x, y, name){
-
     this->hp = hp;
     this->damage = damage;
     this->maxHealth = maxHealth;
@@ -36,7 +35,7 @@ EntityWithHP::~EntityWithHP(){
 }
 
 
-void EntityWithHP::SetHP(unsigned int newHp){
+void EntityWithHP::SetHP(int newHp){
     assert (newHp >= 0  && newHp <= maxHealth);
 
     hp = newHp;
@@ -65,11 +64,11 @@ void EntityWithHP::PrintEntityInfo() {
     cout<<"Dégâts : "<< damage <<endl;
     cout<<"Speed : "<< speed <<endl;
     cout<<"points de vie max : "<< maxHealth <<endl;
-    if(livingStatus == true){
-        cout<<"Le personnage est en vie "<<endl;}
-    else{
-        cout<<"Le personnage est mort"<<endl;}
 
+    if(livingStatus) cout<<"Le personnage est en vie "<<endl;
+    else cout<<"Le personnage est mort"<<endl;
+    
+    cout << endl;
 }
 
 void EntityWithHP::Move(float vx, float vy){
@@ -90,17 +89,21 @@ int EntityWithHP::GetDamage() const{
     return damage;
 }
 
-void EntityWithHP::SetDamage(unsigned int newDmg){
+void EntityWithHP::SetDamage(int newDmg){
     assert (newDmg >= 0);
     damage = newDmg;
 }
 
-void EntityWithHP::TakeDamage(unsigned int damage){
+void EntityWithHP::TakeDamage(int damage){
     assert (damage >= 0);
-    hp -= damage;
+    if(hp<=0){
+        livingStatus=false;
+        hp=0;
+    } 
+    else hp -= damage;
 }
 
-void EntityWithHP::Attack(EntityWithHP &target, unsigned int damage) const{
+void EntityWithHP::Attack(EntityWithHP &target, int damage) const{
 
     target.TakeDamage(damage);
 }

@@ -108,6 +108,16 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="separator:a52db6e4b476cbfea1f037cc854975e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ba5c903d7ee37305a18747c1b34403f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssetManager.html#a9ba5c903d7ee37305a18747c1b34403f">SetPlayerTexture</a> (std::string fileTexture)</td></tr>
 <tr class="separator:a9ba5c903d7ee37305a18747c1b34403f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c092b29c772a3345a5dfe1d6423a246"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssetManager.html#a4c092b29c772a3345a5dfe1d6423a246">SetShadowTexture</a> (std::string fileTexture)</td></tr>
+<tr class="separator:a4c092b29c772a3345a5dfe1d6423a246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad483c144e815bb2f2a733fccfe82c6c4"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; sf::Texture &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssetManager.html#ad483c144e815bb2f2a733fccfe82c6c4">GetTextureEnemy</a> () const</td></tr>
+<tr class="separator:ad483c144e815bb2f2a733fccfe82c6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac912936d43016df386d8bf404916dfaa"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; sf::Texture &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssetManager.html#ac912936d43016df386d8bf404916dfaa">GetTextureNPC</a> () const</td></tr>
+<tr class="separator:ac912936d43016df386d8bf404916dfaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68b7427308797e264e9083760dacba8"><td class="memItemLeft" align="right" valign="top">const sf::Texture &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssetManager.html#ae68b7427308797e264e9083760dacba8">GetPlayerTexture</a> () const</td></tr>
+<tr class="separator:ae68b7427308797e264e9083760dacba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5afb6845bac1453b21563fd1d9c1c3"><td class="memItemLeft" align="right" valign="top">const sf::Texture &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssetManager.html#acb5afb6845bac1453b21563fd1d9c1c3">GetShadowTexture</a> () const</td></tr>
+<tr class="separator:acb5afb6845bac1453b21563fd1d9c1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
@@ -117,6 +127,8 @@ Attributs privés</h2></td></tr>
 <tr class="separator:ad149543187cba52a29d33965d3d5f1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07761e9d8c5e55b002ca35748486eb33"><td class="memItemLeft" align="right" valign="top">sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssetManager.html#a07761e9d8c5e55b002ca35748486eb33">texturePlayer</a></td></tr>
 <tr class="separator:a07761e9d8c5e55b002ca35748486eb33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca0fc91a5bfd430f2162fefe18502431"><td class="memItemLeft" align="right" valign="top">sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAssetManager.html#aca0fc91a5bfd430f2162fefe18502431">textureShadow</a></td></tr>
+<tr class="separator:aca0fc91a5bfd430f2162fefe18502431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="a750ae7b39b633fbb6594443aa3ca704b"></a>
@@ -138,10 +150,11 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classAssetManager_a750ae7b39b633fbb6594443aa3ca704b_cgraph.png" border="0" usemap="#classAssetManager_a750ae7b39b633fbb6594443aa3ca704b_cgraph" alt=""/></div>
 <map name="classAssetManager_a750ae7b39b633fbb6594443aa3ca704b_cgraph" id="classAssetManager_a750ae7b39b633fbb6594443aa3ca704b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,71,221,98"/>
-<area shape="rect" href="classAssetManager.html#a54c0a40c80c6a1efa1b4119dc44b863b" title=" " alt="" coords="288,5,484,47"/>
-<area shape="rect" href="classAssetManager.html#af057522215a43a55e217ce04dea291a9" title=" " alt="" coords="275,71,497,98"/>
-<area shape="rect" href="classAssetManager.html#a9ba5c903d7ee37305a18747c1b34403f" title=" " alt="" coords="269,122,503,149"/>
+<area shape="rect" title=" " alt="" coords="5,97,221,123"/>
+<area shape="rect" href="classAssetManager.html#a54c0a40c80c6a1efa1b4119dc44b863b" title=" " alt="" coords="293,5,489,47"/>
+<area shape="rect" href="classAssetManager.html#af057522215a43a55e217ce04dea291a9" title=" " alt="" coords="279,71,502,98"/>
+<area shape="rect" href="classAssetManager.html#a9ba5c903d7ee37305a18747c1b34403f" title=" " alt="" coords="274,122,507,149"/>
+<area shape="rect" href="classAssetManager.html#a4c092b29c772a3345a5dfe1d6423a246" title=" " alt="" coords="269,173,512,199"/>
 </map>
 </div>
 
@@ -219,6 +232,74 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
+<a id="ae68b7427308797e264e9083760dacba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae68b7427308797e264e9083760dacba8">&#9670;&nbsp;</a></span>GetPlayerTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const sf::Texture &amp; AssetManager::GetPlayerTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb5afb6845bac1453b21563fd1d9c1c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb5afb6845bac1453b21563fd1d9c1c3">&#9670;&nbsp;</a></span>GetShadowTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const sf::Texture &amp; AssetManager::GetShadowTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad483c144e815bb2f2a733fccfe82c6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad483c144e815bb2f2a733fccfe82c6c4">&#9670;&nbsp;</a></span>GetTextureEnemy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; sf::Texture &gt; &amp; AssetManager::GetTextureEnemy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac912936d43016df386d8bf404916dfaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac912936d43016df386d8bf404916dfaa">&#9670;&nbsp;</a></span>GetTextureNPC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; sf::Texture &gt; &amp; AssetManager::GetTextureNPC </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a417d8bd2257e13f72d84c9738d18dafe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a417d8bd2257e13f72d84c9738d18dafe">&#9670;&nbsp;</a></span>RemoveTextureEnemy()</h2>
 
@@ -282,6 +363,33 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
+<a id="a4c092b29c772a3345a5dfe1d6423a246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c092b29c772a3345a5dfe1d6423a246">&#9670;&nbsp;</a></span>SetShadowTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AssetManager::SetShadowTexture </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>fileTexture</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classAssetManager_a4c092b29c772a3345a5dfe1d6423a246_icgraph.png" border="0" usemap="#classAssetManager_a4c092b29c772a3345a5dfe1d6423a246_icgraph" alt=""/></div>
+<map name="classAssetManager_a4c092b29c772a3345a5dfe1d6423a246_icgraph" id="classAssetManager_a4c092b29c772a3345a5dfe1d6423a246_icgraph">
+<area shape="rect" title=" " alt="" coords="269,5,512,32"/>
+<area shape="rect" href="classAssetManager.html#a750ae7b39b633fbb6594443aa3ca704b" title=" " alt="" coords="5,5,221,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Documentation des champs</h2>
 <a id="a475ef8e5521d2a2f2090c1fc6017dbfb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a475ef8e5521d2a2f2090c1fc6017dbfb">&#9670;&nbsp;</a></span>textureEnemy</h2>
@@ -338,6 +446,28 @@ Voici le graphe des appelants de cette fonction :</div>
       <table class="memname">
         <tr>
           <td class="memname">sf::Texture AssetManager::texturePlayer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca0fc91a5bfd430f2162fefe18502431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca0fc91a5bfd430f2162fefe18502431">&#9670;&nbsp;</a></span>textureShadow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Texture AssetManager::textureShadow</td>
         </tr>
       </table>
   </td>

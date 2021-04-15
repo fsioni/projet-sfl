@@ -2,6 +2,9 @@
 #define __ENEMY_H__
 
 #include "EntityWithHP.h"
+#include "FiniteStateMachine/StateMachine.h"
+#include "FiniteStateMachine/EnemyStates.h"
+#include "Player.h"
 #include <string>
 
 using namespace std;
@@ -15,6 +18,7 @@ using namespace std;
 */
 class Enemy : public EntityWithHP
 {
+    StateMachine<Enemy> * stateMachine;
 public :
     /*// ==== Fonctions membres publiques === //*/
 
@@ -43,12 +47,17 @@ public :
     */
     Enemy(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, unsigned int maxHealth);
 
+
     /*! \brief Destructeur.
     *
     *  Destructeur de la classe Enemy.
     *
     */
     ~Enemy();
+
+    StateMachine<Enemy>* GetStateMachine() const{return stateMachine;};
+
+    void UpdateStateMachine(std::unique_ptr<Player> & player_);
 
 };
 

@@ -1,4 +1,29 @@
 var searchData=
 [
-  ['update_218',['Update',['../classState.html#a43d4ca30d927c023316c058b700c0716',1,'State::Update()'],['../classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2',1,'StateGameSFML::Update()']]]
+  ['takedamage_226',['TakeDamage',['../classEntityWithHP.html#a95a2c2671104ca91e328f9d2b5c17a35',1,'EntityWithHP']]],
+  ['termclear_227',['termClear',['../winTxt_8cpp.html#abfddca010a6ceb2c5292c98247a434ce',1,'termClear():&#160;winTxt.cpp'],['../winTxt_8h.html#abfddca010a6ceb2c5292c98247a434ce',1,'termClear():&#160;winTxt.cpp']]],
+  ['terminit_228',['termInit',['../winTxt_8cpp.html#a67191e6d920e10b82b0868cb240228ae',1,'winTxt.cpp']]],
+  ['termmove_229',['termMove',['../winTxt_8cpp.html#a0038303af38e1a50f24e3d4e33a4635b',1,'winTxt.cpp']]],
+  ['test_230',['Test',['../classGame.html#a4f1be1e913b5f2df3af95417017185ea',1,'Game::Test()'],['../classBox.html#ab30d8d08bfff9e0505d1baa518b01fba',1,'Box::Test()'],['../classCollisionBox.html#a7ff1898829497e2344a65404a4cc4901',1,'CollisionBox::Test()'],['../classMapLayer.html#a518003984f69ae63b7e7392184799c42',1,'MapLayer::Test()'],['../classMap.html#a5a8b1d219211664f0df882e35104d035',1,'Map::Test()'],['../classSpawnPoint.html#a1f65d03e003ddc89378b5571c52ff8c5',1,'SpawnPoint::Test()'],['../classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9',1,'Tileset::Test()']]],
+  ['testregression_231',['testRegression',['../tmxParsing_8cpp.html#a317f87c9a3888b89d04c33aa204600c2',1,'testRegression():&#160;tmxParsing.cpp'],['../tmxParsing_8h.html#a317f87c9a3888b89d04c33aa204600c2',1,'testRegression():&#160;tmxParsing.cpp']]],
+  ['textfont_232',['textFont',['../classStateMenuSFML.html#abcd4cd5d310506bedd9e569f70b68db1',1,'StateMenuSFML::textFont()'],['../classStateSplashScreenSFML.html#a6719e37ee29be4b02741a36c1c7d200a',1,'StateSplashScreenSFML::textFont()']]],
+  ['textureenemy_233',['textureEnemy',['../classAssetManager.html#a475ef8e5521d2a2f2090c1fc6017dbfb',1,'AssetManager']]],
+  ['texturenpc_234',['textureNPC',['../classAssetManager.html#ad149543187cba52a29d33965d3d5f1d8',1,'AssetManager']]],
+  ['textureplayer_235',['texturePlayer',['../classAssetManager.html#a07761e9d8c5e55b002ca35748486eb33',1,'AssetManager']]],
+  ['textureshadow_236',['textureShadow',['../classAssetManager.html#aca0fc91a5bfd430f2162fefe18502431',1,'AssetManager']]],
+  ['tilecount_237',['tileCount',['../classTileset.html#a1e8902719ac12548c2c6dfc6902c49a2',1,'Tileset']]],
+  ['tileheight_238',['tileHeight',['../classTileset.html#a62c8b00674890f60189f1ace74aeee88',1,'Tileset']]],
+  ['tilemapheight_239',['tileMapHeight',['../classTileset.html#a60c38db68abc1f946673db7d183003e7',1,'Tileset']]],
+  ['tilemappath_240',['tileMapPath',['../classTileset.html#a0fb98e1845e3cf7281ccf31cc0e87755',1,'Tileset']]],
+  ['tilemapwidth_241',['tileMapWidth',['../classTileset.html#a3f1d1e233caf30f65879e06455b60ca3',1,'Tileset']]],
+  ['tileset_242',['Tileset',['../classTileset.html',1,'Tileset'],['../classTileset.html#a9b75b605d834e3c9e25fb1c2429a36f6',1,'Tileset::Tileset()'],['../classTileset.html#a805ea43035842b61962c0d7e9c5cec25',1,'Tileset::Tileset(const Tileset &amp;ts)'],['../classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54',1,'Tileset::Tileset(std::string rawData)'],['../classMap.html#a54a817824c3c4d40e5344b4db0900048',1,'Map::tileset()']]],
+  ['tileset_2ecpp_243',['Tileset.cpp',['../Tileset_8cpp.html',1,'']]],
+  ['tileset_2eh_244',['Tileset.h',['../Tileset_8h.html',1,'']]],
+  ['tilesprite_245',['tileSprite',['../classStateGameSFML.html#afdcbd11b260a353410bfbb951fe48e08',1,'StateGameSFML']]],
+  ['tiletexture_246',['tileTexture',['../classStateGameSFML.html#a1a809c09d955c8bfca50d1358cb96a10',1,'StateGameSFML']]],
+  ['tilewidth_247',['tileWidth',['../classTileset.html#a477770a6cc81a9a53bf5928ebd5c88a9',1,'Tileset']]],
+  ['tmxloadlayers_248',['TmxLoadLayers',['../classMap.html#ab57f33273034a118bb9434befbeb4263',1,'Map']]],
+  ['tmxparsing_2ecpp_249',['tmxParsing.cpp',['../tmxParsing_8cpp.html',1,'']]],
+  ['tmxparsing_2eh_250',['tmxParsing.h',['../tmxParsing_8h.html',1,'']]],
+  ['tsxloadtileset_251',['TsxLoadTileset',['../classMap.html#a731bab75a964df89b6568831f3824df7',1,'Map']]]
 ];

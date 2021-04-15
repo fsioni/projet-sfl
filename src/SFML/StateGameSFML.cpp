@@ -1,5 +1,6 @@
 #include "StateGameSFML.h"
-
+#include <string>
+#include <assert.h>
 
 StateGameSFML::StateGameSFML(/* args */)
 {
@@ -28,60 +29,116 @@ void StateGameSFML::Init()
 
     // Chargement de la texture de l'ombre
     shadowSprite.setTexture(context->assetMan->GetShadowTexture());
+
+    // Initialisation UI
+    assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
+
+    int winx = context->renderWin->getSize().x;
+    int winy = context->renderWin->getSize().y;
+
+    heartText.loadFromFile("./data/textures/UI/heart.png");
+    heartSprite.setTexture(heartText);
+    heartSprite.setScale(0.1f, 0.1f);
+    heartSprite.setOrigin(heartSprite.getLocalBounds().left +
+                            heartSprite.getLocalBounds().width/2.0f, 
+                            heartSprite.getLocalBounds().top +
+                            heartSprite.getLocalBounds().height/2.0f);
+
+    heartSprite.setPosition(20, 30);
+
+
+    hpText.setFont(textFont);
+    hpText.setString("0/0");
+    hpText.setCharacterSize(30);
+
+    hpText.setOrigin(hpText.getLocalBounds().left+hpText.getLocalBounds().width
+                    / 2.0f, hpText.getLocalBounds().top + 
+                    hpText.getLocalBounds().height/2.0f);
+
+    hpText.setPosition(60, 30);
 }
 
 void StateGameSFML::ProcessInput()
 {
-    sf::Event Event;
-    while(context->renderWin->pollEvent(Event)){
-            
-        switch (Event.type)
+    sf::Event event;
+    while(context->renderWin->pollEvent(event)){
+
+            //Si la touche Z et S sont enfoncées
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+            {
+                isGoingUp = false;
+                isGoingDown = false;
+            }
+            //Si la touche Z est enfoncée
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z)) 
+            {
+                isGoingUp = true;
+                isGoingDown = false;
+                context->player->SetDirection(Up);
+            }
+            //Si la touche S est enfoncée
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+            {
+                isGoingUp = false;
+                isGoingDown = true;
+                context->player->SetDirection(Down);
+            }
+            //Si la touche ni Z ni S n'est enfoncée
+            else
+            {
+                isGoingUp = false;
+                isGoingDown = false;
+            }
+
+            //Si la touche Q et D sont enfoncées
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
+            {
+                isGoingRight = false;
+                isGoingLeft = false;
+            }
+            //Si la touche Q est enfoncée
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q))
+            {
+                isGoingRight = true;
+                isGoingLeft = false;
+                context->player->SetDirection(Left);
+            }
+            //Si la touche D est enfoncée
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
+            {
+                isGoingLeft = true;
+                isGoingRight = false;
+                context->player->SetDirection(Right);
+            }
+            //Si la touche ni Q ni D n'est enfoncée
+            else
+            {
+                isGoingRight = false;
+                isGoingLeft = false;
+            }     
+
+        switch (event.type)
         {
+            //Si l'évènement actuel est celui de fermeture: quitter le jeu
         case sf::Event::Closed:
             context->renderWin->close();
             context->quit = true;
             break;
 
         case sf::Event::KeyPressed:
-            switch (Event.key.code)
-            {
-            case sf::Keyboard::Z:
-                MoveWithCollision(0, -1);
-                context->player->SetDirection(Up);
-                break;
-            
-            case sf::Keyboard::Q:
-                MoveWithCollision(-1, 0);
-                context->player->SetDirection(Left);
-                break;
-            
-            case sf::Keyboard::S:
-                MoveWithCollision(0, 1);
-                context->player->SetDirection(Down);
-                break;
 
-            case sf::Keyboard::D:
-                MoveWithCollision(1, 0);
-                context->player->SetDirection(Right);
-                break;        
-
-            case sf::Keyboard::P:
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::P)) {
                 context->isDebug = (!context->isDebug);
-                break;
-            
-            case sf::Keyboard::X:
-                context->renderWin->close();  
-                context->quit = true;
-                break;
-            
-            case sf::Keyboard::Escape:
+            }
+
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X) 
+            || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape)) {
                 context->renderWin->close();
                 context->quit = true;
-                break;
-            
-            default:
-                break;
             }
+            break;
         
         default:
             break;
@@ -92,6 +149,8 @@ void StateGameSFML::ProcessInput()
 
 void StateGameSFML::Update()
 {
+    deltaTime = deltaClock.restart().asMilliseconds();
+
     // Position du joueur
     playerX = context->player->GetPos_x();
     playerY = context->player->GetPos_y();
@@ -113,6 +172,38 @@ void StateGameSFML::Update()
     winWidth = (int)context->renderWin->getSize().x;
     winHeight =(int)context->renderWin->getSize().y;
 
+    // Gestion mouvement joueur
+    if (isGoingUp && isGoingLeft)
+    {
+        MoveWithCollision(0.5f, -0.5f);
+    }else if (isGoingUp && isGoingRight)
+    {
+        MoveWithCollision(-0.5f, -0.5f);
+    }else if (isGoingUp)
+    {
+        MoveWithCollision(0, -1);
+    }
+
+    if (isGoingDown && isGoingLeft)
+    {
+        MoveWithCollision(0.5f, 0.5f);
+    }else if (isGoingDown && isGoingRight)
+    {
+        MoveWithCollision(-0.5f, 0.5f);
+    }else if (isGoingDown)
+    {
+        MoveWithCollision(0, 1);
+    }
+
+    if (isGoingRight && !isGoingUp && !isGoingDown)
+    {
+        MoveWithCollision(-1,0);
+    }
+    
+    if (isGoingLeft && !isGoingUp && !isGoingDown)
+    {
+        MoveWithCollision(1,0);
+    }
     
 
     // Gestion des bords de map
@@ -121,12 +212,25 @@ void StateGameSFML::Update()
     if(substY < 0) substY = 0;
     if(substY > mapHeight*h - winHeight) substY = mapHeight*h - winHeight;
 
-    if(clock.getElapsedTime().asSeconds() > 0.3){
+    // Gestion animation joueur
+    if(spriteClock.getElapsedTime().asSeconds() > 0.3){
         if(posX==64) posX=0;
         else posX +=32;
             
-        clock.restart();
+        spriteClock.restart();
     }
+
+    // Update FSM Enemy
+    int count = context->enemies.size();
+    
+    for(int i=0; i<count; i++){
+        context->enemies[i]->UpdateStateMachine(context->player);
+    }
+
+    // Mise à jour texte UI
+    std::string hp = std::to_string(context->player->GetHP());
+    std::string maxHp = std::to_string(context->player->GetMaxHealth());
+    hpText.setString("HP :" + hp + "/" + maxHp);
 }
 
 void StateGameSFML::Display()
@@ -180,9 +284,9 @@ void StateGameSFML::Display()
 
     // Affichage des ennemies
     for(int i=0; i<(int)context->enemies.size(); i++){
-        direction = context->enemies[i].GetDirection();
-        int enX = context->enemies[i].GetPos_x()-substX;
-        int enY = context->enemies[i].GetPos_y()-substY;
+        direction = context->enemies[i]->GetDirection();
+        int enX = context->enemies[i]->GetPos_x()-substX;
+        int enY = context->enemies[i]->GetPos_y()-substY;
         enemySprite.setPosition(enX -w/2, enY -h/2);
         enemySprite.setTextureRect(sf::IntRect(posX, 0, 32, 32));
         context->renderWin->draw(enemySprite);
@@ -214,6 +318,13 @@ void StateGameSFML::Display()
             context->renderWin->draw(cb);                
         }            
     }
+
+    ///////////// UI ///////////////
+    context->renderWin->draw(hpText);
+    context->renderWin->draw(heartSprite);
+
+
+
 
 
     context->renderWin->display();
@@ -263,6 +374,6 @@ void StateGameSFML::MoveWithCollision(float vx, float vy)
     }
     if (!iscolliding)
     {
-        context->player->Move(vx, vy);
+        context->player->Move((vx*deltaTime)/30, (vy*deltaTime)/30);
     }
 }

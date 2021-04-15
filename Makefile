@@ -26,6 +26,10 @@ OBJ_FILES += obj/StateSplashScreenTxt.o obj/StateMenuTxt.o obj/StateGameTxt.o ob
 ##SFML Mode
 OBJ_FILES += obj/StateSplashScreenSFML.o obj/StateMenuSFML.o obj/StateGameSFML.o  
 
+## Finite State Machine 
+OBJ_FILES += obj/StateBehavior.o obj/EnemyStates.o obj/StateMachine.o
+
+
 
 #Compilers options
 CC = g++
@@ -35,6 +39,9 @@ INCLUDE_SFML = -I./extern/SFML/include
 LIBS_SFML = -Lextern/SFML/lib -lsfml-graphics -lsfml-window -lsfml-system 
 
 COMPILATIONOBJ = $(CC) $(CFLAGS) -c $< -o $@ 
+
+FSM = src/Core/Entity/FiniteStateMachine
+
 
 
 all: $(EXECS_NAME)
@@ -113,7 +120,7 @@ obj/StateMenuTxt.o : src/txt/StateMenuTxt.cpp src/txt/StateMenuTxt.h
 obj/StateGameTxt.o : src/txt/StateGameTxt.cpp src/txt/winTxt.h src/txt/StateMenuTxt.h 
 	$(COMPILATIONOBJ)
 
-obj/winTxt.o : src/txt/winTxt.cpp
+obj/winTxt.o : src/txt/winTxt.cpp src/txt/winTxt.h
 	$(COMPILATIONOBJ)
 
 ##SFML Mode
@@ -125,6 +132,19 @@ obj/StateMenuSFML.o : src/SFML/StateMenuSFML.cpp src/Core/Game.h src/Core/StateM
 
 obj/StateGameSFML.o : src/SFML/StateGameSFML.cpp src/SFML/StateGameSFML.h src/SFML/AssetManager.h src/Core/Game.h src/Core/StateManager/StateManager.cpp src/Core/StateManager/State.h
 	$(COMPILATIONOBJ)
+
+
+
+##Finite State Machine
+obj/StateBehavior.o : $(FSM)/StateBehavior.cpp  $(FSM)/StateBehavior.h
+	$(COMPILATIONOBJ)
+
+obj/EnemyStates.o : $(FSM)/EnemyStates.cpp $(FSM)/EnemyStates.h src/Core/Entity/EntityWithHP.h
+	$(COMPILATIONOBJ)
+
+obj/StateMachine.o : $(FSM)/StateMachine.cpp $(FSM)/StateMachine.h  $(FSM)/StateMachine.h 
+	$(COMPILATIONOBJ)
+
 
 #Others
 clean:

@@ -31,19 +31,20 @@ private:
     sf::Texture tileTexture;
     sf::Sprite tileSprite, playerSprite, shadowSprite, enemySprite;
 
-    // Horloge
-    sf::Clock clock;
-    int posX = 0;
+    // Horlage pour le delta time
+    sf::Clock deltaClock;
+    float deltaTime;
 
-    // Direction du joueur 
-    // 0 : bas
-    // 1 : gauche
-    // 2 : droite 
-    // 3 : haut
-    //int direction = 2;
+    // Horloge pour l'animation du sprite
+    sf::Clock spriteClock;
+    int posX = 0;
 
     // Position du joueur
     int playerX, playerY;
+
+    // Direction mouvement du joueur
+    bool isGoingUp, isGoingDown, isGoingLeft, isGoingRight;
+
     // Info sur la tilemap
     int w, h, nbMapLayer, x, y, data;
     
@@ -55,6 +56,15 @@ private:
 
     //Taille de la map
     int mapWidth, mapHeight;
+
+    // Texte pour l'UI
+    sf::Font textFont;
+    sf::Text hpText;
+
+    // Image pour l'UI
+    sf::Texture heartText;
+    sf::Sprite heartSprite;
+
 };
 
 #endif // __STATEGAMESFML_H__
