@@ -5,6 +5,11 @@
 #include <iostream>
 #include <math.h>
 
+float distance(Enemy * enemy, std::unique_ptr<Player> & player_){
+    int x = enemy->GetPos_x() - player_->GetPos_x();
+    int y = enemy->GetPos_y() - player_->GetPos_y();
+    return sqrt(x*x + y*y);
+}
 
 // ======== ENEMY PATROL STATE ===========
 EnemyPatrol* EnemyPatrol::singleton = nullptr;
@@ -21,39 +26,35 @@ void EnemyPatrol::Enter(Enemy * enemy){
 }
 
 
-void EnemyPatrol::Execute(Enemy * enemy){
-    if(enemy->GetLivingStatus()){
-        enemy->Move(1, 0);
-        enemy->TakeDamage(1);
+void EnemyPatrol::Execute(Enemy * enemy, std::unique_ptr<Player> & player_){
+    if(distance(enemy, player_)<32.){
+        enemy->GetStateMachine()->ChangeState(EnemyAttack::Instance());
     }
-    else{
-        std::cout << "Enemy mort !" << std::endl;
-        enemy->GetStateMachine()->ChangeState(EnemyGlobalState::Instance());
-    } 
 }
 
 void EnemyPatrol::Exit(Enemy * enemy){
     std::cout << "Enemy leaving Patrol State." << std::endl;
 }
 
-// ======== ENEMY GLOBAL STATE ===========
-EnemyGlobalState* EnemyGlobalState::singleton = nullptr;
 
-EnemyGlobalState* EnemyGlobalState::Instance(){
+// ======== ENEMY ATTACK STATE ===========
+EnemyAttack* EnemyAttack::singleton = nullptr;
+
+EnemyAttack* EnemyAttack::Instance(){
     if(singleton==nullptr){
-        singleton = new EnemyGlobalState;
+        singleton = new EnemyAttack;
     }
     return singleton;
 }
 
-void EnemyGlobalState::Enter(Enemy * enemy){
-    std::cout << "Enemy enter in Global State." << std::endl;
+void EnemyAttack::Enter(Enemy * enemy){
+    std::cout << "Enemy enter in Attack State." << std::endl;
 }
 
-void EnemyGlobalState::Execute(Enemy * enemy){
+void EnemyAttack::Execute(Enemy * enemy, std::unique_ptr<Player> & player_){
     
 }
 
-void EnemyGlobalState::Exit(Enemy * enemy){
-    std::cout << "Enemy leaving Global State." << std::endl;
+void EnemyAttack::Exit(Enemy * enemy){
+    std::cout << "Enemy leaving Attack State." << std::endl;
 }

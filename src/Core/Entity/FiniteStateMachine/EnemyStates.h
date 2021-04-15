@@ -7,38 +7,36 @@
 
 class Enemy;
 
-
-
 // ======== ENEMY PATROL STATE ===========
 
 class EnemyPatrol : public StateBehavior<Enemy>{
-protected:
-    EnemyPatrol(){};
-    static EnemyPatrol* singleton;
 public:
     EnemyPatrol(const EnemyPatrol & other)=delete;
     void operator=(const EnemyPatrol & other)=delete;
-
     static EnemyPatrol* Instance();
     virtual void Enter(Enemy * enemy);
-    virtual void Execute(Enemy * enemy);
+    virtual void Execute(Enemy * enemy, std::unique_ptr<Player> & player_);
     virtual void Exit(Enemy * enemy);
+
+private:
+    EnemyPatrol(){};
+    static EnemyPatrol* singleton;
 };
 
-// ======== ENEMY GLOBAL STATE ===========
+// ======== ENEMY PATROL STATE ===========
 
-class EnemyGlobalState : public StateBehavior<Enemy>{
-protected:
-    EnemyGlobalState(){}
-    static EnemyGlobalState* singleton;
+class EnemyAttack : public StateBehavior<Enemy>{
 public:
-    EnemyGlobalState(const EnemyGlobalState & other)=delete;
-    void operator=(const EnemyGlobalState & other)=delete;
-
-    static EnemyGlobalState* Instance();
+    EnemyAttack(const EnemyAttack & other)=delete;
+    void operator=(const EnemyAttack & other)=delete;
+    static EnemyAttack* Instance();
     virtual void Enter(Enemy * enemy);
-    virtual void Execute(Enemy * enemy);
+    virtual void Execute(Enemy * enemy, std::unique_ptr<Player> & player_);
     virtual void Exit(Enemy * enemy);
+    
+private:
+    EnemyAttack(){};
+    static EnemyAttack* singleton;
 };
 
 #endif

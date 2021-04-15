@@ -66,10 +66,8 @@ void Game::Run(int mode)
     }
 }
 
+
 void Game::Test() 
-{
-    for(int i=0; i<context->enemies.size(); i++){
-        context->enemies[i]->Update();
-    }
-       
+{   
+    
 }

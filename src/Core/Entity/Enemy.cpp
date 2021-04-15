@@ -12,15 +12,13 @@ Enemy::Enemy() : EntityWithHP(){
     stateMachine = new StateMachine<Enemy>(this);
     
     stateMachine->SetCurrentState(EnemyPatrol::Instance());
-    stateMachine->SetGlobalState(EnemyGlobalState::Instance());
 }
 
 Enemy::Enemy(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, unsigned int maxHealth)
 : EntityWithHP::EntityWithHP(x, y, name, hp, damage, speed, maxHealth){
     stateMachine = new StateMachine<Enemy>(this);
-    //std::cout << this << std::endl;
+    
     stateMachine->SetCurrentState(EnemyPatrol::Instance());
-    stateMachine->SetGlobalState(EnemyGlobalState::Instance());
 }
 
 Enemy::~Enemy(){
@@ -41,6 +39,6 @@ Enemy::~Enemy(){
 }
 
 
-void Enemy::Update(){
-    stateMachine->Update();
+void Enemy::UpdateStateMachine(std::unique_ptr<Player> & player_){
+    stateMachine->UpdateCurrentState(player_);
 }

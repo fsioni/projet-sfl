@@ -132,7 +132,7 @@ void StateGameSFML::Update()
     int count = context->enemies.size();
     
     for(int i=0; i<count; i++){
-        context->enemies[i]->Update();
+        context->enemies[i]->UpdateStateMachine(context->player);
     }
 }
 

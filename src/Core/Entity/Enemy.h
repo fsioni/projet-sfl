@@ -4,6 +4,7 @@
 #include "EntityWithHP.h"
 #include "FiniteStateMachine/StateMachine.h"
 #include "FiniteStateMachine/EnemyStates.h"
+#include "Player.h"
 #include <string>
 
 using namespace std;
@@ -56,7 +57,7 @@ public :
 
     StateMachine<Enemy>* GetStateMachine() const{return stateMachine;};
 
-    void Update();
+    void UpdateStateMachine(std::unique_ptr<Player> & player_);
 
 };
 
