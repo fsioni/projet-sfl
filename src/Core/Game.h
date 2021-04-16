@@ -31,8 +31,8 @@ struct Context
         stateMan = std::make_unique<StateManager>();
         renderWin = std::make_unique<sf::RenderWindow>();
         map = std::make_unique<Map>("data/maps/tilemaps/mainTilemap.tmx", "data/maps/tilesets/mainTileSet.tsx");
-        player = std::make_unique<Player>(map->GetSpawnsLayer().getPlayerSpawn().GetX(), 
-        map->GetSpawnsLayer().getPlayerSpawn().GetY(), "Player", 10, 10, 4, 10);
+        player = std::make_unique<Player>(map->GetSpawnsLayer()->getPlayerSpawn().GetX(), 
+        map->GetSpawnsLayer()->getPlayerSpawn().GetY(), "Player", 10, 10, 4, 10);
         isDebug = false;
         quit = false;
 

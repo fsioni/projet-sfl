@@ -58,13 +58,13 @@ public:
     *
     * \return La tileset de la Map.
     */
-    Tileset GetTileset() const;
+    Tileset * GetTileset() const;
 
     /*! \brief Retourne collisionLayers
     *
     * \return Le collisionLayers de la Map.
     */
-    CollisionLayer GetCollisionLayer() const;
+    CollisionLayer * GetCollisionLayer() const;
 
     /*! \brief Retourne mapLayers
     *
@@ -76,7 +76,7 @@ public:
     *
     * \return Le SpawnsLayers de la Map.
     */
-    SpawnsLayer GetSpawnsLayer() const;
+    SpawnsLayer * GetSpawnsLayer() const;
 
     /*! \brief Charge les données d'un fichier .tmx.
     *

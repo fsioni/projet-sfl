@@ -11,11 +11,11 @@ Game::Game(/* args */)
     context = make_shared<Context>();
 
     // Initialisation des ennemies
-    int count = context->map->GetSpawnsLayer().getEnemySpawns().size();
+    int count = context->map->GetSpawnsLayer()->getEnemySpawns().size();
     
     for(int i = 0; i<count; i++){
-        int x = context->map->GetSpawnsLayer().getEnemySpawns()[i].GetX();
-        int y = context->map->GetSpawnsLayer().getEnemySpawns()[i].GetY();
+        int x = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetX();
+        int y = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
 
         context->enemies.push_back(new Enemy(x, y, "Enemy", 100, 3, 5, 100));
     }
@@ -66,6 +66,9 @@ void Game::Run(int mode)
     }
 }
 
+void foo(CollisionLayer c){
+
+}
 
 void Game::Test() 
 {   

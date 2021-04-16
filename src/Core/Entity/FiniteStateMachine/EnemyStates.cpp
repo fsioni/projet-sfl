@@ -52,7 +52,7 @@ void EnemyAttack::Enter(Enemy * enemy){
 }
 
 void EnemyAttack::Execute(Enemy * enemy, std::unique_ptr<Player> & player_){
-    
+    enemy->Move(1/5., 0);
 }
 
 void EnemyAttack::Exit(Enemy * enemy){

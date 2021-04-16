@@ -17,7 +17,7 @@ StateGameSFML::~StateGameSFML()
 void StateGameSFML::Init()
 {
     // Chargement de la tileMap
-    tileTexture.loadFromFile(context->map->GetTileset().GetTileMapPath());
+    tileTexture.loadFromFile(context->map->GetTileset()->GetTileMapPath());
     tileSprite.setTexture(tileTexture);
 
     // Chargement de la texture du joueur
@@ -128,8 +128,8 @@ void StateGameSFML::Update()
     playerY = context->player->GetPos_y();
 
     // Info sur la tilemap
-    w = context->map->GetTileset().GetTileWidth();
-    h = context->map->GetTileset().GetTileHeight();
+    w = context->map->GetTileset()->GetTileWidth();
+    h = context->map->GetTileset()->GetTileHeight();
     nbMapLayer = context->map->GetMapLayers().size();
 
     // Taille de la map
@@ -275,7 +275,7 @@ void StateGameSFML::Display()
 
         // Affichage des collision boxes
         const std::vector<CollisionBox> collisionBoxes = 
-            context->map->GetCollisionLayer().GetCollisionBoxes();
+            context->map->GetCollisionLayer()->GetCollisionBoxes();
 
         for (long unsigned int i=0; i < collisionBoxes.size(); i++)
         {
@@ -310,7 +310,7 @@ void StateGameSFML::MoveWithCollision(float vx, float vy)
         return;
     }
     bool iscolliding = false;
-    std::vector<CollisionBox> cb = context->map->GetCollisionLayer().GetCollisionBoxes();
+    std::vector<CollisionBox> cb = context->map->GetCollisionLayer()->GetCollisionBoxes();
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
 

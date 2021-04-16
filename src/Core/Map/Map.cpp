@@ -52,7 +52,7 @@ Map::~Map(){
     spawnsLayer = nullptr;
 }
 
-void Map::SetTileset(const Tileset& ts){
+void Map::SetTileset(const Tileset & ts){
     *tileset = ts;
 }
 
@@ -64,16 +64,16 @@ void Map::SetSpawnLayer(const SpawnsLayer& nLayer){
     *spawnsLayer = nLayer;
 }
 
-Tileset Map::GetTileset() const{
-    return *tileset;
+Tileset * Map::GetTileset() const{
+    return tileset;
 }
 
-CollisionLayer Map::GetCollisionLayer() const{
-    return *collisionLayer;
+CollisionLayer * Map::GetCollisionLayer() const{
+    return collisionLayer;
 }
 
-SpawnsLayer Map::GetSpawnsLayer() const{
-    return *spawnsLayer;
+SpawnsLayer * Map::GetSpawnsLayer() const{
+    return spawnsLayer;
 }
 
 std::vector<MapLayer> Map::GetMapLayers() const{

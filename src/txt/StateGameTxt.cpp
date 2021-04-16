@@ -92,7 +92,8 @@ void StateGameTxt::Display()
     
 
     //Affichage des collisions boxes
-        const std::vector<CollisionBox> cb = context->map->GetCollisionLayer().GetCollisionBoxes();
+        const std::vector<CollisionBox> cb = 
+            context->map->GetCollisionLayer()->GetCollisionBoxes();
     for (int i=0; i < (int)cb.size(); i++){
         int w = cb[i].GetWidth();
         int h = cb[i].GetHeight();
@@ -128,7 +129,8 @@ void StateGameTxt::MoveWithCollision(float vx, float vy)
     }
 
     bool iscolliding = false;
-    std::vector<CollisionBox> cb = context->map->GetCollisionLayer().GetCollisionBoxes();
+    std::vector<CollisionBox> cb = 
+        context->map->GetCollisionLayer()->GetCollisionBoxes();
 
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
