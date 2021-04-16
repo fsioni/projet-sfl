@@ -224,7 +224,8 @@ void StateGameSFML::Update()
     int count = context->enemies.size();
     
     for(int i=0; i<count; i++){
-        context->enemies[i]->UpdateStateMachine(context->player);
+        context->enemies[i]->UpdateStateMachine(context->player,
+            context->map->GetCollisionLayer());
     }
 
     // Mise à jour texte UI

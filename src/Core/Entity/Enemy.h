@@ -57,7 +57,8 @@ public :
 
     StateMachine<Enemy>* GetStateMachine() const{return stateMachine;};
 
-    void UpdateStateMachine(std::unique_ptr<Player> & player_);
+    void UpdateStateMachine(std::unique_ptr<Player> & player_, 
+                            CollisionLayer * collision);
 
 };
 

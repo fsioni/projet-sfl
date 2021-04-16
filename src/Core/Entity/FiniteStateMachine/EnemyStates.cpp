@@ -26,7 +26,8 @@ void EnemyPatrol::Enter(Enemy * enemy){
 }
 
 
-void EnemyPatrol::Execute(Enemy * enemy, std::unique_ptr<Player> & player_){
+void EnemyPatrol::Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
+                          CollisionLayer * collision){
     if(distance(enemy, player_)<32.){
         enemy->GetStateMachine()->ChangeState(EnemyAttack::Instance());
     }
@@ -51,7 +52,8 @@ void EnemyAttack::Enter(Enemy * enemy){
     std::cout << "Enemy enter in Attack State." << std::endl;
 }
 
-void EnemyAttack::Execute(Enemy * enemy, std::unique_ptr<Player> & player_){
+void EnemyAttack::Execute(Enemy * enemy, std::unique_ptr<Player> & player_, 
+                          CollisionLayer * collision){
     enemy->Move(1/5., 0);
 }
 
