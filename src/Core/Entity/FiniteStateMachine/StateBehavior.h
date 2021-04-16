@@ -2,6 +2,7 @@
 #define __STATE_BEHAVIOR__
 
 #include "../Player.h"
+#include <memory>
 
 template <class entity_type>
 class StateBehavior{

@@ -1,5 +1,6 @@
 #include "StateGameSFML.h"
-
+#include <string>
+#include <assert.h>
 
 StateGameSFML::StateGameSFML(/* args */)
 {
@@ -28,12 +29,39 @@ void StateGameSFML::Init()
 
     // Chargement de la texture de l'ombre
     shadowSprite.setTexture(context->assetMan->GetShadowTexture());
+
+    // Initialisation UI
+    assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
+
+    int winx = context->renderWin->getSize().x;
+    int winy = context->renderWin->getSize().y;
+
+    heartText.loadFromFile("./data/textures/UI/heart.png");
+    heartSprite.setTexture(heartText);
+    heartSprite.setScale(0.1f, 0.1f);
+    heartSprite.setOrigin(heartSprite.getLocalBounds().left +
+                            heartSprite.getLocalBounds().width/2.0f, 
+                            heartSprite.getLocalBounds().top +
+                            heartSprite.getLocalBounds().height/2.0f);
+
+    heartSprite.setPosition(20, 30);
+
+
+    hpText.setFont(textFont);
+    hpText.setString("0/0");
+    hpText.setCharacterSize(30);
+
+    hpText.setOrigin(hpText.getLocalBounds().left+hpText.getLocalBounds().width
+                    / 2.0f, hpText.getLocalBounds().top + 
+                    hpText.getLocalBounds().height/2.0f);
+
+    hpText.setPosition(60, 30);
 }
 
 void StateGameSFML::ProcessInput()
 {
-    sf::Event Event;
-    while(context->renderWin->pollEvent(Event)){
+    sf::Event event;
+    while(context->renderWin->pollEvent(event)){
 
             //Si la touche Z et S sont enfoncées
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z) &&
@@ -91,7 +119,7 @@ void StateGameSFML::ProcessInput()
                 isGoingLeft = false;
             }     
 
-        switch (Event.type)
+        switch (event.type)
         {
             //Si l'évènement actuel est celui de fermeture: quitter le jeu
         case sf::Event::Closed:
@@ -198,6 +226,11 @@ void StateGameSFML::Update()
     for(int i=0; i<count; i++){
         context->enemies[i]->UpdateStateMachine(context->player);
     }
+
+    // Mise à jour texte UI
+    std::string hp = std::to_string(context->player->GetHP());
+    std::string maxHp = std::to_string(context->player->GetMaxHealth());
+    hpText.setString("HP :" + hp + "/" + maxHp);
 }
 
 void StateGameSFML::Display()
@@ -285,6 +318,13 @@ void StateGameSFML::Display()
             context->renderWin->draw(cb);                
         }            
     }
+
+    ///////////// UI ///////////////
+    context->renderWin->draw(hpText);
+    context->renderWin->draw(heartSprite);
+
+
+
 
 
     context->renderWin->display();
