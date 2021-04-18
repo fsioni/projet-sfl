@@ -65,7 +65,7 @@ void StateGameTxt::Update()
         break;
     }    
 
-    std::shared_ptr<CollisionBox> cbPlayer = context->player->getCollisionBox();
+    std::shared_ptr<CollisionBox> cbPlayer = context->player->GetCollisionBox();
     cbPlayer->SetX(context->player->GetPos_x());
     cbPlayer->SetY(context->player->GetPos_y());
 }
@@ -138,7 +138,7 @@ void StateGameTxt::MoveWithCollision(float vx, float vy)
         context->map->GetCollisionLayer()->GetCollisionBoxes();
 
         std::shared_ptr<CollisionBox> cbPlayer = context->player->
-            getCollisionBox();
+            GetCollisionBox();
 
     for (long unsigned int i = 0; i < cb.size(); i++)
     {

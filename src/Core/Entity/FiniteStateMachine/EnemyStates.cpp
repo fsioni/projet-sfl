@@ -22,7 +22,7 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy)
     }
     bool iscolliding = false;
     std::vector<CollisionBox> cb = cl->GetCollisionBoxes();
-    std::shared_ptr<CollisionBox> cbEnemy = e->getCollisionBox();
+    std::shared_ptr<CollisionBox> cbEnemy = e->GetCollisionBox();
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
         // -w/2 et -h/2 pour centrer l'origine 
@@ -62,10 +62,10 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy)
         //        sa propre collision Box
         if(true){
             //Detection collision axe X
-            if (posX + e->getCollisionBox()->GetWidth() - offset >= cbEnemie[i]->GetX()
+            if (posX + e->GetCollisionBox()->GetWidth() - offset >= cbEnemie[i]->GetX()
                 && cbEnemie[i]->GetX() + cbEnemie[i]->GetWidth() >= posX + offset){
                 //Detection collision axe Y
-                if(posY + e->getCollisionBox()->GetHeight() - offset >= cbEnemie[i]->GetY()
+                if(posY + e->GetCollisionBox()->GetHeight() - offset >= cbEnemie[i]->GetY()
                 && cbEnemie[i]->GetY() + cbEnemie[i]->GetHeight() >= posY + offset){
 
                     iscolliding = true;

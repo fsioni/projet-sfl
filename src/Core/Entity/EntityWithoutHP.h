@@ -114,7 +114,7 @@ public:
 
     void SetName(string newName);
 
-    std::shared_ptr<CollisionBox> getCollisionBox() const;
+    std::shared_ptr<CollisionBox> GetCollisionBox();
 
 
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.

@@ -224,7 +224,7 @@ void StateGameSFML::UpdatePlayer(){
     }
 
 
-    std::shared_ptr<CollisionBox> cbPlayer = context->player->getCollisionBox();
+    std::shared_ptr<CollisionBox> cbPlayer = context->player->GetCollisionBox();
     cbPlayer->SetX(context->player->GetPos_x());
     cbPlayer->SetY(context->player->GetPos_y());
     
@@ -250,6 +250,7 @@ void StateGameSFML::UpdateEnemies(){
        
         context->map->GetCollisionLayer()->GetCollisionBoxesEnemy()[i]->
         SetPosition(posX-16, posY-16);
+        context->enemies[i]->GetCollisionBox()->SetPosition(posX-16, posY-16);
         
     }
 }
@@ -338,7 +339,7 @@ void StateGameSFML::DisplayDebug(){
     //Affichage collisionBox du joueur
     int pOffset = context->player->getOffset();
 
-    std::shared_ptr<CollisionBox> cbPlayer = context->player->getCollisionBox();
+    std::shared_ptr<CollisionBox> cbPlayer = context->player->GetCollisionBox();
 
     sf::RectangleShape pb(sf::Vector2f(cbPlayer->GetWidth() - pOffset*2,
         cbPlayer->GetHeight() -pOffset*2));
@@ -393,7 +394,7 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
         context->map->GetCollisionLayer()->GetCollisionBoxes();
 
     
-    std::shared_ptr<CollisionBox> cbPlayer = context->player->getCollisionBox();
+    std::shared_ptr<CollisionBox> cbPlayer = context->player->GetCollisionBox();
 
     for (long unsigned int i = 0; i < cb.size(); i++)
     {

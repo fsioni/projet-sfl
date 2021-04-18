@@ -19,7 +19,7 @@ Game::Game(/* args */)
 
         std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 100, 3, 5, 100);
         context->enemies.push_back(enemy);
-        context->map->GetCollisionLayer()->AddCollisionBoxEnemy(enemy->getCollisionBox());
+        context->map->GetCollisionLayer()->AddCollisionBoxEnemy(enemy->GetCollisionBox());
     }
 
     context->isDebug = false;

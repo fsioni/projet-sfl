@@ -58,7 +58,7 @@ void EntityWithoutHP::SetName(string newName){
     name = newName;
 }
 
-std::shared_ptr<CollisionBox> EntityWithoutHP::getCollisionBox() const
+std::shared_ptr<CollisionBox> EntityWithoutHP::GetCollisionBox()
 {
     return cb;
 }
