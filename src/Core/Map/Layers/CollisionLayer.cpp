@@ -2,6 +2,7 @@
 
 #include "../tmxParsing.h"
 #include <iostream>
+#include <memory>
 
 CollisionLayer::CollisionLayer(){
 }
@@ -26,7 +27,7 @@ void CollisionLayer::AddCollisionBox(const CollisionBox& newColBox){
     collisionBoxes.push_back(newColBox);
 }
 
-void CollisionLayer::AddCollisionBoxEnemy(CollisionBox * newColBox){
+void CollisionLayer::AddCollisionBoxEnemy(std::shared_ptr<CollisionBox> newColBox){
     collisionBoxesEnemy.push_back(newColBox);
 }
 
@@ -46,7 +47,7 @@ std::vector<CollisionBox> CollisionLayer::GetCollisionBoxes() const
     return collisionBoxes;
 }
 
-std::vector<CollisionBox *> CollisionLayer::GetCollisionBoxesEnemy() 
+std::vector<std::shared_ptr<CollisionBox>> CollisionLayer::GetCollisionBoxesEnemy() 
 {
     return collisionBoxesEnemy;
 }

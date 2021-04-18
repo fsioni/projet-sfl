@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include <memory>
 
 #include "Layer.h"
 #include "../CollisionBox.h"
@@ -52,7 +53,7 @@ public:
     *   des entités à l'objet
     *   \param [in] newSpawn : nouvelle CollisionBox ajoutée
     */
-    void AddCollisionBoxEnemy(CollisionBox * newColBox);
+    void AddCollisionBoxEnemy(std::shared_ptr<CollisionBox> newColBox);
 
     /*! \brief Fonction d'affichage de l'objet en mode texte
     *
@@ -71,14 +72,14 @@ public:
     *
     *   \return Retourne le tableau dynamique de CollisionBox
     */
-    std::vector<CollisionBox *> GetCollisionBoxesEnemy();
+    std::vector<std::shared_ptr<CollisionBox>> GetCollisionBoxesEnemy();
     
 private:
     /*// === Données membres privées === //*/
 
     /*! \brief Tableau dyanmique des CollisionBox du Layer. */
     std::vector<CollisionBox> collisionBoxes;
-    std::vector<CollisionBox*> collisionBoxesEnemy;
+    std::vector<std::shared_ptr<CollisionBox>> collisionBoxesEnemy;
 };
 
 

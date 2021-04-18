@@ -34,36 +34,40 @@ void StateGameTxt::Update()
 {
     int c;
 
-        c = win->getCh();
-		switch (c) {
-            case 'z' :
-                MoveWithCollision(0, -1);
-                context->player->SetDirection(Up);
-                break;
-
-            case 'q' :
-                MoveWithCollision(-1, 0);
-                context->player->SetDirection(Left);
-                break;
-
-            case 's' :
-                MoveWithCollision(0, 1);
-                context->player->SetDirection(Down);
-                break;
-
-            case 'd' :
-                MoveWithCollision(1, 0);
-                context->player->SetDirection(Right);
-                break;
-                                        
-			case 'x':
-                system("clear");
-                system("setterm -cursor on");
-				context->quit = true;
-				break;
-        default:
+    c = win->getCh();
+    switch (c) {
+        case 'z' :
+            MoveWithCollision(0, -1);
+            context->player->SetDirection(Up);
             break;
-		}    
+
+        case 'q' :
+            MoveWithCollision(-1, 0);
+            context->player->SetDirection(Left);
+            break;
+
+        case 's' :
+            MoveWithCollision(0, 1);
+            context->player->SetDirection(Down);
+            break;
+
+        case 'd' :
+            MoveWithCollision(1, 0);
+            context->player->SetDirection(Right);
+            break;
+                                    
+        case 'x':
+            system("clear");
+            system("setterm -cursor on");
+            context->quit = true;
+            break;
+    default:
+        break;
+    }    
+
+    std::shared_ptr<CollisionBox> cbPlayer = context->player->getCollisionBox();
+    cbPlayer->SetX(context->player->GetPos_x());
+    cbPlayer->SetY(context->player->GetPos_y());
 }
 
 void StateGameTxt::Display() 
@@ -83,7 +87,7 @@ void StateGameTxt::Display()
     << "HP : " << context->player->GetHP() << "/" << context->player->GetMaxHealth() << endl;
 
     //Affichage des ennemies
-        const std::vector<Enemy *> enemies = context->enemies;
+        const std::vector<std::shared_ptr<Enemy>> enemies = context->enemies;
         for (unsigned int i = 0; i < enemies.size(); i++)
     {
         win->print((pX - context->player->GetPos_x() + enemies[i]->GetPos_x()),
@@ -129,14 +133,18 @@ void StateGameTxt::MoveWithCollision(float vx, float vy)
     }
 
     bool iscolliding = false;
+
     std::vector<CollisionBox> cb = 
         context->map->GetCollisionLayer()->GetCollisionBoxes();
 
+        std::shared_ptr<CollisionBox> cbPlayer = context->player->
+            getCollisionBox();
+
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
-        int posX = context->player->GetPos_x() + 
+        int posX = cbPlayer->GetX() + 
                    vx*context->player->GetSpeed();
-        int posY = context->player->GetPos_y() + 
+        int posY = cbPlayer->GetY() + 
                    vy*context->player->GetSpeed();
 
         //Detection collision axe X

@@ -3,6 +3,8 @@
 
 #include <string>
 #include <iostream>
+#include <memory>
+#include "../Map/CollisionBox.h"
 
 using namespace std;
  
@@ -112,6 +114,8 @@ public:
 
     void SetName(string newName);
 
+    std::shared_ptr<CollisionBox> getCollisionBox() const;
+
 
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.
     *
@@ -123,14 +127,6 @@ public:
     virtual void PrintEntityInfo();
 
 
-    int GetWidth() const;
-
-    void SetWidth(int newW);
-
-    int GetHeight() const;
-
-    void SetHeight(int newH);
-
     int getOffset() const;
 
     void setOffset(int newO);
@@ -140,6 +136,8 @@ public:
     void SetDirection(EntityDirection nDirection);
     void SetDirection(float vx, float vy);
 
+    void Move(float vx, float vy);
+
 protected :
     /*// ==== Données membres protégées === //*/
 
@@ -148,9 +146,15 @@ protected :
 
     /*! \brief Position sur l'axe des y de l'entité (vertical). */
     float y;
+
+    /*! \brief Vitesse de l'entité */
+    float speed;
+
     float width;
 
     float height;
+
+    std::shared_ptr<CollisionBox> cb;
 
     int offset; // For collision detection
 

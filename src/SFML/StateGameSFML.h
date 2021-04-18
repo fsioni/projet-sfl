@@ -27,7 +27,7 @@ public:
 
     void Start();
 
-    void MoveWithCollision(float vx, float vy);
+    void MovePlayerWithCollision(float vx, float vy);
 private:
     std::shared_ptr<Context> context;
 

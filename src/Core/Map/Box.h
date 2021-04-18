@@ -80,6 +80,18 @@ public:
     */
     int GetY() const;
 
+    /*! \brief Modifie la position sur l'axe horizontal
+    *
+    * \param [in] nX : nouvel position horizontale de la Box
+    */
+    void SetX(int nX);
+
+    /*! \brief Modifie la position sur l'axe vertical
+    *
+    * \param [in] nY : nouvel position verticale de la Box
+    */
+    void SetY(int nY);
+
     /*! \brief Retourne width
     *
     * \return La largeur de la Box

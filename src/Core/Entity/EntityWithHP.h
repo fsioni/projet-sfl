@@ -51,16 +51,6 @@ public:
     */
     virtual ~EntityWithHP();
 
-
-    /*! \brief Permet de deplacer l'entité.
-    *
-    *   Permet de deplacer l'entité avec une vitesse vx sur l'axe x et une vitesse vy
-    *   sur l'axe y.
-    *
-    */
-    void Move(float vx, float vy);
-
-
     /*! \brief Permets de modifier le nombre de points de vie d'une entité EntityWithHP.
     *
     *
@@ -183,9 +173,6 @@ protected :
 
     /*! \brief Nombre entier maximal de points de vie de l'entité */
     int maxHealth;
-
-    /*! \brief Vitesse de l'entité */
-    float speed;
 };
 
 #endif

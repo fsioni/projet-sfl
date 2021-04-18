@@ -45,6 +45,10 @@ void Box::SetDimensions(int nWidth, int nHeight){
 int Box::GetId() const{return id;}
 int Box::GetX() const{return x;}
 int Box::GetY() const{return y;}
+
+void Box::SetX(int nX) {x = nX;}
+void Box::SetY(int nY) {y = nY;}
+
 int Box::GetWidth() const{return width;}
 int Box::GetHeight() const{return height;}
 

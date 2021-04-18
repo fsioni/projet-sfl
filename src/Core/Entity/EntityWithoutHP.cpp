@@ -4,7 +4,7 @@
 #include <string>
 #include <assert.h>
 #include <math.h>
-
+#include <memory>
 
 
 EntityWithoutHP::EntityWithoutHP(){
@@ -15,8 +15,9 @@ EntityWithoutHP::EntityWithoutHP(){
     this->height = 0.0;
     this->offset = 0;
     this->name = "Unknown";
+    this->cb = std::make_shared<CollisionBox>(x, y, width, height);
 
-    direction = Right;
+    this->direction = Right;
 }
 
 EntityWithoutHP::EntityWithoutHP(float x, float y, string name){
@@ -28,8 +29,9 @@ EntityWithoutHP::EntityWithoutHP(float x, float y, string name){
     this->height = 32.0;
     this->offset = 7;
     this->name = name;
+    this->cb = std::make_shared<CollisionBox>(x, y, width, height);
 
-    direction = Right;
+    this->direction = Right;
 }
 
 
@@ -56,6 +58,11 @@ void EntityWithoutHP::SetName(string newName){
     name = newName;
 }
 
+std::shared_ptr<CollisionBox> EntityWithoutHP::getCollisionBox() const
+{
+    return cb;
+}
+
 string EntityWithoutHP::GetName() const{
 
     return name;
@@ -76,26 +83,6 @@ void EntityWithoutHP::SetPos_y(float newy){
     assert (newy >= 0.0);
 
     y = newy;
-}
-
-int EntityWithoutHP::GetWidth() const
-{
-    return width;
-}
-
-void EntityWithoutHP::SetWidth(int newW)
-{
-    width = newW;
-}
-
-int EntityWithoutHP::GetHeight() const
-{
-    return height;
-}
-
-void EntityWithoutHP::SetHeight(int newH)
-{
-    height = newH;
 }
 
 int EntityWithoutHP::getOffset() const
@@ -130,5 +117,18 @@ void EntityWithoutHP::SetDirection(float vx, float vy){
     else{
         if(vy > 0) direction = Down;
         else direction = Up;
+    }
+}
+
+void EntityWithoutHP::Move(float vx, float vy){
+
+    x += vx*speed;
+    y += vy*speed;
+
+    if (x < 0.0){
+        x = 0.0;
+    }
+    if (y < 0.0){
+        y = 0.0;
     }
 }

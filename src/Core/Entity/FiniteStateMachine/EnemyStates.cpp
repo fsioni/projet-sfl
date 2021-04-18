@@ -22,21 +22,23 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy)
     }
     bool iscolliding = false;
     std::vector<CollisionBox> cb = cl->GetCollisionBoxes();
+    std::shared_ptr<CollisionBox> cbEnemy = e->getCollisionBox();
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
-
         // -w/2 et -h/2 pour centrer l'origine 
-        int posX = e->GetPos_x() + 
+        int posX = cbEnemy->GetX() + 
                    vx*e->GetSpeed() - 16;
-        int posY = e->GetPos_y() + 
+        int posY = cbEnemy->GetY() + 
                    vy*e->GetSpeed() - 16;
+
+        
 
         int offset = e->getOffset();
         //Detection collision axe X
-        if (posX + e->GetWidth() - offset >= cb[i].GetX()
+        if (posX + cbEnemy->GetWidth() - offset >= cb[i].GetX()
             && cb[i].GetX() + cb[i].GetWidth() >= posX + offset){
             //Detection collision axe Y
-            if(posY + e->GetHeight() - offset >= cb[i].GetY()
+            if(posY +cbEnemy->GetHeight() - offset >= cb[i].GetY()
                && cb[i].GetY() + cb[i].GetHeight() >= posY + offset){
 
                 iscolliding = true;
@@ -44,8 +46,8 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy)
         }
     }
 
-    std::vector<CollisionBox * > cbEnemy = cl->GetCollisionBoxesEnemy();
-    for (long unsigned int i = 0; i < cbEnemy.size(); i++)
+    std::vector<std::shared_ptr<CollisionBox>> cbEnemie = cl->GetCollisionBoxesEnemy();
+    for (long unsigned int i = 0; i < cbEnemie.size(); i++)
     {
 
         // -w/2 et -h/2 pour centrer l'origine 
@@ -60,11 +62,11 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy)
         //        sa propre collision Box
         if(true){
             //Detection collision axe X
-            if (posX + e->GetWidth() - offset >= cbEnemy[i]->GetX()
-                && cbEnemy[i]->GetX() + cbEnemy[i]->GetWidth() >= posX + offset){
+            if (posX + e->getCollisionBox()->GetWidth() - offset >= cbEnemie[i]->GetX()
+                && cbEnemie[i]->GetX() + cbEnemie[i]->GetWidth() >= posX + offset){
                 //Detection collision axe Y
-                if(posY + e->GetHeight() - offset >= cbEnemy[i]->GetY()
-                && cbEnemy[i]->GetY() + cbEnemy[i]->GetHeight() >= posY + offset){
+                if(posY + e->getCollisionBox()->GetHeight() - offset >= cbEnemie[i]->GetY()
+                && cbEnemie[i]->GetY() + cbEnemie[i]->GetHeight() >= posY + offset){
 
                     iscolliding = true;
                 }   

@@ -71,19 +71,6 @@ void EntityWithHP::PrintEntityInfo() {
     cout << endl;
 }
 
-void EntityWithHP::Move(float vx, float vy){
-
-    x += vx*speed;
-    y += vy*speed;
-
-    if (x < 0.0){
-        x = 0.0;
-    }
-    if (y < 0.0){
-        y = 0.0;
-    }
-}
-
 int EntityWithHP::GetDamage() const{
 
     return damage;
