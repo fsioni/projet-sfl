@@ -18,6 +18,7 @@ Game::Game(/* args */)
         int y = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
 
         std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 100, 3, 5, 100);
+        enemy->GetCollisionBox()->SetId(i);
         context->enemies.push_back(enemy);
         context->map->GetCollisionLayer()->AddCollisionBoxEnemy(enemy->GetCollisionBox());
     }

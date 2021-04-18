@@ -14,7 +14,7 @@ float distance(Enemy * enemy, std::unique_ptr<Player> & player_){
 
 
 
-bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy) 
+bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::unique_ptr<Player> & player_) 
 {
     if (vx == 0 && vy == 0)
     {
@@ -23,17 +23,14 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy)
     bool iscolliding = false;
     std::vector<CollisionBox> cb = cl->GetCollisionBoxes();
     std::shared_ptr<CollisionBox> cbEnemy = e->GetCollisionBox();
-    for (long unsigned int i = 0; i < cb.size(); i++)
-    {
-        // -w/2 et -h/2 pour centrer l'origine 
         int posX = cbEnemy->GetX() + 
                    vx*e->GetSpeed() - 16;
         int posY = cbEnemy->GetY() + 
                    vy*e->GetSpeed() - 16;
+    int offset = e->getOffset();
 
-        
-
-        int offset = e->getOffset();
+    for (long unsigned int i = 0; i < cb.size(); i++)
+    {
         //Detection collision axe X
         if (posX + cbEnemy->GetWidth() - offset >= cb[i].GetX()
             && cb[i].GetX() + cb[i].GetWidth() >= posX + offset){
@@ -47,20 +44,12 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy)
     }
 
     std::vector<std::shared_ptr<CollisionBox>> cbEnemies = cl->GetCollisionBoxesEnemy();
-    for (long unsigned int i = 0; i < cbEnemie.size(); i++)
+    for (long unsigned int i = 0; i < cbEnemies.size(); i++)
     {
-
-        // -w/2 et -h/2 pour centrer l'origine 
-        int posX = e->GetPos_x() + 
-                   vx*e->GetSpeed() - 16;
-        int posY = e->GetPos_y() + 
-                   vy*e->GetSpeed() - 16;
-
-        int offset = e->getOffset();
-
         // TODO : Rajouter une condition pour ne pas tester 
         //        sa propre collision Box
-        if(true){
+        if(e->GetCollisionBox()->GetId() != cbEnemies[i]->GetId()){
+
             //Detection collision axe X
             if (posX + e->GetCollisionBox()->GetWidth() - offset >= cbEnemies[i]->GetX()
                 && cbEnemies[i]->GetX() + cbEnemies[i]->GetWidth() >= posX + offset){
@@ -73,6 +62,12 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy)
             }
         }
     }
+
+    std::shared_ptr<CollisionBox> cbPlayer = player_->GetCollisionBox();
+    int offsetPlayer = player_->getOffset();
+    
+    ///// TODO : Collision avec joueur
+    
 
     if (!iscolliding)
     {
@@ -102,13 +97,13 @@ void EnemyPatrol::Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
     bool colliding = false;
     
     if(enemy->GetDirection()==Right)
-        colliding = MoveWithCollision(enemy, collision, 1, 0);
+        colliding = MoveWithCollision(enemy, collision, 1, 0, player_);
     if(enemy->GetDirection()==Left)
-        colliding = MoveWithCollision(enemy, collision, -1, 0);
+        colliding = MoveWithCollision(enemy, collision, -1, 0, player_);
     if(enemy->GetDirection()==Down)
-        colliding = MoveWithCollision(enemy, collision, 0, 1);
+        colliding = MoveWithCollision(enemy, collision, 0, 1, player_);
     if(enemy->GetDirection()==Up)
-        colliding = MoveWithCollision(enemy, collision, 0, -1);
+        colliding = MoveWithCollision(enemy, collision, 0, -1, player_);
 
     if(enemy->GetNbUpdateChangeDir()==0 || colliding){
         enemy->randDirection();
@@ -147,7 +142,7 @@ void EnemyAttack::Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
     x = x/abs(dist);
     y = y/abs(dist);
     enemy->SetDirection(x, y);
-    MoveWithCollision(enemy, collision, x, y);
+    MoveWithCollision(enemy, collision, x, y, player_);
     dist = distance(enemy, player_);
     if(dist > 5*32){
         enemy->GetStateMachine()->ChangeState(EnemyPatrol::Instance());

@@ -33,6 +33,9 @@ Box::~Box()
 void Box::SetId(int nId){
     id=nId;
 }
+
+int Box::GetId() const{return id;}
+
 void Box::SetPosition(int nX, int nY){
     x = nX;
     y = nY;
@@ -42,7 +45,6 @@ void Box::SetDimensions(int nWidth, int nHeight){
     height = nHeight;
 }
 
-int Box::GetId() const{return id;}
 int Box::GetX() const{return x;}
 int Box::GetY() const{return y;}
 

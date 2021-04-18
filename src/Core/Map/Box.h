@@ -48,6 +48,12 @@ public:
     */
     void SetId(int nId);
 
+    /*! \brief Retourne id
+    *
+    * \return id de la Box
+    */
+    int GetId() const;
+
     /*! \brief Modifie la position de la Box par celle en paramètre
     *
     * \param [in] nX : nouvel position horizontale de la Box
@@ -61,12 +67,6 @@ public:
     * \param [in] nHeight : nouvel hauteur verticale de la Box
     */
     void SetDimensions(int nWidth, int nHeight);
-
-    /*! \brief Retourne id
-    *
-    * \return id de la Box
-    */
-    int GetId() const;
     
     /*! \brief Retourne x
     *
