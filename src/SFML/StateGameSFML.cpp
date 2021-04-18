@@ -243,8 +243,7 @@ void StateGameSFML::UpdateEnemies(){
         float posX = context->enemies[i]->GetPos_x();
         float posY = context->enemies[i]->GetPos_y();
        
-        context->map->GetCollisionLayer()->GetCollisionBoxesEnemy()[i]->
-            SetPosition(posX-16, posY-16);
+        context->map->GetCollisionLayer()->GetCollisionBoxesEnemy()[i]->SetPosition(posX-16, posY-16);
         
     }
 }

@@ -18,7 +18,7 @@ Game::Game(/* args */)
         int y = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
 
         context->enemies.push_back(new Enemy(x, y, "Enemy", 100, 3, 5, 100));
-        context->map->GetCollisionLayer()->AddCollisionBoxEnemy(new CollisionBox(x-16, y-16, 32, 32));
+        context->map->GetCollisionLayer()->AddCollisionBoxEnemy(new CollisionBox(x-16, y-16, 32,32));
     }
 
     context->isDebug = false;
@@ -67,7 +67,8 @@ void Game::Run(int mode)
     }
 }
 
+
 void Game::Test() 
 {   
-    //context->map->GetCollisionLayer()->GetCollisionBoxesEnemy()[0].SetDimensions()
+    
 }
