@@ -18,7 +18,6 @@ using namespace std;
 */
 class Enemy : public EntityWithHP
 {
-    StateMachine<Enemy> * stateMachine;
 public :
     /*// ==== Fonctions membres publiques === //*/
 
@@ -45,7 +44,8 @@ public :
     *   Créer un Enemy (x, y, name, hp, dammage, maxHealth, livingStatus, speed)
     *
     */
-    Enemy(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, unsigned int maxHealth);
+    Enemy(float x, float y, string name, unsigned int hp, 
+          unsigned int damage,float speed, unsigned int maxHealth);
 
 
     /*! \brief Destructeur.
@@ -60,6 +60,37 @@ public :
     void UpdateStateMachine(std::unique_ptr<Player> & player_, 
                             CollisionLayer * collision);
 
+    int GetNbUpdateMaxChangeDir() const{return nbUpdateMaxChangeDir;};
+    int GetNbUpdateChangeDir() const{return nbUpdateChangeDir;};
+    void SetNbUpdateChangeDir(){
+        int nb = rand()% nbUpdateMaxChangeDir + 1;
+        while(nb <200){
+            nb = rand()% nbUpdateMaxChangeDir + 1;
+        }
+        nbUpdateChangeDir = nb;
+    }
+    void DecrementNbUpdateChangeDire(){nbUpdateChangeDir--;};
+
+    void randDirection(){
+        int nb = rand() % 4;
+        switch (nb)
+        {
+        case 0 : direction = Down; break;
+        case 1 : direction = Left ; break;
+        case 2 : direction = Right ; break;
+        case 3 : direction = Up ; break;
+        
+        default: direction = Right;
+            break;
+        }
+    };
+
+
+private:
+    StateMachine<Enemy> * stateMachine;
+    int nbUpdateMaxChangeDir;
+    int nbUpdateChangeDir;
+    
 };
 
 #endif

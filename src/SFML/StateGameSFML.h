@@ -17,8 +17,11 @@ public:
     void ProcessInput();
 
     void Update();
+    void UpdatePlayer();
+    void UpdateEnemies();
 
     void Display();
+    void DisplayDebug();
 
     void Pause();
 

@@ -68,7 +68,7 @@ Tileset * Map::GetTileset() const{
     return tileset;
 }
 
-CollisionLayer * Map::GetCollisionLayer() const{
+CollisionLayer * Map::GetCollisionLayer(){
     return collisionLayer;
 }
 

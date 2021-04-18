@@ -34,7 +34,7 @@ public:
     * \param [in] nWidth : largeur de la Box
     * \param [in] nHeight : hauteur de la Box
     */
-    Box(int nId, int nX, int nY, int nWidth, int nHeight); // Inutile ?
+    Box(int nId, int nX, int nY, int nWidth, int nHeight);
 
     /*! \brief Destructeur
     *

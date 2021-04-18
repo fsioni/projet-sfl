@@ -2,6 +2,8 @@
 #include <cassert>
 #include "tmxParsing.h"
 
+#include <iostream>
+
 Box::Box(){
     id = x = y = width = height = -1;
 }

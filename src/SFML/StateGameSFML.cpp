@@ -56,6 +56,16 @@ void StateGameSFML::Init()
                     hpText.getLocalBounds().height/2.0f);
 
     hpText.setPosition(60, 30);
+
+    // Info sur la tilemap
+    w = context->map->GetTileset()->GetTileWidth();
+    h = context->map->GetTileset()->GetTileHeight();
+    nbMapLayer = context->map->GetMapLayers().size();
+
+    // Taille de la map
+    mapWidth = context->map->GetMapLayers()[0].GetWidth();
+    mapHeight = context->map->GetMapLayers()[0].GetHeight();
+    
 }
 
 void StateGameSFML::ProcessInput()
@@ -155,15 +165,6 @@ void StateGameSFML::Update()
     playerX = context->player->GetPos_x();
     playerY = context->player->GetPos_y();
 
-    // Info sur la tilemap
-    w = context->map->GetTileset()->GetTileWidth();
-    h = context->map->GetTileset()->GetTileHeight();
-    nbMapLayer = context->map->GetMapLayers().size();
-
-    // Taille de la map
-    mapWidth = context->map->GetMapLayers()[0].GetWidth();
-    mapHeight = context->map->GetMapLayers()[0].GetHeight();
-    
     // Gestion de camera qui suit le joueur
     substX = playerX - winWidth/2;
     substY = playerY - winHeight/2;
@@ -172,6 +173,23 @@ void StateGameSFML::Update()
     winWidth = (int)context->renderWin->getSize().x;
     winHeight =(int)context->renderWin->getSize().y;
 
+    // Gestion des bords de map
+    if(substX < 0) substX = 0;
+    if(substX > mapWidth*w - winWidth) substX = mapWidth*w - winWidth;
+    if(substY < 0) substY = 0;
+    if(substY > mapHeight*h - winHeight) substY = mapHeight*h - winHeight;
+
+    UpdatePlayer();
+    UpdateEnemies();
+
+    
+    // Mise à jour texte UI
+    std::string hp = std::to_string(context->player->GetHP());
+    std::string maxHp = std::to_string(context->player->GetMaxHealth());
+    hpText.setString("HP :" + hp + "/" + maxHp);
+}
+
+void StateGameSFML::UpdatePlayer(){
     // Gestion mouvement joueur
     if (isGoingUp && isGoingLeft)
     {
@@ -204,13 +222,6 @@ void StateGameSFML::Update()
     {
         MoveWithCollision(1,0);
     }
-    
-
-    // Gestion des bords de map
-    if(substX < 0) substX = 0;
-    if(substX > mapWidth*w - winWidth) substX = mapWidth*w - winWidth;
-    if(substY < 0) substY = 0;
-    if(substY > mapHeight*h - winHeight) substY = mapHeight*h - winHeight;
 
     // Gestion animation joueur
     if(spriteClock.getElapsedTime().asSeconds() > 0.3){
@@ -219,20 +230,26 @@ void StateGameSFML::Update()
             
         spriteClock.restart();
     }
+}
 
-    // Update FSM Enemy
+void StateGameSFML::UpdateEnemies(){
     int count = context->enemies.size();
     
     for(int i=0; i<count; i++){
         context->enemies[i]->UpdateStateMachine(context->player,
             context->map->GetCollisionLayer());
+        
+        context->enemies[i]->DecrementNbUpdateChangeDire();
+        float posX = context->enemies[i]->GetPos_x();
+        float posY = context->enemies[i]->GetPos_y();
+       
+        context->map->GetCollisionLayer()->GetCollisionBoxesEnemy()[i]->
+            SetPosition(posX-16, posY-16);
+        
     }
-
-    // Mise à jour texte UI
-    std::string hp = std::to_string(context->player->GetHP());
-    std::string maxHp = std::to_string(context->player->GetMaxHealth());
-    hpText.setString("HP :" + hp + "/" + maxHp);
 }
+
+
 
 void StateGameSFML::Display()
 {
@@ -289,7 +306,7 @@ void StateGameSFML::Display()
         int enX = context->enemies[i]->GetPos_x()-substX;
         int enY = context->enemies[i]->GetPos_y()-substY;
         enemySprite.setPosition(enX -w/2, enY -h/2);
-        enemySprite.setTextureRect(sf::IntRect(posX, 0, 32, 32));
+        enemySprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
         context->renderWin->draw(enemySprite);
     }
 
@@ -297,27 +314,7 @@ void StateGameSFML::Display()
 
     if (context->isDebug) //Affichage DEBUG
     {
-        //Affichage collisionBox du joueur
-        int pOffset = context->player->getOffset();
-
-        sf::RectangleShape pb(sf::Vector2f(context->player->GetWidth() - pOffset*2,
-            context->player->GetHeight() -pOffset*2));
-        pb.setPosition(context->player->GetPos_x() + pOffset -substX -w/2, 
-            context->player->GetPos_y() + pOffset -substY -h/2);
-        pb.setFillColor(sf::Color(0, 130, 255, 200));
-        context->renderWin->draw(pb);
-
-        // Affichage des collision boxes
-        const std::vector<CollisionBox> collisionBoxes = 
-            context->map->GetCollisionLayer()->GetCollisionBoxes();
-
-        for (long unsigned int i=0; i < collisionBoxes.size(); i++)
-        {
-            sf::RectangleShape cb(sf::Vector2f(collisionBoxes[i].GetWidth(), collisionBoxes[i].GetHeight()));
-            cb.setPosition(collisionBoxes[i].GetX() -substX, collisionBoxes[i].GetY()-substY);
-            cb.setFillColor(sf::Color(0, 190, 255, 200));
-            context->renderWin->draw(cb);                
-        }            
+        DisplayDebug();            
     }
 
     ///////////// UI ///////////////
@@ -332,6 +329,42 @@ void StateGameSFML::Display()
 
 }
 
+void StateGameSFML::DisplayDebug(){
+    //Affichage collisionBox du joueur
+    int pOffset = context->player->getOffset();
+
+    sf::RectangleShape pb(sf::Vector2f(context->player->GetWidth() - pOffset*2,
+        context->player->GetHeight() -pOffset*2));
+    pb.setPosition(context->player->GetPos_x() + pOffset -substX -w/2, 
+        context->player->GetPos_y() + pOffset -substY -h/2);
+    pb.setFillColor(sf::Color(0, 130, 255, 200));
+    context->renderWin->draw(pb);
+
+    // Affichage des collision boxes
+    std::vector<CollisionBox> collisionBoxes = 
+        context->map->GetCollisionLayer()->GetCollisionBoxes();
+
+    for (long unsigned int i=0; i < collisionBoxes.size(); i++)
+    {
+        sf::RectangleShape cb(sf::Vector2f(collisionBoxes[i].GetWidth(), collisionBoxes[i].GetHeight()));
+        cb.setPosition(collisionBoxes[i].GetX() -substX, collisionBoxes[i].GetY()-substY);
+        cb.setFillColor(sf::Color(0, 190, 255, 200));
+        context->renderWin->draw(cb);                
+    }   
+
+    // Affichage des collision boxes des entités
+    std::vector<CollisionBox *> enemyBoxes = 
+        context->map->GetCollisionLayer()->GetCollisionBoxesEnemy();
+
+    for (long unsigned int i=0; i < enemyBoxes.size(); i++)
+    {
+        sf::RectangleShape cb(sf::Vector2f(enemyBoxes[i]->GetWidth(), enemyBoxes[i]->GetHeight()));
+        cb.setPosition(enemyBoxes[i]->GetX() -substX, enemyBoxes[i]->GetY()-substY);
+        cb.setFillColor(sf::Color(0, 190, 255, 200));
+        context->renderWin->draw(cb);                
+    }
+}
+
 void StateGameSFML::Pause()
 {
     
@@ -343,7 +376,6 @@ void StateGameSFML::Start()
 }
 
 
-
 void StateGameSFML::MoveWithCollision(float vx, float vy) 
 {
     if (vx == 0 && vy == 0)
@@ -351,7 +383,9 @@ void StateGameSFML::MoveWithCollision(float vx, float vy)
         return;
     }
     bool iscolliding = false;
-    std::vector<CollisionBox> cb = context->map->GetCollisionLayer()->GetCollisionBoxes();
+    std::vector<CollisionBox> cb = 
+        context->map->GetCollisionLayer()->GetCollisionBoxes();
+
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
 
@@ -373,6 +407,30 @@ void StateGameSFML::MoveWithCollision(float vx, float vy)
             }   
         }
     }
+    std::vector<CollisionBox *> cbEnemy = 
+        context->map->GetCollisionLayer()->GetCollisionBoxesEnemy();
+    for (long unsigned int i = 0; i < cbEnemy.size(); i++)
+    {
+
+        // -w/2 et -h/2 pour centrer l'origine 
+        int posX = context->player->GetPos_x() + 
+                   vx*context->player->GetSpeed() - w/2;
+        int posY = context->player->GetPos_y() + 
+                   vy*context->player->GetSpeed() - h/2;
+
+        int offset = context->player->getOffset();
+        //Detection collision axe X
+        if (posX + context->player->GetWidth() - offset >= cbEnemy[i]->GetX()
+            && cbEnemy[i]->GetX() + cbEnemy[i]->GetWidth() >= posX + offset){
+            //Detection collision axe Y
+            if(posY + context->player->GetHeight() - offset >= cbEnemy[i]->GetY()
+               && cbEnemy[i]->GetY() + cbEnemy[i]->GetHeight() >= posY + offset){
+
+                iscolliding = true;
+            }   
+        }
+    }
+
     if (!iscolliding)
     {
         context->player->Move((vx*deltaTime)/30, (vy*deltaTime)/30);

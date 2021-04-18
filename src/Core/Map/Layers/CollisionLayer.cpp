@@ -26,6 +26,10 @@ void CollisionLayer::AddCollisionBox(const CollisionBox& newColBox){
     collisionBoxes.push_back(newColBox);
 }
 
+void CollisionLayer::AddCollisionBoxEnemy(CollisionBox * newColBox){
+    collisionBoxesEnemy.push_back(newColBox);
+}
+
 void CollisionLayer::DisplayTXT() const{
     for(long unsigned int i = 0; i<collisionBoxes.size(); i++){
         std::cout << "Id : " << collisionBoxes[i].GetId() << std::endl;
@@ -40,4 +44,9 @@ void CollisionLayer::DisplayTXT() const{
 std::vector<CollisionBox> CollisionLayer::GetCollisionBoxes() const 
 {
     return collisionBoxes;
+}
+
+std::vector<CollisionBox *> CollisionLayer::GetCollisionBoxesEnemy() 
+{
+    return collisionBoxesEnemy;
 }

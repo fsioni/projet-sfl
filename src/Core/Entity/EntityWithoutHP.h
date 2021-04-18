@@ -138,6 +138,7 @@ public:
     EntityDirection GetDirection() const;
 
     void SetDirection(EntityDirection nDirection);
+    void SetDirection(float vx, float vy);
 
 protected :
     /*// ==== Données membres protégées === //*/

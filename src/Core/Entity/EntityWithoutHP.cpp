@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <assert.h>
+#include <math.h>
 
 
 
@@ -119,4 +120,15 @@ float EntityWithoutHP::GetPos_y() const{
 
 void EntityWithoutHP::SetDirection(EntityDirection nDirection){
     direction = nDirection;
+}
+
+void EntityWithoutHP::SetDirection(float vx, float vy){
+    if(abs(vx) > abs(vy)){
+        if(vx > 0) direction = Right;
+        else direction = Left;
+    }
+    else{
+        if(vy > 0) direction = Down;
+        else direction = Up;
+    }
 }
