@@ -42,7 +42,7 @@ public :
     *
     */
     Player(float x, float y, string name, unsigned int hp, unsigned int damage,
-    float speed, unsigned int maxHP);
+    float speed,int maxHP);
 
     /*! \brief Destructeur.
     *
