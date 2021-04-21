@@ -27,7 +27,7 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::
                    vx*e->GetSpeed() - 16;
         int posY = cbEnemy->GetY() + 
                    vy*e->GetSpeed() - 16;
-    int offset = e->getOffset();
+    int offset = e->GetOffset();
 
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
@@ -37,13 +37,16 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::
             //Detection collision axe Y
             if(posY +cbEnemy->GetHeight() - offset >= cb[i].GetY()
                && cb[i].GetY() + cb[i].GetHeight() >= posY + offset){
-
+                //std::cout << "collision enemy -> map "<< e->GetCollisionBox()->GetId() << std::endl;
                 iscolliding = true;
             }   
         }
     }
 
-    std::vector<std::shared_ptr<CollisionBox>> cbEnemies = cl->GetCollisionBoxesEnemy();
+   
+    std::vector<std::shared_ptr<CollisionBox> > cbEnemies = cl->GetCollisionBoxesEnemy();
+    
+    
     for (long unsigned int i = 0; i < cbEnemies.size(); i++)
     {
         // TODO : Rajouter une condition pour ne pas tester 
@@ -56,17 +59,32 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::
                 //Detection collision axe Y
                 if(posY + e->GetCollisionBox()->GetHeight() - offset >= cbEnemies[i]->GetY()
                 && cbEnemies[i]->GetY() + cbEnemies[i]->GetHeight() >= posY + offset){
-
+                    std::cout << "collision enemy (" << e->GetCollisionBox()->GetX() << " , " << e->GetCollisionBox()->GetY() <<
+                        ")  id =  "<< e->GetCollisionBox()->GetId()<<  " -> enemy ("<< cbEnemies[i]->GetX() 
+                        << " , " << cbEnemies[i]->GetY() << ") id = " << cbEnemies[i]->GetId() 
+                        << std::endl;
                     iscolliding = true;
                 }   
             }
         }
     }
+    
 
     std::shared_ptr<CollisionBox> cbPlayer = player_->GetCollisionBox();
-    int offsetPlayer = player_->getOffset();
+    int offsetPlayer = player_->GetOffset();
     
-    ///// TODO : Collision avec joueur
+    
+    //Detection collision axe X
+    if (posX + e->GetCollisionBox()->GetWidth() - offset >= cbPlayer->GetX()
+        && cbPlayer->GetX() + cbPlayer->GetWidth() >= posX + offset){
+        //Detection collision axe Y
+        if(posY + e->GetCollisionBox()->GetHeight() - offset >= cbPlayer->GetY()
+        && cbPlayer->GetY() + cbPlayer->GetHeight() >= posY + offset){
+            std::cout << "collision enemy -> player "<< e->GetCollisionBox()->GetId() << std::endl;
+            iscolliding = true;
+        }   
+    }
+    
     
 
     if (!iscolliding)
@@ -106,13 +124,14 @@ void EnemyPatrol::Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
         colliding = MoveWithCollision(enemy, collision, 0, -1, player_);
 
     if(enemy->GetNbUpdateChangeDir()==0 || colliding){
-        enemy->randDirection();
+        enemy->RandDirection();
         enemy->SetNbUpdateChangeDir();
     }
-
+    
     if(distance(enemy, player_)<4 * 32){
         enemy->GetStateMachine()->ChangeState(EnemyAttack::Instance());
     }
+    
 }
 
 void EnemyPatrol::Exit(Enemy * enemy){

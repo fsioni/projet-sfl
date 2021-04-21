@@ -47,3 +47,43 @@ void Enemy::UpdateStateMachine(std::unique_ptr<Player> & player_,
                                CollisionLayer * collision){
     stateMachine->UpdateCurrentState(player_, collision);
 }
+
+
+StateMachine<Enemy>* Enemy::GetStateMachine() const{
+    return stateMachine;
+}
+
+int Enemy::GetNbUpdateMaxChangeDir() const{
+    return nbUpdateMaxChangeDir;
+}
+
+int Enemy::GetNbUpdateChangeDir() const{
+    return nbUpdateChangeDir;
+}
+
+
+void Enemy::SetNbUpdateChangeDir(){
+        int nb = rand()% nbUpdateMaxChangeDir + 1;
+    while(nb <200){
+            nb = rand()% nbUpdateMaxChangeDir + 1;
+    }
+    nbUpdateChangeDir = nb;
+}
+
+void Enemy::DecrementNbUpdateChangeDir(){
+    nbUpdateChangeDir--;
+}
+
+void Enemy::RandDirection(){
+        int nb = rand() % 4;
+    switch (nb)
+    {
+        case 0 : direction = Down; break;
+    case 1 : direction = Left ; break;
+    case 2 : direction = Right ; break;
+    case 3 : direction = Up ; break;
+
+    default: direction = Right;
+        break;
+    }
+}

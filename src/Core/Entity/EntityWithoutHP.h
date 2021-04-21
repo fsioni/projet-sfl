@@ -38,15 +38,14 @@ public:
 
 
     /*! \brief Constructeur avec spécifités de l'entité en paramètre.
-    *   \param [in] x : réel positif, position de l'entité sur l'axe X (horizontale).
-    *   \param [in] y : réel positif, position de l'entité sur l'axe Y (verticale).
-    *   \param [in] name : chaine de caractères, nom de l'entité.
+    *   \param [in] x_ : réel positif, position de l'entité sur l'axe X (horizontale).
+    *   \param [in] y_ : réel positif, position de l'entité sur l'axe Y (verticale).
+    *   \param [in] speed_ : réel positif, vitesse de l'entité?.
+    *   \param [in] name_ : chaine de caractères, nom de l'entité.
     *
-    *   Créer une EntityWithoutHP (x, y, name)
-    *
+    *   Créer une EntityWithoutHP (x_, y_, speed_, name_).
     */
-
-    EntityWithoutHP(float x, float y, string name);
+    EntityWithoutHP(int x_, int y_, int speed_, string name_);
 
 
     /*! \brief Destructeur.
@@ -65,7 +64,7 @@ public:
     *
     */
 
-    float GetPos_x() const;
+    int GetPos_x() const;
 
 
     /*! \brief Permets de modifier la position sur l'axe des x de l'entité (horizontale).
@@ -75,7 +74,7 @@ public:
     *
     */
 
-    void SetPos_x(float newX);
+    void SetPos_x(int newX);
 
 
     /*! \brief Retourne la position sur l'axe des y de l'entité (verticale).
@@ -85,7 +84,7 @@ public:
     *
     */
 
-    float GetPos_y() const;
+    int GetPos_y() const;
 
 
     /*! \brief Permets de modifier la position sur l'axe des y de l'entité (verticale).
@@ -95,7 +94,7 @@ public:
     *
     */
 
-    void SetPos_y(float newY);
+    void SetPos_y(int newY);
 
     /*! \brief Retourne le nom de l'entité.
     *
@@ -123,13 +122,15 @@ public:
     *
     *
     */
-
     virtual void PrintEntityInfo();
 
+    void Test() const;
 
-    int getOffset() const;
+    int GetOffset() const;
+    void SetOffset(int newO);
 
-    void setOffset(int newO);
+    int GetSpeed() const;
+    void SetSpeed(int newSpeed);
 
     EntityDirection GetDirection() const;
 
@@ -142,17 +143,17 @@ protected :
     /*// ==== Données membres protégées === //*/
 
     /*! \brief Position sur l'axe des x de l'entité (horizontal).*/
-    float x;
+    int x;
 
     /*! \brief Position sur l'axe des y de l'entité (vertical). */
-    float y;
+    int y;
 
     /*! \brief Vitesse de l'entité */
-    float speed;
+    int speed;
 
-    float width;
+    int width;
 
-    float height;
+    int height;
 
     std::shared_ptr<CollisionBox> cb;
 

@@ -55,35 +55,16 @@ public :
     */
     ~Enemy();
 
-    StateMachine<Enemy>* GetStateMachine() const{return stateMachine;};
+    StateMachine<Enemy>* GetStateMachine() const;
 
     void UpdateStateMachine(std::unique_ptr<Player> & player_, 
                             CollisionLayer * collision);
 
-    int GetNbUpdateMaxChangeDir() const{return nbUpdateMaxChangeDir;};
-    int GetNbUpdateChangeDir() const{return nbUpdateChangeDir;};
-    void SetNbUpdateChangeDir(){
-        int nb = rand()% nbUpdateMaxChangeDir + 1;
-        while(nb <200){
-            nb = rand()% nbUpdateMaxChangeDir + 1;
-        }
-        nbUpdateChangeDir = nb;
-    }
-    void DecrementNbUpdateChangeDire(){nbUpdateChangeDir--;};
-
-    void randDirection(){
-        int nb = rand() % 4;
-        switch (nb)
-        {
-        case 0 : direction = Down; break;
-        case 1 : direction = Left ; break;
-        case 2 : direction = Right ; break;
-        case 3 : direction = Up ; break;
-        
-        default: direction = Right;
-            break;
-        }
-    };
+    int GetNbUpdateMaxChangeDir() const;
+    int GetNbUpdateChangeDir() const;
+    void SetNbUpdateChangeDir();
+    void DecrementNbUpdateChangeDir();
+    void RandDirection();
 
 
 private:

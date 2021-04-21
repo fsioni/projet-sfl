@@ -41,7 +41,7 @@ public:
     *   Créer une EntityWithHP (x, y, name, hp, dammage, maxHealth, livingStatus, speed)
     *
     */
-    EntityWithHP(float x, float y, string name, int hp, int damage, float speed, int maxHealth);
+    EntityWithHP(int x, int y, string name, int hp, int damage, int speed, int maxHealth);
 
 
     /*! \brief Destructeur.
@@ -69,24 +69,6 @@ public:
     *
     */
     int GetHP() const;
-
-
-    /*! \brief Permets de modifier la vitesse de déplacement de l'entité EntitywithHP.
-    *
-    *
-    *   \param [in] newSpeed: réel positif, nouvelle vitesse de déplacement de l'entité.
-    *
-    */
-    void SetSpeed(float newSpeed);
-
-
-    /*! \brief Retourne la vitesse de déplacement de l'entité EntityWithHP.
-    *
-    *   Retourne la vitesse de déplacement Speed de l'entité  EntityWithHP.
-    *
-    *
-    */
-    float GetSpeed() const;
 
 
     /*! \brief Permet de modofier les dégats infligés par l'entité EntityWithHP.
@@ -128,10 +110,10 @@ public:
     *
     *
     *   \param [in] target : EntityWithHP qui va subir le nombre "damage" dégats.
-    *   \param [in] damage : entier positif, nombre de dégats à infligerà l'entité target.
+    *   
     *
     */
-    void Attack(EntityWithHP &target, int damage) const;
+    void Attack(EntityWithHP &target) const;
 
 
     /*! \brief Modifie l'état de vie/mort de l'entité.
@@ -158,6 +140,13 @@ public:
     *
     */
     int GetMaxHealth() const;
+
+    /*! \brief Fonction de test de regression.
+    *
+    *   Effectue une série de test pour vérifié que chaque
+    *   fonctions fait ce qu'elle doit faire.
+    */
+    void Test() const;
 
 protected :
     /*// ==== Données membres protégées === //*/
