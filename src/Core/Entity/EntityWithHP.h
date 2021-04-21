@@ -33,15 +33,15 @@ public:
     *   \param [in] name : chaine de caractères, nom de l'entité.
     *   \param [in] hp : entier positif, nombre de points de vie de l'entité.
     *   \param [in] dammage : entier positif, nombre de points de vie infligé lors d'une attaque.
-    *   \param [in] maxHealth : entier positif, maximum de points de vie qu'une entité peut avoir.
+    *   \param [in] maxHP : entier positif, maximum de points de vie qu'une entité peut avoir.
     *   \param [in] livingStatus : Booléen, définissant si l'entité est morte ou pas.
     *   \param [in] speed : réel positif, vitesse de déplacement de l'entité.
     *
     *
-    *   Créer une EntityWithHP (x, y, name, hp, dammage, maxHealth, livingStatus, speed)
+    *   Créer une EntityWithHP (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
-    EntityWithHP(float x, float y, string name, int hp, int damage, float speed, int maxHealth);
+    EntityWithHP(float x, float y, string name, int hp, int damage, float speed, int maxHP);
 
 
     /*! \brief Destructeur.
@@ -167,7 +167,7 @@ public:
     *   Retourne le cap maximum de points de vie de l'entité.
     *
     */
-    int GetMaxHealth() const;
+    int GetMaxHP() const;
 
 protected :
     /*// ==== Données membres protégées === //*/
@@ -182,7 +182,7 @@ protected :
     bool livingStatus;
 
     /*! \brief Nombre entier maximal de points de vie de l'entité */
-    int maxHealth;
+    int maxHP;
 
     /*! \brief Vitesse de l'entité */
     float speed;
