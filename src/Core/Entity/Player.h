@@ -11,6 +11,7 @@ using namespace std;
 *
 *   La classe représente un joueur avec un nom, des points de vie, une position, des dégats d'attaque,
 *   une vitesse et un cap maximum de points de vie.
+*
 */
 class Player : public EntityWithHP
 {
@@ -21,7 +22,7 @@ public :
     *
     *
     *   Créer un Player avec une position x 0.0, une position y 0.0, un nom "Unknown", 200 hp, 20 de damage,
-    *   200 de maxHealth et une vitesse de 1,0 (entité vide).
+    *   200 de maxHP et une vitesse de 1,0 (entité vide).
     *
     */
     Player();
@@ -32,16 +33,16 @@ public :
     *   \param [in] name : chaine de caractères, nom du Player.
     *   \param [in] hp : entier positif, nombre de points de vie du Player.
     *   \param [in] dammage : entier positif, nombre de points de vie infligé lors d'une attaque.
-    *   \param [in] maxHealth : entier positif, maximum de points de vie qu'un Player peut avoir.
+    *   \param [in] maxHP : entier positif, maximum de points de vie qu'un Player peut avoir.
     *   \param [in] livingStatus : Booléen, définissant si le Player est mort ou pas.
     *   \param [in] speed : réel positif, vitesse de déplacement du Player.
     *
     *
-    *   Créer un Player (x, y, name, hp, dammage, maxHealth, livingStatus, speed)
+    *   Créer un Player (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
     Player(float x, float y, string name, unsigned int hp, unsigned int damage,
-    float speed, unsigned int maxHealth);
+    float speed, unsigned int maxHP);
 
     /*! \brief Destructeur.
     *
