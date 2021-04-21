@@ -162,6 +162,7 @@ public:
     bool GetLivingStatus() const;
 
 
+
     /*! \brief Retourne le cap maximum de points de vie de l'entité.
     *
     *   Retourne le cap maximum de points de vie de l'entité.
