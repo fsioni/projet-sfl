@@ -26,7 +26,7 @@ public :
     *
     *
     *   Créer un Enemy avec une position x 0.0, une position y 0.0, un nom "Unknown", 100 hp, 30 de damage,
-    *   200 de maxHealth et une vitesse de 1,0 (entité vide).
+    *   200 de maxHP et une vitesse de 1,0 (entité vide).
     *
     */
     Enemy();
@@ -37,15 +37,15 @@ public :
     *   \param [in] name : chaine de caractères, nom de l'Enemy.
     *   \param [in] hp : entier positif, nombre de points de vie de l'Enemy.
     *   \param [in] dammage : entier positif, nombre de points de vie infligé lors d'une attaque.
-    *   \param [in] maxHealth : entier positif, maximum de points de vie qu'une Enemy peut avoir.
+    *   \param [in] maxHP : entier positif, maximum de points de vie qu'une Enemy peut avoir.
     *   \param [in] livingStatus : Booléen, définissant si l'Enemy  est mort ou pas.
     *   \param [in] speed : réel positif, vitesse de déplacement de l'Enemy.
     *
     *
-    *   Créer un Enemy (x, y, name, hp, dammage, maxHealth, livingStatus, speed)
+    *   Créer un Enemy (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
-    Enemy(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, unsigned int maxHealth);
+    Enemy(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, int maxHP);
 
 
     /*! \brief Destructeur.
