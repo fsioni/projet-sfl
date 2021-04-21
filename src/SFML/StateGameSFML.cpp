@@ -40,7 +40,7 @@ void StateGameSFML::Init()
     heartSprite.setTexture(heartText);
     heartSprite.setScale(0.1f, 0.1f);
     heartSprite.setOrigin(heartSprite.getLocalBounds().left +
-                            heartSprite.getLocalBounds().width/2.0f, 
+                            heartSprite.getLocalBounds().width/2.0f,
                             heartSprite.getLocalBounds().top +
                             heartSprite.getLocalBounds().height/2.0f);
 
@@ -52,7 +52,7 @@ void StateGameSFML::Init()
     hpText.setCharacterSize(30);
 
     hpText.setOrigin(hpText.getLocalBounds().left+hpText.getLocalBounds().width
-                    / 2.0f, hpText.getLocalBounds().top + 
+                    / 2.0f, hpText.getLocalBounds().top +
                     hpText.getLocalBounds().height/2.0f);
 
     hpText.setPosition(60, 30);
@@ -71,7 +71,7 @@ void StateGameSFML::ProcessInput()
                 isGoingDown = false;
             }
             //Si la touche Z est enfoncée
-            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z)) 
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z))
             {
                 isGoingUp = true;
                 isGoingDown = false;
@@ -117,7 +117,7 @@ void StateGameSFML::ProcessInput()
             {
                 isGoingRight = false;
                 isGoingLeft = false;
-            }     
+            }
 
         switch (event.type)
         {
@@ -133,13 +133,13 @@ void StateGameSFML::ProcessInput()
                 context->isDebug = (!context->isDebug);
             }
 
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X) 
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X)
             || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape)) {
                 context->renderWin->close();
                 context->quit = true;
             }
             break;
-        
+
         default:
             break;
         }
@@ -163,7 +163,7 @@ void StateGameSFML::Update()
     // Taille de la map
     mapWidth = context->map->GetMapLayers()[0].GetWidth();
     mapHeight = context->map->GetMapLayers()[0].GetHeight();
-    
+
     // Gestion de camera qui suit le joueur
     substX = playerX - winWidth/2;
     substY = playerY - winHeight/2;
@@ -199,12 +199,12 @@ void StateGameSFML::Update()
     {
         MoveWithCollision(-1,0);
     }
-    
+
     if (isGoingLeft && !isGoingUp && !isGoingDown)
     {
         MoveWithCollision(1,0);
     }
-    
+
 
     // Gestion des bords de map
     if(substX < 0) substX = 0;
@@ -216,20 +216,20 @@ void StateGameSFML::Update()
     if(spriteClock.getElapsedTime().asSeconds() > 0.3){
         if(posX==64) posX=0;
         else posX +=32;
-            
+
         spriteClock.restart();
     }
 
     // Update FSM Enemy
     int count = context->enemies.size();
-    
+
     for(int i=0; i<count; i++){
         context->enemies[i]->UpdateStateMachine(context->player);
     }
 
     // Mise à jour texte UI
     std::string hp = std::to_string(context->player->GetHP());
-    std::string maxHp = std::to_string(context->player->GetMaxHealth());
+    std::string maxHp = std::to_string(context->player->GetMaxHP());
     hpText.setString("HP :" + hp + "/" + maxHp);
 }
 
@@ -246,24 +246,24 @@ void StateGameSFML::Display()
                 if(data!=0){
                     x = ((data-1) % 8)*w;
                     y = ((data-1) / 8)*h;
-                    
+
                     // Ne pas afficher les tiles non-visibles
                     int tileX = i*w - substX;
                     int tileY = j*h - substY;
-                    
-                    if(tileX > -w && tileX < winWidth+w && 
+
+                    if(tileX > -w && tileX < winWidth+w &&
                         tileY > -h && tileY < winHeight+h ){
-                        
-                       
+
+
 
                         tileSprite.setPosition(tileX, tileY);
 
                         tileSprite.setTextureRect(sf::IntRect(x, y, w, h));
-                      
-                        context->renderWin->draw(tileSprite);       
+
+                        context->renderWin->draw(tileSprite);
                     }
 
-                        
+
                 }
             }
         }
@@ -275,7 +275,7 @@ void StateGameSFML::Display()
     shadowSprite.setPosition(playerX-substX - w/2, playerY-substY -h/2 +2);
     shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
     context->renderWin->draw(shadowSprite);
-    
+
 
     // Affichage du joueur
     playerSprite.setPosition(playerX-substX -w/2, playerY-substY -h/2);
@@ -292,7 +292,7 @@ void StateGameSFML::Display()
         context->renderWin->draw(enemySprite);
     }
 
-    
+
 
     if (context->isDebug) //Affichage DEBUG
     {
@@ -301,13 +301,13 @@ void StateGameSFML::Display()
 
         sf::RectangleShape pb(sf::Vector2f(context->player->GetWidth() - pOffset*2,
             context->player->GetHeight() -pOffset*2));
-        pb.setPosition(context->player->GetPos_x() + pOffset -substX -w/2, 
+        pb.setPosition(context->player->GetPos_x() + pOffset -substX -w/2,
             context->player->GetPos_y() + pOffset -substY -h/2);
         pb.setFillColor(sf::Color(0, 130, 255, 200));
         context->renderWin->draw(pb);
 
         // Affichage des collision boxes
-        const std::vector<CollisionBox> collisionBoxes = 
+        const std::vector<CollisionBox> collisionBoxes =
             context->map->GetCollisionLayer().GetCollisionBoxes();
 
         for (long unsigned int i=0; i < collisionBoxes.size(); i++)
@@ -315,8 +315,8 @@ void StateGameSFML::Display()
             sf::RectangleShape cb(sf::Vector2f(collisionBoxes[i].GetWidth(), collisionBoxes[i].GetHeight()));
             cb.setPosition(collisionBoxes[i].GetX() -substX, collisionBoxes[i].GetY()-substY);
             cb.setFillColor(sf::Color(0, 190, 255, 200));
-            context->renderWin->draw(cb);                
-        }            
+            context->renderWin->draw(cb);
+        }
     }
 
     ///////////// UI ///////////////
@@ -333,17 +333,17 @@ void StateGameSFML::Display()
 
 void StateGameSFML::Pause()
 {
-    
+
 }
 
 void StateGameSFML::Start()
 {
-    
+
 }
 
 
 
-void StateGameSFML::MoveWithCollision(float vx, float vy) 
+void StateGameSFML::MoveWithCollision(float vx, float vy)
 {
     if (vx == 0 && vy == 0)
     {
@@ -354,10 +354,10 @@ void StateGameSFML::MoveWithCollision(float vx, float vy)
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
 
-        // -w/2 et -h/2 pour centrer l'origine 
-        int posX = context->player->GetPos_x() + 
+        // -w/2 et -h/2 pour centrer l'origine
+        int posX = context->player->GetPos_x() +
                    vx*context->player->GetSpeed() - w/2;
-        int posY = context->player->GetPos_y() + 
+        int posY = context->player->GetPos_y() +
                    vy*context->player->GetSpeed() - h/2;
 
         int offset = context->player->getOffset();
@@ -369,7 +369,7 @@ void StateGameSFML::MoveWithCollision(float vx, float vy)
                && cb[i].GetY() + cb[i].GetHeight() >= posY + offset){
 
                 iscolliding = true;
-            }   
+            }
         }
     }
     if (!iscolliding)
