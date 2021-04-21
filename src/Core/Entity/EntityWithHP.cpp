@@ -8,16 +8,16 @@ EntityWithHP::EntityWithHP() : EntityWithHP::EntityWithoutHP(){
 
     this->hp = 200;
     this->damage = 20;
-    this->maxHealth = 200;
+    this->maxHP = 200;
     this->livingStatus = true;
     this->speed = 1.0;
 }
 
-EntityWithHP::EntityWithHP(float x, float y, string name, int hp, int damage, float speed, int maxHealth)
+EntityWithHP::EntityWithHP(float x, float y, string name, int hp, int damage, float speed, int maxHP)
 : EntityWithoutHP::EntityWithoutHP(x, y, name){
     this->hp = hp;
     this->damage = damage;
-    this->maxHealth = maxHealth;
+    this->maxHP = maxHP;
     this->livingStatus = true;
     this->speed = speed;
 }
@@ -30,13 +30,13 @@ EntityWithHP::~EntityWithHP(){
     this->hp = 0;
     this->damage = 0;
     this->speed = 0.0;
-    this->maxHealth = 0;
+    this->maxHP = 0;
 
 }
 
 
 void EntityWithHP::SetHP(int newHp){
-    assert (newHp >= 0  && newHp <= maxHealth);
+    assert (newHp >= 0  && newHp <= maxHP);
 
     hp = newHp;
 }
@@ -63,11 +63,11 @@ void EntityWithHP::PrintEntityInfo() {
     cout<<"points de vie : " << hp <<endl;
     cout<<"Dégâts : "<< damage <<endl;
     cout<<"Speed : "<< speed <<endl;
-    cout<<"points de vie max : "<< maxHealth <<endl;
+    cout<<"points de vie max : "<< maxHP <<endl;
 
     if(livingStatus) cout<<"Le personnage est en vie "<<endl;
     else cout<<"Le personnage est mort"<<endl;
-    
+
     cout << endl;
 }
 
@@ -99,7 +99,7 @@ void EntityWithHP::TakeDamage(int damage){
     if(hp<=0){
         livingStatus=false;
         hp=0;
-    } 
+    }
     else hp -= damage;
 }
 
@@ -118,7 +118,7 @@ bool EntityWithHP::GetLivingStatus() const{
     return livingStatus;
 }
 
-int EntityWithHP::GetMaxHealth() const{
+int EntityWithHP::GetMaxHP() const{
 
-    return maxHealth;
+    return maxHP;
 }
