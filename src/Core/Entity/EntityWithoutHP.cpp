@@ -77,7 +77,7 @@ void EntityWithoutHP::SetPos_y(float newy){
     y = newy;
 }
 
-int EntityWithoutHP::GetWidth() const
+float EntityWithoutHP::GetWidth() const
 {
     return width;
 }
@@ -87,7 +87,7 @@ void EntityWithoutHP::SetWidth(int newW)
     width = newW;
 }
 
-int EntityWithoutHP::GetHeight() const
+float EntityWithoutHP::GetHeight() const
 {
     return height;
 }
