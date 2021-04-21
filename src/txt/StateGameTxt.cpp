@@ -2,35 +2,35 @@
 
 
 
-StateGameTxt::StateGameTxt(/* args */) 
+StateGameTxt::StateGameTxt(/* args */)
 {
-    
+
 }
 
-StateGameTxt::StateGameTxt(std::shared_ptr<Context> &cContext) 
+StateGameTxt::StateGameTxt(std::shared_ptr<Context> &cContext)
     : context(cContext)
 {
-    
+
 }
 
-StateGameTxt::~StateGameTxt() 
+StateGameTxt::~StateGameTxt()
 {
 
 }
 
-void StateGameTxt::Init() 
+void StateGameTxt::Init()
 {
-    context->player->SetSpeed(1);   
+    context->player->SetSpeed(1);
 
     system("setterm -cursor off");
 }
 
-void StateGameTxt::ProcessInput() 
+void StateGameTxt::ProcessInput()
 {
-    
+
 }
 
-void StateGameTxt::Update() 
+void StateGameTxt::Update()
 {
     int c;
 
@@ -55,7 +55,7 @@ void StateGameTxt::Update()
                 MoveWithCollision(1, 0);
                 context->player->SetDirection(Right);
                 break;
-                                        
+
 			case 'x':
                 system("clear");
                 system("setterm -cursor on");
@@ -63,10 +63,10 @@ void StateGameTxt::Update()
 				break;
         default:
             break;
-		}    
+		}
 }
 
-void StateGameTxt::Display() 
+void StateGameTxt::Display()
 {
     win = make_unique<WinTXT>(50, 25);
     win->clear();
@@ -78,9 +78,9 @@ void StateGameTxt::Display()
     win->print(pX, pY, 'O');
 
     //Affichage des données du joueurs
-    std::cout << endl << context->player->GetName() << " Informations : " << endl 
-    << "Position : (" << context->player->GetPos_x() << ", " << context->player->GetPos_y() << ")" << endl 
-    << "HP : " << context->player->GetHP() << "/" << context->player->GetMaxHealth() << endl;
+    std::cout << endl << context->player->GetName() << " Informations : " << endl
+    << "Position : (" << context->player->GetPos_x() << ", " << context->player->GetPos_y() << ")" << endl
+    << "HP : " << context->player->GetHP() << "/" << context->player->GetMaxHP() << endl;
 
     //Affichage des ennemies
         const std::vector<Enemy *> enemies = context->enemies;
@@ -89,7 +89,7 @@ void StateGameTxt::Display()
         win->print((pX - context->player->GetPos_x() + enemies[i]->GetPos_x()),
             (pY - context->player->GetPos_y() + enemies[i]->GetPos_y()), 'E');
     }
-    
+
 
     //Affichage des collisions boxes
         const std::vector<CollisionBox> cb = context->map->GetCollisionLayer().GetCollisionBoxes();
@@ -110,17 +110,17 @@ void StateGameTxt::Display()
     win->draw();
 }
 
-void StateGameTxt::Pause() 
+void StateGameTxt::Pause()
 {
-    
+
 }
 
-void StateGameTxt::Start() 
+void StateGameTxt::Start()
 {
-    
+
 }
 
-void StateGameTxt::MoveWithCollision(float vx, float vy) 
+void StateGameTxt::MoveWithCollision(float vx, float vy)
 {
     if (vx == 0 && vy == 0)
     {
@@ -132,9 +132,9 @@ void StateGameTxt::MoveWithCollision(float vx, float vy)
 
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
-        int posX = context->player->GetPos_x() + 
+        int posX = context->player->GetPos_x() +
                    vx*context->player->GetSpeed();
-        int posY = context->player->GetPos_y() + 
+        int posY = context->player->GetPos_y() +
                    vy*context->player->GetSpeed();
 
         //Detection collision axe X
@@ -145,7 +145,7 @@ void StateGameTxt::MoveWithCollision(float vx, float vy)
                && cb[i].GetY() + cb[i].GetHeight() >= posY){
 
                 iscolliding = true;
-            }   
+            }
         }
     }
     if (!iscolliding)
