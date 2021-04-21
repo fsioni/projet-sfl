@@ -14,7 +14,7 @@ Enemy::Enemy() : EntityWithHP(){
     stateMachine->SetCurrentState(EnemyPatrol::Instance());
 }
 
-Enemy::Enemy(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, unsigned int maxHealth)
+Enemy::Enemy(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, int maxHP)
 : EntityWithHP::EntityWithHP(x, y, name, hp, damage, speed, maxHP){
     stateMachine = new StateMachine<Enemy>(this);
 
