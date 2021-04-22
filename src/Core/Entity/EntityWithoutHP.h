@@ -143,10 +143,10 @@ protected :
     /*// ==== Données membres protégées === //*/
 
     /*! \brief Position sur l'axe des x de l'entité (horizontal).*/
-    int x;
+    float x;
 
     /*! \brief Position sur l'axe des y de l'entité (vertical). */
-    int y;
+    float y;
 
     /*! \brief Vitesse de l'entité */
     int speed;
