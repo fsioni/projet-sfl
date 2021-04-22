@@ -37,7 +37,6 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::
             //Detection collision axe Y
             if(posY +cbEnemy->GetHeight() - offset >= cb[i].GetY()
                && cb[i].GetY() + cb[i].GetHeight() >= posY + offset){
-                //std::cout << "collision enemy -> map "<< e->GetCollisionBox()->GetId() << std::endl;
                 iscolliding = true;
             }   
         }
@@ -59,10 +58,7 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::
                 //Detection collision axe Y
                 if(posY + e->GetCollisionBox()->GetHeight() - offset >= cbEnemies[i]->GetY()
                 && cbEnemies[i]->GetY() + cbEnemies[i]->GetHeight() >= posY + offset){
-                    std::cout << "collision enemy (" << e->GetCollisionBox()->GetX() << " , " << e->GetCollisionBox()->GetY() <<
-                        ")  id =  "<< e->GetCollisionBox()->GetId()<<  " -> enemy ("<< cbEnemies[i]->GetX() 
-                        << " , " << cbEnemies[i]->GetY() << ") id = " << cbEnemies[i]->GetId() 
-                        << std::endl;
+                
                     iscolliding = true;
                 }   
             }
@@ -80,7 +76,7 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::
         //Detection collision axe Y
         if(posY + e->GetCollisionBox()->GetHeight() - offset >= cbPlayer->GetY()
         && cbPlayer->GetY() + cbPlayer->GetHeight() >= posY + offset){
-            std::cout << "collision enemy -> player "<< e->GetCollisionBox()->GetId() << std::endl;
+            
             iscolliding = true;
         }   
     }

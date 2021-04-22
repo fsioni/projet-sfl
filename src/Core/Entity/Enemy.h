@@ -44,8 +44,8 @@ public :
     *   Créer un Enemy (x, y, name, hp, dammage, maxHealth, livingStatus, speed)
     *
     */
-    Enemy(float x, float y, string name, unsigned int hp, 
-          unsigned int damage,float speed, unsigned int maxHealth);
+    Enemy(int x_, int y_, string name_, int hp_, int damage_,
+          int speed_, int maxHealth_);
 
 
     /*! \brief Destructeur.
@@ -66,6 +66,7 @@ public :
     void DecrementNbUpdateChangeDir();
     void RandDirection();
 
+    void Test() const;
 
 private:
     StateMachine<Enemy> * stateMachine;

@@ -72,14 +72,14 @@ public:
     *
     *   \return Retourne le tableau dynamique de CollisionBox
     */
-    std::vector<std::shared_ptr<CollisionBox>> GetCollisionBoxesEnemy();
+    std::vector<std::shared_ptr<CollisionBox> > GetCollisionBoxesEnemy();
     
 private:
     /*// === Données membres privées === //*/
 
     /*! \brief Tableau dyanmique des CollisionBox du Layer. */
     std::vector<CollisionBox> collisionBoxes;
-    std::vector<std::shared_ptr<CollisionBox>> collisionBoxesEnemy;
+    std::vector<std::shared_ptr<CollisionBox> > collisionBoxesEnemy;
 };
 
 

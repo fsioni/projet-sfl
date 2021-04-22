@@ -1,5 +1,7 @@
 #include "CollisionBox.h"
 
+#include <iostream>
+
 CollisionBox::CollisionBox() : Box(){
 }
 
@@ -13,4 +15,9 @@ CollisionBox::CollisionBox(float x, float y, float width, float height) :
 CollisionBox::~CollisionBox(){
 }
 
-void CollisionBox::Test() const{}
+void CollisionBox::Test() const{
+    std::cout << "===== Class CollisionBox =====" << std::endl;
+    std::cout << "Pas de fonction ou membre supplémentaire que sa " <<
+                "classe mère Box déjà testée : ok";
+    std::cout << std::endl << std::endl;
+}

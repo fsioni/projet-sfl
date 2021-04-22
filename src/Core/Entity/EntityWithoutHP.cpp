@@ -143,25 +143,35 @@ void EntityWithoutHP::Test() const{
     std::cout << "===== Class EntityWithoutHP =====" << std::endl;
     EntityWithoutHP entity1;
     std::cout << "Constructeur EntityWithoutHP() : ";
-    assert(entity1.x == 0 && entity1.y == 0);
-    assert(entity1.width == 32 && entity1.height == 32);
-    assert(entity1.offset == 7 && entity1.speed == 1);
+    assert(entity1.x == 0);
+    assert(entity1.y == 0);
+    assert(entity1.width == 32);
+    assert(entity1.height == 32);
+    assert(entity1.offset == 7);
+    assert(entity1.speed == 1);
     assert(entity1.name == "Unknown");
     assert(entity1.direction == Right);
-    assert(entity1.cb->GetX() == 0 && entity1.cb->GetY() == 0);
-    assert(entity1.cb->GetWidth() == 32 && entity1.cb->GetHeight()==32);
+    assert(entity1.cb->GetX() == 0);
+    assert(entity1.cb->GetY() == 0);
+    assert(entity1.cb->GetWidth() == 32);
+    assert(entity1.cb->GetHeight()==32);
     std::cout << "ok" << std::endl;
 
     std::cout << "Constructeur EntityWithoutHP(float x_, float y_," << 
                 "float speed_, string name_) : ";
     EntityWithoutHP entity2(12, 13, 3, "Entity2");
-    assert(entity2.x == 12 && entity2.y == 13);
-    assert(entity2.width == 32 && entity2.height == 32);
-    assert(entity2.offset == 7 && entity2.speed == 3);
+    assert(entity2.x == 12);
+    assert(entity2.y == 13);
+    assert(entity2.width == 32);
+    assert(entity2.height == 32);
+    assert(entity2.offset == 7);
+    assert(entity2.speed == 3);
     assert(entity2.name == "Entity2");
     assert(entity2.direction == Right);
-    assert(entity2.cb->GetX() == 12 && entity2.cb->GetY() == 13);
-    assert(entity2.cb->GetWidth() == 32 && entity2.cb->GetHeight()== 32);
+    assert(entity2.cb->GetX() == 12);
+    assert(entity2.cb->GetY() == 13);
+    assert(entity2.cb->GetWidth() == 32);
+    assert(entity2.cb->GetHeight()== 32);
     std::cout << "ok" << std::endl;
 
     std::cout << "SetPos_x(float newX) et GetPos_x() : ";

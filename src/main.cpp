@@ -26,10 +26,33 @@ int main(int argc, char* argv[]){
         termClear();
     }
     else if(argv[1] == std::string("2")){
+        std::cout << "===== TEST DE REGRESSION =====" << std::endl << std::endl;
         EntityWithoutHP entityWithoutHP;
         entityWithoutHP.Test();
+
         EntityWithHP entityWithHP;
         entityWithHP.Test();
+
+        Enemy enemy;
+        enemy.Test();
+
+        Player player;
+        player.Test();
+
+        Tileset tileset;
+        tileset.Test();
+
+        Box box;
+        box.Test();
+
+        CollisionBox collisionBox;
+        collisionBox.Test();
+
+        SpawnPoint spawnPoint;
+        spawnPoint.Test();
+
+        Layer layer;
+        layer.Test();
     }
     else if(argv[1] == std::string("debug")){    
         Game g;

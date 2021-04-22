@@ -95,16 +95,20 @@ void EntityWithHP::Test() const{
 
     EntityWithHP entity1;
     std::cout << "Constructeur EntityWithHP() : ";
-    assert(entity1.hp == 200 && entity1.damage == 20);
-    assert(entity1.maxHealth == 200 && entity1.livingStatus);
+    assert(entity1.hp == 200);
+    assert(entity1.damage == 20);
+    assert(entity1.maxHealth == 200);
+    assert(entity1.livingStatus);
     std::cout << "ok" << std::endl;
 
             
     std::cout << "Constructeur EntityWithHP(int x_, int y_, string name_, "<<
                   "int hp_, int damage_, int speed_, int maxHealth_) : ";
     EntityWithHP entity2(10, 10, "Entité", 120, 23, 10, 300);
-    assert(entity2.hp == 120 && entity2.damage == 23);
-    assert(entity2.maxHealth == 300 && entity2.livingStatus);
+    assert(entity2.hp == 120);
+    assert(entity2.damage == 23);
+    assert(entity2.maxHealth == 300);
+    assert(entity2.livingStatus);
     std::cout << "ok" << std::endl;
 
     std::cout << "SetHP(int newHP) et GetHP() : ";
@@ -132,7 +136,8 @@ void EntityWithHP::Test() const{
 
     entity1.SetHP(10);
     entity1.TakeDamage(13);
-    assert(!entity1.livingStatus && entity1.hp==0);
+    assert(!entity1.livingStatus);
+    assert(entity1.hp==0);
     std::cout << "ok" << std::endl;
 
 

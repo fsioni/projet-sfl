@@ -11,14 +11,19 @@ Player::Player(float x, float y, string name, unsigned int hp, unsigned int dama
 
 Player::~Player(){
 
-    this->x = 0.0;
-    this->y= 0.0;
-    this->name = "deletedPlayer";
-    this->hp = 0;
-    this->damage = 0;
-    this->speed = 0.0;
-    this->maxHealth = 0;
-    this->livingStatus = false;
-
+    x = 0;
+    y= 0;
+    name = "deletedPlayer";
+    hp = 0;
+    damage = 0;
+    speed = 0;
+    maxHealth = 0;
+    livingStatus = false;
 }
 
+void Player::Test() const{
+    std::cout << "===== Class Player =====" << std::endl;
+    std::cout << "Pas de fonction ou membre supplémentaire que sa " <<
+                "classe mère EntityWithHP déjà testée : ok";
+    std::cout << std::endl << std::endl;
+}
