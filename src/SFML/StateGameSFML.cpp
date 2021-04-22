@@ -336,17 +336,27 @@ void StateGameSFML::Display()
 }
 
 void StateGameSFML::DisplayDebug(){
-    //Affichage collisionBox du joueur
+    //Affichage du debug du joueur
     int pOffset = context->player->GetOffset();
 
     std::shared_ptr<CollisionBox> cbPlayer = context->player->GetCollisionBox();
 
+    //Affichage de la collision box
     sf::RectangleShape pb(sf::Vector2f(cbPlayer->GetWidth() - pOffset*2,
         cbPlayer->GetHeight() -pOffset*2));
     pb.setPosition(cbPlayer->GetX() + pOffset -substX -w/2, 
         cbPlayer->GetY() + pOffset -substY -h/2);
     pb.setFillColor(sf::Color(170, 30, 155, 200));
-    context->renderWin->draw(pb);
+
+    //Affichage des coordonnées
+    sf::String txt= "("+  to_string(cbPlayer->GetX()) + ", " + to_string(cbPlayer->GetY())+ ")";
+    sf::Text pos_text(txt, textFont);   
+
+    pos_text.setPosition(context->player->GetPos_x() -substX, context->player->GetPos_y() + 10 -substY);
+    pos_text.setCharacterSize(15);
+
+    context->renderWin->draw(pb);   
+    context->renderWin->draw(pos_text);    
 
     // Affichage des collision boxes de la map
     std::vector<CollisionBox> collisionBoxes = 
@@ -362,20 +372,21 @@ void StateGameSFML::DisplayDebug(){
         context->renderWin->draw(cb);                
     }   
 
-    // Affichage des collision boxes des entités
+    // Affichage du debug des entités
     std::vector<std::shared_ptr<CollisionBox> > enemyBoxes = 
         context->map->GetCollisionLayer()->GetCollisionBoxesEnemy();
 
     for (long unsigned int i=0; i < enemyBoxes.size(); i++)
     {
+        //Affichage des collisions boxes
         int x = enemyBoxes[i]->GetX() -substX;
         int y = enemyBoxes[i]->GetY()-substY;
         sf::RectangleShape cb(sf::Vector2f(enemyBoxes[i]->GetWidth(), enemyBoxes[i]->GetHeight()));
         cb.setPosition(x, y);
         cb.setFillColor(sf::Color(0, 190, 55, 200));
 
-        sf::String txt= "id: "+ to_string(enemyBoxes[i]->GetId()); "("+
-            to_string(enemyBoxes[i]->GetX()) + ", " + to_string(enemyBoxes[i]->GetY())+")";
+        //Affichage de l'id et des coordonnées
+        sf::String txt= "id: "+ to_string(enemyBoxes[i]->GetId());
 
         sf::Text id_text(txt, textFont);
         txt = "("+  to_string(enemyBoxes[i]->GetX()) + ", " + to_string(enemyBoxes[i]->GetY())+ ")";
