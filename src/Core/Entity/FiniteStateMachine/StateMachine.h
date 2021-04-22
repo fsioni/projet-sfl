@@ -10,7 +10,7 @@ public:
     StateMachine(entity_type * owner_);
     void SetCurrentState(StateBehavior<entity_type> * s);
     void UpdateCurrentState(std::unique_ptr<Player> & player_, 
-                            CollisionLayer * collision);
+                            CollisionLayer * collision, int dt);
     void ChangeState(StateBehavior<entity_type> * newState);
     void RevertToPreviousState();
 
@@ -36,8 +36,8 @@ void StateMachine<entity_type>::SetCurrentState(StateBehavior<entity_type> * s){
 
 template <class entity_type>
 void StateMachine<entity_type>::UpdateCurrentState(
-    std::unique_ptr<Player> & player_, CollisionLayer * collision){
-    if(currentState) currentState->Execute(owner, player_, collision);
+    std::unique_ptr<Player> & player_, CollisionLayer * collision, int dt){
+    if(currentState) currentState->Execute(owner, player_, collision, dt);
 }
 
 template <class entity_type>

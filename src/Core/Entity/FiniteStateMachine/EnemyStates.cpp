@@ -14,7 +14,7 @@ float distance(Enemy * enemy, std::unique_ptr<Player> & player_){
 
 
 
-bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::unique_ptr<Player> & player_) 
+bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::unique_ptr<Player> & player_, int dt) 
 {
     if (vx == 0 && vy == 0)
     {
@@ -85,7 +85,7 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::
 
     if (!iscolliding)
     {
-        e->Move((vx)/30, (vy)/30);
+        e->Move((vx*dt)/30, (vy*dt)/30);
     }
 
     return iscolliding;
@@ -107,17 +107,17 @@ void EnemyPatrol::Enter(Enemy * enemy){
 
 
 void EnemyPatrol::Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
-                          CollisionLayer * collision){
+                          CollisionLayer * collision, int dt){
     bool colliding = false;
     
     if(enemy->GetDirection()==Right)
-        colliding = MoveWithCollision(enemy, collision, 1, 0, player_);
+        colliding = MoveWithCollision(enemy, collision, 1, 0, player_, dt);
     if(enemy->GetDirection()==Left)
-        colliding = MoveWithCollision(enemy, collision, -1, 0, player_);
+        colliding = MoveWithCollision(enemy, collision, -1, 0, player_, dt);
     if(enemy->GetDirection()==Down)
-        colliding = MoveWithCollision(enemy, collision, 0, 1, player_);
+        colliding = MoveWithCollision(enemy, collision, 0, 1, player_, dt);
     if(enemy->GetDirection()==Up)
-        colliding = MoveWithCollision(enemy, collision, 0, -1, player_);
+        colliding = MoveWithCollision(enemy, collision, 0, -1, player_, dt);
 
     if(enemy->GetNbUpdateChangeDir()==0 || colliding){
         enemy->RandDirection();
@@ -150,14 +150,14 @@ void EnemyAttack::Enter(Enemy * enemy){
 }
 
 void EnemyAttack::Execute(Enemy * enemy, std::unique_ptr<Player> & player_, 
-                          CollisionLayer * collision){
+                          CollisionLayer * collision, int dt){
     float x = player_->GetPos_x() - enemy->GetPos_x();
     float y = player_->GetPos_y() - enemy->GetPos_y();
     float dist = sqrt(x*x + y*y);
     x = x/abs(dist);
     y = y/abs(dist);
     enemy->SetDirection(x, y);
-    MoveWithCollision(enemy, collision, x, y, player_);
+    MoveWithCollision(enemy, collision, x, y, player_, dt);
     dist = distance(enemy, player_);
     if(dist > 5*32){
         enemy->GetStateMachine()->ChangeState(EnemyPatrol::Instance());

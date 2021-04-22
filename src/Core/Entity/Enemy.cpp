@@ -43,8 +43,8 @@ Enemy::~Enemy(){
 
 
 void Enemy::UpdateStateMachine(std::unique_ptr<Player> & player_, 
-                               CollisionLayer * collision){
-    stateMachine->UpdateCurrentState(player_, collision);
+                               CollisionLayer * collision, int dt){
+    stateMachine->UpdateCurrentState(player_, collision, dt);
 }
 
 

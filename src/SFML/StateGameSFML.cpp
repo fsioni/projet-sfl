@@ -242,7 +242,7 @@ void StateGameSFML::UpdateEnemies(){
     
     for(int i=0; i<count; i++){
         context->enemies[i]->UpdateStateMachine(context->player,
-            context->map->GetCollisionLayer());
+            context->map->GetCollisionLayer(), deltaTime);
         
         context->enemies[i]->DecrementNbUpdateChangeDir();
         float posX = context->enemies[i]->GetPos_x();
@@ -296,22 +296,24 @@ void StateGameSFML::Display()
     // -h/2 et -w/2 pour recentrer l'origine des entités
     // Affichage de l'ombre
     int direction = context->player->GetDirection();
-    shadowSprite.setPosition(playerX-substX - w/2, playerY-substY -h/2 +2);
+    int pX = playerX-substX - w/2;
+    int pY = playerY-substY -h/2;
+    shadowSprite.setPosition(pX, pY);
     shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
     context->renderWin->draw(shadowSprite);
     
 
     // Affichage du joueur
-    playerSprite.setPosition(playerX-substX -w/2, playerY-substY -h/2);
+    playerSprite.setPosition(pX, pY);
     playerSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
     context->renderWin->draw(playerSprite);
 
     // Affichage des ennemies
     for(int i=0; i<(int)context->enemies.size(); i++){
         direction = context->enemies[i]->GetDirection();
-        int enX = context->enemies[i]->GetPos_x()-substX;
-        int enY = context->enemies[i]->GetPos_y()-substY;
-        enemySprite.setPosition(enX -w/2, enY -h/2);
+        int enX = context->enemies[i]->GetPos_x() - substX - w/2;
+        int enY = context->enemies[i]->GetPos_y() - substY - h/2;
+        enemySprite.setPosition(enX, enY);
         enemySprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
         context->renderWin->draw(enemySprite);
     }
@@ -349,7 +351,7 @@ void StateGameSFML::DisplayDebug(){
     pb.setFillColor(sf::Color(170, 30, 155, 200));
 
     //Affichage des coordonnées
-    sf::String txt= "("+  to_string(cbPlayer->GetX()) + ", " + to_string(cbPlayer->GetY())+ ")";
+    sf::String txt= "("+  to_string(context->player->GetPos_x()) + ", " + to_string(context->player->GetPos_y())+ ")";
     sf::Text pos_text(txt, textFont);   
 
     pos_text.setPosition(context->player->GetPos_x() -substX, context->player->GetPos_y() + 10 -substY);

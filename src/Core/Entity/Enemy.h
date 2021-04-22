@@ -58,7 +58,7 @@ public :
     StateMachine<Enemy>* GetStateMachine() const;
 
     void UpdateStateMachine(std::unique_ptr<Player> & player_, 
-                            CollisionLayer * collision);
+                            CollisionLayer * collision, int dt);
 
     int GetNbUpdateMaxChangeDir() const;
     int GetNbUpdateChangeDir() const;

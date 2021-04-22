@@ -16,7 +16,7 @@ public:
     static EnemyPatrol* Instance();
     virtual void Enter(Enemy * enemy);
     virtual void Execute(Enemy * enemy, std::unique_ptr<Player> & player_, 
-                        CollisionLayer * collision);
+                        CollisionLayer * collision, int dt);
     virtual void Exit(Enemy * enemy);
 
 private:
@@ -33,7 +33,7 @@ public:
     static EnemyAttack* Instance();
     virtual void Enter(Enemy * enemy);
     virtual void Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
-                         CollisionLayer * collision);
+                         CollisionLayer * collision, int dt);
     virtual void Exit(Enemy * enemy);
     
 private:
