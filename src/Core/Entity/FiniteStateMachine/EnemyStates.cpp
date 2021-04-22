@@ -24,19 +24,19 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::
     std::vector<CollisionBox> cb = cl->GetCollisionBoxes();
     std::shared_ptr<CollisionBox> cbEnemy = e->GetCollisionBox();
         int posX = cbEnemy->GetX() + 
-                   vx*e->GetSpeed() - 16;
+                   vx*e->GetSpeed();
         int posY = cbEnemy->GetY() + 
-                   vy*e->GetSpeed() - 16;
+                   vy*e->GetSpeed();
     int offset = e->GetOffset();
 
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
         //Detection collision axe X
-        if (posX + cbEnemy->GetWidth() - offset >= cb[i].GetX()
-            && cb[i].GetX() + cb[i].GetWidth() >= posX + offset){
+        if (posX + cbEnemy->GetWidth() >= cb[i].GetX()
+            && cb[i].GetX() + cb[i].GetWidth() >= posX){
             //Detection collision axe Y
-            if(posY +cbEnemy->GetHeight() - offset >= cb[i].GetY()
-               && cb[i].GetY() + cb[i].GetHeight() >= posY + offset){
+            if(posY +cbEnemy->GetHeight() >= cb[i].GetY()
+               && cb[i].GetY() + cb[i].GetHeight() >= posY){
                 iscolliding = true;
             }   
         }
@@ -48,16 +48,14 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::
     
     for (long unsigned int i = 0; i < cbEnemies.size(); i++)
     {
-        // TODO : Rajouter une condition pour ne pas tester 
-        //        sa propre collision Box
         if(e->GetCollisionBox()->GetId() != cbEnemies[i]->GetId()){
 
             //Detection collision axe X
-            if (posX + e->GetCollisionBox()->GetWidth() - offset >= cbEnemies[i]->GetX()
-                && cbEnemies[i]->GetX() + cbEnemies[i]->GetWidth() >= posX + offset){
+            if (posX + e->GetCollisionBox()->GetWidth() >= cbEnemies[i]->GetX()
+                && cbEnemies[i]->GetX() + cbEnemies[i]->GetWidth() >= posX){
                 //Detection collision axe Y
-                if(posY + e->GetCollisionBox()->GetHeight() - offset >= cbEnemies[i]->GetY()
-                && cbEnemies[i]->GetY() + cbEnemies[i]->GetHeight() >= posY + offset){
+                if(posY + e->GetCollisionBox()->GetHeight() >= cbEnemies[i]->GetY()
+                && cbEnemies[i]->GetY() + cbEnemies[i]->GetHeight() >= posY){
                 
                     iscolliding = true;
                 }   
@@ -68,15 +66,17 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::
 
     std::shared_ptr<CollisionBox> cbPlayer = player_->GetCollisionBox();
     int offsetPlayer = player_->GetOffset();
-    
+    float pX = cbPlayer->GetX() - 16;
+    float pY = cbPlayer->GetY() -16;
     
     //Detection collision axe X
-    if (posX + e->GetCollisionBox()->GetWidth() - offset >= cbPlayer->GetX()
-        && cbPlayer->GetX() + cbPlayer->GetWidth() >= posX + offset){
+    if (posX + e->GetCollisionBox()->GetWidth() >= pX + offsetPlayer
+        && pX + cbPlayer->GetWidth() - offsetPlayer >= posX)
+    {
         //Detection collision axe Y
-        if(posY + e->GetCollisionBox()->GetHeight() - offset >= cbPlayer->GetY()
-        && cbPlayer->GetY() + cbPlayer->GetHeight() >= posY + offset){
-            
+        if(posY + e->GetCollisionBox()->GetHeight() >= pY + offsetPlayer
+        && pY + cbPlayer->GetHeight() - offsetPlayer >= posY)
+        {
             iscolliding = true;
         }   
     }
