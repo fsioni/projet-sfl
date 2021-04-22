@@ -34,13 +34,17 @@ private:
     sf::Texture tileTexture;
     sf::Sprite tileSprite, playerSprite, shadowSprite, enemySprite;
 
-    // Horlage pour le delta time
+    // Horloge pour le delta time
     sf::Clock deltaClock;
     float deltaTime;
 
     // Horloge pour l'animation du sprite
     sf::Clock spriteClock;
     int posX = 0;
+
+    // Horloge pour les fps
+    sf::Clock fpsClock;
+    int fps;
 
     // Position du joueur
     int playerX, playerY;

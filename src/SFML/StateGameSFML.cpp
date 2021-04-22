@@ -65,6 +65,8 @@ void StateGameSFML::Init()
     // Taille de la map
     mapWidth = context->map->GetMapLayers()[0].GetWidth();
     mapHeight = context->map->GetMapLayers()[0].GetHeight();
+
+    fps = 0;
     
 }
 
@@ -160,6 +162,11 @@ void StateGameSFML::ProcessInput()
 void StateGameSFML::Update()
 {
     deltaTime = deltaClock.restart().asMilliseconds();
+
+    if(fpsClock.getElapsedTime().asSeconds() > 0.5){
+        fps = 1000/deltaTime;
+        fpsClock.restart();
+    }
 
     // Position du joueur
     playerX = context->player->GetPos_x();
@@ -370,7 +377,7 @@ void StateGameSFML::DisplayDebug(){
     {
         sf::RectangleShape cb(sf::Vector2f(collisionBoxes[i].GetWidth(), collisionBoxes[i].GetHeight()));
         cb.setPosition(collisionBoxes[i].GetX() -substX, collisionBoxes[i].GetY()-substY);
-        cb.setFillColor(sf::Color(0, 190, 255, 200));
+        cb.setFillColor(sf::Color(0, 190, 255, 215));
         context->renderWin->draw(cb);                
     }   
 
@@ -385,7 +392,7 @@ void StateGameSFML::DisplayDebug(){
         int y = enemyBoxes[i]->GetY()-substY;
         sf::RectangleShape cb(sf::Vector2f(enemyBoxes[i]->GetWidth(), enemyBoxes[i]->GetHeight()));
         cb.setPosition(x, y);
-        cb.setFillColor(sf::Color(0, 190, 55, 200));
+        cb.setFillColor(sf::Color(100, 190, 155, 200));
 
         //Affichage de l'id et des coordonnées
         sf::String txt= "id: "+ to_string(enemyBoxes[i]->GetId());
@@ -399,6 +406,16 @@ void StateGameSFML::DisplayDebug(){
 
         pos_text.setPosition(x, y+20);
         pos_text.setCharacterSize(15);
+
+
+        //Affichage des FPS
+        sf::Text fps_text(to_string(fps), textFont);
+
+        fps_text.setPosition(winWidth - 25, 10);
+        fps_text.setCharacterSize(20);
+        fps_text.setFillColor(sf::Color::Blue);
+ 
+        context->renderWin->draw(fps_text);  
 
 
         context->renderWin->draw(cb); 
