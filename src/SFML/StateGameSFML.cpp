@@ -411,7 +411,7 @@ void StateGameSFML::DisplayDebug(){
         //Affichage des FPS
         sf::Text fps_text(to_string(fps), textFont);
 
-        fps_text.setPosition(winWidth - 25, 10);
+        fps_text.setPosition(winWidth - 35, 10);
         fps_text.setCharacterSize(20);
         fps_text.setFillColor(sf::Color::Blue);
  
