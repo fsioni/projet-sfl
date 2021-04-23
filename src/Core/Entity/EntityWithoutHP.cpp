@@ -1,10 +1,4 @@
 #include "EntityWithoutHP.h"
-#include <cassert>
-#include <iostream>
-#include <string>
-#include <assert.h>
-
-
 
 EntityWithoutHP::EntityWithoutHP(){
 
@@ -18,7 +12,7 @@ EntityWithoutHP::EntityWithoutHP(){
     direction = Right;
 }
 
-EntityWithoutHP::EntityWithoutHP(float x, float y, string name){
+EntityWithoutHP::EntityWithoutHP(float x, float y, std::string name){
     assert (x >= 0.0 && y >= 0.0);
 
     this->x = x;
@@ -46,16 +40,16 @@ EntityWithoutHP::~EntityWithoutHP(){
 
 void EntityWithoutHP::PrintEntityInfo(){
 
-    cout<< "x = " << x << ", y = " << y << ", nom : " << name <<endl;
+    std::cout<< "x = " << x << ", y = " << y << ", nom : " << name <<std::endl;
 }
 
 
-void EntityWithoutHP::SetName(string newName){
+void EntityWithoutHP::SetName(std::string newName){
 
     name = newName;
 }
 
-string EntityWithoutHP::GetName() const{
+std::string EntityWithoutHP::GetName() const{
 
     return name;
 }
@@ -77,33 +71,35 @@ void EntityWithoutHP::SetPos_y(float newy){
     y = newy;
 }
 
-float EntityWithoutHP::GetWidth() const
-{
+float EntityWithoutHP::GetWidth() const{
+
     return width;
 }
 
-void EntityWithoutHP::SetWidth(int newW)
-{
+void EntityWithoutHP::SetWidth(int newW){
+    assert (newW >= 0.0);
+
     width = newW;
 }
 
-float EntityWithoutHP::GetHeight() const
-{
+float EntityWithoutHP::GetHeight() const{
+
     return height;
 }
 
-void EntityWithoutHP::SetHeight(int newH)
-{
+void EntityWithoutHP::SetHeight(int newH){
+    assert (newH >= 0.0);
+
     height = newH;
 }
 
-int EntityWithoutHP::getOffset() const
+int EntityWithoutHP::GetOffset() const
 {
     return offset;
 }
 
-void EntityWithoutHP::setOffset(int newO)
-{
+void EntityWithoutHP::SetOffset(int newO){
+
     offset = newO;
 }
 
@@ -114,9 +110,22 @@ float EntityWithoutHP::GetPos_y() const{
 
 
  EntityDirection EntityWithoutHP::GetDirection() const{
+
      return direction;
  }
 
 void EntityWithoutHP::SetDirection(EntityDirection nDirection){
+
     direction = nDirection;
 }
+
+int EntityWithoutHP::RandNumberGenerator(int minimum, int maximum){
+
+    int random;
+    int plage = maximum - minimum + 1;
+
+    for (int i = 0; i < 100; i++) random = (rand() % plage) + minimum;
+
+    return random;
+}
+
