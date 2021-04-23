@@ -1,10 +1,10 @@
 #ifndef ENTITYWITHOUTHP_H
 #define ENTITYWITHOUTHP_H
 
+#include <assert.h>
 #include <string>
+#include <cstdlib>
 #include <iostream>
-
-using namespace std;
 
 enum EntityDirection{
     Down,
@@ -44,7 +44,7 @@ public:
     *
     */
 
-    EntityWithoutHP(float x, float y, string name);
+    EntityWithoutHP(float x, float y, std::string name);
 
 
     /*! \brief Destructeur.
@@ -101,7 +101,7 @@ public:
     *
     *
     */
-    string GetName() const;
+    std::string GetName() const;
 
     /*! \brief Permets de modifier le nom de l'entité.
     *
@@ -109,7 +109,7 @@ public:
     *   \param [in] newName: chaine de caractères, nouveau nom de l'entité.
     *
     */
-    void SetName(string newName);
+    void SetName(std::string newName);
 
 
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.
@@ -158,7 +158,7 @@ public:
     *
     *
     */
-    int getOffset() const;
+    int GetOffset() const;
 
     /*! \brief Permets de modifier le décalage de l'entité.
     *
@@ -166,7 +166,7 @@ public:
     *   \param [in] newO: entier, nouveau décalage de l'entité.
     *
     */
-    void setOffset(int newO);
+    void SetOffset(int newO);
 
     /*! \brief Retourne la direction de l'entité.
     *
@@ -181,6 +181,17 @@ public:
     *
     */
     void SetDirection(EntityDirection nDirection);
+
+    /*! \brief Permet de générer un numéro de ligne aléatoirement.
+    *
+    *   \param [in] minimum : entier positif, nombre minimum possible lors du tirage.
+    *   \param [in] maximum : entier positif, nombre maximum possible lors du tirage.
+    *
+    *
+    *   Retourne un chiffre compris entre minimum et maximum aléatoirement.
+    *
+    */
+    int RandNumberGenerator(int minimum, int maximum);
 
 protected :
     /*// ==== Données membres protégées === //*/
@@ -201,7 +212,7 @@ protected :
     int offset; // For collision detection
 
     /*! \brief Nom de l'entité */
-    string name;
+    std::string name;
 
     /*! \brief Direction de l'entité */
     EntityDirection direction;
