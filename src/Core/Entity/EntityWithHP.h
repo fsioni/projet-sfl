@@ -2,9 +2,9 @@
 #define ENTITYWITHHP_H
 
 #include "EntityWithoutHP.h"
-#include <string>
 
-using namespace std;
+
+
 
 /*! \class EntityWithHP
 *   \brief Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.
@@ -41,8 +41,7 @@ public:
     *   Créer une EntityWithHP (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
-    EntityWithHP(float x, float y, string name, int hp, int damage, float speed, int maxHP);
-
+    EntityWithHP(float x, float y, std::string name, int hp, int damage, float speed, int maxHP);
 
     /*! \brief Destructeur.
     *
@@ -160,8 +159,6 @@ public:
     *
     */
     bool GetLivingStatus() const;
-
-
 
     /*! \brief Retourne le cap maximum de points de vie de l'entité.
     *
