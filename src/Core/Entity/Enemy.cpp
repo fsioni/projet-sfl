@@ -1,12 +1,6 @@
 #include "Enemy.h"
-
-
 #include "FiniteStateMachine/EnemyStates.h"
 
-
-#include <iostream>
-#include <string>
-#include <cassert>
 
 Enemy::Enemy() : EntityWithHP(){
     stateMachine = new StateMachine<Enemy>(this);
@@ -14,7 +8,7 @@ Enemy::Enemy() : EntityWithHP(){
     stateMachine->SetCurrentState(EnemyPatrol::Instance());
 }
 
-Enemy::Enemy(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, int maxHP)
+Enemy::Enemy(float x, float y, std::string name, int hp, int damage,float speed, int maxHP)
 : EntityWithHP::EntityWithHP(x, y, name, hp, damage, speed, maxHP){
     stateMachine = new StateMachine<Enemy>(this);
 
