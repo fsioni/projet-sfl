@@ -1,14 +1,6 @@
 #include "NPC.h"
 #include "EntityWithoutHP.h"
-#include "EntityWithHP.h"
-#include "Player.h"
-#include <stdlib.h>
-#include <iostream>
-#include <string>
-#include <assert.h>
-#include <time.h>
 
-using namespace std;
 
 NPC::NPC() : EntityWithoutHP::EntityWithoutHP(){
 
@@ -24,7 +16,7 @@ NPC::NPC() : EntityWithoutHP::EntityWithoutHP(){
 
 }
 
-NPC::NPC(float x, float y, string name) : EntityWithoutHP::EntityWithoutHP(x, y, name){
+NPC::NPC(float x, float y, std::string name) : EntityWithoutHP::EntityWithoutHP(x, y, name){
 
     DialogTab[0] = "Wesh mon lossa";
     DialogTab[1] = "s/o roi nouveau rap mondial";
@@ -47,9 +39,9 @@ NPC::~NPC(){
 
 void NPC::ReadRandDialog (){
 
-    int n = RandSentenceLine(0, 8);
+    int n = RandNumberGenerator(0, 8);
 
-    cout<<DialogTab[n]<<endl;
+    std::cout<<DialogTab[n]<<std::endl;
 
 }
 
@@ -63,21 +55,19 @@ void NPC::GiveHP (Player &p, int hpToGive){
 }
 
 
-string NPC::GetRandDialog (){
+std::string NPC::GetRandDialog (){
 
-    int n = RandSentenceLine(0, 8);
+    int n = RandNumberGenerator(0, 8);
 
     return DialogTab[n];
 
 }
 
+void NPC::TalkToPlayer(Player &p, float minX, float maxX, float minY, float maxY){
 
-int NPC:: RandSentenceLine (int minimum, int maximum){
+    if( p.GetPos_x() >= minX && p.GetPos_x() <= maxX && p.GetPos_y() >= minY && p.GetPos_y() <= maxY){
 
-    int random;
-    int plage = maximum - minimum + 1;
+        ReadRandDialog();
+    }
 
-    for (int i = 0; i < 100; i++) random = (rand() % plage) + minimum;
-
-    return random;
 }
