@@ -2,9 +2,6 @@
 #define PLAYER_H
 
 #include "EntityWithHP.h"
-#include <string>
-
-using namespace std;
 
 /*! \class Player
 *   \brief Classe représentant un joueur qui peut infliger/subir des dégats et se déplacer.
@@ -31,9 +28,9 @@ public :
     *   \param [in] x : réel positif, position du Player sur l'axe X (horizontal).
     *   \param [in] y : réel positif, position du Player sur l'axe Y (vertical).
     *   \param [in] name : chaine de caractères, nom du Player.
-    *   \param [in] hp : entier positif, nombre de points de vie du Player.
-    *   \param [in] dammage : entier positif, nombre de points de vie infligé lors d'une attaque.
-    *   \param [in] maxHP : entier positif, maximum de points de vie qu'un Player peut avoir.
+    *   \param [in] hp : entier, nombre de points de vie du Player.
+    *   \param [in] dammage : entier, nombre de points de vie infligé lors d'une attaque.
+    *   \param [in] maxHP : entier, maximum de points de vie qu'un Player peut avoir.
     *   \param [in] livingStatus : Booléen, définissant si le Player est mort ou pas.
     *   \param [in] speed : réel positif, vitesse de déplacement du Player.
     *
@@ -41,7 +38,7 @@ public :
     *   Créer un Player (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
-    Player(float x, float y, string name, unsigned int hp, unsigned int damage,
+    Player(float x, float y, std::string name,int hp, int damage,
     float speed,int maxHP);
 
     /*! \brief Destructeur.
