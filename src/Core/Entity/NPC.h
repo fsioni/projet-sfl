@@ -2,10 +2,8 @@
 #define NPC_H
 
 #include "EntityWithoutHP.h"
+#include "EntityWithHP.h"
 #include "Player.h"
-#include <string>
-
-using namespace std;
 
 /*! \class NPC
 *   \brief Classe représentant un personnage immobile non-joueur qui peut donner des points de vie et communiquer.
@@ -34,7 +32,7 @@ public:
     *   décalage 7.
     *
     */
-    NPC(float x, float y, string name);
+    NPC(float x, float y, std::string name);
 
     /*! \brief Destructeur.
     *
@@ -65,24 +63,15 @@ public:
     *   Retourne une phrase prononçable par un NPC tiré aléatoirement parmi celles qui sont stockées dans le tableau DialogTab.
     *
     */
-    string GetRandDialog();
+    std::string GetRandDialog();
 
-    /*! \brief Permet de générer un numéro de ligne aléatoirement.
-    *
-    *   \param [in] minimum : entier positif, nombre minimum possible lors du tirage.
-    *   \param [in] maximum : entier positif, nombre maximum possible lors du tirage.
-    *
-    *
-    *   Retourne un chiffre compris entre minimum et maximum aléatoirement.
-    *
-    */
-    int RandSentenceLine(int minimum, int maximum);
+    void TalkToPlayer(Player &p, float minX, float maxX, float minY, float maxY);
 
 protected:
     /*// ==== Données membres protégées === //*/
 
     /*! \brief Tableau de phrases prononçables par un NPC */
-    string DialogTab[9];
+    std::string DialogTab[9];
 
 };
 
