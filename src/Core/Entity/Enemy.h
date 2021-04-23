@@ -5,9 +5,6 @@
 #include "FiniteStateMachine/StateMachine.h"
 #include "FiniteStateMachine/EnemyStates.h"
 #include "Player.h"
-#include <string>
-
-using namespace std;
 
 
 /*! \class Enemy
@@ -35,9 +32,9 @@ public :
     *   \param [in] x : réel positif, position de l'Enemy  sur l'axe X (horizontal).
     *   \param [in] y : réel positif, position de l'Enemy  sur l'axe Y (vertical).
     *   \param [in] name : chaine de caractères, nom de l'Enemy.
-    *   \param [in] hp : entier positif, nombre de points de vie de l'Enemy.
-    *   \param [in] dammage : entier positif, nombre de points de vie infligé lors d'une attaque.
-    *   \param [in] maxHP : entier positif, maximum de points de vie qu'une Enemy peut avoir.
+    *   \param [in] hp : entier, nombre de points de vie de l'Enemy.
+    *   \param [in] dammage : entier, nombre de points de vie infligé lors d'une attaque.
+    *   \param [in] maxHP : entier, maximum de points de vie qu'une Enemy peut avoir.
     *   \param [in] livingStatus : Booléen, définissant si l'Enemy  est mort ou pas.
     *   \param [in] speed : réel positif, vitesse de déplacement de l'Enemy.
     *
@@ -45,7 +42,7 @@ public :
     *   Créer un Enemy (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
-    Enemy(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, int maxHP);
+    Enemy(float x, float y, std::string name, int hp, int damage,float speed, int maxHP);
 
 
     /*! \brief Destructeur.
