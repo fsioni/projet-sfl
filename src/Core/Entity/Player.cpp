@@ -1,12 +1,9 @@
 #include "Player.h"
 
-#include <iostream>
-#include <string>
-#include <cassert>
 
 Player::Player() : EntityWithHP(){}
 
-Player::Player(float x, float y, string name, unsigned int hp, unsigned int damage,float speed,int maxHP)
+Player::Player(float x, float y, std::string name, int hp, int damage,float speed, int maxHP)
 : EntityWithHP::EntityWithHP(x, y, name, hp, damage, speed, maxHP){}
 
 Player::~Player(){
