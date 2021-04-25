@@ -45,7 +45,7 @@ public:
     *
     *   Créer une EntityWithoutHP (x_, y_, speed_, name_).
     */
-    EntityWithoutHP(int x_, int y_, int speed_, string name_);
+    EntityWithoutHP(float x_, float y_, int speed_, string name_);
 
 
     /*! \brief Destructeur.
@@ -64,7 +64,7 @@ public:
     *
     */
 
-    int GetPos_x() const;
+    float GetPos_x() const;
 
 
     /*! \brief Permets de modifier la position sur l'axe des x de l'entité (horizontale).
@@ -74,7 +74,7 @@ public:
     *
     */
 
-    void SetPos_x(int newX);
+    void SetPos_x(float newX);
 
 
     /*! \brief Retourne la position sur l'axe des y de l'entité (verticale).
@@ -84,7 +84,7 @@ public:
     *
     */
 
-    int GetPos_y() const;
+    float GetPos_y() const;
 
 
     /*! \brief Permets de modifier la position sur l'axe des y de l'entité (verticale).
@@ -94,7 +94,7 @@ public:
     *
     */
 
-    void SetPos_y(int newY);
+    void SetPos_y(float newY);
 
     /*! \brief Retourne le nom de l'entité.
     *

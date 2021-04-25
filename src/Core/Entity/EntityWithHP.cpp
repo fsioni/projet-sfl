@@ -11,7 +11,7 @@ EntityWithHP::EntityWithHP() : EntityWithHP::EntityWithoutHP(){
     livingStatus = true;
 }
 
-EntityWithHP::EntityWithHP(int x_, int y_, string name_, int hp_, int damage_, int speed_, int maxHealth_)
+EntityWithHP::EntityWithHP(float x_, float y_, string name_, int hp_, int damage_, int speed_, int maxHealth_)
 : EntityWithoutHP::EntityWithoutHP(x_, y_, speed_, name_){
     hp = hp_;
     damage = damage_;

@@ -41,7 +41,7 @@ public:
     *   Créer une EntityWithHP (x, y, name, hp, dammage, maxHealth, livingStatus, speed)
     *
     */
-    EntityWithHP(int x, int y, string name, int hp, int damage, int speed, int maxHealth);
+    EntityWithHP(float x, float y, string name, int hp, int damage, int speed, int maxHealth);
 
 
     /*! \brief Destructeur.

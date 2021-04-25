@@ -44,7 +44,7 @@ public :
     *   Créer un Enemy (x, y, name, hp, dammage, maxHealth, livingStatus, speed)
     *
     */
-    Enemy(int x_, int y_, string name_, int hp_, int damage_,
+    Enemy(float x_, float y_, string name_, int hp_, int damage_,
           int speed_, int maxHealth_);
 
 
