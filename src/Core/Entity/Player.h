@@ -52,5 +52,7 @@ public :
 
     void Test() const;
 
+private:
+
 };
 #endif

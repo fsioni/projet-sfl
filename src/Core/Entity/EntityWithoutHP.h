@@ -139,6 +139,9 @@ public:
 
     void Move(float vx, float vy);
 
+    bool GetIsMoving() const;
+    void SetIsMovingFalse();
+
 protected :
     /*// ==== Données membres protégées === //*/
 
@@ -163,6 +166,9 @@ protected :
     string name;
 
     EntityDirection direction;
+
+    bool isMoving;
+
 };
 
 #endif

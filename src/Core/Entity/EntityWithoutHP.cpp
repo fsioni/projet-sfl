@@ -17,6 +17,8 @@ EntityWithoutHP::EntityWithoutHP(){
     name = "Unknown";
     cb = std::make_shared<CollisionBox>(x, y, width, height);
     direction = Right;
+
+    isMoving = false;
 }
 
 EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, string name_){
@@ -34,6 +36,7 @@ EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, string name_){
     cb = std::make_shared<CollisionBox>(x, y, width, height);
 
     direction = Right;
+    isMoving = false;
 }
 
 
@@ -127,6 +130,7 @@ void EntityWithoutHP::Move(float vx, float vy){
     if (y < 0){
         y = 0;
     }
+    isMoving = true;
 }
 
 int EntityWithoutHP::GetSpeed() const{
@@ -136,6 +140,14 @@ int EntityWithoutHP::GetSpeed() const{
 void EntityWithoutHP::SetSpeed(int newSpeed){
     if(newSpeed>=0)
         speed = newSpeed;  
+}
+
+bool EntityWithoutHP::GetIsMoving() const{
+    return isMoving;
+}
+
+void EntityWithoutHP::SetIsMovingFalse(){
+    isMoving = false;
 }
 
 
@@ -155,6 +167,7 @@ void EntityWithoutHP::Test() const{
     assert(entity1.cb->GetY() == 0);
     assert(entity1.cb->GetWidth() == 32);
     assert(entity1.cb->GetHeight()==32);
+    assert(!entity1.isMoving);
     std::cout << "ok" << std::endl;
 
     std::cout << "Constructeur EntityWithoutHP(float x_, float y_," << 
@@ -172,6 +185,7 @@ void EntityWithoutHP::Test() const{
     assert(entity2.cb->GetY() == int(13.4));
     assert(entity2.cb->GetWidth() == 32);
     assert(entity2.cb->GetHeight()== 32);
+    assert(!entity2.isMoving);
     std::cout << "ok" << std::endl;
 
     std::cout << "SetPos_x(float newX) et GetPos_x() : ";
@@ -226,6 +240,15 @@ void EntityWithoutHP::Test() const{
 
     assert(entity1.x == float(x_ + entity1.speed*0.8));
     assert(entity1.y == float(y_ + entity1.speed*0.));
+    std::cout << "ok" << std::endl;
+
+
+    std::cout << "SetIsMovingFalse() et GetIsMoving() : ";
+    entity1.isMoving = true;
+    entity1.SetIsMovingFalse();
+    assert(!entity1.GetIsMoving());
+    entity1.SetIsMovingFalse();
+    assert(!entity1.GetIsMoving());
     std::cout << "ok" << std::endl;
 
     std::cout << std::endl << std::endl;
