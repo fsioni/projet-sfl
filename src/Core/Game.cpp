@@ -40,7 +40,7 @@ void Game::Run(int mode)
     {
         int winWidth = 700;
         int winHeight = 700;
-        context->renderWin->create(sf::VideoMode(winWidth, winHeight, 32), "Legend Of Nautibus", sf::Style::Close);
+        context->renderWin->create(sf::VideoMode(winWidth, winHeight, 32), "Legend Of Nautibus");
         context->stateMan->Add(std::make_unique<StateSplashScreenSFML>(context));
         while (!context->quit)
         {

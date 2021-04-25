@@ -27,7 +27,7 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::
                    vx*e->GetSpeed();
         int posY = cbEnemy->GetY() + 
                    vy*e->GetSpeed();
-    int offset = e->GetOffset();
+
 
     for (long unsigned int i = 0; i < cb.size(); i++)
     {

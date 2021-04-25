@@ -151,7 +151,14 @@ void StateGameSFML::ProcessInput()
                 context->quit = true;
             }
             break;
-        
+
+        case sf::Event::Resized:
+            winWidth = event.size.width;
+            winHeight = event.size.height;
+            context->renderWin->setView(sf::View(
+                sf::FloatRect(0, 0, event.size.width, event.size.height)));
+            break;
+
         default:
             break;
         }
