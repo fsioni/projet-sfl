@@ -6,7 +6,8 @@
 
 Player::Player() : EntityWithHP(){}
 
-Player::Player(float x, float y, string name, unsigned int hp, unsigned int damage,float speed, unsigned int maxHealth)
+Player::Player(float x, float y, std::string name, int hp, int damage,
+               float speed, int maxHealth)
 : EntityWithHP::EntityWithHP(x, y, name, hp, damage, speed, maxHealth){
 }
 

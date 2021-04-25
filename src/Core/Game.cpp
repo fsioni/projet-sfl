@@ -8,7 +8,7 @@
 
 Game::Game(/* args */)
 {
-    context = make_shared<Context>();
+    context = std::make_shared<Context>();
 
     // Initialisation des ennemies
     int count = context->map->GetSpawnsLayer()->getEnemySpawns().size();

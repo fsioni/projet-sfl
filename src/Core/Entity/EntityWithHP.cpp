@@ -11,7 +11,7 @@ EntityWithHP::EntityWithHP() : EntityWithHP::EntityWithoutHP(){
     livingStatus = true;
 }
 
-EntityWithHP::EntityWithHP(float x_, float y_, string name_, int hp_, int damage_, int speed_, int maxHealth_)
+EntityWithHP::EntityWithHP(float x_, float y_, std::string name_, int hp_, int damage_, int speed_, int maxHealth_)
 : EntityWithoutHP::EntityWithoutHP(x_, y_, speed_, name_){
     hp = hp_;
     damage = damage_;
@@ -40,17 +40,17 @@ int EntityWithHP::GetHP() const{
 
 void EntityWithHP::PrintEntityInfo() {
 
-    cout<< "x = " << x << ", y = " << y <<endl;
-    cout<<"nom : " << name <<endl;
-    cout<<"points de vie : " << hp <<endl;
-    cout<<"Dégâts : "<< damage <<endl;
-    cout<<"Speed : "<< speed <<endl;
-    cout<<"points de vie max : "<< maxHealth <<endl;
+    std::cout<< "x = " << x << ", y = " << y << std::endl;
+    std::cout<<"nom : " << name <<std::endl;
+    std::cout<<"points de vie : " << hp <<std::endl;
+    std::cout<<"Dégâts : "<< damage <<std::endl;
+    std::cout<<"Speed : "<< speed <<std::endl;
+    std::cout<<"points de vie max : "<< maxHealth <<std::endl;
 
-    if(livingStatus) cout<<"Le personnage est en vie "<<endl;
-    else cout<<"Le personnage est mort"<<endl;
+    if(livingStatus) std::cout<<"Le personnage est en vie "<<std::endl;
+    else std::cout<<"Le personnage est mort"<<std::endl;
     
-    cout << endl;
+    std::cout << std::endl;
 }
 
 int EntityWithHP::GetDamage() const{

@@ -6,7 +6,6 @@
 #include <memory>
 #include "../Map/CollisionBox.h"
 
-using namespace std;
  
 enum EntityDirection{
     Down, 
@@ -45,7 +44,7 @@ public:
     *
     *   Créer une EntityWithoutHP (x_, y_, speed_, name_).
     */
-    EntityWithoutHP(float x_, float y_, int speed_, string name_);
+    EntityWithoutHP(float x_, float y_, int speed_, std::string name_);
 
 
     /*! \brief Destructeur.
@@ -102,7 +101,7 @@ public:
     *
     *
     */
-    string GetName() const;
+    std::string GetName() const;
 
     /*! \brief Permets de modifier le nom de l'entité.
     *
@@ -111,7 +110,7 @@ public:
     *
     */
 
-    void SetName(string newName);
+    void SetName(std::string newName);
 
     std::shared_ptr<CollisionBox> GetCollisionBox();
 
@@ -163,7 +162,7 @@ protected :
     int offset; // For collision detection
 
     /*! \brief Nom de l'entité */
-    string name;
+    std::string name;
 
     EntityDirection direction;
 

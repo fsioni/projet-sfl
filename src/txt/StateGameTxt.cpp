@@ -72,7 +72,7 @@ void StateGameTxt::Update()
 
 void StateGameTxt::Display() 
 {
-    win = make_unique<WinTXT>(50, 25);
+    win = std::make_unique<WinTXT>(50, 25);
     win->clear();
 
 
@@ -82,9 +82,11 @@ void StateGameTxt::Display()
     win->print(pX, pY, 'O');
 
     //Affichage des données du joueurs
-    std::cout << endl << context->player->GetName() << " Informations : " << endl 
-    << "Position : (" << context->player->GetPos_x() << ", " << context->player->GetPos_y() << ")" << endl 
-    << "HP : " << context->player->GetHP() << "/" << context->player->GetMaxHealth() << endl;
+    std::cout << std::endl << context->player->GetName() << " Informations : " 
+    << std::endl << "Position : (" << context->player->GetPos_x() << ", " 
+    << context->player->GetPos_y() << ")" << std::endl 
+    << "HP : " << context->player->GetHP() << "/" 
+    << context->player->GetMaxHealth() << std::endl;
 
     //Affichage des ennemies
         const std::vector<std::shared_ptr<Enemy>> enemies = context->enemies;

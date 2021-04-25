@@ -9,7 +9,8 @@ int main(int argc, char* argv[]){
 
     if (argc == 1 || argc>2) //////CHECK DU NOMBRE D'ARGUMENTS
     {
-        cerr << "You need one argument : 0 for SFML, 1 for txt, 2 for test" << endl;
+        std::cerr <<"You need one argument : 0 for SFML, 1 for txt, 2 for test"
+        << std::endl;
 
     }else if (argv[1] == std::string("0")) ////////MODE SFML
     {
@@ -61,7 +62,8 @@ int main(int argc, char* argv[]){
 
     else /////////L'ARGUMENT NE CORRESPOND A AUCUN MODE
     {
-        cerr << "The argument need to be 0 for SFML or 1 for txt" << endl;
+        std::cerr << "The argument need to be 0 for SFML or 1 for txt"
+        << std::endl;
     }
     return 0;
 }

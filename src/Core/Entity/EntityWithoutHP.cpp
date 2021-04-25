@@ -21,7 +21,7 @@ EntityWithoutHP::EntityWithoutHP(){
     isMoving = false;
 }
 
-EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, string name_){
+EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, std::string name_){
     if(x_ < 0) x = 0;
     else x = x_;
 
@@ -41,7 +41,6 @@ EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, string name_){
 
 
 EntityWithoutHP::~EntityWithoutHP(){
-
     x = 0;
     y= 0;
     width = 0;
@@ -53,12 +52,11 @@ EntityWithoutHP::~EntityWithoutHP(){
 
 
 void EntityWithoutHP::PrintEntityInfo(){
-
-    cout<< "x = " << x << ", y = " << y << ", nom : " << name <<endl;
+    std::cout<< "x = " << x << ", y = " << y << ", nom : " << name <<std::endl;
 }
 
 
-void EntityWithoutHP::SetName(string newName){
+void EntityWithoutHP::SetName(std::string newName){
     name = newName;
 }
 
@@ -66,7 +64,7 @@ std::shared_ptr<CollisionBox> EntityWithoutHP::GetCollisionBox(){
     return cb;
 }
 
-string EntityWithoutHP::GetName() const{
+std::string EntityWithoutHP::GetName() const{
     return name;
 }
 

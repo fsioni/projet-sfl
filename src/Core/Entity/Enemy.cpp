@@ -14,7 +14,7 @@ Enemy::Enemy() : EntityWithHP(){
     nbUpdateChangeDir = rand()%(nbUpdateMaxChangeDir-200) + 200;;
 }
 
-Enemy::Enemy(float x_, float y_, string name_, int hp_, int damage_,
+Enemy::Enemy(float x_, float y_, std::string name_, int hp_, int damage_,
              int speed_, int maxHealth_)
 : EntityWithHP::EntityWithHP(x_, y_, name_, hp_, damage_, speed_, maxHealth_){
     stateMachine = new StateMachine<Enemy>(this); 

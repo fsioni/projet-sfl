@@ -371,7 +371,8 @@ void StateGameSFML::DisplayDebug(){
     pb.setFillColor(sf::Color(170, 30, 155, 200));
 
     //Affichage des coordonnées
-    sf::String txt= "("+  to_string(context->player->GetPos_x()) + ", " + to_string(context->player->GetPos_y())+ ")";
+    sf::String txt= "("+  std::to_string(context->player->GetPos_x()) + ", " 
+    + std::to_string(context->player->GetPos_y())+ ")";
     sf::Text pos_text(txt, textFont);   
 
     pos_text.setPosition(context->player->GetPos_x() -substX, context->player->GetPos_y() + 10 -substY);
@@ -408,10 +409,12 @@ void StateGameSFML::DisplayDebug(){
         cb.setFillColor(sf::Color(100, 190, 155, 200));
 
         //Affichage de l'id et des coordonnées
-        sf::String txt= "id: "+ to_string(enemyBoxes[i]->GetId());
+        sf::String txt= "id: "+ std::to_string(enemyBoxes[i]->GetId());
 
         sf::Text id_text(txt, textFont);
-        txt = "("+  to_string(enemyBoxes[i]->GetX()) + ", " + to_string(enemyBoxes[i]->GetY())+ ")";
+        txt = "("+  std::to_string(enemyBoxes[i]->GetX()) + ", " + 
+            std::to_string(enemyBoxes[i]->GetY())+ ")";
+
         sf::Text pos_text(txt, textFont);
         id_text.setPosition(x, y);
         id_text.setCharacterSize(15);
@@ -422,7 +425,7 @@ void StateGameSFML::DisplayDebug(){
 
 
         //Affichage des FPS
-        sf::Text fps_text(to_string(fps), textFont);
+        sf::Text fps_text(std::to_string(fps), textFont);
 
         fps_text.setPosition(winWidth - 35, 10);
         fps_text.setCharacterSize(20);
