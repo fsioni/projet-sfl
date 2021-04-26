@@ -279,7 +279,23 @@ void StateGameSFML::Display()
 {
     context->renderWin->clear();
 
-    // Affichage de la map
+    DisplayMap();
+    DisplayPlayer();
+    DisplayEnemies();
+
+    if (context->isDebug) //Affichage DEBUG
+    {
+        DisplayDebug();            
+    }
+
+    ///////////// UI ///////////////
+    context->renderWin->draw(hpText);
+    context->renderWin->draw(heartSprite);
+
+    context->renderWin->display();
+}
+
+void StateGameSFML::DisplayMap(){
     for(int k=0; k<nbMapLayer; k++){
         MapLayer layer = context->map->GetMapLayers()[k];
         for(int i=0; i<mapWidth; i++){
@@ -296,8 +312,6 @@ void StateGameSFML::Display()
                     if(tileX > -w && tileX < winWidth+w && 
                         tileY > -h && tileY < winHeight+h ){
                         
-                       
-
                         tileSprite.setPosition(tileX, tileY);
 
                         tileSprite.setTextureRect(sf::IntRect(x, y, w, h));
@@ -310,12 +324,15 @@ void StateGameSFML::Display()
             }
         }
     }
+}
 
+void StateGameSFML::DisplayPlayer(){
     // -h/2 et -w/2 pour recentrer l'origine des entités
-    // Affichage de l'ombre
     int direction = context->player->GetDirection();
     int pX = playerX-substX - w/2;
     int pY = playerY-substY -h/2;
+
+    // Affichage de l'ombre
     shadowSprite.setPosition(pX, pY);
     shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
     context->renderWin->draw(shadowSprite);
@@ -328,15 +345,22 @@ void StateGameSFML::Display()
     else 
         playerSprite.setTextureRect(sf::IntRect(0, direction*32, 32, 32));
     context->renderWin->draw(playerSprite);
+}
 
-    // Affichage des ennemies
+void StateGameSFML::DisplayEnemies(){
     for(int i=0; i<(int)context->enemies.size(); i++){
         
-        direction = context->enemies[i]->GetDirection();
+        int direction = context->enemies[i]->GetDirection();
         int enX = context->enemies[i]->GetPos_x() - substX - w/2;
         int enY = context->enemies[i]->GetPos_y() - substY - h/2;
+
+        // Affichage de l'ombre
+        shadowSprite.setPosition(enX, enY);
+        shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
+        context->renderWin->draw(shadowSprite);
+
+        // Affichage des ennemies
         enemySprite.setPosition(enX, enY);
-        
         if(context->enemies[i]->GetIsMoving())
             enemySprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
         else
@@ -344,24 +368,6 @@ void StateGameSFML::Display()
 
         context->renderWin->draw(enemySprite);
     }
-
-    
-
-    if (context->isDebug) //Affichage DEBUG
-    {
-        DisplayDebug();            
-    }
-
-    ///////////// UI ///////////////
-    context->renderWin->draw(hpText);
-    context->renderWin->draw(heartSprite);
-
-
-
-
-
-    context->renderWin->display();
-
 }
 
 void StateGameSFML::DisplayDebug(){
