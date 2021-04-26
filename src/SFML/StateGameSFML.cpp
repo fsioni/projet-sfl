@@ -129,7 +129,11 @@ void StateGameSFML::ProcessInput()
             {
                 isGoingRight = false;
                 isGoingLeft = false;
-            }     
+            } 
+            /*
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)){
+                context->enemies[0]->SetLivingStatus(false);
+            }  */  
 
         switch (event.type)
         {
@@ -257,22 +261,24 @@ void StateGameSFML::UpdateEnemies(){
     int count = context->enemies.size();
     
     for(int i=0; i<count; i++){
-        context->enemies[i]->SetIsMovingFalse();
+        // Si enemy est en vie on fait tous les Updates
+        if(context->enemies[i]->GetLivingStatus()){
+            context->enemies[i]->SetIsMovingFalse();
 
-        context->enemies[i]->UpdateStateMachine(context->player,
-            context->map->GetCollisionLayer(), deltaTime);
+            context->enemies[i]->UpdateStateMachine(context->player,
+                context->map->GetCollisionLayer(), deltaTime);
+            
+            context->enemies[i]->DecrementNbUpdateChangeDir();
+
+            float posX = context->enemies[i]->GetPos_x();
+            float posY = context->enemies[i]->GetPos_y();
         
-        context->enemies[i]->DecrementNbUpdateChangeDir();
-        float posX = context->enemies[i]->GetPos_x();
-        float posY = context->enemies[i]->GetPos_y();
-       
-        context->map->GetCollisionLayer()->GetCollisionBoxesEnemy()[i]->
-        SetPosition(posX-16, posY-16);
-        context->enemies[i]->GetCollisionBox()->SetPosition(posX-16, posY-16);
-        
+            context->map->GetCollisionLayer()->GetCollisionBoxesEnemy()[i]->
+            SetPosition(posX-16, posY-16);
+            context->enemies[i]->GetCollisionBox()->SetPosition(posX-16, posY-16);
+        }   
     }
 }
-
 
 
 void StateGameSFML::Display()
@@ -337,7 +343,6 @@ void StateGameSFML::DisplayPlayer(){
     shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
     context->renderWin->draw(shadowSprite);
     
-
     // Affichage du joueur
     playerSprite.setPosition(pX, pY);
     if(context->player->GetIsMoving())
@@ -349,24 +354,26 @@ void StateGameSFML::DisplayPlayer(){
 
 void StateGameSFML::DisplayEnemies(){
     for(int i=0; i<(int)context->enemies.size(); i++){
-        
-        int direction = context->enemies[i]->GetDirection();
-        int enX = context->enemies[i]->GetPos_x() - substX - w/2;
-        int enY = context->enemies[i]->GetPos_y() - substY - h/2;
 
-        // Affichage de l'ombre
-        shadowSprite.setPosition(enX, enY);
-        shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
-        context->renderWin->draw(shadowSprite);
+        if(context->enemies[i]->GetLivingStatus()){
+            int direction = context->enemies[i]->GetDirection();
+            int enX = context->enemies[i]->GetPos_x() - substX - w/2;
+            int enY = context->enemies[i]->GetPos_y() - substY - h/2;
 
-        // Affichage des ennemies
-        enemySprite.setPosition(enX, enY);
-        if(context->enemies[i]->GetIsMoving())
-            enemySprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
-        else
-            enemySprite.setTextureRect(sf::IntRect(0, direction*32, 32, 32));
+            // Affichage de l'ombre
+            shadowSprite.setPosition(enX, enY);
+            shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
+            context->renderWin->draw(shadowSprite);
 
-        context->renderWin->draw(enemySprite);
+            // Affichage des ennemies
+            enemySprite.setPosition(enX, enY);
+            if(context->enemies[i]->GetIsMoving())
+                enemySprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
+            else
+                enemySprite.setTextureRect(sf::IntRect(0, direction*32, 32, 32));
+
+            context->renderWin->draw(enemySprite);
+        }
     }
 }
 
@@ -470,8 +477,6 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
         return;
     }
 
-
-
     bool iscolliding = false;
     std::vector<CollisionBox> cb = 
         context->map->GetCollisionLayer()->GetCollisionBoxes();
@@ -483,8 +488,6 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
                vx*context->player->GetSpeed() - w/2;
     int posY = cbPlayer->GetY() + 
                vy*context->player->GetSpeed() - h/2;
-
-    
 
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
@@ -525,3 +528,4 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
         context->player->Move((vx*deltaTime)/30, (vy*deltaTime)/30);
     }
 }
+

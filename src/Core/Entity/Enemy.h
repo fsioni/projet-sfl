@@ -65,6 +65,11 @@ public :
     void DecrementNbUpdateChangeDir();
     void RandDirection();
 
+
+    void ResetNbUpdateLeftToAttack();
+    void DecrementNbUpdateLeftToAttack();
+    int GetNbUpdateLeftToAttack() const;
+
     void Test() const;
 
 private:
@@ -72,6 +77,9 @@ private:
     int nbUpdateMaxChangeDir;
     int nbUpdateChangeDir;
     
+    int nbUpdateLeftToAttack;
+
+
 };
 
 #endif

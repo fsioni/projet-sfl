@@ -170,10 +170,15 @@ void EnemyAttack::Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
         enemy->RandDirection();
         enemy->SetNbUpdateChangeDir();
     }
-
-    if(dist < 1*32){
-        player_->TakeDamage(enemy->GetDamage());
+    
+    if(enemy->GetNbUpdateLeftToAttack()==0){
+        if(dist < 1*32){
+            player_->TakeDamage(1);
+            enemy->ResetNbUpdateLeftToAttack();
+        }
     }
+    else 
+        enemy->DecrementNbUpdateLeftToAttack();  
 }
 
 void EnemyAttack::Exit(Enemy * enemy){

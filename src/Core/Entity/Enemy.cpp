@@ -11,7 +11,9 @@ Enemy::Enemy() : EntityWithHP(){
     stateMachine->SetCurrentState(EnemyPatrol::Instance());
 
     nbUpdateMaxChangeDir = 500;
-    nbUpdateChangeDir = rand()%(nbUpdateMaxChangeDir-200) + 200;;
+    nbUpdateChangeDir = rand()%(nbUpdateMaxChangeDir-200) + 200;
+
+    nbUpdateLeftToAttack = 100;
 }
 
 Enemy::Enemy(float x_, float y_, std::string name_, int hp_, int damage_,
@@ -22,6 +24,8 @@ Enemy::Enemy(float x_, float y_, std::string name_, int hp_, int damage_,
 
     nbUpdateMaxChangeDir = 500;
     nbUpdateChangeDir = rand()%(nbUpdateMaxChangeDir-200) + 200;
+
+    nbUpdateLeftToAttack = 100;
 }
 
 Enemy::~Enemy(){
@@ -45,6 +49,18 @@ Enemy::~Enemy(){
 void Enemy::UpdateStateMachine(std::unique_ptr<Player> & player_, 
                                CollisionLayer * collision, int dt){
     stateMachine->UpdateCurrentState(player_, collision, dt);
+}
+
+
+void Enemy::ResetNbUpdateLeftToAttack(){
+    nbUpdateLeftToAttack = 100;
+}
+void Enemy::DecrementNbUpdateLeftToAttack(){
+    nbUpdateLeftToAttack--;
+}
+
+int Enemy::GetNbUpdateLeftToAttack() const{
+    return nbUpdateLeftToAttack;
 }
 
 
