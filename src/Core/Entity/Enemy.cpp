@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <cassert>
+#include <time.h>
 
 
 Enemy::Enemy() : EntityWithHP(){
