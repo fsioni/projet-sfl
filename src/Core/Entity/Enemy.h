@@ -74,8 +74,6 @@ private:
 
     double timeNextChangeDirection;
     double timeNextAttack;
-
-
 };
 
 #endif
