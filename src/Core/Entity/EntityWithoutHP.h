@@ -5,6 +5,7 @@
 #include <string>
 #include <cstdlib>
 #include <iostream>
+#include <math.h>
 #include <memory>
 #include "../Map/CollisionBox.h"
 
@@ -245,6 +246,12 @@ protected :
     EntityDirection direction;
 
     bool isMoving;
+
+    std::shared_ptr<CollisionBox> cb;
+
+    /*! \brief Vitesse de l'entité */
+    int speed;
+
 
 };
 
