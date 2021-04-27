@@ -21,6 +21,9 @@ public:
     void UpdateEnemies();
 
     void Display();
+    void DisplayMap();
+    void DisplayPlayer();
+    void DisplayEnemies();
     void DisplayDebug();
 
     void Pause();

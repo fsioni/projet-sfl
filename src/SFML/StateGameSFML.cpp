@@ -130,7 +130,11 @@ void StateGameSFML::ProcessInput()
             {
                 isGoingRight = false;
                 isGoingLeft = false;
-            }     
+            } 
+            /*
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)){
+                context->enemies[0]->SetLivingStatus(false);
+            }  */  
 
         switch (event.type)
         {
@@ -270,19 +274,21 @@ void StateGameSFML::UpdateEnemies(){
     int count = context->enemies.size();
     
     for(int i=0; i<count; i++){
-        context->enemies[i]->SetIsMovingFalse();
+        // Si enemy est en vie on fait tous les Updates
+        if(context->enemies[i]->GetLivingStatus()){
+            context->enemies[i]->SetIsMovingFalse();
 
-        context->enemies[i]->UpdateStateMachine(context->player,
-            context->map->GetCollisionLayer(), deltaTime);
+            context->enemies[i]->UpdateStateMachine(context->player,
+                context->map->GetCollisionLayer(), deltaTime);
+            
+
+            float posX = context->enemies[i]->GetPos_x();
+            float posY = context->enemies[i]->GetPos_y();
         
-        context->enemies[i]->DecrementNbUpdateChangeDir();
-        float posX = context->enemies[i]->GetPos_x();
-        float posY = context->enemies[i]->GetPos_y();
-       
-        context->map->GetCollisionLayer()->GetCollisionBoxesEnemy()[i]->
-        SetPosition(posX-16, posY-16);
-        context->enemies[i]->GetCollisionBox()->SetPosition(posX-16, posY-16);
-        
+            context->map->GetCollisionLayer()->GetCollisionBoxesEnemy()[i]->
+            SetPosition(posX-16, posY-16);
+            context->enemies[i]->GetCollisionBox()->SetPosition(posX-16, posY-16);
+        }   
     }
 }
 
@@ -290,7 +296,23 @@ void StateGameSFML::Display()
 {
     context->renderWin->clear();
 
-    // Affichage de la map
+    DisplayMap();
+    DisplayPlayer();
+    DisplayEnemies();
+
+    if (context->isDebug) //Affichage DEBUG
+    {
+        DisplayDebug();            
+    }
+
+    ///////////// UI ///////////////
+    context->renderWin->draw(hpText);
+    context->renderWin->draw(heartSprite);
+
+    context->renderWin->display();
+}
+
+void StateGameSFML::DisplayMap(){
     for(int k=0; k<nbMapLayer; k++){
         MapLayer layer = context->map->GetMapLayers()[k];
         for(int i=0; i<mapWidth; i++){
@@ -307,8 +329,6 @@ void StateGameSFML::Display()
                     if(tileX > -w && tileX < winWidth+w && 
                         tileY > -h && tileY < winHeight+h ){
                         
-                       
-
                         tileSprite.setPosition(tileX, tileY);
 
                         tileSprite.setTextureRect(sf::IntRect(x, y, w, h));
@@ -321,17 +341,19 @@ void StateGameSFML::Display()
             }
         }
     }
+}
 
+void StateGameSFML::DisplayPlayer(){
     // -h/2 et -w/2 pour recentrer l'origine des entités
-    // Affichage de l'ombre
     int direction = context->player->GetDirection();
     int pX = playerX-substX - w/2;
     int pY = playerY-substY -h/2;
+
+    // Affichage de l'ombre
     shadowSprite.setPosition(pX, pY);
     shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
     context->renderWin->draw(shadowSprite);
     
-
     // Affichage du joueur
     playerSprite.setPosition(pX, pY);
     if(context->player->GetIsMoving())
@@ -339,40 +361,31 @@ void StateGameSFML::Display()
     else 
         playerSprite.setTextureRect(sf::IntRect(0, direction*32, 32, 32));
     context->renderWin->draw(playerSprite);
+}
 
-    // Affichage des ennemies
+void StateGameSFML::DisplayEnemies(){
     for(int i=0; i<(int)context->enemies.size(); i++){
-        
-        direction = context->enemies[i]->GetDirection();
-        int enX = context->enemies[i]->GetPos_x() - substX - w/2;
-        int enY = context->enemies[i]->GetPos_y() - substY - h/2;
-        enemySprite.setPosition(enX, enY);
-        
-        if(context->enemies[i]->GetIsMoving())
-            enemySprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
-        else
-            enemySprite.setTextureRect(sf::IntRect(0, direction*32, 32, 32));
 
-        context->renderWin->draw(enemySprite);
+        if(context->enemies[i]->GetLivingStatus()){
+            int direction = context->enemies[i]->GetDirection();
+            int enX = context->enemies[i]->GetPos_x() - substX - w/2;
+            int enY = context->enemies[i]->GetPos_y() - substY - h/2;
+
+            // Affichage de l'ombre
+            shadowSprite.setPosition(enX, enY);
+            shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
+            context->renderWin->draw(shadowSprite);
+
+            // Affichage des ennemies
+            enemySprite.setPosition(enX, enY);
+            if(context->enemies[i]->GetIsMoving())
+                enemySprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
+            else
+                enemySprite.setTextureRect(sf::IntRect(0, direction*32, 32, 32));
+
+            context->renderWin->draw(enemySprite);
+        }
     }
-
-    
-
-    if (context->isDebug) //Affichage DEBUG
-    {
-        DisplayDebug();            
-    }
-
-    ///////////// UI ///////////////
-    context->renderWin->draw(hpText);
-    context->renderWin->draw(heartSprite);
-
-
-
-
-
-    context->renderWin->display();
-
 }
 
 void StateGameSFML::DisplayDebug(){
@@ -475,8 +488,6 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
         return;
     }
 
-
-
     bool iscolliding = false;
     std::vector<CollisionBox> cb = 
         context->map->GetCollisionLayer()->GetCollisionBoxes();
@@ -488,8 +499,6 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
                vx*context->player->GetSpeed() - w/2;
     int posY = cbPlayer->GetY() + 
                vy*context->player->GetSpeed() - h/2;
-
-    
 
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
@@ -530,3 +539,4 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
         context->player->Move((vx*deltaTime)/30, (vy*deltaTime)/30);
     }
 }
+
