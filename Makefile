@@ -24,7 +24,7 @@ OBJ_FILES += obj/AssetManager.o obj/StateManager.o
 OBJ_FILES += obj/StateSplashScreenTxt.o obj/StateMenuTxt.o obj/StateGameTxt.o obj/winTxt.o
 
 ##SFML Mode
-OBJ_FILES += obj/StateSplashScreenSFML.o obj/StateMenuSFML.o obj/StateGameSFML.o  
+OBJ_FILES += obj/StateSplashScreenSFML.o obj/StateMenuSFML.o obj/StateGameSFML.o obj/StatePauseSFML.o  
 
 ## Finite State Machine 
 OBJ_FILES += obj/StateBehavior.o obj/EnemyStates.o obj/StateMachine.o
@@ -133,6 +133,8 @@ obj/StateMenuSFML.o : src/SFML/StateMenuSFML.cpp src/Core/Game.h src/Core/StateM
 obj/StateGameSFML.o : src/SFML/StateGameSFML.cpp src/SFML/StateGameSFML.h src/SFML/AssetManager.h src/Core/Game.h src/Core/StateManager/StateManager.cpp src/Core/StateManager/State.h
 	$(COMPILATIONOBJ)
 
+obj/StatePauseSFML.o : src/SFML/StatePauseSFML.cpp src/SFML/StatePauseSFML.h src/Core/Game.h src/Core/StateManager/State.h
+	$(COMPILATIONOBJ)
 
 
 ##Finite State Machine

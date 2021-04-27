@@ -21,6 +21,9 @@ public:
     void UpdateEnemies();
 
     void Display();
+    void DisplayMap();
+    void DisplayPlayer();
+    void DisplayEnemies();
     void DisplayDebug();
 
     void Pause();
@@ -72,6 +75,7 @@ private:
     sf::Texture heartText;
     sf::Sprite heartSprite;
 
+    bool isPaused;
 };
 
 #endif // __STATEGAMESFML_H__

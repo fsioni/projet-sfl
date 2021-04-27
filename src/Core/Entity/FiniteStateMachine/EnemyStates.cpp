@@ -118,11 +118,8 @@ void EnemyPatrol::Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
         colliding = MoveWithCollision(enemy, collision, 0, 1, player_, dt);
     if(enemy->GetDirection()==Up)
         colliding = MoveWithCollision(enemy, collision, 0, -1, player_, dt);
+    enemy->ChangeDirection(colliding);
 
-    if(enemy->GetNbUpdateChangeDir()==0 || colliding){
-        enemy->RandDirection();
-        enemy->SetNbUpdateChangeDir();
-    }
 
     // Si player dans rayon 4 bloc, il entre en état Attack
     if(distance(enemy, player_)<4 * 32){
@@ -167,13 +164,15 @@ void EnemyAttack::Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
     dist = distance(enemy, player_);
     if(dist > 5*32){
         enemy->GetStateMachine()->ChangeState(EnemyPatrol::Instance());
-        enemy->RandDirection();
-        enemy->SetNbUpdateChangeDir();
     }
 
-    if(dist < 1*32){
-        player_->TakeDamage(enemy->GetDamage());
+    if(enemy->IsTimeToAttack()){
+        if(dist < 1.3*32){
+            player_->TakeDamage(1);
+            enemy->SetTimeNextAttack();
+        }
     }
+
 }
 
 void EnemyAttack::Exit(Enemy * enemy){
@@ -212,8 +211,6 @@ void EnemyRunAway::Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
 
     if(dist > 5*32){
         enemy->GetStateMachine()->ChangeState(EnemyPatrol::Instance());
-        enemy->RandDirection();
-        enemy->SetNbUpdateChangeDir();
     }
 }
 

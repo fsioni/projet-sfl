@@ -1,4 +1,5 @@
 #include "StateGameSFML.h"
+#include "StatePauseSFML.h"
 #include <string>
 #include <assert.h>
 
@@ -7,7 +8,7 @@ StateGameSFML::StateGameSFML(/* args */)
 }
 
 StateGameSFML::StateGameSFML(std::shared_ptr<Context> &cContext)
-    : context(cContext)
+    : context(cContext), isPaused(false)
 {
 }
 
@@ -130,6 +131,10 @@ void StateGameSFML::ProcessInput()
                 isGoingRight = false;
                 isGoingLeft = false;
             }
+            /*
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)){
+                context->enemies[0]->SetLivingStatus(false);
+            }  */
 
         switch (event.type)
         {
@@ -144,12 +149,16 @@ void StateGameSFML::ProcessInput()
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::P)) {
                 context->isDebug = (!context->isDebug);
             }
-
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X)
-            || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape)) {
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X)) {
                 context->renderWin->close();
                 context->quit = true;
             }
+
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape))
+            {
+                context->stateMan->Add(std::make_unique<StatePauseSFML>(context));
+            }
+
             break;
 
         case sf::Event::Resized:
@@ -168,48 +177,45 @@ void StateGameSFML::ProcessInput()
 
 void StateGameSFML::Update()
 {
-    deltaTime = deltaClock.restart().asMilliseconds();
+    if (!isPaused)
+    {
+        deltaTime = deltaClock.restart().asMilliseconds();
 
-    if(fpsClock.getElapsedTime().asSeconds() > 0.5){
-        fps = 1000/deltaTime;
+        if(fpsClock.getElapsedTime().asSeconds() > 0.5){
+            fps = 1000/deltaTime;
+            fpsClock.restart();
+        }
+
+        // Position du joueur
+        playerX = context->player->GetPos_x();
+        playerY = context->player->GetPos_y();
+
+        // Gestion de camera qui suit le joueur
+        substX = playerX - winWidth/2;
+        substY = playerY - winHeight/2;
+
+        // Taille de la fenetre
+        winWidth = (int)context->renderWin->getSize().x;
+        winHeight =(int)context->renderWin->getSize().y;
+
+        // Gestion des bords de map
+        if(substX < 0) substX = 0;
+        if(substX > mapWidth*w - winWidth) substX = mapWidth*w - winWidth;
+        if(substY < 0) substY = 0;
+        if(substY > mapHeight*h - winHeight) substY = mapHeight*h - winHeight;
+
+        UpdatePlayer();
+        UpdateEnemies();
+
+        // Mise à jour texte UI
+        std::string hp = std::to_string(context->player->GetHP());
+        std::string maxHp = std::to_string(context->player->GetMaxHP());
+        hpText.setString("HP : " + hp + "/" + maxHp);
+    }else{
+        deltaTime = 0;
+        deltaClock.restart();
         fpsClock.restart();
     }
-
-    // Position du joueur
-    playerX = context->player->GetPos_x();
-    playerY = context->player->GetPos_y();
-
-    // Info sur la tilemap
-    /*w = context->map->GetTileset().GetTileWidth();
-    h = context->map->GetTileset().GetTileHeight();
-    nbMapLayer = context->map->GetMapLayers().size();
-
-    // Taille de la map
-    mapWidth = context->map->GetMapLayers()[0].GetWidth();
-    mapHeight = context->map->GetMapLayers()[0].GetHeight();*/
-
-    // Gestion de camera qui suit le joueur
-    substX = playerX - winWidth/2;
-    substY = playerY - winHeight/2;
-
-    // Taille de la fenetre
-    winWidth = (int)context->renderWin->getSize().x;
-    winHeight =(int)context->renderWin->getSize().y;
-
-    // Gestion des bords de map
-    if(substX < 0) substX = 0;
-    if(substX > mapWidth*w - winWidth) substX = mapWidth*w - winWidth;
-    if(substY < 0) substY = 0;
-    if(substY > mapHeight*h - winHeight) substY = mapHeight*h - winHeight;
-
-    UpdatePlayer();
-    UpdateEnemies();
-
-
-    // Mise à jour texte UI
-    std::string hp = std::to_string(context->player->GetHP());
-    std::string maxHp = std::to_string(context->player->GetMaxHP());
-    hpText.setString("HP :" + hp + "/" + maxHp);
 }
 
 void StateGameSFML::UpdatePlayer(){
@@ -265,19 +271,20 @@ void StateGameSFML::UpdateEnemies(){
     int count = context->enemies.size();
 
     for(int i=0; i<count; i++){
-        context->enemies[i]->SetIsMovingFalse();
+        // Si enemy est en vie on fait tous les Updates
+        if(context->enemies[i]->GetLivingStatus()){
+            context->enemies[i]->SetIsMovingFalse();
+            context->enemies[i]->UpdateStateMachine(context->player,
+                context->map->GetCollisionLayer(), deltaTime);
 
-        context->enemies[i]->UpdateStateMachine(context->player,
-            context->map->GetCollisionLayer(), deltaTime);
 
-        context->enemies[i]->DecrementNbUpdateChangeDir();
-        float posX = context->enemies[i]->GetPos_x();
-        float posY = context->enemies[i]->GetPos_y();
+            float posX = context->enemies[i]->GetPos_x();
+            float posY = context->enemies[i]->GetPos_y();
 
-        context->map->GetCollisionLayer()->GetCollisionBoxesEnemy()[i]->
-        SetPosition(posX-16, posY-16);
-        context->enemies[i]->GetCollisionBox()->SetPosition(posX-16, posY-16);
-
+            context->map->GetCollisionLayer()->GetCollisionBoxesEnemy()[i]->
+            SetPosition(posX-16, posY-16);
+            context->enemies[i]->GetCollisionBox()->SetPosition(posX-16, posY-16);
+        }
     }
 
     // Mise à jour texte UI
@@ -286,13 +293,27 @@ void StateGameSFML::UpdateEnemies(){
     hpText.setString("HP :" + hp + "/" + maxHp);
 }
 
-
-
 void StateGameSFML::Display()
 {
     context->renderWin->clear();
 
-    // Affichage de la map
+    DisplayMap();
+    DisplayPlayer();
+    DisplayEnemies();
+
+    if (context->isDebug) //Affichage DEBUG
+    {
+        DisplayDebug();
+    }
+
+    ///////////// UI ///////////////
+    context->renderWin->draw(hpText);
+    context->renderWin->draw(heartSprite);
+
+    context->renderWin->display();
+}
+
+void StateGameSFML::DisplayMap(){
     for(int k=0; k<nbMapLayer; k++){
         MapLayer layer = context->map->GetMapLayers()[k];
         for(int i=0; i<mapWidth; i++){
@@ -309,8 +330,6 @@ void StateGameSFML::Display()
                     if(tileX > -w && tileX < winWidth+w &&
                         tileY > -h && tileY < winHeight+h ){
 
-
-
                         tileSprite.setPosition(tileX, tileY);
 
                         tileSprite.setTextureRect(sf::IntRect(x, y, w, h));
@@ -323,16 +342,18 @@ void StateGameSFML::Display()
             }
         }
     }
+}
 
+void StateGameSFML::DisplayPlayer(){
     // -h/2 et -w/2 pour recentrer l'origine des entités
-    // Affichage de l'ombre
     int direction = context->player->GetDirection();
     int pX = playerX-substX - w/2;
     int pY = playerY-substY -h/2;
+
+    // Affichage de l'ombre
     shadowSprite.setPosition(pX, pY);
     shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
     context->renderWin->draw(shadowSprite);
-
 
     // Affichage du joueur
     playerSprite.setPosition(pX, pY);
@@ -341,40 +362,31 @@ void StateGameSFML::Display()
     else
         playerSprite.setTextureRect(sf::IntRect(0, direction*32, 32, 32));
     context->renderWin->draw(playerSprite);
+}
 
-    // Affichage des ennemies
+void StateGameSFML::DisplayEnemies(){
     for(int i=0; i<(int)context->enemies.size(); i++){
 
-        direction = context->enemies[i]->GetDirection();
-        int enX = context->enemies[i]->GetPos_x() - substX - w/2;
-        int enY = context->enemies[i]->GetPos_y() - substY - h/2;
-        enemySprite.setPosition(enX, enY);
+        if(context->enemies[i]->GetLivingStatus()){
+            int direction = context->enemies[i]->GetDirection();
+            int enX = context->enemies[i]->GetPos_x() - substX - w/2;
+            int enY = context->enemies[i]->GetPos_y() - substY - h/2;
 
-        if(context->enemies[i]->GetIsMoving())
-            enemySprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
-        else
-            enemySprite.setTextureRect(sf::IntRect(0, direction*32, 32, 32));
+            // Affichage de l'ombre
+            shadowSprite.setPosition(enX, enY);
+            shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
+            context->renderWin->draw(shadowSprite);
 
-        context->renderWin->draw(enemySprite);
+            // Affichage des ennemies
+            enemySprite.setPosition(enX, enY);
+            if(context->enemies[i]->GetIsMoving())
+                enemySprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
+            else
+                enemySprite.setTextureRect(sf::IntRect(0, direction*32, 32, 32));
+
+            context->renderWin->draw(enemySprite);
+        }
     }
-
-
-
-    if (context->isDebug) //Affichage DEBUG
-    {
-        DisplayDebug();
-    }
-
-    ///////////// UI ///////////////
-    context->renderWin->draw(hpText);
-    context->renderWin->draw(heartSprite);
-
-
-
-
-
-    context->renderWin->display();
-
 }
 
 void StateGameSFML::DisplayDebug(){
@@ -462,12 +474,15 @@ void StateGameSFML::DisplayDebug(){
 
 void StateGameSFML::Pause()
 {
-
+    isPaused = true;
 }
 
 void StateGameSFML::Start()
 {
-
+    isPaused = false;
+    deltaTime = 0;
+    deltaClock.restart();
+    fpsClock.restart();
 }
 
 
@@ -477,8 +492,6 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
     {
         return;
     }
-
-
 
     bool iscolliding = false;
     std::vector<CollisionBox> cb =
@@ -491,8 +504,6 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
                vx*context->player->GetSpeed() - w/2;
     int posY = cbPlayer->GetY() +
                vy*context->player->GetSpeed() - h/2;
-
-
 
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
@@ -533,3 +544,4 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
         context->player->Move((vx*deltaTime)/30, (vy*deltaTime)/30);
     }
 }
+
