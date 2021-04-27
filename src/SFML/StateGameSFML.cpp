@@ -1,4 +1,5 @@
 #include "StateGameSFML.h"
+#include "StatePauseSFML.h"
 #include <string>
 #include <assert.h>
 
@@ -7,7 +8,7 @@ StateGameSFML::StateGameSFML(/* args */)
 }
 
 StateGameSFML::StateGameSFML(std::shared_ptr<Context> &cContext)
-    : context(cContext)
+    : context(cContext), isPaused(false)
 {
 }
 
@@ -145,11 +146,16 @@ void StateGameSFML::ProcessInput()
                 context->isDebug = (!context->isDebug);
             }
 
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X) 
-            || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape)) {
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X)) {
                 context->renderWin->close();
                 context->quit = true;
             }
+
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape))
+            {
+                context->stateMan->Add(std::make_unique<StatePauseSFML>(context));
+            }
+            
             break;
 
         case sf::Event::Resized:
@@ -168,39 +174,46 @@ void StateGameSFML::ProcessInput()
 
 void StateGameSFML::Update()
 {
-    deltaTime = deltaClock.restart().asMilliseconds();
+    if (!isPaused)
+    {    
+        deltaTime = deltaClock.restart().asMilliseconds();
 
-    if(fpsClock.getElapsedTime().asSeconds() > 0.5){
-        fps = 1000/deltaTime;
+        if(fpsClock.getElapsedTime().asSeconds() > 0.5){
+            fps = 1000/deltaTime;
+            fpsClock.restart();
+        }
+
+        // Position du joueur
+        playerX = context->player->GetPos_x();
+        playerY = context->player->GetPos_y();
+
+        // Gestion de camera qui suit le joueur
+        substX = playerX - winWidth/2;
+        substY = playerY - winHeight/2;
+
+        // Taille de la fenetre
+        winWidth = (int)context->renderWin->getSize().x;
+        winHeight =(int)context->renderWin->getSize().y;
+
+        // Gestion des bords de map
+        if(substX < 0) substX = 0;
+        if(substX > mapWidth*w - winWidth) substX = mapWidth*w - winWidth;
+        if(substY < 0) substY = 0;
+        if(substY > mapHeight*h - winHeight) substY = mapHeight*h - winHeight;
+
+        UpdatePlayer();
+        UpdateEnemies();
+
+        
+        // Mise à jour texte UI
+        std::string hp = std::to_string(context->player->GetHP());
+        std::string maxHp = std::to_string(context->player->GetMaxHealth());
+        hpText.setString("HP :" + hp + "/" + maxHp);
+    }else{
+        deltaTime = 0;
+        deltaClock.restart();
         fpsClock.restart();
     }
-
-    // Position du joueur
-    playerX = context->player->GetPos_x();
-    playerY = context->player->GetPos_y();
-
-    // Gestion de camera qui suit le joueur
-    substX = playerX - winWidth/2;
-    substY = playerY - winHeight/2;
-
-    // Taille de la fenetre
-    winWidth = (int)context->renderWin->getSize().x;
-    winHeight =(int)context->renderWin->getSize().y;
-
-    // Gestion des bords de map
-    if(substX < 0) substX = 0;
-    if(substX > mapWidth*w - winWidth) substX = mapWidth*w - winWidth;
-    if(substY < 0) substY = 0;
-    if(substY > mapHeight*h - winHeight) substY = mapHeight*h - winHeight;
-
-    UpdatePlayer();
-    UpdateEnemies();
-
-    
-    // Mise à jour texte UI
-    std::string hp = std::to_string(context->player->GetHP());
-    std::string maxHp = std::to_string(context->player->GetMaxHealth());
-    hpText.setString("HP :" + hp + "/" + maxHp);
 }
 
 void StateGameSFML::UpdatePlayer(){
@@ -272,8 +285,6 @@ void StateGameSFML::UpdateEnemies(){
         
     }
 }
-
-
 
 void StateGameSFML::Display()
 {
@@ -449,12 +460,12 @@ void StateGameSFML::DisplayDebug(){
 
 void StateGameSFML::Pause()
 {
-    
+    isPaused = true;
 }
 
 void StateGameSFML::Start()
 {
-    
+    isPaused = false;
 }
 
 void StateGameSFML::MovePlayerWithCollision(float vx, float vy) 

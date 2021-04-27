@@ -72,6 +72,7 @@ private:
     sf::Texture heartText;
     sf::Sprite heartSprite;
 
+    bool isPaused;
 };
 
 #endif // __STATEGAMESFML_H__

@@ -31,7 +31,7 @@ void StateManager::ProcessStateChange()
     {
         sStates.pop();
 
-        if (sStates.empty())
+        if (!sStates.empty())
         {
             sStates.top()->Start();
         }
