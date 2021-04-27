@@ -26,7 +26,8 @@ public:
 
 private:
     std::shared_ptr<Context> context;
-   
+    sf::Font textFont;
+    sf::Text pauseText;
 };
 
 #endif // __STATEPAUSESFML_H__

@@ -212,7 +212,7 @@ void StateGameSFML::Update()
         // Mise à jour texte UI
         std::string hp = std::to_string(context->player->GetHP());
         std::string maxHp = std::to_string(context->player->GetMaxHealth());
-        hpText.setString("HP :" + hp + "/" + maxHp);
+        hpText.setString("HP : " + hp + "/" + maxHp);
     }else{
         deltaTime = 0;
         deltaClock.restart();
@@ -479,6 +479,9 @@ void StateGameSFML::Pause()
 void StateGameSFML::Start()
 {
     isPaused = false;
+    deltaTime = 0;
+    deltaClock.restart();
+    fpsClock.restart();
 }
 
 void StateGameSFML::MovePlayerWithCollision(float vx, float vy) 

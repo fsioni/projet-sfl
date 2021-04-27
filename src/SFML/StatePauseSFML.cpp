@@ -1,4 +1,6 @@
 #include "StatePauseSFML.h"
+#include <assert.h>
+
 StatePauseSFML::StatePauseSFML(/* args */) 
 {
     
@@ -17,7 +19,17 @@ StatePauseSFML::~StatePauseSFML()
 
 void StatePauseSFML::Init() 
 {
-    
+    assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
+
+    int winx = context->renderWin->getSize().x;
+    int winy = context->renderWin->getSize().y;
+
+    pauseText.setFont(textFont);
+    pauseText.setString("PAUSE");
+    pauseText.setCharacterSize(50);
+    pauseText.setOrigin(pauseText.getLocalBounds().left+pauseText.getLocalBounds().width/2.0f,
+                        pauseText.getLocalBounds().top+pauseText.getLocalBounds().height/2.0f);
+    pauseText.setPosition(winx/2.0f, winy/2.0f);
 }
 
 void StatePauseSFML::ProcessInput() 
@@ -53,6 +65,7 @@ void StatePauseSFML::Update()
 
 void StatePauseSFML::Display() 
 {
+    context->renderWin->draw(pauseText);
     context->renderWin->display();
 }
 
