@@ -3,41 +3,41 @@
 #include <memory>
 #include <iostream>
 
-StateMenuTxt::StateMenuTxt(/* args */) 
+StateMenuTxt::StateMenuTxt(/* args */)
 {
-    
+
 }
 
-StateMenuTxt::StateMenuTxt(std::shared_ptr<Context> &cContext) 
+StateMenuTxt::StateMenuTxt(std::shared_ptr<Context> &cContext)
     : context(cContext)
 {
-    
+
 }
 
-StateMenuTxt::~StateMenuTxt() 
+StateMenuTxt::~StateMenuTxt()
 {
-    
+
 }
 
-void StateMenuTxt::Init() 
+void StateMenuTxt::Init()
 {
     DisplayMenu();
 }
 
-void StateMenuTxt::ProcessInput() 
+void StateMenuTxt::ProcessInput()
 {
 
 }
 
-void StateMenuTxt::Update() 
-{    
+void StateMenuTxt::Update()
+{
     switch (menu)
     {
     case 1 :
         system("clear");
-        context->stateMan->Add(make_unique<StateGameTxt>(context), true);
+        context->stateMan->Add(std::make_unique<StateGameTxt>(context), true);
         break;
-    
+
     case 0 :
         system("clear");
         context->quit = true;
@@ -49,22 +49,22 @@ void StateMenuTxt::Update()
     }
 }
 
-void StateMenuTxt::Display() 
+void StateMenuTxt::Display()
 {
-    
+
 }
 
-void StateMenuTxt::Pause() 
+void StateMenuTxt::Pause()
 {
-    
+
 }
 
-void StateMenuTxt::Start() 
+void StateMenuTxt::Start()
 {
-    
+
 }
 
-void StateMenuTxt::DisplayMenu() 
+void StateMenuTxt::DisplayMenu()
 {
     system("clear");
     std::cout << std::endl << "------------- MENU -------------" << std::endl<<
