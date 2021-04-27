@@ -1,5 +1,11 @@
 #include "EntityWithoutHP.h"
 
+#include <cassert>
+#include <iostream>
+#include <string>
+#include <assert.h>
+#include <math.h>
+#include <memory>
 
 
 EntityWithoutHP::EntityWithoutHP(){
@@ -63,7 +69,6 @@ std::string EntityWithoutHP::GetName() const{
     return name;
 }
 
-<<<<<<< HEAD
 std::shared_ptr<CollisionBox> EntityWithoutHP::GetCollisionBox(){
     return cb;
 }
@@ -176,9 +181,10 @@ int EntityWithoutHP::GetSpeed() const{
 }
 
 void EntityWithoutHP::SetSpeed(int newSpeed){
-    (assert newSpeed >= 0)
+     if(newSpeed>=0)
 
         speed = newSpeed;
+
 }
 
 bool EntityWithoutHP::GetIsMoving() const{
