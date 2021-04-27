@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <memory>
 #include <iostream>
-using namespace std;
+
 
 StateSplashScreenTxt::StateSplashScreenTxt(/* args */) 
 {
@@ -23,9 +23,10 @@ StateSplashScreenTxt::~StateSplashScreenTxt()
 
 void StateSplashScreenTxt::Init() 
 {
-    cout << endl << "Welcome in Legend of Nautibus" << endl
-    << endl << "A game created by : " << endl << "SIONI Farès" <<
-    endl << "BAGNOL Stanislas " << endl << "CHOUGAR Lyes" << endl << flush;
+    std::cout << std::endl << "Welcome in Legend of Nautibus" << std::endl
+    << std::endl << "A game created by : " << std::endl << "SIONI Farès" <<
+    std::endl << "BAGNOL Stanislas " << std::endl << "CHOUGAR Lyes" << 
+    std::endl << std::flush;
 
     start = std::clock();
 }
@@ -41,7 +42,7 @@ void StateSplashScreenTxt::Update()
 
     if (duration > 3)
     {
-        context->stateMan->Add(make_unique<StateMenuTxt>(context), true);
+        context->stateMan->Add(std::make_unique<StateMenuTxt>(context), true);
     }
 }
 

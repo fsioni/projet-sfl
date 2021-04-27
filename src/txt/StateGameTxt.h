@@ -28,7 +28,7 @@ public:
     void MoveWithCollision(float vx, float vy);
 private:
     std::shared_ptr<Context> context;
-    unique_ptr<WinTXT> win;
+    std::unique_ptr<WinTXT> win;
 };
 
 #endif // __STATEGAMETXT_H__

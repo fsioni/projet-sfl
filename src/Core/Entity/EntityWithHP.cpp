@@ -11,33 +11,28 @@ EntityWithHP::EntityWithHP() : EntityWithHP::EntityWithoutHP(){
     this->speed = 1.0;
 }
 
-EntityWithHP::EntityWithHP(float x, float y, std::string name, int hp, int damage, float speed, int maxHP)
-: EntityWithoutHP::EntityWithoutHP(x, y, name){
-    this->hp = hp;
-    this->damage = damage;
-    this->maxHP = maxHP;
-    this->livingStatus = true;
-    this->speed = speed;
+
+EntityWithHP::EntityWithHP(float x_, float y_, std::string name_, int hp_, int damage_, int speed_, int maxHP_)
+: EntityWithoutHP::EntityWithoutHP(x_, y_, speed_, name_){
+    hp = hp_;
+    damage = damage_;
+    maxHealth = maxHP_;
+    livingStatus = true;
 }
 
 EntityWithHP::~EntityWithHP(){
-<<<<<<< HEAD
 
-    this->x = 0.0;
-    this->y= 0.0;
-    this->name = "deleted";
     this->hp = 0;
     this->damage = 0;
-    this->speed = 0.0;
     this->maxHP = 0;
 }
 
 
 void EntityWithHP::SetHP(int newHp){
-<<<<<<< HEAD
-    assert (newHp >= 0  && newHp <= maxHP);
-
-    hp = newHp;
+if(newHp >= 0){
+        if(newHp > maxHealth) hp = maxHealth;
+        else hp = newHp;
+    }
 }
 
 int EntityWithHP::GetHP() const{
@@ -47,7 +42,7 @@ int EntityWithHP::GetHP() const{
 
 void EntityWithHP::PrintEntityInfo() {
 
-    std::cout<< "x = " << x << ", y = " << y <<std::endl;
+    std::cout<< "x = " << x << ", y = " << y << std::endl;
     std::cout<<"nom : " << name <<std::endl;
     std::cout<<"points de vie : " << hp <<std::endl;
     std::cout<<"Dégâts : "<< damage <<std::endl;
@@ -56,6 +51,8 @@ void EntityWithHP::PrintEntityInfo() {
 
     if(livingStatus) std::cout<<"Le personnage est en vie "<<std::endl;
     else std::cout<<"Le personnage est mort"<<std::endl;
+
+    std::cout << std::endl;
 }
 
 int EntityWithHP::GetDamage() const{

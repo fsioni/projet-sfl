@@ -12,11 +12,14 @@ EntityWithoutHP::EntityWithoutHP(){
     name = "Unknown";
     cb = std::make_shared<CollisionBox>(x, y, width, height);
     direction = Right;
+
+    isMoving = false;
 }
 
 
-EntityWithoutHP::EntityWithoutHP(float x, float y, std::string name){
-    assert (x >= 0.0 && y >= 0.0);
+EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, std::string name_){
+    if(x_ < 0) x = 0;
+    else x = x_;
 
     if(y_ < 0) y = 0;
     else y = y_;
@@ -29,11 +32,11 @@ EntityWithoutHP::EntityWithoutHP(float x, float y, std::string name){
     cb = std::make_shared<CollisionBox>(x, y, width, height);
 
     direction = Right;
+    isMoving = false;
 }
 
 
 EntityWithoutHP::~EntityWithoutHP(){
-
     x = 0;
     y= 0;
     width = 0;
@@ -47,6 +50,7 @@ EntityWithoutHP::~EntityWithoutHP(){
 void EntityWithoutHP::PrintEntityInfo(){
 
     std::cout<< "x = " << x << ", y = " << y << ", nom : " << name <<std::endl;
+
 }
 
 void EntityWithoutHP::SetName(std::string newName){
@@ -59,28 +63,26 @@ std::string EntityWithoutHP::GetName() const{
     return name;
 }
 
+<<<<<<< HEAD
 std::shared_ptr<CollisionBox> EntityWithoutHP::GetCollisionBox(){
     return cb;
 }
 
-void EntityWithoutHP::SetPos_x(int newx){
+
+void EntityWithoutHP::SetPos_x(float newx){
     if(newx >= 0)
         x = newx;
 }
 
-int EntityWithoutHP::GetPos_x() const{
+float EntityWithoutHP::GetPos_x() const{
     return x;
 }
 
-int EntityWithoutHP::GetPos_y() const{
-    return y;
-}
-
 void EntityWithoutHP::SetPos_y(float newy){
-    assert (newy >= 0.0);
-
-    y = newy;
+    if(newy >= 0)
+        y = newy;
 }
+
 
 float EntityWithoutHP::GetWidth() const
 {
@@ -88,10 +90,18 @@ float EntityWithoutHP::GetWidth() const
 
 }
 
+
 void EntityWithoutHP::SetWidth(int newW){
-    assert (newW >= 0.0);
+    if(newW >= 0)
 
     width = newW;
+}
+
+
+
+float EntityWithoutHP::GetPos_y() const{
+    return y;
+
 }
 
 float EntityWithoutHP::GetHeight() const{
@@ -157,6 +167,7 @@ void EntityWithoutHP::Move(float vx, float vy){
     if (y < 0){
         y = 0;
     }
+    isMoving = true;
 }
 
 int EntityWithoutHP::GetSpeed() const{
@@ -170,13 +181,21 @@ void EntityWithoutHP::SetSpeed(int newSpeed){
         speed = newSpeed;
 }
 
+bool EntityWithoutHP::GetIsMoving() const{
+    return isMoving;
+}
+
+void EntityWithoutHP::SetIsMovingFalse(){
+    isMoving = false;
+}
+
 
 void EntityWithoutHP::Test() const{
     std::cout << "===== Class EntityWithoutHP =====" << std::endl;
     EntityWithoutHP entity1;
     std::cout << "Constructeur EntityWithoutHP() : ";
-    assert(entity1.x == 0);
-    assert(entity1.y == 0);
+    assert(entity1.x == 0.);
+    assert(entity1.y == 0.);
     assert(entity1.width == 32);
     assert(entity1.height == 32);
     assert(entity1.offset == 7);
@@ -187,37 +206,39 @@ void EntityWithoutHP::Test() const{
     assert(entity1.cb->GetY() == 0);
     assert(entity1.cb->GetWidth() == 32);
     assert(entity1.cb->GetHeight()==32);
+    assert(!entity1.isMoving);
     std::cout << "ok" << std::endl;
 
     std::cout << "Constructeur EntityWithoutHP(float x_, float y_," <<
                 "float speed_, string name_) : ";
-    EntityWithoutHP entity2(12, 13, 3, "Entity2");
-    assert(entity2.x == 12);
-    assert(entity2.y == 13);
+    EntityWithoutHP entity2(12.3, 13.4, 3, "Entity2");
+    assert(entity2.x == float(12.3));
+    assert(entity2.y == float(13.4));
     assert(entity2.width == 32);
     assert(entity2.height == 32);
     assert(entity2.offset == 7);
     assert(entity2.speed == 3);
     assert(entity2.name == "Entity2");
     assert(entity2.direction == Right);
-    assert(entity2.cb->GetX() == 12);
-    assert(entity2.cb->GetY() == 13);
+    assert(entity2.cb->GetX() == int(12.3));
+    assert(entity2.cb->GetY() == int(13.4));
     assert(entity2.cb->GetWidth() == 32);
     assert(entity2.cb->GetHeight()== 32);
+    assert(!entity2.isMoving);
     std::cout << "ok" << std::endl;
 
     std::cout << "SetPos_x(float newX) et GetPos_x() : ";
-    entity1.SetPos_x(10);
-    assert(entity1.GetPos_x()== 10);
+    entity1.SetPos_x(10.3);
+    assert(entity1.GetPos_x()== float(10.3));
     entity1.SetPos_x(-2);
-    assert(entity1.GetPos_x()== 10);
+    assert(entity1.GetPos_x()== float(10.3));
     std::cout << "ok" << std::endl;
 
     std::cout << "SetPos_y(float newY) et GetPos_y() : ";
-    entity1.SetPos_y(20);
-    assert(entity1.GetPos_y()== 20);
+    entity1.SetPos_y(20.4);
+    assert(entity1.GetPos_y()== float(20.4));
     entity1.SetPos_y(-4);
-    assert(entity1.GetPos_y()== 20);
+    assert(entity1.GetPos_y()== float(20.4));
     std::cout << "ok" << std::endl;
 
     std::cout << "SetName(float newName) et GetName() : ";
@@ -252,14 +273,22 @@ void EntityWithoutHP::Test() const{
     std::cout << "ok" << std::endl;
 
     std::cout << "Move(float vx, float vy) : ";
-    int x_ = entity1.x;
-    int y_ = entity1.y;
+    float x_ = entity1.x;
+    float y_ = entity1.y;
     entity1.Move(0.8, 0);
 
-    assert(entity1.x == int(x_ + entity1.speed*0.8));
-    assert(entity1.y == int(y_ + entity1.speed*0.));
+    assert(entity1.x == float(x_ + entity1.speed*0.8));
+    assert(entity1.y == float(y_ + entity1.speed*0.));
+    std::cout << "ok" << std::endl;
+
+
+    std::cout << "SetIsMovingFalse() et GetIsMoving() : ";
+    entity1.isMoving = true;
+    entity1.SetIsMovingFalse();
+    assert(!entity1.GetIsMoving());
+    entity1.SetIsMovingFalse();
+    assert(!entity1.GetIsMoving());
     std::cout << "ok" << std::endl;
 
     std::cout << std::endl << std::endl;
 }
->>>>>>> master

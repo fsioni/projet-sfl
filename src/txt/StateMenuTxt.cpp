@@ -67,11 +67,11 @@ void StateMenuTxt::Start()
 void StateMenuTxt::DisplayMenu() 
 {
     system("clear");
-    cout << endl << "------------- MENU -------------" << endl<<
-    "1. Lancer le jeu " << endl <<
-    "0. Quitter" << endl <<
+    std::cout << std::endl << "------------- MENU -------------" << std::endl<<
+    "1. Lancer le jeu " << std::endl <<
+    "0. Quitter" << std::endl <<
     "Choix : ";
     menu = -99999;
-    cin >> menu;
-    cout << endl;
+    std::cin >> menu;
+    std::cout << std::endl;
 }

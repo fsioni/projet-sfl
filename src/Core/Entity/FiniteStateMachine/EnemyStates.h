@@ -41,4 +41,22 @@ private:
     static EnemyAttack* singleton;
 };
 
+
+// ======== ENEMY RUNAWAY STATE ===========
+
+class EnemyRunAway : public StateBehavior<Enemy>{
+public:
+    EnemyRunAway(const EnemyRunAway & other)=delete;
+    void operator=(const EnemyRunAway & other)=delete;
+    static EnemyRunAway* Instance();
+    virtual void Enter(Enemy * enemy);
+    virtual void Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
+                         CollisionLayer * collision, int dt);
+    virtual void Exit(Enemy * enemy);
+    
+private:
+    EnemyRunAway(){};
+    static EnemyRunAway* singleton;
+};
+
 #endif

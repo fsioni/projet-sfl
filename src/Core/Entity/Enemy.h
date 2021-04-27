@@ -5,6 +5,8 @@
 #include "FiniteStateMachine/StateMachine.h"
 #include "FiniteStateMachine/EnemyStates.h"
 #include "Player.h"
+#include <string>
+
 
 
 /*! \class Enemy
@@ -41,7 +43,8 @@ public :
     *   Créer un Enemy (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
-    Enemy(float x, float y, std::string name, int hp, int damage,float speed, int maxHP);
+    Enemy(float x_, float y_, std::string name_, int hp_, int damage_,
+          int speed_, int maxHP_);
 
 
     /*! \brief Destructeur.

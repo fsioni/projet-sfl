@@ -11,11 +11,10 @@ Enemy::Enemy() : EntityWithHP(){
 }
 
 
-Enemy::Enemy(float x, float y, std::string name, int hp, int damage,float speed, int maxHP)
-: EntityWithHP::EntityWithHP(x, y, name, hp, damage, speed, maxHP){
+Enemy::Enemy(float x_, float y_, std::string name_, int hp_, int damage_,
+             int speed_, int maxHealth_)
+: EntityWithHP::EntityWithHP(x_, y_, name_, hp_, damage_, speed_, maxHP_){
     stateMachine = new StateMachine<Enemy>(this);
-
-
     stateMachine->SetCurrentState(EnemyPatrol::Instance());
 
     nbUpdateMaxChangeDir = 500;

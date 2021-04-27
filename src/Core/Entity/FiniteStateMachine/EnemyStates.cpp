@@ -27,7 +27,7 @@ bool MoveWithCollision(Enemy * e, CollisionLayer * cl, float vx, float vy, std::
                    vx*e->GetSpeed();
         int posY = cbEnemy->GetY() + 
                    vy*e->GetSpeed();
-    int offset = e->GetOffset();
+
 
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
@@ -124,8 +124,14 @@ void EnemyPatrol::Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
         enemy->SetNbUpdateChangeDir();
     }
     
+    // Si player dans rayon 4 bloc, il entre en état Attack
     if(distance(enemy, player_)<4 * 32){
         enemy->GetStateMachine()->ChangeState(EnemyAttack::Instance());
+    }
+
+    // Si vie de l'enemy est inférieur à 10%, il entre en état RunAway
+    if(enemy->GetHP() < enemy->GetMaxHealth()*0.1){
+        enemy->GetStateMachine()->ChangeState(EnemyRunAway::Instance());
     }
     
 }
@@ -161,6 +167,8 @@ void EnemyAttack::Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
     dist = distance(enemy, player_);
     if(dist > 5*32){
         enemy->GetStateMachine()->ChangeState(EnemyPatrol::Instance());
+        enemy->RandDirection();
+        enemy->SetNbUpdateChangeDir();
     }
 
     if(dist < 1*32){
@@ -170,4 +178,49 @@ void EnemyAttack::Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
 
 void EnemyAttack::Exit(Enemy * enemy){
     std::cout << "Enemy leaving Attack State." << std::endl;
+}
+
+
+
+// ======== ENEMY RUNAWAY STATE ===========
+EnemyRunAway* EnemyRunAway::singleton = nullptr;
+
+EnemyRunAway* EnemyRunAway::Instance(){
+    if(singleton==nullptr){
+        singleton = new EnemyRunAway;
+    }
+    return singleton;
+}
+
+void EnemyRunAway::Enter(Enemy * enemy){
+    std::cout << "Enemy enter in RunAway State." << std::endl;
+
+    // On double la vitesse de l'enemy
+    int speed = enemy->GetSpeed();
+    enemy->SetSpeed(speed *2);
+}
+
+void EnemyRunAway::Execute(Enemy * enemy, std::unique_ptr<Player> & player_, 
+                          CollisionLayer * collision, int dt){
+    float x = player_->GetPos_x() - enemy->GetPos_x();
+    float y = player_->GetPos_y() - enemy->GetPos_y();
+    float dist = sqrt(x*x + y*y);
+    x = -x/abs(dist);
+    y = -y/abs(dist);
+    enemy->SetDirection(x, y);
+    MoveWithCollision(enemy, collision, x, y, player_, dt);
+
+    if(dist > 5*32){
+        enemy->GetStateMachine()->ChangeState(EnemyPatrol::Instance());
+        enemy->RandDirection();
+        enemy->SetNbUpdateChangeDir();
+    }
+}
+
+void EnemyRunAway::Exit(Enemy * enemy){
+    std::cout << "Enemy leaving RunAway State." << std::endl;
+
+    // On remet la vitesse de base de l'enemy
+    int speed = enemy->GetSpeed();
+    enemy->SetSpeed(speed /2);
 }

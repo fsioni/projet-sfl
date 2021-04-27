@@ -2,6 +2,8 @@
 #define PLAYER_H
 
 #include "EntityWithHP.h"
+#include <string>
+
 
 /*! \class Player
 *   \brief Classe représentant un joueur qui peut infliger/subir des dégats et se déplacer.
@@ -38,8 +40,9 @@ public :
     *   Créer un Player (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
-    Player(float x, float y, std::string name,int hp, int damage,
-    float speed,int maxHP);
+    Player(float x, float y, std::string name, int hp, int damage,
+    float speed, int maxHP);
+
 
     /*! \brief Destructeur.
     *
@@ -49,6 +52,8 @@ public :
     ~Player();
 
     void Test() const;
+
+private:
 
 };
 #endif

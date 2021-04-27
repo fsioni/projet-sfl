@@ -45,7 +45,7 @@ public:
     *
     *   Créer une EntityWithoutHP (x_, y_, speed_, name_).
     */
-    EntityWithoutHP(float x, float y, std::string name);
+    EntityWithoutHP(float x_, float y_, int speed_, std::string name_);
 
 
     /*! \brief Destructeur.
@@ -63,7 +63,8 @@ public:
     *
     *
     */
-    int GetPos_x() const;
+    float GetPos_x() const;
+
 
 
     /*! \brief Permets de modifier la position sur l'axe des x de l'entité (horizontale).
@@ -72,8 +73,7 @@ public:
     *   \param [in] newX: réel positif, nouvelle position sur l'axe des x de l'entité.
     *
     */
-
-    void SetPos_x(int newX);
+    void SetPos_x(float newX);
 
 
     /*! \brief Retourne la position sur l'axe des y de l'entité (verticale).
@@ -82,8 +82,7 @@ public:
     *
     *
     */
-
-    int GetPos_y() const;
+    float GetPos_y() const;
 
 
     /*! \brief Permets de modifier la position sur l'axe des y de l'entité (verticale).
@@ -92,8 +91,7 @@ public:
     *   \param [in] newY: réel positif, nouvelle position sur l'axe des y de l'entité.
     *
     */
-
-    void SetPos_y(int newY);
+    void SetPos_y(float newY);
 
 
     /*! \brief Retourne le nom de l'entité.
@@ -204,6 +202,7 @@ public:
 
     void Move(float vx, float vy);
 
+
     /*! \brief Permet de générer un numéro de ligne aléatoirement.
     *
     *   \param [in] minimum : entier positif, nombre minimum possible lors du tirage.
@@ -214,6 +213,12 @@ public:
     *
     */
     int RandNumberGenerator(int minimum, int maximum);
+
+
+    bool GetIsMoving() const;
+
+    void SetIsMovingFalse();
+
 
 protected :
     /*// ==== Données membres protégées === //*/
@@ -238,6 +243,9 @@ protected :
 
     /*! \brief Direction de l'entité */
     EntityDirection direction;
+
+    bool isMoving;
+
 };
 
 #endif

@@ -4,8 +4,6 @@
 #include "EntityWithoutHP.h"
 
 
-
-
 /*! \class EntityWithHP
 *   \brief Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.
 *
@@ -41,7 +39,7 @@ public:
     *   Créer une EntityWithHP (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
-    EntityWithHP(float x, float y, std::string name, int hp, int damage, float speed, int maxHP);
+    EntityWithHP(float x, float y, std::string name, int hp, int damage, int speed, int maxHP);
 
 
     /*! \brief Destructeur.
