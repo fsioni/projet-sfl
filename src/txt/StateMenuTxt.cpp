@@ -35,7 +35,7 @@ void StateMenuTxt::Update()
     {
     case 1 :
         system("clear");
-        context->stateMan->Add(make_unique<StateGameTxt>(context), true);
+        context->stateMan->Add(std::make_unique<StateGameTxt>(context), true);
         break;
     
     case 0 :
