@@ -87,7 +87,7 @@ void StateGameTxt::Display()
     << std::endl << "Position : (" << context->player->GetPos_x() << ", "
     << context->player->GetPos_y() << ")" << std::endl
     << "HP : " << context->player->GetHP() << "/"
-    << context->player->GetMaxHealth() << std::endl;
+    << context->player->GetMaxHP() << std::endl;
 
     //Affichage des ennemies
         const std::vector<std::shared_ptr<Enemy>> enemies = context->enemies;
