@@ -76,6 +76,11 @@ private:
     sf::Sprite heartSprite;
 
     bool isPaused;
+    
+    // Gestion scintillement rouge lorsque le joueur prend des dégâts
+    sf::Clock hitClock;
+    int lastHP;
+    bool playerGotHitted;
 };
 
 #endif // __STATEGAMESFML_H__

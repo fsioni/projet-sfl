@@ -69,6 +69,8 @@ void StateGameSFML::Init()
     mapHeight = context->map->GetMapLayers()[0].GetHeight();
 
     fps = 0;
+
+    lastHP = context->player->GetHP();
     
 }
 
@@ -274,6 +276,20 @@ void StateGameSFML::UpdatePlayer(){
             
         spriteClock.restart();
     }
+
+    if (lastHP != context->player->GetHP())
+    {
+        playerSprite.setColor(sf::Color::Red);
+        hitClock.restart();
+    }
+    
+    if (hitClock.getElapsedTime().asSeconds() > 0.2)
+    {
+        playerSprite.setColor(sf::Color::White);
+    }
+    
+
+    lastHP = context->player->GetHP();
 }
 
 void StateGameSFML::UpdateEnemies(){
