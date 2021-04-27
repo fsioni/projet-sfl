@@ -268,7 +268,6 @@ void StateGameSFML::UpdateEnemies(){
             context->enemies[i]->UpdateStateMachine(context->player,
                 context->map->GetCollisionLayer(), deltaTime);
             
-            context->enemies[i]->DecrementNbUpdateChangeDir();
 
             float posX = context->enemies[i]->GetPos_x();
             float posY = context->enemies[i]->GetPos_y();

@@ -10,10 +10,8 @@ Enemy::Enemy() : EntityWithHP(){
     stateMachine = new StateMachine<Enemy>(this);
     stateMachine->SetCurrentState(EnemyPatrol::Instance());
 
-    nbUpdateMaxChangeDir = 500;
-    nbUpdateChangeDir = rand()%(nbUpdateMaxChangeDir-200) + 200;
-
-    nbUpdateLeftToAttack = 100;
+    SetTimeNextChangeDirection();
+    SetTimeNextAttack();
 }
 
 Enemy::Enemy(float x_, float y_, std::string name_, int hp_, int damage_,
@@ -22,10 +20,8 @@ Enemy::Enemy(float x_, float y_, std::string name_, int hp_, int damage_,
     stateMachine = new StateMachine<Enemy>(this); 
     stateMachine->SetCurrentState(EnemyPatrol::Instance());
 
-    nbUpdateMaxChangeDir = 500;
-    nbUpdateChangeDir = rand()%(nbUpdateMaxChangeDir-200) + 200;
-
-    nbUpdateLeftToAttack = 100;
+    SetTimeNextChangeDirection();
+    SetTimeNextAttack();
 }
 
 Enemy::~Enemy(){
@@ -51,38 +47,8 @@ void Enemy::UpdateStateMachine(std::unique_ptr<Player> & player_,
     stateMachine->UpdateCurrentState(player_, collision, dt);
 }
 
-
-void Enemy::ResetNbUpdateLeftToAttack(){
-    nbUpdateLeftToAttack = 100;
-}
-void Enemy::DecrementNbUpdateLeftToAttack(){
-    nbUpdateLeftToAttack--;
-}
-
-int Enemy::GetNbUpdateLeftToAttack() const{
-    return nbUpdateLeftToAttack;
-}
-
-
 StateMachine<Enemy>* Enemy::GetStateMachine() const{
     return stateMachine;
-}
-
-int Enemy::GetNbUpdateMaxChangeDir() const{
-    return nbUpdateMaxChangeDir;
-}
-
-int Enemy::GetNbUpdateChangeDir() const{
-    return nbUpdateChangeDir;
-}
-
-
-void Enemy::SetNbUpdateChangeDir(){
-    nbUpdateChangeDir = rand()%(nbUpdateMaxChangeDir-200) + 200;
-}
-
-void Enemy::DecrementNbUpdateChangeDir(){
-    nbUpdateChangeDir--;
 }
 
 void Enemy::RandDirection(){
@@ -98,6 +64,36 @@ void Enemy::RandDirection(){
     }
 }
 
+void Enemy::SetTimeNextChangeDirection(){
+    int min = 3;
+    int max = 7;
+    double timer = time(NULL);
+    timeNextChangeDirection = timer + rand()%(max-min) + min;
+}
+
+void Enemy::ChangeDirection(bool collision){
+    double timer = time(NULL);
+    if(collision){
+        RandDirection();
+        SetTimeNextChangeDirection();
+    }
+    else if(timer > timeNextChangeDirection){
+        RandDirection();
+        SetTimeNextChangeDirection();
+    } 
+ }
+
+void Enemy::SetTimeNextAttack(){
+    // 2 attaque par seconde 
+    double timeBetween2Attack = 0.5;
+    double timer = time(NULL);
+    timeNextAttack = timer + timeBetween2Attack;
+}
+
+bool Enemy::IsTimeToAttack(){
+    double timer = time(NULL);
+    return timer > timeNextAttack;
+}
 
 void Enemy::Test() const{
     // TODO trouver un moyen de test StateMachine mais c'est compliqué
@@ -107,30 +103,15 @@ void Enemy::Test() const{
     Enemy enemy1;
     std::cout << "Constructeur Enemy() : ";
     assert(enemy1.stateMachine != nullptr);
-    assert(enemy1.nbUpdateMaxChangeDir == 500);
-    assert(enemy1.nbUpdateChangeDir <= enemy1.nbUpdateMaxChangeDir);
-    assert(enemy1.nbUpdateChangeDir >= 200);
     std::cout << "ok" << std::endl;
+
 
     std::cout << "Constructeur Enemy(int x, int y, string name, "<< 
                  "int hp, int damage,int speed, int int maxHealth) : ";
     Enemy enemy2(10, 10, "enemy", 10, 10, 2, 400);
     assert(enemy2.stateMachine != nullptr);
-    assert(enemy2.nbUpdateMaxChangeDir == 500);
-    assert(enemy2.nbUpdateChangeDir <= enemy2.nbUpdateMaxChangeDir);
-    assert(enemy2.nbUpdateChangeDir >= 200);
     std::cout << "ok" << std::endl;
 
-
-    std::cout << "SetNbUpdateChangeDir(), DecrementNbUpdateChangeDir()"<<
-                 " et GetNbUpdateChangeDir() : ";
-    enemy1.SetNbUpdateChangeDir();
-    int nbUpdate = enemy1.GetNbUpdateChangeDir();
-    assert(nbUpdate <= enemy1.nbUpdateMaxChangeDir);
-    assert(nbUpdate >= 200);
-    enemy1.DecrementNbUpdateChangeDir();
-    assert(enemy1.GetNbUpdateChangeDir() == nbUpdate-1);
-    std::cout << "ok" << std::endl;
 
     std::cout << "RandDirection() : ";
     enemy1.RandDirection();

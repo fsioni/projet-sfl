@@ -59,25 +59,21 @@ public :
     void UpdateStateMachine(std::unique_ptr<Player> & player_, 
                             CollisionLayer * collision, int dt);
 
-    int GetNbUpdateMaxChangeDir() const;
-    int GetNbUpdateChangeDir() const;
-    void SetNbUpdateChangeDir();
-    void DecrementNbUpdateChangeDir();
+
     void RandDirection();
+    void ChangeDirection(bool collision);
+    void SetTimeNextChangeDirection();
 
-
-    void ResetNbUpdateLeftToAttack();
-    void DecrementNbUpdateLeftToAttack();
-    int GetNbUpdateLeftToAttack() const;
+    bool IsTimeToAttack();
+    void SetTimeNextAttack();
 
     void Test() const;
 
 private:
     StateMachine<Enemy> * stateMachine;
-    int nbUpdateMaxChangeDir;
-    int nbUpdateChangeDir;
-    
-    int nbUpdateLeftToAttack;
+
+    double timeNextChangeDirection;
+    double timeNextAttack;
 
 
 };
