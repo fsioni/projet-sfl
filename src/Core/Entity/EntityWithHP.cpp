@@ -16,7 +16,7 @@ EntityWithHP::EntityWithHP(float x_, float y_, std::string name_, int hp_, int d
 : EntityWithoutHP::EntityWithoutHP(x_, y_, speed_, name_){
     hp = hp_;
     damage = damage_;
-    maxHealth = maxHP_;
+    maxHP = maxHP_;
     livingStatus = true;
 }
 
@@ -30,7 +30,7 @@ EntityWithHP::~EntityWithHP(){
 
 void EntityWithHP::SetHP(int newHp){
 if(newHp >= 0){
-        if(newHp > maxHealth) hp = maxHealth;
+        if(newHp > maxHP) hp = maxHP;
         else hp = newHp;
     }
 }
@@ -102,7 +102,7 @@ void EntityWithHP::Test() const{
     std::cout << "Constructeur EntityWithHP() : ";
     assert(entity1.hp == 200);
     assert(entity1.damage == 20);
-    assert(entity1.maxHealth == 200);
+    assert(entity1.maxHP == 200);
     assert(entity1.livingStatus);
     std::cout << "ok" << std::endl;
 
@@ -112,7 +112,7 @@ void EntityWithHP::Test() const{
     EntityWithHP entity2(10, 10, "Entité", 120, 23, 10, 300);
     assert(entity2.hp == 120);
     assert(entity2.damage == 23);
-    assert(entity2.maxHealth == 300);
+    assert(entity2.maxHP == 300);
     assert(entity2.livingStatus);
     std::cout << "ok" << std::endl;
 
@@ -162,9 +162,9 @@ void EntityWithHP::Test() const{
     assert(!entity1.GetLivingStatus());
     std::cout << "ok" << std::endl;
 
-    std::cout << "GetMaxHealth() : ";
-    entity1.maxHealth=100;
-    assert(entity1.GetMaxHealth()==100);
+    std::cout << "GetHP() : ";
+    entity1.maxHP=100;
+    assert(entity1.GetMaxHP()==100);
     std::cout << "ok" << std::endl;
 
     std::cout << std::endl << std::endl;
