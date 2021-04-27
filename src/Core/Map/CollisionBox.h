@@ -28,6 +28,15 @@ public:
     * \param [in] objectTag : balise contenant les informations de la CollisionBox dans le .tmx.
     */
     CollisionBox(const std::string& objectTag);
+
+    /*! \brief Constructeur depuis balise d'une map .tmx
+    *
+    * \param [in] x : Position sur l'axe X.
+    * \param [in] y : Position sur l'axe Y.
+    * \param [in] width : Largeur de la boite.
+    * \param [in] height : Hauteur de la boite.
+    */
+    CollisionBox(float x, float y, float width, float height);
     
     /*! \brief Destructeur
     *

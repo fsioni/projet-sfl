@@ -34,7 +34,7 @@ public:
     * \param [in] nWidth : largeur de la Box
     * \param [in] nHeight : hauteur de la Box
     */
-    Box(int nId, int nX, int nY, int nWidth, int nHeight); // Inutile ?
+    Box(int nId, int nX, int nY, int nWidth, int nHeight);
 
     /*! \brief Destructeur
     *
@@ -47,6 +47,12 @@ public:
     * \param [in] nID : nouvel id de la Box
     */
     void SetId(int nId);
+
+    /*! \brief Retourne id
+    *
+    * \return id de la Box
+    */
+    int GetId() const;
 
     /*! \brief Modifie la position de la Box par celle en paramètre
     *
@@ -61,12 +67,6 @@ public:
     * \param [in] nHeight : nouvel hauteur verticale de la Box
     */
     void SetDimensions(int nWidth, int nHeight);
-
-    /*! \brief Retourne id
-    *
-    * \return id de la Box
-    */
-    int GetId() const;
     
     /*! \brief Retourne x
     *
@@ -79,6 +79,18 @@ public:
     * \return La position verticale de la Box
     */
     int GetY() const;
+
+    /*! \brief Modifie la position sur l'axe horizontal
+    *
+    * \param [in] nX : nouvel position horizontale de la Box
+    */
+    void SetX(int nX);
+
+    /*! \brief Modifie la position sur l'axe vertical
+    *
+    * \param [in] nY : nouvel position verticale de la Box
+    */
+    void SetY(int nY);
 
     /*! \brief Retourne width
     *

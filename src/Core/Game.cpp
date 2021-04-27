@@ -14,13 +14,16 @@ Game::Game(/* args */)
     //srand((unsigned int) time(NULL));
 
     // Initialisation des ennemies
-    int count = context->map->GetSpawnsLayer().getEnemySpawns().size();
+    int count = context->map->GetSpawnsLayer()->getEnemySpawns().size();
     
     for(int i = 0; i<count; i++){
-        int x = context->map->GetSpawnsLayer().getEnemySpawns()[i].GetX();
-        int y = context->map->GetSpawnsLayer().getEnemySpawns()[i].GetY();
+        int x = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetX();
+        int y = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
 
-        context->enemies.push_back(new Enemy(x, y, "Enemy", 100, 3, 5, 100));
+        std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 100, 3, 1, 100);
+        enemy->GetCollisionBox()->SetId(i);
+        context->enemies.push_back(enemy);
+        context->map->GetCollisionLayer()->AddCollisionBoxEnemy(enemy->GetCollisionBox());
     }
 
     context->isDebug = false;

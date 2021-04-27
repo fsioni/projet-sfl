@@ -48,5 +48,7 @@ public :
     */
     ~Player();
 
+    void Test() const;
+
 };
 #endif

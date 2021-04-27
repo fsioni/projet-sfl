@@ -135,8 +135,10 @@ void Tileset::Test() const{
     rawData += " <image source=\"../../textures/tilesets/mainTileset.png\"";
     rawData += " width=\"256\" height=\"4256\"/>\n";
     rawData += "  </tileset>";
+    std::cout << "===== Class Tileset =====" << std::endl;
+
+    std::cout << "Constructeur Tileset(string rawData) : ";
     Tileset ts(rawData);
-    
     assert(ts.GetName()=="mainTileSet");
     assert(ts.GetColumn()==8);
     assert(ts.GetTileCount()==1064);
@@ -145,4 +147,19 @@ void Tileset::Test() const{
     assert(ts.GetTileMapPath()=="./data/textures/tilesets/mainTileset.png");
     assert(ts.GetTileMapWidth()==256);
     assert(ts.GetTileMapHeight()==4256);
+    std::cout << "ok" << std::endl;
+
+    std::cout << "Constructeur Tileset(const Tileset & ts) : ";
+    Tileset ts2(ts);
+    assert(ts2.GetName()=="mainTileSet");
+    assert(ts2.GetColumn()==8);
+    assert(ts2.GetTileCount()==1064);
+    assert(ts2.GetTileWidth()==32);
+    assert(ts2.GetTileHeight()==32);
+    assert(ts2.GetTileMapPath()=="./data/textures/tilesets/mainTileset.png");
+    assert(ts2.GetTileMapWidth()==256);
+    assert(ts2.GetTileMapHeight()==4256);
+    std::cout << "ok" << std::endl;
+
+    std::cout << std::endl << std::endl;
 }

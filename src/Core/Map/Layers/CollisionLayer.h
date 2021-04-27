@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include <memory>
 
 #include "Layer.h"
 #include "../CollisionBox.h"
@@ -30,6 +31,7 @@ public:
     *   \param [in] objectgroupTagCollision : balise object des CollisionBox de la Map
     */
     CollisionLayer(const std::string & objectgroupTagCollision);
+    
 
     /*! \brief Destructeur
     *
@@ -37,12 +39,21 @@ public:
     */
     ~CollisionLayer();
 
-        /*! \brief Fonction permettant d'ajouter une boîte de collision à la couche
+    /*! \brief Fonction permettant d'ajouter une boîte de collision à la couche
     *
     *   Ajoute une CollisionBox au tableau dynamique de l'objet
     *   \param [in] newSpawn : nouvelle CollisionBox ajoutée
     */
     void AddCollisionBox(const CollisionBox& newColBox);
+
+    /*! \brief Fonction permettant d'ajouter une boîte de 
+    *           collision d'entité à la couche
+    *
+    *   Ajoute une CollisionBox au tableau dynamique des collisions
+    *   des entités à l'objet
+    *   \param [in] newSpawn : nouvelle CollisionBox ajoutée
+    */
+    void AddCollisionBoxEnemy(std::shared_ptr<CollisionBox> newColBox);
 
     /*! \brief Fonction d'affichage de l'objet en mode texte
     *
@@ -55,12 +66,20 @@ public:
     *   \return Retourne le tableau dynamique de CollisionBox
     */
     std::vector<CollisionBox> GetCollisionBoxes() const;
+
+    /*! \brief Fonction permettant de récupérer les CollisionBox 
+    *         des entités de l'objet 
+    *
+    *   \return Retourne le tableau dynamique de CollisionBox
+    */
+    std::vector<std::shared_ptr<CollisionBox> > GetCollisionBoxesEnemy();
     
 private:
     /*// === Données membres privées === //*/
 
     /*! \brief Tableau dyanmique des CollisionBox du Layer. */
     std::vector<CollisionBox> collisionBoxes;
+    std::vector<std::shared_ptr<CollisionBox> > collisionBoxesEnemy;
 };
 
 

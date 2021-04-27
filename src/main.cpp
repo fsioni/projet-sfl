@@ -9,7 +9,7 @@ int main(int argc, char* argv[]){
 
     if (argc == 1 || argc>2) //////CHECK DU NOMBRE D'ARGUMENTS
     {
-        cerr << "You need one argument : 0 for SFML, 1 for txt, 2 for test" << endl;
+        std::cerr << "You need one argument : 0 for SFML, 1 for txt, 2 for test" << std::endl;
 
     }else if (argv[1] == std::string("0")) ////////MODE SFML
     {
@@ -26,20 +26,42 @@ int main(int argc, char* argv[]){
         termClear();
     }
     else if(argv[1] == std::string("2")){
-        Box b;
-        b.Test();
-        Tileset ts;
-        ts.Test();
-        cout << "Tests réalisés avec succès !" << endl;
+        std::cout << "===== TEST DE REGRESSION =====" << std::endl << std::endl;
+        EntityWithoutHP entityWithoutHP;
+        entityWithoutHP.Test();
+
+        EntityWithHP entityWithHP;
+        entityWithHP.Test();
+
+        Enemy enemy;
+        enemy.Test();
+
+        Player player;
+        player.Test();
+
+        Tileset tileset;
+        tileset.Test();
+
+        Box box;
+        box.Test();
+
+        CollisionBox collisionBox;
+        collisionBox.Test();
+
+        SpawnPoint spawnPoint;
+        spawnPoint.Test();
+
+        Layer layer;
+        layer.Test();
     }
-    else if(argv[1] == std::string("debug")){    
+    else if(argv[1] == std::string("debug")){
         Game g;
         g.Test();
     }
 
     else /////////L'ARGUMENT NE CORRESPOND A AUCUN MODE
     {
-        cerr << "The argument need to be 0 for SFML or 1 for txt" << endl;
+        std::cerr << "The argument need to be 0 for SFML or 1 for txt" << std::endl;
     }
     return 0;
 }

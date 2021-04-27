@@ -43,22 +43,13 @@ public:
     */
     EntityWithHP(float x, float y, std::string name, int hp, int damage, float speed, int maxHP);
 
+
     /*! \brief Destructeur.
     *
     *  Destructeur de la classe EntityWithHP.
     *
     */
     virtual ~EntityWithHP();
-
-
-    /*! \brief Permet de deplacer l'entité.
-    *
-    *   Permet de deplacer l'entité avec une vitesse vx sur l'axe x et une vitesse vy
-    *   sur l'axe y.
-    *
-    */
-    void Move(float vx, float vy);
-
 
     /*! \brief Permets de modifier le nombre de points de vie d'une entité EntityWithHP.
     *
@@ -78,24 +69,6 @@ public:
     *
     */
     int GetHP() const;
-
-
-    /*! \brief Permets de modifier la vitesse de déplacement de l'entité EntitywithHP.
-    *
-    *
-    *   \param [in] newSpeed: réel positif, nouvelle vitesse de déplacement de l'entité.
-    *
-    */
-    void SetSpeed(float newSpeed);
-
-
-    /*! \brief Retourne la vitesse de déplacement de l'entité EntityWithHP.
-    *
-    *   Retourne la vitesse de déplacement Speed de l'entité  EntityWithHP.
-    *
-    *
-    */
-    float GetSpeed() const;
 
 
     /*! \brief Permet de modofier les dégats infligés par l'entité EntityWithHP.
@@ -137,10 +110,10 @@ public:
     *
     *
     *   \param [in] target : EntityWithHP qui va subir le nombre "damage" dégats.
-    *   \param [in] damage : entier positif, nombre de dégats à infligerà l'entité target.
+    *
     *
     */
-    void Attack(EntityWithHP &target, int damage) const;
+    void Attack(EntityWithHP &target) const;
 
 
     /*! \brief Modifie l'état de vie/mort de l'entité.
@@ -166,6 +139,13 @@ public:
     *
     */
     int GetMaxHP() const;
+
+    /*! \brief Fonction de test de regression.
+    *
+    *   Effectue une série de test pour vérifié que chaque
+    *   fonctions fait ce qu'elle doit faire.
+    */
+    void Test() const;
 
 protected :
     /*// ==== Données membres protégées === //*/

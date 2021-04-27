@@ -107,6 +107,7 @@ void StateSplashScreenSFML::Update()
 
 void StateSplashScreenSFML::Display() 
 {
+    context->renderWin->clear();
     context->renderWin->draw(gameText);
     context->renderWin->draw(madeByText);
 

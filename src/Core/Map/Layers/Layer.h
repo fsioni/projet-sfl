@@ -40,6 +40,14 @@ public:
     * \return Le nom du Layer.
     */
     std::string GetName() const;
+
+    /*! \brief Test de regression.
+    *
+    *  Effectue une série de test sur toutes les fonctions
+    *  de la classe et vérifie qu'elles font ce qu'elles sont 
+    *  censé faire.
+    */
+    void Test() const;
 protected:
     /*! \brief Identifiant de la couche représenté par un entier. */
     int id;

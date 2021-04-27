@@ -15,7 +15,6 @@
 */
 class Enemy : public EntityWithHP
 {
-    StateMachine<Enemy> * stateMachine;
 public :
     /*// ==== Fonctions membres publiques === //*/
 
@@ -52,9 +51,23 @@ public :
     */
     ~Enemy();
 
-    StateMachine<Enemy>* GetStateMachine() const{return stateMachine;};
+    StateMachine<Enemy>* GetStateMachine() const;
 
-    void UpdateStateMachine(std::unique_ptr<Player> & player_);
+    void UpdateStateMachine(std::unique_ptr<Player> & player_,
+                            CollisionLayer * collision, int dt);
+
+    int GetNbUpdateMaxChangeDir() const;
+    int GetNbUpdateChangeDir() const;
+    void SetNbUpdateChangeDir();
+    void DecrementNbUpdateChangeDir();
+    void RandDirection();
+
+    void Test() const;
+
+private:
+    StateMachine<Enemy> * stateMachine;
+    int nbUpdateMaxChangeDir;
+    int nbUpdateChangeDir;
 
 };
 

@@ -5,6 +5,8 @@
 #include <string>
 #include <cstdlib>
 #include <iostream>
+#include <memory>
+#include "../Map/CollisionBox.h"
 
 enum EntityDirection{
     Down,
@@ -36,14 +38,13 @@ public:
 
 
     /*! \brief Constructeur avec spécifités de l'entité en paramètre.
-    *   \param [in] x : réel positif, position de l'entité sur l'axe X (horizontale).
-    *   \param [in] y : réel positif, position de l'entité sur l'axe Y (verticale).
-    *   \param [in] name : chaine de caractères, nom de l'entité.
+    *   \param [in] x_ : réel positif, position de l'entité sur l'axe X (horizontale).
+    *   \param [in] y_ : réel positif, position de l'entité sur l'axe Y (verticale).
+    *   \param [in] speed_ : réel positif, vitesse de l'entité?.
+    *   \param [in] name_ : chaine de caractères, nom de l'entité.
     *
-    *   Créer une EntityWithoutHP (x, y, name)
-    *
+    *   Créer une EntityWithoutHP (x_, y_, speed_, name_).
     */
-
     EntityWithoutHP(float x, float y, std::string name);
 
 
@@ -62,8 +63,7 @@ public:
     *
     *
     */
-
-    float GetPos_x() const;
+    int GetPos_x() const;
 
 
     /*! \brief Permets de modifier la position sur l'axe des x de l'entité (horizontale).
@@ -73,7 +73,7 @@ public:
     *
     */
 
-    void SetPos_x(float newX);
+    void SetPos_x(int newX);
 
 
     /*! \brief Retourne la position sur l'axe des y de l'entité (verticale).
@@ -83,7 +83,7 @@ public:
     *
     */
 
-    float GetPos_y() const;
+    int GetPos_y() const;
 
 
     /*! \brief Permets de modifier la position sur l'axe des y de l'entité (verticale).
@@ -93,7 +93,8 @@ public:
     *
     */
 
-    void SetPos_y(float newY);
+    void SetPos_y(int newY);
+
 
     /*! \brief Retourne le nom de l'entité.
     *
@@ -102,6 +103,7 @@ public:
     *
     */
     std::string GetName() const;
+
 
     /*! \brief Permets de modifier le nom de l'entité.
     *
@@ -112,6 +114,9 @@ public:
     void SetName(std::string newName);
 
 
+    std::shared_ptr<CollisionBox> GetCollisionBox();
+
+
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.
     *
     *   Imprime sur la console des informations concernant l'entité.
@@ -119,6 +124,7 @@ public:
     *
     */
     virtual void PrintEntityInfo();
+
 
     /*! \brief Retourne la largeur de l'entité.
     *
@@ -128,6 +134,10 @@ public:
     */
     float GetWidth() const;
 
+
+    void Test() const;
+
+
     /*! \brief Permets de modifier la largeur de l'entité.
     *
     *
@@ -136,6 +146,7 @@ public:
     */
     void SetWidth(int newW);
 
+
     /*! \brief Retourne la longueur de l'entité.
     *
     *   Retourne un réel, la longueur de l'entité.
@@ -143,6 +154,7 @@ public:
     *
     */
     float GetHeight() const;
+
 
     /*! \brief Permets de modifier la longueur de l'entité.
     *
@@ -168,6 +180,12 @@ public:
     */
     void SetOffset(int newO);
 
+
+    int GetSpeed() const;
+
+    void SetSpeed(int newSpeed);
+
+
     /*! \brief Retourne la direction de l'entité.
     *
     *
@@ -181,6 +199,10 @@ public:
     *
     */
     void SetDirection(EntityDirection nDirection);
+
+    void SetDirection(float vx, float vy);
+
+    void Move(float vx, float vy);
 
     /*! \brief Permet de générer un numéro de ligne aléatoirement.
     *

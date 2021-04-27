@@ -15,7 +15,8 @@ public:
     void operator=(const EnemyPatrol & other)=delete;
     static EnemyPatrol* Instance();
     virtual void Enter(Enemy * enemy);
-    virtual void Execute(Enemy * enemy, std::unique_ptr<Player> & player_);
+    virtual void Execute(Enemy * enemy, std::unique_ptr<Player> & player_, 
+                        CollisionLayer * collision, int dt);
     virtual void Exit(Enemy * enemy);
 
 private:
@@ -31,7 +32,8 @@ public:
     void operator=(const EnemyAttack & other)=delete;
     static EnemyAttack* Instance();
     virtual void Enter(Enemy * enemy);
-    virtual void Execute(Enemy * enemy, std::unique_ptr<Player> & player_);
+    virtual void Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
+                         CollisionLayer * collision, int dt);
     virtual void Exit(Enemy * enemy);
     
 private:
