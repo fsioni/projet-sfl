@@ -10,12 +10,10 @@
 EntityWithoutHP::EntityWithoutHP(){
     x = 0;
     y = 0;
-    width = 32;
-    height = 32;
     offset = 7;
     speed = 1;
     name = "Unknown";
-    cb = std::make_shared<CollisionBox>(x, y, width, height);
+    cb = std::make_shared<CollisionBox>(x, y, 32, 32);
     direction = Right;
 
     isMoving = false;
@@ -28,12 +26,10 @@ EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, std::string nam
     if(y_ < 0) y = 0;
     else y = y_;
     
-    width = 32;
-    height = 32;
     offset = 7;
     name = name_;
     speed = speed_;
-    cb = std::make_shared<CollisionBox>(x, y, width, height);
+    cb = std::make_shared<CollisionBox>(x, y, 32, 32);
 
     direction = Right;
     isMoving = false;
@@ -43,8 +39,8 @@ EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, std::string nam
 EntityWithoutHP::~EntityWithoutHP(){
     x = 0;
     y= 0;
-    width = 0;
-    height = 0;
+    //width = 0;
+    //height = 0;
     offset =0;
     name = "delete";
     direction = Right;
@@ -155,8 +151,6 @@ void EntityWithoutHP::Test() const{
     std::cout << "Constructeur EntityWithoutHP() : ";
     assert(entity1.x == 0.);
     assert(entity1.y == 0.);
-    assert(entity1.width == 32);
-    assert(entity1.height == 32);
     assert(entity1.offset == 7);
     assert(entity1.speed == 1);
     assert(entity1.name == "Unknown");
@@ -173,8 +167,6 @@ void EntityWithoutHP::Test() const{
     EntityWithoutHP entity2(12.3, 13.4, 3, "Entity2");
     assert(entity2.x == float(12.3));
     assert(entity2.y == float(13.4));
-    assert(entity2.width == 32);
-    assert(entity2.height == 32);
     assert(entity2.offset == 7);
     assert(entity2.speed == 3);
     assert(entity2.name == "Entity2");

@@ -153,13 +153,9 @@ protected :
     /*! \brief Vitesse de l'entité */
     int speed;
 
-    int width;
-
-    int height;
-
     std::shared_ptr<CollisionBox> cb;
 
-    int offset; // For collision detection
+    int offset;
 
     /*! \brief Nom de l'entité */
     std::string name;
@@ -167,7 +163,6 @@ protected :
     EntityDirection direction;
 
     bool isMoving;
-
 };
 
 #endif
