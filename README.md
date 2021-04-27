@@ -52,6 +52,8 @@ What things you need to install the game and how to install them.
 - For MacOSX : `G++` (SFML files are included in the project)
 - To update the documentation : `Doxygen, graphviz`
 
+WSL is not working with this game
+
 You can install them with your favorite package manager like :
 ```
 sudo apt-get install libsfml-dev 
