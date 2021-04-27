@@ -1,5 +1,6 @@
 #include "StateGameSFML.h"
 #include "StatePauseSFML.h"
+#include "StateGameOverSFML.h"
 #include <string>
 #include <assert.h>
 
@@ -180,6 +181,11 @@ void StateGameSFML::Update()
 {
     if (!isPaused)
     {    
+        if (context->player->GetLivingStatus() == false)
+        {
+            context->stateMan->Add(std::make_unique<StateGameOverSFML>(context), true);
+        }
+        
         deltaTime = deltaClock.restart().asMilliseconds();
 
         if(fpsClock.getElapsedTime().asSeconds() > 0.5){

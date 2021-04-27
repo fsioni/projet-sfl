@@ -66,9 +66,7 @@ void StatePauseSFML::ProcessInput()
                 break;
             }
         }
-        
     }
-    
 }
 
 void StatePauseSFML::Update() 
