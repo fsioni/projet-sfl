@@ -180,13 +180,13 @@ void StateGameSFML::Update()
     playerY = context->player->GetPos_y();
 
     // Info sur la tilemap
-    w = context->map->GetTileset().GetTileWidth();
+    /*w = context->map->GetTileset().GetTileWidth();
     h = context->map->GetTileset().GetTileHeight();
     nbMapLayer = context->map->GetMapLayers().size();
 
     // Taille de la map
     mapWidth = context->map->GetMapLayers()[0].GetWidth();
-    mapHeight = context->map->GetMapLayers()[0].GetHeight();
+    mapHeight = context->map->GetMapLayers()[0].GetHeight();*/
 
     // Gestion de camera qui suit le joueur
     substX = playerX - winWidth/2;
@@ -208,7 +208,7 @@ void StateGameSFML::Update()
 
     // Mise à jour texte UI
     std::string hp = std::to_string(context->player->GetHP());
-    std::string maxHp = std::to_string(context->player->GetMaxHealth());
+    std::string maxHp = std::to_string(context->player->GetMaxHP());
     hpText.setString("HP :" + hp + "/" + maxHp);
 }
 
