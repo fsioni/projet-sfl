@@ -101,7 +101,7 @@ void StateSplashScreenSFML::Update()
 
     if (duration > 1)
     {
-        context->stateMan->Add(make_unique<StateMenuSFML>(context), true);
+        context->stateMan->Add(std::make_unique<StateMenuSFML>(context), true);
     }
 }
 
