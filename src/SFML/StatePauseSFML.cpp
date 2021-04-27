@@ -30,6 +30,14 @@ void StatePauseSFML::Init()
     pauseText.setOrigin(pauseText.getLocalBounds().left+pauseText.getLocalBounds().width/2.0f,
                         pauseText.getLocalBounds().top+pauseText.getLocalBounds().height/2.0f);
     pauseText.setPosition(winx/2.0f, winy/2.0f);
+
+
+    resumeText.setFont(textFont);
+    resumeText.setString("Press Escape to resume");
+    resumeText.setCharacterSize(50);
+    resumeText.setOrigin(resumeText.getLocalBounds().left+resumeText.getLocalBounds().width/2.0f,
+                        resumeText.getLocalBounds().top+resumeText.getLocalBounds().height/2.0f);
+    resumeText.setPosition(winx/2.0f, winy/2.0f + 150);
 }
 
 void StatePauseSFML::ProcessInput() 
@@ -47,6 +55,11 @@ void StatePauseSFML::ProcessInput()
             {
             case sf::Keyboard::Escape:
                 context->stateMan->PopCurrent();
+                break;
+
+            case sf::Keyboard::Key::X:
+                context->renderWin->close();
+                context->quit = true;
                 break;
             
             default:
@@ -66,6 +79,7 @@ void StatePauseSFML::Update()
 void StatePauseSFML::Display() 
 {
     context->renderWin->draw(pauseText);
+    context->renderWin->draw(resumeText);
     context->renderWin->display();
 }
 

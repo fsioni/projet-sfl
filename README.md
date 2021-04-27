@@ -138,8 +138,9 @@ After compiling :
 ``` 
 
 - To move along all axis use : ̀`Z Q S F`
+- To pause the game : `escape`
 - To open the debug mode press : `P`
-- To quit press : `x` or `escape` or the cross button.
+- To quit press : `x` or the cross button.
 
 
 ### Text version

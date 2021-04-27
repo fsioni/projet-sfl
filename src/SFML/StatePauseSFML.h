@@ -28,6 +28,7 @@ private:
     std::shared_ptr<Context> context;
     sf::Font textFont;
     sf::Text pauseText;
+    sf::Text resumeText;
 };
 
 #endif // __STATEPAUSESFML_H__
