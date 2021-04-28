@@ -150,6 +150,9 @@ float EntityWithoutHP::Distance(const EntityWithoutHP * entity) const{
     return sqrt(x_*x_ + y_*y_);
 }
 
+int EntityWithoutHP::GetID() const{
+    return id.id;
+}
 
 void EntityWithoutHP::Test() const{
     std::cout << "===== Class EntityWithoutHP =====" << std::endl;

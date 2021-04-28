@@ -5,6 +5,7 @@
 #include <iostream>
 #include <memory>
 #include "../Map/CollisionBox.h"
+#include "UniqueID.h"
 
  
 enum EntityDirection{
@@ -144,6 +145,8 @@ public:
 
     float Distance(const EntityWithoutHP * entity) const;
 
+    int GetID() const;
+
 protected :
     /*// ==== Données membres protégées === //*/
 
@@ -166,6 +169,8 @@ protected :
     EntityDirection direction;
 
     bool isMoving;
+
+    UniqueID id;
 };
 
 #endif

@@ -402,11 +402,11 @@ void StateGameSFML::DisplayDebug(){
     pb.setFillColor(sf::Color(170, 30, 155, 200));
 
     //Affichage des coordonnées
-    sf::String txt= "("+  std::to_string(context->player->GetPos_x()) + ", " 
-    + std::to_string(context->player->GetPos_y())+ ")";
+    sf::String txt= "("+  std::to_string(cbPlayer->GetX()) + ", " 
+    + std::to_string(cbPlayer->GetY())+ ")";
     sf::Text pos_text(txt, textFont);   
 
-    pos_text.setPosition(context->player->GetPos_x() -substX, context->player->GetPos_y() + 10 -substY);
+    pos_text.setPosition(context->player->GetPos_x() -substX -25, context->player->GetPos_y() -substY-10);
     pos_text.setCharacterSize(15);
 
     context->renderWin->draw(pb);   
@@ -426,7 +426,7 @@ void StateGameSFML::DisplayDebug(){
         context->renderWin->draw(cb);                
     }   
 
-    // Affichage du debug des entités
+    // Affichage du debug des enemy
     std::vector<std::shared_ptr<CollisionBox> > enemyBoxes = 
         context->map->GetCollisionLayer()->GetCollisionBoxesEnemy();
 
