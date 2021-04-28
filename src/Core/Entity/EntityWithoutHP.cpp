@@ -144,6 +144,12 @@ void EntityWithoutHP::SetIsMovingFalse(){
     isMoving = false;
 }
 
+float EntityWithoutHP::Distance(const EntityWithoutHP * entity) const{
+    int x_ = x - entity->x;
+    int y_ = y - entity->y;
+    return sqrt(x_*x_ + y_*y_);
+}
+
 
 void EntityWithoutHP::Test() const{
     std::cout << "===== Class EntityWithoutHP =====" << std::endl;

@@ -141,6 +141,9 @@ public:
     bool GetIsMoving() const;
     void SetIsMovingFalse();
 
+
+    float Distance(const EntityWithoutHP * entity) const;
+
 protected :
     /*// ==== Données membres protégées === //*/
 
