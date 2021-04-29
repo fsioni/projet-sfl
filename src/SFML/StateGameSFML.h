@@ -3,6 +3,7 @@
 
 #include "../Core/Game.h"
 #include "../Core/StateManager/State.h"
+#include <SFML/Audio.hpp>
 
 
 class StateGameSFML : public State
@@ -81,6 +82,9 @@ private:
     sf::Clock hitClock;
     int lastHP;
     bool playerGotHitted;
+
+    // Musique et sons 
+    sf::Music music;
 };
 
 #endif // __STATEGAMESFML_H__

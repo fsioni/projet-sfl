@@ -19,6 +19,10 @@ StateGameSFML::~StateGameSFML()
 
 void StateGameSFML::Init()
 {
+    // Chargement et lecture de la musique
+    assert(music.openFromFile("data/sounds/music/01town2.wav"));
+    music.play();
+
     // Chargement de la tileMap
     tileTexture.loadFromFile(context->map->GetTileset()->GetTileMapPath());
     tileSprite.setTexture(tileTexture);
