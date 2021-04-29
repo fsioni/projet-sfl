@@ -33,7 +33,7 @@ void EnemyPatrol::Execute(Enemy * enemy, std::unique_ptr<Player> & player_,
         colliding = enemy->MoveWithCollision(0, 1, collision, dt);
     if(enemy->GetDirection()==Up)
         colliding = enemy->MoveWithCollision(0, -1, collision, dt);
-
+    
     enemy->ChangeDirection(colliding);
     
     // Si player dans rayon 4 bloc, il entre en état Attack

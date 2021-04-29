@@ -148,20 +148,19 @@ bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * col
     // CollisionBox de l'entité
     CollisionBox * cbThisEntity = colLayer->GetCollisionBoxesEntity()[GetID()];
 
-    // -16 pour centrer la position de l'entité
-    int posX = cbThisEntity->GetX() + vx*speed - cbThisEntity->GetWidth()/2;
-    int posY = cbThisEntity->GetY() + vy*speed - cbThisEntity->GetHeight()/2;
+    int posX = cbThisEntity->GetX() + vx*speed;
+    int posY = cbThisEntity->GetY() + vy*speed;
 
     // Collision avec la map
     std::vector<CollisionBox> cbMap = colLayer->GetCollisionBoxes();
     for(int i=0; i<cbMap.size(); i++){
 
         //Detection collision axe X
-        if (posX + cbThisEntity->GetWidth()>= cbMap[i].GetX()
-            && cbMap[i].GetX() + cbMap[i].GetWidth() >= posX){
+        if (posX - 7 + cbThisEntity->GetWidth()/2>= cbMap[i].GetX()
+            && cbMap[i].GetX() + cbMap[i].GetWidth() >= posX - 7){
             //Detection collision axe Y
-            if(posY + cbThisEntity->GetHeight()>= cbMap[i].GetY()
-               && cbMap[i].GetY() + cbMap[i].GetHeight() >= posY){
+            if(posY - 7+ cbThisEntity->GetHeight()/2>= cbMap[i].GetY()
+               && cbMap[i].GetY() + cbMap[i].GetHeight() >= posY - 7){
 
                 isColliding = true;
             }   
@@ -174,15 +173,16 @@ bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * col
         it != cbEntities.end(); it++){
         if(it->first != GetID()){
             CollisionBox * cbEntity = it->second;
-            //Detection collision axe X
-            if (posX + cbThisEntity->GetWidth()>= cbEntity->GetX()
-                && cbEntity->GetX() + cbEntity->GetWidth() >= posX){
-                //Detection collision axe Y
-                if(posY + cbThisEntity->GetHeight()>= cbEntity->GetY()
-                && cbEntity->GetY() + cbEntity->GetHeight() >= posY){
-                    isColliding = true;
-                }   
+            // X
+            if(posX + cbThisEntity->GetWidth() >= cbEntity->GetX()
+                && posX <= cbEntity->GetX() + cbEntity->GetWidth()){
+                // Y
+                if(posY + cbThisEntity->GetHeight() >= cbEntity->GetY()
+                    && posY <= cbEntity->GetY() + cbEntity->GetHeight()){
+                    isColliding=true;
+                }
             }
+
         }
     }
 

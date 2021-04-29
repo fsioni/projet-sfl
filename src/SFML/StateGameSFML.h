@@ -24,6 +24,7 @@ public:
     void DisplayMap();
     void DisplayPlayer();
     void DisplayEnemies();
+    void DisplayCollisionBox(CollisionBox * cb, const sf::Color & color, int id);
     void DisplayDebug();
 
     void Pause();
