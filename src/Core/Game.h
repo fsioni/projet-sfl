@@ -10,7 +10,7 @@
 #include "../SFML/AssetManager.h"
 #include <string>
 
-#include<SFML/Graphics.hpp>
+#include <SFML/Graphics.hpp>
 #include "../txt/winTxt.h"
 
 #include <vector>
@@ -26,7 +26,8 @@ struct Context
     bool isDebug;
     bool quit;
 
-    Context(){
+    Context()
+    {
         assetMan = std::make_unique<AssetManager>();
         stateMan = std::make_unique<StateManager>();
         renderWin = std::make_unique<sf::RenderWindow>();
@@ -42,7 +43,6 @@ struct Context
 
         isDebug = false;
         quit = false;
-
     }
 };
 
@@ -52,12 +52,11 @@ public:
     Game(/* args */);
     ~Game();
 
-    void Run(int mode); //mode = 0 for SFML, 1 for txt 
+    void Run(int mode); //mode = 0 for SFML, 1 for txt
     void Test();
+
 private:
     std::shared_ptr<Context> context;
 };
-
-
 
 #endif // __GAME_H__

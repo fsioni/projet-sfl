@@ -24,7 +24,7 @@ public:
     *
     * \param [in] objectTag : balise contenant les informations de la Box dans le .tmx.
     */
-    Box(const std::string& objectTag);
+    Box(const std::string &objectTag);
 
     /*! \brief Constructeur depuis les paramètres entrés
     *
@@ -41,7 +41,7 @@ public:
     * Destructeur de l'objet Box
     */
     ~Box();
-    
+
     /*! \brief Modifie l'id de la Box par celui en paramètre
     *
     * \param [in] nID : nouvel id de la Box
@@ -67,7 +67,7 @@ public:
     * \param [in] nHeight : nouvel hauteur verticale de la Box
     */
     void SetDimensions(int nWidth, int nHeight);
-    
+
     /*! \brief Retourne x
     *
     * \return La position horizontale de la Box
@@ -114,21 +114,19 @@ private:
     /*// === Données membres privées === //*/
 
     /*! \brief ID de la Box (unique car information récupéré de la map .tmx). */
-    int id; 
+    int id;
 
     /*! \brief Position de la Box sur l'axe x (horizontal, avec l'origine en haut à gauche). */
     int x;
 
     /*! \brief Position de la Box sur l'axe y (vertical, avec l'origine en haut à gauche). */
     int y;
-    
+
     /*! \brief  Largeur de la Box. */
     int width;
-    
+
     /*! \brief Hauteur de la Box. */
     int height;
 };
-
-
 
 #endif

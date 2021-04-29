@@ -6,7 +6,8 @@
 #include <vector>
 #include <string>
 
-class AssetManager{
+class AssetManager
+{
 public:
     AssetManager();
     ~AssetManager();
@@ -19,10 +20,11 @@ public:
     void SetPlayerTexture(std::string fileTexture);
     void SetShadowTexture(std::string fileTexture);
 
-    const std::vector<sf::Texture> & GetTextureEnemy() const;
-    const std::vector<sf::Texture> & GetTextureNPC() const;
-    const sf::Texture & GetPlayerTexture() const;
-    const sf::Texture & GetShadowTexture() const;
+    const std::vector<sf::Texture> &GetTextureEnemy() const;
+    const std::vector<sf::Texture> &GetTextureNPC() const;
+    const sf::Texture &GetPlayerTexture() const;
+    const sf::Texture &GetShadowTexture() const;
+
 private:
     std::vector<sf::Texture> textureEnemy;
     std::vector<sf::Texture> textureNPC;
@@ -30,8 +32,6 @@ private:
     sf::Texture textureShadow;
 
     // Ajouter son et font
-
 };
-
 
 #endif

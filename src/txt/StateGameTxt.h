@@ -26,6 +26,7 @@ public:
     void Start();
 
     void MoveWithCollision(float vx, float vy);
+
 private:
     std::shared_ptr<Context> context;
     std::unique_ptr<WinTXT> win;

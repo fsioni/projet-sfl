@@ -24,7 +24,8 @@ OBJ_FILES += obj/AssetManager.o obj/StateManager.o
 OBJ_FILES += obj/StateSplashScreenTxt.o obj/StateMenuTxt.o obj/StateGameTxt.o obj/winTxt.o
 
 ##SFML Mode
-OBJ_FILES += obj/StateSplashScreenSFML.o obj/StateMenuSFML.o obj/StateGameSFML.o obj/StatePauseSFML.o  
+OBJ_FILES += obj/StateSplashScreenSFML.o obj/StateMenuSFML.o obj/StateGameSFML.o  
+OBJ_FILES += obj/StatePauseSFML.o obj/StateGameOverSFML.o
 
 ## Finite State Machine 
 OBJ_FILES += obj/StateBehavior.o obj/EnemyStates.o obj/StateMachine.o
@@ -36,7 +37,7 @@ CC = g++
 CFLAGS = -Wall -ggdb -std=c++14
 
 INCLUDE_SFML = -I./extern/SFML/include 
-LIBS_SFML = -Lextern/SFML/lib -lsfml-graphics -lsfml-window -lsfml-system 
+LIBS_SFML = -Lextern/SFML/lib -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
 
 COMPILATIONOBJ = $(CC) $(CFLAGS) -c $< -o $@ 
 
@@ -133,10 +134,13 @@ obj/StateSplashScreenSFML.o : src/SFML/StateSplashScreenSFML.cpp src/Core/Game.h
 obj/StateMenuSFML.o : src/SFML/StateMenuSFML.cpp src/Core/Game.h src/Core/StateManager/State.h src/SFML/StateGameSFML.h
 	$(COMPILATIONOBJ)
 
-obj/StateGameSFML.o : src/SFML/StateGameSFML.cpp src/SFML/StateGameSFML.h src/SFML/AssetManager.h src/Core/Game.h src/Core/StateManager/StateManager.cpp src/Core/StateManager/State.h
+obj/StateGameSFML.o : src/SFML/StateGameSFML.cpp src/SFML/StateGameSFML.h src/SFML/AssetManager.h src/Core/Game.h src/Core/StateManager/StateManager.cpp src/Core/StateManager/State.h src/SFML/StateGameOverSFML.h src/SFML/StatePauseSFML.h
 	$(COMPILATIONOBJ)
 
 obj/StatePauseSFML.o : src/SFML/StatePauseSFML.cpp src/SFML/StatePauseSFML.h src/Core/Game.h src/Core/StateManager/State.h
+	$(COMPILATIONOBJ)
+
+obj/StateGameOverSFML.o : src/SFML/StateGameOverSFML.cpp src/SFML/StateGameOverSFML.h src/Core/Game.h src/Core/StateManager/State.h
 	$(COMPILATIONOBJ)
 
 

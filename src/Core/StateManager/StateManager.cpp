@@ -1,15 +1,12 @@
 #include "StateManager.h"
 #include <iostream>
 
-StateManager::StateManager() : add(false), replace(false), remove(false) 
+StateManager::StateManager() : add(false), replace(false), remove(false)
 {
-    
 }
 
-
-StateManager::~StateManager() 
+StateManager::~StateManager()
 {
-    
 }
 
 void StateManager::Add(std::unique_ptr<State> nState, bool nreplace)
@@ -59,7 +56,7 @@ void StateManager::ProcessStateChange()
     }
 }
 
-std::unique_ptr<State>& StateManager::GetCurrent()
+std::unique_ptr<State> &StateManager::GetCurrent()
 {
     return sStates.top();
 }

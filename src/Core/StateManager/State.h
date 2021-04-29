@@ -11,7 +11,6 @@
 class State
 {
 public:
-
     /*// === Fonctions membres publiques === //*/
 
     State(){};
@@ -22,21 +21,21 @@ public:
     *   Appelée une seule fois : au début du State
     *   Fonction virtuelle pure : doit être implémentée par l'enfant
     */
-    virtual void Init()=0;
+    virtual void Init() = 0;
 
-        /*! \brief Fonction de gestion des touches du State
+    /*! \brief Fonction de gestion des touches du State
     *
     *   Une touche peut avoir un comportement différent selon le State
     *   Fonction virtuelle pure : doit être implémentée par l'enfant
     */
-    virtual void ProcessInput()=0;
+    virtual void ProcessInput() = 0;
 
     /*! \brief Fonction de mise à jour du State
     *
     *   Est appelée à chaque mise à jour de l'application
     *   Fonction virtuelle pure : doit être implémentée par l'enfant
     */
-    virtual void Update()=0;
+    virtual void Update() = 0;
 
     /*! \brief Fonction d'affichage du State
     *
@@ -44,22 +43,21 @@ public:
     *   Permet un affichage dans la console ou en mode graphique selon le State associé
     *   Fonction virtuelle pure : doit être implémentée par l'enfant
     */
-    virtual void Display()=0;
+    virtual void Display() = 0;
 
     /*! \brief Fonction de mise en pause du State
     *
     *   Est appelée lorsque le State se met en pause
     *   Fonction virtuelle pure : doit être implémentée par l'enfant
     */
-    virtual void Pause()=0;
+    virtual void Pause() = 0;
 
     /*! \brief Fonction de remise en marche du State
     *
     *   Est appelée lorsque le State se remet en marche
     *   Fonction virtuelle pure : doit être implémentée par l'enfant
     */
-    virtual void Start()=0;
-
+    virtual void Start() = 0;
 };
 
 #endif // __STATE_H__

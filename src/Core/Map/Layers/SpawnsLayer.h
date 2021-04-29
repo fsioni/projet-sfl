@@ -11,11 +11,11 @@
 *   Hérité de Layer
 *   Représente tous les SpawnPoint du jeu, ceux des ennemis, du joueurs, des PNJ...
 */
-class SpawnsLayer:Layer
+class SpawnsLayer : Layer
 {
 public:
     /*// === Fonctions membres privées === //*/
-    
+
     /*! \brief Constructeur par défaut. */
     SpawnsLayer(/* args */);
 
@@ -25,10 +25,10 @@ public:
     *   \param [in] objectgroupTagPlayer : balise brut <objectgroup> contenant le spawn du joueur.
     *   \param [in] objectgroupTagEnnemy : balise brut <objectgroup> contenant les spawns des ennemis.
     */
-    SpawnsLayer(const std::string & objectgroupTagPlayer, 
-                const std::string & objectgroupTagEnnemy);
+    SpawnsLayer(const std::string &objectgroupTagPlayer,
+                const std::string &objectgroupTagEnnemy);
 
-     /*! \brief Destructeur
+    /*! \brief Destructeur
     *
     * Destructeur de l'objet SpawnsPoint
     */
@@ -53,7 +53,6 @@ public:
     *   \return Retourne le SpawnPoint du Player en mode donnée 
     */
     SpawnPoint getPlayerSpawn() const;
-    
 
     /*! \brief Fonction permettant de récupérer les SpawnPoint des Ennemy
     *
@@ -67,7 +66,6 @@ private:
     SpawnPoint playerSpawn;
     /*! \brief Les SpawnPoint des Ennemy. Un SpawnPoint = Un Ennemy */
     std::vector<SpawnPoint> ennemySpawns;
-
 };
 
 #endif

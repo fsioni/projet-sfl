@@ -10,10 +10,14 @@ Game::Game(/* args */)
 {
     context = std::make_shared<Context>();
 
+    /* Initialisation du générateur, à ne faire qu’une fois dans le programme */
+    //srand((unsigned int) time(NULL));
+
     // Initialisation des ennemies
     int count = context->map->GetSpawnsLayer()->getEnemySpawns().size();
-    
-    for(int i = 0; i<count; i++){
+
+    for (int i = 0; i < count; i++)
+    {
         int x = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetX();
         int y = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
 
@@ -27,22 +31,23 @@ Game::Game(/* args */)
     context->isDebug = false;
 }
 
-
 Game::~Game()
 {
 }
 
-void Game::Run(int mode) 
+void Game::Run(int mode)
 {
-    assert(mode==0 || mode == 1);
+    assert(mode == 0 || mode == 1);
     switch (mode)
     {
     case 0: //mode SFML
     {
         int winWidth = 700;
         int winHeight = 700;
-        context->renderWin->create(sf::VideoMode(winWidth, winHeight, 32), "Legend Of Nautibus");
-        context->stateMan->Add(std::make_unique<StateSplashScreenSFML>(context));
+        context->renderWin->create(sf::VideoMode(winWidth, winHeight, 32),
+                                    "Legend Of Nautibus");
+        context->stateMan->Add(std::make_unique<StateSplashScreenSFML>
+                            (context));
         while (!context->quit)
         {
             context->stateMan->ProcessStateChange();
@@ -50,9 +55,9 @@ void Game::Run(int mode)
             context->stateMan->GetCurrent()->Update();
             context->stateMan->GetCurrent()->Display();
         }
-    break;
+        break;
     }
-    
+
     case 1: //mode txt
         context->stateMan->Add(std::make_unique<StateSplashScreenTxt>(context));
         while (!context->quit)
@@ -62,16 +67,13 @@ void Game::Run(int mode)
             context->stateMan->GetCurrent()->Update();
             context->stateMan->GetCurrent()->Display();
         }
-    break;
+        break;
 
     default:
-    break;
-
+        break;
     }
 }
 
-
-void Game::Test() 
-{   
-    
+void Game::Test()
+{
 }

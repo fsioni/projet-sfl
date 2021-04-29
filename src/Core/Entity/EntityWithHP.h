@@ -2,8 +2,6 @@
 #define ENTITYWITHHP_H
 
 #include "EntityWithoutHP.h"
-#include <string>
-
 
 /*! \class EntityWithHP
 *   \brief Classe représentant une entité qui peut infliger/subir des dégats et se déplacer.
@@ -25,23 +23,21 @@ public:
     */
     EntityWithHP();
 
-
     /*! \brief Constructeur avec spécifités de l'entité en paramètre.
     *   \param [in] x : réel positif, position de l'entité sur l'axe X (horizontal).
     *   \param [in] y : réel positif, position de l'entité sur l'axe Y (vertical).
     *   \param [in] name : chaine de caractères, nom de l'entité.
     *   \param [in] hp : entier positif, nombre de points de vie de l'entité.
     *   \param [in] dammage : entier positif, nombre de points de vie infligé lors d'une attaque.
-    *   \param [in] maxHealth : entier positif, maximum de points de vie qu'une entité peut avoir.
+    *   \param [in] maxHP : entier positif, maximum de points de vie qu'une entité peut avoir.
     *   \param [in] livingStatus : Booléen, définissant si l'entité est morte ou pas.
     *   \param [in] speed : réel positif, vitesse de déplacement de l'entité.
     *
     *
-    *   Créer une EntityWithHP (x, y, name, hp, dammage, maxHealth, livingStatus, speed)
+    *   Créer une EntityWithHP (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
-    EntityWithHP(float x, float y, std::string name, int hp, int damage, int speed, int maxHealth);
-
+    EntityWithHP(float x, float y, std::string name, int hp, int damage, int speed, int maxHP);
 
     /*! \brief Destructeur.
     *
@@ -69,7 +65,6 @@ public:
     */
     int GetHP() const;
 
-
     /*! \brief Permet de modofier les dégats infligés par l'entité EntityWithHP.
     *
     *   Modifie la quantité de dégats qu'inflige l'entité EntityWithP.
@@ -80,13 +75,11 @@ public:
     */
     void SetDamage(int newDmg);
 
-
     /*! \brief Permet de retourner le nombre de dégats q'inflige l'entité EntityWithHP.
     *
     *   Retourne damage le nombre de points de vie qu'inflige une entité lors d'une attaque.
     */
     int GetDamage() const;
-
 
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.
     *
@@ -96,7 +89,6 @@ public:
     */
     void PrintEntityInfo() override;
 
-
     /*! \brief Permet de faire en sorte qu'une entité subisse le nombre "damage" dégats.
     *
     *   \param [in] damage : entier positif, dégats à infliger.
@@ -104,16 +96,14 @@ public:
     */
     void TakeDamage(int damage);
 
-
     /*! \brief Permet d'infliger damage dégats à l'entité target.
     *
     *
     *   \param [in] target : EntityWithHP qui va subir le nombre "damage" dégats.
-    *   
+    *
     *
     */
     void Attack(EntityWithHP &target) const;
-
 
     /*! \brief Modifie l'état de vie/mort de l'entité.
     *
@@ -122,8 +112,7 @@ public:
     *   \param [in] newStatus : booléen : indique si l'entitté EntityWithHP est en vie ou pas.
     *
     */
-    void SetLivingStatus (bool newStatus);
-
+    void SetLivingStatus(bool newStatus);
 
     /*! \brief Retourne l'état de vie/mort de l'entité.
     *
@@ -132,13 +121,12 @@ public:
     */
     bool GetLivingStatus() const;
 
-
     /*! \brief Retourne le cap maximum de points de vie de l'entité.
     *
     *   Retourne le cap maximum de points de vie de l'entité.
     *
     */
-    int GetMaxHealth() const;
+    int GetMaxHP() const;
 
     /*! \brief Fonction de test de regression.
     *
@@ -147,7 +135,7 @@ public:
     */
     void Test() const;
 
-protected :
+protected:
     /*// ==== Données membres protégées === //*/
 
     /*! \brief Nombre entier de points de vie de l'entité */
@@ -160,7 +148,10 @@ protected :
     bool livingStatus;
 
     /*! \brief Nombre entier maximal de points de vie de l'entité */
-    int maxHealth;
+    int maxHP;
+
+    /*! \brief Vitesse de l'entité */
+    float speed;
 };
 
 #endif

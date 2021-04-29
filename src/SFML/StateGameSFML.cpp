@@ -1,5 +1,6 @@
 #include "StateGameSFML.h"
 #include "StatePauseSFML.h"
+#include "StateGameOverSFML.h"
 #include <string>
 #include <assert.h>
 
@@ -18,6 +19,10 @@ StateGameSFML::~StateGameSFML()
 
 void StateGameSFML::Init()
 {
+    // Chargement et lecture de la musique
+    assert(music.openFromFile("data/sounds/music/01town2.wav"));
+    music.play();
+
     // Chargement de la tileMap
     tileTexture.loadFromFile(context->map->GetTileset()->GetTileMapPath());
     tileSprite.setTexture(tileTexture);
@@ -41,20 +46,18 @@ void StateGameSFML::Init()
     heartSprite.setTexture(heartText);
     heartSprite.setScale(0.1f, 0.1f);
     heartSprite.setOrigin(heartSprite.getLocalBounds().left +
-                            heartSprite.getLocalBounds().width/2.0f, 
+                            heartSprite.getLocalBounds().width / 2.0f,
                             heartSprite.getLocalBounds().top +
-                            heartSprite.getLocalBounds().height/2.0f);
+                            heartSprite.getLocalBounds().height / 2.0f);
 
     heartSprite.setPosition(20, 30);
-
 
     hpText.setFont(textFont);
     hpText.setString("0/0");
     hpText.setCharacterSize(30);
 
-    hpText.setOrigin(hpText.getLocalBounds().left+hpText.getLocalBounds().width
-                    / 2.0f, hpText.getLocalBounds().top + 
-                    hpText.getLocalBounds().height/2.0f);
+    hpText.setOrigin(hpText.getLocalBounds().left + hpText.getLocalBounds().width / 2.0f, hpText.getLocalBounds().top +
+                        hpText.getLocalBounds().height / 2.0f);
 
     hpText.setPosition(60, 30);
 
@@ -68,73 +71,75 @@ void StateGameSFML::Init()
     mapHeight = context->map->GetMapLayers()[0].GetHeight();
 
     fps = 0;
-    
+
+    lastHP = context->player->GetHP();
 }
 
 void StateGameSFML::ProcessInput()
 {
     sf::Event event;
-    while(context->renderWin->pollEvent(event)){
+    while (context->renderWin->pollEvent(event))
+    {
 
-            //Si la touche Z et S sont enfoncées
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z) &&
+        //Si la touche Z et S sont enfoncées
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z) &&
             sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
-            {
-                isGoingUp = false;
-                isGoingDown = false;
-            }
-            //Si la touche Z est enfoncée
-            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z)) 
-            {
-                isGoingUp = true;
-                isGoingDown = false;
-                context->player->SetDirection(Up);
-            }
-            //Si la touche S est enfoncée
-            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
-            {
-                isGoingUp = false;
-                isGoingDown = true;
-                context->player->SetDirection(Down);
-            }
-            //Si la touche ni Z ni S n'est enfoncée
-            else
-            {
-                isGoingUp = false;
-                isGoingDown = false;
-            }
+        {
+            isGoingUp = false;
+            isGoingDown = false;
+        }
+        //Si la touche Z est enfoncée
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z))
+        {
+            isGoingUp = true;
+            isGoingDown = false;
+            context->player->SetDirection(Up);
+        }
+        //Si la touche S est enfoncée
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+        {
+            isGoingUp = false;
+            isGoingDown = true;
+            context->player->SetDirection(Down);
+        }
+        //Si la touche ni Z ni S n'est enfoncée
+        else
+        {
+            isGoingUp = false;
+            isGoingDown = false;
+        }
 
-            //Si la touche Q et D sont enfoncées
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q) &&
+        //Si la touche Q et D sont enfoncées
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q) &&
             sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
-            {
-                isGoingRight = false;
-                isGoingLeft = false;
-            }
-            //Si la touche Q est enfoncée
-            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q))
-            {
-                isGoingRight = true;
-                isGoingLeft = false;
-                context->player->SetDirection(Left);
-            }
-            //Si la touche D est enfoncée
-            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
-            {
-                isGoingLeft = true;
-                isGoingRight = false;
-                context->player->SetDirection(Right);
-            }
-            //Si la touche ni Q ni D n'est enfoncée
-            else
-            {
-                isGoingRight = false;
-                isGoingLeft = false;
-            } 
-            /*
+        {
+            isGoingRight = false;
+            isGoingLeft = false;
+        }
+        //Si la touche Q est enfoncée
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q))
+        {
+            isGoingRight = true;
+            isGoingLeft = false;
+            context->player->SetDirection(Left);
+        }
+        //Si la touche D est enfoncée
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
+        {
+            isGoingLeft = true;
+            isGoingRight = false;
+            context->player->SetDirection(Right);
+        }
+        //Si la touche ni Q ni D n'est enfoncée
+        else
+        {
+            isGoingRight = false;
+            isGoingLeft = false;
+        }
+        /*
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)){
                 context->enemies[0]->SetLivingStatus(false);
-            }  */  
+            }  */
 
         switch (event.type)
         {
@@ -146,20 +151,21 @@ void StateGameSFML::ProcessInput()
 
         case sf::Event::KeyPressed:
 
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::P)) {
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::P))
+            {
                 context->isDebug = (!context->isDebug);
             }
-
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X)) {
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X))
+            {
                 context->renderWin->close();
                 context->quit = true;
             }
 
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape))
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape))
             {
                 context->stateMan->Add(std::make_unique<StatePauseSFML>(context));
             }
-            
+
             break;
 
         case sf::Event::Resized:
@@ -172,18 +178,23 @@ void StateGameSFML::ProcessInput()
         default:
             break;
         }
-
-        }
+    }
 }
 
 void StateGameSFML::Update()
 {
     if (!isPaused)
-    {    
+    {
+        if (context->player->GetLivingStatus() == false)
+        {
+            context->stateMan->Add(std::make_unique<StateGameOverSFML>(context), true);
+        }
+
         deltaTime = deltaClock.restart().asMilliseconds();
 
-        if(fpsClock.getElapsedTime().asSeconds() > 0.5){
-            fps = 1000/deltaTime;
+        if (fpsClock.getElapsedTime().asSeconds() > 0.5)
+        {
+            fps = 1000 / deltaTime;
             fpsClock.restart();
         }
 
@@ -192,34 +203,41 @@ void StateGameSFML::Update()
         playerY = context->player->GetPos_y();
 
         // Gestion de camera qui suit le joueur
-        substX = playerX - winWidth/2;
-        substY = playerY - winHeight/2;
+        substX = playerX - winWidth / 2;
+        substY = playerY - winHeight / 2;
 
         // Taille de la fenetre
         winWidth = (int)context->renderWin->getSize().x;
-        winHeight =(int)context->renderWin->getSize().y;
+        winHeight = (int)context->renderWin->getSize().y;
 
         // Gestion des bords de map
-        if(substX < 0) substX = 0;
-        if(substX > mapWidth*w - winWidth) substX = mapWidth*w - winWidth;
-        if(substY < 0) substY = 0;
-        if(substY > mapHeight*h - winHeight) substY = mapHeight*h - winHeight;
+        if (substX < 0)
+            substX = 0;
+        if (substX > mapWidth * w - winWidth)
+            substX = mapWidth * w - winWidth;
+        if (substY < 0)
+            substY = 0;
+        if (substY > mapHeight * h - winHeight)
+            substY = mapHeight * h - winHeight;
 
         UpdatePlayer();
         UpdateEnemies();
     
         // Mise à jour texte UI
         std::string hp = std::to_string(context->player->GetHP());
-        std::string maxHp = std::to_string(context->player->GetMaxHealth());
+        std::string maxHp = std::to_string(context->player->GetMaxHP());
         hpText.setString("HP : " + hp + "/" + maxHp);
-    }else{
+    }
+    else
+    {
         deltaTime = 0;
         deltaClock.restart();
         fpsClock.restart();
     }
 }
 
-void StateGameSFML::UpdatePlayer(){
+void StateGameSFML::UpdatePlayer()
+{
     context->player->SetIsMovingFalse();
     CollisionLayer * colLayer = context->map->GetCollisionLayer();
     // Gestion mouvement joueur
@@ -249,7 +267,7 @@ void StateGameSFML::UpdatePlayer(){
     {
         context->player->MoveWithCollision(-1, 0, colLayer, deltaTime);
     }
-    
+
     if (isGoingLeft && !isGoingUp && !isGoingDown)
     {
         context->player->MoveWithCollision(1, 0, colLayer, deltaTime);
@@ -267,22 +285,40 @@ void StateGameSFML::UpdatePlayer(){
     
     
     // Gestion animation joueur
-    if(spriteClock.getElapsedTime().asSeconds() > 0.3){
-        if(posX==64) posX=0;
-        else posX +=32;
-            
+    if (spriteClock.getElapsedTime().asSeconds() > 0.3)
+    {
+        if (posX == 64)
+            posX = 0;
+        else
+            posX += 32;
+
         spriteClock.restart();
     }
+
+    if (lastHP != context->player->GetHP())
+    {
+        playerSprite.setColor(sf::Color::Red);
+        hitClock.restart();
+    }
+
+    if (hitClock.getElapsedTime().asSeconds() > 0.2)
+    {
+        playerSprite.setColor(sf::Color::White);
+    }
+
+    lastHP = context->player->GetHP();
 }
 
-void StateGameSFML::UpdateEnemies(){
+void StateGameSFML::UpdateEnemies()
+{
     int count = context->enemies.size();
-    
-    for(int i=0; i<count; i++){
-        // Si enemy est en vie on fait tous les Updates
-        if(context->enemies[i]->GetLivingStatus()){
-            context->enemies[i]->SetIsMovingFalse();
 
+    for (int i = 0; i < count; i++)
+    {
+        // Si enemy est en vie on fait tous les Updates
+        if (context->enemies[i]->GetLivingStatus())
+        {
+            context->enemies[i]->SetIsMovingFalse();
             context->enemies[i]->UpdateStateMachine(context->player,
                 context->map->GetCollisionLayer(), deltaTime);
             
@@ -297,6 +333,11 @@ void StateGameSFML::UpdateEnemies(){
             cbEnemy->SetPosition(posX + 7, posY + 7);
         }   
     }
+
+    // Mise à jour texte UI
+    std::string hp = std::to_string(context->player->GetHP());
+    std::string maxHp = std::to_string(context->player->GetMaxHP());
+    hpText.setString("HP :" + hp + "/" + maxHp);
 }
 
 void StateGameSFML::Display()
@@ -309,7 +350,7 @@ void StateGameSFML::Display()
 
     if (context->isDebug) //Affichage DEBUG
     {
-        DisplayDebug();            
+        DisplayDebug();
     }
 
     ///////////// UI ///////////////
@@ -319,76 +360,87 @@ void StateGameSFML::Display()
     context->renderWin->display();
 }
 
-void StateGameSFML::DisplayMap(){
-    for(int k=0; k<nbMapLayer; k++){
+void StateGameSFML::DisplayMap()
+{
+    for (int k = 0; k < nbMapLayer; k++)
+    {
         MapLayer layer = context->map->GetMapLayers()[k];
-        for(int i=0; i<mapWidth; i++){
-            for(int j=0; j<mapHeight; j++){
+        for (int i = 0; i < mapWidth; i++)
+        {
+            for (int j = 0; j < mapHeight; j++)
+            {
                 data = layer.GetData(i, j);
-                if(data!=0){
-                    x = ((data-1) % 8)*w;
-                    y = ((data-1) / 8)*h;
-                    
+                if (data != 0)
+                {
+                    x = ((data - 1) % 8) * w;
+                    y = ((data - 1) / 8) * h;
+
                     // Ne pas afficher les tiles non-visibles
-                    int tileX = i*w - substX;
-                    int tileY = j*h - substY;
-                    
-                    if(tileX > -w && tileX < winWidth+w && 
-                        tileY > -h && tileY < winHeight+h ){
-                        
+                    int tileX = i * w - substX;
+                    int tileY = j * h - substY;
+
+                    if (tileX > -w && tileX < winWidth + w &&
+                        tileY > -h && tileY < winHeight + h)
+                    {
+
                         tileSprite.setPosition(tileX, tileY);
 
                         tileSprite.setTextureRect(sf::IntRect(x, y, w, h));
-                      
-                        context->renderWin->draw(tileSprite);       
-                    }
 
-                        
+                        context->renderWin->draw(tileSprite);
+                    }
                 }
             }
         }
     }
 }
 
-void StateGameSFML::DisplayPlayer(){
+void StateGameSFML::DisplayPlayer()
+{
     // -h/2 et -w/2 pour recentrer l'origine des entités
     int direction = context->player->GetDirection();
-    int pX = playerX-substX - w/2;
-    int pY = playerY-substY -h/2;
+    int pX = playerX - substX - w / 2;
+    int pY = playerY - substY - h / 2;
 
     // Affichage de l'ombre
     shadowSprite.setPosition(pX, pY);
-    shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
+    shadowSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32, 32));
     context->renderWin->draw(shadowSprite);
-    
+
     // Affichage du joueur
     playerSprite.setPosition(pX, pY);
-    if(context->player->GetIsMoving())
-        playerSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
-    else 
-        playerSprite.setTextureRect(sf::IntRect(0, direction*32, 32, 32));
+    if (context->player->GetIsMoving())
+        playerSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32, 32));
+    else
+        playerSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
     context->renderWin->draw(playerSprite);
 }
 
-void StateGameSFML::DisplayEnemies(){
-    for(int i=0; i<(int)context->enemies.size(); i++){
+void StateGameSFML::DisplayEnemies()
+{
+    for (int i = 0; i < (int)context->enemies.size(); i++)
+    {
 
-        if(context->enemies[i]->GetLivingStatus()){
+        if (context->enemies[i]->GetLivingStatus())
+        {
             int direction = context->enemies[i]->GetDirection();
-            int enX = context->enemies[i]->GetPos_x() - substX - w/2;
-            int enY = context->enemies[i]->GetPos_y() - substY - h/2;
+            int enX = context->enemies[i]->GetPos_x() - substX - w / 2;
+            int enY = context->enemies[i]->GetPos_y() - substY - h / 2;
 
             // Affichage de l'ombre
             shadowSprite.setPosition(enX, enY);
-            shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
+            shadowSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32,
+                                                                         32));
             context->renderWin->draw(shadowSprite);
 
             // Affichage des ennemies
             enemySprite.setPosition(enX, enY);
-            if(context->enemies[i]->GetIsMoving())
-                enemySprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
+            if (context->enemies[i]->GetIsMoving())
+                enemySprite.setTextureRect(sf::IntRect(posX, direction * 32,
+                                                                    32, 32));
             else
-                enemySprite.setTextureRect(sf::IntRect(0, direction*32, 32, 32));
+                enemySprite.setTextureRect(sf::IntRect(0, direction * 32, 32,
+                                                                        32));
 
             context->renderWin->draw(enemySprite);
         }
@@ -450,16 +502,18 @@ void StateGameSFML::DisplayDebug(){
 
 
     // Affichage des collision boxes de la map
-    std::vector<CollisionBox> collisionBoxes = 
+    std::vector<CollisionBox> collisionBoxes =
         context->map->GetCollisionLayer()->GetCollisionBoxes();
 
     for (long unsigned int i=0; i < collisionBoxes.size(); i++)
     {
-        sf::RectangleShape cb(sf::Vector2f(collisionBoxes[i].GetWidth(), collisionBoxes[i].GetHeight()));
-        cb.setPosition(collisionBoxes[i].GetX() -substX, collisionBoxes[i].GetY()-substY);
+        sf::RectangleShape cb(sf::Vector2f(collisionBoxes[i].GetWidth(),
+                                collisionBoxes[i].GetHeight()));
+        cb.setPosition(collisionBoxes[i].GetX() - substX, 
+                        collisionBoxes[i].GetY() - substY);
         cb.setFillColor(sf::Color(0, 190, 255, 215));
-        context->renderWin->draw(cb);                
-    }   
+        context->renderWin->draw(cb);
+    }
 
    
     //Affichage des FPS

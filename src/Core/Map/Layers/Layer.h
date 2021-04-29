@@ -34,7 +34,7 @@ public:
     * \return L'id du Layer.
     */
     int GetID() const;
-    
+
     /*! \brief Retourne name
     *
     * \return Le nom du Layer.
@@ -48,12 +48,12 @@ public:
     *  censé faire.
     */
     void Test() const;
+
 protected:
     /*! \brief Identifiant de la couche représenté par un entier. */
     int id;
     /*! \brief Nom de la couche. */
     std::string name;
 };
-
 
 #endif

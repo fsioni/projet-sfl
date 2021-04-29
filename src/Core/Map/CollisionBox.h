@@ -11,7 +11,7 @@
 *   Possède des propriété basiques comme la position, dimension, ID. 
 *   Hérité de la classe Box.
 */
-class CollisionBox: public Box
+class CollisionBox : public Box
 {
 public:
     /*// === Fonctions membres privées === //*/
@@ -27,7 +27,7 @@ public:
     *
     * \param [in] objectTag : balise contenant les informations de la CollisionBox dans le .tmx.
     */
-    CollisionBox(const std::string& objectTag);
+    CollisionBox(const std::string &objectTag);
 
     /*! \brief Constructeur depuis balise d'une map .tmx
     *
@@ -37,7 +37,7 @@ public:
     * \param [in] height : Hauteur de la boite.
     */
     CollisionBox(float x, float y, float width, float height);
-    
+
     /*! \brief Destructeur
     *
     * Destructeur de l'objet CollisionBox

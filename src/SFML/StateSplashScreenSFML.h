@@ -3,7 +3,7 @@
 
 #include "../Core/Game.h"
 #include "../Core/StateManager/State.h"
-
+#include <SFML/Audio.hpp>
 
 class StateSplashScreenSFML : public State
 {
@@ -34,8 +34,7 @@ private:
     sf::Text gameText;
     sf::Text madeByText;
 
-
-    
+    sf::Music music;
 };
 
 #endif // __STATESPLASHSCREENSFML_H__

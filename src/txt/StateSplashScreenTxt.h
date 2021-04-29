@@ -24,12 +24,12 @@ public:
     void Pause();
 
     void Start();
+
 private:
     std::shared_ptr<Context> context;
 
     std::clock_t start;
     double duration;
 };
-
 
 #endif // __STATESPLASHSCREENTXT_H__

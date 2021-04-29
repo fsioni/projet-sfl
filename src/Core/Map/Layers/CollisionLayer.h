@@ -9,17 +9,17 @@
 #include "Layer.h"
 #include "../CollisionBox.h"
 
-
 /*! \class CollisionLayer 
 *   \brief Classe représentant une couche de CollisionBox
 *   Hérité de Layer
 *   Représente toutes les CollisionBox d'une partie particulière de la Map
 *   Par exemple : des objets, des ennemis...
 */
-class CollisionLayer:Layer{
+class CollisionLayer : Layer
+{
 public:
     /*// === Fonctions membres privées === //*/
-    
+
     /*! \brief Constructeur par défaut 
     *
     *   Ne suffit pas pour utilisation.
@@ -31,8 +31,7 @@ public:
     *   Créer une couche de CollisionBox en les récupérant d'une balise de la Tilemap
     *   \param [in] objectgroupTagCollision : balise object des CollisionBox de la Map
     */
-    CollisionLayer(const std::string & objectgroupTagCollision);
-    
+    CollisionLayer(const std::string &objectgroupTagCollision);
 
     /*! \brief Destructeur
     *
@@ -45,7 +44,7 @@ public:
     *   Ajoute une CollisionBox au tableau dynamique de l'objet
     *   \param [in] newSpawn : nouvelle CollisionBox ajoutée
     */
-    void AddCollisionBox(const CollisionBox& newColBox);
+    void AddCollisionBox(const CollisionBox &newColBox);
 
     /*! \brief Fonction permettant d'ajouter une boîte de 
     *           collision d'entité à la couche
@@ -82,6 +81,5 @@ private:
     std::vector<CollisionBox> collisionBoxes;
     std::map<int, CollisionBox*> collisionBoxesEntity;
 };
-
 
 #endif

@@ -4,26 +4,28 @@
 #include <iostream>
 #include <memory>
 
-CollisionLayer::CollisionLayer(){
+CollisionLayer::CollisionLayer()
+{
 }
 
-CollisionLayer::CollisionLayer(const std::string & objectgroupTagCollision){
+CollisionLayer::CollisionLayer(const std::string &objectgroupTagCollision)
+{
     int count = countTag(objectgroupTagCollision, "object");
     std::string strObject;
-    for(int i=0; i<count; i++){
+    for (int i = 0; i < count; i++)
+    {
         strObject = getInsideTag(objectgroupTagCollision, "object", i);
         CollisionBox cb(strObject);
         collisionBoxes.push_back(cb);
     }
 }
 
-
-
 CollisionLayer::~CollisionLayer()
 {
 }
 
-void CollisionLayer::AddCollisionBox(const CollisionBox& newColBox){
+void CollisionLayer::AddCollisionBox(const CollisionBox &newColBox)
+{
     collisionBoxes.push_back(newColBox);
 }
 
@@ -31,8 +33,10 @@ void CollisionLayer::AddCollisionBoxEntity(int id, CollisionBox* newColBox){
     collisionBoxesEntity[id] = newColBox;
 }
 
-void CollisionLayer::DisplayTXT() const{
-    for(long unsigned int i = 0; i<collisionBoxes.size(); i++){
+void CollisionLayer::DisplayTXT() const
+{
+    for (long unsigned int i = 0; i < collisionBoxes.size(); i++)
+    {
         std::cout << "Id : " << collisionBoxes[i].GetId() << std::endl;
         std::cout << "X : " << collisionBoxes[i].GetX() << std::endl;
         std::cout << "Y : " << collisionBoxes[i].GetY() << std::endl;
@@ -42,7 +46,7 @@ void CollisionLayer::DisplayTXT() const{
     }
 }
 
-std::vector<CollisionBox> CollisionLayer::GetCollisionBoxes() const 
+std::vector<CollisionBox> CollisionLayer::GetCollisionBoxes() const
 {
     return collisionBoxes;
 }
