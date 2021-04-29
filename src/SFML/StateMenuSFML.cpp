@@ -24,8 +24,11 @@ void StateMenuSFML::Init()
 {
     assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
     assert(music.openFromFile("data/sounds/music/01town0.wav"));
+    assert(buffer.loadFromFile("data/sounds/sfx/menuNav.wav"));
 
-    music.play();
+    sound.setBuffer(buffer);
+
+    //music.play();
     music.setLoop(true);
 
     int winx = context->renderWin->getSize().x;
@@ -82,6 +85,7 @@ void StateMenuSFML::ProcessInput()
                     {
                         isPlayButSelected = true;
                         isExitButSelected = false;
+                        sound.play();
                     }
                     break;
                 }
@@ -91,6 +95,7 @@ void StateMenuSFML::ProcessInput()
                     {
                         isPlayButSelected = false;
                         isExitButSelected = true;
+                        sound.play();
                     }
                     break;
                 }

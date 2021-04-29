@@ -41,6 +41,9 @@ private:
     bool isExitButPressed;
 
     sf::Music music;
+
+    sf::SoundBuffer buffer;
+    sf::Sound sound;
     
 };
 #endif // __STATEMENUSFML_H__
