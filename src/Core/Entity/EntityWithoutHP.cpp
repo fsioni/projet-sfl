@@ -1,4 +1,5 @@
 #include "EntityWithoutHP.h"
+
 #include <cassert>
 #include <iostream>
 #include <string>
@@ -21,13 +22,14 @@ EntityWithoutHP::EntityWithoutHP(){
     isMoving = false;
 }
 
+
 EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, std::string name_){
     if(x_ < 0) x = 0;
     else x = x_;
 
     if(y_ < 0) y = 0;
     else y = y_;
-    
+
     width = 32;
     height = 32;
     offset = 7;
@@ -52,21 +54,25 @@ EntityWithoutHP::~EntityWithoutHP(){
 
 
 void EntityWithoutHP::PrintEntityInfo(){
+
     std::cout<< "x = " << x << ", y = " << y << ", nom : " << name <<std::endl;
+
 }
 
-
 void EntityWithoutHP::SetName(std::string newName){
+
     name = newName;
+}
+
+std::string EntityWithoutHP::GetName() const{
+
+    return name;
 }
 
 std::shared_ptr<CollisionBox> EntityWithoutHP::GetCollisionBox(){
     return cb;
 }
 
-std::string EntityWithoutHP::GetName() const{
-    return name;
-}
 
 void EntityWithoutHP::SetPos_x(float newx){
     if(newx >= 0)
@@ -79,31 +85,69 @@ float EntityWithoutHP::GetPos_x() const{
 
 void EntityWithoutHP::SetPos_y(float newy){
     if(newy >= 0)
-        y = newy; 
+        y = newy;
 }
 
-int EntityWithoutHP::GetOffset() const
+
+float EntityWithoutHP::GetWidth() const
 {
-    return offset;
+    return width;
+
 }
 
-void EntityWithoutHP::SetOffset(int newO)
-{
-    if(newO >= 0) 
-        offset = newO;
+
+void EntityWithoutHP::SetWidth(int newW){
+    if(newW >= 0)
+
+    width = newW;
 }
+
+
 
 float EntityWithoutHP::GetPos_y() const{
     return y;
+
 }
 
+float EntityWithoutHP::GetHeight() const{
+
+    return height;
+}
+
+void EntityWithoutHP::SetHeight(int newH){
+    assert (newH >= 0.0);
+
+    height = newH;
+}
+
+int EntityWithoutHP::GetOffset() const{
+
+    return offset;
+}
+
+void EntityWithoutHP::SetOffset(int newO){
+
+    offset = newO;
+}
 
  EntityDirection EntityWithoutHP::GetDirection() const{
+
      return direction;
  }
 
 void EntityWithoutHP::SetDirection(EntityDirection nDirection){
+
     direction = nDirection;
+}
+
+int EntityWithoutHP::RandNumberGenerator(int minimum, int maximum){
+
+    int random;
+    int plage = maximum - minimum + 1;
+
+    for (int i = 0; i < 100; i++) random = (rand() % plage) + minimum;
+
+    return random;
 }
 
 void EntityWithoutHP::SetDirection(float vx, float vy){
@@ -132,12 +176,15 @@ void EntityWithoutHP::Move(float vx, float vy){
 }
 
 int EntityWithoutHP::GetSpeed() const{
+
     return speed;
 }
 
 void EntityWithoutHP::SetSpeed(int newSpeed){
-    if(newSpeed>=0)
-        speed = newSpeed;  
+     if(newSpeed>=0)
+
+        speed = newSpeed;
+
 }
 
 bool EntityWithoutHP::GetIsMoving() const{
@@ -168,7 +215,7 @@ void EntityWithoutHP::Test() const{
     assert(!entity1.isMoving);
     std::cout << "ok" << std::endl;
 
-    std::cout << "Constructeur EntityWithoutHP(float x_, float y_," << 
+    std::cout << "Constructeur EntityWithoutHP(float x_, float y_," <<
                 "float speed_, string name_) : ";
     EntityWithoutHP entity2(12.3, 13.4, 3, "Entity2");
     assert(entity2.x == float(12.3));

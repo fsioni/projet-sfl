@@ -46,7 +46,7 @@ void StateGameSFML::Init()
     heartSprite.setTexture(heartText);
     heartSprite.setScale(0.1f, 0.1f);
     heartSprite.setOrigin(heartSprite.getLocalBounds().left +
-                            heartSprite.getLocalBounds().width/2.0f, 
+                            heartSprite.getLocalBounds().width/2.0f,
                             heartSprite.getLocalBounds().top +
                             heartSprite.getLocalBounds().height/2.0f);
 
@@ -58,7 +58,7 @@ void StateGameSFML::Init()
     hpText.setCharacterSize(30);
 
     hpText.setOrigin(hpText.getLocalBounds().left+hpText.getLocalBounds().width
-                    / 2.0f, hpText.getLocalBounds().top + 
+                    / 2.0f, hpText.getLocalBounds().top +
                     hpText.getLocalBounds().height/2.0f);
 
     hpText.setPosition(60, 30);
@@ -91,7 +91,7 @@ void StateGameSFML::ProcessInput()
                 isGoingDown = false;
             }
             //Si la touche Z est enfoncée
-            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z)) 
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z))
             {
                 isGoingUp = true;
                 isGoingDown = false;
@@ -137,11 +137,11 @@ void StateGameSFML::ProcessInput()
             {
                 isGoingRight = false;
                 isGoingLeft = false;
-            } 
+            }
             /*
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)){
                 context->enemies[0]->SetLivingStatus(false);
-            }  */  
+            }  */
 
         switch (event.type)
         {
@@ -156,7 +156,6 @@ void StateGameSFML::ProcessInput()
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::P)) {
                 context->isDebug = (!context->isDebug);
             }
-
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X)) {
                 context->renderWin->close();
                 context->quit = true;
@@ -166,7 +165,7 @@ void StateGameSFML::ProcessInput()
             {
                 context->stateMan->Add(std::make_unique<StatePauseSFML>(context));
             }
-            
+
             break;
 
         case sf::Event::Resized:
@@ -220,10 +219,9 @@ void StateGameSFML::Update()
         UpdatePlayer();
         UpdateEnemies();
 
-        
         // Mise à jour texte UI
         std::string hp = std::to_string(context->player->GetHP());
-        std::string maxHp = std::to_string(context->player->GetMaxHealth());
+        std::string maxHp = std::to_string(context->player->GetMaxHP());
         hpText.setString("HP : " + hp + "/" + maxHp);
     }else{
         deltaTime = 0;
@@ -262,22 +260,21 @@ void StateGameSFML::UpdatePlayer(){
     {
         MovePlayerWithCollision(-1,0);
     }
-    
+
     if (isGoingLeft && !isGoingUp && !isGoingDown)
     {
         MovePlayerWithCollision(1,0);
     }
 
-
     std::shared_ptr<CollisionBox> cbPlayer = context->player->GetCollisionBox();
     cbPlayer->SetX(context->player->GetPos_x());
     cbPlayer->SetY(context->player->GetPos_y());
-    
+
     // Gestion animation joueur
     if(spriteClock.getElapsedTime().asSeconds() > 0.3){
         if(posX==64) posX=0;
         else posX +=32;
-            
+
         spriteClock.restart();
     }
 
@@ -298,24 +295,28 @@ void StateGameSFML::UpdatePlayer(){
 
 void StateGameSFML::UpdateEnemies(){
     int count = context->enemies.size();
-    
+
     for(int i=0; i<count; i++){
         // Si enemy est en vie on fait tous les Updates
         if(context->enemies[i]->GetLivingStatus()){
             context->enemies[i]->SetIsMovingFalse();
-
             context->enemies[i]->UpdateStateMachine(context->player,
                 context->map->GetCollisionLayer(), deltaTime);
-            
+
 
             float posX = context->enemies[i]->GetPos_x();
             float posY = context->enemies[i]->GetPos_y();
-        
+
             context->map->GetCollisionLayer()->GetCollisionBoxesEnemy()[i]->
             SetPosition(posX-16, posY-16);
             context->enemies[i]->GetCollisionBox()->SetPosition(posX-16, posY-16);
-        }   
+        }
     }
+
+    // Mise à jour texte UI
+    std::string hp = std::to_string(context->player->GetHP());
+    std::string maxHp = std::to_string(context->player->GetMaxHP());
+    hpText.setString("HP :" + hp + "/" + maxHp);
 }
 
 void StateGameSFML::Display()
@@ -328,7 +329,7 @@ void StateGameSFML::Display()
 
     if (context->isDebug) //Affichage DEBUG
     {
-        DisplayDebug();            
+        DisplayDebug();
     }
 
     ///////////// UI ///////////////
@@ -347,22 +348,22 @@ void StateGameSFML::DisplayMap(){
                 if(data!=0){
                     x = ((data-1) % 8)*w;
                     y = ((data-1) / 8)*h;
-                    
+
                     // Ne pas afficher les tiles non-visibles
                     int tileX = i*w - substX;
                     int tileY = j*h - substY;
-                    
-                    if(tileX > -w && tileX < winWidth+w && 
+
+                    if(tileX > -w && tileX < winWidth+w &&
                         tileY > -h && tileY < winHeight+h ){
-                        
+
                         tileSprite.setPosition(tileX, tileY);
 
                         tileSprite.setTextureRect(sf::IntRect(x, y, w, h));
-                      
-                        context->renderWin->draw(tileSprite);       
+
+                        context->renderWin->draw(tileSprite);
                     }
 
-                        
+
                 }
             }
         }
@@ -379,12 +380,12 @@ void StateGameSFML::DisplayPlayer(){
     shadowSprite.setPosition(pX, pY);
     shadowSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
     context->renderWin->draw(shadowSprite);
-    
+
     // Affichage du joueur
     playerSprite.setPosition(pX, pY);
     if(context->player->GetIsMoving())
         playerSprite.setTextureRect(sf::IntRect(posX, direction*32, 32, 32));
-    else 
+    else
         playerSprite.setTextureRect(sf::IntRect(0, direction*32, 32, 32));
     context->renderWin->draw(playerSprite);
 }
@@ -423,37 +424,37 @@ void StateGameSFML::DisplayDebug(){
     //Affichage de la collision box
     sf::RectangleShape pb(sf::Vector2f(cbPlayer->GetWidth() - pOffset*2,
         cbPlayer->GetHeight() -pOffset*2));
-    pb.setPosition(cbPlayer->GetX() + pOffset -substX -w/2, 
+    pb.setPosition(cbPlayer->GetX() + pOffset -substX -w/2,
         cbPlayer->GetY() + pOffset -substY -h/2);
     pb.setFillColor(sf::Color(170, 30, 155, 200));
 
     //Affichage des coordonnées
-    sf::String txt= "("+  std::to_string(context->player->GetPos_x()) + ", " 
+    sf::String txt= "("+  std::to_string(context->player->GetPos_x()) + ", "
     + std::to_string(context->player->GetPos_y())+ ")";
-    sf::Text pos_text(txt, textFont);   
+    sf::Text pos_text(txt, textFont);
 
     pos_text.setPosition(context->player->GetPos_x() -substX, context->player->GetPos_y() + 10 -substY);
     pos_text.setCharacterSize(15);
 
-    context->renderWin->draw(pb);   
-    context->renderWin->draw(pos_text);    
+    context->renderWin->draw(pb);
+    context->renderWin->draw(pos_text);
 
     // Affichage des collision boxes de la map
-    std::vector<CollisionBox> collisionBoxes = 
+    std::vector<CollisionBox> collisionBoxes =
         context->map->GetCollisionLayer()->GetCollisionBoxes();
 
-    
+
 
     for (long unsigned int i=0; i < collisionBoxes.size(); i++)
     {
         sf::RectangleShape cb(sf::Vector2f(collisionBoxes[i].GetWidth(), collisionBoxes[i].GetHeight()));
         cb.setPosition(collisionBoxes[i].GetX() -substX, collisionBoxes[i].GetY()-substY);
         cb.setFillColor(sf::Color(0, 190, 255, 215));
-        context->renderWin->draw(cb);                
-    }   
+        context->renderWin->draw(cb);
+    }
 
     // Affichage du debug des entités
-    std::vector<std::shared_ptr<CollisionBox> > enemyBoxes = 
+    std::vector<std::shared_ptr<CollisionBox> > enemyBoxes =
         context->map->GetCollisionLayer()->GetCollisionBoxesEnemy();
 
     for (long unsigned int i=0; i < enemyBoxes.size(); i++)
@@ -469,13 +470,13 @@ void StateGameSFML::DisplayDebug(){
         sf::String txt= "id: "+ std::to_string(enemyBoxes[i]->GetId());
 
         sf::Text id_text(txt, textFont);
-        txt = "("+  std::to_string(enemyBoxes[i]->GetX()) + ", " + 
+        txt = "("+  std::to_string(enemyBoxes[i]->GetX()) + ", " +
             std::to_string(enemyBoxes[i]->GetY())+ ")";
 
         sf::Text pos_text(txt, textFont);
         id_text.setPosition(x, y);
         id_text.setCharacterSize(15);
-        
+
 
         pos_text.setPosition(x, y+20);
         pos_text.setCharacterSize(15);
@@ -487,13 +488,13 @@ void StateGameSFML::DisplayDebug(){
         fps_text.setPosition(winWidth - 35, 10);
         fps_text.setCharacterSize(20);
         fps_text.setFillColor(sf::Color::Blue);
- 
-        context->renderWin->draw(fps_text);  
+
+        context->renderWin->draw(fps_text);
 
 
-        context->renderWin->draw(cb); 
-        context->renderWin->draw(id_text);    
-        context->renderWin->draw(pos_text);      
+        context->renderWin->draw(cb);
+        context->renderWin->draw(id_text);
+        context->renderWin->draw(pos_text);
     }
 }
 
@@ -510,7 +511,8 @@ void StateGameSFML::Start()
     fpsClock.restart();
 }
 
-void StateGameSFML::MovePlayerWithCollision(float vx, float vy) 
+
+void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
 {
     if (vx == 0 && vy == 0)
     {
@@ -518,15 +520,15 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
     }
 
     bool iscolliding = false;
-    std::vector<CollisionBox> cb = 
+    std::vector<CollisionBox> cb =
         context->map->GetCollisionLayer()->GetCollisionBoxes();
-    
+
     std::shared_ptr<CollisionBox> cbPlayer = context->player->GetCollisionBox();
 
-    // -w/2 et -h/2 pour centrer l'origine 
-    int posX = cbPlayer->GetX() + 
+    // -w/2 et -h/2 pour centrer l'origine
+    int posX = cbPlayer->GetX() +
                vx*context->player->GetSpeed() - w/2;
-    int posY = cbPlayer->GetY() + 
+    int posY = cbPlayer->GetY() +
                vy*context->player->GetSpeed() - h/2;
 
     for (long unsigned int i = 0; i < cb.size(); i++)
@@ -540,12 +542,12 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
                && cb[i].GetY() + cb[i].GetHeight() >= posY + offset){
 
                 iscolliding = true;
-            }   
+            }
         }
     }
-    std::vector<std::shared_ptr<CollisionBox> > cbEnemy = 
+    std::vector<std::shared_ptr<CollisionBox> > cbEnemy =
         context->map->GetCollisionLayer()->GetCollisionBoxesEnemy();
-    
+
     for (long unsigned int i = 0; i < cbEnemy.size(); i++)
     {
         int offset = context->player->GetOffset();
@@ -559,7 +561,7 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
             if(posY + cbPlayer->GetHeight() - offset >= cbEnemy[i]->GetY()
                && cbEnemy[i]->GetY() + cbEnemy[i]->GetHeight() >= posY + offset){
                 iscolliding = true;
-            }   
+            }
         }
     }
 

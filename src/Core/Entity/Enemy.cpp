@@ -15,10 +15,11 @@ Enemy::Enemy() : EntityWithHP(){
     SetTimeNextAttack();
 }
 
+
 Enemy::Enemy(float x_, float y_, std::string name_, int hp_, int damage_,
-             int speed_, int maxHealth_)
-: EntityWithHP::EntityWithHP(x_, y_, name_, hp_, damage_, speed_, maxHealth_){
-    stateMachine = new StateMachine<Enemy>(this); 
+             int speed_, int maxHP_)
+: EntityWithHP::EntityWithHP(x_, y_, name_, hp_, damage_, speed_, maxHP_){
+    stateMachine = new StateMachine<Enemy>(this);
     stateMachine->SetCurrentState(EnemyPatrol::Instance());
 
     SetTimeNextChangeDirection();
@@ -33,7 +34,7 @@ Enemy::~Enemy(){
     this->hp = 0;
     this->damage = 0;
     this->speed = 0.0;
-    this->maxHealth = 0;
+    this->maxHP = 0;
     this->livingStatus = false;
 
     if(stateMachine!=nullptr){
@@ -43,7 +44,7 @@ Enemy::~Enemy(){
 }
 
 
-void Enemy::UpdateStateMachine(std::unique_ptr<Player> & player_, 
+void Enemy::UpdateStateMachine(std::unique_ptr<Player> & player_,
                                CollisionLayer * collision, int dt){
     stateMachine->UpdateCurrentState(player_, collision, dt);
 }
@@ -81,11 +82,11 @@ void Enemy::ChangeDirection(bool collision){
     else if(timer > timeNextChangeDirection){
         RandDirection();
         SetTimeNextChangeDirection();
-    } 
+    }
  }
 
 void Enemy::SetTimeNextAttack(){
-    // 2 attaque par seconde 
+    // 2 attaque par seconde
     double timeBetween2Attack = 0.5;
     double timer = time(NULL);
     timeNextAttack = timer + timeBetween2Attack;
@@ -106,8 +107,7 @@ void Enemy::Test() const{
     assert(enemy1.stateMachine != nullptr);
     std::cout << "ok" << std::endl;
 
-
-    std::cout << "Constructeur Enemy(int x, int y, string name, "<< 
+    std::cout << "Constructeur Enemy(int x, int y, string name, "<<
                  "int hp, int damage,int speed, int int maxHealth) : ";
     Enemy enemy2(10, 10, "enemy", 10, 10, 2, 400);
     assert(enemy2.stateMachine != nullptr);

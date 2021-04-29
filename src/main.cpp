@@ -55,7 +55,7 @@ int main(int argc, char* argv[]){
         Layer layer;
         layer.Test();
     }
-    else if(argv[1] == std::string("debug")){    
+    else if(argv[1] == std::string("debug")){
         Game g;
         g.Test();
     }
@@ -64,6 +64,7 @@ int main(int argc, char* argv[]){
     {
         std::cerr << "The argument need to be 0 for SFML or 1 for txt"
         << std::endl;
+
     }
     return 0;
 }

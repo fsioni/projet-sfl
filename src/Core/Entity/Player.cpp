@@ -1,26 +1,25 @@
 #include "Player.h"
 
-#include <iostream>
-#include <string>
-#include <cassert>
 
 Player::Player() : EntityWithHP(){}
 
+
 Player::Player(float x, float y, std::string name, int hp, int damage,
-               float speed, int maxHealth)
-: EntityWithHP::EntityWithHP(x, y, name, hp, damage, speed, maxHealth){
+               float speed, int maxHP)
+: EntityWithHP::EntityWithHP(x, y, name, hp, damage, speed, maxHP){
 }
+
 
 Player::~Player(){
 
-    x = 0;
-    y= 0;
-    name = "deletedPlayer";
-    hp = 0;
-    damage = 0;
-    speed = 0;
-    maxHealth = 0;
-    livingStatus = false;
+    this->x = 0.0;
+    this->y= 0.0;
+    this->name = "deletedPlayer";
+    this->hp = 0;
+    this->damage = 0;
+    this->speed = 0.0;
+    this->maxHP = 0;
+    this->livingStatus = false;
 }
 
 void Player::Test() const{

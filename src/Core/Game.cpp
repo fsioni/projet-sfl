@@ -10,6 +10,9 @@ Game::Game(/* args */)
 {
     context = std::make_shared<Context>();
 
+    /* Initialisation du générateur, à ne faire qu’une fois dans le programme */
+    //srand((unsigned int) time(NULL));
+
     // Initialisation des ennemies
     int count = context->map->GetSpawnsLayer()->getEnemySpawns().size();
     
@@ -31,7 +34,7 @@ Game::~Game()
 {
 }
 
-void Game::Run(int mode) 
+void Game::Run(int mode)
 {
     assert(mode==0 || mode == 1);
     switch (mode)
@@ -51,7 +54,7 @@ void Game::Run(int mode)
         }
     break;
     }
-    
+
     case 1: //mode txt
         context->stateMan->Add(std::make_unique<StateSplashScreenTxt>(context));
         while (!context->quit)
@@ -69,8 +72,7 @@ void Game::Run(int mode)
     }
 }
 
+void Game::Test()
+{
 
-void Game::Test() 
-{   
-    
 }

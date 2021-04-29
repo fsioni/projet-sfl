@@ -2,7 +2,6 @@
 #define ENTITYWITHHP_H
 
 #include "EntityWithoutHP.h"
-#include <string>
 
 
 /*! \class EntityWithHP
@@ -32,15 +31,15 @@ public:
     *   \param [in] name : chaine de caractères, nom de l'entité.
     *   \param [in] hp : entier positif, nombre de points de vie de l'entité.
     *   \param [in] dammage : entier positif, nombre de points de vie infligé lors d'une attaque.
-    *   \param [in] maxHealth : entier positif, maximum de points de vie qu'une entité peut avoir.
+    *   \param [in] maxHP : entier positif, maximum de points de vie qu'une entité peut avoir.
     *   \param [in] livingStatus : Booléen, définissant si l'entité est morte ou pas.
     *   \param [in] speed : réel positif, vitesse de déplacement de l'entité.
     *
     *
-    *   Créer une EntityWithHP (x, y, name, hp, dammage, maxHealth, livingStatus, speed)
+    *   Créer une EntityWithHP (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
-    EntityWithHP(float x, float y, std::string name, int hp, int damage, int speed, int maxHealth);
+    EntityWithHP(float x, float y, std::string name, int hp, int damage, int speed, int maxHP);
 
 
     /*! \brief Destructeur.
@@ -109,7 +108,7 @@ public:
     *
     *
     *   \param [in] target : EntityWithHP qui va subir le nombre "damage" dégats.
-    *   
+    *
     *
     */
     void Attack(EntityWithHP &target) const;
@@ -132,13 +131,12 @@ public:
     */
     bool GetLivingStatus() const;
 
-
     /*! \brief Retourne le cap maximum de points de vie de l'entité.
     *
     *   Retourne le cap maximum de points de vie de l'entité.
     *
     */
-    int GetMaxHealth() const;
+    int GetMaxHP() const;
 
     /*! \brief Fonction de test de regression.
     *
@@ -160,7 +158,10 @@ protected :
     bool livingStatus;
 
     /*! \brief Nombre entier maximal de points de vie de l'entité */
-    int maxHealth;
+    int maxHP;
+
+    /*! \brief Vitesse de l'entité */
+    float speed;
 };
 
 #endif
