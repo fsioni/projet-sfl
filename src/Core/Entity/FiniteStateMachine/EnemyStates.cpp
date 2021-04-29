@@ -92,7 +92,8 @@ void EnemyAttack::Execute(Enemy *enemy, std::unique_ptr<Player> &player_,
     {
         if (dist < 1.3 * 32)
         {
-            player_->TakeDamage(1);
+            player_->TakeDamage(enemy->GetDamage());
+            player_->MoveWithCollision(x*5, y*5, collision, dt);
             enemy->SetTimeNextAttack();
         }
     }
