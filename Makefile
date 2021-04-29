@@ -37,7 +37,7 @@ CC = g++
 CFLAGS = -Wall -ggdb -std=c++14
 
 INCLUDE_SFML = -I./extern/SFML/include 
-LIBS_SFML = -Lextern/SFML/lib -lsfml-graphics -lsfml-window -lsfml-system 
+LIBS_SFML = -Lextern/SFML/lib -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system 
 
 COMPILATIONOBJ = $(CC) $(CFLAGS) -c $< -o $@ 
 

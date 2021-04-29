@@ -23,6 +23,10 @@ StateMenuSFML::~StateMenuSFML()
 void StateMenuSFML::Init() 
 {
     assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
+    assert(music.openFromFile("data/sounds/music/01town0.wav"));
+
+    music.play();
+    music.setLoop(true);
 
     int winx = context->renderWin->getSize().x;
     int winy = context->renderWin->getSize().y;

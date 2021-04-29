@@ -3,6 +3,7 @@
 
 #include "../Core/Game.h"
 #include "../Core/StateManager/State.h"
+#include <SFML/Audio.hpp>
 
 
 class StateMenuSFML : public State
@@ -39,6 +40,7 @@ private:
     bool isExitButSelected;
     bool isExitButPressed;
 
+    sf::Music music;
     
 };
 #endif // __STATEMENUSFML_H__
