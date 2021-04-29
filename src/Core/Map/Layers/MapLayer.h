@@ -5,14 +5,13 @@
 #include <vector>
 #include "Layer.h"
 
-
-
 /*! \class MapLayer
 *   \brief Classe représentant une couche de tuiles.
 *
-*/ 
+*/
 
-class MapLayer:Layer{
+class MapLayer : Layer
+{
 public:
     /*! \brief Constructeur par défaut.
     *   Initialise id, width et height à -1,
@@ -24,7 +23,7 @@ public:
     *   
     *   \param [in] layer : MapLayer copié.
     */
-    MapLayer(const MapLayer & layer);
+    MapLayer(const MapLayer &layer);
 
     /*! \brief Constructeur avec data brut comme parametre.
     *   
@@ -36,14 +35,13 @@ public:
     */
     MapLayer(std::string rawData);
 
-
     /*! \brief Destructeur. */
     ~MapLayer();
 
-    MapLayer & operator=(const MapLayer & layer);
+    MapLayer &operator=(const MapLayer &layer);
 
     // TODO ======== SETER ET GETER A COMMENTER =======
-    
+
     void SetWidth(int width_);
     void SetHeight(int height_);
     void SetData(std::vector<int> data_);
@@ -53,7 +51,6 @@ public:
     int GetHeight() const;
     int GetData(int x, int y) const;
     std::vector<int> GetVectData() const;
-
 
     void Test() const;
 
@@ -67,4 +64,3 @@ private:
 };
 
 #endif
-

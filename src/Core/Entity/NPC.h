@@ -48,7 +48,7 @@ public:
     */
     void ReadRandDialog();
 
-     /*! \brief Permet à un NPC de donner des points de vie à un Player.
+    /*! \brief Permet à un NPC de donner des points de vie à un Player.
     *
     *   \param [in] p : Player, Player qui va recevoir les points de vie de la part du NPC.
     *   \param [in] hpToGive : entier positif, nombre de points de vie qui vont etre attribué au Player p.
@@ -56,7 +56,7 @@ public:
     *   Permet à un NPC de donner des points de vie à un joueur.
     *
     */
-    void GiveHP (Player &p, int hpToGive);
+    void GiveHP(Player &p, int hpToGive);
 
     /*! \brief Retourne une phrase prononçable par un NPC.
     *
@@ -65,15 +65,14 @@ public:
     */
     std::string GetRandDialog();
 
-    void TalkToPlayer(Player &p, float minX, float maxX, float minY, float maxY);
+    void TalkToPlayer(Player &p, float minX, float maxX, float minY, 
+                        float maxY);
 
 protected:
     /*// ==== Données membres protégées === //*/
 
     /*! \brief Tableau de phrases prononçables par un NPC */
     std::string DialogTab[9];
-
 };
 
 #endif
-

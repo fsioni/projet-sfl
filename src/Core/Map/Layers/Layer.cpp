@@ -12,24 +12,28 @@ Layer::~Layer()
 {
 }
 
-void Layer::SetId(int id_){
+void Layer::SetId(int id_)
+{
     id = id_;
 }
 
-void Layer::SetName(std::string name_){
+void Layer::SetName(std::string name_)
+{
     name = name_;
 }
 
-int Layer::GetID() const{
+int Layer::GetID() const
+{
     return id;
 }
 
-std::string Layer::GetName() const{
+std::string Layer::GetName() const
+{
     return name;
 }
 
-
-void Layer::Test() const{
+void Layer::Test() const
+{
     std::cout << "===== Class Layer =====" << std::endl;
 
     Layer layer;
@@ -48,5 +52,6 @@ void Layer::Test() const{
     assert(layer.GetName() == "layer");
     std::cout << "ok" << std::endl;
 
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl
+              << std::endl;
 }

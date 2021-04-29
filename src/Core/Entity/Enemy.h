@@ -7,8 +7,6 @@
 #include "Player.h"
 #include <string>
 
-
-
 /*! \class Enemy
 *   \brief Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer.
 *
@@ -17,7 +15,7 @@
 */
 class Enemy : public EntityWithHP
 {
-public :
+public:
     /*// ==== Fonctions membres publiques === //*/
 
     /*! \brief Constructeur par défaut.
@@ -46,7 +44,6 @@ public :
     Enemy(float x_, float y_, std::string name_, int hp_, int damage_,
           int speed_, int maxHP_);
 
-
     /*! \brief Destructeur.
     *
     *  Destructeur de la classe Enemy.
@@ -54,11 +51,10 @@ public :
     */
     ~Enemy();
 
-    StateMachine<Enemy>* GetStateMachine() const;
+    StateMachine<Enemy> *GetStateMachine() const;
 
-    void UpdateStateMachine(std::unique_ptr<Player> & player_,
-                            CollisionLayer * collision, int dt);
-
+    void UpdateStateMachine(std::unique_ptr<Player> &player_,
+                            CollisionLayer *collision, int dt);
 
     void RandDirection();
     void ChangeDirection(bool collision);
@@ -70,10 +66,9 @@ public :
     void Test() const;
 
 private:
-    StateMachine<Enemy> * stateMachine;
+    StateMachine<Enemy> *stateMachine;
     double timeNextChangeDirection;
     double timeNextAttack;
-
 };
 
 #endif

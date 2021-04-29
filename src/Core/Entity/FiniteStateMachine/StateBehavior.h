@@ -6,15 +6,14 @@
 #include <memory>
 
 template <class entity_type>
-class StateBehavior{
+class StateBehavior
+{
 public:
-    virtual void Enter(entity_type *)=0;
-    virtual void Execute(entity_type *, std::unique_ptr<Player> & player_,
-                         CollisionLayer * collision, int dt)=0; 
-    virtual void Exit(entity_type *)=0;
+    virtual void Enter(entity_type *) = 0;
+    virtual void Execute(entity_type *, std::unique_ptr<Player> &player_,
+                         CollisionLayer *collision, int dt) = 0;
+    virtual void Exit(entity_type *) = 0;
     virtual ~StateBehavior(){};
 };
-
-
 
 #endif

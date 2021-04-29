@@ -5,8 +5,7 @@
 
 class Animal : public EntityWithoutHP
 {
-public :
-
+public:
     Animal();
 
     Animal(float x, float y, std::string name);
@@ -16,7 +15,5 @@ public :
     EntityDirection RandDirection();
 
     void MoveRandomly(float vx, float vy);
-
-
 };
 #endif // ANIMAL_H

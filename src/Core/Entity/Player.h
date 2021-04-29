@@ -4,7 +4,6 @@
 #include "EntityWithHP.h"
 #include <string>
 
-
 /*! \class Player
 *   \brief Classe représentant un joueur qui peut infliger/subir des dégats et se déplacer.
 *
@@ -14,7 +13,7 @@
 */
 class Player : public EntityWithHP
 {
-public :
+public:
     /*// ==== Fonctions membres publiques === //*/
 
     /*! \brief Constructeur par défaut.
@@ -41,8 +40,7 @@ public :
     *
     */
     Player(float x, float y, std::string name, int hp, int damage,
-    float speed, int maxHP);
-
+           float speed, int maxHP);
 
     /*! \brief Destructeur.
     *
@@ -54,6 +52,5 @@ public :
     void Test() const;
 
 private:
-
 };
 #endif
