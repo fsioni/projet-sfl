@@ -3,7 +3,7 @@
 
 #include "../Core/Game.h"
 #include "../Core/StateManager/State.h"
-
+#include <SFML/Audio.hpp>
 
 class StateGameOverSFML : public State
 {
@@ -28,9 +28,12 @@ public:
 
 private:
     std::shared_ptr<Context> context;
+
     sf::Font textFont;
     sf::Text gameOverText;
     sf::Text restartText;
+    
+    sf::Music music;
 };
 
 #endif // __STATEGAMEOVERSFML_H__

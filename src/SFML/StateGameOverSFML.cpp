@@ -21,6 +21,9 @@ StateGameOverSFML::~StateGameOverSFML()
 void StateGameOverSFML::Init() 
 {
     assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
+    assert(music.openFromFile("data/sounds/music/13gameover1V1NL.wav"));
+
+    music.play();
 
     int winx = context->renderWin->getSize().x;
     int winy = context->renderWin->getSize().y;
