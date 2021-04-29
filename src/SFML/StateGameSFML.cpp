@@ -25,6 +25,8 @@ void StateGameSFML::Init()
 
     music.play();
     runningSound.setBuffer(runningBuffer);
+    runningSound.setLoop(true);
+    runningSound.stop();
 
     // Chargement de la tileMap
     tileTexture.loadFromFile(context->map->GetTileset()->GetTileMapPath());
@@ -143,6 +145,7 @@ void StateGameSFML::ProcessInput()
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)){
                 context->enemies[0]->SetLivingStatus(false);
             }  */
+        
 
         switch (event.type)
         {
@@ -278,6 +281,23 @@ void StateGameSFML::UpdatePlayer()
     if (isGoingLeft && !isGoingUp && !isGoingDown)
     {
         MovePlayerWithCollision(1, 0);
+    }
+
+    if (!isGoingLeft && !isGoingRight && !isGoingUp && !isGoingDown)
+    {
+        isWalking = false;
+    }
+    
+    if (!isWalking && 
+        runningSound.getStatus() == sf::SoundSource::Status::Playing)
+    {
+        runningSound.stop();
+    }
+    
+        if (isWalking && 
+        runningSound.getStatus() == sf::SoundSource::Status::Stopped)
+    {
+        runningSound.play();
     }
 
     std::shared_ptr<CollisionBox> cbPlayer = context->player->GetCollisionBox();
@@ -546,6 +566,7 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
         return;
     }
 
+
     bool iscolliding = false;
     std::vector<CollisionBox> cb =
         context->map->GetCollisionLayer()->GetCollisionBoxes();
@@ -598,11 +619,10 @@ void StateGameSFML::MovePlayerWithCollision(float vx, float vy)
 
     if (!iscolliding)
     {
+        isWalking = true;
         context->player->Move((vx * deltaTime) / 30, (vy * deltaTime) / 30);
-        runningSound.play();
-    }
-    else
+    }else
     {
-        runningSound.stop();
+        isWalking = false;
     }
 }

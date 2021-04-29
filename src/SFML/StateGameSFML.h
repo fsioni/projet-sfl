@@ -54,7 +54,7 @@ private:
     int playerX, playerY;
 
     // Direction mouvement du joueur
-    bool isGoingUp, isGoingDown, isGoingLeft, isGoingRight;
+    bool isGoingUp, isGoingDown, isGoingLeft, isGoingRight, isWalking;
 
     // Info sur la tilemap
     int w, h, nbMapLayer, x, y, data;
