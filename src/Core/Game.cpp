@@ -15,20 +15,22 @@ Game::Game(/* args */)
 
     // Initialisation des ennemies
     int count = context->map->GetSpawnsLayer()->getEnemySpawns().size();
-    
-    for(int i = 0; i<count; i++){
+
+    for (int i = 0; i < count; i++)
+    {
         int x = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetX();
         int y = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
 
-        std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 100, 3, 1, 100);
+        std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy",
+                                            100, 3, 1, 100);
         enemy->GetCollisionBox()->SetId(i);
         context->enemies.push_back(enemy);
-        context->map->GetCollisionLayer()->AddCollisionBoxEnemy(enemy->GetCollisionBox());
+        context->map->GetCollisionLayer()->AddCollisionBoxEnemy(enemy->
+                                                        GetCollisionBox());
     }
 
     context->isDebug = false;
 }
-
 
 Game::~Game()
 {
@@ -36,15 +38,17 @@ Game::~Game()
 
 void Game::Run(int mode)
 {
-    assert(mode==0 || mode == 1);
+    assert(mode == 0 || mode == 1);
     switch (mode)
     {
     case 0: //mode SFML
     {
         int winWidth = 700;
         int winHeight = 700;
-        context->renderWin->create(sf::VideoMode(winWidth, winHeight, 32), "Legend Of Nautibus");
-        context->stateMan->Add(std::make_unique<StateSplashScreenSFML>(context));
+        context->renderWin->create(sf::VideoMode(winWidth, winHeight, 32),
+                                    "Legend Of Nautibus");
+        context->stateMan->Add(std::make_unique<StateSplashScreenSFML>
+                            (context));
         while (!context->quit)
         {
             context->stateMan->ProcessStateChange();
@@ -52,7 +56,7 @@ void Game::Run(int mode)
             context->stateMan->GetCurrent()->Update();
             context->stateMan->GetCurrent()->Display();
         }
-    break;
+        break;
     }
 
     case 1: //mode txt
@@ -64,15 +68,13 @@ void Game::Run(int mode)
             context->stateMan->GetCurrent()->Update();
             context->stateMan->GetCurrent()->Display();
         }
-    break;
+        break;
 
     default:
-    break;
-
+        break;
     }
 }
 
 void Game::Test()
 {
-
 }

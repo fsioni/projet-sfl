@@ -11,7 +11,8 @@
 *   en pixel des tuiles, le nombre de tuile par ligne ou le chemin
 *   vers l'image.
 */
-class Tileset{
+class Tileset
+{
 public:
     /*! \brief Constructeur par défaut 
     *
@@ -24,7 +25,7 @@ public:
     *
     * \param [in] ts : Tileset à copier.
     */
-    Tileset(const Tileset & ts);
+    Tileset(const Tileset &ts);
 
     /*! \brief Constructeur par copie
     *
@@ -38,15 +39,14 @@ public:
     */
     ~Tileset();
 
-
     /*! \brief Surcharge de l'opérateur =
     *
     * \param [in] ts : Tileset à copier
     */
-    Tileset & operator=(const Tileset & ts);
+    Tileset &operator=(const Tileset &ts);
 
     // TODO : soit à supprimer ou à documenter => en discuter avec les autres
-    void SetName(std::string name_);    
+    void SetName(std::string name_);
     void SetTileWidth(int tw);
     void SetTileHeight(int th);
     void SetTileCount(int tc);
@@ -54,7 +54,7 @@ public:
     void SetTileMapPath(std::string tmp);
     void SetTileMapWidth(int tmw);
     void SetTileMapHeight(int tmh);
-    
+
     /*! \brief Retourne name
     *
     * \return Le nom du Tileset.
@@ -110,6 +110,7 @@ public:
     *   censé faire.
     */
     void Test() const;
+
 private:
     /*! \brief  Nom du tileset. */
     std::string name;

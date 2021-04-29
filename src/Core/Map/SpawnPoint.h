@@ -11,7 +11,7 @@
 *   Hérité de Box.
 *   Possède un nom. 
 */
-class SpawnPoint: public Box
+class SpawnPoint : public Box
 {
 public:
     /*// === Fonctions membres publiques === //*/
@@ -27,7 +27,7 @@ public:
     * \param [in] name : String contenant le nom du SpawnPoint
     * \param [in] objectTag : balise contenant les informations de la Box dans le .tmx.
     */
-    SpawnPoint(const std::string& _name, const std::string& objectTag);
+    SpawnPoint(const std::string &_name, const std::string &objectTag);
 
     /*! \brief Destructeur
     *
@@ -39,7 +39,7 @@ public:
     *
     * \param [in] nName : nouveau nom du SpawnPoint
     */
-    void SetName(const std::string& nName);
+    void SetName(const std::string &nName);
 
     /*! \brief Retourne anme
     *

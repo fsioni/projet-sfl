@@ -8,14 +8,14 @@
 #include "Layers/MapLayer.h"
 #include "Layers/SpawnsLayer.h"
 
-
 /*! \class Map
 *   \brief Classe stockant la map.
 *
 *   Possède toutes les informations sur la map comme les différents 
 *   layer ou encore le tileset.
 */
-class Map{
+class Map
+{
 public:
     /*! \brief Constructeur par défaut */
     Map();
@@ -40,31 +40,31 @@ public:
     *   
     *   \param [in] ts : Tileset à copié dans tileset.
     */
-    void SetTileset(const Tileset& ts);
+    void SetTileset(const Tileset &ts);
 
     /*! \brief Ajout d'un MapLayer dans le tableau dynamique mapLayers.
     *   
     *   \param [in] l : MapLayer à ajouter.
     */
-    void AddMapLayer(const MapLayer & l);
+    void AddMapLayer(const MapLayer &l);
 
     /*! \brief Modifie spawnsLayers par celui en paramètre.
     *   
     *   \param [in] nLayer : SpawnsLayer à copié dans spawnsLayer
     */
-    void SetSpawnLayer(const SpawnsLayer& nLayer);
+    void SetSpawnLayer(const SpawnsLayer &nLayer);
 
     /*! \brief Retourne tileset
     *
     * \return La tileset de la Map.
     */
-    Tileset * GetTileset() const;
+    Tileset *GetTileset() const;
 
     /*! \brief Retourne collisionLayers
     *
     * \return Le collisionLayers de la Map.
     */
-    CollisionLayer * GetCollisionLayer();
+    CollisionLayer *GetCollisionLayer();
 
     /*! \brief Retourne mapLayers
     *
@@ -76,7 +76,7 @@ public:
     *
     * \return Le SpawnsLayers de la Map.
     */
-    SpawnsLayer * GetSpawnsLayer() const;
+    SpawnsLayer *GetSpawnsLayer() const;
 
     /*! \brief Charge les données d'un fichier .tmx.
     *
@@ -96,7 +96,6 @@ public:
     */
     void TsxLoadTileset(std::string fileName);
 
-
     /*! \brief Fonction de test de la classe Map.
     *
     *   Effectue une série de test de regression sur l'ensemble des
@@ -112,16 +111,15 @@ private:
     /*! \brief  CollisionLayer contenant la couche des objets avec lequel les 
     *           entités peuvent entrer en collision.
     */
-    CollisionLayer * collisionLayer;
+    CollisionLayer *collisionLayer;
 
     /*! \brief   SpawnLayer contenant les positions du spawn du joueur et 
     *            ceux des ennemis.
     */
-    SpawnsLayer * spawnsLayer;
+    SpawnsLayer *spawnsLayer;
 
     /*! \brief   Tileset contenant des informations sur les tuiles. */
-    Tileset * tileset;
-
+    Tileset *tileset;
 };
 
 #endif

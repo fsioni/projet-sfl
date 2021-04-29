@@ -4,7 +4,8 @@
 
 #include "Tileset.h"
 
-Tileset::Tileset(){
+Tileset::Tileset()
+{
     name = "NULL";
     tileWidth = -1;
     tileHeight = -1;
@@ -15,7 +16,8 @@ Tileset::Tileset(){
     tileMapHeight = -1;
 }
 
-Tileset::Tileset(const Tileset & ts){
+Tileset::Tileset(const Tileset &ts)
+{
     name = ts.name;
     tileHeight = ts.tileHeight;
     tileWidth = ts.tileWidth;
@@ -26,7 +28,8 @@ Tileset::Tileset(const Tileset & ts){
     tileMapHeight = ts.tileMapHeight;
 }
 
-Tileset::Tileset(std::string rawData){
+Tileset::Tileset(std::string rawData)
+{
     // On recupère ce qu'il y a dans la balise ouvrante <tileset>
     std::string tileSet = getInsideTag(rawData, "tileset", 0);
 
@@ -43,20 +46,21 @@ Tileset::Tileset(std::string rawData){
     tileMapHeight = stoi(getAttributeValue(img, "height"));
     tileMapWidth = stoi(getAttributeValue(img, "width"));
 
-    // Chemin relatif au fichier tsx => chemin relatif 
+    // Chemin relatif au fichier tsx => chemin relatif
     // au repertoire racine du projet
     std::string tsxPath = getAttributeValue(img, "source");
     tileMapPath = tsxPath.substr(5, tsxPath.length());
-    tileMapPath = "./data"+tileMapPath;
-
+    tileMapPath = "./data" + tileMapPath;
 }
 
-Tileset::~Tileset(){
-
+Tileset::~Tileset()
+{
 }
 
-Tileset & Tileset::operator=(const Tileset & ts){
-    if(&ts != this){
+Tileset &Tileset::operator=(const Tileset &ts)
+{
+    if (&ts != this)
+    {
         name = ts.name;
         tileHeight = ts.tileHeight;
         tileWidth = ts.tileWidth;
@@ -70,68 +74,84 @@ Tileset & Tileset::operator=(const Tileset & ts){
 }
 
 // ====== SETERS ET GETERS =======
-void Tileset::SetName(std::string name_){
+void Tileset::SetName(std::string name_)
+{
     name = name_;
-}    
-void Tileset::SetTileWidth(int tw){
+}
+void Tileset::SetTileWidth(int tw)
+{
     tileWidth = tw;
 }
-void Tileset::SetTileHeight(int th){
+void Tileset::SetTileHeight(int th)
+{
     tileHeight = th;
 }
-void Tileset::SetTileCount(int tc){
+void Tileset::SetTileCount(int tc)
+{
     tileCount = tc;
 }
-void Tileset::SetColumn(int col){
+void Tileset::SetColumn(int col)
+{
     column = col;
 }
-void Tileset::SetTileMapPath(std::string tmp){
+void Tileset::SetTileMapPath(std::string tmp)
+{
     tileMapPath = tmp;
 }
-void Tileset::SetTileMapWidth(int tmw){
+void Tileset::SetTileMapWidth(int tmw)
+{
     tileMapWidth = tmw;
 }
-void Tileset::SetTileMapHeight(int tmh){
+void Tileset::SetTileMapHeight(int tmh)
+{
     tileMapHeight = tmh;
 }
 
-
-std::string Tileset::GetName() const{
+std::string Tileset::GetName() const
+{
     return name;
 }
 
-int Tileset::GetTileWidth() const{
+int Tileset::GetTileWidth() const
+{
     return tileWidth;
 }
 
-int Tileset::GetTileHeight() const{
+int Tileset::GetTileHeight() const
+{
     return tileHeight;
 }
 
-int Tileset::GetTileCount() const{
+int Tileset::GetTileCount() const
+{
     return tileCount;
 }
 
-int Tileset::GetColumn() const{
+int Tileset::GetColumn() const
+{
     return column;
 }
 
-std::string Tileset::GetTileMapPath() const{
+std::string Tileset::GetTileMapPath() const
+{
     return tileMapPath;
 }
 
-int Tileset::GetTileMapWidth() const{
+int Tileset::GetTileMapWidth() const
+{
     return tileMapWidth;
 }
 
-int Tileset::GetTileMapHeight() const{
+int Tileset::GetTileMapHeight() const
+{
     return tileMapHeight;
 }
 
-void Tileset::Test() const{
+void Tileset::Test() const
+{
     std::string rawData = "<tileset version=\"1.4\" tiledversion=\"1.4.3\"";
-    rawData +=  " name=\"mainTileSet\" tilewidth=\"32\" tileheight=\"32\"";
-    rawData +=  " tilecount=\"1064\" columns=\"8\">\n";
+    rawData += " name=\"mainTileSet\" tilewidth=\"32\" tileheight=\"32\"";
+    rawData += " tilecount=\"1064\" columns=\"8\">\n";
     rawData += " <image source=\"../../textures/tilesets/mainTileset.png\"";
     rawData += " width=\"256\" height=\"4256\"/>\n";
     rawData += "  </tileset>";
@@ -139,27 +159,28 @@ void Tileset::Test() const{
 
     std::cout << "Constructeur Tileset(string rawData) : ";
     Tileset ts(rawData);
-    assert(ts.GetName()=="mainTileSet");
-    assert(ts.GetColumn()==8);
-    assert(ts.GetTileCount()==1064);
-    assert(ts.GetTileWidth()==32);
-    assert(ts.GetTileHeight()==32);
-    assert(ts.GetTileMapPath()=="./data/textures/tilesets/mainTileset.png");
-    assert(ts.GetTileMapWidth()==256);
-    assert(ts.GetTileMapHeight()==4256);
+    assert(ts.GetName() == "mainTileSet");
+    assert(ts.GetColumn() == 8);
+    assert(ts.GetTileCount() == 1064);
+    assert(ts.GetTileWidth() == 32);
+    assert(ts.GetTileHeight() == 32);
+    assert(ts.GetTileMapPath() == "./data/textures/tilesets/mainTileset.png");
+    assert(ts.GetTileMapWidth() == 256);
+    assert(ts.GetTileMapHeight() == 4256);
     std::cout << "ok" << std::endl;
 
     std::cout << "Constructeur Tileset(const Tileset & ts) : ";
     Tileset ts2(ts);
-    assert(ts2.GetName()=="mainTileSet");
-    assert(ts2.GetColumn()==8);
-    assert(ts2.GetTileCount()==1064);
-    assert(ts2.GetTileWidth()==32);
-    assert(ts2.GetTileHeight()==32);
-    assert(ts2.GetTileMapPath()=="./data/textures/tilesets/mainTileset.png");
-    assert(ts2.GetTileMapWidth()==256);
-    assert(ts2.GetTileMapHeight()==4256);
+    assert(ts2.GetName() == "mainTileSet");
+    assert(ts2.GetColumn() == 8);
+    assert(ts2.GetTileCount() == 1064);
+    assert(ts2.GetTileWidth() == 32);
+    assert(ts2.GetTileHeight() == 32);
+    assert(ts2.GetTileMapPath() == "./data/textures/tilesets/mainTileset.png");
+    assert(ts2.GetTileMapWidth() == 256);
+    assert(ts2.GetTileMapHeight() == 4256);
     std::cout << "ok" << std::endl;
 
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl
+              << std::endl;
 }

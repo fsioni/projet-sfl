@@ -4,7 +4,8 @@
 
 #include <iostream>
 
-Box::Box(){
+Box::Box()
+{
     id = -1;
     x = -1;
     y = -1;
@@ -12,7 +13,8 @@ Box::Box(){
     height = -1;
 }
 
-Box::Box(const std::string& objectTag){
+Box::Box(const std::string &objectTag)
+{
     id = getIntAttributeValue(objectTag, "id");
     x = getIntAttributeValue(objectTag, "x");
     y = getIntAttributeValue(objectTag, "y");
@@ -20,7 +22,8 @@ Box::Box(const std::string& objectTag){
     height = getIntAttributeValue(objectTag, "height");
 }
 
-Box::Box(int nId, int nX, int nY, int nWidth, int nHeight){
+Box::Box(int nId, int nX, int nY, int nWidth, int nHeight)
+{
     id = nId;
     x = nX;
     y = nY;
@@ -32,47 +35,57 @@ Box::~Box()
 {
 }
 
-
-
-void Box::SetId(int nId){
-    id=nId;
+void Box::SetId(int nId)
+{
+    id = nId;
 }
 
-int Box::GetId() const{
+int Box::GetId() const
+{
     return id;
 }
 
-void Box::SetPosition(int nX, int nY){
+void Box::SetPosition(int nX, int nY)
+{
     SetX(nX);
     SetY(nY);
 }
 
-void Box::SetDimensions(int nWidth, int nHeight){
-    if(nWidth >= 0) width = nWidth;
-    if(nHeight >= 0) height = nHeight;
+void Box::SetDimensions(int nWidth, int nHeight)
+{
+    if (nWidth >= 0)
+        width = nWidth;
+    if (nHeight >= 0)
+        height = nHeight;
 }
 
-int Box::GetX() const{
+int Box::GetX() const
+{
     return x;
 }
 
-int Box::GetY() const{
+int Box::GetY() const
+{
     return y;
 }
 
-void Box::SetX(int nX){
-    if(nX>=0) x = nX;
+void Box::SetX(int nX)
+{
+    if (nX >= 0)
+        x = nX;
 }
 
-void Box::SetY(int nY){
-    if(nY>=0) y = nY;
+void Box::SetY(int nY)
+{
+    if (nY >= 0)
+        y = nY;
 }
 
-int Box::GetWidth() const{return width;}
-int Box::GetHeight() const{return height;}
+int Box::GetWidth() const { return width; }
+int Box::GetHeight() const { return height; }
 
-
-void Box::Test() const{
+void Box::Test() const
+{
     std::cout << "===== Class Box =====" << std::endl;
 
     Box box1;
@@ -85,15 +98,14 @@ void Box::Test() const{
     std::cout << "ok" << std::endl;
 
     Box box2(1, 2, 3, 4, 5);
-    std::cout << "Constructeur Box(int nId, int nX, int nY, int nWidth, "<<
-                 "int nHeight) : ";
+    std::cout << "Constructeur Box(int nId, int nX, int nY, int nWidth, "
+              << "int nHeight) : ";
     assert(box2.id == 1);
     assert(box2.x == 2);
     assert(box2.y == 3);
     assert(box2.width == 4);
     assert(box2.height == 5);
     std::cout << "ok" << std::endl;
-
 
     std::string tag;
     tag = "<object id=\"14\" x=\"224\" y=\"832\" width=\"64\" height=\"64\"/>";
@@ -108,18 +120,17 @@ void Box::Test() const{
 
     std::cout << "SetX(int nX) : ";
     box1.SetX(123);
-    assert(box1.GetX()==123);
+    assert(box1.GetX() == 123);
     box1.SetX(-134);
-    assert(box1.GetX()==123);
+    assert(box1.GetX() == 123);
     std::cout << "ok" << std::endl;
 
     std::cout << "SetY(int nY) : ";
     box1.SetY(123);
-    assert(box1.GetY()==123);
+    assert(box1.GetY() == 123);
     box1.SetY(-134);
-    assert(box1.GetY()==123);
+    assert(box1.GetY() == 123);
     std::cout << "ok" << std::endl;
-
 
     std::cout << "SetPosition(int nX, int nY) : ";
     box1.SetPosition(12, 10);
@@ -139,8 +150,6 @@ void Box::Test() const{
     assert(box1.GetY() == 13);
     std::cout << "ok" << std::endl;
 
-    
-
     std::cout << "SetDimensions(int nWidth, int nHeight) : ";
     box1.SetDimensions(12, 10);
     assert(box1.GetWidth() == 12);
@@ -159,5 +168,6 @@ void Box::Test() const{
     assert(box1.GetHeight() == 13);
     std::cout << "ok" << std::endl;
 
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl
+              << std::endl;
 }

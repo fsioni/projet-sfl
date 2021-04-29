@@ -4,7 +4,6 @@
 #include <string>
 #include <vector>
 
-
 void testRegression();
 
 // TODO : fonction de test + valeur retour en cas d'erreur
@@ -13,8 +12,6 @@ int countTag(std::string data, std::string tag);
 std::string getDataTag(std::string data, std::string tag, int indice);
 std::string getFullTag(std::string data, std::string tag, int indice);
 int getIntAttributeValue(std::string str, std::string attribute);
-
-
 
 /*! \brief Retourne un fichier dans une std::string.
 *   \param [in] fileName : std::string, chemin et nom du fichier à lire.

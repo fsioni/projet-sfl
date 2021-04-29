@@ -27,7 +27,7 @@ public:
     *   Destructeur de l'objet StateManager
     */
     ~StateManager();
-    
+
     /*! \brief Ajoute le State en paramètre à la pile
     *
     *   Met en pause l'état actuel et ajoute l'état en paramètre à la pile avant de le lancer
@@ -35,7 +35,7 @@ public:
     *   \param [in] replace : true si il doit remplacé le State actuel
     */
     void Add(std::unique_ptr<State> nState, bool replace_ = false);
-    
+
     /*! \brief Passe au prochain State
     *
     *   Supprime le State courant et lance le suivant dans la pile
@@ -44,16 +44,15 @@ public:
 
     void ProcessStateChange();
 
-    std::unique_ptr<State>& GetCurrent();
+    std::unique_ptr<State> &GetCurrent();
+
 private:
     /*// === Données membres privées === //*/
     std::stack<std::unique_ptr<State>> sStates; //Tas d'états. Le dernier état du tableau est celui qui doit être joué
-    std::unique_ptr<State> sNewState; //State en attente
+    std::unique_ptr<State> sNewState;           //State en attente
     bool add;
     bool replace;
     bool remove;
 };
-
-
 
 #endif // __STATEMANAGER_H__
