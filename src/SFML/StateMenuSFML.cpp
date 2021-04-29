@@ -28,7 +28,7 @@ void StateMenuSFML::Init()
 
     sound.setBuffer(buffer);
 
-    //music.play();
+    music.play();
     music.setLoop(true);
 
     int winx = context->renderWin->getSize().x;
