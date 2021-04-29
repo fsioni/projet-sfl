@@ -10,10 +10,8 @@
 EntityWithoutHP::EntityWithoutHP(){
     x = 0;
     y = 0;
-    offset = 7;
     speed = 1;
     name = "Unknown";
-    cb = std::make_shared<CollisionBox>(x, y, 32, 32);
     direction = Right;
 
     isMoving = false;
@@ -26,10 +24,9 @@ EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, std::string nam
     if(y_ < 0) y = 0;
     else y = y_;
     
-    offset = 7;
     name = name_;
     speed = speed_;
-    cb = std::make_shared<CollisionBox>(x, y, 32, 32);
+
 
     direction = Right;
     isMoving = false;
@@ -39,9 +36,6 @@ EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, std::string nam
 EntityWithoutHP::~EntityWithoutHP(){
     x = 0;
     y= 0;
-    //width = 0;
-    //height = 0;
-    offset =0;
     name = "delete";
     direction = Right;
 }
@@ -56,9 +50,7 @@ void EntityWithoutHP::SetName(std::string newName){
     name = newName;
 }
 
-std::shared_ptr<CollisionBox> EntityWithoutHP::GetCollisionBox(){
-    return cb;
-}
+
 
 std::string EntityWithoutHP::GetName() const{
     return name;
@@ -78,16 +70,7 @@ void EntityWithoutHP::SetPos_y(float newy){
         y = newy; 
 }
 
-int EntityWithoutHP::GetOffset() const
-{
-    return offset;
-}
 
-void EntityWithoutHP::SetOffset(int newO)
-{
-    if(newO >= 0) 
-        offset = newO;
-}
 
 float EntityWithoutHP::GetPos_y() const{
     return y;
@@ -154,20 +137,75 @@ int EntityWithoutHP::GetID() const{
     return id.id;
 }
 
+
+
+bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * colLayer, int dt){
+    bool isColliding = false;
+
+    // Si pas de mouvement alors pas de collision
+    if(vx==0 && vy==0) return isColliding;
+
+    // CollisionBox de l'entité
+    CollisionBox * cbThisEntity = colLayer->GetCollisionBoxesEntity()[GetID()];
+
+    // -16 pour centrer la position de l'entité
+    int posX = cbThisEntity->GetX() + vx*speed - cbThisEntity->GetWidth()/2;
+    int posY = cbThisEntity->GetY() + vy*speed - cbThisEntity->GetHeight()/2;
+
+    // Collision avec la map
+    std::vector<CollisionBox> cbMap = colLayer->GetCollisionBoxes();
+    for(int i=0; i<cbMap.size(); i++){
+
+        //Detection collision axe X
+        if (posX + cbThisEntity->GetWidth()>= cbMap[i].GetX()
+            && cbMap[i].GetX() + cbMap[i].GetWidth() >= posX){
+            //Detection collision axe Y
+            if(posY + cbThisEntity->GetHeight()>= cbMap[i].GetY()
+               && cbMap[i].GetY() + cbMap[i].GetHeight() >= posY){
+
+                isColliding = true;
+            }   
+        }
+    }
+
+    // Collision entre entity
+    std::map<int, CollisionBox *> cbEntities = colLayer->GetCollisionBoxesEntity();
+    for(std::map<int, CollisionBox *>::iterator it= cbEntities.begin();
+        it != cbEntities.end(); it++){
+        if(it->first != GetID()){
+            CollisionBox * cbEntity = it->second;
+            //Detection collision axe X
+            if (posX + cbThisEntity->GetWidth()>= cbEntity->GetX()
+                && cbEntity->GetX() + cbEntity->GetWidth() >= posX){
+                //Detection collision axe Y
+                if(posY + cbThisEntity->GetHeight()>= cbEntity->GetY()
+                && cbEntity->GetY() + cbEntity->GetHeight() >= posY){
+                    isColliding = true;
+                }   
+            }
+        }
+    }
+
+
+    // Si pas de collision alors on bouge l'entité
+    if(!isColliding)
+        Move((vx*dt)/30, (vy*dt)/30);
+
+    return isColliding;
+}
+
+
+
+
 void EntityWithoutHP::Test() const{
     std::cout << "===== Class EntityWithoutHP =====" << std::endl;
     EntityWithoutHP entity1;
     std::cout << "Constructeur EntityWithoutHP() : ";
     assert(entity1.x == 0.);
     assert(entity1.y == 0.);
-    assert(entity1.offset == 7);
     assert(entity1.speed == 1);
     assert(entity1.name == "Unknown");
     assert(entity1.direction == Right);
-    assert(entity1.cb->GetX() == 0);
-    assert(entity1.cb->GetY() == 0);
-    assert(entity1.cb->GetWidth() == 32);
-    assert(entity1.cb->GetHeight()==32);
     assert(!entity1.isMoving);
     std::cout << "ok" << std::endl;
 
@@ -176,14 +214,9 @@ void EntityWithoutHP::Test() const{
     EntityWithoutHP entity2(12.3, 13.4, 3, "Entity2");
     assert(entity2.x == float(12.3));
     assert(entity2.y == float(13.4));
-    assert(entity2.offset == 7);
     assert(entity2.speed == 3);
     assert(entity2.name == "Entity2");
     assert(entity2.direction == Right);
-    assert(entity2.cb->GetX() == int(12.3));
-    assert(entity2.cb->GetY() == int(13.4));
-    assert(entity2.cb->GetWidth() == 32);
-    assert(entity2.cb->GetHeight()== 32);
     assert(!entity2.isMoving);
     std::cout << "ok" << std::endl;
 
@@ -206,12 +239,6 @@ void EntityWithoutHP::Test() const{
     assert(entity1.GetName()== "Méchant");
     std::cout << "ok" << std::endl;
 
-    std::cout << "SetOffset(int newO) et GetOffSet() : ";
-    entity1.SetOffset(10);
-    assert(entity1.GetOffset() == 10);
-    entity1.SetOffset(-5);
-    assert(entity1.GetOffset() == 10);
-    std::cout << "ok" << std::endl;
 
     std::cout << "SetSpeed(int newSpeed) et GetSpeed() : ";
     entity1.SetSpeed(11);

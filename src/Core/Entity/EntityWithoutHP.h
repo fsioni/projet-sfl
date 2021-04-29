@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 #include <memory>
-#include "../Map/CollisionBox.h"
+#include "../Map/Layers/CollisionLayer.h"
 #include "UniqueID.h"
 
  
@@ -110,24 +110,17 @@ public:
     *   \param [in] newName: chaine de caractères, nouveau nom de l'entité.
     *
     */
-
     void SetName(std::string newName);
 
-    std::shared_ptr<CollisionBox> GetCollisionBox();
 
 
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.
     *
     *   Imprime sur la console des informations concernant l'entité.
-    *
-    *
     */
     virtual void PrintEntityInfo();
 
     void Test() const;
-
-    int GetOffset() const;
-    void SetOffset(int newO);
 
     int GetSpeed() const;
     void SetSpeed(int newSpeed);
@@ -147,6 +140,8 @@ public:
 
     int GetID() const;
 
+    bool MoveWithCollision(float vx, float vy, CollisionLayer * colLayer, int dt);
+
 protected :
     /*// ==== Données membres protégées === //*/
 
@@ -158,10 +153,6 @@ protected :
 
     /*! \brief Vitesse de l'entité */
     int speed;
-
-    std::shared_ptr<CollisionBox> cb;
-
-    int offset;
 
     /*! \brief Nom de l'entité */
     std::string name;

@@ -65,9 +65,14 @@ void StateGameTxt::Update()
         break;
     }    
 
-    std::shared_ptr<CollisionBox> cbPlayer = context->player->GetCollisionBox();
-    cbPlayer->SetX(context->player->GetPos_x());
-    cbPlayer->SetY(context->player->GetPos_y());
+    float playerX = context->player->GetPos_x();
+    float playerY = context->player->GetPos_y();
+    int playerID = context->player->GetID();
+    
+
+    CollisionBox * cbPlayer = 
+        context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
+    cbPlayer->SetPosition(playerX, playerY);
 }
 
 void StateGameTxt::Display() 
@@ -139,8 +144,10 @@ void StateGameTxt::MoveWithCollision(float vx, float vy)
     std::vector<CollisionBox> cb = 
         context->map->GetCollisionLayer()->GetCollisionBoxes();
 
-        std::shared_ptr<CollisionBox> cbPlayer = context->player->
-            GetCollisionBox();
+    int playerID = context->player->GetID();
+
+    CollisionBox * cbPlayer = 
+        context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
 
     for (long unsigned int i = 0; i < cb.size(); i++)
     {
