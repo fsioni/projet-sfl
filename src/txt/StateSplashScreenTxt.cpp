@@ -4,41 +4,40 @@
 #include <memory>
 #include <iostream>
 
-
-StateSplashScreenTxt::StateSplashScreenTxt(/* args */) 
+StateSplashScreenTxt::StateSplashScreenTxt(/* args */)
 {
-    
 }
 
-StateSplashScreenTxt::StateSplashScreenTxt(std::shared_ptr<Context> &cContext) 
+StateSplashScreenTxt::StateSplashScreenTxt(std::shared_ptr<Context> &cContext)
     : context(cContext)
 {
-    
 }
 
-StateSplashScreenTxt::~StateSplashScreenTxt() 
+StateSplashScreenTxt::~StateSplashScreenTxt()
 {
-    
 }
 
-void StateSplashScreenTxt::Init() 
+void StateSplashScreenTxt::Init()
 {
-    std::cout << std::endl << "Welcome in Legend of Nautibus" << std::endl
-    << std::endl << "A game created by : " << std::endl << "SIONI Farès" <<
-    std::endl << "BAGNOL Stanislas " << std::endl << "CHOUGAR Lyes" << 
-    std::endl << std::flush;
+    std::cout << std::endl
+              << "Welcome in Legend of Nautibus" << std::endl
+              << std::endl
+              << "A game created by : " << std::endl
+              << "SIONI Farès" << std::endl
+              << "BAGNOL Stanislas " << std::endl
+              << "CHOUGAR Lyes" << std::endl
+              << std::flush;
 
     start = std::clock();
 }
 
-void StateSplashScreenTxt::ProcessInput() 
+void StateSplashScreenTxt::ProcessInput()
 {
-    
 }
 
-void StateSplashScreenTxt::Update() 
+void StateSplashScreenTxt::Update()
 {
-    duration = (std::clock() - start) / (double) CLOCKS_PER_SEC;
+    duration = (std::clock() - start) / (double)CLOCKS_PER_SEC;
 
     if (duration > 3)
     {
@@ -46,17 +45,14 @@ void StateSplashScreenTxt::Update()
     }
 }
 
-void StateSplashScreenTxt::Display() 
+void StateSplashScreenTxt::Display()
 {
-    
 }
 
-void StateSplashScreenTxt::Pause() 
+void StateSplashScreenTxt::Pause()
 {
-    
 }
 
-void StateSplashScreenTxt::Start() 
+void StateSplashScreenTxt::Start()
 {
-    
 }
