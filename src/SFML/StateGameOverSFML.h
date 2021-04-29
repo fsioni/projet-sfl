@@ -32,7 +32,7 @@ private:
     sf::Font textFont;
     sf::Text gameOverText;
     sf::Text restartText;
-    
+
     sf::Music music;
 };
 

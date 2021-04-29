@@ -5,7 +5,6 @@
 #include "../Core/StateManager/State.h"
 #include <SFML/Audio.hpp>
 
-
 class StateMenuSFML : public State
 {
 public:
@@ -44,6 +43,5 @@ private:
 
     sf::SoundBuffer buffer;
     sf::Sound sound;
-    
 };
 #endif // __STATEMENUSFML_H__

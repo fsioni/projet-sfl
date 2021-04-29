@@ -4,13 +4,11 @@
 
 StateSplashScreenSFML::StateSplashScreenSFML(/* args */)
 {
-
 }
 
 StateSplashScreenSFML::StateSplashScreenSFML(std::shared_ptr<Context> &cContext)
     : context(cContext)
 {
-
 }
 
 StateSplashScreenSFML::~StateSplashScreenSFML()
@@ -39,25 +37,29 @@ void StateSplashScreenSFML::Init()
     int winx = context->renderWin->getSize().x;
     int winy = context->renderWin->getSize().y;
 
-    gameText.setPosition(winx/2.0f, winy/2.0f);
-    madeByText.setPosition(winx/2.0f, winy /2.0f + 200.0f);
+    gameText.setPosition(winx / 2.0f, winy / 2.0f);
+    madeByText.setPosition(winx / 2.0f, winy / 2.0f + 200.0f);
 
-    gameText.setOrigin(gameText.getLocalBounds().left+gameText.getLocalBounds().width/2.0f,
-                        gameText.getLocalBounds().top+gameText.getLocalBounds().height/2.0f);
+    gameText.setOrigin(gameText.getLocalBounds().left + 
+                        gameText.getLocalBounds().width / 2.0f,
+                        gameText.getLocalBounds().top + 
+                        gameText.getLocalBounds().height / 2.0f);
 
-    madeByText.setOrigin(madeByText.getLocalBounds().left+madeByText.getLocalBounds().width/2.0f,
-                        madeByText.getLocalBounds().top+madeByText.getLocalBounds().height/2.0f);
+    madeByText.setOrigin(madeByText.getLocalBounds().left +
+                            madeByText.getLocalBounds().width / 2.0f,
+                            madeByText.getLocalBounds().top +
+                            madeByText.getLocalBounds().height / 2.0f);
 
     gameText.setStyle(sf::Text::Bold);
 
     start = std::clock();
-
 }
 
 void StateSplashScreenSFML::ProcessInput()
 {
     sf::Event Event;
-    while(context->renderWin->pollEvent(Event)){
+    while (context->renderWin->pollEvent(Event))
+    {
 
         switch (Event.type)
         {
@@ -70,11 +72,13 @@ void StateSplashScreenSFML::ProcessInput()
             switch (Event.key.code)
             {
             case sf::Keyboard::Space:
-                context->stateMan->Add(std::make_unique<StateMenuSFML>(context), true);
+                context->stateMan->
+                    Add(std::make_unique<StateMenuSFML>(context), true);
                 break;
 
             case sf::Keyboard::Enter:
-                context->stateMan->Add(std::make_unique<StateMenuSFML>(context), true);
+                context->stateMan->
+                    Add(std::make_unique<StateMenuSFML>(context), true);
                 break;
 
             case sf::Keyboard::X:
@@ -99,7 +103,7 @@ void StateSplashScreenSFML::ProcessInput()
 
 void StateSplashScreenSFML::Update()
 {
-    duration = (std::clock() - start) / (double) CLOCKS_PER_SEC;
+    duration = (std::clock() - start) / (double)CLOCKS_PER_SEC;
 
     if (duration > 2)
     {
@@ -118,10 +122,8 @@ void StateSplashScreenSFML::Display()
 
 void StateSplashScreenSFML::Pause()
 {
-
 }
 
 void StateSplashScreenSFML::Start()
 {
-
 }

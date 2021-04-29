@@ -5,7 +5,6 @@
 #include "../Core/StateManager/State.h"
 #include <SFML/Audio.hpp>
 
-
 class StateSplashScreenSFML : public State
 {
 public:
@@ -35,7 +34,7 @@ private:
     sf::Text gameText;
     sf::Text madeByText;
 
-    sf::Music music;    
+    sf::Music music;
 };
 
 #endif // __STATESPLASHSCREENSFML_H__

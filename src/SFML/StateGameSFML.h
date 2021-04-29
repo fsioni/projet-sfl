@@ -5,7 +5,6 @@
 #include "../Core/StateManager/State.h"
 #include <SFML/Audio.hpp>
 
-
 class StateGameSFML : public State
 {
 public:
@@ -32,6 +31,7 @@ public:
     void Start();
 
     void MovePlayerWithCollision(float vx, float vy);
+
 private:
     std::shared_ptr<Context> context;
 
@@ -58,7 +58,7 @@ private:
 
     // Info sur la tilemap
     int w, h, nbMapLayer, x, y, data;
-    
+
     // Gestion de camera qui suit le joueur
     int substX, substY;
 
@@ -77,13 +77,13 @@ private:
     sf::Sprite heartSprite;
 
     bool isPaused;
-    
+
     // Gestion scintillement rouge lorsque le joueur prend des dégâts
     sf::Clock hitClock;
     int lastHP;
     bool playerGotHitted;
 
-    // Musique et sons 
+    // Musique et sons
     sf::Music music;
 };
 

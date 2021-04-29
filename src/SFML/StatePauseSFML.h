@@ -4,7 +4,6 @@
 #include "../Core/Game.h"
 #include "../Core/StateManager/State.h"
 
-
 class StatePauseSFML : public State
 {
 public:
