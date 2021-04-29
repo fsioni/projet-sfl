@@ -24,6 +24,7 @@ struct Context
     std::unique_ptr<Player> player;
     std::vector<std::shared_ptr<Enemy>> enemies;
     bool isDebug;
+    bool isMute;
     bool quit;
 
     Context()
@@ -36,6 +37,7 @@ struct Context
                     getPlayerSpawn().GetX(), map->GetSpawnsLayer()->
                     getPlayerSpawn().GetY(), "Player", 10, 10, 4, 10);
         isDebug = false;
+        isMute = false;
         quit = false;
     }
 };

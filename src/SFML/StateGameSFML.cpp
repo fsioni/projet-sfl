@@ -23,6 +23,7 @@ void StateGameSFML::Init()
     assert(music.openFromFile("data/sounds/music/01town2.wav"));
     assert(runningBuffer.loadFromFile("data/sounds/sfx/walking.wav"));
 
+    music.setVolume(70);
     music.play();
     runningSound.setBuffer(runningBuffer);
     runningSound.setLoop(true);
@@ -87,21 +88,25 @@ void StateGameSFML::ProcessInput()
     {
 
         //Si la touche Z et S sont enfoncées
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z) &&
-            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+        if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z) ||
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up)) &&
+            (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S) ||
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down)))
         {
             isGoingUp = false;
             isGoingDown = false;
         }
         //Si la touche Z est enfoncée
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z))
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z) ||
+                sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up))
         {
             isGoingUp = true;
             isGoingDown = false;
             context->player->SetDirection(Up);
         }
         //Si la touche S est enfoncée
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S) ||
+                sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down))
         {
             isGoingUp = false;
             isGoingDown = true;
@@ -115,21 +120,25 @@ void StateGameSFML::ProcessInput()
         }
 
         //Si la touche Q et D sont enfoncées
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q) &&
-            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
+        if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q) ||
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left)) && 
+            (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D) ||
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right)))
         {
             isGoingRight = false;
             isGoingLeft = false;
         }
         //Si la touche Q est enfoncée
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q))
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q) ||
+                sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
         {
             isGoingRight = true;
             isGoingLeft = false;
             context->player->SetDirection(Left);
         }
         //Si la touche D est enfoncée
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D) ||
+                sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
         {
             isGoingLeft = true;
             isGoingRight = false;
@@ -166,6 +175,11 @@ void StateGameSFML::ProcessInput()
                 context->renderWin->close();
                 context->quit = true;
             }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::M))
+            {
+                context->isMute = (!context->isMute);
+            }
+            
 
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape))
             {
@@ -240,6 +254,31 @@ void StateGameSFML::Update()
         deltaClock.restart();
         fpsClock.restart();
     }
+
+    //  Mise à jour du son
+        if (!isWalking && 
+        runningSound.getStatus() == sf::SoundSource::Status::Playing)
+    {
+        runningSound.stop();
+    }
+    
+        if (isWalking && 
+        runningSound.getStatus() == sf::SoundSource::Status::Stopped)
+    {
+        runningSound.play();
+    }
+
+    if (context->isMute && (runningSound.getVolume() != 0 || music.getVolume() != 0))
+    {
+        runningSound.setVolume(0);
+        music.setVolume(0);
+    }
+    
+    if (!context->isMute && (runningSound.getVolume() == 0 || music.getVolume() == 0))
+    {
+        runningSound.setVolume(100);
+        music.setVolume(70);
+    }
 }
 
 void StateGameSFML::UpdatePlayer()
@@ -286,18 +325,6 @@ void StateGameSFML::UpdatePlayer()
     if (!isGoingLeft && !isGoingRight && !isGoingUp && !isGoingDown)
     {
         isWalking = false;
-    }
-    
-    if (!isWalking && 
-        runningSound.getStatus() == sf::SoundSource::Status::Playing)
-    {
-        runningSound.stop();
-    }
-    
-        if (isWalking && 
-        runningSound.getStatus() == sf::SoundSource::Status::Stopped)
-    {
-        runningSound.play();
     }
 
     std::shared_ptr<CollisionBox> cbPlayer = context->player->GetCollisionBox();

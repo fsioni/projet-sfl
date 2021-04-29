@@ -86,6 +86,10 @@ void StateSplashScreenSFML::ProcessInput()
                 context->quit = true;
                 break;
 
+            case sf::Keyboard::M:
+                context->isMute = !(context->isMute);
+                break;
+
             case sf::Keyboard::Escape:
                 context->renderWin->close();
                 context->quit = true;
@@ -108,6 +112,16 @@ void StateSplashScreenSFML::Update()
     if (duration > 2)
     {
         context->stateMan->Add(std::make_unique<StateMenuSFML>(context), true);
+    }
+
+    if (context->isMute && music.getVolume() != 0)
+    {
+        music.setVolume(0);
+    }
+    
+    if (!context->isMute && music.getVolume() == 0)
+    {
+        music.setVolume(70);
     }
 }
 

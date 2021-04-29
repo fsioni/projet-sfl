@@ -84,6 +84,7 @@ private:
     bool playerGotHitted;
 
     // Musique et sons
+    bool isMute;
     sf::Music music;
     sf::SoundBuffer runningBuffer;
     sf::Sound runningSound;

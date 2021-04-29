@@ -69,6 +69,10 @@ void StateGameOverSFML::ProcessInput()
                 context->quit = true;
                 break;
 
+            case sf::Keyboard::M:
+                context->isMute = !(context->isMute);
+                break;                
+
             default:
                 break;
             }
@@ -103,6 +107,15 @@ void StateGameOverSFML::RestartGame()
 
 void StateGameOverSFML::Update()
 {
+    if (context->isMute && music.getVolume() != 0)
+    {
+        music.setVolume(0);
+    }
+    
+    if (!context->isMute && music.getVolume() == 0)
+    {
+        music.setVolume(70);
+    }
 }
 
 void StateGameOverSFML::Display()

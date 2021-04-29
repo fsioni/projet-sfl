@@ -142,7 +142,8 @@ After compiling :
 - To move along all axis use : ̀`Z Q S F`
 - To pause the game : `escape`
 - To restart the game after Game Over : `Space`
-- To open the debug mode press : `P`
+- To mute the sound of the game press : `m`
+- To open the debug mode press : `p`
 - To quit press : `x` or the cross button.
 
 

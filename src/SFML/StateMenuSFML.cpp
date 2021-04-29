@@ -82,7 +82,6 @@ void StateMenuSFML::ProcessInput()
             switch (event.key.code)
             {
             case sf::Keyboard::Up:
-            {
                 if (!isPlayButSelected)
                 {
                     isPlayButSelected = true;
@@ -90,9 +89,17 @@ void StateMenuSFML::ProcessInput()
                     sound.play();
                 }
                 break;
-            }
+            
+            case sf::Keyboard::Z:
+                if (!isPlayButSelected)
+                {
+                    isPlayButSelected = true;
+                    isExitButSelected = false;
+                    sound.play();
+                }
+                break;            
+
             case sf::Keyboard::Down:
-            {
                 if (!isExitButSelected)
                 {
                     isPlayButSelected = false;
@@ -100,9 +107,21 @@ void StateMenuSFML::ProcessInput()
                     sound.play();
                 }
                 break;
-            }
+
+            case sf::Keyboard::S :
+                if (!isExitButSelected)
+                {
+                    isPlayButSelected = false;
+                    isExitButSelected = true;
+                    sound.play();
+                }
+                break;            
+
+            case sf::Keyboard::M:
+                context->isMute = !(context->isMute);
+                break;
+
             case sf::Keyboard::Return:
-            {
                 isPlayButPressed = false;
                 isExitButPressed = false;
 
@@ -114,13 +133,10 @@ void StateMenuSFML::ProcessInput()
                 {
                     isExitButPressed = true;
                 }
+                break;
 
-                break;
-            }
             default:
-            {
                 break;
-            }
             }
         default:
             break;
@@ -149,6 +165,18 @@ void StateMenuSFML::Update()
     {
         context->renderWin->close();
         context->quit = true;
+    }
+
+    if (context->isMute && (music.getVolume() != 0 || sound.getVolume() != 0))
+    {
+        music.setVolume(0);
+        sound.setVolume(0);
+    }
+    
+    if (!context->isMute && (music.getVolume() == 0 || sound.getVolume() != 0))
+    {
+        music.setVolume(70);
+        sound.setVolume(100);
     }
 }
 

@@ -62,6 +62,10 @@ void StatePauseSFML::ProcessInput()
                 context->renderWin->close();
                 context->quit = true;
                 break;
+            
+            case sf::Keyboard::M:
+                context->isMute = !(context->isMute);
+                break;
 
             default:
                 break;
