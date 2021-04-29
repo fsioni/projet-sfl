@@ -15,12 +15,14 @@ StateSplashScreenSFML::StateSplashScreenSFML(std::shared_ptr<Context> &cContext)
 
 StateSplashScreenSFML::~StateSplashScreenSFML() 
 {
-    
 }
 
 void StateSplashScreenSFML::Init() 
 {
     assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
+    assert(music.openFromFile("data/sounds/music/14entranceNL.wav"));
+
+    music.play();
 
     gameText.setFont(textFont);
     madeByText.setFont(textFont);
@@ -99,7 +101,7 @@ void StateSplashScreenSFML::Update()
 {
     duration = (std::clock() - start) / (double) CLOCKS_PER_SEC;
 
-    if (duration > 1)
+    if (duration > 2)
     {
         context->stateMan->Add(std::make_unique<StateMenuSFML>(context), true);
     }

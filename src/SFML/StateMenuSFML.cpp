@@ -17,7 +17,7 @@ StateMenuSFML::StateMenuSFML(std::shared_ptr<Context> &cContext)
 
 StateMenuSFML::~StateMenuSFML() 
 {
-    
+    music.stop();
 }
 
 void StateMenuSFML::Init() 
