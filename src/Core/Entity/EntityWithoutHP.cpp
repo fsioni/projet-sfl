@@ -180,17 +180,19 @@ int EntityWithoutHP::GetID() const{
 
 
 bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * colLayer, int dt){
+    
     bool isColliding = false;
 
     // Si pas de mouvement alors pas de collision
     if(vx==0 && vy==0) return isColliding;
 
     // CollisionBox de l'entité
+    
     CollisionBox * cbThisEntity = colLayer->GetCollisionBoxesEntity()[GetID()];
-
+    
     int posX = cbThisEntity->GetX() + vx*speed;
     int posY = cbThisEntity->GetY() + vy*speed;
-
+    
     // Collision avec la map
     std::vector<CollisionBox> cbMap = colLayer->GetCollisionBoxes();
     for(int i=0; i<cbMap.size(); i++){
@@ -206,7 +208,7 @@ bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * col
             }   
         }
     }
-
+    
     // Collision entre entity
     std::map<int, CollisionBox *> cbEntities = colLayer->GetCollisionBoxesEntity();
     for(std::map<int, CollisionBox *>::iterator it= cbEntities.begin();
@@ -225,7 +227,7 @@ bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * col
 
         }
     }
-
+   
 
     // Si pas de collision alors on bouge l'entité
     if(!isColliding)

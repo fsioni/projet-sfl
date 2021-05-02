@@ -33,6 +33,7 @@ struct Context
         renderWin = std::make_unique<sf::RenderWindow>();
         map = std::make_unique<Map>("data/maps/tilemaps/mainTilemap.tmx", "data/maps/tilesets/mainTileSet.tsx");
 
+        // Initialisation du joueur
         float x = map->GetSpawnsLayer()->getPlayerSpawn().GetX();
         float y = map->GetSpawnsLayer()->getPlayerSpawn().GetY();
 
@@ -40,6 +41,19 @@ struct Context
 
         map->GetCollisionLayer()->AddCollisionBoxEntity(
             player->GetID(), new CollisionBox(x, y, 26, 26));
+
+        // Initialisation des enemies
+        int count = map->GetSpawnsLayer()->getEnemySpawns().size();
+        for (int i = 0; i < count; i++){
+            x = map->GetSpawnsLayer()->getEnemySpawns()[i].GetX();
+            y = map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
+
+            std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 100, 1, 1, 100);
+            enemies.push_back(enemy);
+            
+            map->GetCollisionLayer()->AddCollisionBoxEntity(
+                enemy->GetID(), new CollisionBox(x, y, 26, 26));
+        }
 
         isDebug = false;
         quit = false;

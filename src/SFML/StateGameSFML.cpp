@@ -76,7 +76,7 @@ void StateGameSFML::Init()
 }
 
 void StateGameSFML::ProcessInput()
-{
+{   
     sf::Event event;
     while (context->renderWin->pollEvent(event))
     {
@@ -189,6 +189,7 @@ void StateGameSFML::Update()
         {
             context->stateMan->Add(std::make_unique<StateGameOverSFML>(context), true);
         }
+         
 
         deltaTime = deltaClock.restart().asMilliseconds();
 
@@ -201,7 +202,7 @@ void StateGameSFML::Update()
         // Position du joueur
         playerX = context->player->GetPos_x();
         playerY = context->player->GetPos_y();
-
+        
         // Gestion de camera qui suit le joueur
         substX = playerX - winWidth / 2;
         substY = playerY - winHeight / 2;
@@ -219,9 +220,10 @@ void StateGameSFML::Update()
             substY = 0;
         if (substY > mapHeight * h - winHeight)
             substY = mapHeight * h - winHeight;
-
+       
         UpdatePlayer();
         UpdateEnemies();
+        
     
         // Mise à jour texte UI
         std::string hp = std::to_string(context->player->GetHP());
@@ -239,12 +241,15 @@ void StateGameSFML::Update()
 void StateGameSFML::UpdatePlayer()
 {
     context->player->SetIsMovingFalse();
+
     CollisionLayer * colLayer = context->map->GetCollisionLayer();
+    
     // Gestion mouvement joueur
     if (isGoingUp && isGoingLeft)
     {
         context->player->MoveWithCollision(0.5f, -0.5f, colLayer, deltaTime);
-    }else if (isGoingUp && isGoingRight)
+    }
+    else if (isGoingUp && isGoingRight)
     {
         context->player->MoveWithCollision(-0.5f, -0.5f, colLayer, deltaTime);
     }else if (isGoingUp)
@@ -276,6 +281,7 @@ void StateGameSFML::UpdatePlayer()
     int playerID= context->player->GetID();
     int playerX = context->player->GetPos_x();
     int playerY = context->player->GetPos_y();
+    
 
     CollisionBox * cbPlayer = 
         context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
