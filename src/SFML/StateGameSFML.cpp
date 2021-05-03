@@ -21,7 +21,10 @@ void StateGameSFML::Init()
 {
     // Chargement et lecture de la musique
     assert(music.openFromFile("data/sounds/music/01town2.wav"));
+    assert(hitBuffer.loadFromFile("data/sounds/sfx/Slash_1.wav"));
     music.play();
+
+    hitSound.setBuffer(hitBuffer);
 
     // Chargement de la tileMap
     tileTexture.loadFromFile(context->map->GetTileset()->GetTileMapPath());
@@ -304,6 +307,7 @@ void StateGameSFML::UpdatePlayer()
     if (lastHP != context->player->GetHP())
     {
         playerSprite.setColor(sf::Color::Red);
+        hitSound.play();
         hitClock.restart();
     }
 

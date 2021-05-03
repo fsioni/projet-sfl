@@ -86,6 +86,8 @@ private:
 
     // Musique et sons
     sf::Music music;
+    sf::SoundBuffer hitBuffer;
+    sf::Sound hitSound;
 };
 
 #endif // __STATEGAMESFML_H__
