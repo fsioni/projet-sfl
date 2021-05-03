@@ -14,8 +14,9 @@ EntityWithoutHP::EntityWithoutHP()
     speed = 1;
     name = "Unknown";
     direction = Right;
-
     isMoving = false;
+
+    offset= 7;
 }
 
 EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, std::string name_)
@@ -32,6 +33,7 @@ EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, std::string nam
 
     direction = Right;
     isMoving = false;
+    offset = 7;
 }
 
 EntityWithoutHP::~EntityWithoutHP()
@@ -197,11 +199,11 @@ bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * col
     for(int i=0; i<cbMap.size(); i++){
 
         //Detection collision axe X
-        if (posX - 7 + cbThisEntity->GetWidth()/2>= cbMap[i].GetX()
-            && cbMap[i].GetX() + cbMap[i].GetWidth() >= posX - 7){
+        if (posX - offset + cbThisEntity->GetWidth()/2>= cbMap[i].GetX()
+            && cbMap[i].GetX() + cbMap[i].GetWidth() >= posX - offset){
             //Detection collision axe Y
-            if(posY - 7+ cbThisEntity->GetHeight()/2>= cbMap[i].GetY()
-               && cbMap[i].GetY() + cbMap[i].GetHeight() >= posY - 7){
+            if(posY - offset + cbThisEntity->GetHeight()/2>= cbMap[i].GetY()
+               && cbMap[i].GetY() + cbMap[i].GetHeight() >= posY - offset){
 
                 isColliding = true;
             }   
@@ -215,8 +217,8 @@ bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * col
         if(it->first != GetID()){
             CollisionBox * cbEntity = it->second;
             // X
-            if(posX + cbThisEntity->GetWidth() >= cbEntity->GetX()
-                && posX <= cbEntity->GetX() + cbEntity->GetWidth()){
+            if(posX + cbThisEntity->GetWidth() - offset>= cbEntity->GetX()
+                && posX - offset <= cbEntity->GetX() + cbEntity->GetWidth()){
                 // Y
                 if(posY + cbThisEntity->GetHeight() >= cbEntity->GetY()
                     && posY <= cbEntity->GetY() + cbEntity->GetHeight()){

@@ -221,6 +221,8 @@ public:
     */    
     bool MoveWithCollision(float vx, float vy, CollisionLayer * colLayer, int dt);
 
+    
+
 protected :
     /*// ==== Données membres protégées === //*/
 
@@ -246,6 +248,11 @@ protected :
 
     /*! \brief Id unique. */
     UniqueID id;
+
+    /*! \brief Offset de la CollisionBox */
+    int offset;
+
+    
 };
 
 #endif

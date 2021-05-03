@@ -287,7 +287,7 @@ void StateGameSFML::UpdatePlayer()
         context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
     
 
-    cbPlayer->SetPosition(playerX + 7, playerY + 7);
+    cbPlayer->SetPosition(playerX, playerY);
     
     
     // Gestion animation joueur
@@ -336,7 +336,7 @@ void StateGameSFML::UpdateEnemies()
             CollisionBox * cbEnemy = 
                 context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[enemyID];
 
-            cbEnemy->SetPosition(posX + 7, posY + 7);
+            cbEnemy->SetPosition(posX, posY);
         }   
     }
 
