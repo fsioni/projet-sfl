@@ -129,19 +129,19 @@ void EntityWithoutHP::SetDirection(float vx, float vy)
 
 void EntityWithoutHP::Move(float vx, float vy)
 {
+    // Si au moins une des valeurs de déplacement 
+    // est différente de 0 alors on fait les calculs
+    if(vx!=0 || vy!=0){
+        x += vx * speed;
+        y += vy * speed;
 
-    x += vx * speed;
-    y += vy * speed;
+        if (x < 0) x = 0;
 
-    if (x < 0)
-    {
-        x = 0;
+        if (y < 0) y = 0;
+
+        isMoving = true;
     }
-    if (y < 0)
-    {
-        y = 0;
-    }
-    isMoving = true;
+    else isMoving = false;
 }
 
 int EntityWithoutHP::GetSpeed() const
@@ -153,7 +153,6 @@ int EntityWithoutHP::GetSpeed() const
 void EntityWithoutHP::SetSpeed(int newSpeed)
 {
     if (newSpeed >= 0)
-
         speed = newSpeed;
 }
 

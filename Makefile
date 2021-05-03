@@ -162,5 +162,6 @@ clean:
 docs :
 	doxygen doc/sfl.doxy
 
-valgrind : 
+valgrind : all
 	valgrind --leak-check=yes bin/exec 0 > log.txt 2>&1
+
