@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "Enemy.h"
 
 Player::Player() : EntityWithHP() {}
 
@@ -29,3 +30,21 @@ void Player::Test() const
     std::cout << std::endl
               << std::endl;
 }
+
+float Player::DistanceShared_ptr(std::shared_ptr<Enemy> enemy) const{
+    int x_ = x - enemy->GetPos_x();
+    int y_ = y - enemy->GetPos_y();
+    return sqrt(x_*x_ + y_*y_);
+}
+
+void Player::Attack(std::shared_ptr<Enemy> enemy, CollisionLayer * colLayer) const{
+    int radius = 3*32; // <=> 3 cases;
+    float dist = DistanceShared_ptr(enemy);
+    
+    if(dist <= radius){
+        float vx = -x / abs(dist);
+        float vy = -y / abs(dist);
+        enemy->TakeDamage(10);
+        enemy->MoveWithCollision(vx*5, vy*5, colLayer, 1);
+    }
+}   

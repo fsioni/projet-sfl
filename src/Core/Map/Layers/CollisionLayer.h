@@ -74,6 +74,12 @@ public:
     *   \return Retourne le tableau associatif de CollisionBox*.
     */
     std::map<int, CollisionBox*> GetCollisionBoxesEntity();
+
+    /*! \brief Supprime la CollisionBox d'une entité.
+    *
+    *   \param [in] id : id de l'entité dont on veut supprimer la CollisionBox.
+    */
+    void DeleteACollisionBoxEntity(int id);
     
 private:
     /*// === Données membres privées === //*/
