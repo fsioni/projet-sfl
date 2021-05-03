@@ -50,7 +50,5 @@ public:
     ~Player();
 
     void Test() const;
-
-private:
 };
 #endif
