@@ -615,6 +615,7 @@ void StateGameSFML::DisplayDebug(){
 void StateGameSFML::Pause()
 {
     isPaused = true;
+    runningSound.stop();
 }
 
 void StateGameSFML::Start()
