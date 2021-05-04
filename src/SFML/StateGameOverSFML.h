@@ -27,12 +27,17 @@ public:
     void Start();
 
 private:
+    /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
 
+    /*! \brief Police des textes */
     sf::Font textFont;
+    /*! \brief Texte de game over */
     sf::Text gameOverText;
+    /*! \brief Texte indiquant comment relancer la partie */
     sf::Text restartText;
 
+    /*! \brief Musique de Game Over */
     sf::Music music;
 };
 

@@ -68,10 +68,15 @@ public:
     Game(/* args */);
     ~Game();
 
-    void Run(int mode); //mode = 0 for SFML, 1 for txt
+    /*! \brief Lance le jeu dans le mode selectionné
+    *
+    *   \param [in] mode : Selectionne le mode à lancer
+    */
+    void Run(int mode); //mode = 0 for SFML, 1 for txt, 2 for tests
     void Test();
 
 private:
+    /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
 };
 

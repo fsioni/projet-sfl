@@ -26,12 +26,15 @@ public:
     const sf::Texture &GetShadowTexture() const;
 
 private:
+    /*! \brief Tableau vers les textures des ennemis */
     std::vector<sf::Texture> textureEnemy;
+    /*! \brief Tableau vers les textures des personnages non joueur */
     std::vector<sf::Texture> textureNPC;
+    /*! \brief Texture du joueur */
     sf::Texture texturePlayer;
-    sf::Texture textureShadow;
 
-    // Ajouter son et font
+    /*! \brief Texture d'ombre */
+    sf::Texture textureShadow;
 };
 
 #endif

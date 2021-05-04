@@ -27,7 +27,9 @@ public:
     void DisplayMenu();
 
 private:
+    /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
+    /*! \brief Choix de l'utilisateur */
     int menu;
 };
 

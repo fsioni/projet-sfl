@@ -17,47 +17,86 @@ public:
     void ProcessInput();
 
     void Update();
+    /*! \brief Met à jour les données correspondant au joueur
+    *
+    */
     void UpdatePlayer();
+
+    /*! \brief Met à jour les données correspondant aux ennemis
+    *
+    */
     void UpdateEnemies();
 
     void Display();
+
+    /*! \brief Affichage la carte sur la fenêtre SFML
+    *
+    */
     void DisplayMap();
+
+    /*! \brief Affichage le joueur sur la fenêtre SFML
+    *
+    */
     void DisplayPlayer();
+
+    /*! \brief Affichage les ennemis sur la fenêtre SFML
+    *
+    */
     void DisplayEnemies();
+
+    /*! \brief Affichage une CollisionBox sur la fenêtre SFML
+    *
+    */
     void DisplayCollisionBox(CollisionBox * cb, const sf::Color & color, int id);
+
+    /*! \brief Affichage le mode debug sur la fenêtre SFML
+    *
+    */
     void DisplayDebug();
 
     void Pause();
 
     void Start();
 
-    void MovePlayerWithCollision(float vx, float vy);
-
 private:
+    /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
 
     sf::Texture tileTexture;
     sf::Sprite tileSprite, playerSprite, shadowSprite, enemySprite;
 
-    // Horloge pour le delta time
+    /*! \brief Horloge pour le delta time */
     sf::Clock deltaClock;
+
+    /*! \brief Delta time */
     float deltaTime;
 
-    // Horloge pour l'animation du sprite
+    /*! \brief Horloge pour la gestion de l'animation du joueur */
     sf::Clock spriteClock;
+    /*! \brief Indique l'image à jouer pour l'animation du joueur */
     int posX = 0;
 
-    // Horloge pour les fps
+    /*! \brief Horloge pour les fps */
     sf::Clock fpsClock;
+    /*! \brief nombre actuel de fps*/
     int fps;
 
-    // Position du joueur
-    int playerX, playerY;
+    /*! \brief Position du joueur sur l'axe horizontale */
+    int playerX;
+    /*! \brief Position du joueur sur l'axe verticale */
+    int playerY;
 
-    // Direction mouvement du joueur
-    bool isGoingUp, isGoingDown, isGoingLeft, isGoingRight, isWalking;
-
-    // Le joueur attaque
+    /*! \brief Indique si la direction du joueur est vers le haut */
+    bool isGoingUp;
+    /*! \brief Indique si la direction du joueur est vers le bas */
+    bool isGoingDown;
+    /*! \brief Indique si la direction du joueur est vers la gauche */
+    bool isGoingLeft;
+    /*! \brief Indique si la direction du joueur est vers la droite */
+    bool isGoingRight;
+    /*! \brief Indique si le joueur est en train de marcher */
+    bool isWalking;
+    /*! \brief Indique si le joueur attaque */
     bool isAttacking;
 
     // Info sur la tilemap
@@ -66,33 +105,43 @@ private:
     // Gestion de camera qui suit le joueur
     int substX, substY;
 
-    //Taille de la fenêtre
-    int winWidth, winHeight;
+    /*! \brief Largeur de la fenetre */
+    int winWidth;
+    /*! \brief Hauteur de la fenetre */
+    int winHeight;
 
-    //Taille de la map
-    int mapWidth, mapHeight;
+    /*! \brief Largeur de la map */
+    int mapWidth;
+    /*! \brief Hauteur de la map */
+    int mapHeight;
 
-    // Texte pour l'UI
+    /*! \brief Police des textes */
     sf::Font textFont;
+    /*! \brief Texte indiquant le nombre d'hp du joueur */
     sf::Text hpText;
 
-    // Image pour l'UI
+    /*! \brief Texture du coeur */
     sf::Texture heartText;
+    /*! \brief Sprite du coeur */
     sf::Sprite heartSprite;
 
+    /*! \brief indique si le jeu est en pause*/
     bool isPaused;
 
-    // Gestion scintillement rouge lorsque le joueur prend des dégâts
+    /*! \brief Horloge pour le scintillement du jouer lorsqu'il reçoit des dégâts */
     sf::Clock hitClock;
+    /*! \brief Nombre d'HP du joueur lors du dernier update */
     int lastHP;
-    bool playerGotHitted;
 
-    // Musique et sons
-    bool isMute;
+    /*! \brief Musique du jeu */
     sf::Music music;
+    /*! \brief Son tampon des pas du joueur */
     sf::SoundBuffer runningBuffer;
+    /*! \brief Son des pas du joueur */
     sf::Sound runningSound;
+    /*! \brief Son tampon de coup */
     sf::SoundBuffer hitBuffer;
+    /*! \brief Son de coup */
     sf::Sound hitSound;
 };
 

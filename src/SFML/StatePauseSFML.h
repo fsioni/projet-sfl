@@ -24,9 +24,16 @@ public:
     void Start();
 
 private:
+    /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
+
+    /*! \brief Police d'ecriture des textes */
     sf::Font textFont;
+
+    /*! \brief Texte du titre de pause */
     sf::Text pauseText;
+
+    /*! \brief Texte indiquant la touche pour reprendre le jeu */
     sf::Text resumeText;
 };
 
