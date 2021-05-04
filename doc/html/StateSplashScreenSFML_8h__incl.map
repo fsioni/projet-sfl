@@ -1,28 +1,36 @@
 <map id="src/SFML/StateSplashScreenSFML.h" name="src/SFML/StateSplashScreenSFML.h">
-<area shape="rect" id="node1" title=" " alt="" coords="1251,5,1457,47"/>
-<area shape="rect" id="node2" href="$Game_8h.html" title=" " alt="" coords="1017,95,1136,121"/>
-<area shape="rect" id="node4" href="$State_8h.html" title=" " alt="" coords="1660,244,1728,271"/>
-<area shape="rect" id="node3" href="$StateManager_8h.html" title=" " alt="" coords="1439,169,1658,196"/>
-<area shape="rect" id="node7" href="$Map_8h.html" title=" " alt="" coords="472,169,567,196"/>
-<area shape="rect" id="node8" title=" " alt="" coords="533,319,596,345"/>
-<area shape="rect" id="node10" title=" " alt="" coords="514,468,573,495"/>
-<area shape="rect" id="node18" href="$Player_8h.html" title=" " alt="" coords="815,244,931,271"/>
-<area shape="rect" id="node22" href="$Enemy_8h.html" title=" " alt="" coords="955,244,1073,271"/>
-<area shape="rect" id="node23" href="$AssetManager_8h.html" title=" " alt="" coords="1051,169,1228,196"/>
-<area shape="rect" id="node24" title=" " alt="" coords="1299,244,1446,271"/>
-<area shape="rect" id="node26" href="$winTxt_8h.html" title=" " alt="" coords="1303,169,1415,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="1475,244,1532,271"/>
-<area shape="rect" id="node6" title=" " alt="" coords="1557,244,1634,271"/>
-<area shape="rect" id="node9" href="$Tileset_8h.html" title=" " alt="" coords="563,393,641,420"/>
-<area shape="rect" id="node11" href="$CollisionLayer_8h.html" title=" " alt="" coords="196,244,368,271"/>
-<area shape="rect" id="node15" href="$MapLayer_8h.html" title=" " alt="" coords="393,244,537,271"/>
-<area shape="rect" id="node16" href="$SpawnsLayer_8h.html" title=" " alt="" coords="5,244,172,271"/>
-<area shape="rect" id="node12" href="$Layer_8h.html" title=" " alt="" coords="338,319,407,345"/>
-<area shape="rect" id="node13" href="$CollisionBox_8h.html" title=" " alt="" coords="187,319,313,345"/>
-<area shape="rect" id="node14" href="$Box_8h.html" title=" " alt="" coords="221,393,279,420"/>
-<area shape="rect" id="node17" href="$SpawnPoint_8h.html" title=" " alt="" coords="39,319,162,345"/>
-<area shape="rect" id="node19" href="$EntityWithHP_8h.html" title=" " alt="" coords="831,319,949,345"/>
-<area shape="rect" id="node20" href="$EntityWithoutHP_8h.html" title=" " alt="" coords="838,393,977,420"/>
-<area shape="rect" id="node21" title=" " alt="" coords="867,468,947,495"/>
-<area shape="rect" id="node25" title=" " alt="" coords="1097,244,1224,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1423,5,1628,47"/>
+<area shape="rect" id="node2" href="$Game_8h.html" title=" " alt="" coords="1141,95,1259,121"/>
+<area shape="rect" id="node4" href="$State_8h.html" title=" " alt="" coords="1805,251,1873,278"/>
+<area shape="rect" id="node33" title=" " alt="" coords="1411,251,1538,278"/>
+<area shape="rect" id="node3" href="$StateManager_8h.html" title=" " alt="" coords="1613,169,1832,196"/>
+<area shape="rect" id="node7" href="$Map_8h.html" title=" " alt="" coords="1082,557,1177,584"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1246,707,1309,733"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1008,856,1067,883"/>
+<area shape="rect" id="node19" href="$Player_8h.html" title=" " alt="" coords="365,408,481,435"/>
+<area shape="rect" id="node27" href="$Enemy_8h.html" title=" " alt="" coords="270,169,389,196"/>
+<area shape="rect" id="node31" href="$AssetManager_8h.html" title=" " alt="" coords="1174,169,1351,196"/>
+<area shape="rect" id="node32" title=" " alt="" coords="1131,251,1277,278"/>
+<area shape="rect" id="node34" href="$winTxt_8h.html" title=" " alt="" coords="1376,169,1488,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="1694,251,1751,278"/>
+<area shape="rect" id="node6" title=" " alt="" coords="459,707,536,733"/>
+<area shape="rect" id="node9" href="$Tileset_8h.html" title=" " alt="" coords="998,781,1077,808"/>
+<area shape="rect" id="node11" href="$CollisionLayer_8h.html" title=" " alt="" coords="854,632,1026,659"/>
+<area shape="rect" id="node16" href="$MapLayer_8h.html" title=" " alt="" coords="1101,632,1245,659"/>
+<area shape="rect" id="node17" href="$SpawnsLayer_8h.html" title=" " alt="" coords="1371,632,1538,659"/>
+<area shape="rect" id="node12" title=" " alt="" coords="824,707,875,733"/>
+<area shape="rect" id="node13" href="$Layer_8h.html" title=" " alt="" coords="1152,707,1221,733"/>
+<area shape="rect" id="node14" href="$CollisionBox_8h.html" title=" " alt="" coords="899,707,1026,733"/>
+<area shape="rect" id="node15" href="$Box_8h.html" title=" " alt="" coords="1152,781,1211,808"/>
+<area shape="rect" id="node18" href="$SpawnPoint_8h.html" title=" " alt="" coords="1333,707,1456,733"/>
+<area shape="rect" id="node20" href="$EntityWithHP_8h.html" title=" " alt="" coords="441,483,559,509"/>
+<area shape="rect" id="node21" href="$EntityWithoutHP_8h.html" title=" " alt="" coords="431,557,569,584"/>
+<area shape="rect" id="node22" title=" " alt="" coords="416,632,491,659"/>
+<area shape="rect" id="node23" title=" " alt="" coords="515,632,581,659"/>
+<area shape="rect" id="node24" title=" " alt="" coords="605,632,685,659"/>
+<area shape="rect" id="node25" title=" " alt="" coords="710,632,778,659"/>
+<area shape="rect" id="node26" href="$UniqueID_8h.html" title=" " alt="" coords="297,632,391,659"/>
+<area shape="rect" id="node28" href="$StateMachine_8h.html" title=" " alt="" coords="341,244,488,285"/>
+<area shape="rect" id="node30" href="$EnemyStates_8h.html" title=" " alt="" coords="171,244,317,285"/>
+<area shape="rect" id="node29" href="$StateBehavior_8h.html" title=" " alt="" coords="260,333,385,360"/>
 </map>

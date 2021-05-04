@@ -47,9 +47,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"AssetManager_8cpp.html",
-"classState.html#a5fc730ec6c771f86c5a6100878dc306f",
-"tmxParsing_8h.html#a01a1670c28de93ece461380677bb7d89"
+"Animal_8cpp.html",
+"classGame.html#a13910abb0107f073d1627043003b909b",
+"classStatePauseSFML.html#a53889f4a7fc0530841c784088ba2f0f1"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

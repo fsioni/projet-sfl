@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['damage_531',['damage',['../classEntityWithHP.html#a5904eb85ea84777e494b325b2eddb07d',1,'EntityWithHP']]],
-  ['data_532',['data',['../classMapLayer.html#af28321870917480e395eed2bb6da6a12',1,'MapLayer::data()'],['../classStateGameSFML.html#ad1e67b6f2cc974cab8ef51518cdc726b',1,'StateGameSFML::data()']]],
-  ['dimx_533',['dimx',['../classWinTXT.html#aae9dd786d11da5b46de6f4ea3041a0ab',1,'WinTXT']]],
-  ['dimy_534',['dimy',['../classWinTXT.html#ab94c58aaf938cf5e119553ee918b9a19',1,'WinTXT']]],
-  ['direction_535',['direction',['../classEntityWithoutHP.html#a6195857a85754dc853564145e99da77d',1,'EntityWithoutHP']]],
-  ['duration_536',['duration',['../classStateSplashScreenSFML.html#aa8f00c3580ccb244f1cf2be0f09770e1',1,'StateSplashScreenSFML::duration()'],['../classStateSplashScreenTxt.html#ad7b7002c055f655e3ab374ff0c367b4e',1,'StateSplashScreenTxt::duration()']]]
+  ['collisionboxes_708',['collisionBoxes',['../classCollisionLayer.html#af5b1ba7c0f9bcf5a37baa60e5e373ef6',1,'CollisionLayer']]],
+  ['collisionboxesentity_709',['collisionBoxesEntity',['../classCollisionLayer.html#a0cd6aa3bd2b6ada6ac752968de6c9f35',1,'CollisionLayer']]],
+  ['collisionlayer_710',['collisionLayer',['../classMap.html#aa1dfbd4d995c553e0bf02cd5b7ed7580',1,'Map']]],
+  ['column_711',['column',['../classTileset.html#a94a7c91f9bb58c1b91cc9e0a9c8b3dc3',1,'Tileset']]],
+  ['context_712',['context',['../classGame.html#a002451ceb169cfbc245922d38881b99a',1,'Game::context()'],['../classStateGameOverSFML.html#a19727eb7d11b3a5d0427c06950e07b47',1,'StateGameOverSFML::context()'],['../classStateGameSFML.html#a563ef5f25f63ea6a2df16b4321a61e73',1,'StateGameSFML::context()'],['../classStateMenuSFML.html#a7e476da3bc66facd03e4bff33cf6553e',1,'StateMenuSFML::context()'],['../classStatePauseSFML.html#ae34681116682b4b9a73a3a7c96d8c955',1,'StatePauseSFML::context()'],['../classStateSplashScreenSFML.html#aae211142b4528d90e9cd0de094621048',1,'StateSplashScreenSFML::context()'],['../classStateGameTxt.html#a696798981b047c3842912ffa9b95306d',1,'StateGameTxt::context()'],['../classStateMenuTxt.html#a9387e4efbb884592512ad731262d5398',1,'StateMenuTxt::context()'],['../classStateSplashScreenTxt.html#a1badd2f1088b0b78532de2c6ac0e3f35',1,'StateSplashScreenTxt::context()']]],
+  ['currentstate_713',['currentState',['../classStateMachine.html#a6852a090bb49c785c505fe8b7c139280',1,'StateMachine']]]
 ];

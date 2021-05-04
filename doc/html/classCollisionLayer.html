@@ -99,8 +99,8 @@ Graphe d'héritage de CollisionLayer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCollisionLayer__inherit__graph.png" border="0" usemap="#CollisionLayer_inherit__map" alt="Inheritance graph"/></div>
 <map name="CollisionLayer_inherit__map" id="CollisionLayer_inherit__map">
-<area shape="rect" title="Classe représentant une couche de CollisionBox Hérité de Layer Représente toutes les CollisionBox d&#39;u..." alt="" coords="5,219,171,369"/>
-<area shape="rect" href="classLayer.html" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer." alt="" coords="33,5,143,171"/>
+<area shape="rect" title="Classe représentant une couche de CollisionBox Hérité de Layer Représente toutes les CollisionBox d&#39;u..." alt="" coords="5,233,224,443"/>
+<area shape="rect" href="classLayer.html" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer." alt="" coords="60,5,169,185"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -118,18 +118,30 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a818d3c9c83d99a9b13bd9fb04fda9cef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollisionLayer.html#a818d3c9c83d99a9b13bd9fb04fda9cef">AddCollisionBox</a> (const <a class="el" href="classCollisionBox.html">CollisionBox</a> &amp;newColBox)</td></tr>
 <tr class="memdesc:a818d3c9c83d99a9b13bd9fb04fda9cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permettant d'ajouter une boîte de collision à la couche.  <a href="classCollisionLayer.html#a818d3c9c83d99a9b13bd9fb04fda9cef">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a818d3c9c83d99a9b13bd9fb04fda9cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dfb68848be430bad4397424534a7084"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollisionLayer.html#a7dfb68848be430bad4397424534a7084">AddCollisionBoxEntity</a> (int <a class="el" href="classLayer.html#ad8c4d484a5efce0cbbd0cf81b3958d17">id</a>, <a class="el" href="classCollisionBox.html">CollisionBox</a> *newColBox)</td></tr>
+<tr class="memdesc:a7dfb68848be430bad4397424534a7084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permettant d'ajouter une boîte de collision d'entité à la couche.  <a href="classCollisionLayer.html#a7dfb68848be430bad4397424534a7084">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7dfb68848be430bad4397424534a7084"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb41b649549775405e6f20cf92c2dda9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollisionLayer.html#aeb41b649549775405e6f20cf92c2dda9">DisplayTXT</a> () const</td></tr>
 <tr class="memdesc:aeb41b649549775405e6f20cf92c2dda9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction d'affichage de l'objet en mode texte.  <a href="classCollisionLayer.html#aeb41b649549775405e6f20cf92c2dda9">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aeb41b649549775405e6f20cf92c2dda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9238c6f5d6a081cb42bb621eb4340435"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classCollisionBox.html">CollisionBox</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435">GetCollisionBoxes</a> () const</td></tr>
 <tr class="memdesc:a9238c6f5d6a081cb42bb621eb4340435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permettant de récupérer les <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> de l'objet.  <a href="classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a9238c6f5d6a081cb42bb621eb4340435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85cf4e9e341f186346b55457e8ccc3f8"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, <a class="el" href="classCollisionBox.html">CollisionBox</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8">GetCollisionBoxesEntity</a> ()</td></tr>
+<tr class="memdesc:a85cf4e9e341f186346b55457e8ccc3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permettant de récupérer les <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> des entités de l'objet.  <a href="classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a85cf4e9e341f186346b55457e8ccc3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a97cfca95d4fa88e7c68925d56b5b8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollisionLayer.html#a7a97cfca95d4fa88e7c68925d56b5b8b">DeleteACollisionBoxEntity</a> (int <a class="el" href="classLayer.html#ad8c4d484a5efce0cbbd0cf81b3958d17">id</a>)</td></tr>
+<tr class="memdesc:a7a97cfca95d4fa88e7c68925d56b5b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprime la <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> d'une entité.  <a href="classCollisionLayer.html#a7a97cfca95d4fa88e7c68925d56b5b8b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7a97cfca95d4fa88e7c68925d56b5b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
 <tr class="memitem:af5b1ba7c0f9bcf5a37baa60e5e373ef6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classCollisionBox.html">CollisionBox</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollisionLayer.html#af5b1ba7c0f9bcf5a37baa60e5e373ef6">collisionBoxes</a></td></tr>
-<tr class="memdesc:af5b1ba7c0f9bcf5a37baa60e5e373ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tableau dyanmique des <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> du <a class="el" href="classLayer.html" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer.">Layer</a>.  <a href="classCollisionLayer.html#af5b1ba7c0f9bcf5a37baa60e5e373ef6">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:af5b1ba7c0f9bcf5a37baa60e5e373ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tableau dyanmique des <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> de la <a class="el" href="classMap.html" title="Classe stockant la map.">Map</a>.  <a href="classCollisionLayer.html#af5b1ba7c0f9bcf5a37baa60e5e373ef6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af5b1ba7c0f9bcf5a37baa60e5e373ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd6aa3bd2b6ada6ac752968de6c9f35"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, <a class="el" href="classCollisionBox.html">CollisionBox</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollisionLayer.html#a0cd6aa3bd2b6ada6ac752968de6c9f35">collisionBoxesEntity</a></td></tr>
+<tr class="memdesc:a0cd6aa3bd2b6ada6ac752968de6c9f35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tableau associatif des <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> des entités.  <a href="classCollisionLayer.html#a0cd6aa3bd2b6ada6ac752968de6c9f35">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0cd6aa3bd2b6ada6ac752968de6c9f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classLayer"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classLayer')"><img src="closed.png" alt="-"/>&#160;Attributs privés hérités de <a class="el" href="classLayer.html">Layer</a></td></tr>
 <tr class="memitem:ad8c4d484a5efce0cbbd0cf81b3958d17 inherit pub_attribs_classLayer"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#ad8c4d484a5efce0cbbd0cf81b3958d17">id</a></td></tr>
 <tr class="memdesc:ad8c4d484a5efce0cbbd0cf81b3958d17 inherit pub_attribs_classLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifiant de la couche représenté par un entier.  <a href="classLayer.html#ad8c4d484a5efce0cbbd0cf81b3958d17">Plus de détails...</a><br /></td></tr>
@@ -159,6 +171,9 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="memitem:abdce2567af5aed3065143dd622a3f4c4 inherit pub_methods_classLayer"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#abdce2567af5aed3065143dd622a3f4c4">GetName</a> () const</td></tr>
 <tr class="memdesc:abdce2567af5aed3065143dd622a3f4c4 inherit pub_methods_classLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne name.  <a href="classLayer.html#abdce2567af5aed3065143dd622a3f4c4">Plus de détails...</a><br /></td></tr>
 <tr class="separator:abdce2567af5aed3065143dd622a3f4c4 inherit pub_methods_classLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0eb5638a197a61e529965a2755af72 inherit pub_methods_classLayer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a3a0eb5638a197a61e529965a2755af72">Test</a> () const</td></tr>
+<tr class="memdesc:a3a0eb5638a197a61e529965a2755af72 inherit pub_methods_classLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de regression.  <a href="classLayer.html#a3a0eb5638a197a61e529965a2755af72">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3a0eb5638a197a61e529965a2755af72 inherit pub_methods_classLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe représentant une couche de <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> Hérité de <a class="el" href="classLayer.html" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer.">Layer</a> Représente toutes les <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> d'une partie particulière de la <a class="el" href="classMap.html" title="Classe stockant la map.">Map</a> Par exemple : des objets, des ennemis... </p>
@@ -260,7 +275,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <p>Fonction permettant d'ajouter une boîte de collision à la couche. </p>
 <p>Ajoute une <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> au tableau dynamique de l'objet </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">newSpawn</td><td>: nouvelle <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> ajoutée </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newSpawn</td><td>: nouvelle <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> ajoutée. </td></tr>
   </table>
   </dd>
 </dl>
@@ -273,6 +288,69 @@ Voici le graphe des appelants de cette fonction :</div>
 <area shape="rect" href="classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="5,5,92,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a7dfb68848be430bad4397424534a7084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dfb68848be430bad4397424534a7084">&#9670;&nbsp;</a></span>AddCollisionBoxEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionLayer::AddCollisionBoxEntity </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCollisionBox.html">CollisionBox</a> *&#160;</td>
+          <td class="paramname"><em>newColBox</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction permettant d'ajouter une boîte de collision d'entité à la couche. </p>
+<p>Ajoute une <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> au tableau dynamique des collisions des entités à l'objet </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>: entier, identifiant de l'entité. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newSpawn</td><td>: nouvelle <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> ajoutée. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7a97cfca95d4fa88e7c68925d56b5b8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a97cfca95d4fa88e7c68925d56b5b8b">&#9670;&nbsp;</a></span>DeleteACollisionBoxEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionLayer::DeleteACollisionBoxEntity </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Supprime la <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> d'une entité. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>: id de l'entité dont on veut supprimer la <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -312,7 +390,51 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><div class="memdoc">
 
 <p>Fonction permettant de récupérer les <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> de l'objet. </p>
-<dl class="section return"><dt>Renvoie</dt><dd>Retourne le tableau dynamique de <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne le tableau dynamique de <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a>. </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classCollisionLayer_a9238c6f5d6a081cb42bb621eb4340435_icgraph.png" border="0" usemap="#classCollisionLayer_a9238c6f5d6a081cb42bb621eb4340435_icgraph" alt=""/></div>
+<map name="classCollisionLayer_a9238c6f5d6a081cb42bb621eb4340435_icgraph" id="classCollisionLayer_a9238c6f5d6a081cb42bb621eb4340435_icgraph">
+<area shape="rect" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="491,49,692,90"/>
+<area shape="rect" href="classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="240,49,443,90"/>
+<area shape="rect" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="17,5,180,32"/>
+<area shape="rect" href="classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="15,56,183,83"/>
+<area shape="rect" href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="5,107,192,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a85cf4e9e341f186346b55457e8ccc3f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85cf4e9e341f186346b55457e8ccc3f8">&#9670;&nbsp;</a></span>GetCollisionBoxesEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; int, <a class="el" href="classCollisionBox.html">CollisionBox</a> * &gt; CollisionLayer::GetCollisionBoxesEntity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction permettant de récupérer les <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> des entités de l'objet. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne le tableau associatif de CollisionBox*. </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classCollisionLayer_a85cf4e9e341f186346b55457e8ccc3f8_icgraph.png" border="0" usemap="#classCollisionLayer_a85cf4e9e341f186346b55457e8ccc3f8_icgraph" alt=""/></div>
+<map name="classCollisionLayer_a85cf4e9e341f186346b55457e8ccc3f8_icgraph" id="classCollisionLayer_a85cf4e9e341f186346b55457e8ccc3f8_icgraph">
+<area shape="rect" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="491,49,692,90"/>
+<area shape="rect" href="classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="240,49,443,90"/>
+<area shape="rect" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="17,5,180,32"/>
+<area shape="rect" href="classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="15,56,183,83"/>
+<area shape="rect" href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="5,107,192,133"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -337,7 +459,32 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>Tableau dyanmique des <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> du <a class="el" href="classLayer.html" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer.">Layer</a>. </p>
+<p>Tableau dyanmique des <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> de la <a class="el" href="classMap.html" title="Classe stockant la map.">Map</a>. </p>
+
+</div>
+</div>
+<a id="a0cd6aa3bd2b6ada6ac752968de6c9f35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd6aa3bd2b6ada6ac752968de6c9f35">&#9670;&nbsp;</a></span>collisionBoxesEntity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;int, <a class="el" href="classCollisionBox.html">CollisionBox</a>*&gt; CollisionLayer::collisionBoxesEntity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tableau associatif des <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> des entités. </p>
+<p>La clé est un entier correspondant à l'ID de l'entité et le pointeur sur <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> est sa boite de collision associé. </p>
 
 </div>
 </div>

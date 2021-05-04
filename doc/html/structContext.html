@@ -109,10 +109,12 @@ Champs de données</h2></td></tr>
 <tr class="separator:a2b343a1064948f57f6ff5cf3413b740d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76624c5984429f004ad8d73cec830680"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classPlayer.html">Player</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a76624c5984429f004ad8d73cec830680">player</a></td></tr>
 <tr class="separator:a76624c5984429f004ad8d73cec830680"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e1614d625198a20e80f6e9f5ad97038"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classEnemy.html">Enemy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a2e1614d625198a20e80f6e9f5ad97038">enemies</a></td></tr>
-<tr class="separator:a2e1614d625198a20e80f6e9f5ad97038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b772a83981d3122a430f53d8e23b376"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classEnemy.html">Enemy</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a7b772a83981d3122a430f53d8e23b376">enemies</a></td></tr>
+<tr class="separator:a7b772a83981d3122a430f53d8e23b376"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ff03b7f35e62b990bd6a81972c1350b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a2ff03b7f35e62b990bd6a81972c1350b">isDebug</a></td></tr>
 <tr class="separator:a2ff03b7f35e62b990bd6a81972c1350b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a147f5febd0604e0cb93bbc92c80bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a81a147f5febd0604e0cb93bbc92c80bb">isMute</a></td></tr>
+<tr class="separator:a81a147f5febd0604e0cb93bbc92c80bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18396436d360bb916d9ff6f9affa09fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a18396436d360bb916d9ff6f9affa09fd">quit</a></td></tr>
 <tr class="separator:a18396436d360bb916d9ff6f9affa09fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -157,14 +159,14 @@ Champs de données</h2></td></tr>
 
 </div>
 </div>
-<a id="a2e1614d625198a20e80f6e9f5ad97038"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e1614d625198a20e80f6e9f5ad97038">&#9670;&nbsp;</a></span>enemies</h2>
+<a id="a7b772a83981d3122a430f53d8e23b376"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b772a83981d3122a430f53d8e23b376">&#9670;&nbsp;</a></span>enemies</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classEnemy.html">Enemy</a>&gt; Context::enemies</td>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="classEnemy.html">Enemy</a>&gt; &gt; Context::enemies</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -179,6 +181,20 @@ Champs de données</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool Context::isDebug</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81a147f5febd0604e0cb93bbc92c80bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a147f5febd0604e0cb93bbc92c80bb">&#9670;&nbsp;</a></span>isMute</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Context::isMute</td>
         </tr>
       </table>
 </div><div class="memdoc">

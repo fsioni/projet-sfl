@@ -1,23 +1,59 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,183,60,209"/>
-<area shape="rect" id="node2" href="$classGame.html#a13910abb0107f073d1627043003b909b" title=" " alt="" coords="111,107,205,133"/>
-<area shape="rect" id="node3" href="$winTxt_8cpp.html#abfddca010a6ceb2c5292c98247a434ce" title=" " alt="" coords="115,157,201,184"/>
-<area shape="rect" id="node4" href="$classBox.html#ab30d8d08bfff9e0505d1baa518b01fba" title="Fonction test de la classe Box." alt="" coords="117,208,199,235"/>
-<area shape="rect" id="node13" href="$classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9" title="Fonction de test de la classe Tileset." alt="" coords="108,563,208,589"/>
-<area shape="rect" id="node5" href="$classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="291,5,413,32"/>
-<area shape="rect" id="node6" href="$classBox.html#a463bb5df079ed4e37f237128288ad263" title="Retourne id." alt="" coords="307,56,397,83"/>
-<area shape="rect" id="node7" href="$classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="294,107,410,133"/>
-<area shape="rect" id="node8" href="$classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="309,157,395,184"/>
-<area shape="rect" id="node9" href="$classBox.html#af86b090508898469761c0d61c8230133" title="Retourne y." alt="" coords="309,208,395,235"/>
-<area shape="rect" id="node10" href="$classBox.html#abed04a814d9eff8927701b98e486db1c" title="Modifie la taille de la Box par celle en paramètre." alt="" coords="275,259,429,285"/>
-<area shape="rect" id="node11" href="$classBox.html#a7d84cb0e69da66427ae6173ddfbdee48" title="Modifie l&#39;id de la Box par celui en paramètre." alt="" coords="308,309,396,336"/>
-<area shape="rect" id="node12" href="$classBox.html#a0f3f1e3acf82ac45cccb611be4b79206" title="Modifie la position de la Box par celle en paramètre." alt="" coords="288,360,416,387"/>
-<area shape="rect" id="node14" href="$classTileset.html#ad636679bf81f2aa5ad00beff2d5c9ef2" title="Retourne column." alt="" coords="279,411,425,437"/>
-<area shape="rect" id="node15" href="$classTileset.html#a8015df88b62c9b7cf6e19c55dc398f69" title="Retourne name." alt="" coords="284,461,420,488"/>
-<area shape="rect" id="node16" href="$classTileset.html#a060020f7a21a85d854f1b8fdf6ea192a" title="Retourne tileCount." alt="" coords="273,512,431,539"/>
-<area shape="rect" id="node17" href="$classTileset.html#a586d2ecc83c354bcc981e49ed579d359" title="Retourne tileHeight." alt="" coords="270,563,434,589"/>
-<area shape="rect" id="node18" href="$classTileset.html#adffdd1eda76615393d0d6b085ac61cf9" title="Retourne tileMapHeight." alt="" coords="256,613,448,640"/>
-<area shape="rect" id="node19" href="$classTileset.html#a937a18ca2f53d7261d3eff752e8afb91" title="Retourne tileMapPath." alt="" coords="263,664,441,691"/>
-<area shape="rect" id="node20" href="$classTileset.html#ae109a25be64886c5139162186da7919b" title="Retourne tileMapWidth." alt="" coords="259,715,445,741"/>
-<area shape="rect" id="node21" href="$classTileset.html#a91f1063653764e3e799a0331336d9e00" title="Retourne tileWidth." alt="" coords="273,765,431,792"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,309,60,336"/>
+<area shape="rect" id="node2" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="142,56,237,83"/>
+<area shape="rect" id="node3" href="$winTxt_8cpp.html#abfddca010a6ceb2c5292c98247a434ce" title="Nettoie le terminal courant." alt="" coords="146,107,233,133"/>
+<area shape="rect" id="node4" href="$classLayer.html#a3a0eb5638a197a61e529965a2755af72" title="Test de regression." alt="" coords="143,157,235,184"/>
+<area shape="rect" id="node9" href="$classCollisionBox.html#a7ff1898829497e2344a65404a4cc4901" title="Fonction test de la classe CollisionBox." alt="" coords="121,208,258,235"/>
+<area shape="rect" id="node10" href="$classSpawnPoint.html#a1f65d03e003ddc89378b5571c52ff8c5" title="Fonction test de la classe Box." alt="" coords="123,259,255,285"/>
+<area shape="rect" id="node13" href="$classPlayer.html#a1866265c265b6f179309034e8a68a9a7" title=" " alt="" coords="141,309,238,336"/>
+<area shape="rect" id="node14" href="$classEnemy.html#ac29d3a12f5433e7d8b7be08ca29b9248" title=" " alt="" coords="139,360,239,387"/>
+<area shape="rect" id="node16" href="$classBox.html#ab30d8d08bfff9e0505d1baa518b01fba" title="Fonction test de la classe Box." alt="" coords="149,512,230,539"/>
+<area shape="rect" id="node25" href="$classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9" title="Fonction de test de la classe Tileset." alt="" coords="139,917,239,944"/>
+<area shape="rect" id="node34" href="$classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="108,1449,271,1476"/>
+<area shape="rect" id="node48" href="$classEntityWithHP.html#aa0728f0c49ff24e42aa1a055651f7846" title="Fonction de test de regression." alt="" coords="118,2023,261,2049"/>
+<area shape="rect" id="node5" href="$classLayer.html#a66e5f1c31b9bf3b4fb50290429319fc3" title="Retourne id." alt="" coords="377,5,479,32"/>
+<area shape="rect" id="node6" href="$classLayer.html#abdce2567af5aed3065143dd622a3f4c4" title="Retourne name." alt="" coords="364,56,492,83"/>
+<area shape="rect" id="node7" href="$classLayer.html#a3cb596a4a47a48abb1f6e5b29ccacc88" title="Modifie l&#39;id du Layer par celui en paramètre." alt="" coords="379,107,477,133"/>
+<area shape="rect" id="node8" href="$classLayer.html#a7cba120f9a527e80bf9f28dc8fd16dda" title="Modifie l&#39;id du Layer par celui en paramètre." alt="" coords="365,157,491,184"/>
+<area shape="rect" id="node11" href="$classSpawnPoint.html#a5c964c2c4a6f04d8a0203b3e347b3fd4" title="Retourne anme." alt="" coords="344,208,512,235"/>
+<area shape="rect" id="node12" href="$classSpawnPoint.html#af18d38897bcee75e0ef78c19c302da02" title="Modifie le du SpawnPoint par celui en paramètre." alt="" coords="345,259,511,285"/>
+<area shape="rect" id="node15" href="$classEnemy.html#a59e340b5be743c22f0b5e2992e5e9344" title=" " alt="" coords="345,309,511,336"/>
+<area shape="rect" id="node17" href="$classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="367,360,489,387"/>
+<area shape="rect" id="node18" href="$classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="370,411,486,437"/>
+<area shape="rect" id="node19" href="$classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="385,461,471,488"/>
+<area shape="rect" id="node20" href="$classBox.html#af86b090508898469761c0d61c8230133" title="Retourne y." alt="" coords="385,512,471,539"/>
+<area shape="rect" id="node21" href="$classBox.html#abed04a814d9eff8927701b98e486db1c" title="Modifie la taille de la Box par celle en paramètre." alt="" coords="351,563,505,589"/>
+<area shape="rect" id="node22" href="$classBox.html#a0f3f1e3acf82ac45cccb611be4b79206" title="Modifie la position de la Box par celle en paramètre." alt="" coords="364,664,492,691"/>
+<area shape="rect" id="node23" href="$classBox.html#aebb3d713f415ee36e6c245c45053223c" title="Modifie la position sur l&#39;axe horizontal." alt="" coords="643,627,728,653"/>
+<area shape="rect" id="node24" href="$classBox.html#a05649a7f4b8aa9c0524141672f6edfea" title="Modifie la position sur l&#39;axe vertical." alt="" coords="643,703,727,729"/>
+<area shape="rect" id="node26" href="$classTileset.html#ad636679bf81f2aa5ad00beff2d5c9ef2" title="Retourne column." alt="" coords="355,765,501,792"/>
+<area shape="rect" id="node27" href="$classTileset.html#a8015df88b62c9b7cf6e19c55dc398f69" title="Retourne name." alt="" coords="360,816,496,843"/>
+<area shape="rect" id="node28" href="$classTileset.html#a060020f7a21a85d854f1b8fdf6ea192a" title="Retourne tileCount." alt="" coords="349,867,507,893"/>
+<area shape="rect" id="node29" href="$classTileset.html#a586d2ecc83c354bcc981e49ed579d359" title="Retourne tileHeight." alt="" coords="346,917,510,944"/>
+<area shape="rect" id="node30" href="$classTileset.html#adffdd1eda76615393d0d6b085ac61cf9" title="Retourne tileMapHeight." alt="" coords="332,968,524,995"/>
+<area shape="rect" id="node31" href="$classTileset.html#a937a18ca2f53d7261d3eff752e8afb91" title="Retourne tileMapPath." alt="" coords="339,1019,517,1045"/>
+<area shape="rect" id="node32" href="$classTileset.html#ae109a25be64886c5139162186da7919b" title="Retourne tileMapWidth." alt="" coords="335,1069,521,1096"/>
+<area shape="rect" id="node33" href="$classTileset.html#a91f1063653764e3e799a0331336d9e00" title="Retourne tileWidth." alt="" coords="349,1120,507,1147"/>
+<area shape="rect" id="node35" href="$classEntityWithoutHP.html#a7642f894c466f34541045454e49ba72d" title="Retourne la direction de l&#39;entité." alt="" coords="319,1171,537,1197"/>
+<area shape="rect" id="node36" href="$classEntityWithoutHP.html#abcef03103dfc1168f713041b8e6ed97f" title="Retourne le statut de déplacement de l&#39;entité. False, l&#39;entité est immobile et True elle est en mouve..." alt="" coords="319,1221,537,1248"/>
+<area shape="rect" id="node37" href="$classEntityWithoutHP.html#a81b700a10e5a22d4dd5ca5966acfa3e4" title="Retourne le nom de l&#39;entité." alt="" coords="329,1272,527,1299"/>
+<area shape="rect" id="node38" href="$classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792" title="Retourne la position sur l&#39;axe des x de l&#39;entité (horizontale)." alt="" coords="329,1323,527,1349"/>
+<area shape="rect" id="node39" href="$classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92" title="Retourne la position sur l&#39;axe des y de l&#39;entité (verticale)." alt="" coords="329,1373,527,1400"/>
+<area shape="rect" id="node40" href="$classEntityWithoutHP.html#a9b71c69d24f4c557f024f2a101513da0" title="Retourne la vitesse de l&#39;entité." alt="" coords="328,1424,528,1451"/>
+<area shape="rect" id="node41" href="$classEntityWithoutHP.html#a0cfc433ea705c507da7912a8e039722e" title="Déplace l&#39;entité." alt="" coords="341,1475,515,1501"/>
+<area shape="rect" id="node42" href="$classEntityWithoutHP.html#a0c000f5c03af273546b317aaad42254c" title="Permets de modifier la direction de l&#39;entité." alt="" coords="319,1525,537,1552"/>
+<area shape="rect" id="node43" href="$classEntityWithoutHP.html#a4617bcd51a4d400decfddb402ef412d4" title="Remet isMoving à false." alt="" coords="319,1577,537,1618"/>
+<area shape="rect" id="node44" href="$classEntityWithoutHP.html#ab82f5b07a0a39880b29b96859f68c557" title="Permets de modifier le nom de l&#39;entité." alt="" coords="329,1643,527,1669"/>
+<area shape="rect" id="node45" href="$classEntityWithoutHP.html#a71d0f35f8ec801afca2b0a3d1c5e8c60" title="Permets de modifier la position sur l&#39;axe des x de l&#39;entité (horizontale)." alt="" coords="330,1693,526,1720"/>
+<area shape="rect" id="node46" href="$classEntityWithoutHP.html#a2911e0307397dde003fdcfa71b738495" title="Permets de modifier la position sur l&#39;axe des y de l&#39;entité (verticale)." alt="" coords="330,1744,526,1771"/>
+<area shape="rect" id="node47" href="$classEntityWithoutHP.html#a87424952f6ec1c19bd5f370ed573a1c3" title="Permets de modifier la vitesse de l&#39;entité." alt="" coords="329,1795,527,1821"/>
+<area shape="rect" id="node49" href="$classEntityWithHP.html#aac09e4aa3eda7d8c49719dc457545acf" title="Permet d&#39;infliger damage dégats à l&#39;entité target." alt="" coords="349,1845,507,1872"/>
+<area shape="rect" id="node50" href="$classEntityWithHP.html#a8f6ed941c723036a8c208b39fd8cd7ee" title="Permet de faire en sorte qu&#39;une entité subisse le nombre &quot;damage&quot; dégats." alt="" coords="585,1871,785,1897"/>
+<area shape="rect" id="node51" href="$classEntityWithHP.html#a2141d7cca91bd206e229efcc1c02d4d0" title="Permet de retourner le nombre de dégats q&#39;inflige l&#39;entité EntityWithHP." alt="" coords="331,1947,525,1973"/>
+<area shape="rect" id="node52" href="$classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa" title="Retourne le nombre de points de vie de l&#39;entité." alt="" coords="349,1997,507,2024"/>
+<area shape="rect" id="node53" href="$classEntityWithHP.html#a500d3f8c3a23e1a2cf43abb28bf3a3fe" title="Retourne l&#39;état de vie/mort de l&#39;entité." alt="" coords="319,2048,537,2075"/>
+<area shape="rect" id="node54" href="$classEntityWithHP.html#a489e4fe33d4541ff1fab8fddfaeadb93" title="Retourne le cap maximum de points de vie de l&#39;entité." alt="" coords="335,2099,521,2125"/>
+<area shape="rect" id="node55" href="$classEntityWithHP.html#a289cf70a442545d73777548149028569" title="Permet de modofier les dégats infligés par l&#39;entité EntityWithHP." alt="" coords="332,2149,524,2176"/>
+<area shape="rect" id="node56" href="$classEntityWithHP.html#a27e4773b47d1ba1f8eba71e9a8fd69c5" title="Permets de modifier le nombre de points de vie d&#39;une entité EntityWithHP." alt="" coords="351,2200,505,2227"/>
+<area shape="rect" id="node57" href="$classEntityWithHP.html#abe560d6a4c2c7cc80d228857a7a34785" title="Modifie l&#39;état de vie/mort de l&#39;entité." alt="" coords="319,2251,537,2277"/>
 </map>

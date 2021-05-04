@@ -86,37 +86,64 @@ $(document).ready(function(){initNavTree('NPC_8h_source.html',''); initResizable
 <div class="title">NPC.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="NPC_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*#ifndef NPC_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">#define NPC_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">#include &quot;EntityWithoutHP.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">using namespace std;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">class NPC : public EntityWithoutHP</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">{</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">public:</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    static const char * DialogTab[9];</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    char* actuallyTelling;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    NPC();</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    NPC(float x, float y, string name);</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    ~NPC();</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    void ReadDialog ();</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    char* GetDialog();</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">};</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">#endif</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">*/</span></div>
+<a href="NPC_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NPC_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define NPC_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="EntityWithoutHP_8h.html">EntityWithoutHP.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="EntityWithHP_8h.html">EntityWithHP.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Player_8h.html">Player.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classNPC.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classNPC.html">NPC</a> : <span class="keyword">public</span> <a class="code" href="classEntityWithoutHP.html">EntityWithoutHP</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">/*// ==== Fonctions membres publiques === //*/</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classNPC.html#a59b45912692304d555df9d6957046962">NPC</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classNPC.html#a59b45912692304d555df9d6957046962">NPC</a>(<span class="keywordtype">float</span> <a class="code" href="classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e">x</a>, <span class="keywordtype">float</span> <a class="code" href="classEntityWithoutHP.html#afb0507fc1b3a17bf87bc3012958b54a2">y</a>, std::string <a class="code" href="classEntityWithoutHP.html#a4a146d1e655703c408fe5048e728f461">name</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classNPC.html#a67c0caca129b56c82bb7ec8bce6be52b">~NPC</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classNPC.html#acdf5b02de33bd12310d78cf51d8fc374">ReadRandDialog</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classNPC.html#ac0294086ef3a1ca80d7d170d1100ed8c">GiveHP</a>(<a class="code" href="classPlayer.html">Player</a> &amp;p, <span class="keywordtype">int</span> hpToGive);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    std::string <a class="code" href="classNPC.html#a0033e560a769fa02f2bd3395b9f36e97">GetRandDialog</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classNPC.html#a3f4bf0a4ed0404d17d548e44746f6229">TalkToPlayer</a>(<a class="code" href="classPlayer.html">Player</a> &amp;p, <span class="keywordtype">float</span> minX, <span class="keywordtype">float</span> maxX, <span class="keywordtype">float</span> minY, </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                        <span class="keywordtype">float</span> maxY);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">/*// ==== Données membres protégées === //*/</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classNPC.html#aa5abcd44effa06469cd027ba6e1db02d">   75</a></span>&#160;    std::string <a class="code" href="classNPC.html#aa5abcd44effa06469cd027ba6e1db02d">DialogTab</a>[9];</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassEntityWithoutHP_html_ac5fa20e8f737d5c7eee11ebafeee3d92"><div class="ttname"><a href="classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92">EntityWithoutHP::GetPos_y</a></div><div class="ttdeci">float GetPos_y() const</div><div class="ttdoc">Retourne la position sur l'axe des y de l'entité (verticale).</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:85</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_afb0507fc1b3a17bf87bc3012958b54a2"><div class="ttname"><a href="classEntityWithoutHP.html#afb0507fc1b3a17bf87bc3012958b54a2">EntityWithoutHP::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Position sur l'axe des y de l'entité (vertical).</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:233</div></div>
+<div class="ttc" id="aPlayer_8h_html"><div class="ttname"><a href="Player_8h.html">Player.h</a></div></div>
+<div class="ttc" id="aclassNPC_html_a0033e560a769fa02f2bd3395b9f36e97"><div class="ttname"><a href="classNPC.html#a0033e560a769fa02f2bd3395b9f36e97">NPC::GetRandDialog</a></div><div class="ttdeci">std::string GetRandDialog()</div><div class="ttdoc">Retourne une phrase prononçable par un NPC.</div><div class="ttdef"><b>Definition:</b> NPC.cpp:57</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a065012b02fa61fdfb546134daaac93cc"><div class="ttname"><a href="classEntityWithoutHP.html#a065012b02fa61fdfb546134daaac93cc">EntityWithoutHP::RandNumberGenerator</a></div><div class="ttdeci">int RandNumberGenerator(int minimum, int maximum)</div><div class="ttdoc">Permet de générer un numéro de ligne aléatoirement.</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:102</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html"><div class="ttname"><a href="classEntityWithoutHP.html">EntityWithoutHP</a></div><div class="ttdoc">Classe représentant une entité immobile et immortel.</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:28</div></div>
+<div class="ttc" id="aEntityWithHP_8h_html"><div class="ttname"><a href="EntityWithHP_8h.html">EntityWithHP.h</a></div></div>
+<div class="ttc" id="aclassEntityWithHP_html_a27e4773b47d1ba1f8eba71e9a8fd69c5"><div class="ttname"><a href="classEntityWithHP.html#a27e4773b47d1ba1f8eba71e9a8fd69c5">EntityWithHP::SetHP</a></div><div class="ttdeci">void SetHP(int newHp)</div><div class="ttdoc">Permets de modifier le nombre de points de vie d'une entité EntityWithHP.</div><div class="ttdef"><b>Definition:</b> EntityWithHP.cpp:31</div></div>
+<div class="ttc" id="aclassNPC_html_ac0294086ef3a1ca80d7d170d1100ed8c"><div class="ttname"><a href="classNPC.html#ac0294086ef3a1ca80d7d170d1100ed8c">NPC::GiveHP</a></div><div class="ttdeci">void GiveHP(Player &amp;p, int hpToGive)</div><div class="ttdoc">Permet à un NPC de donner des points de vie à un Player.</div><div class="ttdef"><b>Definition:</b> NPC.cpp:48</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a2bfca945eaafc069d6ccdf814a94dd5e"><div class="ttname"><a href="classEntityWithoutHP.html#a2bfca945eaafc069d6ccdf814a94dd5e">EntityWithoutHP::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Position sur l'axe des x de l'entité (horizontal).</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:230</div></div>
+<div class="ttc" id="aclassNPC_html_a67c0caca129b56c82bb7ec8bce6be52b"><div class="ttname"><a href="classNPC.html#a67c0caca129b56c82bb7ec8bce6be52b">NPC::~NPC</a></div><div class="ttdeci">~NPC()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> NPC.cpp:33</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a4a146d1e655703c408fe5048e728f461"><div class="ttname"><a href="classEntityWithoutHP.html#a4a146d1e655703c408fe5048e728f461">EntityWithoutHP::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Nom de l'entité.</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:239</div></div>
+<div class="ttc" id="aNPC_8h_html"><div class="ttname"><a href="NPC_8h.html">NPC.h</a></div></div>
+<div class="ttc" id="aclassNPC_html"><div class="ttname"><a href="classNPC.html">NPC</a></div><div class="ttdoc">Classe représentant un personnage immobile non-joueur qui peut donner des points de vie et communique...</div><div class="ttdef"><b>Definition:</b> NPC.h:14</div></div>
+<div class="ttc" id="aclassNPC_html_acdf5b02de33bd12310d78cf51d8fc374"><div class="ttname"><a href="classNPC.html#acdf5b02de33bd12310d78cf51d8fc374">NPC::ReadRandDialog</a></div><div class="ttdeci">void ReadRandDialog()</div><div class="ttdoc">Affiche sur la console une phrase.</div><div class="ttdef"><b>Definition:</b> NPC.cpp:40</div></div>
+<div class="ttc" id="aclassNPC_html_a59b45912692304d555df9d6957046962"><div class="ttname"><a href="classNPC.html#a59b45912692304d555df9d6957046962">NPC::NPC</a></div><div class="ttdeci">NPC()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition:</b> NPC.cpp:4</div></div>
+<div class="ttc" id="aclassNPC_html_aa5abcd44effa06469cd027ba6e1db02d"><div class="ttname"><a href="classNPC.html#aa5abcd44effa06469cd027ba6e1db02d">NPC::DialogTab</a></div><div class="ttdeci">std::string DialogTab[9]</div><div class="ttdoc">Tableau de phrases prononçables par un NPC.</div><div class="ttdef"><b>Definition:</b> NPC.h:75</div></div>
+<div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdoc">Classe représentant un joueur qui peut infliger/subir des dégats et se déplacer.</div><div class="ttdef"><b>Definition:</b> Player.h:17</div></div>
+<div class="ttc" id="aEntityWithoutHP_8h_html"><div class="ttname"><a href="EntityWithoutHP_8h.html">EntityWithoutHP.h</a></div></div>
+<div class="ttc" id="aclassNPC_html_a3f4bf0a4ed0404d17d548e44746f6229"><div class="ttname"><a href="classNPC.html#a3f4bf0a4ed0404d17d548e44746f6229">NPC::TalkToPlayer</a></div><div class="ttdeci">void TalkToPlayer(Player &amp;p, float minX, float maxX, float minY, float maxY)</div><div class="ttdef"><b>Definition:</b> NPC.cpp:65</div></div>
+<div class="ttc" id="aclassEntityWithHP_html_a064f838fa6ae5e4a2b6c2fcb92f576fa"><div class="ttname"><a href="classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa">EntityWithHP::GetHP</a></div><div class="ttdeci">int GetHP() const</div><div class="ttdoc">Retourne le nombre de points de vie de l'entité.</div><div class="ttdef"><b>Definition:</b> EntityWithHP.cpp:42</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_aa919d21efd6f9e28bcbd71696b418792"><div class="ttname"><a href="classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792">EntityWithoutHP::GetPos_x</a></div><div class="ttdeci">float GetPos_x() const</div><div class="ttdoc">Retourne la position sur l'axe des x de l'entité (horizontale).</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:73</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

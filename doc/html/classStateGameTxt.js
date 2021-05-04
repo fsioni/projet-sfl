@@ -11,5 +11,5 @@ var classStateGameTxt =
     [ "Start", "classStateGameTxt.html#ae1cd93fd51c80fd069f7b871fcd4e32e", null ],
     [ "Update", "classStateGameTxt.html#a14e11db9b9ccea3fcc75829656bb18f4", null ],
     [ "context", "classStateGameTxt.html#a696798981b047c3842912ffa9b95306d", null ],
-    [ "win", "classStateGameTxt.html#ac4ba8845994d02f9e072434228a40c2f", null ]
+    [ "win", "classStateGameTxt.html#adf8ff2df9b5f1207d5f991ad98e91fb4", null ]
 ];

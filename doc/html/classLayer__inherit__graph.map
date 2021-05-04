@@ -1,6 +1,6 @@
 <map id="Layer" name="Layer">
-<area shape="rect" id="node1" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer." alt="" coords="205,5,315,171"/>
-<area shape="rect" id="node2" href="$classCollisionLayer.html" title="Classe représentant une couche de CollisionBox Hérité de Layer Représente toutes les CollisionBox d&#39;u..." alt="" coords="5,292,171,443"/>
-<area shape="rect" id="node3" href="$classMapLayer.html" title="Classe représentant une couche de tuiles." alt="" coords="195,219,325,516"/>
-<area shape="rect" id="node4" href="$classSpawnsLayer.html" title="Classe représentant une couche de SpawnPoint Hérité de Layer Représente tous les SpawnPoint du jeu,..." alt="" coords="349,277,529,457"/>
+<area shape="rect" id="node1" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer." alt="" coords="259,5,368,185"/>
+<area shape="rect" id="node2" href="$classCollisionLayer.html" title="Classe représentant une couche de CollisionBox Hérité de Layer Représente toutes les CollisionBox d&#39;u..." alt="" coords="5,277,224,487"/>
+<area shape="rect" id="node3" href="$classMapLayer.html" title="Classe représentant une couche de tuiles." alt="" coords="249,233,378,531"/>
+<area shape="rect" id="node4" href="$classSpawnsLayer.html" title="Classe représentant une couche de SpawnPoint Hérité de Layer Représente tous les SpawnPoint du jeu,..." alt="" coords="402,292,582,472"/>
 </map>

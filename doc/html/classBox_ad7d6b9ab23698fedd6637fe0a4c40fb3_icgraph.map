@@ -1,5 +1,12 @@
 <map id="Box::GetHeight" name="Box::GetHeight">
-<area shape="rect" id="node1" title="Retourne height." alt="" coords="237,5,359,32"/>
-<area shape="rect" id="node2" href="$classBox.html#ab30d8d08bfff9e0505d1baa518b01fba" title="Fonction test de la classe Box." alt="" coords="108,5,189,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" title="Retourne height." alt="" coords="833,107,955,133"/>
+<area shape="rect" id="node2" href="$classStateGameSFML.html#a72ea8128db236996490e7ff310226746" title="Affichage une CollisionBox sur la fenêtre SFML." alt="" coords="517,27,785,53"/>
+<area shape="rect" id="node5" href="$classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="550,99,753,141"/>
+<area shape="rect" id="node9" href="$classBox.html#ab30d8d08bfff9e0505d1baa518b01fba" title="Fonction test de la classe Box." alt="" coords="611,187,692,213"/>
+<area shape="rect" id="node3" href="$classStateGameSFML.html#a8e856a9c6fca122ce3a10e3cf877531b" title="Affichage le mode debug sur la fenêtre SFML." alt="" coords="240,5,469,32"/>
+<area shape="rect" id="node4" href="$classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a" title="Fonction d&#39;affichage du State." alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node6" href="$classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="273,56,436,83"/>
+<area shape="rect" id="node7" href="$classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="271,107,439,133"/>
+<area shape="rect" id="node8" href="$classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="261,157,448,184"/>
+<area shape="rect" id="node10" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="327,208,382,235"/>
 </map>

@@ -9,6 +9,7 @@ var classStateMenuSFML =
     [ "ProcessInput", "classStateMenuSFML.html#ae869b58348e95261a94c868fdcbef771", null ],
     [ "Start", "classStateMenuSFML.html#aeea70dec0e51a9f250db8a19a3f345d5", null ],
     [ "Update", "classStateMenuSFML.html#a07f52c0a0358da99849f9ea807023d28", null ],
+    [ "buffer", "classStateMenuSFML.html#ab77c5983ba1a2c8aaf90d8b1f9fceeb5", null ],
     [ "context", "classStateMenuSFML.html#a7e476da3bc66facd03e4bff33cf6553e", null ],
     [ "exitButton", "classStateMenuSFML.html#ad207d52a1490fdd9b46aa8d2332bfa76", null ],
     [ "gameTitle", "classStateMenuSFML.html#ad3a40f5cd81e052c62366484c9ce9e54", null ],
@@ -16,6 +17,8 @@ var classStateMenuSFML =
     [ "isExitButSelected", "classStateMenuSFML.html#ab08baf57c401fb7fbbfa31986c987e15", null ],
     [ "isPlayButPressed", "classStateMenuSFML.html#a75c90648b411937973bcfa05ca16bd85", null ],
     [ "isPlayButSelected", "classStateMenuSFML.html#a885d2da43322469985ecbfc8640407ee", null ],
+    [ "music", "classStateMenuSFML.html#a3760501ce2833d0500ad8b0d51d4853a", null ],
     [ "playButton", "classStateMenuSFML.html#a837a24f89795cc7629e02b6f3756996e", null ],
+    [ "sound", "classStateMenuSFML.html#ace70a5b884abadeb15a56da77beada02", null ],
     [ "textFont", "classStateMenuSFML.html#abcd4cd5d310506bedd9e569f70b68db1", null ]
 ];
