@@ -5,6 +5,10 @@
 #include "../Core/StateManager/State.h"
 #include <SFML/Audio.hpp>
 
+/*! \class StateGameOverSFML
+*   \brief Classe représentant l'état game over du mode graphique (SFML)
+* 
+*/
 class StateGameOverSFML : public State
 {
 public:

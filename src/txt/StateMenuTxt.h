@@ -5,6 +5,10 @@
 #include "../Core/Game.h"
 #include <memory>
 
+/*! \class StateMenuTxt 
+*   \brief Classe représentant l'état menu du mode texte
+* 
+*/
 class StateMenuTxt : public State
 {
 public:

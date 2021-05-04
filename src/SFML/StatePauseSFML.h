@@ -4,6 +4,10 @@
 #include "../Core/Game.h"
 #include "../Core/StateManager/State.h"
 
+/*! \class StatePauseSFML
+*   \brief Classe représentant l'état pause du mode graphique (SFML)
+* 
+*/
 class StatePauseSFML : public State
 {
 public:

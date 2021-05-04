@@ -6,6 +6,11 @@
 #include <vector>
 #include <string>
 
+/*! \class AssetManager
+*   \brief Classe représentant le gestionnaire des données de l'application
+*   (Textures)
+* 
+*/
 class AssetManager
 {
 public:

@@ -5,6 +5,10 @@
 #include "../Core/StateManager/State.h"
 #include <SFML/Audio.hpp>
 
+/*! \class StateMenuSFML
+*   \brief Classe représentant l'état menu du mode graphique (SFML)
+* 
+*/
 class StateMenuSFML : public State
 {
 public:

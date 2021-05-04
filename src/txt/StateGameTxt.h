@@ -6,6 +6,10 @@
 #include "winTxt.h"
 #include <memory>
 
+/*! \class StateGameTxt 
+*   \brief Classe représentant l'état jeu du mode texte
+* 
+*/
 class StateGameTxt : public State
 {
 public:

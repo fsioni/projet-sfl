@@ -6,6 +6,10 @@
 #include <memory>
 #include <ctime>
 
+/*! \class StateSplashScreenTxt 
+*   \brief Classe représentant l'état SplashScreen du mode texte
+* 
+*/
 class StateSplashScreenTxt : public State
 {
 public:
