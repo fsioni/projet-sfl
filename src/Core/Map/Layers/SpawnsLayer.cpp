@@ -32,12 +32,12 @@ SpawnsLayer::~SpawnsLayer()
 {
 }
 
-SpawnPoint SpawnsLayer::getPlayerSpawn() const
+SpawnPoint SpawnsLayer::GetPlayerSpawn() const
 {
     return playerSpawn;
 }
 
-std::vector<SpawnPoint> SpawnsLayer::getEnemySpawns() const
+std::vector<SpawnPoint> SpawnsLayer::GetEnemySpawns() const
 {
     return ennemySpawns;
 }

@@ -199,6 +199,7 @@ You should use object layers named :
 - "EnemySpawn" for spawns of enemies
 - "Collision" for every objects that players, NPC and enemies couldn't go throught
 
+You should save your map using CSV format.
 
 ## ✍️ Authors <a name = "authors"></a>
 

@@ -52,13 +52,13 @@ public:
     *
     *   \return Retourne le SpawnPoint du Player en mode donnée 
     */
-    SpawnPoint getPlayerSpawn() const;
+    SpawnPoint GetPlayerSpawn() const;
 
     /*! \brief Fonction permettant de récupérer les SpawnPoint des Ennemy
     *
     *   \return Retourne le tableau dynamique de SpawnPoint des joueurs
     */
-    std::vector<SpawnPoint> getEnemySpawns() const;
+    std::vector<SpawnPoint> GetEnemySpawns() const;
 
 private:
     /*// === Données membres privées === //*/

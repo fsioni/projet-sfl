@@ -339,6 +339,7 @@ void StateGameSFML::UpdatePlayer()
 void StateGameSFML::UpdateEnemies()
 {
     int count = context->enemies.size();
+    CollisionLayer * colLayer = context->map->GetCollisionLayer();
 
     for (int i = 0; i < count; i++)
     {
@@ -354,10 +355,10 @@ void StateGameSFML::UpdateEnemies()
             float posY = context->enemies[i]->GetPos_y();
             int enemyID = context->enemies[i]->GetID();
 
-            CollisionBox * cbEnemy = 
-                context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[enemyID];
-
-            cbEnemy->SetPosition(posX, posY);
+            if(colLayer->CollisionBoxEntityExist(enemyID)){
+                CollisionBox * cbEnemy = colLayer->GetCollisionBoxesEntity()[enemyID];
+                cbEnemy->SetPosition(posX, posY);
+            }
         } 
         else{
             int enemyID = context->enemies[i]->GetID();
@@ -516,11 +517,11 @@ void StateGameSFML::DisplayCollisionBox(CollisionBox * cb, const sf::Color & col
 }
 
 void StateGameSFML::DisplayDebug(){
-    //Affichage du debug du joueur
+    CollisionLayer * colLayer = context->map->GetCollisionLayer();
 
+    //Affichage du debug du joueur
     int playerID = context->player->GetID();
-    CollisionBox * cbPlayer = 
-        context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
+    CollisionBox * cbPlayer = colLayer->GetCollisionBoxesEntity()[playerID];
 
     //Affichage de la collision box player
     DisplayCollisionBox(cbPlayer, sf::Color(170, 30, 155, 200), playerID);
@@ -529,16 +530,16 @@ void StateGameSFML::DisplayDebug(){
     for (long unsigned int i=0; i < context->enemies.size(); i++)
     {
         int enemyID = context->enemies[i]->GetID();
-
-        CollisionBox * enemyBoxe = 
-            context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[enemyID]; 
-        DisplayCollisionBox(enemyBoxe, sf::Color(170, 30, 155, 200), enemyID);
+        if(colLayer->CollisionBoxEntityExist(enemyID)){
+            CollisionBox * enemyBoxe = 
+                colLayer->GetCollisionBoxesEntity()[enemyID]; 
+            DisplayCollisionBox(enemyBoxe, sf::Color(170, 30, 155, 200), enemyID);
+        }
     }    
 
 
     // Affichage des collision boxes de la map
-    std::vector<CollisionBox> collisionBoxes =
-        context->map->GetCollisionLayer()->GetCollisionBoxes();
+    std::vector<CollisionBox> collisionBoxes = colLayer->GetCollisionBoxes();
 
     for (long unsigned int i=0; i < collisionBoxes.size(); i++)
     {

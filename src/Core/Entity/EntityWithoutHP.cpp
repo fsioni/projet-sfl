@@ -105,8 +105,7 @@ int EntityWithoutHP::RandNumberGenerator(int minimum, int maximum)
     int random;
     int plage = maximum - minimum + 1;
 
-    for (int i = 0; i < 100; i++)
-        random = (rand() % plage) + minimum;
+    random = (rand() % plage) + minimum;
 
     return random;
 }
@@ -178,8 +177,6 @@ int EntityWithoutHP::GetID() const{
     return id.id;
 }
 
-
-
 bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * colLayer, int dt){
     
     bool isColliding = false;
@@ -209,7 +206,9 @@ bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * col
             }   
         }
     }
-    
+    // Si c'est le joueur on augmente son offset de 3 
+    // pour empecher de se bloquer entre 2 enemy
+    if(GetID()==1) offset+=3;
     // Collision entre entity
     std::map<int, CollisionBox *> cbEntities = colLayer->GetCollisionBoxesEntity();
     for(std::map<int, CollisionBox *>::iterator it= cbEntities.begin();
@@ -228,7 +227,8 @@ bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * col
 
         }
     }
-   
+    // On remet l'offset du joueur à la normale
+    if(GetID()==1) offset-=3;
 
     // Si pas de collision alors on bouge l'entité
     if(!isColliding)
@@ -317,6 +317,10 @@ void EntityWithoutHP::Test() const{
     assert(!entity1.GetIsMoving());
     entity1.SetIsMovingFalse();
     assert(!entity1.GetIsMoving());
+    std::cout << "ok" << std::endl;
+
+    std::cout << "Id bien unique et GetID() : ";
+    assert(entity1.GetID()!= entity2.GetID());
     std::cout << "ok" << std::endl;
 
     std::cout << std::endl

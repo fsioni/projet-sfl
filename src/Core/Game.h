@@ -34,8 +34,8 @@ struct Context
         map = std::make_unique<Map>("data/maps/tilemaps/mainTilemap.tmx", "data/maps/tilesets/mainTileSet.tsx");
 
         // Initialisation du joueur
-        float x = map->GetSpawnsLayer()->getPlayerSpawn().GetX();
-        float y = map->GetSpawnsLayer()->getPlayerSpawn().GetY();
+        float x = map->GetSpawnsLayer()->GetPlayerSpawn().GetX();
+        float y = map->GetSpawnsLayer()->GetPlayerSpawn().GetY();
 
         player = std::make_unique<Player>(x, y, "Player", 10, 10, 4, 10);
 
@@ -43,10 +43,10 @@ struct Context
             player->GetID(), new CollisionBox(x, y, 32, 32));
 
         // Initialisation des enemies
-        int count = map->GetSpawnsLayer()->getEnemySpawns().size();
+        int count = map->GetSpawnsLayer()->GetEnemySpawns().size();
         for (int i = 0; i < count; i++){
-            x = map->GetSpawnsLayer()->getEnemySpawns()[i].GetX();
-            y = map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
+            x = map->GetSpawnsLayer()->GetEnemySpawns()[i].GetX();
+            y = map->GetSpawnsLayer()->GetEnemySpawns()[i].GetY();
 
             std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 100, 1, 1, 100);
             enemies.push_back(enemy);
