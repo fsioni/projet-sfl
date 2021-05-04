@@ -15,6 +15,10 @@
 
 #include <vector>
 
+/*! \class Context
+*   \brief Classe représentant l'état du programme.
+* 
+*/
 struct Context
 {
     std::unique_ptr<AssetManager> assetMan;
@@ -62,6 +66,10 @@ struct Context
     }
 };
 
+/*! \class Game
+*   \brief Classe représentant le programme dans sa généralité. 
+* 
+*/
 class Game
 {
 public:
