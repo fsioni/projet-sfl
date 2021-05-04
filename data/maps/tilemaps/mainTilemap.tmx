@@ -274,7 +274,7 @@
  <objectgroup id="6" name="PlayerSpawn">
   <object id="8" x="478.333" y="1311"/>
  </objectgroup>
- <objectgroup id="10" name="NPCSpauwn">
+ <objectgroup id="10" name="NPCSpawn">
   <object id="405" x="2678" y="1397.33"/>
   <object id="406" x="2291.33" y="1142"/>
   <object id="410" x="858.667" y="229.333"/>

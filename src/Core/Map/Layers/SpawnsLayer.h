@@ -26,7 +26,8 @@ public:
     *   \param [in] objectgroupTagEnnemy : balise brut <objectgroup> contenant les spawns des ennemis.
     */
     SpawnsLayer(const std::string &objectgroupTagPlayer,
-                const std::string &objectgroupTagEnnemy);
+                const std::string &objectgroupTagEnnemy,
+                const std::string &objectgroupTagNPC);
 
     /*! \brief Destructeur
     *
@@ -41,12 +42,19 @@ public:
     */
     void ChangePlayerSpawn(SpawnPoint const &newSpawn);
 
-    /*! \brief Fonction permettant d'ajouter un ennemi 
+    /*! \brief Fonction permettant d'ajouter un ennemi. 
     *
     *   Un ennemi est ajouté en ajoutant un SpawnPoint pour un Ennemy
     *   \param [in] newSpawn : nouveau spawn du nouvel Ennemy
     */
     void AddEnemy(SpawnPoint const &newSpawn);
+
+    /*! \brief Fonction permettant d'ajouter un NPC. 
+    *
+    *   Un ennemi est ajouté en ajoutant un SpawnPoint pour un NPC.
+    *   \param [in] newSpawn : nouveau spawn du nouvel NPC.
+    */
+    void AddNPC(SpawnPoint const &newSpawn);
 
     /*! \brief Fonction permettant de récupérer le SpawnPoint du joueur
     *
@@ -56,9 +64,23 @@ public:
 
     /*! \brief Fonction permettant de récupérer les SpawnPoint des Ennemy
     *
-    *   \return Retourne le tableau dynamique de SpawnPoint des joueurs
+    *   \return Retourne le tableau dynamique de SpawnPoint des Enemy.
     */
     std::vector<SpawnPoint> GetEnemySpawns() const;
+
+    /*! \brief Fonction permettant de récupérer les SpawnPoint des NPC.
+    *
+    *   \return Retourne le tableau dynamique de SpawnPoint des NPC.
+    */
+    std::vector<SpawnPoint> GetNPCSpawns() const;
+
+    /*! \brief Test de regression.
+    *
+    *  Effectue une série de test sur toutes les fonctions
+    *  de la classe et vérifie qu'elles font ce qu'elles sont 
+    *  censé faire.
+    */
+    void Test() const;
 
 private:
     /*// === Données membres privées === //*/
@@ -66,6 +88,9 @@ private:
     SpawnPoint playerSpawn;
     /*! \brief Les SpawnPoint des Ennemy. Un SpawnPoint = Un Ennemy */
     std::vector<SpawnPoint> ennemySpawns;
+
+    /*! \brief Les SpawnPoint des NPC. Un SpawnPoint = Un NPC */
+    std::vector<SpawnPoint> NpcSpawns;
 };
 
 #endif

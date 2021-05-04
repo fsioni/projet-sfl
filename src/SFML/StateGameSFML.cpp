@@ -381,6 +381,7 @@ void StateGameSFML::Display()
     DisplayMap();
     DisplayPlayer();
     DisplayEnemies();
+    DisplayNPC();
 
     if (context->isDebug) //Affichage DEBUG
     {
@@ -483,7 +484,34 @@ void StateGameSFML::DisplayEnemies()
     }
 }
 
-void StateGameSFML::DisplayCollisionBox(CollisionBox * cb, const sf::Color & color, int id){
+void StateGameSFML::DisplayNPC(){
+    
+    for (int i = 0; i < (int)context->npc.size(); i++)
+    {
+        int direction = context->npc[i]->GetDirection();
+        int npcX = context->npc[i]->GetPos_x() - substX - w / 2;
+        int npcY = context->npc[i]->GetPos_y() - substY - h / 2;
+
+        // Affichage de l'ombre
+        shadowSprite.setPosition(npcX, npcY);
+        shadowSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32, 32));
+        context->renderWin->draw(shadowSprite);
+
+        // Affichage des ennemies
+        playerSprite.setPosition(npcX, npcY);
+        if (context->npc[i]->GetIsMoving())
+            playerSprite.setTextureRect(sf::IntRect(posX, direction * 32,
+                                                                32, 32));
+        else
+            playerSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
+           
+        context->renderWin->draw(playerSprite);
+    }
+}
+
+void StateGameSFML::DisplayCollisionBox(
+            CollisionBox * cb, const sf::Color & color, int id)
+{
     sf::RectangleShape rectColBox(
         sf::Vector2f(cb->GetWidth(), cb->GetHeight())
     );

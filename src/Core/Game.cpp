@@ -82,6 +82,15 @@ void Game::Run(int mode)
         Map * map = new Map;
         map->Test();
 
+        SpawnsLayer spawnsLayer;
+        spawnsLayer.Test();
+
+        MapLayer mapLayer;
+        mapLayer.Test();
+
+        UniqueID uniqueID;
+        uniqueID.Test();
+
 
         std::cout << "TOUS LES TESTS ON ETE PASSE AVEC SUCCES !" << std::endl;
         break;

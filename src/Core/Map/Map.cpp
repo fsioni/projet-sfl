@@ -107,7 +107,10 @@ void Map::TmxLoadLayers(std::string fileName)
 
     // objectgroup => CollisionLayers + SpawnLayer
     int nbObjectgroup = countTag(strFile, "objectgroup");
-    int indCollision = 0, indSpawnPlayer = 0, indSpawnEnnemy = 0;
+    int indCollision = 0;
+    int indSpawnPlayer = 0;
+    int indSpawnEnnemy = 0;
+    int indSpawnNPC = 0;
     std::string tmpObjectGroup;
     std::string name;
 
@@ -116,12 +119,14 @@ void Map::TmxLoadLayers(std::string fileName)
         tmpObjectGroup = getInsideTag(strFile, "objectgroup", i);
         name = getAttributeValue(tmpObjectGroup, "name");
 
-        if (name == "Collision")
+        if(name == "Collision")
             indCollision = i;
-        if (name == "EnemySpawn")
+        if(name == "EnemySpawn")
             indSpawnEnnemy = i;
-        if (name == "PlayerSpawn")
+        if(name == "PlayerSpawn")
             indSpawnPlayer = i;
+        if(name == "NPCSpawn")
+            indSpawnNPC = i;
     }
 
     std::string strCollisionLayer = getFullTag(strFile, "objectgroup",
@@ -132,7 +137,10 @@ void Map::TmxLoadLayers(std::string fileName)
                                             indSpawnPlayer);
     std::string strEnnemySpawn = getFullTag(strFile, "objectgroup", 
                                             indSpawnEnnemy);
-    spawnsLayer = new SpawnsLayer(strPlayerSpawn, strEnnemySpawn);
+    std::string strNpcSpawn = getFullTag(strFile, "objectgroup",
+                                            indSpawnNPC);
+
+    spawnsLayer = new SpawnsLayer(strPlayerSpawn, strEnnemySpawn, strNpcSpawn);
 }
 
 void Map::TsxLoadTileset(std::string fileName)
@@ -165,6 +173,8 @@ void Map::Test() const
     std::cout << "  -spawnLayer : ";
     // 3 spawn enemy dans le fichier
     assert(map.spawnsLayer->GetEnemySpawns().size()==3);
+    // 3 spawn NPC dans le fichier
+    assert(map.spawnsLayer->GetNPCSpawns().size()==3);
     // Test des valeurs du spawnPlayer
     assert(map.spawnsLayer->GetPlayerSpawn().GetX()==575);
     assert(map.spawnsLayer->GetPlayerSpawn().GetY()==473);

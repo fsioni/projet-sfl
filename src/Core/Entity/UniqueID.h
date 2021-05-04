@@ -8,8 +8,7 @@ protected:
 public:
    int id;
    UniqueID();
-   UniqueID(const UniqueID& orig);
-   UniqueID& operator=(const UniqueID& orig);
+   void Test() const;
 };
 
 

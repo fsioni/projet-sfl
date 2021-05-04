@@ -6,6 +6,7 @@
 #include "Map/Map.h"
 #include "Entity/Player.h"
 #include "Entity/Enemy.h"
+#include "Entity/NPC.h"
 
 #include "../SFML/AssetManager.h"
 #include <string>
@@ -15,6 +16,7 @@
 
 #include <vector>
 
+
 struct Context
 {
     std::unique_ptr<AssetManager> assetMan;
@@ -23,6 +25,7 @@ struct Context
     std::unique_ptr<Map> map;
     std::unique_ptr<Player> player;
     std::vector<std::shared_ptr<Enemy>> enemies;
+    std::vector<NPC *> npc;
     bool isDebug;
     bool quit;
 
@@ -53,6 +56,20 @@ struct Context
             
             map->GetCollisionLayer()->AddCollisionBoxEntity(
                 enemy->GetID(), new CollisionBox(x, y, 32, 32));
+        }
+
+        // Initialisation des NPC
+        
+        count = map->GetSpawnsLayer()->GetNPCSpawns().size();
+        for (int i = 0; i < count; i++){
+            x = map->GetSpawnsLayer()->GetNPCSpawns()[i].GetX();
+            y = map->GetSpawnsLayer()->GetNPCSpawns()[i].GetY();
+            
+            NPC * newNPC = new NPC(x, y, "NPC");
+            npc.push_back(newNPC);
+            
+            map->GetCollisionLayer()->AddCollisionBoxEntity(
+                newNPC->GetID(), new CollisionBox(x, y, 32, 32));
         }
 
         isDebug = false;

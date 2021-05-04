@@ -6,8 +6,8 @@ EXECS_NAME = bin/exec
 OBJ_FILES += obj/main.o obj/Game.o  
 
 ##Entity
-OBJ_FILES += obj/EntityWithoutHP.o obj/EntityWithHP.o obj/Player.o obj/Enemy.o obj/UniqueID.o
-
+OBJ_FILES += obj/EntityWithoutHP.o obj/EntityWithHP.o obj/Player.o 
+OBJ_FILES += obj/Enemy.o obj/UniqueID.o obj/NPC.o
 ##Layers
 OBJ_FILES += obj/Layer.o obj/MapLayer.o obj/CollisionLayer.o obj/SpawnsLayer.o
 
@@ -21,8 +21,8 @@ OBJ_FILES += obj/Box.o obj/CollisionBox.o obj/SpawnPoint.o
 OBJ_FILES += obj/AssetManager.o obj/StateManager.o
 
 ##Txt Mode 
-OBJ_FILES += obj/StateSplashScreenTxt.o obj/StateMenuTxt.o obj/StateGameTxt.o obj/winTxt.o
-
+OBJ_FILES += obj/StateSplashScreenTxt.o obj/StateMenuTxt.o obj/StateGameTxt.o 
+OBJ_FILES += obj/winTxt.o
 ##SFML Mode
 OBJ_FILES += obj/StateSplashScreenSFML.o obj/StateMenuSFML.o obj/StateGameSFML.o  
 OBJ_FILES += obj/StatePauseSFML.o obj/StateGameOverSFML.o
@@ -72,6 +72,9 @@ obj/Player.o : src/Core/Entity/Player.cpp src/Core/Entity/EntityWithHP.h src/Cor
 	$(COMPILATIONOBJ)
 
 obj/Enemy.o : src/Core/Entity/Enemy.cpp src/Core/Entity/EntityWithHP.h src/Core/Entity/Player.h
+	$(COMPILATIONOBJ)
+
+obj/NPC.o : src/Core/Entity/NPC.cpp src/Core/Entity/EntityWithoutHP.h 
 	$(COMPILATIONOBJ)
 
 ##Layers

@@ -1,5 +1,6 @@
 #include "NPC.h"
 #include "EntityWithoutHP.h"
+#include <string>
 
 NPC::NPC() : EntityWithoutHP::EntityWithoutHP()
 {
@@ -16,7 +17,7 @@ NPC::NPC() : EntityWithoutHP::EntityWithoutHP()
 }
 
 NPC::NPC(float x, float y, std::string name) : 
-            EntityWithoutHP::EntityWithoutHP(x, y, name)
+            EntityWithoutHP::EntityWithoutHP(x, y, 1, name)
 {
 
     DialogTab[0] = "Wesh mon lossa";
