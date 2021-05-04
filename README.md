@@ -139,7 +139,7 @@ After compiling :
 ./bin/exec 0
 ``` 
 
-- To move along all axis use : ̀`Z Q S F`
+- To move along all axis use : `Z Q S F`
 - To attack an enemy use : `Left click`
 - To pause the game : `escape`
 - To restart the game after Game Over : `Space`
