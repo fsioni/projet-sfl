@@ -3,7 +3,7 @@
 EntityWithHP::EntityWithHP() : EntityWithHP::EntityWithoutHP()
 {
 
-    this->hp = 200000;
+    this->hp = 200;
     this->damage = 20;
     this->maxHP = 200000;
     this->livingStatus = true;
