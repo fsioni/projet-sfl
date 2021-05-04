@@ -68,10 +68,10 @@ obj/EntityWithoutHP.o : src/Core/Entity/EntityWithoutHP.cpp src/Core/Entity/Uniq
 obj/EntityWithHP.o : src/Core/Entity/EntityWithHP.cpp src/Core/Entity/EntityWithoutHP.h 
 	$(COMPILATIONOBJ)
 
-obj/Player.o : src/Core/Entity/Player.cpp src/Core/Entity/EntityWithHP.h
+obj/Player.o : src/Core/Entity/Player.cpp src/Core/Entity/EntityWithHP.h src/Core/Entity/Enemy.h
 	$(COMPILATIONOBJ)
 
-obj/Enemy.o : src/Core/Entity/Enemy.cpp src/Core/Entity/EntityWithHP.h
+obj/Enemy.o : src/Core/Entity/Enemy.cpp src/Core/Entity/EntityWithHP.h src/Core/Entity/Player.h
 	$(COMPILATIONOBJ)
 
 ##Layers
@@ -162,5 +162,6 @@ clean:
 docs :
 	doxygen doc/sfl.doxy
 
-valgrind : 
+valgrind : all
 	valgrind --leak-check=yes bin/exec 0 > log.txt 2>&1
+

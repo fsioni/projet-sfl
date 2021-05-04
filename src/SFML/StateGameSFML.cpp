@@ -76,6 +76,15 @@ void StateGameSFML::Init()
     fps = 0;
 
     lastHP = context->player->GetHP();
+
+    // Init direction
+    isGoingUp=false;
+    isGoingDown=false;
+    isGoingLeft=false;
+    isGoingRight=false;
+    // Init Attack
+    isAttacking=false;
+
 }
 
 void StateGameSFML::ProcessInput()
@@ -139,10 +148,10 @@ void StateGameSFML::ProcessInput()
             isGoingRight = false;
             isGoingLeft = false;
         }
-        /*
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)){
-                context->enemies[0]->SetLivingStatus(false);
-            }  */
+        
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+            isAttacking = true;
+        }  
 
         switch (event.type)
         {
@@ -281,6 +290,14 @@ void StateGameSFML::UpdatePlayer()
         context->player->MoveWithCollision(1, 0, colLayer, deltaTime);
     }
 
+    if(isAttacking){
+        int count = context->enemies.size();
+        for(int i=0; i<count; i++){
+            context->player->Attack(context->enemies[i], context->map->GetCollisionLayer());
+        }
+        isAttacking = false;
+    }
+
     int playerID= context->player->GetID();
     int playerX = context->player->GetPos_x();
     int playerY = context->player->GetPos_y();
@@ -290,7 +307,7 @@ void StateGameSFML::UpdatePlayer()
         context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
     
 
-    cbPlayer->SetPosition(playerX + 7, playerY + 7);
+    cbPlayer->SetPosition(playerX, playerY);
     
     
     // Gestion animation joueur
@@ -340,8 +357,14 @@ void StateGameSFML::UpdateEnemies()
             CollisionBox * cbEnemy = 
                 context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[enemyID];
 
-            cbEnemy->SetPosition(posX + 7, posY + 7);
-        }   
+            cbEnemy->SetPosition(posX, posY);
+        } 
+        else{
+            int enemyID = context->enemies[i]->GetID();
+            context->map->GetCollisionLayer()->DeleteACollisionBoxEntity(enemyID);
+            context->enemies.erase(context->enemies.begin()+i);
+            count--;
+        }
     }
 
     // Mise à jour texte UI
@@ -451,6 +474,8 @@ void StateGameSFML::DisplayEnemies()
             else
                 enemySprite.setTextureRect(sf::IntRect(0, direction * 32, 32,
                                                                         32));
+           
+            
 
             context->renderWin->draw(enemySprite);
         }

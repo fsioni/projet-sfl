@@ -39,13 +39,13 @@ void EnemyPatrol::Execute(Enemy *enemy, std::unique_ptr<Player> &player_,
     
     enemy->ChangeDirection(colliding);
 
-    // Si player dans rayon 4 bloc, il entre en état Attack
-    if(player_->Distance(enemy)<4 * 32){
+    // Si player dans rayon 5 bloc, il entre en état Attack
+    if(player_->Distance(enemy)<5 * 32){
         enemy->GetStateMachine()->ChangeState(EnemyAttack::Instance());
     }
 
-    // Si vie de l'enemy est inférieur à 10%, il entre en état RunAway
-    if (enemy->GetHP() < enemy->GetMaxHP() * 0.1)
+    // Si vie de l'enemy est inférieur à 30%, il entre en état RunAway
+    if (enemy->GetHP() < enemy->GetMaxHP() * 0.3)
     {
         enemy->GetStateMachine()->ChangeState(EnemyRunAway::Instance());
     }
@@ -90,7 +90,7 @@ void EnemyAttack::Execute(Enemy *enemy, std::unique_ptr<Player> &player_,
 
     if (enemy->IsTimeToAttack())
     {
-        if (dist < 1.3 * 32)
+        if (dist < 1.5 * 32) // <=> rayon de 1.5 bloc
         {
             player_->TakeDamage(enemy->GetDamage());
             player_->MoveWithCollision(x*5, y*5, collision, dt);

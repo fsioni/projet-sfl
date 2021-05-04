@@ -4,6 +4,9 @@
 #include "EntityWithHP.h"
 #include <string>
 
+// #include "Enemy.h" pose un problème de dépendance circulaire
+class Enemy;
+
 /*! \class Player
 *   \brief Classe représentant un joueur qui peut infliger/subir des dégats et se déplacer.
 *
@@ -48,6 +51,9 @@ public:
     *
     */
     ~Player();
+
+    float DistanceShared_ptr(std::shared_ptr<Enemy> enemy) const;
+    void Attack(std::shared_ptr<Enemy> enemy, CollisionLayer * colLayer) const;
 
     void Test() const;
 };

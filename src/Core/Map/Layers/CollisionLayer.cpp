@@ -57,3 +57,7 @@ std::map<int, CollisionBox*> CollisionLayer::GetCollisionBoxesEntity()
 {
     return collisionBoxesEntity;
 }
+
+void CollisionLayer::DeleteACollisionBoxEntity(int id){
+    collisionBoxesEntity.erase(id);
+}

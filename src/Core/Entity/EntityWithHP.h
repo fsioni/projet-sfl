@@ -149,9 +149,6 @@ protected:
 
     /*! \brief Nombre entier maximal de points de vie de l'entité */
     int maxHP;
-
-    /*! \brief Vitesse de l'entité */
-    float speed;
 };
 
 #endif

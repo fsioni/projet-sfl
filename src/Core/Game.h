@@ -40,7 +40,7 @@ struct Context
         player = std::make_unique<Player>(x, y, "Player", 10, 10, 4, 10);
 
         map->GetCollisionLayer()->AddCollisionBoxEntity(
-            player->GetID(), new CollisionBox(x, y, 26, 26));
+            player->GetID(), new CollisionBox(x, y, 32, 32));
 
         // Initialisation des enemies
         int count = map->GetSpawnsLayer()->getEnemySpawns().size();
@@ -52,7 +52,7 @@ struct Context
             enemies.push_back(enemy);
             
             map->GetCollisionLayer()->AddCollisionBoxEntity(
-                enemy->GetID(), new CollisionBox(x, y, 26, 26));
+                enemy->GetID(), new CollisionBox(x, y, 32, 32));
         }
 
         isDebug = false;
