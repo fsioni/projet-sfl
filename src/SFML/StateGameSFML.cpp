@@ -497,13 +497,10 @@ void StateGameSFML::DisplayNPC(){
         shadowSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32, 32));
         context->renderWin->draw(shadowSprite);
 
-        // Affichage des ennemies
+        // Affichage des NPC
         playerSprite.setPosition(npcX, npcY);
-        if (context->npc[i]->GetIsMoving())
-            playerSprite.setTextureRect(sf::IntRect(posX, direction * 32,
-                                                                32, 32));
-        else
-            playerSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
+        
+        playerSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
            
         context->renderWin->draw(playerSprite);
     }
@@ -563,7 +560,18 @@ void StateGameSFML::DisplayDebug(){
                 colLayer->GetCollisionBoxesEntity()[enemyID]; 
             DisplayCollisionBox(enemyBoxe, sf::Color(170, 30, 155, 200), enemyID);
         }
-    }    
+    } 
+
+    // CollisionBoxes NPC
+    for (long unsigned int i=0; i < context->npc.size(); i++)
+    {
+        int npcID = context->npc[i]->GetID();
+        if(colLayer->CollisionBoxEntityExist(npcID)){
+            CollisionBox * npcBoxe = 
+                colLayer->GetCollisionBoxesEntity()[ npcID]; 
+            DisplayCollisionBox(npcBoxe, sf::Color(170, 30, 155, 200),  npcID);
+        }
+    }     
 
 
     // Affichage des collision boxes de la map

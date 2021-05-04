@@ -4,7 +4,7 @@
 
 NPC::NPC() : EntityWithoutHP::EntityWithoutHP()
 {
-
+    direction = Down;
     DialogTab[0] = "Wesh mon lossa";
     DialogTab[1] = "s/o roi nouveau rap mondial";
     DialogTab[2] = "OV chasse les loups dans la ville";
@@ -19,7 +19,7 @@ NPC::NPC() : EntityWithoutHP::EntityWithoutHP()
 NPC::NPC(float x, float y, std::string name) : 
             EntityWithoutHP::EntityWithoutHP(x, y, 1, name)
 {
-
+    direction = Down;
     DialogTab[0] = "Wesh mon lossa";
     DialogTab[1] = "s/o roi nouveau rap mondial";
     DialogTab[2] = "OV chasse les loups dans la ville";
