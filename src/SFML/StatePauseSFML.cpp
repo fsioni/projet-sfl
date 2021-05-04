@@ -49,6 +49,7 @@ void StatePauseSFML::ProcessInput()
         if (event.type == sf::Event::Closed)
         {
             context->renderWin->close();
+            context->quit = true;
         }
         else if (event.type == sf::Event::KeyPressed)
         {
