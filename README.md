@@ -202,6 +202,8 @@ You should use object layers named :
 - "EnemySpawn" for spawns of enemies
 - "Collision" for every objects that players, NPC and enemies couldn't go throught
 
+<b>Note</b> : Check the actual map at the folder location `data/maps/mainTilemaps.tmx` and reproduce the layers with the objects properties 
+
 
 ## ✍️ Authors <a name = "authors"></a>
 
