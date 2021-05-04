@@ -146,6 +146,8 @@ After compiling :
 - To open the debug mode press : `p`
 - To quit press : `x` or the cross button.
 
+<b>Note</b> : fullscreen behaviors are unpredictable. Only in-game screen resizing is recommended
+
 
 ### Text version
 
