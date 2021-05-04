@@ -82,10 +82,14 @@ void StateGameOverSFML::ProcessInput()
 
 void StateGameOverSFML::RestartGame()
 {
-    //Initialisation du joueur
-    context->player = std::make_unique<Player>(context->map->GetSpawnsLayer()->
-                        getPlayerSpawn().GetX(), context->map->GetSpawnsLayer()
-                        ->getPlayerSpawn().GetY(), "Player", 10, 10, 4, 10);
+    // Initialisation du joueur
+    float x = context->map->GetSpawnsLayer()->getPlayerSpawn().GetX();
+    float y = context->map->GetSpawnsLayer()->getPlayerSpawn().GetY();
+
+    context->player = std::make_unique<Player>(x, y, "Player", 10, 10, 4, 10);
+
+    context->map->GetCollisionLayer()->AddCollisionBoxEntity(
+        context->player->GetID(), new CollisionBox(x, y, 26, 26));
 
     // Initialisation des ennemies
     int count = context->map->GetSpawnsLayer()->getEnemySpawns().size();
@@ -93,15 +97,14 @@ void StateGameOverSFML::RestartGame()
 
     for (int i = 0; i < count; i++)
     {
-        int x = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetX();
-        int y = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
+        x = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetX();
+        y = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
 
-        std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 
-                                                            100, 3, 1, 100);
-        enemy->GetCollisionBox()->SetId(i);
+        std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 100, 3, 1, 100);
         context->enemies.push_back(enemy);
-        context->map->GetCollisionLayer()->AddCollisionBoxEnemy(enemy->
-                                            GetCollisionBox());
+        
+        context->map->GetCollisionLayer()->AddCollisionBoxEntity(
+            enemy->GetID(), new CollisionBox(x, y, 26, 26));
     }
 }
 

@@ -24,6 +24,7 @@ public:
     void DisplayMap();
     void DisplayPlayer();
     void DisplayEnemies();
+    void DisplayCollisionBox(CollisionBox * cb, const sf::Color & color, int id);
     void DisplayDebug();
 
     void Pause();
@@ -55,6 +56,9 @@ private:
 
     // Direction mouvement du joueur
     bool isGoingUp, isGoingDown, isGoingLeft, isGoingRight, isWalking;
+
+    // Le joueur attaque
+    bool isAttacking;
 
     // Info sur la tilemap
     int w, h, nbMapLayer, x, y, data;
@@ -88,6 +92,8 @@ private:
     sf::Music music;
     sf::SoundBuffer runningBuffer;
     sf::Sound runningSound;
+    sf::SoundBuffer hitBuffer;
+    sf::Sound hitSound;
 };
 
 #endif // __STATEGAMESFML_H__

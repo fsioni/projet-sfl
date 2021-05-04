@@ -4,8 +4,10 @@
 #include "EntityWithHP.h"
 #include "FiniteStateMachine/StateMachine.h"
 #include "FiniteStateMachine/EnemyStates.h"
-#include "Player.h"
 #include <string>
+
+// #include "Player.h" pose un problème de dépendance circulaire
+class Player;
 
 /*! \class Enemy
 *   \brief Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer.

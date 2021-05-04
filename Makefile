@@ -6,7 +6,7 @@ EXECS_NAME = bin/exec
 OBJ_FILES += obj/main.o obj/Game.o  
 
 ##Entity
-OBJ_FILES += obj/EntityWithoutHP.o obj/EntityWithHP.o obj/Player.o obj/Enemy.o
+OBJ_FILES += obj/EntityWithoutHP.o obj/EntityWithHP.o obj/Player.o obj/Enemy.o obj/UniqueID.o
 
 ##Layers
 OBJ_FILES += obj/Layer.o obj/MapLayer.o obj/CollisionLayer.o obj/SpawnsLayer.o
@@ -59,16 +59,19 @@ obj/Game.o : src/Core/Game.cpp src/Core/StateManager/StateManager.h src/txt/Stat
 	$(COMPILATIONOBJ)
 
 ##Entity
-obj/EntityWithoutHP.o : src/Core/Entity/EntityWithoutHP.cpp
+obj/UniqueID.o : src/Core/Entity/UniqueID.cpp
+	$(COMPILATIONOBJ)
+
+obj/EntityWithoutHP.o : src/Core/Entity/EntityWithoutHP.cpp src/Core/Entity/UniqueID.h
 	$(COMPILATIONOBJ)
 
 obj/EntityWithHP.o : src/Core/Entity/EntityWithHP.cpp src/Core/Entity/EntityWithoutHP.h 
 	$(COMPILATIONOBJ)
 
-obj/Player.o : src/Core/Entity/Player.cpp src/Core/Entity/EntityWithHP.h
+obj/Player.o : src/Core/Entity/Player.cpp src/Core/Entity/EntityWithHP.h src/Core/Entity/Enemy.h
 	$(COMPILATIONOBJ)
 
-obj/Enemy.o : src/Core/Entity/Enemy.cpp src/Core/Entity/EntityWithHP.h
+obj/Enemy.o : src/Core/Entity/Enemy.cpp src/Core/Entity/EntityWithHP.h src/Core/Entity/Player.h
 	$(COMPILATIONOBJ)
 
 ##Layers
@@ -159,5 +162,6 @@ clean:
 docs :
 	doxygen doc/sfl.doxy
 
-valgrind :
+valgrind : all
 	valgrind --leak-check=yes bin/exec 0 > log.txt 2>&1
+

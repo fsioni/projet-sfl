@@ -9,27 +9,6 @@
 Game::Game(/* args */)
 {
     context = std::make_shared<Context>();
-
-    /* Initialisation du générateur, à ne faire qu’une fois dans le programme */
-    //srand((unsigned int) time(NULL));
-
-    // Initialisation des ennemies
-    int count = context->map->GetSpawnsLayer()->getEnemySpawns().size();
-
-    for (int i = 0; i < count; i++)
-    {
-        int x = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetX();
-        int y = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
-
-        std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy",
-                                            100, 3, 1, 100);
-        enemy->GetCollisionBox()->SetId(i);
-        context->enemies.push_back(enemy);
-        context->map->GetCollisionLayer()->AddCollisionBoxEnemy(enemy->
-                                                        GetCollisionBox());
-    }
-
-    context->isDebug = false;
 }
 
 Game::~Game()

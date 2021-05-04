@@ -7,7 +7,9 @@
 #include <iostream>
 #include <math.h>
 #include <memory>
-#include "../Map/CollisionBox.h"
+#include "../Map/Layers/CollisionLayer.h"
+#include "UniqueID.h"
+
 
 enum EntityDirection
 {
@@ -52,7 +54,6 @@ public:
     *  Destructeur de la classe EntityWithoutHP.
     *
     */
-
     virtual ~EntityWithoutHP();
 
     /*! \brief Retourne la position sur l'axe des x de l'entité (horizontale).
@@ -103,86 +104,71 @@ public:
     */
     void SetName(std::string newName);
 
-    std::shared_ptr<CollisionBox> GetCollisionBox();
 
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.
     *
     *   Imprime sur la console des informations concernant l'entité.
-    *
-    *
     */
     virtual void PrintEntityInfo();
 
     /*! \brief Retourne la largeur de l'entité.
     *
     *   Retourne un réel, la largeur de l'entité.
-    *
-    *
     */
     float GetWidth() const;
 
+    /*! \brief Test de regression.
+    *
+    *   Effectue une série de test sur les fonctions de la classe
+    *   et vérifie qu'elles font bien ce qu'elles sont censés faire.
+    */
     void Test() const;
 
-    /*! \brief Permets de modifier la largeur de l'entité.
+    /*! \brief Retourne la vitesse de l'entité.
     *
-    *
-    *   \param [in] newW: entier, nouvelle largeur de l'entité.
-    *
+    *   Retourne un entier, la vitesse de l'entité.
     */
-    void SetWidth(int newW);
-
-    /*! \brief Retourne la longueur de l'entité.
-    *
-    *   Retourne un réel, la longueur de l'entité.
-    *
-    *
-    */
-    float GetHeight() const;
-
-    /*! \brief Permets de modifier la longueur de l'entité.
-    *
-    *
-    *   \param [in] newH: entier, nouvelle longueur de l'entité.
-    *
-    */
-    void SetHeight(int newH);
-
-    /*! \brief Retourne le décalage de l'entité.
-    *
-    *   Retourne un entier, le décalage de l'entité.
-    *
-    *
-    */
-    int GetOffset() const;
-
-    /*! \brief Permets de modifier le décalage de l'entité.
-    *
-    *
-    *   \param [in] newO: entier, nouveau décalage de l'entité.
-    *
-    */
-    void SetOffset(int newO);
-
     int GetSpeed() const;
 
+    /*! \brief Permets de modifier la vitesse de l'entité.
+    *   
+    *   \param [in] newSpeed: entier positif, nouvelle vitesse de l'entité.
+    *   
+    *   Vérifie que newSpeed est positif. 
+    */
     void SetSpeed(int newSpeed);
 
     /*! \brief Retourne la direction de l'entité.
-    *
     *
     */
     EntityDirection GetDirection() const;
 
     /*! \brief Permets de modifier la direction de l'entité.
     *
-    *
     *   \param [in] nDirection: EntityDirection, nouvelle direction de l'entité.
-    *
     */
     void SetDirection(EntityDirection nDirection);
 
+
+    /*! \brief Permets de modifier la direction de l'entité.
+    *   
+    *   Assigne la direction en fonction de l'axe sur lequel
+    *   il y a le plus grand déplacement.
+    *   
+    *   \param [in] vx: réel, valeur de déplacement sur l'axe X.
+    *   \param [in] vy: réel, valeur de déplacement sur l'axe Y.
+    *
+    */
     void SetDirection(float vx, float vy);
 
+    /*! \brief Déplace l'entité.
+    *   
+    *   Modifie la position de l'entité en fonction de sa vitesse
+    *   et des valeur de déplacement passé en paramètre
+    *   
+    *   \param [in] vx: réel, valeur de déplacement sur l'axe X.
+    *   \param [in] vy: réel, valeur de déplacement sur l'axe Y.
+    */    
     void Move(float vx, float vy);
 
     /*! \brief Permet de générer un numéro de ligne aléatoirement.
@@ -196,11 +182,48 @@ public:
     */
     int RandNumberGenerator(int minimum, int maximum);
 
+    /*! \brief Retourne le statut de déplacement de l'entité.
+    *  False, l'entité est immobile et True elle est en mouvement.
+    */
     bool GetIsMoving() const;
 
+    /*! \brief Remet isMoving à false.
+    *
+    */
     void SetIsMovingFalse();
 
-protected:
+    /*! \brief Calcul de distance entre l'entité et une autre entité.
+    *   
+    *   \param [in] entity : Pointeur sur EntityWithoutHP, l'autre entité.
+    */
+    float Distance(const EntityWithoutHP * entity) const;
+
+    /*! \brief Retourne l'ID de l'entité.
+    *
+    *   Retourne la valeur de UniqueID de l'entité.
+    */ 
+    int GetID() const;
+
+
+    /*! \brief Déplace l'entité en vérifiant les collisions.
+    *   
+    *   Modifie la position de l'entité en fonction de sa vitesse, 
+    *   des valeur de déplacement, de la couche de collision et du delta
+    *   time passé en paramètre. Vérifie les collisions avec la map et
+    *   avec les autres entités. Si il n'y a pas de collision, fait appel
+    *   à Move(float vx, float vy).
+    *   
+    *   \param [in] vx: réel, valeur de déplacement sur l'axe X.
+    *   \param [in] vy: réel, valeur de déplacement sur l'axe Y.
+    *   \param [in] colLayer: pointeur sur CollisionLayer, couche qui stocke 
+    *                         les boites de collision.
+    *   \param [in] dt : entier, deltaTime.
+    */    
+    bool MoveWithCollision(float vx, float vy, CollisionLayer * colLayer, int dt);
+
+    
+
+protected :
     /*// ==== Données membres protégées === //*/
 
     /*! \brief Position sur l'axe des x de l'entité (horizontal).*/
@@ -209,27 +232,27 @@ protected:
     /*! \brief Position sur l'axe des y de l'entité (vertical). */
     float y;
 
-    /*! \brief Largeur de l'entité */
-    float width;
+    /*! \brief Vitesse de l'entité. */
+    int speed;
 
-    /*! \brief Longueur de l'entité */
-    float height;
-
-    /*! \brief Decalage de l'entité. */
-    int offset; // For collision detection
-
-    /*! \brief Nom de l'entité */
+    /*! \brief Nom de l'entité. */
     std::string name;
 
-    /*! \brief Direction de l'entité */
+    /*! \brief Direction de l'entité. */
     EntityDirection direction;
 
+    /*! \brief Statut de déplacement.
+    *  False, l'entité est immobile et True elle est en mouvement.
+    */
     bool isMoving;
 
-    std::shared_ptr<CollisionBox> cb;
+    /*! \brief Id unique. */
+    UniqueID id;
 
-    /*! \brief Vitesse de l'entité */
-    int speed;
+    /*! \brief Offset de la CollisionBox */
+    int offset;
+
+    
 };
 
 #endif

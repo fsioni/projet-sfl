@@ -22,6 +22,8 @@ CollisionLayer::CollisionLayer(const std::string &objectgroupTagCollision)
 
 CollisionLayer::~CollisionLayer()
 {
+    collisionBoxes.clear();
+    collisionBoxesEntity.clear();
 }
 
 void CollisionLayer::AddCollisionBox(const CollisionBox &newColBox)
@@ -29,9 +31,8 @@ void CollisionLayer::AddCollisionBox(const CollisionBox &newColBox)
     collisionBoxes.push_back(newColBox);
 }
 
-void CollisionLayer::AddCollisionBoxEnemy(std::shared_ptr<CollisionBox> newColBox)
-{
-    collisionBoxesEnemy.push_back(newColBox);
+void CollisionLayer::AddCollisionBoxEntity(int id, CollisionBox* newColBox){
+    collisionBoxesEntity[id] = newColBox;
 }
 
 void CollisionLayer::DisplayTXT() const
@@ -52,7 +53,11 @@ std::vector<CollisionBox> CollisionLayer::GetCollisionBoxes() const
     return collisionBoxes;
 }
 
-std::vector<std::shared_ptr<CollisionBox>> CollisionLayer::GetCollisionBoxesEnemy()
+std::map<int, CollisionBox*> CollisionLayer::GetCollisionBoxesEntity() 
 {
-    return collisionBoxesEnemy;
+    return collisionBoxesEntity;
+}
+
+void CollisionLayer::DeleteACollisionBoxEntity(int id){
+    collisionBoxesEntity.erase(id);
 }

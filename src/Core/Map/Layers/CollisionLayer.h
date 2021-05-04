@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <memory>
+#include <map>
 
 #include "Layer.h"
 #include "../CollisionBox.h"
@@ -41,7 +42,7 @@ public:
     /*! \brief Fonction permettant d'ajouter une boîte de collision à la couche
     *
     *   Ajoute une CollisionBox au tableau dynamique de l'objet
-    *   \param [in] newSpawn : nouvelle CollisionBox ajoutée
+    *   \param [in] newSpawn : nouvelle CollisionBox ajoutée.
     */
     void AddCollisionBox(const CollisionBox &newColBox);
 
@@ -50,9 +51,10 @@ public:
     *
     *   Ajoute une CollisionBox au tableau dynamique des collisions
     *   des entités à l'objet
-    *   \param [in] newSpawn : nouvelle CollisionBox ajoutée
+    *   \param [in] id : entier, identifiant de l'entité.
+    *   \param [in] newSpawn : nouvelle CollisionBox ajoutée.
     */
-    void AddCollisionBoxEnemy(std::shared_ptr<CollisionBox> newColBox);
+    void AddCollisionBoxEntity(int id, CollisionBox* newColBox);
 
     /*! \brief Fonction d'affichage de l'objet en mode texte
     *
@@ -60,25 +62,38 @@ public:
     */
     void DisplayTXT() const;
 
-    /*! \brief Fonction permettant de récupérer les CollisionBox de l'objet 
+    /*! \brief Fonction permettant de récupérer les CollisionBox de l'objet. 
     *
-    *   \return Retourne le tableau dynamique de CollisionBox
+    *   \return Retourne le tableau dynamique de CollisionBox.
     */
     std::vector<CollisionBox> GetCollisionBoxes() const;
 
     /*! \brief Fonction permettant de récupérer les CollisionBox 
     *         des entités de l'objet 
     *
-    *   \return Retourne le tableau dynamique de CollisionBox
+    *   \return Retourne le tableau associatif de CollisionBox*.
     */
-    std::vector<std::shared_ptr<CollisionBox>> GetCollisionBoxesEnemy();
+    std::map<int, CollisionBox*> GetCollisionBoxesEntity();
 
+    /*! \brief Supprime la CollisionBox d'une entité.
+    *
+    *   \param [in] id : id de l'entité dont on veut supprimer la CollisionBox.
+    */
+    void DeleteACollisionBoxEntity(int id);
+    
 private:
     /*// === Données membres privées === //*/
 
-    /*! \brief Tableau dyanmique des CollisionBox du Layer. */
+    /*! \brief Tableau dyanmique des CollisionBox de la Map. */
     std::vector<CollisionBox> collisionBoxes;
-    std::vector<std::shared_ptr<CollisionBox>> collisionBoxesEnemy;
+
+    /*! \brief Tableau associatif des CollisionBox des entités.
+    *   
+    *    La clé est un entier correspondant à l'ID de l'entité 
+    *    et le pointeur sur CollisionBox est sa boite de collision
+    *    associé.
+    */
+    std::map<int, CollisionBox*> collisionBoxesEntity;
 };
 
 #endif

@@ -33,9 +33,29 @@ struct Context
         stateMan = std::make_unique<StateManager>();
         renderWin = std::make_unique<sf::RenderWindow>();
         map = std::make_unique<Map>("data/maps/tilemaps/mainTilemap.tmx", "data/maps/tilesets/mainTileSet.tsx");
-        player = std::make_unique<Player>(map->GetSpawnsLayer()->
-                    getPlayerSpawn().GetX(), map->GetSpawnsLayer()->
-                    getPlayerSpawn().GetY(), "Player", 10, 10, 4, 10);
+
+        // Initialisation du joueur
+        float x = map->GetSpawnsLayer()->getPlayerSpawn().GetX();
+        float y = map->GetSpawnsLayer()->getPlayerSpawn().GetY();
+
+        player = std::make_unique<Player>(x, y, "Player", 10, 10, 4, 10);
+
+        map->GetCollisionLayer()->AddCollisionBoxEntity(
+            player->GetID(), new CollisionBox(x, y, 32, 32));
+
+        // Initialisation des enemies
+        int count = map->GetSpawnsLayer()->getEnemySpawns().size();
+        for (int i = 0; i < count; i++){
+            x = map->GetSpawnsLayer()->getEnemySpawns()[i].GetX();
+            y = map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
+
+            std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 100, 1, 1, 100);
+            enemies.push_back(enemy);
+            
+            map->GetCollisionLayer()->AddCollisionBoxEntity(
+                enemy->GetID(), new CollisionBox(x, y, 32, 32));
+        }
+
         isDebug = false;
         isMute = false;
         quit = false;
