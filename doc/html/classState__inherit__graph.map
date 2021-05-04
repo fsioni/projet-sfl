@@ -6,6 +6,6 @@
 <area shape="rect" id="node5" href="$classStateMenuSFML.html" title="Classe représentant l&#39;état menu du mode graphique (SFML)" alt="" coords="623,519,785,875"/>
 <area shape="rect" id="node6" href="$classStateMenuTxt.html" title="Classe représentant l&#39;état menu du mode texte." alt="" coords="809,585,959,809"/>
 <area shape="rect" id="node7" href="$classStatePauseSFML.html" title="Classe représentant l&#39;état pause du mode graphique (SFML)" alt="" coords="983,578,1148,817"/>
-<area shape="rect" id="node8" href="$classStateSplashScreenSFML.html" title=" " alt="" coords="1173,556,1387,839"/>
+<area shape="rect" id="node8" href="$classStateSplashScreenSFML.html" title="Classe représentant l&#39;état SplashScreen du mode graphique (SFML)" alt="" coords="1173,556,1387,839"/>
 <area shape="rect" id="node9" href="$classStateSplashScreenTxt.html" title="Classe représentant l&#39;état SplashScreen du mode texte." alt="" coords="1412,585,1612,809"/>
 </map>

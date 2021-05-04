@@ -5,6 +5,10 @@
 #include "../Core/StateManager/State.h"
 #include <SFML/Audio.hpp>
 
+/*! \class StateSplashScreenSFML
+*   \brief Classe représentant l'état SplashScreen du mode graphique (SFML)
+* 
+*/
 class StateSplashScreenSFML : public State
 {
 public:
