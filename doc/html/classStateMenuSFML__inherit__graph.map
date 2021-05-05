@@ -1,4 +1,4 @@
 <map id="StateMenuSFML" name="StateMenuSFML">
-<area shape="rect" id="node1" title="Classe représentant l&#39;état menu du mode graphique (SFML)" alt="" coords="5,233,168,589"/>
-<area shape="rect" id="node2" href="$classState.html" title="Classe représentant un état de l&#39;application." alt="" coords="21,5,152,185"/>
+<area shape="rect" id="node1" title="Classe représentant l&#39;état menu du mode graphique (SFML)" alt="" coords="5,233,195,736"/>
+<area shape="rect" id="node2" href="$classState.html" title="Classe représentant un état de l&#39;application." alt="" coords="35,5,165,185"/>
 </map>

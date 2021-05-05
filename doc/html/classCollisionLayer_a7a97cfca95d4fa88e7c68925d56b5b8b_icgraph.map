@@ -1,0 +1,6 @@
+<map id="CollisionLayer::DeleteACollisionBoxEntity" name="CollisionLayer::DeleteACollisionBoxEntity">
+<area shape="rect" id="node1" title="Supprime la CollisionBox d&#39;une entité." alt="" coords="447,5,677,47"/>
+<area shape="rect" id="node2" href="$classCollisionLayer.html#a399a9c33d2ef2c935e42e605697b85e1" title="Test de regression." alt="" coords="251,13,399,39"/>
+<area shape="rect" id="node3" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,13,203,39"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,39"/>
+</map>

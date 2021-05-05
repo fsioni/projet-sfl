@@ -1,8 +1,8 @@
 <map id="EntityWithoutHP::GetPos_x" name="EntityWithoutHP::GetPos_x">
-<area shape="rect" id="node1" title="Retourne la position sur l&#39;axe des x de l&#39;entité (horizontale)." alt="" coords="343,81,541,108"/>
-<area shape="rect" id="node2" href="$classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="117,5,285,32"/>
-<area shape="rect" id="node3" href="$classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="108,56,295,83"/>
-<area shape="rect" id="node4" href="$classNPC.html#a3f4bf0a4ed0404d17d548e44746f6229" title=" " alt="" coords="132,107,271,133"/>
-<area shape="rect" id="node5" href="$classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="120,157,283,184"/>
-<area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,157,60,184"/>
+<area shape="rect" id="node1" title="Retourne la position sur l&#39;axe des x de l&#39;entité (horizontale)." alt="" coords="485,56,684,83"/>
+<area shape="rect" id="node2" href="$classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="260,5,428,32"/>
+<area shape="rect" id="node3" href="$classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="251,56,437,83"/>
+<area shape="rect" id="node4" href="$classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="263,107,425,133"/>
+<area shape="rect" id="node5" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,107,203,133"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,107,60,133"/>
 </map>

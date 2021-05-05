@@ -1,0 +1,7 @@
+<map id="Layer::Test" name="Layer::Test">
+<area shape="rect" id="node1" title="Test de regression." alt="" coords="5,81,97,108"/>
+<area shape="rect" id="node2" href="$classLayer.html#a66e5f1c31b9bf3b4fb50290429319fc3" title="Retourne id." alt="" coords="158,5,261,32"/>
+<area shape="rect" id="node3" href="$classLayer.html#abdce2567af5aed3065143dd622a3f4c4" title="Retourne name." alt="" coords="145,56,273,83"/>
+<area shape="rect" id="node4" href="$classLayer.html#a3cb596a4a47a48abb1f6e5b29ccacc88" title="Modifie l&#39;id du Layer par celui en paramètre." alt="" coords="160,107,259,133"/>
+<area shape="rect" id="node5" href="$classLayer.html#a7cba120f9a527e80bf9f28dc8fd16dda" title="Modifie l&#39;id du Layer par celui en paramètre." alt="" coords="146,157,273,184"/>
+</map>

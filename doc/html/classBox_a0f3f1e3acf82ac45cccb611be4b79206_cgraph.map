@@ -1,0 +1,5 @@
+<map id="Box::SetPosition" name="Box::SetPosition">
+<area shape="rect" id="node1" title="Modifie la position de la Box par celle en paramètre." alt="" coords="5,31,133,57"/>
+<area shape="rect" id="node2" href="$classBox.html#aebb3d713f415ee36e6c245c45053223c" title="Modifie la position sur l&#39;axe horizontal." alt="" coords="181,5,267,32"/>
+<area shape="rect" id="node3" href="$classBox.html#a05649a7f4b8aa9c0524141672f6edfea" title="Modifie la position sur l&#39;axe vertical." alt="" coords="182,56,266,83"/>
+</map>

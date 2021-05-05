@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title="Classe représentant une entité immobile et immortel." alt="" coords="156,5,353,523"/>
 <area shape="rect" id="node2" href="$classAnimal.html" title=" " alt="" coords="5,659,155,795"/>
 <area shape="rect" id="node3" href="$classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer." alt="" coords="179,571,330,883"/>
-<area shape="rect" id="node6" href="$classNPC.html" title="Classe représentant un personnage immobile non&#45;joueur qui peut donner des points de vie et communique..." alt="" coords="355,644,509,809"/>
+<area shape="rect" id="node6" href="$classNPC.html" title="Classe représentant un personnage immobile non&#45;joueur qui peut donner des points de vie et communique..." alt="" coords="355,659,467,795"/>
 <area shape="rect" id="node4" href="$classEnemy.html" title="Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer." alt="" coords="19,931,259,1184"/>
 <area shape="rect" id="node5" href="$classPlayer.html" title="Classe représentant un joueur qui peut infliger/subir des dégats et se déplacer." alt="" coords="283,982,458,1133"/>
 </map>

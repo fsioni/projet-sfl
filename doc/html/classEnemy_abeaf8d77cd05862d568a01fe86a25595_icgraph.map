@@ -1,0 +1,5 @@
+<map id="Enemy::SetTimeNextAttack" name="Enemy::SetTimeNextAttack">
+<area shape="rect" id="node1" title=" " alt="" coords="221,31,423,57"/>
+<area shape="rect" id="node2" href="$classEnemy.html#a94f30d348b6d2840fd71675472ba38dd" title="Constructeur par défaut." alt="" coords="30,5,149,32"/>
+<area shape="rect" id="node3" href="$classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="5,56,173,83"/>
+</map>

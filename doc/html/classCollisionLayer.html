@@ -99,7 +99,7 @@ Graphe d'héritage de CollisionLayer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCollisionLayer__inherit__graph.png" border="0" usemap="#CollisionLayer_inherit__map" alt="Inheritance graph"/></div>
 <map name="CollisionLayer_inherit__map" id="CollisionLayer_inherit__map">
-<area shape="rect" title="Classe représentant une couche de CollisionBox Hérité de Layer Représente toutes les CollisionBox d&#39;u..." alt="" coords="5,233,224,443"/>
+<area shape="rect" title="Classe représentant une couche de CollisionBox Hérité de Layer Représente toutes les CollisionBox d&#39;u..." alt="" coords="5,233,224,472"/>
 <area shape="rect" href="classLayer.html" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer." alt="" coords="60,5,169,185"/>
 </map>
 </div>
@@ -130,9 +130,15 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a85cf4e9e341f186346b55457e8ccc3f8"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, <a class="el" href="classCollisionBox.html">CollisionBox</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8">GetCollisionBoxesEntity</a> ()</td></tr>
 <tr class="memdesc:a85cf4e9e341f186346b55457e8ccc3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permettant de récupérer les <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> des entités de l'objet.  <a href="classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a85cf4e9e341f186346b55457e8ccc3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1accba79321890918f40613ba32f957"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollisionLayer.html#ae1accba79321890918f40613ba32f957">CollisionBoxEntityExist</a> (int <a class="el" href="classLayer.html#ad8c4d484a5efce0cbbd0cf81b3958d17">id</a>)</td></tr>
+<tr class="memdesc:ae1accba79321890918f40613ba32f957"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de savoir si une clé existe.  <a href="classCollisionLayer.html#ae1accba79321890918f40613ba32f957">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae1accba79321890918f40613ba32f957"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a97cfca95d4fa88e7c68925d56b5b8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollisionLayer.html#a7a97cfca95d4fa88e7c68925d56b5b8b">DeleteACollisionBoxEntity</a> (int <a class="el" href="classLayer.html#ad8c4d484a5efce0cbbd0cf81b3958d17">id</a>)</td></tr>
 <tr class="memdesc:a7a97cfca95d4fa88e7c68925d56b5b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprime la <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> d'une entité.  <a href="classCollisionLayer.html#a7a97cfca95d4fa88e7c68925d56b5b8b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a7a97cfca95d4fa88e7c68925d56b5b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a399a9c33d2ef2c935e42e605697b85e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCollisionLayer.html#a399a9c33d2ef2c935e42e605697b85e1">Test</a> () const</td></tr>
+<tr class="memdesc:a399a9c33d2ef2c935e42e605697b85e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de regression.  <a href="classCollisionLayer.html#a399a9c33d2ef2c935e42e605697b85e1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a399a9c33d2ef2c935e42e605697b85e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
@@ -284,8 +290,11 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classCollisionLayer_a818d3c9c83d99a9b13bd9fb04fda9cef_icgraph.png" border="0" usemap="#classCollisionLayer_a818d3c9c83d99a9b13bd9fb04fda9cef_icgraph" alt=""/></div>
 <map name="classCollisionLayer_a818d3c9c83d99a9b13bd9fb04fda9cef_icgraph" id="classCollisionLayer_a818d3c9c83d99a9b13bd9fb04fda9cef_icgraph">
-<area shape="rect" title="Fonction permettant d&#39;ajouter une boîte de collision à la couche." alt="" coords="140,5,368,32"/>
-<area shape="rect" href="classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="5,5,92,32"/>
+<area shape="rect" title="Fonction permettant d&#39;ajouter une boîte de collision à la couche." alt="" coords="447,31,675,57"/>
+<area shape="rect" href="classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="281,5,368,32"/>
+<area shape="rect" href="classCollisionLayer.html#a399a9c33d2ef2c935e42e605697b85e1" title="Test de regression." alt="" coords="251,56,399,83"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,56,203,83"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,60,83"/>
 </map>
 </div>
 
@@ -325,6 +334,61 @@ Voici le graphe des appelants de cette fonction :</div>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classCollisionLayer_a7dfb68848be430bad4397424534a7084_icgraph.png" border="0" usemap="#classCollisionLayer_a7dfb68848be430bad4397424534a7084_icgraph" alt=""/></div>
+<map name="classCollisionLayer_a7dfb68848be430bad4397424534a7084_icgraph" id="classCollisionLayer_a7dfb68848be430bad4397424534a7084_icgraph">
+<area shape="rect" title="Fonction permettant d&#39;ajouter une boîte de collision d&#39;entité à la couche." alt="" coords="447,5,649,47"/>
+<area shape="rect" href="classCollisionLayer.html#a399a9c33d2ef2c935e42e605697b85e1" title="Test de regression." alt="" coords="251,13,399,39"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,13,203,39"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae1accba79321890918f40613ba32f957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1accba79321890918f40613ba32f957">&#9670;&nbsp;</a></span>CollisionBoxEntityExist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CollisionLayer::CollisionBoxEntityExist </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet de savoir si une clé existe. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>: entier, clé de la <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> * à tester. <br  />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne true si la clé existe et false sinon. </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classCollisionLayer_ae1accba79321890918f40613ba32f957_icgraph.png" border="0" usemap="#classCollisionLayer_ae1accba79321890918f40613ba32f957_icgraph" alt=""/></div>
+<map name="classCollisionLayer_ae1accba79321890918f40613ba32f957_icgraph" id="classCollisionLayer_ae1accba79321890918f40613ba32f957_icgraph">
+<area shape="rect" title="Permet de savoir si une clé existe." alt="" coords="775,89,953,131"/>
+<area shape="rect" href="classCollisionLayer.html#a7a97cfca95d4fa88e7c68925d56b5b8b" title="Supprime la CollisionBox d&#39;une entité." alt="" coords="491,5,721,47"/>
+<area shape="rect" href="classCollisionLayer.html#a399a9c33d2ef2c935e42e605697b85e1" title="Test de regression." alt="" coords="270,42,418,69"/>
+<area shape="rect" href="classStateGameSFML.html#a8e856a9c6fca122ce3a10e3cf877531b" title="Affichage le mode debug sur la fenêtre SFML." alt="" coords="491,122,721,149"/>
+<area shape="rect" href="classStateGameSFML.html#a11a34aefe47e9f0d1fcfc9130c9f1d27" title="Met à jour les données correspondant aux ennemis." alt="" coords="485,173,727,199"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,42,203,69"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,42,60,69"/>
+<area shape="rect" href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a" title="Fonction d&#39;affichage du State." alt="" coords="251,122,437,149"/>
+<area shape="rect" href="classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2" title="Fonction de mise à jour du State." alt="" coords="251,173,437,199"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -351,6 +415,26 @@ Voici le graphe des appelants de cette fonction :</div>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classCollisionLayer_a7a97cfca95d4fa88e7c68925d56b5b8b_cgraph.png" border="0" usemap="#classCollisionLayer_a7a97cfca95d4fa88e7c68925d56b5b8b_cgraph" alt=""/></div>
+<map name="classCollisionLayer_a7a97cfca95d4fa88e7c68925d56b5b8b_cgraph" id="classCollisionLayer_a7a97cfca95d4fa88e7c68925d56b5b8b_cgraph">
+<area shape="rect" title="Supprime la CollisionBox d&#39;une entité." alt="" coords="5,5,236,47"/>
+<area shape="rect" href="classCollisionLayer.html#ae1accba79321890918f40613ba32f957" title="Permet de savoir si une clé existe." alt="" coords="284,5,463,47"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classCollisionLayer_a7a97cfca95d4fa88e7c68925d56b5b8b_icgraph.png" border="0" usemap="#classCollisionLayer_a7a97cfca95d4fa88e7c68925d56b5b8b_icgraph" alt=""/></div>
+<map name="classCollisionLayer_a7a97cfca95d4fa88e7c68925d56b5b8b_icgraph" id="classCollisionLayer_a7a97cfca95d4fa88e7c68925d56b5b8b_icgraph">
+<area shape="rect" title="Supprime la CollisionBox d&#39;une entité." alt="" coords="447,5,677,47"/>
+<area shape="rect" href="classCollisionLayer.html#a399a9c33d2ef2c935e42e605697b85e1" title="Test de regression." alt="" coords="251,13,399,39"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,13,203,39"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -396,11 +480,17 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classCollisionLayer_a9238c6f5d6a081cb42bb621eb4340435_icgraph.png" border="0" usemap="#classCollisionLayer_a9238c6f5d6a081cb42bb621eb4340435_icgraph" alt=""/></div>
 <map name="classCollisionLayer_a9238c6f5d6a081cb42bb621eb4340435_icgraph" id="classCollisionLayer_a9238c6f5d6a081cb42bb621eb4340435_icgraph">
-<area shape="rect" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="491,49,692,90"/>
-<area shape="rect" href="classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="240,49,443,90"/>
-<area shape="rect" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="17,5,180,32"/>
-<area shape="rect" href="classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="15,56,183,83"/>
-<area shape="rect" href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="5,107,192,133"/>
+<area shape="rect" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="620,126,821,167"/>
+<area shape="rect" href="classStateGameSFML.html#a8e856a9c6fca122ce3a10e3cf877531b" title="Affichage le mode debug sur la fenêtre SFML." alt="" coords="343,28,572,55"/>
+<area shape="rect" href="classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="356,97,559,138"/>
+<area shape="rect" href="classCollisionLayer.html#a399a9c33d2ef2c935e42e605697b85e1" title="Test de regression." alt="" coords="383,163,531,189"/>
+<area shape="rect" href="classMap.html#a5a8b1d219211664f0df882e35104d035" title="Fonction de test de la classe Map." alt="" coords="415,213,499,240"/>
+<area shape="rect" href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a" title="Fonction d&#39;affichage du State." alt="" coords="108,5,295,32"/>
+<area shape="rect" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="120,56,283,83"/>
+<area shape="rect" href="classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="117,107,285,133"/>
+<area shape="rect" href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="108,157,295,184"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="154,209,249,236"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,209,60,236"/>
 </map>
 </div>
 
@@ -428,11 +518,62 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classCollisionLayer_a85cf4e9e341f186346b55457e8ccc3f8_icgraph.png" border="0" usemap="#classCollisionLayer_a85cf4e9e341f186346b55457e8ccc3f8_icgraph" alt=""/></div>
 <map name="classCollisionLayer_a85cf4e9e341f186346b55457e8ccc3f8_icgraph" id="classCollisionLayer_a85cf4e9e341f186346b55457e8ccc3f8_icgraph">
-<area shape="rect" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="491,49,692,90"/>
-<area shape="rect" href="classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="240,49,443,90"/>
-<area shape="rect" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="17,5,180,32"/>
-<area shape="rect" href="classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="15,56,183,83"/>
-<area shape="rect" href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="5,107,192,133"/>
+<area shape="rect" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="632,161,833,202"/>
+<area shape="rect" href="classStateGameSFML.html#a8e856a9c6fca122ce3a10e3cf877531b" title="Affichage le mode debug sur la fenêtre SFML." alt="" coords="349,27,578,53"/>
+<area shape="rect" href="classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="362,110,565,151"/>
+<area shape="rect" href="classCollisionLayer.html#a399a9c33d2ef2c935e42e605697b85e1" title="Test de regression." alt="" coords="389,197,537,224"/>
+<area shape="rect" href="classStateGameSFML.html#a11a34aefe47e9f0d1fcfc9130c9f1d27" title="Met à jour les données correspondant aux ennemis." alt="" coords="343,248,584,275"/>
+<area shape="rect" href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a" title="Fonction d&#39;affichage du State." alt="" coords="108,5,295,32"/>
+<area shape="rect" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="120,56,283,83"/>
+<area shape="rect" href="classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="117,107,285,133"/>
+<area shape="rect" href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="108,157,295,184"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="154,208,249,235"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,208,60,235"/>
+<area shape="rect" href="classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2" title="Fonction de mise à jour du State." alt="" coords="109,259,294,285"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a399a9c33d2ef2c935e42e605697b85e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a399a9c33d2ef2c935e42e605697b85e1">&#9670;&nbsp;</a></span>Test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionLayer::Test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test de regression. </p>
+<p>Effectue une série de test sur les fonctions de la classe et vérifie qu'elles font bien ce qu'elles sont censés faire. </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classCollisionLayer_a399a9c33d2ef2c935e42e605697b85e1_cgraph.png" border="0" usemap="#classCollisionLayer_a399a9c33d2ef2c935e42e605697b85e1_cgraph" alt=""/></div>
+<map name="classCollisionLayer_a399a9c33d2ef2c935e42e605697b85e1_cgraph" id="classCollisionLayer_a399a9c33d2ef2c935e42e605697b85e1_cgraph">
+<area shape="rect" title="Test de regression." alt="" coords="5,152,153,179"/>
+<area shape="rect" href="classCollisionLayer.html#a818d3c9c83d99a9b13bd9fb04fda9cef" title="Fonction permettant d&#39;ajouter une boîte de collision à la couche." alt="" coords="203,5,431,32"/>
+<area shape="rect" href="classCollisionLayer.html#a7dfb68848be430bad4397424534a7084" title="Fonction permettant d&#39;ajouter une boîte de collision d&#39;entité à la couche." alt="" coords="215,57,418,98"/>
+<area shape="rect" href="classCollisionLayer.html#ae1accba79321890918f40613ba32f957" title="Permet de savoir si une clé existe." alt="" coords="480,145,659,186"/>
+<area shape="rect" href="classCollisionLayer.html#a7a97cfca95d4fa88e7c68925d56b5b8b" title="Supprime la CollisionBox d&#39;une entité." alt="" coords="201,174,432,215"/>
+<area shape="rect" href="classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="216,239,417,281"/>
+<area shape="rect" href="classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="216,305,417,346"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classCollisionLayer_a399a9c33d2ef2c935e42e605697b85e1_icgraph.png" border="0" usemap="#classCollisionLayer_a399a9c33d2ef2c935e42e605697b85e1_icgraph" alt=""/></div>
+<map name="classCollisionLayer_a399a9c33d2ef2c935e42e605697b85e1_icgraph" id="classCollisionLayer_a399a9c33d2ef2c935e42e605697b85e1_icgraph">
+<area shape="rect" title="Test de regression." alt="" coords="251,5,399,32"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,5,203,32"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
 </map>
 </div>
 

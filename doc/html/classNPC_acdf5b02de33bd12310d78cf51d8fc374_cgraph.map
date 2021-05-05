@@ -1,0 +1,4 @@
+<map id="NPC::ReadRandDialog" name="NPC::ReadRandDialog">
+<area shape="rect" id="node1" title="Affiche sur la console une phrase." alt="" coords="5,13,171,39"/>
+<area shape="rect" id="node2" href="$classEntityWithoutHP.html#a065012b02fa61fdfb546134daaac93cc" title="Permet de générer un numéro de ligne aléatoirement." alt="" coords="219,5,441,47"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Enemy::IsTimeToAttack" name="Enemy::IsTimeToAttack">
+<area shape="rect" id="node1" title=" " alt="" coords="221,5,396,32"/>
+<area shape="rect" id="node2" href="$classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="5,5,173,32"/>
+</map>

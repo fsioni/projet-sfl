@@ -1,0 +1,5 @@
+<map id="NPC::GiveHP" name="NPC::GiveHP">
+<area shape="rect" id="node1" title="Permet à un NPC de donner des points de vie à un Player." alt="" coords="5,31,111,57"/>
+<area shape="rect" id="node2" href="$classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa" title="Retourne le nombre de points de vie de l&#39;entité." alt="" coords="159,5,316,32"/>
+<area shape="rect" id="node3" href="$classEntityWithHP.html#a27e4773b47d1ba1f8eba71e9a8fd69c5" title="Permets de modifier le nombre de points de vie d&#39;une entité EntityWithHP." alt="" coords="160,56,315,83"/>
+</map>
