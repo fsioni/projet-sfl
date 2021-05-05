@@ -26,11 +26,17 @@ SpawnsLayer::SpawnsLayer(const std::string &objectgroupTagPlayer,
     }
 
 
+
+    std::string dialog, propertyTag;
     count = countTag(objectgroupTagNPC, "object");
     for (int i = 0; i < count; i++)
     {
         objectTag = getInsideTag(objectgroupTagNPC, "object", i);
         NpcSpawns.push_back(SpawnPoint("NPCSpawn", objectTag));
+
+        propertyTag = getInsideTag(objectgroupTagNPC, "property", i);
+        dialog = getAttributeValue(propertyTag, "value");
+        NpcDialog.push_back(dialog);
     }
 }
 
@@ -68,6 +74,12 @@ void SpawnsLayer::AddNPC(SpawnPoint const &newSpawn)
     NpcSpawns.push_back(newSpawn);
 }
 
+
+std::string SpawnsLayer::GetADialog(int ind) const{
+    if(ind < NpcDialog.size())
+        return NpcDialog[ind];
+    return "NULL";
+}
 
 void SpawnsLayer::Test() const{
     std::cout << "===== Class SpawnsLayer =====" << std::endl;

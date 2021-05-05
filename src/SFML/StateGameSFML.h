@@ -19,6 +19,7 @@ public:
     void Update();
     void UpdatePlayer();
     void UpdateEnemies();
+    void UpdateNPCs();
 
     void Display();
     void DisplayMap();

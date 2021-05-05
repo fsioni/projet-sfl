@@ -275,13 +275,33 @@
   <object id="8" x="478.333" y="1311"/>
  </objectgroup>
  <objectgroup id="10" name="NPCSpawn">
-  <object id="405" x="2678" y="1397.33"/>
-  <object id="406" x="2291.33" y="1142"/>
-  <object id="410" x="858.667" y="229.333"/>
-  <object id="411" x="755" y="1077"/>
-  <object id="412" x="2976.33" y="764.667"/>
+  <object id="405" x="2678" y="1397.33">
+    <properties>
+      <property name="Dialog" value="Je suis un NPC 1."/>
+    </properties>
+  </object>
+  <object id="406" x="2291.33" y="1142">
+   <properties>
+    <property name="Dialog" value="Je suis un NPC 2."/>
+   </properties>
+  </object>
+  <object id="410" x="858.667" y="229.333">
+   <properties>
+    <property name="Dialog" value="Je suis un NPC 3."/>
+   </properties>
+  </object>
+  <object id="411" x="755" y="1077">
+   <properties>
+    <property name="Dialog" value="Je suis un NPC 4."/>
+   </properties>
+  </object>
+  <object id="412" x="2976.33" y="764.667">
+    <properties>
+      <property name="Dialog" value="Je suis un NPC 5."/>
+    </properties>
+  </object>
  </objectgroup>
- <objectgroup id="7" name="EnemySpawn">
+ <objectgroup id="7" name="EnemySpawn" visible="0">
   <object id="9" x="1332" y="1175.34"/>
   <object id="10" x="1703.45" y="1093.55"/>
   <object id="11" x="1552.34" y="1518"/>
