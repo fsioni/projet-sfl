@@ -51,28 +51,40 @@ void StateGameSFML::Init()
 
     // Initialisation UI
     assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
+    textColor = sf::Color(245, 222, 92);
 
-    //int winx = context->renderWin->getSize().x;
-    //int winy = context->renderWin->getSize().y;
-
-    heartText.loadFromFile("./data/textures/UI/heart.png");
-    heartSprite.setTexture(heartText);
+    // Initialisation coeur et vie pour l'UI
+    heartTex.loadFromFile("./data/textures/UI/heart.png");
+    heartSprite.setTexture(heartTex);
     heartSprite.setScale(0.1f, 0.1f);
     heartSprite.setOrigin(heartSprite.getLocalBounds().left +
                               heartSprite.getLocalBounds().width / 2.0f,
                           heartSprite.getLocalBounds().top +
                               heartSprite.getLocalBounds().height / 2.0f);
-
     heartSprite.setPosition(20, 30);
 
     hpText.setFont(textFont);
+    hpText.setFillColor(textColor);
+    hpText.setOutlineColor(sf::Color::Black);
+    hpText.setOutlineThickness(2);
     hpText.setString("0/0");
     hpText.setCharacterSize(30);
-
     hpText.setOrigin(hpText.getLocalBounds().left + hpText.getLocalBounds().width / 2.0f, hpText.getLocalBounds().top +
                                                                                               hpText.getLocalBounds().height / 2.0f);
-
     hpText.setPosition(60, 30);
+
+    // Initialisation du texte des PNJ
+    npcText.setFont(textFont);
+    npcText.setFillColor(textColor);
+    npcText.setOutlineColor(sf::Color::Black);
+    npcText.setOutlineThickness(2);
+    npcText.setString("");
+    npcText.setCharacterSize(45);
+    npcText.setOrigin(npcText.getLocalBounds().left + npcText.getLocalBounds().width / 2.0f, npcText.getLocalBounds().top +
+                                                                                              npcText.getLocalBounds().height / 2.0f);
+    npcText.setPosition(context->renderWin->getSize().x/2,
+                    context->renderWin->getSize().y - 100);
+    
 
     // Info sur la tilemap
     w = context->map->GetTileset()->GetTileWidth();
@@ -95,6 +107,8 @@ void StateGameSFML::Init()
     isGoingRight=false;
     // Init Attack
     isAttacking=false;
+    
+    hasInteracted=false;
 }
 
 void StateGameSFML::ProcessInput()
@@ -181,6 +195,10 @@ void StateGameSFML::ProcessInput()
 
         case sf::Event::KeyPressed:
 
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::E))
+            {
+                hasInteracted = !hasInteracted;
+            }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::P))
             {
                 context->isDebug = (!context->isDebug);
@@ -265,6 +283,10 @@ void StateGameSFML::Update()
         std::string hp = std::to_string(context->player->GetHP());
         std::string maxHp = std::to_string(context->player->GetMaxHP());
         hpText.setString("HP : " + hp + "/" + maxHp);
+        npcText.setOrigin(npcText.getLocalBounds().left + npcText.getLocalBounds().width / 2.0f, npcText.getLocalBounds().top +
+                                                                                              npcText.getLocalBounds().height / 2.0f);
+        npcText.setPosition(context->renderWin->getSize().x/2,
+                    context->renderWin->getSize().y - 100);
     }
     else
     {
@@ -449,11 +471,28 @@ void StateGameSFML::UpdateEnemies()
 
 void StateGameSFML::UpdateNPCs(){
     int count = context->npc.size();
+    bool isInRange = false;
+    int npcInRange = -1;
     for(int i = 0; i<count; i++){
         float dx = playerX - context->npc[i]->GetPos_x();
         float dy = playerY - context->npc[i]->GetPos_y();
         float dist = sqrt(dy*dy + dx*dx);
-        if(dist < 4*32) std::cout << context->npc[i]->GetDialog() << std::endl;
+        if(dist < 4*32) 
+        {
+            isInRange = true;
+            npcInRange = i;
+        }
+    }
+
+    if (isInRange && !hasInteracted) npcText.setString("Press E to interact");
+    else if (!isInRange)
+    {
+        npcText.setString("");
+        hasInteracted = false;
+    }
+    else if (isInRange && hasInteracted)
+    {
+        npcText.setString(context->npc[npcInRange]->GetDialog());
     }
 }
 
@@ -474,6 +513,7 @@ void StateGameSFML::Display()
     ///////////// UI ///////////////
     context->renderWin->draw(hpText);
     context->renderWin->draw(heartSprite);
+    context->renderWin->draw(npcText);
 
     context->renderWin->display();
 }
@@ -574,7 +614,6 @@ void StateGameSFML::DisplayEnemies()
 }
 
 void StateGameSFML::DisplayNPC(){
-    
     for (int i = 0; i < (int)context->npc.size(); i++)
     {
         int direction = context->npc[i]->GetDirection();
@@ -590,9 +629,9 @@ void StateGameSFML::DisplayNPC(){
         playerSprite.setPosition(npcX, npcY);
         
         playerSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
-           
+    
         context->renderWin->draw(playerSprite);
-    }
+    }    
 }
 
 void StateGameSFML::DisplayCollisionBox(

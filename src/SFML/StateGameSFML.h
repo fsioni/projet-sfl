@@ -108,6 +108,8 @@ private:
     bool isWalking;
     /*! \brief Indique si le joueur attaque */
     bool isAttacking;
+    /*! \brief Indique si le joueur a intéragi depuis le dernier update */
+    bool hasInteracted;
 
     // Info sur la tilemap
     int w, h, nbMapLayer, x, y, data;
@@ -127,11 +129,15 @@ private:
 
     /*! \brief Police des textes */
     sf::Font textFont;
+    /*! \brief Couleur des textes de l'UI */
+    sf::Color textColor;
     /*! \brief Texte indiquant le nombre d'hp du joueur */
     sf::Text hpText;
+    /*! \brief Texte indiquant la phrase que dit le PNJ à proximité*/
+    sf::Text npcText;
 
     /*! \brief Texture du coeur */
-    sf::Texture heartText;
+    sf::Texture heartTex;
     /*! \brief Sprite du coeur */
     sf::Sprite heartSprite;
 
