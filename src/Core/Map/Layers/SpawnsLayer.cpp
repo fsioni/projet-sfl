@@ -2,6 +2,7 @@
 
 #include "../tmxParsing.h"
 #include <iostream>
+#include <cassert>
 
 SpawnsLayer::SpawnsLayer()
 {
