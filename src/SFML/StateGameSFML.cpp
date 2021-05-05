@@ -9,7 +9,10 @@ StateGameSFML::StateGameSFML(/* args */)
 }
 
 StateGameSFML::StateGameSFML(std::shared_ptr<Context> &cContext)
-    : context(cContext), isPaused(false)
+    : context(cContext), isPaused(false),
+    enemiesHitClocks(context->enemies.size()),
+    enemiesLastHP(context->enemies.size(), context->enemies[0]->GetHP()),
+    enemiesGotHitted(context->enemies.size(), false)
 {
 }
 
@@ -75,7 +78,8 @@ void StateGameSFML::Init()
 
     fps = 0;
 
-    lastHP = context->player->GetHP();
+    playerLastHP = context->player->GetHP();
+
 
     // Init direction
     isGoingUp=false;
@@ -84,7 +88,6 @@ void StateGameSFML::Init()
     isGoingRight=false;
     // Init Attack
     isAttacking=false;
-
 }
 
 void StateGameSFML::ProcessInput()
@@ -321,19 +324,20 @@ void StateGameSFML::UpdatePlayer()
         spriteClock.restart();
     }
 
-    if (lastHP != context->player->GetHP())
+    // Gestion scintillement rouge joueur
+    if (playerLastHP != context->player->GetHP())
     {
         playerSprite.setColor(sf::Color::Red);
         hitSound.play();
-        hitClock.restart();
+        playerHitClock.restart();
     }
 
-    if (hitClock.getElapsedTime().asSeconds() > 0.2)
+    if (playerHitClock.getElapsedTime().asSeconds() > 0.2)
     {
         playerSprite.setColor(sf::Color::White);
     }
 
-    lastHP = context->player->GetHP();
+    playerLastHP = context->player->GetHP();
 }
 
 void StateGameSFML::UpdateEnemies()
@@ -366,6 +370,21 @@ void StateGameSFML::UpdateEnemies()
             context->enemies.erase(context->enemies.begin()+i);
             count--;
         }
+
+        // Gestion scintillement rouge ennemis
+        if (enemiesLastHP[i] != context->enemies[i]->GetHP())
+        {
+            enemiesGotHitted[i] = true;
+            hitSound.play();
+            enemiesHitClocks[i].restart();
+        }
+
+        if (enemiesHitClocks[i].getElapsedTime().asSeconds() > 0.2)
+        {
+            enemiesGotHitted[i] = false;
+        }
+
+        enemiesLastHP[i] = context->enemies[i]->GetHP();
     }
 
     // Mise à jour texte UI
@@ -477,7 +496,13 @@ void StateGameSFML::DisplayEnemies()
                 enemySprite.setTextureRect(sf::IntRect(0, direction * 32, 32,
                                                                         32));
            
-            
+            if(enemiesGotHitted[i] == true)
+            {
+                enemySprite.setColor(sf::Color::Red);
+            }else 
+            {
+                enemySprite.setColor(sf::Color::White);
+            }
 
             context->renderWin->draw(enemySprite);
         }
