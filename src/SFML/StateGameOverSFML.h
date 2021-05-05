@@ -36,6 +36,8 @@ private:
 
     /*! \brief Police des textes */
     sf::Font textFont;
+    /*! \brief Couleur des textes de l'UI */
+    sf::Color textColor;
     /*! \brief Texte de game over */
     sf::Text gameOverText;
     /*! \brief Texte indiquant comment relancer la partie */

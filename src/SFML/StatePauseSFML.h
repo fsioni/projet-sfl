@@ -33,6 +33,8 @@ private:
 
     /*! \brief Police d'ecriture des textes */
     sf::Font textFont;
+    /*! \brief Couleur des textes de l'UI */
+    sf::Color textColor;
 
     /*! \brief Texte du titre de pause */
     sf::Text pauseText;

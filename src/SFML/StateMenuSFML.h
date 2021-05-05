@@ -34,6 +34,13 @@ private:
 
     /*! \brief Police d'ecriture des textes */
     sf::Font textFont;
+    /*! \brief Couleur des textes de l'UI */
+    sf::Color textColor;
+
+    /*! \brief Texture du fond d'écran */
+    sf::Texture bgTex;
+    /*! \brief Sprite du fond d'écran */
+    sf::Sprite bgSprite;
 
     /*! \brief Texte du titre du jeu */
     sf::Text gameTitle;
