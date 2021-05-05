@@ -30,11 +30,27 @@ private:
     sf::Font textFont;
 
     sf::Text gameTitle;
+
+    // Main Menu
     sf::Text playButton;
+    sf::Text instructionButton;
     sf::Text exitButton;
+
+    // InstructionSub Menu
+    sf::Text moveText;
+    sf::Text attackText;
+    sf::Text interactText;
+    sf::Text pauseText;
+    sf::Text debugModeText;
+    sf::Text quitSubMenuText;
 
     bool isPlayButSelected;
     bool isPlayButPressed;
+
+    bool isInstructionButSelected;
+    bool isInstructionButPressed;
+
+    bool isInInstructionSubMenu;
 
     bool isExitButSelected;
     bool isExitButPressed;

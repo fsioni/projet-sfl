@@ -88,7 +88,6 @@ private:
     // Gestion scintillement rouge lorsque le joueur prend des dégâts
     sf::Clock playerHitClock;
     int playerLastHP;
-    bool playerGotHitted;
 
     // Gestion scintillement rouge lorsque un ennemi prend des dégâts
     std::vector<sf::Clock> enemiesHitClocks;
