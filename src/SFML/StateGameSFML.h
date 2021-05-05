@@ -4,6 +4,7 @@
 #include "../Core/Game.h"
 #include "../Core/StateManager/State.h"
 #include <SFML/Audio.hpp>
+#include <memory>
 
 class StateGameSFML : public State
 {
@@ -86,9 +87,14 @@ private:
     bool isPaused;
 
     // Gestion scintillement rouge lorsque le joueur prend des dégâts
-    sf::Clock hitClock;
-    int lastHP;
+    sf::Clock playerHitClock;
+    int playerLastHP;
     bool playerGotHitted;
+
+    // Gestion scintillement rouge lorsque un ennemi prend des dégâts
+    std::vector<sf::Clock> enemiesHitClocks;
+    std::vector<int> enemiesLastHP;
+    std::vector<bool> enemiesGotHitted;
 
     // Musique et sons
     sf::Music music;
