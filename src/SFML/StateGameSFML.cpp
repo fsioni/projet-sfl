@@ -238,6 +238,7 @@ void StateGameSFML::Update()
        
         UpdatePlayer();
         UpdateEnemies();
+        UpdateNPCs();
         
     
         // Mise à jour texte UI
@@ -391,6 +392,16 @@ void StateGameSFML::UpdateEnemies()
     std::string hp = std::to_string(context->player->GetHP());
     std::string maxHp = std::to_string(context->player->GetMaxHP());
     hpText.setString("HP :" + hp + "/" + maxHp);
+}
+
+void StateGameSFML::UpdateNPCs(){
+    int count = context->npc.size();
+    for(int i = 0; i<count; i++){
+        float dx = playerX - context->npc[i]->GetPos_x();
+        float dy = playerY - context->npc[i]->GetPos_y();
+        float dist = sqrt(dy*dy + dx*dx);
+        if(dist < 4*32) std::cout << context->npc[i]->GetDialog() << std::endl;
+    }
 }
 
 void StateGameSFML::Display()

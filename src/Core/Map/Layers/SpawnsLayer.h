@@ -82,6 +82,9 @@ public:
     */
     void Test() const;
 
+    std::string GetADialog(int ind) const;
+    
+
 private:
     /*// === Données membres privées === //*/
     /*! \brief SpawnPoint du joueur. */
@@ -91,6 +94,8 @@ private:
 
     /*! \brief Les SpawnPoint des NPC. Un SpawnPoint = Un NPC */
     std::vector<SpawnPoint> NpcSpawns;
+
+    std::vector<std::string> NpcDialog;
 };
 
 #endif
