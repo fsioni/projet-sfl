@@ -75,11 +75,26 @@ public:
     */
     std::map<int, CollisionBox*> GetCollisionBoxesEntity();
 
+    /*! \brief Permet de savoir si une clé existe.
+    *   
+    *   \param [in] id : entier, clé de la CollisionBox * à tester.  
+    * 
+    *   \return Retourne true si la clé existe et false sinon.
+    */
+    bool  CollisionBoxEntityExist(int id);
+
     /*! \brief Supprime la CollisionBox d'une entité.
     *
     *   \param [in] id : id de l'entité dont on veut supprimer la CollisionBox.
     */
     void DeleteACollisionBoxEntity(int id);
+
+    /*! \brief Test de regression.
+    *
+    *   Effectue une série de test sur les fonctions de la classe
+    *   et vérifie qu'elles font bien ce qu'elles sont censés faire.
+    */
+    void Test() const;
     
 private:
     /*// === Données membres privées === //*/

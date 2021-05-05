@@ -9,7 +9,10 @@ StateGameSFML::StateGameSFML(/* args */)
 }
 
 StateGameSFML::StateGameSFML(std::shared_ptr<Context> &cContext)
-    : context(cContext), isPaused(false)
+    : context(cContext), isPaused(false),
+    enemiesHitClocks(context->enemies.size()),
+    enemiesLastHP(context->enemies.size(), context->enemies[0]->GetHP()),
+    enemiesGotHitted(context->enemies.size(), false)
 {
 }
 
@@ -82,7 +85,8 @@ void StateGameSFML::Init()
 
     fps = 0;
 
-    lastHP = context->player->GetHP();
+    playerLastHP = context->player->GetHP();
+
 
     // Init direction
     isGoingUp=false;
@@ -91,7 +95,6 @@ void StateGameSFML::Init()
     isGoingRight=false;
     // Init Attack
     isAttacking=false;
-
 }
 
 void StateGameSFML::ProcessInput()
@@ -255,6 +258,7 @@ void StateGameSFML::Update()
        
         UpdatePlayer();
         UpdateEnemies();
+        UpdateNPCs();
         
     
         // Mise à jour texte UI
@@ -374,24 +378,26 @@ void StateGameSFML::UpdatePlayer()
         spriteClock.restart();
     }
 
-    if (lastHP != context->player->GetHP())
+    // Gestion scintillement rouge joueur
+    if (playerLastHP != context->player->GetHP())
     {
         playerSprite.setColor(sf::Color::Red);
         hitSound.play();
-        hitClock.restart();
+        playerHitClock.restart();
     }
 
-    if (hitClock.getElapsedTime().asSeconds() > 0.2)
+    if (playerHitClock.getElapsedTime().asSeconds() > 0.2)
     {
         playerSprite.setColor(sf::Color::White);
     }
 
-    lastHP = context->player->GetHP();
+    playerLastHP = context->player->GetHP();
 }
 
 void StateGameSFML::UpdateEnemies()
 {
     int count = context->enemies.size();
+    CollisionLayer * colLayer = context->map->GetCollisionLayer();
 
     for (int i = 0; i < count; i++)
     {
@@ -407,10 +413,10 @@ void StateGameSFML::UpdateEnemies()
             float posY = context->enemies[i]->GetPos_y();
             int enemyID = context->enemies[i]->GetID();
 
-            CollisionBox * cbEnemy = 
-                context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[enemyID];
-
-            cbEnemy->SetPosition(posX, posY);
+            if(colLayer->CollisionBoxEntityExist(enemyID)){
+                CollisionBox * cbEnemy = colLayer->GetCollisionBoxesEntity()[enemyID];
+                cbEnemy->SetPosition(posX, posY);
+            }
         } 
         else{
             int enemyID = context->enemies[i]->GetID();
@@ -418,12 +424,37 @@ void StateGameSFML::UpdateEnemies()
             context->enemies.erase(context->enemies.begin()+i);
             count--;
         }
+
+        // Gestion scintillement rouge ennemis
+        if (enemiesLastHP[i] != context->enemies[i]->GetHP())
+        {
+            enemiesGotHitted[i] = true;
+            hitSound.play();
+            enemiesHitClocks[i].restart();
+        }
+
+        if (enemiesHitClocks[i].getElapsedTime().asSeconds() > 0.2)
+        {
+            enemiesGotHitted[i] = false;
+        }
+
+        enemiesLastHP[i] = context->enemies[i]->GetHP();
     }
 
     // Mise à jour texte UI
     std::string hp = std::to_string(context->player->GetHP());
     std::string maxHp = std::to_string(context->player->GetMaxHP());
     hpText.setString("HP :" + hp + "/" + maxHp);
+}
+
+void StateGameSFML::UpdateNPCs(){
+    int count = context->npc.size();
+    for(int i = 0; i<count; i++){
+        float dx = playerX - context->npc[i]->GetPos_x();
+        float dy = playerY - context->npc[i]->GetPos_y();
+        float dist = sqrt(dy*dy + dx*dx);
+        if(dist < 4*32) std::cout << context->npc[i]->GetDialog() << std::endl;
+    }
 }
 
 void StateGameSFML::Display()
@@ -433,6 +464,7 @@ void StateGameSFML::Display()
     DisplayMap();
     DisplayPlayer();
     DisplayEnemies();
+    DisplayNPC();
 
     if (context->isDebug) //Affichage DEBUG
     {
@@ -526,14 +558,46 @@ void StateGameSFML::DisplayEnemies()
                                                        32, 32));
             else
                 enemySprite.setTextureRect(sf::IntRect(0, direction * 32, 32,
-                                                       32));
+                                                                        32));
+           
+            if(enemiesGotHitted[i] == true)
+            {
+                enemySprite.setColor(sf::Color::Red);
+            }else 
+            {
+                enemySprite.setColor(sf::Color::White);
+            }
 
             context->renderWin->draw(enemySprite);
         }
     }
 }
 
-void StateGameSFML::DisplayCollisionBox(CollisionBox * cb, const sf::Color & color, int id){
+void StateGameSFML::DisplayNPC(){
+    
+    for (int i = 0; i < (int)context->npc.size(); i++)
+    {
+        int direction = context->npc[i]->GetDirection();
+        int npcX = context->npc[i]->GetPos_x() - substX - w / 2;
+        int npcY = context->npc[i]->GetPos_y() - substY - h / 2;
+
+        // Affichage de l'ombre
+        shadowSprite.setPosition(npcX, npcY);
+        shadowSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32, 32));
+        context->renderWin->draw(shadowSprite);
+
+        // Affichage des NPC
+        playerSprite.setPosition(npcX, npcY);
+        
+        playerSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
+           
+        context->renderWin->draw(playerSprite);
+    }
+}
+
+void StateGameSFML::DisplayCollisionBox(
+            CollisionBox * cb, const sf::Color & color, int id)
+{
     sf::RectangleShape rectColBox(
         sf::Vector2f(cb->GetWidth(), cb->GetHeight())
     );
@@ -567,11 +631,11 @@ void StateGameSFML::DisplayCollisionBox(CollisionBox * cb, const sf::Color & col
 }
 
 void StateGameSFML::DisplayDebug(){
-    //Affichage du debug du joueur
+    CollisionLayer * colLayer = context->map->GetCollisionLayer();
 
+    //Affichage du debug du joueur
     int playerID = context->player->GetID();
-    CollisionBox * cbPlayer = 
-        context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
+    CollisionBox * cbPlayer = colLayer->GetCollisionBoxesEntity()[playerID];
 
     //Affichage de la collision box player
     DisplayCollisionBox(cbPlayer, sf::Color(170, 30, 155, 200), playerID);
@@ -580,16 +644,27 @@ void StateGameSFML::DisplayDebug(){
     for (long unsigned int i=0; i < context->enemies.size(); i++)
     {
         int enemyID = context->enemies[i]->GetID();
+        if(colLayer->CollisionBoxEntityExist(enemyID)){
+            CollisionBox * enemyBoxe = 
+                colLayer->GetCollisionBoxesEntity()[enemyID]; 
+            DisplayCollisionBox(enemyBoxe, sf::Color(170, 30, 155, 200), enemyID);
+        }
+    } 
 
-        CollisionBox * enemyBoxe = 
-            context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[enemyID]; 
-        DisplayCollisionBox(enemyBoxe, sf::Color(170, 30, 155, 200), enemyID);
-    }    
+    // CollisionBoxes NPC
+    for (long unsigned int i=0; i < context->npc.size(); i++)
+    {
+        int npcID = context->npc[i]->GetID();
+        if(colLayer->CollisionBoxEntityExist(npcID)){
+            CollisionBox * npcBoxe = 
+                colLayer->GetCollisionBoxesEntity()[ npcID]; 
+            DisplayCollisionBox(npcBoxe, sf::Color(170, 30, 155, 200),  npcID);
+        }
+    }     
 
 
     // Affichage des collision boxes de la map
-    std::vector<CollisionBox> collisionBoxes =
-        context->map->GetCollisionLayer()->GetCollisionBoxes();
+    std::vector<CollisionBox> collisionBoxes = colLayer->GetCollisionBoxes();
 
     for (long unsigned int i=0; i < collisionBoxes.size(); i++)
     {

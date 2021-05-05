@@ -139,7 +139,8 @@ After compiling :
 ./bin/exec 0
 ``` 
 
-- To move along all axis use : ̀`Z Q S F`
+- To move along all axis use : `Z Q S F`
+- To attack an enemy use : `Left click`
 - To pause the game : `escape`
 - To restart the game after Game Over : `Space`
 - To mute the sound of the game press : `m`
@@ -202,8 +203,12 @@ You should use object layers named :
 - "EnemySpawn" for spawns of enemies
 - "Collision" for every objects that players, NPC and enemies couldn't go throught
 
+<<<<<<< HEAD
 <b>Note</b> : Check the actual map at the folder location `data/maps/mainTilemaps.tmx` and reproduce the layers with the objects properties 
 
+=======
+You should save your map using CSV format.
+>>>>>>> Stan
 
 ## ✍️ Authors <a name = "authors"></a>
 

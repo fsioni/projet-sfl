@@ -17,7 +17,6 @@ Game::~Game()
 
 void Game::Run(int mode)
 {
-    assert(mode == 0 || mode == 1);
     switch (mode)
     {
     case 0: //mode SFML
@@ -48,6 +47,54 @@ void Game::Run(int mode)
             context->stateMan->GetCurrent()->Display();
         }
         break;
+
+    case 2:{
+        EntityWithoutHP entityWithoutHP;
+        entityWithoutHP.Test();
+
+        EntityWithHP entityWithHP;
+        entityWithHP.Test();
+
+        Enemy enemy;
+        enemy.Test();
+
+        Player player;
+        player.Test();
+
+        Tileset tileset;
+        tileset.Test();
+
+        Box box;
+        box.Test();
+
+        CollisionBox collisionBox;
+        collisionBox.Test();
+
+        SpawnPoint spawnPoint;
+        spawnPoint.Test();
+
+        Layer layer;
+        layer.Test();
+
+        CollisionLayer collisionLayer;
+        collisionLayer.Test();
+        
+        Map * map = new Map;
+        map->Test();
+
+        SpawnsLayer spawnsLayer;
+        spawnsLayer.Test();
+
+        MapLayer mapLayer;
+        mapLayer.Test();
+
+        UniqueID uniqueID;
+        uniqueID.Test();
+
+
+        std::cout << "TOUS LES TESTS ON ETE PASSE AVEC SUCCES !" << std::endl;
+        break;
+    }
 
     default:
         break;

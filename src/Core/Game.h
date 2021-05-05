@@ -6,6 +6,7 @@
 #include "Map/Map.h"
 #include "Entity/Player.h"
 #include "Entity/Enemy.h"
+#include "Entity/NPC.h"
 
 #include "../SFML/AssetManager.h"
 #include <string>
@@ -27,6 +28,7 @@ struct Context
     std::unique_ptr<Map> map;
     std::unique_ptr<Player> player;
     std::vector<std::shared_ptr<Enemy>> enemies;
+    std::vector<NPC *> npc;
     bool isDebug;
     bool isMute;
     bool quit;
@@ -39,8 +41,8 @@ struct Context
         map = std::make_unique<Map>("data/maps/tilemaps/mainTilemap.tmx", "data/maps/tilesets/mainTileSet.tsx");
 
         // Initialisation du joueur
-        float x = map->GetSpawnsLayer()->getPlayerSpawn().GetX();
-        float y = map->GetSpawnsLayer()->getPlayerSpawn().GetY();
+        float x = map->GetSpawnsLayer()->GetPlayerSpawn().GetX();
+        float y = map->GetSpawnsLayer()->GetPlayerSpawn().GetY();
 
         player = std::make_unique<Player>(x, y, "Player", 10, 10, 4, 10);
 
@@ -48,16 +50,33 @@ struct Context
             player->GetID(), new CollisionBox(x, y, 32, 32));
 
         // Initialisation des enemies
-        int count = map->GetSpawnsLayer()->getEnemySpawns().size();
+        int count = map->GetSpawnsLayer()->GetEnemySpawns().size();
         for (int i = 0; i < count; i++){
-            x = map->GetSpawnsLayer()->getEnemySpawns()[i].GetX();
-            y = map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
+            x = map->GetSpawnsLayer()->GetEnemySpawns()[i].GetX();
+            y = map->GetSpawnsLayer()->GetEnemySpawns()[i].GetY();
 
             std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 100, 1, 1, 100);
             enemies.push_back(enemy);
             
             map->GetCollisionLayer()->AddCollisionBoxEntity(
                 enemy->GetID(), new CollisionBox(x, y, 32, 32));
+        }
+
+        // Initialisation des NPC
+        std::string dialog;
+        count = map->GetSpawnsLayer()->GetNPCSpawns().size();
+        for (int i = 0; i < count; i++){
+            x = map->GetSpawnsLayer()->GetNPCSpawns()[i].GetX();
+            y = map->GetSpawnsLayer()->GetNPCSpawns()[i].GetY();
+            dialog = map->GetSpawnsLayer()->GetADialog(i);
+            // Ajout du npc au vector
+            NPC * newNPC = new NPC(x, y, dialog);
+            npc.push_back(newNPC);
+            
+            // Ajout de sa CollisionBox au CollisionLayer
+            map->GetCollisionLayer()->AddCollisionBoxEntity(
+                newNPC->GetID(), new CollisionBox(x, y, 32, 32));
+
         }
 
         isDebug = false;

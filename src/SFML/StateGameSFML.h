@@ -4,6 +4,7 @@
 #include "../Core/Game.h"
 #include "../Core/StateManager/State.h"
 #include <SFML/Audio.hpp>
+#include <memory>
 
 
 /*! \class StateGameSFML
@@ -31,6 +32,7 @@ public:
     *
     */
     void UpdateEnemies();
+    void UpdateNPCs();
 
     void Display();
 
@@ -49,10 +51,13 @@ public:
     */
     void DisplayEnemies();
 
+    void DisplayNPC();
+
     /*! \brief Affichage une CollisionBox sur la fenêtre SFML
     *
     */
-    void DisplayCollisionBox(CollisionBox * cb, const sf::Color & color, int id);
+    void DisplayCollisionBox(
+        CollisionBox * cb, const sf::Color & color, int id);
 
     /*! \brief Affichage le mode debug sur la fenêtre SFML
     *
@@ -133,10 +138,21 @@ private:
     /*! \brief indique si le jeu est en pause*/
     bool isPaused;
 
-    /*! \brief Horloge pour le scintillement du jouer lorsqu'il reçoit des dégâts */
-    sf::Clock hitClock;
+    // Gestion scintillement rouge lorsque le joueur prend des dégâts
+
+    /*! \brief Horloge pour le scintillement du joueur lorsqu'il reçoit des dégâts */
+    sf::Clock playerHitClock;
     /*! \brief Nombre d'HP du joueur lors du dernier update */
-    int lastHP;
+    int playerLastHP;
+
+    // Gestion scintillement rouge lorsque un ennemi prend des dégâts
+
+    /*! \brief Horloges pour le scintillement des ennemis lorsqu'ils reçoivent des dégâts */
+    std::vector<sf::Clock> enemiesHitClocks;
+    /*! \brief Nombre d'HP des ennemis lors du dernier update */
+    std::vector<int> enemiesLastHP;
+    /*! \brief Indique si l'ennemi a perdu des HP depuis le dernier update */
+    std::vector<bool> enemiesGotHitted;
 
     /*! \brief Musique du jeu */
     sf::Music music;

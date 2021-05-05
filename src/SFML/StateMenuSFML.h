@@ -38,16 +38,40 @@ private:
     /*! \brief Texte du titre du jeu */
     sf::Text gameTitle;
 
-    /*! \brief Texte du bouton "jouer" */
+    // Main Menu
+    /*! \brief Texte du bouton jouer */
     sf::Text playButton;
-
-    /*! \brief Texte du bouton "quitter" */
+    /*! \brief Texte du bouton instructions */
+    sf::Text instructionButton;
+    /*! \brief Texte du bouton quitter */
     sf::Text exitButton;
+
+    // InstructionSub Menu
+    /*! \brief Texte indiquant les touches des mouvements */
+    sf::Text moveText;
+        /*! \brief Texte indiquant la touche d'attaque */
+    sf::Text attackText;
+    /*! \brief Texte indiquant la touche d'interaction */
+    sf::Text interactText;
+    /*! \brief Texte indiquant la touche de pause */
+    sf::Text pauseText;
+    /*! \brief Texte indiquant la touche de debug mode */
+    sf::Text debugModeText;
+    /*! \brief Texte indiquant la touche pour quitter */
+    sf::Text quitSubMenuText;
 
     /*! \brief Indique si le bouton "jouer" est selectionné */
     bool isPlayButSelected;
     /*! \brief Indique si le bouton "jouer" est pressé */
     bool isPlayButPressed;
+
+    /*! \brief Indique si le bouton "instruction" est selectionné */
+    bool isInstructionButSelected;
+    /*! \brief Indique si le bouton "instruction" est pressé */
+    bool isInstructionButPressed;
+
+    /*! \brief Indique si l'on se trouve dans le sous menu "instruction" */
+    bool isInInstructionSubMenu;
 
     /*! \brief Indique si le bouton "quitter" est selectionné */
     bool isExitButSelected;

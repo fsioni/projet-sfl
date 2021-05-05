@@ -117,12 +117,6 @@ public:
     */
     float GetWidth() const;
 
-    /*! \brief Test de regression.
-    *
-    *   Effectue une série de test sur les fonctions de la classe
-    *   et vérifie qu'elles font bien ce qu'elles sont censés faire.
-    */
-    void Test() const;
 
     /*! \brief Retourne la vitesse de l'entité.
     *
@@ -221,7 +215,12 @@ public:
     */    
     bool MoveWithCollision(float vx, float vy, CollisionLayer * colLayer, int dt);
 
-    
+    /*! \brief Test de regression.
+    *
+    *   Effectue une série de test sur les fonctions de la classe
+    *   et vérifie qu'elles font bien ce qu'elles sont censés faire.
+    */
+    void Test() const;
 
 protected :
     /*// ==== Données membres protégées === //*/
