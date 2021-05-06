@@ -99,7 +99,7 @@ void StateMenuSFML::Init()
             moveText.setFillColor(textColor);
             moveText.setOutlineColor(sf::Color::Black);
             moveText.setOutlineThickness(2);
-            moveText.setString("Press ZQSD to move");
+            moveText.setString("Press  ZQSD  to  move");
             moveText.setCharacterSize(butSize);
             moveText.setOrigin(exitButton.getLocalBounds().left +
                                     moveText.getLocalBounds().width / 2.0f,
@@ -112,7 +112,7 @@ void StateMenuSFML::Init()
             attackText.setFillColor(textColor);
             attackText.setOutlineColor(sf::Color::Black);
             attackText.setOutlineThickness(2);
-            attackText.setString("Left click to attack");
+            attackText.setString("Left  click  to  attack");
             attackText.setCharacterSize(butSize);
             attackText.setOrigin(exitButton.getLocalBounds().left +
                                     attackText.getLocalBounds().width / 2.0f,
@@ -125,7 +125,7 @@ void StateMenuSFML::Init()
             interactText.setFillColor(textColor);
             interactText.setOutlineColor(sf::Color::Black);
             interactText.setOutlineThickness(2);
-            interactText.setString("Press E to interact with NPCs");
+            interactText.setString("Press  E  to  interact  with  NPCs");
             interactText.setCharacterSize(butSize);
             interactText.setOrigin(exitButton.getLocalBounds().left +
                                     interactText.getLocalBounds().width / 2.0f,
@@ -138,7 +138,7 @@ void StateMenuSFML::Init()
             pauseText.setFillColor(textColor);
             pauseText.setOutlineColor(sf::Color::Black);
             pauseText.setOutlineThickness(2);
-            pauseText.setString("Press Escape to pause the game");
+            pauseText.setString("Press  Escape  to  pause  the  game");
             pauseText.setCharacterSize(butSize);
             pauseText.setOrigin(exitButton.getLocalBounds().left +
                                     pauseText.getLocalBounds().width / 2.0f,
@@ -151,7 +151,7 @@ void StateMenuSFML::Init()
             debugModeText.setFillColor(textColor);
             debugModeText.setOutlineColor(sf::Color::Black);
             debugModeText.setOutlineThickness(2);
-            debugModeText.setString("Press P to display debug mode");
+            debugModeText.setString("Press  P  to  display  debug  mode");
             debugModeText.setCharacterSize(butSize);
             debugModeText.setOrigin(exitButton.getLocalBounds().left +
                                     debugModeText.getLocalBounds().width / 2.0f,
@@ -204,10 +204,16 @@ void StateMenuSFML::ProcessInput()
                 break;
             
             case sf::Keyboard::Z:
-                if (!isPlayButSelected)
+                if (isExitButSelected)
+                {
+                    isInstructionButSelected = true;
+                    isExitButSelected = false;
+                    sound.play();
+                }
+                else if (isInstructionButSelected && !isInInstructionSubMenu)
                 {
                     isPlayButSelected = true;
-                    isExitButSelected = false;
+                    isInstructionButSelected = false;
                     sound.play();
                 }
                 break;            
@@ -228,9 +234,15 @@ void StateMenuSFML::ProcessInput()
                 break;
 
             case sf::Keyboard::S :
-                if (!isExitButSelected)
+                if (isPlayButSelected)
                 {
                     isPlayButSelected = false;
+                    isInstructionButSelected = true;
+                    sound.play();
+                }
+                else if (isInstructionButSelected && !isInInstructionSubMenu)
+                {
+                    isInstructionButSelected = false;
                     isExitButSelected = true;
                     sound.play();
                 }
