@@ -24,7 +24,7 @@ CollisionLayer::CollisionLayer(const std::string &objectgroupTagCollision)
 CollisionLayer::~CollisionLayer()
 {
     collisionBoxes.clear();
-    //collisionBoxesEntity.clear();
+    collisionBoxesEntity.clear();
 }
 
 void CollisionLayer::AddCollisionBox(const CollisionBox &newColBox)

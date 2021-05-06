@@ -4,7 +4,7 @@
 
 #include "MapLayer.h"
 
-MapLayer::MapLayer() : Layer(){
+MapLayer::MapLayer(){
     width = -1;
     height = -1;
 }
@@ -14,9 +14,6 @@ MapLayer::~MapLayer()
 }
 
 MapLayer::MapLayer(std::string rawData){
-    // std::stoi(std::string) => int
-
-    id = GetIntAttributeValue(rawData, "id");
     height = GetIntAttributeValue(rawData, "height");
     width = GetIntAttributeValue(rawData, "width");
 

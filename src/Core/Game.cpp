@@ -74,9 +74,6 @@ void Game::Run(int mode)
         SpawnPoint spawnPoint;
         spawnPoint.Test();
 
-        Layer layer;
-        layer.Test();
-
         CollisionLayer collisionLayer;
         collisionLayer.Test();
         

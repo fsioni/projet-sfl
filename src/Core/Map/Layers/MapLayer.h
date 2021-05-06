@@ -3,15 +3,13 @@
 
 #include <string>
 #include <vector>
-#include "Layer.h"
 
 /*! \class MapLayer
 *   \brief Classe représentant une couche de tuiles.
 *
 */
 
-class MapLayer : Layer
-{
+class MapLayer{
 public:
     /*! \brief Constructeur par défaut.
     *   Initialise id, width et height à -1,

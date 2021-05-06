@@ -6,17 +6,15 @@
 #include <memory>
 #include <map>
 
-#include "Layer.h"
 #include "../CollisionBox.h"
 
 /*! \class CollisionLayer 
 *   \brief Classe représentant une couche de CollisionBox
-*   Hérité de Layer
+*   
 *   Représente toutes les CollisionBox d'une partie particulière de la Map
 *   Par exemple : des objets, des ennemis...
 */
-class CollisionLayer : Layer
-{
+class CollisionLayer{
 public:
     /*// === Fonctions membres privées === //*/
 
