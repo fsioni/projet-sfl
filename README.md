@@ -159,7 +159,7 @@ The player is represented by a 'O', the enemies by 'E' and the collision boxes b
 ./bin/exec 1
 ``` 
 
-- To move along all axis use : ̀`Z Q S F`
+- To move along all axis use : `Z Q S F`
 - To quit press : `x` or the cross button.
 
 
@@ -199,16 +199,19 @@ You can find our [Trello Board ](https://trello.com/b/tu5E8z0s/projet-sfl).
 ## 🗺️ Create your own maps with the Tiled software : <a name="map"></a>
 ### Collision and spawn layers :
 You should use object layers named :
-- "PlayerSpawn" for the spawn of players
-- "EnemySpawn" for spawns of enemies
+- "PlayerSpawn" for player's spawns
+- "EnemySpawn" for enemie's spawns
 - "Collision" for every objects that players, NPC and enemies couldn't go throught
+- "NPCSpawn" for PNJ's spawns, to specify the sentence of PNJs, go to the <br/>
+  property panel on the left and Custom Properties -> Add Property, then <br/>
+  set Property Name to <b>Dialog</b> and select string type. You can also <br/>
+  the direction of PNJs by modifying <b>Rotation</b> value. 
 
-<<<<<<< HEAD
+<strong>You should save your map using CSV format.<strong>
+
 <b>Note</b> : Check the actual map at the folder location `data/maps/mainTilemaps.tmx` and reproduce the layers with the objects properties 
 
-=======
-You should save your map using CSV format.
->>>>>>> Stan
+
 
 ## ✍️ Authors <a name = "authors"></a>
 
