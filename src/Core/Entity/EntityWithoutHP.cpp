@@ -193,7 +193,7 @@ bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * col
     
     // Collision avec la map
     std::vector<CollisionBox> cbMap = colLayer->GetCollisionBoxes();
-    for(int i=0; i<cbMap.size(); i++){
+    for(int i=0; i< (int)cbMap.size(); i++){
 
         //Detection collision axe X
         if (posX - offset + cbThisEntity->GetWidth()/2>= cbMap[i].GetX()

@@ -19,7 +19,10 @@ void UniqueID::Test() const{
    UniqueID id2;
    UniqueID id3;
    UniqueID id4;
-   assert(id1.id != id2.id != id3.id != id4.id);
+   assert((id1.id != id2.id) && (id1.id != id3.id) && (id1.id != id4.id));
+   assert((id2.id != id3.id) && (id2.id != id4.id));
+   assert(id3.id != id4.id);
+
    std::cout << "ok" << std::endl;
 
    std::cout << std::endl << std::endl;
