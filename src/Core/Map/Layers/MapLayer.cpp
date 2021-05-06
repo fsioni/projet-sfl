@@ -19,7 +19,6 @@ MapLayer::MapLayer(std::string rawData){
     id = GetIntAttributeValue(rawData, "id");
     height = GetIntAttributeValue(rawData, "height");
     width = GetIntAttributeValue(rawData, "width");
-    name = GetAttributeValue(rawData, "name");
 
     // On recupère les données entre <data> et </data>
     std::string strData = GetDataTag(rawData, "data", 0);
@@ -48,7 +47,6 @@ void MapLayer::Test() const{
     MapLayer mapLayer1;
     assert(mapLayer1.GetWidth()==-1);
     assert(mapLayer1.GetHeight()==-1);
-    assert(mapLayer1.GetName()=="NULL");
     assert(mapLayer1.data.empty());
     std::cout << "ok"<<std::endl;
 

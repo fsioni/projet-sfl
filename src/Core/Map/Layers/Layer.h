@@ -23,11 +23,6 @@ public:
     */
     void SetId(int id_);
 
-    /*! \brief Modifie l'id du Layer par celui en paramètre
-    *
-    * \param [in] name_ : nouveau nom du Layer.
-    */
-    void SetName(std::string name_);
 
     /*! \brief Retourne id
     *
@@ -35,11 +30,6 @@ public:
     */
     int GetID() const;
 
-    /*! \brief Retourne name
-    *
-    * \return Le nom du Layer.
-    */
-    std::string GetName() const;
 
     /*! \brief Test de regression.
     *
@@ -52,8 +42,6 @@ public:
 protected:
     /*! \brief Identifiant de la couche représenté par un entier. */
     int id;
-    /*! \brief Nom de la couche. */
-    std::string name;
 };
 
 #endif

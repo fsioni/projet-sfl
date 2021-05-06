@@ -178,13 +178,10 @@ void Map::Test() const
     // Test des valeurs du spawnPlayer
     assert(map.spawnsLayer->GetPlayerSpawn().GetX()==575);
     assert(map.spawnsLayer->GetPlayerSpawn().GetY()==473);
-    assert(map.spawnsLayer->GetPlayerSpawn().GetWidth()==-1);
-    assert(map.spawnsLayer->GetPlayerSpawn().GetHeight()==-1);
     std::cout << "ok" << std::endl;
-    std::cout << "ok" << std::endl;
+  
 
     std::cout << "TsxLoadTileset(std::string fileName) : ";
-    assert(map.tileset->GetName()=="mainTileSet");
     assert(map.tileset->GetTileWidth()==32);
     assert(map.tileset->GetTileHeight()==32);
     assert(map.tileset->GetTileCount()==1064);

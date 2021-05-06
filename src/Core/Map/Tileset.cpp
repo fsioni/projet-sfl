@@ -6,7 +6,6 @@
 
 Tileset::Tileset()
 {
-    name = "NULL";
     tileWidth = -1;
     tileHeight = -1;
     tileCount = -1;
@@ -18,7 +17,6 @@ Tileset::Tileset()
 
 Tileset::Tileset(const Tileset &ts)
 {
-    name = ts.name;
     tileHeight = ts.tileHeight;
     tileWidth = ts.tileWidth;
     tileCount = ts.tileCount;
@@ -33,8 +31,6 @@ Tileset::Tileset(std::string rawData)
     // On recupère ce qu'il y a dans la balise ouvrante <tileset>
     std::string tileSet = GetInsideTag(rawData, "tileset", 0);
 
-    name = GetAttributeValue(tileSet, "name");
-    // std::stoi(std::string) => int
     tileWidth = GetIntAttributeValue(tileSet, "tilewidth");
     tileHeight = GetIntAttributeValue(tileSet, "tileheight");
     tileCount = GetIntAttributeValue(tileSet, "tilecount");
@@ -61,7 +57,6 @@ Tileset &Tileset::operator=(const Tileset &ts)
 {
     if (&ts != this)
     {
-        name = ts.name;
         tileHeight = ts.tileHeight;
         tileWidth = ts.tileWidth;
         tileCount = ts.tileCount;
@@ -74,10 +69,6 @@ Tileset &Tileset::operator=(const Tileset &ts)
 }
 
 // ====== SETERS ET GETERS =======
-void Tileset::SetName(std::string name_)
-{
-    name = name_;
-}
 void Tileset::SetTileWidth(int tw)
 {
     tileWidth = tw;
@@ -107,10 +98,6 @@ void Tileset::SetTileMapHeight(int tmh)
     tileMapHeight = tmh;
 }
 
-std::string Tileset::GetName() const
-{
-    return name;
-}
 
 int Tileset::GetTileWidth() const
 {
@@ -159,7 +146,6 @@ void Tileset::Test() const
 
     std::cout << "Constructeur Tileset(string rawData) : ";
     Tileset ts(rawData);
-    assert(ts.GetName() == "mainTileSet");
     assert(ts.GetColumn() == 8);
     assert(ts.GetTileCount() == 1064);
     assert(ts.GetTileWidth() == 32);
@@ -171,7 +157,6 @@ void Tileset::Test() const
 
     std::cout << "Constructeur Tileset(const Tileset & ts) : ";
     Tileset ts2(ts);
-    assert(ts2.GetName() == "mainTileSet");
     assert(ts2.GetColumn() == 8);
     assert(ts2.GetTileCount() == 1064);
     assert(ts2.GetTileWidth() == 32);
