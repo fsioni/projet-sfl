@@ -202,10 +202,7 @@ You should use object layers named :
 - "PlayerSpawn" for player's spawns
 - "EnemySpawn" for enemie's spawns
 - "Collision" for every objects that players, NPC and enemies couldn't go throught
-- "NPCSpawn" for PNJ's spawns, to specify the sentence of PNJs, go to the <br/>
-  property panel on the left and Custom Properties -> Add Property, then <br/>
-  set Property Name to <b>Dialog</b> and select string type. You can also <br/>
-  the direction of PNJs by modifying <b>Rotation</b> value. 
+- "NPCSpawn" for PNJ's spawns, to specify the sentence of PNJs, go to the `property panel` on the left and `Custom Properties` -> `Add Property`, then set `Property Name` to `Dialog` and select string type. You can also the direction of PNJs by modifying `Rotation` value. 
 
 <strong>You should save your map using CSV format.<strong>
 
