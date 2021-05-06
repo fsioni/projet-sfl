@@ -87,14 +87,18 @@ std::string getFullTag(std::string data, std::string tag, int indice)
     for (int i = 0; i <= indice; i++)
     {
         openTag = data.find("<" + tag + " ", openTag);
-        closeTag = data.find("</" + tag + ">", openTag);
 
-        // Gestion du cas où <tag/> au lieu de <tag></tag>
-        if (closeTag == (int)std::string::npos)
-            closeTag = data.find("\n", openTag);
+        if(openTag!=int(std::string::npos)){
+            closeTag = data.find("</" + tag + ">", openTag);
 
-        // On incrémente pour ne pas retrouver la même balise
-        openTag++;
+            // Gestion du cas où <tag/> au lieu de <tag></tag>
+            if (closeTag == (int)std::string::npos)
+                closeTag = data.find("\n", openTag);
+
+            // On incrémente pour ne pas retrouver la même balise
+            openTag++;
+        }
+        else return "NULL";
     }
     // Décremente à la fin pour remettre la bonne valeur
     openTag--;
@@ -109,15 +113,18 @@ std::string getFullTag(std::string data, std::string tag, int indice)
 std::string getInsideTag(std::string data, std::string tag, int indice)
 {
     int startTag = 0, endTag;
-
+    
     data = getFullTag(data, tag, indice);
+    // Si balise complete non trouvé on retourn "NULL"
+    if(data=="NULL") return "NULL";
 
     startTag = data.find("<" + tag + " ", startTag);
+    // Si balise ouvrante non trouvé on retourne "NULL"
+    if(startTag == int(std::string::npos)) return "NULL";
+    
     endTag = data.find(">", startTag);
-
     // +1 pour inclure le ">"
     int len = endTag - startTag + 1;
-
     return data.substr(startTag, len);
 }
 
@@ -130,8 +137,13 @@ std::string getDataTag(std::string data, std::string tag, int indice)
     int startCloseTag;
 
     data = getFullTag(data, tag, indice);
+    // Si balise complete non trouvé on retourn "NULL"
+    if(data=="NULL") return "NULL";
 
     startOpenTag = data.find("<" + tag + " ", startOpenTag);
+    // Si balise ouvrante non trouvé on retourne "NULL"
+    if(startOpenTag == int(std::string::npos)) return "NULL";
+
     endOpenTag = data.find(">", startOpenTag);
     startCloseTag = data.find("</" + tag + ">", endOpenTag);
 

@@ -13,7 +13,7 @@ SpawnsLayer::SpawnsLayer(const std::string &objectgroupTagPlayer,
                          const std::string &objectgroupTagNPC)
 {
     std::string objectTag;
-
+    
     objectTag = getInsideTag(objectgroupTagPlayer, "object", 0);
     playerSpawn = SpawnPoint("PlayerSpawn", objectTag);
 
@@ -47,8 +47,16 @@ SpawnsLayer::SpawnsLayer(const std::string &objectgroupTagPlayer,
         
 
         propertyTag = getInsideTag(objectgroupTagNPC, "property", i);
-        dialog = getAttributeValue(propertyTag, "value");
-        NpcDialog.push_back(dialog);
+        
+        
+        if(propertyTag!="NULL"){
+            dialog = getAttributeValue(propertyTag, "value");
+            NpcDialog.push_back(dialog);
+        }
+        else{
+            NpcDialog.push_back("Rien à dire");
+        }
+        
     }
 }
 
