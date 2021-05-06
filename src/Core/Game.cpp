@@ -92,7 +92,7 @@ void Game::Run(int mode)
         uniqueID.Test();
 
 
-        std::cout << "TOUS LES TESTS ON ETE PASSE AVEC SUCCES !" << std::endl;
+        std::cout << "TOUS LES TESTS ONT ETE PASSES AVEC SUCCES !" << std::endl;
         break;
     }
 
