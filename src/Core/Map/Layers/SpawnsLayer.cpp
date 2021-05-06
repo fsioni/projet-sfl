@@ -122,8 +122,8 @@ void SpawnsLayer::Test() const{
 
     std::cout << "SpawnsLayer() : ";
     SpawnsLayer spawnsLayer1;
-    assert(spawnsLayer1.GetPlayerSpawn().GetX()==-1);
-    assert(spawnsLayer1.GetPlayerSpawn().GetY()==-1);
+    assert(spawnsLayer1.GetPlayerSpawn().GetX()==0);
+    assert(spawnsLayer1.GetPlayerSpawn().GetY()==0);
     assert(spawnsLayer1.GetEnemySpawns().empty());
     std::cout << "ok" << std::endl;
 
