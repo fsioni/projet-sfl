@@ -198,6 +198,9 @@ You can find our [Trello Board ](https://trello.com/b/tu5E8z0s/projet-sfl).
 
 ## 🗺️ Create your own maps with the Tiled software : <a name="map"></a>
 ### Collision and spawn layers :
+You can download Tiled software [here](https://www.mapeditor.org/).
+
+### Collision and spawn layers :
 You should use object layers named :
 - "PlayerSpawn" for player's spawns
 - "EnemySpawn" for enemie's spawns
