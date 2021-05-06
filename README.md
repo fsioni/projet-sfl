@@ -139,13 +139,13 @@ After compiling :
 ./bin/exec 0
 ``` 
 
-- To move along all axis use : `Z Q S F`
+- To move along all axis use : `Z Q S D`
 - To attack an enemy use : `Left click`
-- To pause the game : `escape`
+- To pause the game : `Escape`
 - To restart the game after Game Over : `Space`
-- To mute the sound of the game press : `m`
-- To open the debug mode press : `p`
-- To quit press : `x` or the cross button.
+- To mute the sound of the game press : `M`
+- To open the debug mode press : `P`
+- To quit press : `X` or the cross button.
 
 <b>Note</b> : fullscreen behaviors are unpredictable. Only in-game screen resizing is recommended
 
@@ -197,15 +197,15 @@ You can find our [Trello Board ](https://trello.com/b/tu5E8z0s/projet-sfl).
 
 
 ## 🗺️ Create your own maps with the Tiled software : <a name="map"></a>
-### Collision and spawn layers :
+### Collisions and spawns layers :
 You can download Tiled software [here](https://www.mapeditor.org/).
 
 ### Collision and spawn layers :
-You should use object layers named :
-- "PlayerSpawn" for player's spawns
-- "EnemySpawn" for enemie's spawns
+You must use object layers named :
+- "PlayerSpawn" for player's spawn
+- "EnemySpawn" for enemies' spawns
 - "Collision" for every objects that players, NPC and enemies couldn't go throught
-- "NPCSpawn" for PNJ's spawns, to specify the sentence of PNJs, go to the `property panel` on the left and `Custom Properties` -> `Add Property`, then set `Property Name` to `"Dialog"` and select `String` type. You can also set PNJ's direction by modifying `Rotation` value. 
+- "NPCSpawn" for NPC's spawns. To specify the sentence of NPCs, go to the `property panel` on the left and `Custom Properties` -> `Add Property`, then set `Property Name` to `"Dialog"` and select `String` type. You can also set NPC's direction by modifying `Rotation` value. 
 
 <strong>You should save your map using CSV format.<strong>
 

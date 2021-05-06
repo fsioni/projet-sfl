@@ -96,13 +96,13 @@ void SpawnsLayer::AddNPC(SpawnPoint const &newSpawn)
 
 
 std::string SpawnsLayer::GetADialog(int ind) const{
-    if(ind < NpcDialog.size())
+    if(ind < (int)NpcDialog.size())
         return NpcDialog[ind];
     return "NULL";
 }
 
 EntityDirection SpawnsLayer::GetADirection(int ind) const{
-    if(ind < NpcDirection.size())
+    if(ind < (int)NpcDirection.size())
         return NpcDirection[ind];
     return Down;
 }
