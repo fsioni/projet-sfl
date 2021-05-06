@@ -139,13 +139,13 @@ After compiling :
 ./bin/exec 0
 ``` 
 
-- To move along all axis use : `Z Q S F`
+- To move along all axis use : `Z Q S D`
 - To attack an enemy use : `Left click`
-- To pause the game : `escape`
+- To pause the game : `Escape`
 - To restart the game after Game Over : `Space`
-- To mute the sound of the game press : `m`
-- To open the debug mode press : `p`
-- To quit press : `x` or the cross button.
+- To mute the sound of the game press : `M`
+- To open the debug mode press : `P`
+- To quit press : `X` or the cross button.
 
 <b>Note</b> : fullscreen behaviors are unpredictable. Only in-game screen resizing is recommended
 
