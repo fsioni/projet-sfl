@@ -91,22 +91,22 @@ std::vector<MapLayer> Map::GetMapLayers() const
 
 void Map::TmxLoadLayers(std::string fileName)
 {
-    std::string strFile = fileToString(fileName);
+    std::string strFile = FileToString(fileName);
 
     // MapLayers
     std::string strLayer;
 
-    int nbLayer = countTag(strFile, "layer");
+    int nbLayer = CountTag(strFile, "layer");
 
     for (int i = 0; i < nbLayer; i++)
     {
-        strLayer = getFullTag(strFile, "layer", i);
+        strLayer = GetFullTag(strFile, "layer", i);
         MapLayer tmp(strLayer);
         AddMapLayer(tmp);
     }
 
     // objectgroup => CollisionLayers + SpawnLayer
-    int nbObjectgroup = countTag(strFile, "objectgroup");
+    int nbObjectgroup = CountTag(strFile, "objectgroup");
     int indCollision = 0;
     int indSpawnPlayer = 0;
     int indSpawnEnnemy = 0;
@@ -116,8 +116,8 @@ void Map::TmxLoadLayers(std::string fileName)
 
     for (int i = 0; i < nbObjectgroup; i++)
     {
-        tmpObjectGroup = getInsideTag(strFile, "objectgroup", i);
-        name = getAttributeValue(tmpObjectGroup, "name");
+        tmpObjectGroup = GetInsideTag(strFile, "objectgroup", i);
+        name = GetAttributeValue(tmpObjectGroup, "name");
 
         if(name == "Collision")
             indCollision = i;
@@ -129,15 +129,15 @@ void Map::TmxLoadLayers(std::string fileName)
             indSpawnNPC = i;
     }
 
-    std::string strCollisionLayer = getFullTag(strFile, "objectgroup",
+    std::string strCollisionLayer = GetFullTag(strFile, "objectgroup",
                                                 indCollision);
     collisionLayer = new CollisionLayer(strCollisionLayer);
 
-    std::string strPlayerSpawn = getFullTag(strFile, "objectgroup",
+    std::string strPlayerSpawn = GetFullTag(strFile, "objectgroup",
                                             indSpawnPlayer);
-    std::string strEnnemySpawn = getFullTag(strFile, "objectgroup", 
+    std::string strEnnemySpawn = GetFullTag(strFile, "objectgroup", 
                                             indSpawnEnnemy);
-    std::string strNpcSpawn = getFullTag(strFile, "objectgroup",
+    std::string strNpcSpawn = GetFullTag(strFile, "objectgroup",
                                             indSpawnNPC);
 
     spawnsLayer = new SpawnsLayer(strPlayerSpawn, strEnnemySpawn, strNpcSpawn);
@@ -145,7 +145,7 @@ void Map::TmxLoadLayers(std::string fileName)
 
 void Map::TsxLoadTileset(std::string fileName)
 {
-    std::string strTileset = fileToString(fileName);
+    std::string strTileset = FileToString(fileName);
     Tileset tmp(strTileset);
 
     SetTileset(tmp);

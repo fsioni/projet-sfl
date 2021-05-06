@@ -15,11 +15,11 @@ Box::Box()
 
 Box::Box(const std::string &objectTag)
 {
-    id = getIntAttributeValue(objectTag, "id");
-    x = getIntAttributeValue(objectTag, "x");
-    y = getIntAttributeValue(objectTag, "y");
-    width = getIntAttributeValue(objectTag, "width");
-    height = getIntAttributeValue(objectTag, "height");
+    id = GetIntAttributeValue(objectTag, "id");
+    x = GetIntAttributeValue(objectTag, "x");
+    y = GetIntAttributeValue(objectTag, "y");
+    width = GetIntAttributeValue(objectTag, "width");
+    height = GetIntAttributeValue(objectTag, "height");
 }
 
 Box::Box(int nId, int nX, int nY, int nWidth, int nHeight)

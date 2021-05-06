@@ -11,11 +11,11 @@ CollisionLayer::CollisionLayer()
 
 CollisionLayer::CollisionLayer(const std::string &objectgroupTagCollision)
 {
-    int count = countTag(objectgroupTagCollision, "object");
+    int count = CountTag(objectgroupTagCollision, "object");
     std::string strObject;
     for (int i = 0; i < count; i++)
     {
-        strObject = getInsideTag(objectgroupTagCollision, "object", i);
+        strObject = GetInsideTag(objectgroupTagCollision, "object", i);
         CollisionBox cb(strObject);
         collisionBoxes.push_back(cb);
     }

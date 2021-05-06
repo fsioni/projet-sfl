@@ -93,7 +93,7 @@ void Game::Run(int mode)
         uniqueID.Test();
 
         
-        testRegressionTmxParsing();
+        TestRegressionTmxParsing();
 
         std::cout << "TOUS LES TESTS ONT ETE PASSES AVEC SUCCES !" << std::endl;
         break;

@@ -14,40 +14,43 @@ SpawnsLayer::SpawnsLayer(const std::string &objectgroupTagPlayer,
 {
     std::string objectTag;
     
-    objectTag = getInsideTag(objectgroupTagPlayer, "object", 0);
+    objectTag = GetInsideTag(objectgroupTagPlayer, "object", 0);
     playerSpawn = SpawnPoint("PlayerSpawn", objectTag);
 
-
-    int count;
-    count = countTag(objectgroupTagEnnemy, "object");
+    int count = CountTag(objectgroupTagEnnemy, "object");
     for (int i = 0; i < count; i++)
     {
-        objectTag = getInsideTag(objectgroupTagEnnemy, "object", i);
+        objectTag = GetInsideTag(objectgroupTagEnnemy, "object", i);
         ennemySpawns.push_back(SpawnPoint("EnemySpawn", objectTag));
     }
 
 
 
-    std::string dialog, propertyTag;
-    count = countTag(objectgroupTagNPC, "object");
+    std::string dialog, propertyTag, dataTag;
+    count = CountTag(objectgroupTagNPC, "object");
     for (int i = 0; i < count; i++)
     {
-        objectTag = getInsideTag(objectgroupTagNPC, "object", i);
+        objectTag = GetFullTag(objectgroupTagNPC, "object", i);
         NpcSpawns.push_back(SpawnPoint("NPCSpawn", objectTag));
 
-        // Si balise rotation pas trouvé renvoie 0 donc direction Up
-        int angle = getIntAttributeValue(objectTag, "rotation");
+        // Si balise rotation pas trouvé renvoie -1 donc direction Up
+        int angle = GetIntAttributeValue(objectTag, "rotation");
         NpcDirection.push_back(AngleToDirection(angle));
        
         
+        // On cherche la balise property
+        propertyTag = GetInsideTag(objectTag, "property", 0);
         
-        propertyTag = getInsideTag(objectgroupTagNPC, "property", i);
+        // Si on trouve, on cheche la valeur du paramètre value
+        // et on la met dans le tableau de dialog associé à l'indice
+        // du npc.
         if(propertyTag!="NULL"){
-            dialog = getAttributeValue(propertyTag, "value");
+            dialog = GetAttributeValue(propertyTag, "value");
             NpcDialog.push_back(dialog);
         }
+        // Sinon on met au npc la phrase "Nothing to say."
         else{
-            NpcDialog.push_back("Rien à dire");
+            NpcDialog.push_back("Nothing to say.");
         }
         
     }

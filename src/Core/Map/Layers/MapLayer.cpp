@@ -16,18 +16,18 @@ MapLayer::~MapLayer()
 MapLayer::MapLayer(std::string rawData){
     // std::stoi(std::string) => int
 
-    id = std::stoi(getAttributeValue(rawData, "id"));
-    height = std::stoi(getAttributeValue(rawData, "height"));
-    width = std::stoi(getAttributeValue(rawData, "width"));
-    name = getAttributeValue(rawData, "name");
+    id = GetIntAttributeValue(rawData, "id");
+    height = GetIntAttributeValue(rawData, "height");
+    width = GetIntAttributeValue(rawData, "width");
+    name = GetAttributeValue(rawData, "name");
 
     // On recupère les données entre <data> et </data>
-    std::string strData = getDataTag(rawData, "data", 0);
+    std::string strData = GetDataTag(rawData, "data", 0);
 
     // Appel de la fonction du module tmxParsing pour transformer
     // une string sous format CSV (Comma separated values) en un
     // tableau dynamique d'entier.
-    data = csvToInt(strData);
+    data = CsvToInt(strData);
 }
 
 int MapLayer::GetWidth() const{

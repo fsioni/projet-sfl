@@ -6,7 +6,7 @@
 
 #include "tmxParsing.h"
 
-std::string fileToString(std::string filename)
+std::string FileToString(std::string filename)
 {
     std::string fileContent;
     std::fstream file;
@@ -38,7 +38,7 @@ std::string fileToString(std::string filename)
     return fileContent;
 }
 
-std::string getAttributeValue(std::string str, std::string attribute)
+std::string GetAttributeValue(std::string str, std::string attribute)
 {
     // Recherche de la position de début de l'attribut
     // on ajoute un espace car par exemple si on cherche "id" et q'un
@@ -56,9 +56,9 @@ std::string getAttributeValue(std::string str, std::string attribute)
     return res;
 }
 
-int getIntAttributeValue(std::string str, std::string attribute)
-{
-    std::string strRes = getAttributeValue(str, attribute);
+int GetIntAttributeValue(std::string str, std::string attribute)
+{   
+    std::string strRes = GetAttributeValue(str, attribute);
     if (strRes == "NULL")
         return -1;
 
@@ -69,7 +69,7 @@ int getIntAttributeValue(std::string str, std::string attribute)
     return stoi(strRes);
 }
 
-std::vector<int> csvToInt(std::string data)
+std::vector<int> CsvToInt(std::string data)
 {
 
     std::vector<int> vect;
@@ -87,8 +87,9 @@ std::vector<int> csvToInt(std::string data)
     return vect;
 }
 
-std::string getFullTag(std::string data, std::string tag, int indice)
+std::string GetFullTag(std::string data, std::string tag, int indice)
 {
+    if(indice<0) return "NULL";
     int openTag = 0, closeTag;
 
     for (int i = 0; i <= indice; i++)
@@ -117,11 +118,12 @@ std::string getFullTag(std::string data, std::string tag, int indice)
 
 // Si tag pas trouvé alors retourne un espace
 // les indices vont de 0 à n-1 occurence du tag
-std::string getInsideTag(std::string data, std::string tag, int indice)
+std::string GetInsideTag(std::string data, std::string tag, int indice)
 {
+    if(indice<0) return "NULL";
     int startTag = 0, endTag;
     
-    data = getFullTag(data, tag, indice);
+    data = GetFullTag(data, tag, indice);
     // Si balise complete non trouvé on retourn "NULL"
     if(data=="NULL") return "NULL";
 
@@ -138,12 +140,13 @@ std::string getInsideTag(std::string data, std::string tag, int indice)
 // TODO : Gestion des erreur car pour l'instant ne marche
 //        que sur les tag de la forme <tag></tag> et pas
 //        <tag/>
-std::string getDataTag(std::string data, std::string tag, int indice)
+std::string GetDataTag(std::string data, std::string tag, int indice)
 {
+    if(indice<0) return "NULL";
     int startOpenTag = 0, endOpenTag;
     int startCloseTag;
 
-    data = getFullTag(data, tag, indice);
+    data = GetFullTag(data, tag, indice);
     // Si balise complete non trouvé on retourn "NULL"
     if(data=="NULL") return "NULL";
 
@@ -157,7 +160,7 @@ std::string getDataTag(std::string data, std::string tag, int indice)
     return data.substr(endOpenTag + 1, startCloseTag - endOpenTag - 1);
 }
 
-int countTag(std::string data, std::string tag)
+int CountTag(std::string data, std::string tag)
 {
     int count = 0;
     int pos = 0;
@@ -171,69 +174,81 @@ int countTag(std::string data, std::string tag)
     return count;
 }
 
-void testRegressionTmxParsing()
+void TestRegressionTmxParsing()
 {
     std::cout << "===== TmxParsing =====" << std::endl;
     std::string str = "<tag1 param1=\"test1\" param2=\"test2\"> ceci est un premier test </tag1> \n <tag1 param1=\"test_1\" param2=\"test_2\"> ceci est un deuxième test </tag1>";
 
     std::string fullTag, insideTag, dataTag;
     
-    std::cout << "getFullTag(std::string data, std::string tag, int indice) : ";
+    std::cout << "GetFullTag(std::string data, std::string tag, int indice) : ";
 
     // Test indice et balise correct
-    fullTag = getFullTag(str, "tag1", 0);
+    fullTag = GetFullTag(str, "tag1", 0);
     assert(fullTag == "<tag1 param1=\"test1\" param2=\"test2\"> ceci est un premier test </tag1>");
-    fullTag = getFullTag(str, "tag1", 1);
+    fullTag = GetFullTag(str, "tag1", 1);
     assert(fullTag == "<tag1 param1=\"test_1\" param2=\"test_2\"> ceci est un deuxième test </tag1>");
     
     // Test indice trop grand
-    fullTag = getFullTag(str, "tag1", 3);
+    fullTag = GetFullTag(str, "tag1", 3);
+    assert(fullTag == "NULL");
+
+    // Test indice négatif
+    fullTag = GetFullTag(str, "tag1", -3);
     assert(fullTag == "NULL");
 
     // Test balise non présente
-    fullTag = getFullTag(str, "tag11232", 0);
+    fullTag = GetFullTag(str, "tag11232", 0);
     assert(fullTag == "NULL");
     std::cout << "ok" << std::endl;
 
 
-    std::cout << "countTag(std::string data, std::string tag) : ";
-    assert(countTag(str, "tag1") == 2);
-    assert(countTag(str, "tag2") == 0);
+    std::cout << "CountTag(std::string data, std::string tag) : ";
+    assert(CountTag(str, "tag1") == 2);
+    assert(CountTag(str, "tag2") == 0);
     std::cout << "ok" << std::endl;
 
     
-    std::cout << "getInsideTag(std::string data, std::string tag, int indice) : ";
+    std::cout << "GetInsideTag(std::string data, std::string tag, int indice) : ";
 
     // Test indice et balise correct
-    insideTag = getInsideTag(str, "tag1", 0);
+    insideTag = GetInsideTag(str, "tag1", 0);
     assert(insideTag == "<tag1 param1=\"test1\" param2=\"test2\">");
-    insideTag = getInsideTag(str, "tag1", 1);
+    insideTag = GetInsideTag(str, "tag1", 1);
     assert(insideTag == "<tag1 param1=\"test_1\" param2=\"test_2\">");
     
     // Test indice trop grand
-    insideTag = getInsideTag(str, "tag1", 3);
+    insideTag = GetInsideTag(str, "tag1", 3);
+    assert(insideTag == "NULL");
+
+    // Test indice négatif
+    insideTag = GetInsideTag(str, "tag1", -3);
     assert(insideTag == "NULL");
 
     // Test balise non présente
-    insideTag = getInsideTag(str, "tag11232", 0);
+    insideTag = GetInsideTag(str, "tag11232", 0);
     assert(insideTag == "NULL");
     std::cout << "ok" << std::endl;
 
 
-    std::cout << "getDataTag(std::string data, std::string tag, int indice) : ";
+    std::cout << "GetDataTag(std::string data, std::string tag, int indice) : ";
 
     // Test indice et balise correct
-    dataTag = getDataTag(str, "tag1", 0);
+    dataTag = GetDataTag(str, "tag1", 0);
     assert(dataTag == " ceci est un premier test ");
-    dataTag = getDataTag(str, "tag1", 1);
+    dataTag = GetDataTag(str, "tag1", 1);
     assert(dataTag == " ceci est un deuxième test ");
 
     // Test indice trop grand
-    dataTag = getDataTag(str, "tag1", 3);
+    dataTag = GetDataTag(str, "tag1", 3);
+    assert(dataTag == "NULL");
+
+    // Test indice négatif
+    dataTag = GetDataTag(str, "tag1", -3);
     assert(dataTag == "NULL");
 
     // Test balise non présente
-    dataTag = getDataTag(str, "tag11232", 0);
+    dataTag = GetDataTag(str, "tag11232", 0);
     assert(dataTag == "NULL");
     std::cout << "ok" << std::endl;
 
@@ -242,26 +257,26 @@ void testRegressionTmxParsing()
 
     str = "<tag param1=\"12\" param2=\"salut\" param3=\"12.322\" param4=\"12.23.2\"/>";
     
-    std::cout << "getAttributeValue(std::string str, std::string attribute) : ";
-    assert(getAttributeValue(str, "param1")=="12");
-    assert(getAttributeValue(str, "param2")=="salut");
-    assert(getAttributeValue(str, "param3")=="12.322");
-    assert(getAttributeValue(str, "param4")=="12.23.2");
-    assert(getAttributeValue(str, "param5")=="NULL");
+    std::cout << "GetAttributeValue(std::string str, std::string attribute) : ";
+    assert(GetAttributeValue(str, "param1")=="12");
+    assert(GetAttributeValue(str, "param2")=="salut");
+    assert(GetAttributeValue(str, "param3")=="12.322");
+    assert(GetAttributeValue(str, "param4")=="12.23.2");
+    assert(GetAttributeValue(str, "param5")=="NULL");
     std::cout << "ok" << std::endl;
 
 
-    std::cout << "getIntAttributeValue(std::string str, std::string attribute) : ";
-    assert(getIntAttributeValue(str, "param1")==12);
-    assert(getIntAttributeValue(str, "param3")==12);
-    assert(getIntAttributeValue(str, "param2")==-1);
-    assert(getIntAttributeValue(str, "param4")==-1);
+    std::cout << "GetIntAttributeValue(std::string str, std::string attribute) : ";
+    assert(GetIntAttributeValue(str, "param1")==12);
+    assert(GetIntAttributeValue(str, "param3")==12);
+    assert(GetIntAttributeValue(str, "param2")==-1);
+    assert(GetIntAttributeValue(str, "param4")==-1);
     std::cout << "ok" << std::endl;
 
 
-    std::cout << "csvToInt(std::string data) : ";
+    std::cout << "CsvToInt(std::string data) : ";
     str = "0, 1, 2, 3, 4, 5";
-    std::vector<int> res = csvToInt(str);
+    std::vector<int> res = CsvToInt(str);
     assert(res[0]==0);
     assert(res[1]==1);
     assert(res[2]==2);

@@ -291,9 +291,7 @@
    </properties>
   </object>
   <object id="411" x="755" y="1077" rotation="180">
-   <properties>
-    <property name="Dialog" value="Je suis un NPC 4."/>
-   </properties>
+   
   </object>
   <object id="412" x="2976.33" y="764.667">
    <properties>

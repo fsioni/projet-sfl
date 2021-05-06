@@ -31,24 +31,24 @@ Tileset::Tileset(const Tileset &ts)
 Tileset::Tileset(std::string rawData)
 {
     // On recupère ce qu'il y a dans la balise ouvrante <tileset>
-    std::string tileSet = getInsideTag(rawData, "tileset", 0);
+    std::string tileSet = GetInsideTag(rawData, "tileset", 0);
 
-    name = getAttributeValue(tileSet, "name");
+    name = GetAttributeValue(tileSet, "name");
     // std::stoi(std::string) => int
-    tileWidth = stoi(getAttributeValue(tileSet, "tilewidth"));
-    tileHeight = stoi(getAttributeValue(tileSet, "tileheight"));
-    tileCount = stoi(getAttributeValue(tileSet, "tilecount"));
-    column = stoi(getAttributeValue(tileSet, "column"));
+    tileWidth = GetIntAttributeValue(tileSet, "tilewidth");
+    tileHeight = GetIntAttributeValue(tileSet, "tileheight");
+    tileCount = GetIntAttributeValue(tileSet, "tilecount");
+    column = GetIntAttributeValue(tileSet, "column");
 
     // On recupère ce qu'il y a dans la balise ouvrante <image>
-    std::string img = getInsideTag(rawData, "image", 0);
+    std::string img = GetInsideTag(rawData, "image", 0);
 
-    tileMapHeight = stoi(getAttributeValue(img, "height"));
-    tileMapWidth = stoi(getAttributeValue(img, "width"));
+    tileMapHeight = GetIntAttributeValue(img, "height");
+    tileMapWidth = GetIntAttributeValue(img, "width");
 
     // Chemin relatif au fichier tsx => chemin relatif
     // au repertoire racine du projet
-    std::string tsxPath = getAttributeValue(img, "source");
+    std::string tsxPath = GetAttributeValue(img, "source");
     tileMapPath = tsxPath.substr(5, tsxPath.length());
     tileMapPath = "./data" + tileMapPath;
 }
