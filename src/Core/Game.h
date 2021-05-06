@@ -64,13 +64,17 @@ struct Context
 
         // Initialisation des NPC
         std::string dialog;
+        EntityDirection direction;
         count = map->GetSpawnsLayer()->GetNPCSpawns().size();
         for (int i = 0; i < count; i++){
             x = map->GetSpawnsLayer()->GetNPCSpawns()[i].GetX();
             y = map->GetSpawnsLayer()->GetNPCSpawns()[i].GetY();
             dialog = map->GetSpawnsLayer()->GetADialog(i);
+            direction = map->GetSpawnsLayer()->GetADirection(i);
             // Ajout du npc au vector
             NPC * newNPC = new NPC(x, y, dialog);
+            newNPC->SetDirection(direction);
+
             npc.push_back(newNPC);
             
             // Ajout de sa CollisionBox au CollisionLayer

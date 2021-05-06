@@ -3,6 +3,7 @@
 
 #include "Layer.h"
 #include "../SpawnPoint.h"
+#include "../../Entity/EntityWithoutHP.h" 
 #include <vector>
 #include <string>
 
@@ -83,7 +84,9 @@ public:
     void Test() const;
 
     std::string GetADialog(int ind) const;
+    EntityDirection GetADirection(int ind) const;
     
+    EntityDirection AngleToDirection(int angle) const;
 
 private:
     /*// === Données membres privées === //*/
@@ -96,6 +99,7 @@ private:
     std::vector<SpawnPoint> NpcSpawns;
 
     std::vector<std::string> NpcDialog;
+    std::vector<EntityDirection> NpcDirection;
 };
 
 #endif

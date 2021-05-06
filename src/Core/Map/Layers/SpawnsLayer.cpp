@@ -35,6 +35,17 @@ SpawnsLayer::SpawnsLayer(const std::string &objectgroupTagPlayer,
         objectTag = getInsideTag(objectgroupTagNPC, "object", i);
         NpcSpawns.push_back(SpawnPoint("NPCSpawn", objectTag));
 
+        std::string direction = getAttributeValue(objectTag, "rotation");
+        if(direction!="NULL"){
+            // Conversion string to int
+            int angle = std::stoi(direction);
+            NpcDirection.push_back(AngleToDirection(angle));
+        }
+        else{
+            NpcDirection.push_back(Up);
+        }
+        
+
         propertyTag = getInsideTag(objectgroupTagNPC, "property", i);
         dialog = getAttributeValue(propertyTag, "value");
         NpcDialog.push_back(dialog);
@@ -80,6 +91,26 @@ std::string SpawnsLayer::GetADialog(int ind) const{
     if(ind < NpcDialog.size())
         return NpcDialog[ind];
     return "NULL";
+}
+
+EntityDirection SpawnsLayer::GetADirection(int ind) const{
+    if(ind < NpcDirection.size())
+        return NpcDirection[ind];
+    return Down;
+}
+
+EntityDirection SpawnsLayer::AngleToDirection(int angle) const{
+    // On replace angle dans l'intervalle [0, 360]
+    angle = angle%360;
+    if(angle >=315 && angle < 45)
+        return Up;
+    if(angle >=45 && angle < 135)
+        return Right;
+    if(angle >=135 && angle < 225)
+        return Down;
+    if(angle >=225 && angle < 315)
+        return Left;
+    return Up;
 }
 
 void SpawnsLayer::Test() const{

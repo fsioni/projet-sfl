@@ -36,8 +36,7 @@ int main(int argc, char *argv[])
     }
     else if (argv[1] == std::string("debug"))
     {
-        sf::RenderWindow win(sf::VideoMode(200, 200, 32), "Legend Of Nautibus");
-        win.display();
+        
     }
 
     else /////////L'ARGUMENT NE CORRESPOND A AUCUN MODE
