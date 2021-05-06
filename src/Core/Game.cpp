@@ -3,6 +3,7 @@
 #include <assert.h>
 #include "../SFML/StateSplashScreenSFML.h"
 #include "../txt/StateSplashScreenTxt.h"
+#include "Map/tmxParsing.h"
 
 #include <iostream>
 
@@ -91,6 +92,8 @@ void Game::Run(int mode)
         UniqueID uniqueID;
         uniqueID.Test();
 
+        
+        testRegressionTmxParsing();
 
         std::cout << "TOUS LES TESTS ON ETE PASSE AVEC SUCCES !" << std::endl;
         break;

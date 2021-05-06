@@ -35,20 +35,13 @@ SpawnsLayer::SpawnsLayer(const std::string &objectgroupTagPlayer,
         objectTag = getInsideTag(objectgroupTagNPC, "object", i);
         NpcSpawns.push_back(SpawnPoint("NPCSpawn", objectTag));
 
-        std::string direction = getAttributeValue(objectTag, "rotation");
-        if(direction!="NULL"){
-            // Conversion string to int
-            int angle = std::stoi(direction);
-            NpcDirection.push_back(AngleToDirection(angle));
-        }
-        else{
-            NpcDirection.push_back(Up);
-        }
+        // Si balise rotation pas trouvé renvoie 0 donc direction Up
+        int angle = getIntAttributeValue(objectTag, "rotation");
+        NpcDirection.push_back(AngleToDirection(angle));
+       
         
-
+        
         propertyTag = getInsideTag(objectgroupTagNPC, "property", i);
-        
-        
         if(propertyTag!="NULL"){
             dialog = getAttributeValue(propertyTag, "value");
             NpcDialog.push_back(dialog);

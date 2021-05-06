@@ -1,6 +1,7 @@
 #include <sstream>
 #include <iostream>
 #include <fstream>
+#include <regex>
 #include "assert.h"
 
 #include "tmxParsing.h"
@@ -13,26 +14,27 @@ std::string fileToString(std::string filename)
     // Ouvre le fichier filename en lecture seule
     file.open(filename.c_str(), std::fstream::in);
 
-    // Si ouvert correctement
-    if (file)
-    {
+    // Si pas ouvert correctement on retourn "NULL"
+    if(!file) return "NULL";
 
-        // Calcul de la longueur du fichier
-        file.seekg(0, file.end);
-        int length = file.tellg();
-        file.seekg(0, file.beg);
 
-        // Enregistrement des données lues dans un tableau de caractère
-        char *buffer = new char[length];
-        file.read(buffer, length);
+    // Calcul de la longueur du fichier
+    file.seekg(0, file.end);
+    int length = file.tellg();
+    file.seekg(0, file.beg);
 
-        // Copie du tableau de caractère dans un std::string
-        fileContent = buffer;
+    // Enregistrement des données lues dans un tableau de caractère
+    char *buffer = new char[length];
+    file.read(buffer, length);
 
-        // Desallocation du buffer et fermeture du fichier
-        delete[] buffer;
-        file.close();
-    }
+    // Copie du tableau de caractère dans un std::string
+    fileContent = buffer;
+
+    // Desallocation du buffer et fermeture du fichier
+    delete[] buffer;
+    file.close();
+    
+    
     return fileContent;
 }
 
@@ -59,6 +61,11 @@ int getIntAttributeValue(std::string str, std::string attribute)
     std::string strRes = getAttributeValue(str, attribute);
     if (strRes == "NULL")
         return -1;
+
+    bool isNumber = std::regex_match(strRes, std::regex{"[+-]?[0-9]+(.[0-9]+)?"});
+    if(!isNumber)  
+        return -1;  
+    
     return stoi(strRes);
 }
 
@@ -164,30 +171,104 @@ int countTag(std::string data, std::string tag)
     return count;
 }
 
-void testRegression()
+void testRegressionTmxParsing()
 {
+    std::cout << "===== TmxParsing =====" << std::endl;
     std::string str = "<tag1 param1=\"test1\" param2=\"test2\"> ceci est un premier test </tag1> \n <tag1 param1=\"test_1\" param2=\"test_2\"> ceci est un deuxième test </tag1>";
 
     std::string fullTag, insideTag, dataTag;
-    // test getFullTag
+    
+    std::cout << "getFullTag(std::string data, std::string tag, int indice) : ";
+
+    // Test indice et balise correct
     fullTag = getFullTag(str, "tag1", 0);
     assert(fullTag == "<tag1 param1=\"test1\" param2=\"test2\"> ceci est un premier test </tag1>");
     fullTag = getFullTag(str, "tag1", 1);
     assert(fullTag == "<tag1 param1=\"test_1\" param2=\"test_2\"> ceci est un deuxième test </tag1>");
+    
+    // Test indice trop grand
+    fullTag = getFullTag(str, "tag1", 3);
+    assert(fullTag == "NULL");
 
-    // test countTag
+    // Test balise non présente
+    fullTag = getFullTag(str, "tag11232", 0);
+    assert(fullTag == "NULL");
+    std::cout << "ok" << std::endl;
+
+
+    std::cout << "countTag(std::string data, std::string tag) : ";
     assert(countTag(str, "tag1") == 2);
     assert(countTag(str, "tag2") == 0);
+    std::cout << "ok" << std::endl;
 
-    // test getInsideTag
+    
+    std::cout << "getInsideTag(std::string data, std::string tag, int indice) : ";
+
+    // Test indice et balise correct
     insideTag = getInsideTag(str, "tag1", 0);
     assert(insideTag == "<tag1 param1=\"test1\" param2=\"test2\">");
     insideTag = getInsideTag(str, "tag1", 1);
     assert(insideTag == "<tag1 param1=\"test_1\" param2=\"test_2\">");
+    
+    // Test indice trop grand
+    insideTag = getInsideTag(str, "tag1", 3);
+    assert(insideTag == "NULL");
 
-    // test getDataTag
+    // Test balise non présente
+    insideTag = getInsideTag(str, "tag11232", 0);
+    assert(insideTag == "NULL");
+    std::cout << "ok" << std::endl;
+
+
+    std::cout << "getDataTag(std::string data, std::string tag, int indice) : ";
+
+    // Test indice et balise correct
     dataTag = getDataTag(str, "tag1", 0);
     assert(dataTag == " ceci est un premier test ");
     dataTag = getDataTag(str, "tag1", 1);
     assert(dataTag == " ceci est un deuxième test ");
+
+    // Test indice trop grand
+    dataTag = getDataTag(str, "tag1", 3);
+    assert(dataTag == "NULL");
+
+    // Test balise non présente
+    dataTag = getDataTag(str, "tag11232", 0);
+    assert(dataTag == "NULL");
+    std::cout << "ok" << std::endl;
+
+
+
+
+    str = "<tag param1=\"12\" param2=\"salut\" param3=\"12.322\" param4=\"12.23.2\"/>";
+    
+    std::cout << "getAttributeValue(std::string str, std::string attribute) : ";
+    assert(getAttributeValue(str, "param1")=="12");
+    assert(getAttributeValue(str, "param2")=="salut");
+    assert(getAttributeValue(str, "param3")=="12.322");
+    assert(getAttributeValue(str, "param4")=="12.23.2");
+    assert(getAttributeValue(str, "param5")=="NULL");
+    std::cout << "ok" << std::endl;
+
+
+    std::cout << "getIntAttributeValue(std::string str, std::string attribute) : ";
+    assert(getIntAttributeValue(str, "param1")==12);
+    assert(getIntAttributeValue(str, "param3")==12);
+    assert(getIntAttributeValue(str, "param2")==-1);
+    assert(getIntAttributeValue(str, "param4")==-1);
+    std::cout << "ok" << std::endl;
+
+
+    std::cout << "csvToInt(std::string data) : ";
+    str = "0, 1, 2, 3, 4, 5";
+    std::vector<int> res = csvToInt(str);
+    assert(res[0]==0);
+    assert(res[1]==1);
+    assert(res[2]==2);
+    assert(res[3]==3);
+    assert(res[4]==4);
+    assert(res[5]==5);
+    std::cout << "ok"<< std::endl;
+
+    std::cout << std::endl << std::endl;
 }
