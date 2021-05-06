@@ -15,7 +15,7 @@ OBJ_FILES += obj/MapLayer.o obj/CollisionLayer.o obj/SpawnsLayer.o
 OBJ_FILES += obj/Map.o obj/Tileset.o obj/tmxParsing.o 
 
 ##Boxes
-OBJ_FILES += obj/Box.o obj/CollisionBox.o obj/SpawnPoint.o
+OBJ_FILES += obj/Box.o obj/SpawnPoint.o
 
 ##Managers 
 OBJ_FILES += obj/AssetManager.o obj/StateManager.o
@@ -82,7 +82,7 @@ obj/NPC.o : src/Core/Entity/NPC.cpp src/Core/Entity/EntityWithoutHP.h
 obj/MapLayer.o : src/Core/Map/Layers/MapLayer.cpp src/Core/Map/Layers/MapLayer.h src/Core/Map/tmxParsing.h
 	$(COMPILATIONOBJ)
 
-obj/CollisionLayer.o : src/Core/Map/Layers/CollisionLayer.cpp src/Core/Map/Layers/CollisionLayer.h src/Core/Map/CollisionBox.h
+obj/CollisionLayer.o : src/Core/Map/Layers/CollisionLayer.cpp src/Core/Map/Layers/CollisionLayer.h
 	$(COMPILATIONOBJ)
 
 obj/SpawnsLayer.o : src/Core/Map/Layers/SpawnsLayer.cpp src/Core/Map/Layers/SpawnsLayer.h src/Core/Map/SpawnPoint.h
@@ -100,9 +100,6 @@ obj/tmxParsing.o: src/Core/Map/tmxParsing.cpp src/Core/Map/tmxParsing.h
 
 ##Boxes
 obj/Box.o : src/Core/Map/Box.cpp src/Core/Map/Box.h
-	$(COMPILATIONOBJ)
-
-obj/CollisionBox.o : src/Core/Map/CollisionBox.cpp src/Core/Map/CollisionBox.h src/Core/Map/Box.h
 	$(COMPILATIONOBJ)
 
 obj/SpawnPoint.o : src/Core/Map/SpawnPoint.cpp src/Core/Map/SpawnPoint.h src/Core/Map/Box.h

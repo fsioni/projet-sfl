@@ -68,9 +68,6 @@ void Game::Run(int mode)
         Box box;
         box.Test();
 
-        CollisionBox collisionBox;
-        collisionBox.Test();
-
         SpawnPoint spawnPoint;
         spawnPoint.Test();
 

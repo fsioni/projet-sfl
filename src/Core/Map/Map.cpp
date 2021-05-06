@@ -2,7 +2,7 @@
 #include "tmxParsing.h"
 #include <iostream>
 #include <assert.h>
-#include "CollisionBox.h"
+#include "Box.h"
 
 Map::Map()
 {
@@ -21,7 +21,7 @@ Map::Map(std::string tmxFile, std::string tsxFile)
     int tileH = tileset->GetTileHeight();
 
     // Ajout de collisionBox tout autour de la Map
-    CollisionBox colBox;
+    Box colBox;
 
     // bottom colBox
     colBox.SetPosition(0, h * tileH - 10);

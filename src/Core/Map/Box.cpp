@@ -4,27 +4,22 @@
 
 #include <iostream>
 
-Box::Box()
-{
-    id = -1;
+Box::Box(){
     x = -1;
     y = -1;
     width = -1;
     height = -1;
 }
 
-Box::Box(const std::string &objectTag)
-{
-    id = GetIntAttributeValue(objectTag, "id");
+Box::Box(const std::string &objectTag){
     x = GetIntAttributeValue(objectTag, "x");
     y = GetIntAttributeValue(objectTag, "y");
     width = GetIntAttributeValue(objectTag, "width");
     height = GetIntAttributeValue(objectTag, "height");
 }
 
-Box::Box(int nId, int nX, int nY, int nWidth, int nHeight)
+Box::Box(int nX, int nY, int nWidth, int nHeight)
 {
-    id = nId;
     x = nX;
     y = nY;
     width = nWidth;
@@ -35,15 +30,6 @@ Box::~Box()
 {
 }
 
-void Box::SetId(int nId)
-{
-    id = nId;
-}
-
-int Box::GetId() const
-{
-    return id;
-}
 
 void Box::SetPosition(int nX, int nY)
 {
@@ -92,15 +78,13 @@ void Box::Test() const
     std::cout << "Constructeur Box() : ";
     assert(box1.x == -1);
     assert(box1.y == -1);
-    assert(box1.id == -1);
     assert(box1.width == -1);
     assert(box1.height == -1);
     std::cout << "ok" << std::endl;
 
-    Box box2(1, 2, 3, 4, 5);
-    std::cout << "Constructeur Box(int nId, int nX, int nY, int nWidth, "
+    Box box2(2, 3, 4, 5);
+    std::cout << "Constructeur Box(int nX, int nY, int nWidth, "
               << "int nHeight) : ";
-    assert(box2.id == 1);
     assert(box2.x == 2);
     assert(box2.y == 3);
     assert(box2.width == 4);
@@ -111,7 +95,6 @@ void Box::Test() const
     tag = "<object id=\"14\" x=\"224\" y=\"832\" width=\"64\" height=\"64\"/>";
     Box box3(tag);
     std::cout << "Constructeur Box(const std::string& objectTag) : ";
-    assert(box3.id == 14);
     assert(box3.x == 224);
     assert(box3.y == 832);
     assert(box3.width == 64);

@@ -6,7 +6,7 @@
 #include <memory>
 #include <map>
 
-#include "../CollisionBox.h"
+#include "../Box.h"
 
 /*! \class CollisionLayer 
 *   \brief Classe représentant une couche de CollisionBox
@@ -42,7 +42,7 @@ public:
     *   Ajoute une CollisionBox au tableau dynamique de l'objet
     *   \param [in] newSpawn : nouvelle CollisionBox ajoutée.
     */
-    void AddCollisionBox(const CollisionBox &newColBox);
+    void AddCollisionBox(const Box &newColBox);
 
     /*! \brief Fonction permettant d'ajouter une boîte de 
     *           collision d'entité à la couche
@@ -52,7 +52,7 @@ public:
     *   \param [in] id : entier, identifiant de l'entité.
     *   \param [in] newSpawn : nouvelle CollisionBox ajoutée.
     */
-    void AddCollisionBoxEntity(int id, CollisionBox* newColBox);
+    void AddCollisionBoxEntity(int id, Box* newColBox);
 
     /*! \brief Fonction d'affichage de l'objet en mode texte
     *
@@ -64,14 +64,14 @@ public:
     *
     *   \return Retourne le tableau dynamique de CollisionBox.
     */
-    std::vector<CollisionBox> GetCollisionBoxes() const;
+    std::vector<Box> GetCollisionBoxes() const;
 
     /*! \brief Fonction permettant de récupérer les CollisionBox 
     *         des entités de l'objet 
     *
     *   \return Retourne le tableau associatif de CollisionBox*.
     */
-    std::map<int, CollisionBox*> GetCollisionBoxesEntity();
+    std::map<int, Box*> GetCollisionBoxesEntity();
 
     /*! \brief Permet de savoir si une clé existe.
     *   
@@ -97,16 +97,16 @@ public:
 private:
     /*// === Données membres privées === //*/
 
-    /*! \brief Tableau dyanmique des CollisionBox de la Map. */
-    std::vector<CollisionBox> collisionBoxes;
+    /*! \brief Tableau dyanmique des Box de la Map. */
+    std::vector<Box> collisionBoxes;
 
-    /*! \brief Tableau associatif des CollisionBox des entités.
+    /*! \brief Tableau associatif des Box des entités.
     *   
     *    La clé est un entier correspondant à l'ID de l'entité 
-    *    et le pointeur sur CollisionBox est sa boite de collision
+    *    et le pointeur sur Box est sa boite de collision
     *    associé.
     */
-    std::map<int, CollisionBox*> collisionBoxesEntity;
+    std::map<int, Box*> collisionBoxesEntity;
 };
 
 #endif

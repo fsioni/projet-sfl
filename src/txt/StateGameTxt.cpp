@@ -66,7 +66,7 @@ void StateGameTxt::Update()
     int playerID = context->player->GetID();
     
 
-    CollisionBox * cbPlayer = 
+    Box * cbPlayer = 
         context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
     cbPlayer->SetPosition(playerX, playerY);
 }
@@ -100,7 +100,7 @@ void StateGameTxt::Display()
     }
 
     //Affichage des collisions boxes
-    const std::vector<CollisionBox> cb =
+    const std::vector<Box> cb =
         context->map->GetCollisionLayer()->GetCollisionBoxes();
     for (int i = 0; i < (int)cb.size(); i++)
     {
@@ -136,12 +136,12 @@ void StateGameTxt::MoveWithCollision(float vx, float vy)
 
     bool iscolliding = false;
 
-    std::vector<CollisionBox> cb =
+    std::vector<Box> cb =
         context->map->GetCollisionLayer()->GetCollisionBoxes();
 
     int playerID = context->player->GetID();
 
-    CollisionBox * cbPlayer = 
+    Box * cbPlayer = 
         context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
 
     for (long unsigned int i = 0; i < cb.size(); i++)

@@ -96,7 +96,7 @@ void StateGameOverSFML::RestartGame()
     context->player = std::make_unique<Player>(x, y, "Player", 10, 10, 4, 10);
 
     context->map->GetCollisionLayer()->AddCollisionBoxEntity(
-        context->player->GetID(), new CollisionBox(x, y, 26, 26));
+        context->player->GetID(), new Box(x, y, 26, 26));
 
     // Initialisation des ennemies
     int count = context->map->GetSpawnsLayer()->GetEnemySpawns().size();
@@ -111,7 +111,28 @@ void StateGameOverSFML::RestartGame()
         context->enemies.push_back(enemy);
         
         context->map->GetCollisionLayer()->AddCollisionBoxEntity(
-            enemy->GetID(), new CollisionBox(x, y, 26, 26));
+            enemy->GetID(), new Box(x, y, 26, 26));
+    }
+
+    // Initialisation des NPC
+    std::string dialog;
+    EntityDirection direction;
+    count = context->map->GetSpawnsLayer()->GetNPCSpawns().size();
+    for (int i = 0; i < count; i++){
+        x = context->map->GetSpawnsLayer()->GetNPCSpawns()[i].GetX();
+        y = context->map->GetSpawnsLayer()->GetNPCSpawns()[i].GetY();
+        dialog = context->map->GetSpawnsLayer()->GetADialog(i);
+        direction = context->map->GetSpawnsLayer()->GetADirection(i);
+        // Ajout du npc au vector
+        NPC * newNPC = new NPC(x, y, dialog);
+        newNPC->SetDirection(direction);
+
+        context->npc.push_back(newNPC);
+            
+        // Ajout de sa CollisionBox au CollisionLayer
+        context->map->GetCollisionLayer()->AddCollisionBoxEntity(
+            newNPC->GetID(), new Box(x, y, 32, 32));
+
     }
 }
 
