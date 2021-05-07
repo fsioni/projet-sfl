@@ -17,24 +17,21 @@ StateSplashScreenSFML::~StateSplashScreenSFML()
 
 void StateSplashScreenSFML::Init()
 {
-    assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
     assert(music.openFromFile("data/sounds/music/14entranceNL.wav"));
-    assert(bgTex.loadFromFile("data/textures/UI/menuBackground.png"));
-    textColor = sf::Color(245, 222, 92);
 
     music.play();
 
-    bgSprite.setTexture(bgTex);
+    bgSprite.setTexture(context->assetMan->GetTextureBackground());
     bgSprite.setScale(0.5f, 0.5f);
 
-    gameText.setFont(textFont);
-    madeByText.setFont(textFont);
+    gameText.setFont(context->assetMan->GetMainFont());
+    madeByText.setFont(context->assetMan->GetMainFont());
 
-    gameText.setFillColor(textColor);
+    gameText.setFillColor(context->assetMan->GetMainTextColor());
     gameText.setOutlineColor(sf::Color::Black);
     gameText.setOutlineThickness(3);
 
-    madeByText.setFillColor(textColor);
+    madeByText.setFillColor(context->assetMan->GetMainTextColor());
     madeByText.setOutlineColor(sf::Color::Black);
     madeByText.setOutlineThickness(2);
 

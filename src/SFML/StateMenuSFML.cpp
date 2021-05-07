@@ -21,26 +21,23 @@ StateMenuSFML::~StateMenuSFML()
 
 void StateMenuSFML::Init()
 {
-    assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
     assert(music.openFromFile("data/sounds/music/01town0.wav"));
     assert(buffer.loadFromFile("data/sounds/sfx/menuNav.wav"));
-    assert(bgTex.loadFromFile("data/textures/UI/menuBackground.png"));
-    textColor = sf::Color(245, 222, 92);
 
     sound.setBuffer(buffer);
 
     music.play();
     music.setLoop(true);
 
-    bgSprite.setTexture(bgTex);
+    bgSprite.setTexture(context->assetMan->GetTextureBackground());
     bgSprite.setScale(0.5f, 0.5f);
 
     int winx = context->renderWin->getSize().x;
     int winy = context->renderWin->getSize().y;
 
     // Title
-    gameTitle.setFont(textFont);
-    gameTitle.setFillColor(textColor);
+    gameTitle.setFont(context->assetMan->GetMainFont());
+    gameTitle.setFillColor(context->assetMan->GetMainTextColor());
     gameTitle.setOutlineColor(sf::Color::Black);
     gameTitle.setOutlineThickness(3);
     gameTitle.setString("Legend of Nautibus");
@@ -55,8 +52,8 @@ void StateMenuSFML::Init()
     int butSize = 50;
 
     // Play Button
-    playButton.setFont(textFont);
-    playButton.setFillColor(textColor);
+    playButton.setFont(context->assetMan->GetMainFont());
+    playButton.setFillColor(context->assetMan->GetMainTextColor());
     playButton.setOutlineColor(sf::Color::Black);
     playButton.setOutlineThickness(3);
     playButton.setString("Play");
@@ -68,8 +65,8 @@ void StateMenuSFML::Init()
     playButton.setPosition(winx / 2.0f, winy / 2.0f + 45.f);
 
     // Instruction Button
-    instructionButton.setFont(textFont);
-    instructionButton.setFillColor(textColor);
+    instructionButton.setFont(context->assetMan->GetMainFont());
+    instructionButton.setFillColor(context->assetMan->GetMainTextColor());
     instructionButton.setOutlineColor(sf::Color::Black);
     instructionButton.setOutlineThickness(3);
     instructionButton.setString("Instructions");
@@ -81,8 +78,8 @@ void StateMenuSFML::Init()
     instructionButton.setPosition(winx / 2.0f, winy / 2.0f + 105);
 
     // Exit Button
-    exitButton.setFont(textFont);
-    exitButton.setFillColor(textColor);
+    exitButton.setFont(context->assetMan->GetMainFont());
+    exitButton.setFillColor(context->assetMan->GetMainTextColor());
     exitButton.setOutlineColor(sf::Color::Black);
     exitButton.setOutlineThickness(3);
     exitButton.setString("Exit");
@@ -95,8 +92,8 @@ void StateMenuSFML::Init()
 
     // Instruction Sub Menu
         // moveText
-            moveText.setFont(textFont);
-            moveText.setFillColor(textColor);
+            moveText.setFont(context->assetMan->GetMainFont());
+            moveText.setFillColor(context->assetMan->GetMainTextColor());
             moveText.setOutlineColor(sf::Color::Black);
             moveText.setOutlineThickness(2);
             moveText.setString("Press  ZQSD  to  move");
@@ -108,8 +105,8 @@ void StateMenuSFML::Init()
             moveText.setPosition(winx / 2.0f, winy / 2.0f - 120.f);
 
         // attackText
-            attackText.setFont(textFont);
-            attackText.setFillColor(textColor);
+            attackText.setFont(context->assetMan->GetMainFont());
+            attackText.setFillColor(context->assetMan->GetMainTextColor());
             attackText.setOutlineColor(sf::Color::Black);
             attackText.setOutlineThickness(2);
             attackText.setString("Left  click  to  attack");
@@ -121,8 +118,8 @@ void StateMenuSFML::Init()
             attackText.setPosition(winx / 2.0f, winy / 2.0f - 60.f);
 
             // interactText
-            interactText.setFont(textFont);
-            interactText.setFillColor(textColor);
+            interactText.setFont(context->assetMan->GetMainFont());
+            interactText.setFillColor(context->assetMan->GetMainTextColor());
             interactText.setOutlineColor(sf::Color::Black);
             interactText.setOutlineThickness(2);
             interactText.setString("Press  E  to  interact  with  NPCs");
@@ -134,8 +131,8 @@ void StateMenuSFML::Init()
             interactText.setPosition(winx / 2.0f, winy / 2.0f);
 
         // pauseText
-            pauseText.setFont(textFont);
-            pauseText.setFillColor(textColor);
+            pauseText.setFont(context->assetMan->GetMainFont());
+            pauseText.setFillColor(context->assetMan->GetMainTextColor());
             pauseText.setOutlineColor(sf::Color::Black);
             pauseText.setOutlineThickness(2);
             pauseText.setString("Press  Escape  to  pause  the  game");
@@ -147,8 +144,8 @@ void StateMenuSFML::Init()
             pauseText.setPosition(winx / 2.0f, winy / 2.0f + 60.f);
 
         // debugModeText
-            debugModeText.setFont(textFont);
-            debugModeText.setFillColor(textColor);
+            debugModeText.setFont(context->assetMan->GetMainFont());
+            debugModeText.setFillColor(context->assetMan->GetMainTextColor());
             debugModeText.setOutlineColor(sf::Color::Black);
             debugModeText.setOutlineThickness(2);
             debugModeText.setString("Press  P  to  display  debug  mode");
@@ -160,7 +157,7 @@ void StateMenuSFML::Init()
             debugModeText.setPosition(winx / 2.0f, winy / 2.0f + 120.f);
 
         // quitSubMenuText
-            quitSubMenuText.setFont(textFont);
+            quitSubMenuText.setFont(context->assetMan->GetMainFont());
             quitSubMenuText.setFillColor(sf::Color::White);
             quitSubMenuText.setOutlineColor(sf::Color::Black);
             quitSubMenuText.setOutlineThickness(2);
@@ -292,27 +289,27 @@ void StateMenuSFML::Update()
     {
         playButton.setFillColor(sf::Color::White);
         playButton.setOutlineColor(sf::Color::Black);
-        instructionButton.setFillColor(textColor);
+        instructionButton.setFillColor(context->assetMan->GetMainTextColor());
         instructionButton.setOutlineColor(sf::Color::Black);
-        exitButton.setFillColor(textColor);
+        exitButton.setFillColor(context->assetMan->GetMainTextColor());
         exitButton.setOutlineColor(sf::Color::Black);
     }
     else if (isInstructionButSelected)
     {
         instructionButton.setFillColor(sf::Color::White);
         instructionButton.setOutlineColor(sf::Color::Black);
-        playButton.setFillColor(textColor);
+        playButton.setFillColor(context->assetMan->GetMainTextColor());
         playButton.setOutlineColor(sf::Color::Black);
-        exitButton.setFillColor(textColor);
+        exitButton.setFillColor(context->assetMan->GetMainTextColor());
         exitButton.setOutlineColor(sf::Color::Black);
     }
         else if (isExitButSelected)
     {
         exitButton.setFillColor(sf::Color::White);
         exitButton.setOutlineColor(sf::Color::Black);
-        playButton.setFillColor(textColor);
+        playButton.setFillColor(context->assetMan->GetMainTextColor());
         playButton.setOutlineColor(sf::Color::Black);
-        instructionButton.setFillColor(textColor);
+        instructionButton.setFillColor(context->assetMan->GetMainTextColor());
         instructionButton.setOutlineColor(sf::Color::Black);
     }
 

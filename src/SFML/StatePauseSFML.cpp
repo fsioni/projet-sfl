@@ -16,14 +16,12 @@ StatePauseSFML::~StatePauseSFML()
 
 void StatePauseSFML::Init()
 {
-    assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
-    textColor = sf::Color(245, 222, 92);
 
     int winx = context->renderWin->getSize().x;
     int winy = context->renderWin->getSize().y;
 
-    pauseText.setFont(textFont);
-    pauseText.setFillColor(textColor);
+    pauseText.setFont(context->assetMan->GetMainFont());
+    pauseText.setFillColor(context->assetMan->GetMainTextColor());
     pauseText.setOutlineColor(sf::Color::Black);
     pauseText.setOutlineThickness(2);
     pauseText.setString("PAUSE");
@@ -34,8 +32,8 @@ void StatePauseSFML::Init()
                         pauseText.getLocalBounds().height / 2.0f);
     pauseText.setPosition(winx / 2.0f, winy / 2.0f);
 
-    resumeText.setFont(textFont);
-    resumeText.setFillColor(textColor);
+    resumeText.setFont(context->assetMan->GetMainFont());
+    resumeText.setFillColor(context->assetMan->GetMainTextColor());
     resumeText.setOutlineColor(sf::Color::Black);
     resumeText.setOutlineThickness(2);
     resumeText.setString("Press Escape to resume");

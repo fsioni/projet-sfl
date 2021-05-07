@@ -17,17 +17,15 @@ StateGameOverSFML::~StateGameOverSFML()
 
 void StateGameOverSFML::Init()
 {
-    assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
     assert(music.openFromFile("data/sounds/music/13gameover1V1NL.wav"));
-    textColor = sf::Color(245, 222, 92);
 
     music.play();
 
     int winx = context->renderWin->getSize().x;
     int winy = context->renderWin->getSize().y;
 
-    gameOverText.setFont(textFont);
-    gameOverText.setFillColor(textColor);
+    gameOverText.setFont(context->assetMan->GetMainFont());
+    gameOverText.setFillColor(context->assetMan->GetMainTextColor());
     gameOverText.setOutlineColor(sf::Color::Black);
     gameOverText.setOutlineThickness(2);
     gameOverText.setString("GAME OVER");
@@ -38,8 +36,8 @@ void StateGameOverSFML::Init()
                             gameOverText.getLocalBounds().height / 2.0f);
     gameOverText.setPosition(winx / 2.0f, winy / 2.0f);
 
-    restartText.setFont(textFont);
-    restartText.setFillColor(textColor);
+    restartText.setFont(context->assetMan->GetMainFont());
+    restartText.setFillColor(context->assetMan->GetMainTextColor());
     restartText.setOutlineColor(sf::Color::Black);
     restartText.setOutlineThickness(2);
     restartText.setString("Press Space to restart");
