@@ -21,6 +21,9 @@ void StateGameOverSFML::Init()
 
     music.play();
 
+    bgSprite.setTexture(context->assetMan->GetTextureBackground());
+    bgSprite.setScale(0.5f, 0.5f);
+
     int winx = context->renderWin->getSize().x;
     int winy = context->renderWin->getSize().y;
 
@@ -149,6 +152,7 @@ void StateGameOverSFML::Update()
 
 void StateGameOverSFML::Display()
 {
+    context->renderWin->draw(bgSprite);
     context->renderWin->draw(gameOverText);
     context->renderWin->draw(restartText);
     context->renderWin->display();

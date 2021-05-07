@@ -16,9 +16,11 @@ StatePauseSFML::~StatePauseSFML()
 
 void StatePauseSFML::Init()
 {
-
     int winx = context->renderWin->getSize().x;
     int winy = context->renderWin->getSize().y;
+
+    bgSprite.setTexture(context->assetMan->GetTextureBackground());
+    bgSprite.setScale(0.5f, 0.5f);
 
     pauseText.setFont(context->assetMan->GetMainFont());
     pauseText.setFillColor(context->assetMan->GetMainTextColor());
@@ -86,6 +88,7 @@ void StatePauseSFML::Update()
 
 void StatePauseSFML::Display()
 {
+    context->renderWin->draw(bgSprite);
     context->renderWin->draw(pauseText);
     context->renderWin->draw(resumeText);
     context->renderWin->display();

@@ -48,6 +48,14 @@ void StateMenuSFML::Init()
                         gameTitle.getLocalBounds().height / 2.0f);
     gameTitle.setPosition(winx / 2.0f, 235);
 
+    logoSprite.setTexture(context->assetMan->GetTextureLogo());
+    logoSprite.setOrigin(logoSprite.getLocalBounds().left +
+                            logoSprite.getLocalBounds().width / 2.0f,
+                            logoSprite.getLocalBounds().top +
+                            logoSprite.getLocalBounds().height / 2.0f);
+    logoSprite.setPosition(winx/2, winy/2-150);
+
+
     ///// BUTTONS
     int butSize = 50;
 
@@ -347,7 +355,7 @@ void StateMenuSFML::Display()
 
     if(!isInInstructionSubMenu)
     {
-        context->renderWin->draw(gameTitle);
+        context->renderWin->draw(logoSprite);
         context->renderWin->draw(playButton);
         context->renderWin->draw(instructionButton);
         context->renderWin->draw(exitButton);

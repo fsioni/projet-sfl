@@ -17,6 +17,9 @@ StateSplashScreenSFML::~StateSplashScreenSFML()
 
 void StateSplashScreenSFML::Init()
 {
+    int winx = context->renderWin->getSize().x;
+    int winy = context->renderWin->getSize().y;
+
     assert(music.openFromFile("data/sounds/music/14entranceNL.wav"));
 
     music.play();
@@ -24,37 +27,23 @@ void StateSplashScreenSFML::Init()
     bgSprite.setTexture(context->assetMan->GetTextureBackground());
     bgSprite.setScale(0.5f, 0.5f);
 
-    gameText.setFont(context->assetMan->GetMainFont());
+    logoSprite.setTexture(context->assetMan->GetTextureLogo());
+    logoSprite.setOrigin(logoSprite.getLocalBounds().left +
+                            logoSprite.getLocalBounds().width / 2.0f,
+                            logoSprite.getLocalBounds().top +
+                            logoSprite.getLocalBounds().height / 2.0f);
+    logoSprite.setPosition(winx/2, winy/2-150);
+
     madeByText.setFont(context->assetMan->GetMainFont());
-
-    gameText.setFillColor(context->assetMan->GetMainTextColor());
-    gameText.setOutlineColor(sf::Color::Black);
-    gameText.setOutlineThickness(3);
-
     madeByText.setFillColor(context->assetMan->GetMainTextColor());
     madeByText.setOutlineColor(sf::Color::Black);
     madeByText.setOutlineThickness(2);
-
-    gameText.setString("Legend Of Nautibus");
     madeByText.setString("Made by :\nSIONI Fares\nBAGNOl Stanislas\nCHOUGAR Lyes");
-
-    gameText.setCharacterSize(100);
     madeByText.setCharacterSize(36);
-
-    int winx = context->renderWin->getSize().x;
-    int winy = context->renderWin->getSize().y;
-
-    gameText.setOrigin(gameText.getLocalBounds().left + 
-                        gameText.getLocalBounds().width / 2.0f,
-                        gameText.getLocalBounds().top + 
-                        gameText.getLocalBounds().height / 2.0f);
-
     madeByText.setOrigin(madeByText.getLocalBounds().left +
                             madeByText.getLocalBounds().width / 2.0f,
                             madeByText.getLocalBounds().top +
                             madeByText.getLocalBounds().height / 2.0f);
-
-    gameText.setPosition(winx / 2.0f, 235);
     madeByText.setPosition(150, winy / 2.0f + 200.0f);
 
     start = std::clock();
@@ -134,7 +123,7 @@ void StateSplashScreenSFML::Display()
 {
     context->renderWin->clear(sf::Color(1, 31, 75));
     context->renderWin->draw(bgSprite);
-    context->renderWin->draw(gameText);
+    context->renderWin->draw(logoSprite);
     context->renderWin->draw(madeByText);
 
     context->renderWin->display();

@@ -39,6 +39,9 @@ private:
     /*! \brief Texte indiquant comment relancer la partie */
     sf::Text restartText;
 
+    /*! \brief Sprite du fond d'écran */
+    sf::Sprite bgSprite;
+
     /*! \brief Musique de Game Over */
     sf::Music music;
 };

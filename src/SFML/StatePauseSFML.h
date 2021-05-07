@@ -36,6 +36,9 @@ private:
 
     /*! \brief Texte indiquant la touche pour reprendre le jeu */
     sf::Text resumeText;
+
+    /*! \brief Sprite du fond d'écran */
+    sf::Sprite bgSprite;
 };
 
 #endif // __STATEPAUSESFML_H__

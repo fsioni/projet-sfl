@@ -34,6 +34,8 @@ private:
 
     /*! \brief Sprite du fond d'écran */
     sf::Sprite bgSprite;
+    /*! \brief Sprite du logo du jeu */
+    sf::Sprite logoSprite;
 
     /*! \brief Texte du titre du jeu */
     sf::Text gameTitle;
