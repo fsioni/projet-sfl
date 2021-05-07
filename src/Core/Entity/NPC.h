@@ -51,6 +51,11 @@ public:
     */
     void GiveHP(Player &p, int hpToGive);
 
+    /*! \brief Retourne une phrase.
+    *
+    *   Permet de retourner une phrase.
+    *
+    */
     std::string GetDialog() const;
 
 private:
