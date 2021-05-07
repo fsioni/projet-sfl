@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Legends of Nautibus:  Fichier source de src/Core/Entity/FiniteStateMachine/EnemyStates.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Legends of Nautibus
+   </div>
+   <div id="projectbrief">2D Game, Explore the world and fight with your ennemies</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('EnemyStates_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">EnemyStates.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="EnemyStates_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __ENEMY_STATES__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __ENEMY_STATES__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="StateBehavior_8h.html">StateBehavior.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../Enemy.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span><a class="code" href="classEnemy.html">Enemy</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// ======== ENEMY PATROL STATE ===========</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classEnemyPatrol.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEnemyPatrol.html">EnemyPatrol</a> : <span class="keyword">public</span> <a class="code" href="classStateBehavior.html">StateBehavior</a>&lt;Enemy&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classEnemyPatrol.html#aa7bad085d7911a0b8952c18b248dce37">EnemyPatrol</a>(<span class="keyword">const</span> <a class="code" href="classEnemyPatrol.html">EnemyPatrol</a> &amp;other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classEnemyPatrol.html#a36581340aeeada2e0eaf3f4cf2d6e5a0">operator=</a>(<span class="keyword">const</span> <a class="code" href="classEnemyPatrol.html">EnemyPatrol</a> &amp;other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">static</span> <a class="code" href="classEnemyPatrol.html">EnemyPatrol</a> *<a class="code" href="classEnemyPatrol.html#adf5b330d3544e97142aaf385148818d4">Instance</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEnemyPatrol.html#ac3ef33444ea8612af105f2933917bf3b">Enter</a>(<a class="code" href="classEnemy.html">Enemy</a> *enemy);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5">Execute</a>(<a class="code" href="classEnemy.html">Enemy</a> *enemy, std::unique_ptr&lt;Player&gt; &amp;player_,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                         <a class="code" href="classCollisionLayer.html">CollisionLayer</a> *collision, <span class="keywordtype">int</span> dt);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEnemyPatrol.html#a047f2ad9a9c6961cdf158130ca9e71be">Exit</a>(<a class="code" href="classEnemy.html">Enemy</a> *enemy);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classEnemyPatrol.html#ad33782e7e6f2546b5d157621ad1be51e">   23</a></span>&#160;    <a class="code" href="classEnemyPatrol.html#aa7bad085d7911a0b8952c18b248dce37">EnemyPatrol</a>(){};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">static</span> <a class="code" href="classEnemyPatrol.html">EnemyPatrol</a> *<a class="code" href="classEnemyPatrol.html#ad33782e7e6f2546b5d157621ad1be51e">singleton</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// ======== ENEMY PATROL STATE ===========</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classEnemyAttack.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEnemyAttack.html">EnemyAttack</a> : <span class="keyword">public</span> <a class="code" href="classStateBehavior.html">StateBehavior</a>&lt;Enemy&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classEnemyAttack.html#a54977db476e524b343786bae4c0d2e8b">EnemyAttack</a>(<span class="keyword">const</span> <a class="code" href="classEnemyAttack.html">EnemyAttack</a> &amp;other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classEnemyAttack.html#a6004bfa0e52e2e82e8b6ef5c5e911bbf">operator=</a>(<span class="keyword">const</span> <a class="code" href="classEnemyAttack.html">EnemyAttack</a> &amp;other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">static</span> <a class="code" href="classEnemyAttack.html">EnemyAttack</a> *<a class="code" href="classEnemyAttack.html#a37ac29da56e9516774ed33f2a8a3b7b7">Instance</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEnemyAttack.html#a5ddfcee027741f02f2e6f19abd21669b">Enter</a>(<a class="code" href="classEnemy.html">Enemy</a> *enemy);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30">Execute</a>(<a class="code" href="classEnemy.html">Enemy</a> *enemy, std::unique_ptr&lt;Player&gt; &amp;player_,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                         <a class="code" href="classCollisionLayer.html">CollisionLayer</a> *collision, <span class="keywordtype">int</span> dt);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEnemyAttack.html#aa1601701d970679d6b10da16115c5524">Exit</a>(<a class="code" href="classEnemy.html">Enemy</a> *enemy);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classEnemyAttack.html#abb63e61882711435e005dd09ecab7250">   41</a></span>&#160;    <a class="code" href="classEnemyAttack.html#a54977db476e524b343786bae4c0d2e8b">EnemyAttack</a>(){};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">static</span> <a class="code" href="classEnemyAttack.html">EnemyAttack</a> *<a class="code" href="classEnemyAttack.html#abb63e61882711435e005dd09ecab7250">singleton</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">// ======== ENEMY RUNAWAY STATE ===========</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classEnemyRunAway.html">   47</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEnemyRunAway.html">EnemyRunAway</a> : <span class="keyword">public</span> <a class="code" href="classStateBehavior.html">StateBehavior</a>&lt;Enemy&gt;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classEnemyRunAway.html#a5d56fabaf2823d44a491ea7f43083b47">EnemyRunAway</a>(<span class="keyword">const</span> <a class="code" href="classEnemyRunAway.html">EnemyRunAway</a> &amp;other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classEnemyRunAway.html#a1a4c831793fa506ce77c5188a59ead54">operator=</a>(<span class="keyword">const</span> <a class="code" href="classEnemyRunAway.html">EnemyRunAway</a> &amp;other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">static</span> <a class="code" href="classEnemyRunAway.html">EnemyRunAway</a> *<a class="code" href="classEnemyRunAway.html#a57fcb322589ab9dbc671f19f98df3b5b">Instance</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEnemyRunAway.html#af3b404b770b2ad508b7e2ad85077e328">Enter</a>(<a class="code" href="classEnemy.html">Enemy</a> *enemy);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020">Execute</a>(<a class="code" href="classEnemy.html">Enemy</a> *enemy, std::unique_ptr&lt;Player&gt; &amp;player_,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                         <a class="code" href="classCollisionLayer.html">CollisionLayer</a> *collision, <span class="keywordtype">int</span> dt);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classEnemyRunAway.html#a93148440120dfd61c14e3059bab1d7b6">Exit</a>(<a class="code" href="classEnemy.html">Enemy</a> *enemy);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classEnemyRunAway.html#a4fd12ec3c8049ef912b97667d869158f">   59</a></span>&#160;    <a class="code" href="classEnemyRunAway.html#a5d56fabaf2823d44a491ea7f43083b47">EnemyRunAway</a>(){};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">static</span> <a class="code" href="classEnemyRunAway.html">EnemyRunAway</a> *<a class="code" href="classEnemyRunAway.html#a4fd12ec3c8049ef912b97667d869158f">singleton</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassEntityWithoutHP_html_ac5fa20e8f737d5c7eee11ebafeee3d92"><div class="ttname"><a href="classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92">EntityWithoutHP::GetPos_y</a></div><div class="ttdeci">float GetPos_y() const</div><div class="ttdoc">Retourne la position sur l'axe des y de l'entité (verticale).</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:85</div></div>
+<div class="ttc" id="aclassEnemy_html_abeaf8d77cd05862d568a01fe86a25595"><div class="ttname"><a href="classEnemy.html#abeaf8d77cd05862d568a01fe86a25595">Enemy::SetTimeNextAttack</a></div><div class="ttdeci">void SetTimeNextAttack()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:106</div></div>
+<div class="ttc" id="aEntityWithoutHP_8h_html_a0017b68a69d03986d465ef2dca6e4380ad48f7af8c070184f3774c8e85854eb66"><div class="ttname"><a href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380ad48f7af8c070184f3774c8e85854eb66">Right</a></div><div class="ttdeci">@ Right</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:18</div></div>
+<div class="ttc" id="aclassEntityWithHP_html_a489e4fe33d4541ff1fab8fddfaeadb93"><div class="ttname"><a href="classEntityWithHP.html#a489e4fe33d4541ff1fab8fddfaeadb93">EntityWithHP::GetMaxHP</a></div><div class="ttdeci">int GetMaxHP() const</div><div class="ttdoc">Retourne le cap maximum de points de vie de l'entité.</div><div class="ttdef"><b>Definition:</b> EntityWithHP.cpp:105</div></div>
+<div class="ttc" id="aclassStateBehavior_html"><div class="ttname"><a href="classStateBehavior.html">StateBehavior</a></div><div class="ttdef"><b>Definition:</b> StateBehavior.h:9</div></div>
+<div class="ttc" id="aclassEnemyRunAway_html_a57fcb322589ab9dbc671f19f98df3b5b"><div class="ttname"><a href="classEnemyRunAway.html#a57fcb322589ab9dbc671f19f98df3b5b">EnemyRunAway::Instance</a></div><div class="ttdeci">static EnemyRunAway * Instance()</div><div class="ttdef"><b>Definition:</b> EnemyStates.cpp:110</div></div>
+<div class="ttc" id="aclassEnemy_html_a7d3f9586b50a46b996250cf16959c65f"><div class="ttname"><a href="classEnemy.html#a7d3f9586b50a46b996250cf16959c65f">Enemy::GetStateMachine</a></div><div class="ttdeci">StateMachine&lt; Enemy &gt; * GetStateMachine() const</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:54</div></div>
+<div class="ttc" id="aclassEnemyAttack_html_abb63e61882711435e005dd09ecab7250"><div class="ttname"><a href="classEnemyAttack.html#abb63e61882711435e005dd09ecab7250">EnemyAttack::singleton</a></div><div class="ttdeci">static EnemyAttack * singleton</div><div class="ttdef"><b>Definition:</b> EnemyStates.h:41</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a9b71c69d24f4c557f024f2a101513da0"><div class="ttname"><a href="classEntityWithoutHP.html#a9b71c69d24f4c557f024f2a101513da0">EntityWithoutHP::GetSpeed</a></div><div class="ttdeci">int GetSpeed() const</div><div class="ttdoc">Retourne la vitesse de l'entité.</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:148</div></div>
+<div class="ttc" id="aclassEnemyPatrol_html_ad33782e7e6f2546b5d157621ad1be51e"><div class="ttname"><a href="classEnemyPatrol.html#ad33782e7e6f2546b5d157621ad1be51e">EnemyPatrol::singleton</a></div><div class="ttdeci">static EnemyPatrol * singleton</div><div class="ttdef"><b>Definition:</b> EnemyStates.h:23</div></div>
+<div class="ttc" id="aclassStateMachine_html_a5e928960ba29b86f878768e556ae8eb4"><div class="ttname"><a href="classStateMachine.html#a5e928960ba29b86f878768e556ae8eb4">StateMachine::ChangeState</a></div><div class="ttdeci">void ChangeState(StateBehavior&lt; entity_type &gt; *newState)</div><div class="ttdef"><b>Definition:</b> StateMachine.h:49</div></div>
+<div class="ttc" id="aclassEnemyAttack_html"><div class="ttname"><a href="classEnemyAttack.html">EnemyAttack</a></div><div class="ttdef"><b>Definition:</b> EnemyStates.h:29</div></div>
+<div class="ttc" id="aclassEnemyAttack_html_a54977db476e524b343786bae4c0d2e8b"><div class="ttname"><a href="classEnemyAttack.html#a54977db476e524b343786bae4c0d2e8b">EnemyAttack::EnemyAttack</a></div><div class="ttdeci">EnemyAttack()</div><div class="ttdef"><b>Definition:</b> EnemyStates.h:41</div></div>
+<div class="ttc" id="aclassEnemyRunAway_html_a93148440120dfd61c14e3059bab1d7b6"><div class="ttname"><a href="classEnemyRunAway.html#a93148440120dfd61c14e3059bab1d7b6">EnemyRunAway::Exit</a></div><div class="ttdeci">virtual void Exit(Enemy *enemy)</div><div class="ttdef"><b>Definition:</b> EnemyStates.cpp:145</div></div>
+<div class="ttc" id="aEntityWithoutHP_8h_html_a0017b68a69d03986d465ef2dca6e4380abcf8c79e9a5f5f9d606fb35645a0fb27"><div class="ttname"><a href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380abcf8c79e9a5f5f9d606fb35645a0fb27">Down</a></div><div class="ttdeci">@ Down</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:16</div></div>
+<div class="ttc" id="aclassEnemyRunAway_html_a5024c29a69c0229bc6a34ffa44436020"><div class="ttname"><a href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020">EnemyRunAway::Execute</a></div><div class="ttdeci">virtual void Execute(Enemy *enemy, std::unique_ptr&lt; Player &gt; &amp;player_, CollisionLayer *collision, int dt)</div><div class="ttdef"><b>Definition:</b> EnemyStates.cpp:128</div></div>
+<div class="ttc" id="aclassEnemyPatrol_html_aa7bad085d7911a0b8952c18b248dce37"><div class="ttname"><a href="classEnemyPatrol.html#aa7bad085d7911a0b8952c18b248dce37">EnemyPatrol::EnemyPatrol</a></div><div class="ttdeci">EnemyPatrol()</div><div class="ttdef"><b>Definition:</b> EnemyStates.h:23</div></div>
+<div class="ttc" id="aclassEnemy_html_a941acdd84d21c2324013cf7492cf11e2"><div class="ttname"><a href="classEnemy.html#a941acdd84d21c2324013cf7492cf11e2">Enemy::ChangeDirection</a></div><div class="ttdeci">void ChangeDirection(bool collision)</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:91</div></div>
+<div class="ttc" id="aclassCollisionLayer_html"><div class="ttname"><a href="classCollisionLayer.html">CollisionLayer</a></div><div class="ttdoc">Classe représentant une couche de CollisionBox Hérité de Layer Représente toutes les CollisionBox d'u...</div><div class="ttdef"><b>Definition:</b> CollisionLayer.h:18</div></div>
+<div class="ttc" id="aclassEnemy_html_a2d6f1e48fc4b19f9fef6404577fae765"><div class="ttname"><a href="classEnemy.html#a2d6f1e48fc4b19f9fef6404577fae765">Enemy::IsTimeToAttack</a></div><div class="ttdeci">bool IsTimeToAttack()</div><div class="ttdef"><b>Definition:</b> Enemy.cpp:114</div></div>
+<div class="ttc" id="aclassEnemyAttack_html_aa1601701d970679d6b10da16115c5524"><div class="ttname"><a href="classEnemyAttack.html#aa1601701d970679d6b10da16115c5524">EnemyAttack::Exit</a></div><div class="ttdeci">virtual void Exit(Enemy *enemy)</div><div class="ttdef"><b>Definition:</b> EnemyStates.cpp:102</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a6b62dd7761b9a29a9ccda13b5be40a18"><div class="ttname"><a href="classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18">EntityWithoutHP::MoveWithCollision</a></div><div class="ttdeci">bool MoveWithCollision(float vx, float vy, CollisionLayer *colLayer, int dt)</div><div class="ttdoc">Déplace l'entité en vérifiant les collisions.</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:180</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a7642f894c466f34541045454e49ba72d"><div class="ttname"><a href="classEntityWithoutHP.html#a7642f894c466f34541045454e49ba72d">EntityWithoutHP::GetDirection</a></div><div class="ttdeci">EntityDirection GetDirection() const</div><div class="ttdoc">Retourne la direction de l'entité.</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:90</div></div>
+<div class="ttc" id="aclassEnemyPatrol_html_a047f2ad9a9c6961cdf158130ca9e71be"><div class="ttname"><a href="classEnemyPatrol.html#a047f2ad9a9c6961cdf158130ca9e71be">EnemyPatrol::Exit</a></div><div class="ttdeci">virtual void Exit(Enemy *enemy)</div><div class="ttdef"><b>Definition:</b> EnemyStates.cpp:54</div></div>
+<div class="ttc" id="aStateBehavior_8h_html"><div class="ttname"><a href="StateBehavior_8h.html">StateBehavior.h</a></div></div>
+<div class="ttc" id="aclassEnemyPatrol_html_a92c0b7b89f54d977fcbbc22704c445c5"><div class="ttname"><a href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5">EnemyPatrol::Execute</a></div><div class="ttdeci">virtual void Execute(Enemy *enemy, std::unique_ptr&lt; Player &gt; &amp;player_, CollisionLayer *collision, int dt)</div><div class="ttdef"><b>Definition:</b> EnemyStates.cpp:26</div></div>
+<div class="ttc" id="aclassEnemyPatrol_html_ac3ef33444ea8612af105f2933917bf3b"><div class="ttname"><a href="classEnemyPatrol.html#ac3ef33444ea8612af105f2933917bf3b">EnemyPatrol::Enter</a></div><div class="ttdeci">virtual void Enter(Enemy *enemy)</div><div class="ttdef"><b>Definition:</b> EnemyStates.cpp:21</div></div>
+<div class="ttc" id="aclassEnemyAttack_html_a37ac29da56e9516774ed33f2a8a3b7b7"><div class="ttname"><a href="classEnemyAttack.html#a37ac29da56e9516774ed33f2a8a3b7b7">EnemyAttack::Instance</a></div><div class="ttdeci">static EnemyAttack * Instance()</div><div class="ttdef"><b>Definition:</b> EnemyStates.cpp:62</div></div>
+<div class="ttc" id="aclassEnemyRunAway_html"><div class="ttname"><a href="classEnemyRunAway.html">EnemyRunAway</a></div><div class="ttdef"><b>Definition:</b> EnemyStates.h:47</div></div>
+<div class="ttc" id="aclassEnemy_html"><div class="ttname"><a href="classEnemy.html">Enemy</a></div><div class="ttdoc">Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer.</div><div class="ttdef"><b>Definition:</b> Enemy.h:18</div></div>
+<div class="ttc" id="aEntityWithoutHP_8h_html_a0017b68a69d03986d465ef2dca6e4380a57a7edcbc04d6175683383cad5c3e0a2"><div class="ttname"><a href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380a57a7edcbc04d6175683383cad5c3e0a2">Up</a></div><div class="ttdeci">@ Up</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:19</div></div>
+<div class="ttc" id="aclassEnemyAttack_html_a5ddfcee027741f02f2e6f19abd21669b"><div class="ttname"><a href="classEnemyAttack.html#a5ddfcee027741f02f2e6f19abd21669b">EnemyAttack::Enter</a></div><div class="ttdeci">virtual void Enter(Enemy *enemy)</div><div class="ttdef"><b>Definition:</b> EnemyStates.cpp:71</div></div>
+<div class="ttc" id="aEntityWithoutHP_8h_html_a0017b68a69d03986d465ef2dca6e4380a9d4d8b0b72fc2659da772d761a3c5ecb"><div class="ttname"><a href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380a9d4d8b0b72fc2659da772d761a3c5ecb">Left</a></div><div class="ttdeci">@ Left</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:17</div></div>
+<div class="ttc" id="aclassEnemyRunAway_html_af3b404b770b2ad508b7e2ad85077e328"><div class="ttname"><a href="classEnemyRunAway.html#af3b404b770b2ad508b7e2ad85077e328">EnemyRunAway::Enter</a></div><div class="ttdeci">virtual void Enter(Enemy *enemy)</div><div class="ttdef"><b>Definition:</b> EnemyStates.cpp:119</div></div>
+<div class="ttc" id="aclassEntityWithHP_html_a2141d7cca91bd206e229efcc1c02d4d0"><div class="ttname"><a href="classEntityWithHP.html#a2141d7cca91bd206e229efcc1c02d4d0">EntityWithHP::GetDamage</a></div><div class="ttdeci">int GetDamage() const</div><div class="ttdoc">Permet de retourner le nombre de dégats q'inflige l'entité EntityWithHP.</div><div class="ttdef"><b>Definition:</b> EntityWithHP.cpp:65</div></div>
+<div class="ttc" id="aclassEnemyPatrol_html"><div class="ttname"><a href="classEnemyPatrol.html">EnemyPatrol</a></div><div class="ttdef"><b>Definition:</b> EnemyStates.h:11</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a87424952f6ec1c19bd5f370ed573a1c3"><div class="ttname"><a href="classEntityWithoutHP.html#a87424952f6ec1c19bd5f370ed573a1c3">EntityWithoutHP::SetSpeed</a></div><div class="ttdeci">void SetSpeed(int newSpeed)</div><div class="ttdoc">Permets de modifier la vitesse de l'entité.</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:154</div></div>
+<div class="ttc" id="aEnemyStates_8h_html"><div class="ttname"><a href="EnemyStates_8h.html">EnemyStates.h</a></div></div>
+<div class="ttc" id="aclassEnemyAttack_html_a6004bfa0e52e2e82e8b6ef5c5e911bbf"><div class="ttname"><a href="classEnemyAttack.html#a6004bfa0e52e2e82e8b6ef5c5e911bbf">EnemyAttack::operator=</a></div><div class="ttdeci">void operator=(const EnemyAttack &amp;other)=delete</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_a0c000f5c03af273546b317aaad42254c"><div class="ttname"><a href="classEntityWithoutHP.html#a0c000f5c03af273546b317aaad42254c">EntityWithoutHP::SetDirection</a></div><div class="ttdeci">void SetDirection(EntityDirection nDirection)</div><div class="ttdoc">Permets de modifier la direction de l'entité.</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:96</div></div>
+<div class="ttc" id="aclassEnemyRunAway_html_a4fd12ec3c8049ef912b97667d869158f"><div class="ttname"><a href="classEnemyRunAway.html#a4fd12ec3c8049ef912b97667d869158f">EnemyRunAway::singleton</a></div><div class="ttdeci">static EnemyRunAway * singleton</div><div class="ttdef"><b>Definition:</b> EnemyStates.h:59</div></div>
+<div class="ttc" id="aclassEnemyAttack_html_a3da580ed9a1f68dab67de66a210bfe30"><div class="ttname"><a href="classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30">EnemyAttack::Execute</a></div><div class="ttdeci">virtual void Execute(Enemy *enemy, std::unique_ptr&lt; Player &gt; &amp;player_, CollisionLayer *collision, int dt)</div><div class="ttdef"><b>Definition:</b> EnemyStates.cpp:76</div></div>
+<div class="ttc" id="aclassEnemyRunAway_html_a1a4c831793fa506ce77c5188a59ead54"><div class="ttname"><a href="classEnemyRunAway.html#a1a4c831793fa506ce77c5188a59ead54">EnemyRunAway::operator=</a></div><div class="ttdeci">void operator=(const EnemyRunAway &amp;other)=delete</div></div>
+<div class="ttc" id="aclassEnemyPatrol_html_adf5b330d3544e97142aaf385148818d4"><div class="ttname"><a href="classEnemyPatrol.html#adf5b330d3544e97142aaf385148818d4">EnemyPatrol::Instance</a></div><div class="ttdeci">static EnemyPatrol * Instance()</div><div class="ttdef"><b>Definition:</b> EnemyStates.cpp:12</div></div>
+<div class="ttc" id="aclassEntityWithHP_html_a064f838fa6ae5e4a2b6c2fcb92f576fa"><div class="ttname"><a href="classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa">EntityWithHP::GetHP</a></div><div class="ttdeci">int GetHP() const</div><div class="ttdoc">Retourne le nombre de points de vie de l'entité.</div><div class="ttdef"><b>Definition:</b> EntityWithHP.cpp:42</div></div>
+<div class="ttc" id="aclassEnemyPatrol_html_a36581340aeeada2e0eaf3f4cf2d6e5a0"><div class="ttname"><a href="classEnemyPatrol.html#a36581340aeeada2e0eaf3f4cf2d6e5a0">EnemyPatrol::operator=</a></div><div class="ttdeci">void operator=(const EnemyPatrol &amp;other)=delete</div></div>
+<div class="ttc" id="aclassEnemyRunAway_html_a5d56fabaf2823d44a491ea7f43083b47"><div class="ttname"><a href="classEnemyRunAway.html#a5d56fabaf2823d44a491ea7f43083b47">EnemyRunAway::EnemyRunAway</a></div><div class="ttdeci">EnemyRunAway()</div><div class="ttdef"><b>Definition:</b> EnemyStates.h:59</div></div>
+<div class="ttc" id="aclassEntityWithoutHP_html_aa919d21efd6f9e28bcbd71696b418792"><div class="ttname"><a href="classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792">EntityWithoutHP::GetPos_x</a></div><div class="ttdeci">float GetPos_x() const</div><div class="ttdoc">Retourne la position sur l'axe des x de l'entité (horizontale).</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.cpp:73</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a2f0e5642e47e7ed59fe0f0829eafb5f.html">Core</a></li><li class="navelem"><a class="el" href="dir_68e2f26f53a5eb0960065d69a44b95e0.html">Entity</a></li><li class="navelem"><a class="el" href="dir_f8b222e72c43d347d0b18d056289c891.html">FiniteStateMachine</a></li><li class="navelem"><a class="el" href="EnemyStates_8h.html">EnemyStates.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

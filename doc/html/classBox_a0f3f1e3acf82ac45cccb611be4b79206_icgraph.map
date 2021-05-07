@@ -1,6 +1,11 @@
 <map id="Box::SetPosition" name="Box::SetPosition">
-<area shape="rect" id="node1" title="Modifie la position de la Box par celle en paramètre." alt="" coords="243,31,371,57"/>
-<area shape="rect" id="node2" href="$classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="108,5,195,32"/>
-<area shape="rect" id="node3" href="$classBox.html#ab30d8d08bfff9e0505d1baa518b01fba" title="Fonction test de la classe Box." alt="" coords="111,56,192,83"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node1" title="Modifie la position de la Box par celle en paramètre." alt="" coords="631,107,759,133"/>
+<area shape="rect" id="node2" href="$classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="419,5,505,32"/>
+<area shape="rect" id="node3" href="$classBox.html#ab30d8d08bfff9e0505d1baa518b01fba" title="Fonction test de la classe Box." alt="" coords="421,56,503,83"/>
+<area shape="rect" id="node6" href="$classStateGameTxt.html#a14e11db9b9ccea3fcc75829656bb18f4" title="Fonction de mise à jour du State." alt="" coords="377,107,547,133"/>
+<area shape="rect" id="node7" href="$classStateGameSFML.html#a11a34aefe47e9f0d1fcfc9130c9f1d27" title="Met à jour les données correspondant aux ennemis." alt="" coords="341,157,583,184"/>
+<area shape="rect" id="node9" href="$classStateGameSFML.html#a954213023746cb5187490fd1f2c806bc" title="Met à jour les données correspondant au joueur." alt="" coords="349,208,575,235"/>
+<area shape="rect" id="node4" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="153,56,248,83"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node8" href="$classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2" title="Fonction de mise à jour du State." alt="" coords="108,183,293,209"/>
 </map>

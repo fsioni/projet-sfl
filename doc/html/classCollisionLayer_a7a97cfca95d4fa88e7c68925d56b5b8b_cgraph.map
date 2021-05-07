@@ -1,0 +1,4 @@
+<map id="CollisionLayer::DeleteACollisionBoxEntity" name="CollisionLayer::DeleteACollisionBoxEntity">
+<area shape="rect" id="node1" title="Supprime la CollisionBox d&#39;une entité." alt="" coords="5,5,236,47"/>
+<area shape="rect" id="node2" href="$classCollisionLayer.html#ae1accba79321890918f40613ba32f957" title="Permet de savoir si une clé existe." alt="" coords="284,5,463,47"/>
+</map>

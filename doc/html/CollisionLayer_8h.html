@@ -90,6 +90,8 @@ $(document).ready(function(){initNavTree('CollisionLayer_8h.html',''); initResiz
 <div class="contents">
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
 <code>#include &quot;<a class="el" href="Layer_8h_source.html">Layer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="CollisionBox_8h_source.html">../CollisionBox.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -97,12 +99,14 @@ Graphe des dépendances par inclusion de CollisionLayer.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="CollisionLayer_8h__incl.png" border="0" usemap="#src_2Core_2Map_2Layers_2CollisionLayer_8h" alt=""/></div>
 <map name="src_2Core_2Map_2Layers_2CollisionLayer_8h" id="src_2Core_2Map_2Layers_2CollisionLayer_8h">
-<area shape="rect" title=" " alt="" coords="54,5,209,47"/>
+<area shape="rect" title=" " alt="" coords="149,5,303,47"/>
 <area shape="rect" title=" " alt="" coords="5,95,68,121"/>
-<area shape="rect" title=" " alt="" coords="185,244,243,271"/>
-<area shape="rect" href="Layer_8h.html" title=" " alt="" coords="143,169,213,196"/>
-<area shape="rect" href="CollisionBox_8h.html" title=" " alt="" coords="195,95,321,121"/>
-<area shape="rect" href="Box_8h.html" title=" " alt="" coords="287,169,346,196"/>
+<area shape="rect" title=" " alt="" coords="321,244,379,271"/>
+<area shape="rect" title=" " alt="" coords="143,95,221,121"/>
+<area shape="rect" title=" " alt="" coords="245,95,295,121"/>
+<area shape="rect" href="Layer_8h.html" title=" " alt="" coords="279,169,349,196"/>
+<area shape="rect" href="CollisionBox_8h.html" title=" " alt="" coords="371,95,497,121"/>
+<area shape="rect" href="Box_8h.html" title=" " alt="" coords="423,169,482,196"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -110,25 +114,47 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 <div class="dyncontent">
 <div class="center"><img src="CollisionLayer_8h__dep__incl.png" border="0" usemap="#src_2Core_2Map_2Layers_2CollisionLayer_8hdep" alt=""/></div>
 <map name="src_2Core_2Map_2Layers_2CollisionLayer_8hdep" id="src_2Core_2Map_2Layers_2CollisionLayer_8hdep">
-<area shape="rect" title=" " alt="" coords="779,5,934,47"/>
-<area shape="rect" href="Map_8h.html" title=" " alt="" coords="693,102,844,129"/>
-<area shape="rect" href="CollisionLayer_8cpp.html" title=" " alt="" coords="869,95,1023,136"/>
-<area shape="rect" href="Game_8h.html" title=" " alt="" coords="617,184,747,211"/>
-<area shape="rect" href="Map_8cpp.html" title=" " alt="" coords="772,184,939,211"/>
-<area shape="rect" href="Game_8cpp.html" title=" " alt="" coords="39,355,184,382"/>
-<area shape="rect" href="StateSplashScreenSFML_8h.html" title=" " alt="" coords="26,259,231,300"/>
-<area shape="rect" href="StateSplashScreenTxt_8h.html" title=" " alt="" coords="256,259,444,300"/>
-<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="1331,266,1436,293"/>
-<area shape="rect" href="StateGameSFML_8h.html" title=" " alt="" coords="693,266,897,293"/>
-<area shape="rect" href="StateMenuSFML_8h.html" title=" " alt="" coords="468,266,669,293"/>
-<area shape="rect" href="StateGameTxt_8h.html" title=" " alt="" coords="1133,266,1306,293"/>
-<area shape="rect" href="StateMenuTxt_8h.html" title=" " alt="" coords="930,266,1101,293"/>
-<area shape="rect" href="StateSplashScreenSFML_8cpp.html" title=" " alt="" coords="209,348,414,389"/>
-<area shape="rect" href="StateSplashScreenTxt_8cpp.html" title=" " alt="" coords="921,348,1109,389"/>
-<area shape="rect" href="StateGameSFML_8cpp.html" title=" " alt="" coords="678,355,897,382"/>
-<area shape="rect" href="StateMenuSFML_8cpp.html" title=" " alt="" coords="438,355,654,382"/>
-<area shape="rect" href="StateGameTxt_8cpp.html" title=" " alt="" coords="1343,355,1531,382"/>
-<area shape="rect" href="StateMenuTxt_8cpp.html" title=" " alt="" coords="1133,355,1319,382"/>
+<area shape="rect" title=" " alt="" coords="1835,5,1990,47"/>
+<area shape="rect" href="EntityWithoutHP_8h.html" title=" " alt="" coords="1135,102,1373,129"/>
+<area shape="rect" href="StateBehavior_8h.html" title=" " alt="" coords="1976,363,2167,404"/>
+<area shape="rect" href="Map_8h.html" title=" " alt="" coords="1777,102,1928,129"/>
+<area shape="rect" href="CollisionLayer_8cpp.html" title=" " alt="" coords="2011,95,2166,136"/>
+<area shape="rect" href="Animal_8h.html" title=" " alt="" coords="1274,191,1453,218"/>
+<area shape="rect" href="Animal_8cpp.html" title=" " alt="" coords="1123,281,1318,307"/>
+<area shape="rect" href="EntityWithHP_8h.html" title=" " alt="" coords="1528,191,1745,218"/>
+<area shape="rect" href="NPC_8h.html" title=" " alt="" coords="1226,370,1386,397"/>
+<area shape="rect" href="EntityWithoutHP_8cpp.html" title=" " alt="" coords="1039,184,1250,225"/>
+<area shape="rect" href="Enemy_8h.html" title=" " alt="" coords="1991,549,2167,575"/>
+<area shape="rect" href="Player_8h.html" title=" " alt="" coords="1741,281,1914,307"/>
+<area shape="rect" href="EntityWithHP_8cpp.html" title=" " alt="" coords="1527,273,1717,315"/>
+<area shape="rect" href="Enemy_8cpp.html" title=" " alt="" coords="2111,727,2301,754"/>
+<area shape="rect" href="EnemyStates_8h.html" title=" " alt="" coords="2115,631,2305,672"/>
+<area shape="rect" href="EnemyStates_8cpp.html" title=" " alt="" coords="2326,720,2521,761"/>
+<area shape="rect" href="Player_8cpp.html" title=" " alt="" coords="1851,638,2039,665"/>
+<area shape="rect" href="Game_8h.html" title=" " alt="" coords="1303,638,1434,665"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="1981,727,2087,754"/>
+<area shape="rect" href="Game_8cpp.html" title=" " alt="" coords="639,817,784,843"/>
+<area shape="rect" href="StateSplashScreenSFML_8h.html" title=" " alt="" coords="811,720,1017,761"/>
+<area shape="rect" href="StateSplashScreenTxt_8h.html" title=" " alt="" coords="548,720,736,761"/>
+<area shape="rect" href="StateGameOverSFML_8h.html" title=" " alt="" coords="1723,727,1958,754"/>
+<area shape="rect" href="StateGameSFML_8h.html" title=" " alt="" coords="1495,727,1699,754"/>
+<area shape="rect" href="StatePauseSFML_8h.html" title=" " alt="" coords="1267,727,1470,754"/>
+<area shape="rect" href="StateMenuSFML_8h.html" title=" " alt="" coords="1041,727,1243,754"/>
+<area shape="rect" href="StateGameTxt_8h.html" title=" " alt="" coords="155,727,329,754"/>
+<area shape="rect" href="StateMenuTxt_8h.html" title=" " alt="" coords="353,727,523,754"/>
+<area shape="rect" href="StateSplashScreenSFML_8cpp.html" title=" " alt="" coords="809,809,1014,851"/>
+<area shape="rect" href="StateSplashScreenTxt_8cpp.html" title=" " alt="" coords="427,809,615,851"/>
+<area shape="rect" href="StateGameOverSFML_8cpp.html" title=" " alt="" coords="1763,817,2014,843"/>
+<area shape="rect" href="StateGameSFML_8cpp.html" title=" " alt="" coords="1521,817,1739,843"/>
+<area shape="rect" href="StateMenuSFML_8cpp.html" title=" " alt="" coords="1038,817,1254,843"/>
+<area shape="rect" href="StatePauseSFML_8cpp.html" title=" " alt="" coords="1278,817,1497,843"/>
+<area shape="rect" href="StateGameTxt_8cpp.html" title=" " alt="" coords="5,817,193,843"/>
+<area shape="rect" href="StateMenuTxt_8cpp.html" title=" " alt="" coords="217,817,403,843"/>
+<area shape="rect" href="StateMachine_8h.html" title=" " alt="" coords="1708,452,1899,493"/>
+<area shape="rect" href="StateBehavior_8cpp.html" title=" " alt="" coords="1973,452,2172,493"/>
+<area shape="rect" href="StateMachine_8cpp.html" title=" " alt="" coords="1578,541,1775,583"/>
+<area shape="rect" href="NPC_8cpp.html" title=" " alt="" coords="1156,459,1331,486"/>
+<area shape="rect" href="Map_8cpp.html" title=" " alt="" coords="1769,191,1936,218"/>
 </map>
 </div>
 </div>

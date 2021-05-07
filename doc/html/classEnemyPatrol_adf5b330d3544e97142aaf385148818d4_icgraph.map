@@ -1,0 +1,6 @@
+<map id="EnemyPatrol::Instance" name="EnemyPatrol::Instance">
+<area shape="rect" id="node1" title=" " alt="" coords="240,56,407,83"/>
+<area shape="rect" id="node2" href="$classEnemy.html#a94f30d348b6d2840fd71675472ba38dd" title="Constructeur par défaut." alt="" coords="39,5,158,32"/>
+<area shape="rect" id="node3" href="$classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="15,56,183,83"/>
+<area shape="rect" id="node4" href="$classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="5,107,192,133"/>
+</map>

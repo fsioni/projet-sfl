@@ -27,27 +27,27 @@ void StateGameTxt::ProcessInput()
 void StateGameTxt::Update()
 {
     int c;
-
+    CollisionLayer * colLayer = context->map->GetCollisionLayer();
     c = win->getCh();
     switch (c)
     {
     case 'z':
-        MoveWithCollision(0, -1);
+        context->player->MoveWithCollision(0, -1, colLayer, 1);
         context->player->SetDirection(Up);
         break;
 
     case 'q':
-        MoveWithCollision(-1, 0);
+        context->player->MoveWithCollision(-1, 0, colLayer, 1);
         context->player->SetDirection(Left);
         break;
 
     case 's':
-        MoveWithCollision(0, 1);
+        context->player->MoveWithCollision(0, 1, colLayer, 1);
         context->player->SetDirection(Down);
         break;
 
     case 'd':
-        MoveWithCollision(1, 0);
+        context->player->MoveWithCollision(1, 0, colLayer, 1);
         context->player->SetDirection(Right);
         break;
 
@@ -66,7 +66,7 @@ void StateGameTxt::Update()
     int playerID = context->player->GetID();
     
 
-    CollisionBox * cbPlayer = 
+    Box * cbPlayer = 
         context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
     cbPlayer->SetPosition(playerX, playerY);
 }
@@ -100,7 +100,7 @@ void StateGameTxt::Display()
     }
 
     //Affichage des collisions boxes
-    const std::vector<CollisionBox> cb =
+    const std::vector<Box> cb =
         context->map->GetCollisionLayer()->GetCollisionBoxes();
     for (int i = 0; i < (int)cb.size(); i++)
     {
@@ -125,47 +125,4 @@ void StateGameTxt::Pause()
 
 void StateGameTxt::Start()
 {
-}
-
-void StateGameTxt::MoveWithCollision(float vx, float vy)
-{
-    if (vx == 0 && vy == 0)
-    {
-        return;
-    }
-
-    bool iscolliding = false;
-
-    std::vector<CollisionBox> cb =
-        context->map->GetCollisionLayer()->GetCollisionBoxes();
-
-    int playerID = context->player->GetID();
-
-    CollisionBox * cbPlayer = 
-        context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
-
-    for (long unsigned int i = 0; i < cb.size(); i++)
-    {
-        int posX = cbPlayer->GetX() +
-                   vx * context->player->GetSpeed();
-
-        int posY = cbPlayer->GetY() +
-                   vy * context->player->GetSpeed();
-
-        //Detection collision axe X
-        if (posX >= cb[i].GetX() && cb[i].GetX() + cb[i].GetWidth() >= posX)
-        {
-            //Detection collision axe Y
-            if (posY >= cb[i].GetY() && cb[i].GetY() + cb[i].GetHeight() >=
-                                                                        posY)
-            {
-
-                iscolliding = true;
-            }
-        }
-    }
-    if (!iscolliding)
-    {
-        context->player->Move(vx, vy);
-    }
 }

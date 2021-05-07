@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Legends of Nautibus: Référence de la structure Context</title>
+<title>Legends of Nautibus: Référence de la classe Context</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,9 +86,12 @@ $(document).ready(function(){initNavTree('structContext.html',''); initResizable
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="#pub-attribs">Champs de données</a>  </div>
   <div class="headertitle">
-<div class="title">Référence de la structure Context</div>  </div>
+<div class="title">Référence de la classe Context</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe représentant l'état du programme.  
+ <a href="structContext.html#details">Plus de détails...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Game_8h_source.html">Game.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -109,14 +112,20 @@ Champs de données</h2></td></tr>
 <tr class="separator:a2b343a1064948f57f6ff5cf3413b740d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76624c5984429f004ad8d73cec830680"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classPlayer.html">Player</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a76624c5984429f004ad8d73cec830680">player</a></td></tr>
 <tr class="separator:a76624c5984429f004ad8d73cec830680"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e1614d625198a20e80f6e9f5ad97038"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classEnemy.html">Enemy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a2e1614d625198a20e80f6e9f5ad97038">enemies</a></td></tr>
-<tr class="separator:a2e1614d625198a20e80f6e9f5ad97038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b772a83981d3122a430f53d8e23b376"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classEnemy.html">Enemy</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a7b772a83981d3122a430f53d8e23b376">enemies</a></td></tr>
+<tr class="separator:a7b772a83981d3122a430f53d8e23b376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d956e0381f7ab1f313eeec6ab33d1a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classNPC.html">NPC</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a75d956e0381f7ab1f313eeec6ab33d1a">npc</a></td></tr>
+<tr class="separator:a75d956e0381f7ab1f313eeec6ab33d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ff03b7f35e62b990bd6a81972c1350b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a2ff03b7f35e62b990bd6a81972c1350b">isDebug</a></td></tr>
 <tr class="separator:a2ff03b7f35e62b990bd6a81972c1350b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a147f5febd0604e0cb93bbc92c80bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a81a147f5febd0604e0cb93bbc92c80bb">isMute</a></td></tr>
+<tr class="separator:a81a147f5febd0604e0cb93bbc92c80bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18396436d360bb916d9ff6f9affa09fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structContext.html#a18396436d360bb916d9ff6f9affa09fd">quit</a></td></tr>
 <tr class="separator:a18396436d360bb916d9ff6f9affa09fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Classe représentant l'état du programme. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="a652cdcd2eedc8dbd9110bd284c5d5cf0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a652cdcd2eedc8dbd9110bd284c5d5cf0">&#9670;&nbsp;</a></span>Context()</h2>
 
@@ -139,6 +148,15 @@ Champs de données</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="structContext_a652cdcd2eedc8dbd9110bd284c5d5cf0_cgraph.png" border="0" usemap="#structContext_a652cdcd2eedc8dbd9110bd284c5d5cf0_cgraph" alt=""/></div>
+<map name="structContext_a652cdcd2eedc8dbd9110bd284c5d5cf0_cgraph" id="structContext_a652cdcd2eedc8dbd9110bd284c5d5cf0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,137,32"/>
+<area shape="rect" href="classEntityWithoutHP.html#a1a5d732b9f322135fbd5e5f227064b26" title="Retourne l&#39;ID de l&#39;entité." alt="" coords="185,5,360,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -157,14 +175,14 @@ Champs de données</h2></td></tr>
 
 </div>
 </div>
-<a id="a2e1614d625198a20e80f6e9f5ad97038"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e1614d625198a20e80f6e9f5ad97038">&#9670;&nbsp;</a></span>enemies</h2>
+<a id="a7b772a83981d3122a430f53d8e23b376"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b772a83981d3122a430f53d8e23b376">&#9670;&nbsp;</a></span>enemies</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classEnemy.html">Enemy</a>&gt; Context::enemies</td>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="classEnemy.html">Enemy</a>&gt; &gt; Context::enemies</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -185,6 +203,20 @@ Champs de données</h2></td></tr>
 
 </div>
 </div>
+<a id="a81a147f5febd0604e0cb93bbc92c80bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a147f5febd0604e0cb93bbc92c80bb">&#9670;&nbsp;</a></span>isMute</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Context::isMute</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2b343a1064948f57f6ff5cf3413b740d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b343a1064948f57f6ff5cf3413b740d">&#9670;&nbsp;</a></span>map</h2>
 
@@ -193,6 +225,20 @@ Champs de données</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::unique_ptr&lt;<a class="el" href="classMap.html">Map</a>&gt; Context::map</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75d956e0381f7ab1f313eeec6ab33d1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d956e0381f7ab1f313eeec6ab33d1a">&#9670;&nbsp;</a></span>npc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classNPC.html">NPC</a> *&gt; Context::npc</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -255,7 +301,7 @@ Champs de données</h2></td></tr>
 
 </div>
 </div>
-<hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
+<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
 <li>src/Core/<a class="el" href="Game_8h_source.html">Game.h</a></li>
 </ul>
 </div><!-- contents -->

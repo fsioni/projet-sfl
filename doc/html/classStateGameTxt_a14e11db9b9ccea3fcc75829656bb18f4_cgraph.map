@@ -1,4 +1,9 @@
 <map id="StateGameTxt::Update" name="StateGameTxt::Update">
-<area shape="rect" id="node1" title="Fonction de mise à jour du State." alt="" coords="5,5,176,32"/>
-<area shape="rect" id="node2" href="$classStateGameTxt.html#a261e45535cd2d3253e5a314c12602b0f" title=" " alt="" coords="224,5,471,32"/>
+<area shape="rect" id="node1" title="Fonction de mise à jour du State." alt="" coords="5,81,176,108"/>
+<area shape="rect" id="node2" href="$classStateGameTxt.html#a261e45535cd2d3253e5a314c12602b0f" title="Permet le mouvement du joueur à travers le monde Prend en compte les collisions." alt="" coords="224,56,471,83"/>
+<area shape="rect" id="node5" href="$classBox.html#a0f3f1e3acf82ac45cccb611be4b79206" title="Modifie la position de la Box par celle en paramètre." alt="" coords="283,107,411,133"/>
+<area shape="rect" id="node3" href="$classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="519,5,605,32"/>
+<area shape="rect" id="node4" href="$classBox.html#af86b090508898469761c0d61c8230133" title="Retourne y." alt="" coords="519,56,605,83"/>
+<area shape="rect" id="node6" href="$classBox.html#aebb3d713f415ee36e6c245c45053223c" title="Modifie la position sur l&#39;axe horizontal." alt="" coords="519,107,605,133"/>
+<area shape="rect" id="node7" href="$classBox.html#a05649a7f4b8aa9c0524141672f6edfea" title="Modifie la position sur l&#39;axe vertical." alt="" coords="520,157,604,184"/>
 </map>

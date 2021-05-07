@@ -139,11 +139,15 @@ After compiling :
 ./bin/exec 0
 ``` 
 
-- To move along all axis use : ̀`Z Q S F`
-- To pause the game : `escape`
+- To move along all axis use : `Z Q S D`
+- To attack an enemy use : `Left click`
+- To pause the game : `Escape`
 - To restart the game after Game Over : `Space`
+- To mute the sound of the game press : `M`
 - To open the debug mode press : `P`
-- To quit press : `x` or the cross button.
+- To quit press : `X` or the cross button.
+
+<b>Note</b> : fullscreen behaviors are unpredictable. Only in-game screen resizing is recommended
 
 
 ### Text version
@@ -155,7 +159,7 @@ The player is represented by a 'O', the enemies by 'E' and the collision boxes b
 ./bin/exec 1
 ``` 
 
-- To move along all axis use : ̀`Z Q S F`
+- To move along all axis use : `Z Q S F`
 - To quit press : `x` or the cross button.
 
 
@@ -193,11 +197,20 @@ You can find our [Trello Board ](https://trello.com/b/tu5E8z0s/projet-sfl).
 
 
 ## 🗺️ Create your own maps with the Tiled software : <a name="map"></a>
+### Collisions and spawns layers :
+You can download Tiled software [here](https://www.mapeditor.org/).
+
 ### Collision and spawn layers :
-You should use object layers named :
-- "PlayerSpawn" for the spawn of players
-- "EnemySpawn" for spawns of enemies
+You must use object layers named :
+- "PlayerSpawn" for player's spawn
+- "EnemySpawn" for enemies' spawns
 - "Collision" for every objects that players, NPC and enemies couldn't go throught
+- "NPCSpawn" for NPC's spawns. To specify the sentence of NPCs, go to the `property panel` on the left and `Custom Properties` -> `Add Property`, then set `Property Name` to `"Dialog"` and select `String` type. You can also set NPC's direction by modifying `Rotation` value. 
+
+<strong>You should save your map using CSV format.<strong>
+
+<b>Note</b> : Check the actual map at the folder location `data/maps/mainTilemaps.tmx` and reproduce the layers with the objects properties 
+
 
 
 ## ✍️ Authors <a name = "authors"></a>

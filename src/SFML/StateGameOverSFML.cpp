@@ -19,6 +19,7 @@ void StateGameOverSFML::Init()
 {
     assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
     assert(music.openFromFile("data/sounds/music/13gameover1V1NL.wav"));
+    textColor = sf::Color(245, 222, 92);
 
     music.play();
 
@@ -26,6 +27,9 @@ void StateGameOverSFML::Init()
     int winy = context->renderWin->getSize().y;
 
     gameOverText.setFont(textFont);
+    gameOverText.setFillColor(textColor);
+    gameOverText.setOutlineColor(sf::Color::Black);
+    gameOverText.setOutlineThickness(2);
     gameOverText.setString("GAME OVER");
     gameOverText.setCharacterSize(50);
     gameOverText.setOrigin(gameOverText.getLocalBounds().left + 
@@ -35,6 +39,9 @@ void StateGameOverSFML::Init()
     gameOverText.setPosition(winx / 2.0f, winy / 2.0f);
 
     restartText.setFont(textFont);
+    restartText.setFillColor(textColor);
+    restartText.setOutlineColor(sf::Color::Black);
+    restartText.setOutlineThickness(2);
     restartText.setString("Press Space to restart");
     restartText.setCharacterSize(50);
     restartText.setOrigin(restartText.getLocalBounds().left +
@@ -69,6 +76,10 @@ void StateGameOverSFML::ProcessInput()
                 context->quit = true;
                 break;
 
+            case sf::Keyboard::M:
+                context->isMute = !(context->isMute);
+                break;                
+
             default:
                 break;
             }
@@ -79,33 +90,63 @@ void StateGameOverSFML::ProcessInput()
 void StateGameOverSFML::RestartGame()
 {
     // Initialisation du joueur
-    float x = context->map->GetSpawnsLayer()->getPlayerSpawn().GetX();
-    float y = context->map->GetSpawnsLayer()->getPlayerSpawn().GetY();
+    float x = context->map->GetSpawnsLayer()->GetPlayerSpawn().GetX();
+    float y = context->map->GetSpawnsLayer()->GetPlayerSpawn().GetY();
 
     context->player = std::make_unique<Player>(x, y, "Player", 10, 10, 4, 10);
 
     context->map->GetCollisionLayer()->AddCollisionBoxEntity(
-        context->player->GetID(), new CollisionBox(x, y, 26, 26));
+        context->player->GetID(), new Box(x, y, 26, 26));
 
     // Initialisation des ennemies
-    int count = context->map->GetSpawnsLayer()->getEnemySpawns().size();
+    int count = context->map->GetSpawnsLayer()->GetEnemySpawns().size();
     context->enemies.clear();
 
     for (int i = 0; i < count; i++)
     {
-        x = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetX();
-        y = context->map->GetSpawnsLayer()->getEnemySpawns()[i].GetY();
+        x = context->map->GetSpawnsLayer()->GetEnemySpawns()[i].GetX();
+        y = context->map->GetSpawnsLayer()->GetEnemySpawns()[i].GetY();
 
         std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 100, 3, 1, 100);
         context->enemies.push_back(enemy);
         
         context->map->GetCollisionLayer()->AddCollisionBoxEntity(
-            enemy->GetID(), new CollisionBox(x, y, 26, 26));
+            enemy->GetID(), new Box(x, y, 26, 26));
+    }
+
+    // Initialisation des NPC
+    std::string dialog;
+    EntityDirection direction;
+    count = context->map->GetSpawnsLayer()->GetNPCSpawns().size();
+    for (int i = 0; i < count; i++){
+        x = context->map->GetSpawnsLayer()->GetNPCSpawns()[i].GetX();
+        y = context->map->GetSpawnsLayer()->GetNPCSpawns()[i].GetY();
+        dialog = context->map->GetSpawnsLayer()->GetADialog(i);
+        direction = context->map->GetSpawnsLayer()->GetADirection(i);
+        // Ajout du npc au vector
+        NPC * newNPC = new NPC(x, y, dialog);
+        newNPC->SetDirection(direction);
+
+        context->npc.push_back(newNPC);
+            
+        // Ajout de sa CollisionBox au CollisionLayer
+        context->map->GetCollisionLayer()->AddCollisionBoxEntity(
+            newNPC->GetID(), new Box(x, y, 32, 32));
+
     }
 }
 
 void StateGameOverSFML::Update()
 {
+    if (context->isMute && music.getVolume() != 0)
+    {
+        music.setVolume(0);
+    }
+    
+    if (!context->isMute && music.getVolume() == 0)
+    {
+        music.setVolume(70);
+    }
 }
 
 void StateGameOverSFML::Display()

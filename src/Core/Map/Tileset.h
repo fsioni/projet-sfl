@@ -46,7 +46,6 @@ public:
     Tileset &operator=(const Tileset &ts);
 
     // TODO : soit à supprimer ou à documenter => en discuter avec les autres
-    void SetName(std::string name_);
     void SetTileWidth(int tw);
     void SetTileHeight(int th);
     void SetTileCount(int tc);
@@ -54,12 +53,6 @@ public:
     void SetTileMapPath(std::string tmp);
     void SetTileMapWidth(int tmw);
     void SetTileMapHeight(int tmh);
-
-    /*! \brief Retourne name
-    *
-    * \return Le nom du Tileset.
-    */
-    std::string GetName() const;
 
     /*! \brief Retourne tileWidth
     *
@@ -112,9 +105,6 @@ public:
     void Test() const;
 
 private:
-    /*! \brief  Nom du tileset. */
-    std::string name;
-
     /*! \brief  Largeur des tuiles en pixel. */
     int tileWidth;
 

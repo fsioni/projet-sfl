@@ -13,6 +13,7 @@ var classStateSplashScreenSFML =
     [ "duration", "classStateSplashScreenSFML.html#aa8f00c3580ccb244f1cf2be0f09770e1", null ],
     [ "gameText", "classStateSplashScreenSFML.html#ad3750f06193ba18acd197a2e36b049c6", null ],
     [ "madeByText", "classStateSplashScreenSFML.html#a57d7590ce871517cdc89dfe5feb73f5f", null ],
+    [ "music", "classStateSplashScreenSFML.html#ac128053f641b1a3a5598e2360b3f3b52", null ],
     [ "start", "classStateSplashScreenSFML.html#acd6d2af4d175723d227b356ae4263f66", null ],
     [ "textFont", "classStateSplashScreenSFML.html#a6719e37ee29be4b02741a36c1c7d200a", null ]
 ];

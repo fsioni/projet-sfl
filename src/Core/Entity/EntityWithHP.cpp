@@ -5,7 +5,7 @@ EntityWithHP::EntityWithHP() : EntityWithHP::EntityWithoutHP()
 
     this->hp = 200;
     this->damage = 20;
-    this->maxHP = 200000;
+    this->maxHP = 200;
     this->livingStatus = true;
     this->speed = 1.0;
 }
@@ -76,16 +76,15 @@ void EntityWithHP::SetDamage(int newDmg)
 
 void EntityWithHP::TakeDamage(int damage)
 {
-    assert(damage >= 0);
-
-    if (hp <= 0)
-    {
-
-        livingStatus = false;
-        hp = 0;
+    if(damage>0){
+        hp-=damage;
+        
+        if (hp <= 0)
+        {
+            livingStatus = false;
+            hp = 0;
+        }
     }
-    else
-        hp -= damage;
 }
 
 void EntityWithHP::Attack(EntityWithHP &target) const

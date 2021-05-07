@@ -1,10 +1,23 @@
 var searchData=
 [
-  ['madebytext_553',['madeByText',['../classStateSplashScreenSFML.html#a57d7590ce871517cdc89dfe5feb73f5f',1,'StateSplashScreenSFML']]],
-  ['map_554',['map',['../structContext.html#a2b343a1064948f57f6ff5cf3413b740d',1,'Context']]],
-  ['mapheight_555',['mapHeight',['../classStateGameSFML.html#a1ab37a66e072d60b62d224484e5a1e06',1,'StateGameSFML']]],
-  ['maplayers_556',['mapLayers',['../classMap.html#a4a1c7371d5ce96ca28ba28553382fb43',1,'Map']]],
-  ['mapwidth_557',['mapWidth',['../classStateGameSFML.html#a2b1210445f4ef9ec45ad9e420f746908',1,'StateGameSFML']]],
-  ['maxhealth_558',['maxHealth',['../classEntityWithHP.html#a143332c2b7c3856f009758b886c9d919',1,'EntityWithHP']]],
-  ['menu_559',['menu',['../classStateMenuTxt.html#a9e5b9aac09eb5e6658f939762c170c98',1,'StateMenuTxt']]]
+  ['id_759',['id',['../classEntityWithoutHP.html#a4c0bb5404cced499f98b76aa03651762',1,'EntityWithoutHP::id()'],['../classUniqueID.html#a5ebe6e10563ae204918a69893e577cea',1,'UniqueID::id()'],['../classBox.html#aaa58eab76ed5927841ac1e0773f8ca08',1,'Box::id()'],['../classLayer.html#ad8c4d484a5efce0cbbd0cf81b3958d17',1,'Layer::id()']]],
+  ['instructionbutton_760',['instructionButton',['../classStateMenuSFML.html#a454937336d2f7cf50abd9f8be0ccdcea',1,'StateMenuSFML']]],
+  ['interacttext_761',['interactText',['../classStateMenuSFML.html#a1feed84fa4969b649eecfae7eab44030',1,'StateMenuSFML']]],
+  ['isattacking_762',['isAttacking',['../classStateGameSFML.html#a34c8f283c8e3cc349ed8333b13f37d38',1,'StateGameSFML']]],
+  ['isdebug_763',['isDebug',['../structContext.html#a2ff03b7f35e62b990bd6a81972c1350b',1,'Context']]],
+  ['isexitbutpressed_764',['isExitButPressed',['../classStateMenuSFML.html#a9a11acf477b9f24f60df050b029d873d',1,'StateMenuSFML']]],
+  ['isexitbutselected_765',['isExitButSelected',['../classStateMenuSFML.html#ab08baf57c401fb7fbbfa31986c987e15',1,'StateMenuSFML']]],
+  ['isgoingdown_766',['isGoingDown',['../classStateGameSFML.html#adfc315b7bca2168d4b77a635e78f7a3d',1,'StateGameSFML']]],
+  ['isgoingleft_767',['isGoingLeft',['../classStateGameSFML.html#ab710e7f993e0776b9a98e8a25d654922',1,'StateGameSFML']]],
+  ['isgoingright_768',['isGoingRight',['../classStateGameSFML.html#a3d1f58bff79c7e0db39de9fb1a138268',1,'StateGameSFML']]],
+  ['isgoingup_769',['isGoingUp',['../classStateGameSFML.html#a085503fa8dac1b361654dad751ff2fa6',1,'StateGameSFML']]],
+  ['isininstructionsubmenu_770',['isInInstructionSubMenu',['../classStateMenuSFML.html#a9fa0c45550cbc9854325cf135c14b1e9',1,'StateMenuSFML']]],
+  ['isinstructionbutpressed_771',['isInstructionButPressed',['../classStateMenuSFML.html#a80c4fbfefcc17645b8411361f5c50b5f',1,'StateMenuSFML']]],
+  ['isinstructionbutselected_772',['isInstructionButSelected',['../classStateMenuSFML.html#a3d23290939cb9af097d026b7016d0995',1,'StateMenuSFML']]],
+  ['ismoving_773',['isMoving',['../classEntityWithoutHP.html#a5941fe59e8497b1e44b63315cfccc0c3',1,'EntityWithoutHP']]],
+  ['ismute_774',['isMute',['../structContext.html#a81a147f5febd0604e0cb93bbc92c80bb',1,'Context']]],
+  ['ispaused_775',['isPaused',['../classStateGameSFML.html#a0c8a05525713cec1e221062addff4464',1,'StateGameSFML']]],
+  ['isplaybutpressed_776',['isPlayButPressed',['../classStateMenuSFML.html#a75c90648b411937973bcfa05ca16bd85',1,'StateMenuSFML']]],
+  ['isplaybutselected_777',['isPlayButSelected',['../classStateMenuSFML.html#a885d2da43322469985ecbfc8640407ee',1,'StateMenuSFML']]],
+  ['iswalking_778',['isWalking',['../classStateGameSFML.html#ad692f21bba8eb59cb9fed32175d14952',1,'StateGameSFML']]]
 ];

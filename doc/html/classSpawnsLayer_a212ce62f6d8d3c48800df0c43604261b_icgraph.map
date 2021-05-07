@@ -1,0 +1,6 @@
+<map id="SpawnsLayer::AddEnemy" name="SpawnsLayer::AddEnemy">
+<area shape="rect" id="node1" title="Fonction permettant d&#39;ajouter un ennemi." alt="" coords="441,5,628,32"/>
+<area shape="rect" id="node2" href="$classSpawnsLayer.html#a4d0337aca595347a27d441575f6a0296" title="Test de regression." alt="" coords="251,5,393,32"/>
+<area shape="rect" id="node3" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,5,203,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
+</map>

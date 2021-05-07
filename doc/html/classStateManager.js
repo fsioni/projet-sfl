@@ -2,7 +2,7 @@ var classStateManager =
 [
     [ "StateManager", "classStateManager.html#a3e2be96d935eb56813b096a885d58587", null ],
     [ "~StateManager", "classStateManager.html#a05a43504a033f1befad5c5118249ec6f", null ],
-    [ "Add", "classStateManager.html#a500718340627bb0c4ac3a28b23dc3fcd", null ],
+    [ "Add", "classStateManager.html#ad88e3ae0024f37f72b5a4a564b47df9c", null ],
     [ "GetCurrent", "classStateManager.html#afafbb0471dab93222bee37b6be6d2d0d", null ],
     [ "PopCurrent", "classStateManager.html#a1738b442d5a7e3a38ff06bace098f157", null ],
     [ "ProcessStateChange", "classStateManager.html#a5dd6d7a9b1262c22bb860820716745c4", null ],

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" infinite="0" nextlayerid="12" nextobjectid="413">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" infinite="0" nextlayerid="12" nextobjectid="413">
  <tileset firstgid="1" source="../tilesets/mainTileSet.tsx"/>
  <layer id="1" name="Ground" width="100" height="50">
   <data encoding="csv">
@@ -274,14 +274,32 @@
  <objectgroup id="6" name="PlayerSpawn">
   <object id="8" x="478.333" y="1311"/>
  </objectgroup>
- <objectgroup id="10" name="NPCSpauwn">
-  <object id="405" x="2678" y="1397.33"/>
-  <object id="406" x="2291.33" y="1142"/>
-  <object id="410" x="858.667" y="229.333"/>
-  <object id="411" x="755" y="1077"/>
-  <object id="412" x="2976.33" y="764.667"/>
+ <objectgroup id="10" name="NPCSpawn">
+  <object id="405" x="2678" y="1397.33">
+   <properties>
+    <property name="Dialog" value="Je suis un NPC 1."/>
+   </properties>
+  </object>
+  <object id="406" x="2291.33" y="1142" rotation="90">
+   <properties>
+    <property name="Dialog" value="Je suis un NPC 2."/>
+   </properties>
+  </object>
+  <object id="410" x="858.667" y="229.333">
+   <properties>
+    <property name="Dialog" value="Je suis un NPC 3."/>
+   </properties>
+  </object>
+  <object id="411" x="755" y="1077" rotation="180">
+   
+  </object>
+  <object id="412" x="2976.33" y="764.667">
+   <properties>
+    <property name="Dialog" value="Je suis un NPC 5."/>
+   </properties>
+  </object>
  </objectgroup>
- <objectgroup id="7" name="EnemySpawn">
+ <objectgroup id="7" name="EnemySpawn" visible="0">
   <object id="9" x="1332" y="1175.34"/>
   <object id="10" x="1703.45" y="1093.55"/>
   <object id="11" x="1552.34" y="1518"/>
@@ -313,7 +331,7 @@
   <object id="37" x="1643.94" y="1518.62"/>
   <object id="38" x="1435.11" y="1072.08"/>
  </objectgroup>
- <objectgroup id="8" name="Collision">
+ <objectgroup id="8" name="Collision" visible="0">
   <object id="14" x="770" y="926" width="64" height="64"/>
   <object id="162" x="833.333" y="992" width="64" height="64"/>
   <object id="154" x="608.667" y="928" width="64" height="64"/>

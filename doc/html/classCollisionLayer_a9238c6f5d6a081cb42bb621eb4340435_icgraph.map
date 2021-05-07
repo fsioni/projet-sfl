@@ -1,6 +1,13 @@
 <map id="CollisionLayer::GetCollisionBoxes" name="CollisionLayer::GetCollisionBoxes">
-<area shape="rect" id="node1" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="333,5,535,47"/>
-<area shape="rect" id="node2" href="$gameTxt_8h.html#a8660cc91c8dc47b28c5bf324284499e9" title=" " alt="" coords="227,13,285,39"/>
-<area shape="rect" id="node3" href="$gameTxt_8h.html#a5eeb0d13b5fe5eba2c9d7415842d36d9" title=" " alt="" coords="108,13,179,39"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,39"/>
+<area shape="rect" id="node1" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="620,126,821,167"/>
+<area shape="rect" id="node2" href="$classStateGameSFML.html#a8e856a9c6fca122ce3a10e3cf877531b" title="Affichage le mode debug sur la fenêtre SFML." alt="" coords="343,28,572,55"/>
+<area shape="rect" id="node4" href="$classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="356,97,559,138"/>
+<area shape="rect" id="node8" href="$classCollisionLayer.html#a399a9c33d2ef2c935e42e605697b85e1" title="Test de regression." alt="" coords="383,163,531,189"/>
+<area shape="rect" id="node11" href="$classMap.html#a5a8b1d219211664f0df882e35104d035" title="Fonction de test de la classe Map." alt="" coords="415,213,499,240"/>
+<area shape="rect" id="node3" href="$classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a" title="Fonction d&#39;affichage du State." alt="" coords="108,5,295,32"/>
+<area shape="rect" id="node5" href="$classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="120,56,283,83"/>
+<area shape="rect" id="node6" href="$classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="117,107,285,133"/>
+<area shape="rect" id="node7" href="$classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="108,157,295,184"/>
+<area shape="rect" id="node9" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="154,209,249,236"/>
+<area shape="rect" id="node10" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,209,60,236"/>
 </map>

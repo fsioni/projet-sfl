@@ -1,0 +1,4 @@
+<map id="NPC" name="NPC">
+<area shape="rect" id="node1" title="Classe représentant un personnage immobile non&#45;joueur qui peut donner des points de vie et communique..." alt="" coords="48,571,160,707"/>
+<area shape="rect" id="node2" href="$classEntityWithoutHP.html" title="Classe représentant une entité immobile et immortel." alt="" coords="5,5,203,523"/>
+</map>

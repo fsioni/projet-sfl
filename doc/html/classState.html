@@ -98,13 +98,15 @@ Graphe d'héritage de State:</div>
 <div class="dyncontent">
 <div class="center"><img src="classState__inherit__graph.png" border="0" usemap="#State_inherit__map" alt="Inheritance graph"/></div>
 <map name="State_inherit__map" id="State_inherit__map">
-<area shape="rect" title="Classe représentant un état de l&#39;application." alt="" coords="498,5,629,185"/>
-<area shape="rect" href="classStateGameSFML.html" title=" " alt="" coords="5,233,175,751"/>
-<area shape="rect" href="classStateGameTxt.html" title=" " alt="" coords="199,380,368,604"/>
-<area shape="rect" href="classStateMenuSFML.html" title=" " alt="" coords="393,336,555,648"/>
-<area shape="rect" href="classStateMenuTxt.html" title=" " alt="" coords="579,380,729,604"/>
-<area shape="rect" href="classStateSplashScreenSFML.html" title=" " alt="" coords="753,358,968,626"/>
-<area shape="rect" href="classStateSplashScreenTxt.html" title=" " alt="" coords="993,380,1193,604"/>
+<area shape="rect" title="Classe représentant un état de l&#39;application." alt="" coords="748,5,879,185"/>
+<area shape="rect" href="classStateGameOverSFML.html" title="Classe représentant l&#39;état game over du mode graphique (SFML)" alt="" coords="5,600,203,868"/>
+<area shape="rect" href="classStateGameSFML.html" title="Classe représentant l&#39;état jeu du mode graphique (SFML)" alt="" coords="227,233,405,1235"/>
+<area shape="rect" href="classStateGameTxt.html" title="Classe représentant l&#39;état jeu du mode texte." alt="" coords="429,622,598,846"/>
+<area shape="rect" href="classStateMenuSFML.html" title="Classe représentant l&#39;état menu du mode graphique (SFML)" alt="" coords="623,483,812,985"/>
+<area shape="rect" href="classStateMenuTxt.html" title="Classe représentant l&#39;état menu du mode texte." alt="" coords="836,622,985,846"/>
+<area shape="rect" href="classStatePauseSFML.html" title="Classe représentant l&#39;état pause du mode graphique (SFML)" alt="" coords="1009,615,1175,853"/>
+<area shape="rect" href="classStateSplashScreenSFML.html" title="Classe représentant l&#39;état SplashScreen du mode graphique (SFML)" alt="" coords="1199,593,1414,875"/>
+<area shape="rect" href="classStateSplashScreenTxt.html" title="Classe représentant l&#39;état SplashScreen du mode texte." alt="" coords="1439,622,1639,846"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -135,7 +137,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe représentant un état de l'application. </p>
-<p>Un <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> est composé d'une initialisation, une boucle, un affichage (texte et graphique), destructeur... <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> est une classe virtuelle pure : elle doit être héritée et toutes les fonctions héritée par <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> implémentée. Exemple de <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> : SplashScreen, MainMenu, <a class="el" href="classGame.html">Game</a>. </p>
+<p>Un <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> est composé d'une initialisation, une boucle, un affichage (texte et graphique), destructeur... <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> est une classe virtuelle pure : elle doit être héritée et toutes les fonctions héritée par <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> implémentée. Exemple de <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> : SplashScreen, MainMenu, <a class="el" href="classGame.html" title="Classe représentant le programme dans sa généralité.">Game</a>. </p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="ab91bb1dd5aa6260ab2a456581daf9ec2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab91bb1dd5aa6260ab2a456581daf9ec2">&#9670;&nbsp;</a></span>State()</h2>
@@ -214,7 +216,7 @@ Fonctions membres publiques</h2></td></tr>
 <p>Fonction d'affichage du <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>. </p>
 <p>Est appelée à chaque mise à jour de l'application Permet un affichage dans la console ou en mode graphique selon le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> associé Fonction virtuelle pure : doit être implémentée par l'enfant </p>
 
-<p>Implémenté dans <a class="el" href="classStateGameTxt.html#a18e90d3f3f04461c26d02f4795674001">StateGameTxt</a>, <a class="el" href="classStateSplashScreenTxt.html#a2b1d3d5166073fd1e6c283c0696ad918">StateSplashScreenTxt</a>, <a class="el" href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a">StateGameSFML</a>, <a class="el" href="classStateMenuSFML.html#afa011f4296d755d4e9d650caa899ae54">StateMenuSFML</a>, <a class="el" href="classStateSplashScreenSFML.html#afa172fed9f23b29ecc2b9f9911e802a0">StateSplashScreenSFML</a>, et <a class="el" href="classStateMenuTxt.html#a4dfc304145a5a6428dd7b9cc81c142b0">StateMenuTxt</a>.</p>
+<p>Implémenté dans <a class="el" href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a">StateGameSFML</a>, <a class="el" href="classStateGameOverSFML.html#ae74ce433f711e8e1566eae00b7a42157">StateGameOverSFML</a>, <a class="el" href="classStateGameTxt.html#a18e90d3f3f04461c26d02f4795674001">StateGameTxt</a>, <a class="el" href="classStateSplashScreenTxt.html#a2b1d3d5166073fd1e6c283c0696ad918">StateSplashScreenTxt</a>, <a class="el" href="classStateMenuSFML.html#afa011f4296d755d4e9d650caa899ae54">StateMenuSFML</a>, <a class="el" href="classStateSplashScreenSFML.html#afa172fed9f23b29ecc2b9f9911e802a0">StateSplashScreenSFML</a>, <a class="el" href="classStateMenuTxt.html#a4dfc304145a5a6428dd7b9cc81c142b0">StateMenuTxt</a>, et <a class="el" href="classStatePauseSFML.html#a53889f4a7fc0530841c784088ba2f0f1">StatePauseSFML</a>.</p>
 
 </div>
 </div>
@@ -244,7 +246,7 @@ Fonctions membres publiques</h2></td></tr>
 <p>Fonction d'initialisation du <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>. </p>
 <p>Appelée une seule fois : au début du <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> Fonction virtuelle pure : doit être implémentée par l'enfant </p>
 
-<p>Implémenté dans <a class="el" href="classStateGameTxt.html#a3d0676321b499bfb77048f625c08c4fa">StateGameTxt</a>, <a class="el" href="classStateSplashScreenTxt.html#ae2b12acbc64df01ad7f377e9a8920478">StateSplashScreenTxt</a>, <a class="el" href="classStateGameSFML.html#a23f1e10132bed64d1e6c0bb36894d41c">StateGameSFML</a>, <a class="el" href="classStateMenuSFML.html#a0e41e8d5f01fd5c9533464f8a462614f">StateMenuSFML</a>, <a class="el" href="classStateSplashScreenSFML.html#a56a37f2a9f9c9df7c3b5248b327ed192">StateSplashScreenSFML</a>, et <a class="el" href="classStateMenuTxt.html#ad44333e72d51ae0365011a49574160b1">StateMenuTxt</a>.</p>
+<p>Implémenté dans <a class="el" href="classStateGameSFML.html#a23f1e10132bed64d1e6c0bb36894d41c">StateGameSFML</a>, <a class="el" href="classStateGameTxt.html#a3d0676321b499bfb77048f625c08c4fa">StateGameTxt</a>, <a class="el" href="classStateSplashScreenTxt.html#ae2b12acbc64df01ad7f377e9a8920478">StateSplashScreenTxt</a>, <a class="el" href="classStateGameOverSFML.html#a1ef468e6204f01bdea74a243dd6992a0">StateGameOverSFML</a>, <a class="el" href="classStateMenuSFML.html#a0e41e8d5f01fd5c9533464f8a462614f">StateMenuSFML</a>, <a class="el" href="classStateSplashScreenSFML.html#a56a37f2a9f9c9df7c3b5248b327ed192">StateSplashScreenSFML</a>, <a class="el" href="classStateMenuTxt.html#ad44333e72d51ae0365011a49574160b1">StateMenuTxt</a>, et <a class="el" href="classStatePauseSFML.html#a483e249233b78d0718b72af1a23a1a16">StatePauseSFML</a>.</p>
 
 </div>
 </div>
@@ -274,7 +276,7 @@ Fonctions membres publiques</h2></td></tr>
 <p>Fonction de mise en pause du <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>. </p>
 <p>Est appelée lorsque le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> se met en pause Fonction virtuelle pure : doit être implémentée par l'enfant </p>
 
-<p>Implémenté dans <a class="el" href="classStateGameTxt.html#a2e6b31e7b5a7d1861bda28b930376b80">StateGameTxt</a>, <a class="el" href="classStateSplashScreenTxt.html#ac0821bf2278079acb61701fcc1eeec36">StateSplashScreenTxt</a>, <a class="el" href="classStateGameSFML.html#a2fcbe81293cbf704722897e92760ea95">StateGameSFML</a>, <a class="el" href="classStateMenuSFML.html#aaff0bf6c550bc13eea90abb79f51af12">StateMenuSFML</a>, <a class="el" href="classStateSplashScreenSFML.html#a39e039053aa33b65310537099fd3bcc4">StateSplashScreenSFML</a>, et <a class="el" href="classStateMenuTxt.html#a6d8d600306adf976d152f50403d59a83">StateMenuTxt</a>.</p>
+<p>Implémenté dans <a class="el" href="classStateGameSFML.html#a2fcbe81293cbf704722897e92760ea95">StateGameSFML</a>, <a class="el" href="classStateGameOverSFML.html#ab684b64616defc1f15b117f153343b44">StateGameOverSFML</a>, <a class="el" href="classStateGameTxt.html#a2e6b31e7b5a7d1861bda28b930376b80">StateGameTxt</a>, <a class="el" href="classStateSplashScreenTxt.html#ac0821bf2278079acb61701fcc1eeec36">StateSplashScreenTxt</a>, <a class="el" href="classStateMenuSFML.html#aaff0bf6c550bc13eea90abb79f51af12">StateMenuSFML</a>, <a class="el" href="classStateSplashScreenSFML.html#a39e039053aa33b65310537099fd3bcc4">StateSplashScreenSFML</a>, <a class="el" href="classStateMenuTxt.html#a6d8d600306adf976d152f50403d59a83">StateMenuTxt</a>, et <a class="el" href="classStatePauseSFML.html#a8b228e2fc275092c353fe23fd048c10b">StatePauseSFML</a>.</p>
 
 </div>
 </div>
@@ -304,7 +306,7 @@ Fonctions membres publiques</h2></td></tr>
 <p>Fonction de gestion des touches du <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>. </p>
 <p>Une touche peut avoir un comportement différent selon le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> Fonction virtuelle pure : doit être implémentée par l'enfant </p>
 
-<p>Implémenté dans <a class="el" href="classStateGameTxt.html#a07f02b63b0dce18316a5128a7f244aaf">StateGameTxt</a>, <a class="el" href="classStateSplashScreenTxt.html#ace0f9292dccade8e8ea87df351b657c8">StateSplashScreenTxt</a>, <a class="el" href="classStateGameSFML.html#a69502c694d866bce70c460e42f6b2d66">StateGameSFML</a>, <a class="el" href="classStateMenuSFML.html#ae869b58348e95261a94c868fdcbef771">StateMenuSFML</a>, <a class="el" href="classStateSplashScreenSFML.html#aa9251be2ad668df570999dd76261681d">StateSplashScreenSFML</a>, et <a class="el" href="classStateMenuTxt.html#aaf140466c2504ebc5a9eabfa45f893ab">StateMenuTxt</a>.</p>
+<p>Implémenté dans <a class="el" href="classStateGameSFML.html#a69502c694d866bce70c460e42f6b2d66">StateGameSFML</a>, <a class="el" href="classStateGameTxt.html#a07f02b63b0dce18316a5128a7f244aaf">StateGameTxt</a>, <a class="el" href="classStateSplashScreenTxt.html#ace0f9292dccade8e8ea87df351b657c8">StateSplashScreenTxt</a>, <a class="el" href="classStateGameOverSFML.html#a6f4f979548e39a9c8c2c46c61805e387">StateGameOverSFML</a>, <a class="el" href="classStateMenuSFML.html#ae869b58348e95261a94c868fdcbef771">StateMenuSFML</a>, <a class="el" href="classStateSplashScreenSFML.html#aa9251be2ad668df570999dd76261681d">StateSplashScreenSFML</a>, <a class="el" href="classStateMenuTxt.html#aaf140466c2504ebc5a9eabfa45f893ab">StateMenuTxt</a>, et <a class="el" href="classStatePauseSFML.html#a115452e092d07847654ed8253e8fe9b3">StatePauseSFML</a>.</p>
 
 </div>
 </div>
@@ -334,7 +336,7 @@ Fonctions membres publiques</h2></td></tr>
 <p>Fonction de remise en marche du <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>. </p>
 <p>Est appelée lorsque le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> se remet en marche Fonction virtuelle pure : doit être implémentée par l'enfant </p>
 
-<p>Implémenté dans <a class="el" href="classStateGameTxt.html#ae1cd93fd51c80fd069f7b871fcd4e32e">StateGameTxt</a>, <a class="el" href="classStateSplashScreenTxt.html#a47eba0ceca06deabe3bc806b5b83bcb3">StateSplashScreenTxt</a>, <a class="el" href="classStateGameSFML.html#ade470ee70456341d9487d277fa01ca64">StateGameSFML</a>, <a class="el" href="classStateMenuSFML.html#aeea70dec0e51a9f250db8a19a3f345d5">StateMenuSFML</a>, <a class="el" href="classStateSplashScreenSFML.html#a2150708c6e58fd088e3a2463e90a2f30">StateSplashScreenSFML</a>, et <a class="el" href="classStateMenuTxt.html#a688df12370ae3037086c8852a29bc6eb">StateMenuTxt</a>.</p>
+<p>Implémenté dans <a class="el" href="classStateGameSFML.html#ade470ee70456341d9487d277fa01ca64">StateGameSFML</a>, <a class="el" href="classStateGameOverSFML.html#a599e32215fea19848342749954a87179">StateGameOverSFML</a>, <a class="el" href="classStateGameTxt.html#ae1cd93fd51c80fd069f7b871fcd4e32e">StateGameTxt</a>, <a class="el" href="classStateSplashScreenTxt.html#a47eba0ceca06deabe3bc806b5b83bcb3">StateSplashScreenTxt</a>, <a class="el" href="classStateMenuSFML.html#aeea70dec0e51a9f250db8a19a3f345d5">StateMenuSFML</a>, <a class="el" href="classStateSplashScreenSFML.html#a2150708c6e58fd088e3a2463e90a2f30">StateSplashScreenSFML</a>, <a class="el" href="classStateMenuTxt.html#a688df12370ae3037086c8852a29bc6eb">StateMenuTxt</a>, et <a class="el" href="classStatePauseSFML.html#af52e985bcbbb7d2be101f83ff0f14b6b">StatePauseSFML</a>.</p>
 
 </div>
 </div>
@@ -364,7 +366,7 @@ Fonctions membres publiques</h2></td></tr>
 <p>Fonction de mise à jour du <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>. </p>
 <p>Est appelée à chaque mise à jour de l'application Fonction virtuelle pure : doit être implémentée par l'enfant </p>
 
-<p>Implémenté dans <a class="el" href="classStateGameTxt.html#a14e11db9b9ccea3fcc75829656bb18f4">StateGameTxt</a>, <a class="el" href="classStateSplashScreenTxt.html#a04dcbae90515d980fb7c03f561018d33">StateSplashScreenTxt</a>, <a class="el" href="classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2">StateGameSFML</a>, <a class="el" href="classStateMenuSFML.html#a07f52c0a0358da99849f9ea807023d28">StateMenuSFML</a>, <a class="el" href="classStateSplashScreenSFML.html#a1156a8e52fef8c377da416a940e1a51e">StateSplashScreenSFML</a>, et <a class="el" href="classStateMenuTxt.html#a474da30974454d2fbbc0b34714198e57">StateMenuTxt</a>.</p>
+<p>Implémenté dans <a class="el" href="classStateGameOverSFML.html#ae9de1308673333e563430309b542f1dd">StateGameOverSFML</a>, <a class="el" href="classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2">StateGameSFML</a>, <a class="el" href="classStateGameTxt.html#a14e11db9b9ccea3fcc75829656bb18f4">StateGameTxt</a>, <a class="el" href="classStateSplashScreenTxt.html#a04dcbae90515d980fb7c03f561018d33">StateSplashScreenTxt</a>, <a class="el" href="classStateMenuSFML.html#a07f52c0a0358da99849f9ea807023d28">StateMenuSFML</a>, <a class="el" href="classStateSplashScreenSFML.html#a1156a8e52fef8c377da416a940e1a51e">StateSplashScreenSFML</a>, <a class="el" href="classStateMenuTxt.html#a474da30974454d2fbbc0b34714198e57">StateMenuTxt</a>, et <a class="el" href="classStatePauseSFML.html#a066c1c482915dd1dce0208668f31c85a">StatePauseSFML</a>.</p>
 
 </div>
 </div>

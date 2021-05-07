@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['h_543',['h',['../classStateGameSFML.html#a47261667f88159849c3ccb7e36a1ecb6',1,'StateGameSFML']]],
-  ['height_544',['height',['../classBox.html#a6851eb8f64b4cbe58488f7dcfe04bdb8',1,'Box::height()'],['../classMapLayer.html#a269ac7861c78aa6934ac627d29b4277b',1,'MapLayer::height()']]],
-  ['hp_545',['hp',['../classEntityWithHP.html#ab4b01c7ff1afbf673a9a5ee5d68b8579',1,'EntityWithHP']]]
+  ['fps_746',['fps',['../classStateGameSFML.html#ac9d69a9d0f7ed52922150ccb5c32306f',1,'StateGameSFML']]],
+  ['fpsclock_747',['fpsClock',['../classStateGameSFML.html#a54c4df5826fa8e2f78aa9965b41df52b',1,'StateGameSFML']]]
 ];

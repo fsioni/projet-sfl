@@ -6,6 +6,10 @@
 #include "winTxt.h"
 #include <memory>
 
+/*! \class StateGameTxt 
+*   \brief Classe représentant l'état jeu du mode texte
+* 
+*/
 class StateGameTxt : public State
 {
 public:
@@ -25,10 +29,18 @@ public:
 
     void Start();
 
+    /*! \brief Permet le mouvement du joueur à travers le monde
+    *   Prend en compte les collisions
+    *
+    *   \param [in] vx : Nombre de cases dont l'entité doit se déplacer sur l'axe horizontale
+    *   \param [in] vy : Nombre de cases dont l'entité doit se déplacer sur l'axe verticale
+    */
     void MoveWithCollision(float vx, float vy);
 
 private:
+    /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
+    /*! \brief Fenetre de jeu representée par des cases */
     std::unique_ptr<WinTXT> win;
 };
 

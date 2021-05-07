@@ -7,12 +7,9 @@
 /*! \class SpawnPoint 
 *   \brief Classe représentant un point d'apparition dans un monde 2D
 *
-*   Possède des propriété basiques comme la position, dimension, ID. 
-*   Hérité de Box.
-*   Possède un nom. 
+*   Possède une position sur un plan 2D : x et y.
 */
-class SpawnPoint : public Box
-{
+class SpawnPoint{
 public:
     /*// === Fonctions membres publiques === //*/
 
@@ -24,10 +21,10 @@ public:
     SpawnPoint(/* args */);
 
     /*! \brief Constructeur depuis balise d'une map .tmx
-    * \param [in] name : String contenant le nom du SpawnPoint
-    * \param [in] objectTag : balise contenant les informations de la Box dans le .tmx.
+    * 
+    * \param [in] objectTag : balise contenant les informations du spawn dans le .tmx.
     */
-    SpawnPoint(const std::string &_name, const std::string &objectTag);
+    SpawnPoint(const std::string &objectTag);
 
     /*! \brief Destructeur
     *
@@ -35,17 +32,11 @@ public:
     */
     ~SpawnPoint();
 
-    /*! \brief Modifie le du SpawnPoint par celui en paramètre
-    *
-    * \param [in] nName : nouveau nom du SpawnPoint
-    */
-    void SetName(const std::string &nName);
+    /*! \brief Retourne x. */
+    int GetX()const;
 
-    /*! \brief Retourne anme
-    *
-    * \return Le nom du SpawnPoint
-    */
-    std::string GetName() const;
+    /*! \brief Retourne y. */
+    int GetY()const;
 
     /*! \brief Fonction test de la classe Box
     *
@@ -54,10 +45,11 @@ public:
     void Test() const;
 
 private:
-    /*// === Données membres privées === //*/
+    /*! \brief Position sur l'axe X. */
+    int x;
 
-    /*! \brief Nom du SpawnPoint */
-    std::string name;
+    /*! \brief Position sur l'axe X. */
+    int y;
 };
 
 #endif

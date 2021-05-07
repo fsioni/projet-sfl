@@ -22,6 +22,9 @@ public:
     int getDimy() const;
 };
 
+/*! \brief Nettoie le terminal courant.
+*
+*/
 void termClear();
 
 #endif

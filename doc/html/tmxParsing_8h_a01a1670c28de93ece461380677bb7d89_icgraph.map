@@ -1,7 +1,7 @@
 <map id="getInsideTag" name="getInsideTag">
 <area shape="rect" id="node1" title=" " alt="" coords="391,122,495,149"/>
 <area shape="rect" id="node2" href="$classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1" title="Constructeur par balise." alt="" coords="152,5,331,47"/>
-<area shape="rect" id="node3" href="$classSpawnsLayer.html#afb32cd60ca05e87e9b55a503529c484e" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="140,71,343,98"/>
+<area shape="rect" id="node3" href="$classSpawnsLayer.html#a0a9c7b77d0eb67c80e71c06b3cfbda4c" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="140,71,343,98"/>
 <area shape="rect" id="node4" href="$tmxParsing_8h.html#a317f87c9a3888b89d04c33aa204600c2" title=" " alt="" coords="182,122,301,149"/>
 <area shape="rect" id="node5" href="$classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54" title="Constructeur par copie." alt="" coords="182,173,301,199"/>
 <area shape="rect" id="node6" href="$classMap.html#ab57f33273034a118bb9434befbeb4263" title="Charge les données d&#39;un fichier .tmx." alt="" coords="161,223,322,250"/>

@@ -42,16 +42,28 @@ public:
     */
     void PopCurrent();
 
+    /*! \brief Gère les changements de States
+    *
+    */
     void ProcessStateChange();
 
+    /*! \brief Renvoie le State en cours d'execution
+    *
+    * \return Le State actuel
+    */
     std::unique_ptr<State> &GetCurrent();
 
 private:
-    /*// === Données membres privées === //*/
-    std::stack<std::unique_ptr<State>> sStates; //Tas d'états. Le dernier état du tableau est celui qui doit être joué
-    std::unique_ptr<State> sNewState;           //State en attente
+    /*! \brief Tas d'états. Le dernier état du tableau est celui qui doit être joué */
+    std::stack<std::unique_ptr<State>> sStates;
+    /*! \brief State en attente */
+    std::unique_ptr<State> sNewState;
+    
+    /*! \brief Indique si un état a été ajouté */
     bool add;
+    /*! \brief Indique si l'état courant doit être remplacé */
     bool replace;
+    /*! \brief Indique si l'état courant doit être supprimé */
     bool remove;
 };
 

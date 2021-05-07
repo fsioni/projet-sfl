@@ -17,11 +17,15 @@ StatePauseSFML::~StatePauseSFML()
 void StatePauseSFML::Init()
 {
     assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
+    textColor = sf::Color(245, 222, 92);
 
     int winx = context->renderWin->getSize().x;
     int winy = context->renderWin->getSize().y;
 
     pauseText.setFont(textFont);
+    pauseText.setFillColor(textColor);
+    pauseText.setOutlineColor(sf::Color::Black);
+    pauseText.setOutlineThickness(2);
     pauseText.setString("PAUSE");
     pauseText.setCharacterSize(50);
     pauseText.setOrigin(pauseText.getLocalBounds().left + 
@@ -31,6 +35,9 @@ void StatePauseSFML::Init()
     pauseText.setPosition(winx / 2.0f, winy / 2.0f);
 
     resumeText.setFont(textFont);
+    resumeText.setFillColor(textColor);
+    resumeText.setOutlineColor(sf::Color::Black);
+    resumeText.setOutlineThickness(2);
     resumeText.setString("Press Escape to resume");
     resumeText.setCharacterSize(50);
     resumeText.setOrigin(resumeText.getLocalBounds().left +
@@ -49,6 +56,7 @@ void StatePauseSFML::ProcessInput()
         if (event.type == sf::Event::Closed)
         {
             context->renderWin->close();
+            context->quit = true;
         }
         else if (event.type == sf::Event::KeyPressed)
         {
@@ -61,6 +69,10 @@ void StatePauseSFML::ProcessInput()
             case sf::Keyboard::Key::X:
                 context->renderWin->close();
                 context->quit = true;
+                break;
+            
+            case sf::Keyboard::M:
+                context->isMute = !(context->isMute);
                 break;
 
             default:

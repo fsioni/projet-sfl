@@ -2,7 +2,7 @@
 #define NPC_H
 
 #include "EntityWithoutHP.h"
-#include "EntityWithHP.h"
+
 #include "Player.h"
 
 /*! \class NPC
@@ -32,7 +32,7 @@ public:
     *   décalage 7.
     *
     */
-    NPC(float x, float y, std::string name);
+    NPC(float x, float y, std::string dialog_);
 
     /*! \brief Destructeur.
     *
@@ -40,13 +40,6 @@ public:
     *
     */
     ~NPC();
-
-    /*! \brief Affiche sur la console une phrase.
-    *
-    *   Affiche sur la console une phrase tiré aléatoirement parmi celles qui sont stockées dans le tableau DialogTab.
-    *
-    */
-    void ReadRandDialog();
 
     /*! \brief Permet à un NPC de donner des points de vie à un Player.
     *
@@ -58,21 +51,13 @@ public:
     */
     void GiveHP(Player &p, int hpToGive);
 
-    /*! \brief Retourne une phrase prononçable par un NPC.
-    *
-    *   Retourne une phrase prononçable par un NPC tiré aléatoirement parmi celles qui sont stockées dans le tableau DialogTab.
-    *
-    */
-    std::string GetRandDialog();
+    std::string GetDialog() const;
 
-    void TalkToPlayer(Player &p, float minX, float maxX, float minY, 
-                        float maxY);
+private:
+    /*// ==== Données membres privées === //*/
 
-protected:
-    /*// ==== Données membres protégées === //*/
-
-    /*! \brief Tableau de phrases prononçables par un NPC */
-    std::string DialogTab[9];
+    /*! \brief Phrase que peut dire le NPC. */
+    std::string dialog;
 };
 
 #endif

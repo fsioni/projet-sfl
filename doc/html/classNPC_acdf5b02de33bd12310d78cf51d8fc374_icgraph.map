@@ -1,0 +1,4 @@
+<map id="NPC::ReadRandDialog" name="NPC::ReadRandDialog">
+<area shape="rect" id="node1" title="Affiche sur la console une phrase." alt="" coords="192,5,357,32"/>
+<area shape="rect" id="node2" href="$classNPC.html#a3f4bf0a4ed0404d17d548e44746f6229" title=" " alt="" coords="5,5,144,32"/>
+</map>
