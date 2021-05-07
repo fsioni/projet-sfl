@@ -27,6 +27,7 @@ public:
     void SetShadowTexture(std::string fileTexture);
     void SetBackgroundTexture(std::string fileTexture);
     void SetHeartTexture(std::string fileTexture);
+    void SetLogoTexture(std::string fileTexture);
 
     void SetMainFont(std::string fileFont);
     void setMainTextColor(sf::Color color);
@@ -41,6 +42,7 @@ public:
     const sf::Texture &GetShadowTexture() const;
     const sf::Texture &GetTextureBackground() const;
     const sf::Texture &GetTextureHeart() const;
+    const sf::Texture &GetTextureLogo() const;
 
     const sf::Font &GetMainFont() const;
     const sf::Color &GetMainTextColor() const;
@@ -63,6 +65,8 @@ private:
     sf::Texture textureBackground;
     /*! \brief Texture du coeur */
     sf::Texture textureHeart;
+    /*! \brief Texture du logo du jeu */
+    sf::Texture textureLogo;
 
     /*! \brief Police d'écriture principale */
     sf::Font mainFont;

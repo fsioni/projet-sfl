@@ -9,7 +9,8 @@ AssetManager::AssetManager()
     AddTextureEnemy("data/textures/characters/Soldier/Soldier 01-1.png");
     AddTextureNPC("data/textures/characters/Female/Female 01-1.png");
     SetBackgroundTexture("data/textures/UI/menuBackground.png");
-    SetHeartTexture("./data/textures/UI/heart.png");
+    SetHeartTexture("data/textures/UI/heart.png");
+    SetLogoTexture("data/textures/logo.png");
     SetMainFont("data/fonts/BebasNeue-Regular.ttf");
     setMainTextColor(sf::Color(245, 222, 92));
 }
@@ -130,6 +131,20 @@ void AssetManager::SetHeartTexture(std::string fileTexture)
                   << std::endl;
 }
 
+void AssetManager::SetLogoTexture(std::string fileTexture) 
+{
+    std::fstream file;
+    file.open(fileTexture.c_str(), std::fstream::in);
+    if (file)
+    {
+        textureLogo.loadFromFile(fileTexture);
+    }
+    else
+        std::cout << "Echec SetLogoTexture( "
+                  << fileTexture << " ) : fichier inexistant"
+                  << std::endl;
+}
+
 void AssetManager::SetMainFont(std::string fileFont) 
 {
     std::fstream file;
@@ -216,6 +231,11 @@ const sf::Texture& AssetManager::GetTextureBackground() const
 const sf::Texture& AssetManager::GetTextureHeart() const
 {
     return textureHeart;
+}
+
+const sf::Texture& AssetManager::GetTextureLogo() const
+{
+    return textureLogo;
 }
 
 const sf::Font& AssetManager::GetMainFont() const
