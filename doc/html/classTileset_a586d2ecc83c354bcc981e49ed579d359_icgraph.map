@@ -1,6 +1,8 @@
 <map id="Tileset::GetTileHeight" name="Tileset::GetTileHeight">
-<area shape="rect" id="node1" title="Retourne tileHeight." alt="" coords="256,31,420,57"/>
-<area shape="rect" id="node2" href="$classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="115,5,201,32"/>
-<area shape="rect" id="node3" href="$classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9" title="Fonction de test de la classe Tileset." alt="" coords="108,56,208,83"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node1" title="Retourne tileHeight." alt="" coords="399,56,563,83"/>
+<area shape="rect" id="node2" href="$classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="257,5,344,32"/>
+<area shape="rect" id="node3" href="$classMap.html#a5a8b1d219211664f0df882e35104d035" title="Fonction de test de la classe Map." alt="" coords="259,56,343,83"/>
+<area shape="rect" id="node6" href="$classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9" title="Fonction de test de la classe Tileset." alt="" coords="251,107,351,133"/>
+<area shape="rect" id="node4" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,81,203,108"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,81,60,108"/>
 </map>

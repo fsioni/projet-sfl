@@ -1,0 +1,5 @@
+<map id="SpawnPoint::Test" name="SpawnPoint::Test">
+<area shape="rect" id="node1" title="Fonction test de la classe Box." alt="" coords="5,31,137,57"/>
+<area shape="rect" id="node2" href="$classSpawnPoint.html#a5c964c2c4a6f04d8a0203b3e347b3fd4" title="Retourne anme." alt="" coords="185,5,353,32"/>
+<area shape="rect" id="node3" href="$classSpawnPoint.html#af18d38897bcee75e0ef78c19c302da02" title="Modifie le du SpawnPoint par celui en paramètre." alt="" coords="186,56,353,83"/>
+</map>

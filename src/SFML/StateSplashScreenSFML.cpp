@@ -19,26 +19,33 @@ void StateSplashScreenSFML::Init()
 {
     assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
     assert(music.openFromFile("data/sounds/music/14entranceNL.wav"));
+    assert(bgTex.loadFromFile("data/textures/UI/menuBackground.png"));
+    textColor = sf::Color(245, 222, 92);
 
     music.play();
+
+    bgSprite.setTexture(bgTex);
+    bgSprite.setScale(0.5f, 0.5f);
 
     gameText.setFont(textFont);
     madeByText.setFont(textFont);
 
+    gameText.setFillColor(textColor);
+    gameText.setOutlineColor(sf::Color::Black);
+    gameText.setOutlineThickness(3);
+
+    madeByText.setFillColor(textColor);
+    madeByText.setOutlineColor(sf::Color::Black);
+    madeByText.setOutlineThickness(2);
+
     gameText.setString("Legend Of Nautibus");
     madeByText.setString("Made by :\nSIONI Fares\nBAGNOl Stanislas\nCHOUGAR Lyes");
 
-    gameText.setCharacterSize(90);
+    gameText.setCharacterSize(100);
     madeByText.setCharacterSize(36);
-
-    gameText.setFillColor(sf::Color::White);
-    madeByText.setFillColor(sf::Color::White);
 
     int winx = context->renderWin->getSize().x;
     int winy = context->renderWin->getSize().y;
-
-    gameText.setPosition(winx / 2.0f, winy / 2.0f);
-    madeByText.setPosition(winx / 2.0f, winy / 2.0f + 200.0f);
 
     gameText.setOrigin(gameText.getLocalBounds().left + 
                         gameText.getLocalBounds().width / 2.0f,
@@ -50,7 +57,8 @@ void StateSplashScreenSFML::Init()
                             madeByText.getLocalBounds().top +
                             madeByText.getLocalBounds().height / 2.0f);
 
-    gameText.setStyle(sf::Text::Bold);
+    gameText.setPosition(winx / 2.0f, 235);
+    madeByText.setPosition(150, winy / 2.0f + 200.0f);
 
     start = std::clock();
 }
@@ -86,6 +94,10 @@ void StateSplashScreenSFML::ProcessInput()
                 context->quit = true;
                 break;
 
+            case sf::Keyboard::M:
+                context->isMute = !(context->isMute);
+                break;
+
             case sf::Keyboard::Escape:
                 context->renderWin->close();
                 context->quit = true;
@@ -109,11 +121,22 @@ void StateSplashScreenSFML::Update()
     {
         context->stateMan->Add(std::make_unique<StateMenuSFML>(context), true);
     }
+
+    if (context->isMute && music.getVolume() != 0)
+    {
+        music.setVolume(0);
+    }
+    
+    if (!context->isMute && music.getVolume() == 0)
+    {
+        music.setVolume(70);
+    }
 }
 
 void StateSplashScreenSFML::Display()
 {
-    context->renderWin->clear();
+    context->renderWin->clear(sf::Color(1, 31, 75));
+    context->renderWin->draw(bgSprite);
     context->renderWin->draw(gameText);
     context->renderWin->draw(madeByText);
 

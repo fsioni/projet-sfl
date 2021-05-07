@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quit_570',['quit',['../structContext.html#a18396436d360bb916d9ff6f9affa09fd',1,'Context']]]
+  ['offset_795',['offset',['../classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac',1,'EntityWithoutHP']]],
+  ['owner_796',['owner',['../classStateMachine.html#ae08606a7f6b82d23fcefef26a7d8a74f',1,'StateMachine']]]
 ];

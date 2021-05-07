@@ -6,6 +6,7 @@ var classLayer =
     [ "GetName", "classLayer.html#abdce2567af5aed3065143dd622a3f4c4", null ],
     [ "SetId", "classLayer.html#a3cb596a4a47a48abb1f6e5b29ccacc88", null ],
     [ "SetName", "classLayer.html#a7cba120f9a527e80bf9f28dc8fd16dda", null ],
+    [ "Test", "classLayer.html#a3a0eb5638a197a61e529965a2755af72", null ],
     [ "id", "classLayer.html#ad8c4d484a5efce0cbbd0cf81b3958d17", null ],
     [ "name", "classLayer.html#a2071349b5667273725ae7f05a42db7a6", null ]
 ];

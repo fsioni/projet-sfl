@@ -76,16 +76,15 @@ void EntityWithHP::SetDamage(int newDmg)
 
 void EntityWithHP::TakeDamage(int damage)
 {
-    assert(damage >= 0);
-
-    if (hp <= 0)
-    {
-
-        livingStatus = false;
-        hp = 0;
+    if(damage>0){
+        hp-=damage;
+        
+        if (hp <= 0)
+        {
+            livingStatus = false;
+            hp = 0;
+        }
     }
-    else
-        hp -= damage;
 }
 
 void EntityWithHP::Attack(EntityWithHP &target) const

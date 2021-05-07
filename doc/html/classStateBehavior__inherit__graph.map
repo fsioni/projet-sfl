@@ -1,0 +1,7 @@
+<map id="StateBehavior&lt; entity_type &gt;" name="StateBehavior&lt; entity_type &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="145,5,312,141"/>
+<area shape="rect" id="node2" href="$classStateBehavior.html" title=" " alt="" coords="134,204,323,325"/>
+<area shape="rect" id="node3" href="$classEnemyAttack.html" title=" " alt="" coords="5,375,140,540"/>
+<area shape="rect" id="node4" href="$classEnemyPatrol.html" title=" " alt="" coords="164,375,293,540"/>
+<area shape="rect" id="node5" href="$classEnemyRunAway.html" title=" " alt="" coords="317,375,471,540"/>
+</map>

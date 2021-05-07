@@ -1,9 +1,10 @@
 <map id="src/Core/Map/Layers/MapLayer.cpp" name="src/Core/Map/Layers/MapLayer.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="92,5,247,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="129,5,284,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,85,121"/>
-<area shape="rect" id="node3" href="$tmxParsing_8h.html" title=" " alt="" coords="110,95,229,121"/>
-<area shape="rect" id="node6" href="$MapLayer_8h.html" title=" " alt="" coords="253,95,350,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="272,244,331,271"/>
-<area shape="rect" id="node5" title=" " alt="" coords="201,169,263,196"/>
-<area shape="rect" id="node7" href="$Layer_8h.html" title=" " alt="" coords="339,169,408,196"/>
+<area shape="rect" id="node3" title=" " alt="" coords="109,95,184,121"/>
+<area shape="rect" id="node4" href="$tmxParsing_8h.html" title=" " alt="" coords="209,95,327,121"/>
+<area shape="rect" id="node7" href="$MapLayer_8h.html" title=" " alt="" coords="351,95,449,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="371,244,429,271"/>
+<area shape="rect" id="node6" title=" " alt="" coords="299,169,362,196"/>
+<area shape="rect" id="node8" href="$Layer_8h.html" title=" " alt="" coords="437,169,507,196"/>
 </map>

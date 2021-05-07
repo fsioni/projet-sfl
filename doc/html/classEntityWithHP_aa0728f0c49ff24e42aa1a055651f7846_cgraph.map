@@ -1,0 +1,12 @@
+<map id="EntityWithHP::Test" name="EntityWithHP::Test">
+<area shape="rect" id="node1" title="Fonction de test de regression." alt="" coords="5,208,148,235"/>
+<area shape="rect" id="node2" href="$classEntityWithHP.html#aac09e4aa3eda7d8c49719dc457545acf" title="Permet d&#39;infliger damage dégats à l&#39;entité target." alt="" coords="226,5,385,32"/>
+<area shape="rect" id="node3" href="$classEntityWithHP.html#a8f6ed941c723036a8c208b39fd8cd7ee" title="Permet de faire en sorte qu&#39;une entité subisse le nombre &quot;damage&quot; dégats." alt="" coords="463,31,663,57"/>
+<area shape="rect" id="node4" href="$classEntityWithHP.html#a2141d7cca91bd206e229efcc1c02d4d0" title="Permet de retourner le nombre de dégats q&#39;inflige l&#39;entité EntityWithHP." alt="" coords="208,107,403,133"/>
+<area shape="rect" id="node5" href="$classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa" title="Retourne le nombre de points de vie de l&#39;entité." alt="" coords="227,157,384,184"/>
+<area shape="rect" id="node6" href="$classEntityWithHP.html#a500d3f8c3a23e1a2cf43abb28bf3a3fe" title="Retourne l&#39;état de vie/mort de l&#39;entité." alt="" coords="196,208,415,235"/>
+<area shape="rect" id="node7" href="$classEntityWithHP.html#a489e4fe33d4541ff1fab8fddfaeadb93" title="Retourne le cap maximum de points de vie de l&#39;entité." alt="" coords="213,259,398,285"/>
+<area shape="rect" id="node8" href="$classEntityWithHP.html#a289cf70a442545d73777548149028569" title="Permet de modofier les dégats infligés par l&#39;entité EntityWithHP." alt="" coords="209,309,401,336"/>
+<area shape="rect" id="node9" href="$classEntityWithHP.html#a27e4773b47d1ba1f8eba71e9a8fd69c5" title="Permets de modifier le nombre de points de vie d&#39;une entité EntityWithHP." alt="" coords="228,360,383,387"/>
+<area shape="rect" id="node10" href="$classEntityWithHP.html#abe560d6a4c2c7cc80d228857a7a34785" title="Modifie l&#39;état de vie/mort de l&#39;entité." alt="" coords="197,411,414,437"/>
+</map>

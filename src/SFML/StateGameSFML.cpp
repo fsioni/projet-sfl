@@ -9,7 +9,10 @@ StateGameSFML::StateGameSFML(/* args */)
 }
 
 StateGameSFML::StateGameSFML(std::shared_ptr<Context> &cContext)
-    : context(cContext), isPaused(false)
+    : context(cContext), isPaused(false),
+    enemiesHitClocks(context->enemies.size()),
+    enemiesLastHP(context->enemies.size(), context->enemies[0]->GetHP()),
+    enemiesGotHitted(context->enemies.size(), false)
 {
 }
 
@@ -21,8 +24,15 @@ void StateGameSFML::Init()
 {
     // Chargement et lecture de la musique
     assert(music.openFromFile("data/sounds/music/01town2.wav"));
+    assert(runningBuffer.loadFromFile("data/sounds/sfx/walking.wav"));
     assert(hitBuffer.loadFromFile("data/sounds/sfx/Slash_1.wav"));
+
+    music.setVolume(70);
+    music.setLoop(true);
     music.play();
+    runningSound.setBuffer(runningBuffer);
+    runningSound.setLoop(true);
+    runningSound.stop();
 
     hitSound.setBuffer(hitBuffer);
 
@@ -41,28 +51,40 @@ void StateGameSFML::Init()
 
     // Initialisation UI
     assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
+    textColor = sf::Color(245, 222, 92);
 
-    //int winx = context->renderWin->getSize().x;
-    //int winy = context->renderWin->getSize().y;
-
-    heartText.loadFromFile("./data/textures/UI/heart.png");
-    heartSprite.setTexture(heartText);
+    // Initialisation coeur et vie pour l'UI
+    heartTex.loadFromFile("./data/textures/UI/heart.png");
+    heartSprite.setTexture(heartTex);
     heartSprite.setScale(0.1f, 0.1f);
     heartSprite.setOrigin(heartSprite.getLocalBounds().left +
-                            heartSprite.getLocalBounds().width / 2.0f,
-                            heartSprite.getLocalBounds().top +
-                            heartSprite.getLocalBounds().height / 2.0f);
-
+                              heartSprite.getLocalBounds().width / 2.0f,
+                          heartSprite.getLocalBounds().top +
+                              heartSprite.getLocalBounds().height / 2.0f);
     heartSprite.setPosition(20, 30);
 
     hpText.setFont(textFont);
+    hpText.setFillColor(textColor);
+    hpText.setOutlineColor(sf::Color::Black);
+    hpText.setOutlineThickness(2);
     hpText.setString("0/0");
     hpText.setCharacterSize(30);
-
     hpText.setOrigin(hpText.getLocalBounds().left + hpText.getLocalBounds().width / 2.0f, hpText.getLocalBounds().top +
-                        hpText.getLocalBounds().height / 2.0f);
-
+                                                                                              hpText.getLocalBounds().height / 2.0f);
     hpText.setPosition(60, 30);
+
+    // Initialisation du texte des PNJ
+    npcText.setFont(textFont);
+    npcText.setFillColor(textColor);
+    npcText.setOutlineColor(sf::Color::Black);
+    npcText.setOutlineThickness(2);
+    npcText.setString("");
+    npcText.setCharacterSize(45);
+    npcText.setOrigin(npcText.getLocalBounds().left + npcText.getLocalBounds().width / 2.0f, npcText.getLocalBounds().top +
+                                                                                              npcText.getLocalBounds().height / 2.0f);
+    npcText.setPosition(context->renderWin->getSize().x/2,
+                    context->renderWin->getSize().y - 100);
+    
 
     // Info sur la tilemap
     w = context->map->GetTileset()->GetTileWidth();
@@ -75,7 +97,8 @@ void StateGameSFML::Init()
 
     fps = 0;
 
-    lastHP = context->player->GetHP();
+    playerLastHP = context->player->GetHP();
+
 
     // Init direction
     isGoingUp=false;
@@ -84,7 +107,8 @@ void StateGameSFML::Init()
     isGoingRight=false;
     // Init Attack
     isAttacking=false;
-
+    
+    hasInteracted=false;
 }
 
 void StateGameSFML::ProcessInput()
@@ -94,21 +118,25 @@ void StateGameSFML::ProcessInput()
     {
 
         //Si la touche Z et S sont enfoncées
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z) &&
-            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+        if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z) ||
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up)) &&
+            (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S) ||
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down)))
         {
             isGoingUp = false;
             isGoingDown = false;
         }
         //Si la touche Z est enfoncée
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z))
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z) ||
+                sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up))
         {
             isGoingUp = true;
             isGoingDown = false;
             context->player->SetDirection(Up);
         }
         //Si la touche S est enfoncée
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S) ||
+                sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down))
         {
             isGoingUp = false;
             isGoingDown = true;
@@ -122,21 +150,25 @@ void StateGameSFML::ProcessInput()
         }
 
         //Si la touche Q et D sont enfoncées
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q) &&
-            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
+        if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q) ||
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left)) && 
+            (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D) ||
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right)))
         {
             isGoingRight = false;
             isGoingLeft = false;
         }
         //Si la touche Q est enfoncée
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q))
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q) ||
+                sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
         {
             isGoingRight = true;
             isGoingLeft = false;
             context->player->SetDirection(Left);
         }
         //Si la touche D est enfoncée
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
+        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D) ||
+                sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
         {
             isGoingLeft = true;
             isGoingRight = false;
@@ -163,6 +195,10 @@ void StateGameSFML::ProcessInput()
 
         case sf::Event::KeyPressed:
 
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::E))
+            {
+                hasInteracted = !hasInteracted;
+            }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::P))
             {
                 context->isDebug = (!context->isDebug);
@@ -172,6 +208,11 @@ void StateGameSFML::ProcessInput()
                 context->renderWin->close();
                 context->quit = true;
             }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::M))
+            {
+                context->isMute = (!context->isMute);
+            }
+            
 
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape))
             {
@@ -235,18 +276,48 @@ void StateGameSFML::Update()
        
         UpdatePlayer();
         UpdateEnemies();
+        UpdateNPCs();
         
     
         // Mise à jour texte UI
         std::string hp = std::to_string(context->player->GetHP());
         std::string maxHp = std::to_string(context->player->GetMaxHP());
         hpText.setString("HP : " + hp + "/" + maxHp);
+        npcText.setOrigin(npcText.getLocalBounds().left + npcText.getLocalBounds().width / 2.0f, npcText.getLocalBounds().top +
+                                                                                              npcText.getLocalBounds().height / 2.0f);
+        npcText.setPosition(context->renderWin->getSize().x/2,
+                    context->renderWin->getSize().y - 100);
     }
     else
     {
         deltaTime = 0;
         deltaClock.restart();
         fpsClock.restart();
+    }
+
+    //  Mise à jour du son
+        if (!isWalking && 
+        runningSound.getStatus() == sf::SoundSource::Status::Playing)
+    {
+        runningSound.stop();
+    }
+    
+        if (isWalking && 
+        runningSound.getStatus() == sf::SoundSource::Status::Stopped)
+    {
+        runningSound.play();
+    }
+
+    if (context->isMute && (runningSound.getVolume() != 0 || music.getVolume() != 0))
+    {
+        runningSound.setVolume(0);
+        music.setVolume(0);
+    }
+    
+    if (!context->isMute && (runningSound.getVolume() == 0 || music.getVolume() == 0))
+    {
+        runningSound.setVolume(100);
+        music.setVolume(70);
     }
 }
 
@@ -298,12 +369,20 @@ void StateGameSFML::UpdatePlayer()
         isAttacking = false;
     }
 
+    if (!isGoingLeft && !isGoingRight && !isGoingUp && !isGoingDown)
+    {
+        isWalking = false;
+    }else
+    {
+        isWalking = true;
+    }
+
     int playerID= context->player->GetID();
     int playerX = context->player->GetPos_x();
     int playerY = context->player->GetPos_y();
     
 
-    CollisionBox * cbPlayer = 
+    Box * cbPlayer = 
         context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
     
 
@@ -321,24 +400,26 @@ void StateGameSFML::UpdatePlayer()
         spriteClock.restart();
     }
 
-    if (lastHP != context->player->GetHP())
+    // Gestion scintillement rouge joueur
+    if (playerLastHP != context->player->GetHP())
     {
         playerSprite.setColor(sf::Color::Red);
         hitSound.play();
-        hitClock.restart();
+        playerHitClock.restart();
     }
 
-    if (hitClock.getElapsedTime().asSeconds() > 0.2)
+    if (playerHitClock.getElapsedTime().asSeconds() > 0.2)
     {
         playerSprite.setColor(sf::Color::White);
     }
 
-    lastHP = context->player->GetHP();
+    playerLastHP = context->player->GetHP();
 }
 
 void StateGameSFML::UpdateEnemies()
 {
     int count = context->enemies.size();
+    CollisionLayer * colLayer = context->map->GetCollisionLayer();
 
     for (int i = 0; i < count; i++)
     {
@@ -354,10 +435,10 @@ void StateGameSFML::UpdateEnemies()
             float posY = context->enemies[i]->GetPos_y();
             int enemyID = context->enemies[i]->GetID();
 
-            CollisionBox * cbEnemy = 
-                context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[enemyID];
-
-            cbEnemy->SetPosition(posX, posY);
+            if(colLayer->CollisionBoxEntityExist(enemyID)){
+                Box * cbEnemy = colLayer->GetCollisionBoxesEntity()[enemyID];
+                cbEnemy->SetPosition(posX, posY);
+            }
         } 
         else{
             int enemyID = context->enemies[i]->GetID();
@@ -365,12 +446,54 @@ void StateGameSFML::UpdateEnemies()
             context->enemies.erase(context->enemies.begin()+i);
             count--;
         }
+
+        // Gestion scintillement rouge ennemis
+        if (enemiesLastHP[i] != context->enemies[i]->GetHP())
+        {
+            enemiesGotHitted[i] = true;
+            hitSound.play();
+            enemiesHitClocks[i].restart();
+        }
+
+        if (enemiesHitClocks[i].getElapsedTime().asSeconds() > 0.2)
+        {
+            enemiesGotHitted[i] = false;
+        }
+
+        enemiesLastHP[i] = context->enemies[i]->GetHP();
     }
 
     // Mise à jour texte UI
     std::string hp = std::to_string(context->player->GetHP());
     std::string maxHp = std::to_string(context->player->GetMaxHP());
     hpText.setString("HP :" + hp + "/" + maxHp);
+}
+
+void StateGameSFML::UpdateNPCs(){
+    int count = context->npc.size();
+    bool isInRange = false;
+    int npcInRange = -1;
+    for(int i = 0; i<count; i++){
+        float dx = playerX - context->npc[i]->GetPos_x();
+        float dy = playerY - context->npc[i]->GetPos_y();
+        float dist = sqrt(dy*dy + dx*dx);
+        if(dist < 4*32) 
+        {
+            isInRange = true;
+            npcInRange = i;
+        }
+    }
+
+    if (isInRange && !hasInteracted) npcText.setString("Press E to interact");
+    else if (!isInRange)
+    {
+        npcText.setString("");
+        hasInteracted = false;
+    }
+    else if (isInRange && hasInteracted)
+    {
+        npcText.setString(context->npc[npcInRange]->GetDialog());
+    }
 }
 
 void StateGameSFML::Display()
@@ -380,6 +503,7 @@ void StateGameSFML::Display()
     DisplayMap();
     DisplayPlayer();
     DisplayEnemies();
+    DisplayNPC();
 
     if (context->isDebug) //Affichage DEBUG
     {
@@ -389,6 +513,7 @@ void StateGameSFML::Display()
     ///////////// UI ///////////////
     context->renderWin->draw(hpText);
     context->renderWin->draw(heartSprite);
+    context->renderWin->draw(npcText);
 
     context->renderWin->display();
 }
@@ -463,26 +588,55 @@ void StateGameSFML::DisplayEnemies()
             // Affichage de l'ombre
             shadowSprite.setPosition(enX, enY);
             shadowSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32,
-                                                                         32));
+                                                    32));
             context->renderWin->draw(shadowSprite);
 
             // Affichage des ennemies
             enemySprite.setPosition(enX, enY);
             if (context->enemies[i]->GetIsMoving())
                 enemySprite.setTextureRect(sf::IntRect(posX, direction * 32,
-                                                                    32, 32));
+                                                       32, 32));
             else
                 enemySprite.setTextureRect(sf::IntRect(0, direction * 32, 32,
                                                                         32));
            
-            
+            if(enemiesGotHitted[i] == true)
+            {
+                enemySprite.setColor(sf::Color::Red);
+            }else 
+            {
+                enemySprite.setColor(sf::Color::White);
+            }
 
             context->renderWin->draw(enemySprite);
         }
     }
 }
 
-void StateGameSFML::DisplayCollisionBox(CollisionBox * cb, const sf::Color & color, int id){
+void StateGameSFML::DisplayNPC(){
+    for (int i = 0; i < (int)context->npc.size(); i++)
+    {
+        int direction = context->npc[i]->GetDirection();
+        int npcX = context->npc[i]->GetPos_x() - substX - w / 2;
+        int npcY = context->npc[i]->GetPos_y() - substY - h / 2;
+
+        // Affichage de l'ombre
+        shadowSprite.setPosition(npcX, npcY);
+        shadowSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32, 32));
+        context->renderWin->draw(shadowSprite);
+
+        // Affichage des NPC
+        playerSprite.setPosition(npcX, npcY);
+        
+        playerSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
+    
+        context->renderWin->draw(playerSprite);
+    }    
+}
+
+void StateGameSFML::DisplayCollisionBox(
+            Box * cb, const sf::Color & color, int id)
+{
     sf::RectangleShape rectColBox(
         sf::Vector2f(cb->GetWidth(), cb->GetHeight())
     );
@@ -516,11 +670,11 @@ void StateGameSFML::DisplayCollisionBox(CollisionBox * cb, const sf::Color & col
 }
 
 void StateGameSFML::DisplayDebug(){
-    //Affichage du debug du joueur
+    CollisionLayer * colLayer = context->map->GetCollisionLayer();
 
+    //Affichage du debug du joueur
     int playerID = context->player->GetID();
-    CollisionBox * cbPlayer = 
-        context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
+    Box * cbPlayer = colLayer->GetCollisionBoxesEntity()[playerID];
 
     //Affichage de la collision box player
     DisplayCollisionBox(cbPlayer, sf::Color(170, 30, 155, 200), playerID);
@@ -529,23 +683,34 @@ void StateGameSFML::DisplayDebug(){
     for (long unsigned int i=0; i < context->enemies.size(); i++)
     {
         int enemyID = context->enemies[i]->GetID();
+        if(colLayer->CollisionBoxEntityExist(enemyID)){
+            Box * enemyBoxe = 
+                colLayer->GetCollisionBoxesEntity()[enemyID]; 
+            DisplayCollisionBox(enemyBoxe, sf::Color(170, 30, 155, 200), enemyID);
+        }
+    } 
 
-        CollisionBox * enemyBoxe = 
-            context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[enemyID]; 
-        DisplayCollisionBox(enemyBoxe, sf::Color(170, 30, 155, 200), enemyID);
-    }    
+    // CollisionBoxes NPC
+    for (long unsigned int i=0; i < context->npc.size(); i++)
+    {
+        int npcID = context->npc[i]->GetID();
+        if(colLayer->CollisionBoxEntityExist(npcID)){
+            Box * npcBoxe = 
+                colLayer->GetCollisionBoxesEntity()[ npcID]; 
+            DisplayCollisionBox(npcBoxe, sf::Color(170, 30, 155, 200),  npcID);
+        }
+    }     
 
 
     // Affichage des collision boxes de la map
-    std::vector<CollisionBox> collisionBoxes =
-        context->map->GetCollisionLayer()->GetCollisionBoxes();
+    std::vector<Box> collisionBoxes = colLayer->GetCollisionBoxes();
 
     for (long unsigned int i=0; i < collisionBoxes.size(); i++)
     {
         sf::RectangleShape cb(sf::Vector2f(collisionBoxes[i].GetWidth(),
-                                collisionBoxes[i].GetHeight()));
-        cb.setPosition(collisionBoxes[i].GetX() - substX, 
-                        collisionBoxes[i].GetY() - substY);
+                                           collisionBoxes[i].GetHeight()));
+        cb.setPosition(collisionBoxes[i].GetX() - substX,
+                       collisionBoxes[i].GetY() - substY);
         cb.setFillColor(sf::Color(0, 190, 255, 215));
         context->renderWin->draw(cb);
     }
@@ -564,6 +729,7 @@ void StateGameSFML::DisplayDebug(){
 void StateGameSFML::Pause()
 {
     isPaused = true;
+    runningSound.stop();
 }
 
 void StateGameSFML::Start()
@@ -573,4 +739,3 @@ void StateGameSFML::Start()
     deltaClock.restart();
     fpsClock.restart();
 }
-

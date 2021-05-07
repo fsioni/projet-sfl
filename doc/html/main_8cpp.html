@@ -91,37 +91,48 @@ $(document).ready(function(){initNavTree('main_8cpp.html',''); initResizable(); 
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="Game_8h_source.html">Core/Game.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="StateMachine_8h_source.html">Core/Entity/FiniteStateMachine/StateMachine.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="EnemyStates_8h_source.html">Core/Entity/FiniteStateMachine/EnemyStates.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#src_2main_8cpp" alt=""/></div>
 <map name="src_2main_8cpp" id="src_2main_8cpp">
-<area shape="rect" title=" " alt="" coords="1123,5,1229,32"/>
-<area shape="rect" title=" " alt="" coords="19,453,99,480"/>
-<area shape="rect" title=" " alt="" coords="709,453,768,480"/>
-<area shape="rect" href="Game_8h.html" title=" " alt="" coords="1123,80,1229,107"/>
-<area shape="rect" href="StateManager_8h.html" title=" " alt="" coords="1593,155,1812,181"/>
-<area shape="rect" href="Map_8h.html" title=" " alt="" coords="854,155,949,181"/>
-<area shape="rect" title=" " alt="" coords="971,304,1034,331"/>
-<area shape="rect" href="Player_8h.html" title=" " alt="" coords="122,229,238,256"/>
-<area shape="rect" href="Enemy_8h.html" title=" " alt="" coords="262,229,381,256"/>
-<area shape="rect" href="AssetManager_8h.html" title=" " alt="" coords="1087,155,1265,181"/>
-<area shape="rect" title=" " alt="" coords="1365,229,1512,256"/>
-<area shape="rect" href="winTxt_8h.html" title=" " alt="" coords="1340,155,1452,181"/>
-<area shape="rect" href="State_8h.html" title=" " alt="" coords="1587,229,1655,256"/>
-<area shape="rect" title=" " alt="" coords="1679,229,1737,256"/>
-<area shape="rect" title=" " alt="" coords="1761,229,1839,256"/>
-<area shape="rect" href="Tileset_8h.html" title=" " alt="" coords="1003,379,1082,405"/>
-<area shape="rect" href="CollisionLayer_8h.html" title=" " alt="" coords="595,229,767,256"/>
-<area shape="rect" href="MapLayer_8h.html" title=" " alt="" coords="792,229,936,256"/>
-<area shape="rect" href="SpawnsLayer_8h.html" title=" " alt="" coords="405,229,571,256"/>
-<area shape="rect" href="Layer_8h.html" title=" " alt="" coords="827,304,896,331"/>
-<area shape="rect" href="CollisionBox_8h.html" title=" " alt="" coords="574,304,701,331"/>
-<area shape="rect" href="Box_8h.html" title=" " alt="" coords="592,379,651,405"/>
-<area shape="rect" href="SpawnPoint_8h.html" title=" " alt="" coords="427,304,549,331"/>
-<area shape="rect" href="EntityWithHP_8h.html" title=" " alt="" coords="233,304,351,331"/>
-<area shape="rect" href="EntityWithoutHP_8h.html" title=" " alt="" coords="43,379,181,405"/>
-<area shape="rect" title=" " alt="" coords="1214,229,1341,256"/>
+<area shape="rect" title=" " alt="" coords="115,5,221,32"/>
+<area shape="rect" title=" " alt="" coords="93,617,173,644"/>
+<area shape="rect" title=" " alt="" coords="1004,841,1063,868"/>
+<area shape="rect" href="Game_8h.html" title=" " alt="" coords="933,80,1040,107"/>
+<area shape="rect" href="StateMachine_8h.html" title=" " alt="" coords="307,229,453,271"/>
+<area shape="rect" href="EnemyStates_8h.html" title=" " alt="" coords="477,229,624,271"/>
+<area shape="rect" href="StateManager_8h.html" title=" " alt="" coords="1168,155,1387,181"/>
+<area shape="rect" href="Map_8h.html" title=" " alt="" coords="1367,543,1462,569"/>
+<area shape="rect" title=" " alt="" coords="1323,692,1386,719"/>
+<area shape="rect" href="Player_8h.html" title=" " alt="" coords="522,393,638,420"/>
+<area shape="rect" href="Enemy_8h.html" title=" " alt="" coords="339,155,458,181"/>
+<area shape="rect" href="NPC_8h.html" title=" " alt="" coords="182,319,285,345"/>
+<area shape="rect" href="AssetManager_8h.html" title=" " alt="" coords="729,155,906,181"/>
+<area shape="rect" title=" " alt="" coords="952,237,1099,263"/>
+<area shape="rect" href="winTxt_8h.html" title=" " alt="" coords="931,155,1043,181"/>
+<area shape="rect" href="State_8h.html" title=" " alt="" coords="1233,237,1301,263"/>
+<area shape="rect" title=" " alt="" coords="1325,237,1382,263"/>
+<area shape="rect" title=" " alt="" coords="699,692,776,719"/>
+<area shape="rect" href="Tileset_8h.html" title=" " alt="" coords="1609,767,1687,793"/>
+<area shape="rect" href="CollisionLayer_8h.html" title=" " alt="" coords="902,617,1074,644"/>
+<area shape="rect" href="MapLayer_8h.html" title=" " alt="" coords="1173,617,1317,644"/>
+<area shape="rect" href="SpawnsLayer_8h.html" title=" " alt="" coords="1443,617,1610,644"/>
+<area shape="rect" title=" " alt="" coords="901,692,952,719"/>
+<area shape="rect" href="Layer_8h.html" title=" " alt="" coords="1229,692,1299,719"/>
+<area shape="rect" href="CollisionBox_8h.html" title=" " alt="" coords="977,692,1103,719"/>
+<area shape="rect" href="Box_8h.html" title=" " alt="" coords="1096,767,1155,793"/>
+<area shape="rect" href="SpawnPoint_8h.html" title=" " alt="" coords="1411,692,1533,719"/>
+<area shape="rect" href="EntityWithHP_8h.html" title=" " alt="" coords="321,468,439,495"/>
+<area shape="rect" href="EntityWithoutHP_8h.html" title=" " alt="" coords="311,543,449,569"/>
+<area shape="rect" title=" " alt="" coords="248,617,323,644"/>
+<area shape="rect" title=" " alt="" coords="347,617,413,644"/>
+<area shape="rect" title=" " alt="" coords="437,617,505,644"/>
+<area shape="rect" href="UniqueID_8h.html" title=" " alt="" coords="529,617,623,644"/>
+<area shape="rect" href="StateBehavior_8h.html" title=" " alt="" coords="699,319,824,345"/>
+<area shape="rect" title=" " alt="" coords="699,237,826,263"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -161,27 +172,84 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" alt=""/></div>
 <map name="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
-<area shape="rect" title=" " alt="" coords="5,183,60,209"/>
-<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title=" " alt="" coords="111,107,205,133"/>
-<area shape="rect" href="winTxt_8cpp.html#abfddca010a6ceb2c5292c98247a434ce" title=" " alt="" coords="115,157,201,184"/>
-<area shape="rect" href="classBox.html#ab30d8d08bfff9e0505d1baa518b01fba" title="Fonction test de la classe Box." alt="" coords="117,208,199,235"/>
-<area shape="rect" href="classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9" title="Fonction de test de la classe Tileset." alt="" coords="108,563,208,589"/>
-<area shape="rect" href="classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="291,5,413,32"/>
-<area shape="rect" href="classBox.html#a463bb5df079ed4e37f237128288ad263" title="Retourne id." alt="" coords="307,56,397,83"/>
-<area shape="rect" href="classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="294,107,410,133"/>
-<area shape="rect" href="classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="309,157,395,184"/>
-<area shape="rect" href="classBox.html#af86b090508898469761c0d61c8230133" title="Retourne y." alt="" coords="309,208,395,235"/>
-<area shape="rect" href="classBox.html#abed04a814d9eff8927701b98e486db1c" title="Modifie la taille de la Box par celle en paramètre." alt="" coords="275,259,429,285"/>
-<area shape="rect" href="classBox.html#a7d84cb0e69da66427ae6173ddfbdee48" title="Modifie l&#39;id de la Box par celui en paramètre." alt="" coords="308,309,396,336"/>
-<area shape="rect" href="classBox.html#a0f3f1e3acf82ac45cccb611be4b79206" title="Modifie la position de la Box par celle en paramètre." alt="" coords="288,360,416,387"/>
-<area shape="rect" href="classTileset.html#ad636679bf81f2aa5ad00beff2d5c9ef2" title="Retourne column." alt="" coords="279,411,425,437"/>
-<area shape="rect" href="classTileset.html#a8015df88b62c9b7cf6e19c55dc398f69" title="Retourne name." alt="" coords="284,461,420,488"/>
-<area shape="rect" href="classTileset.html#a060020f7a21a85d854f1b8fdf6ea192a" title="Retourne tileCount." alt="" coords="273,512,431,539"/>
-<area shape="rect" href="classTileset.html#a586d2ecc83c354bcc981e49ed579d359" title="Retourne tileHeight." alt="" coords="270,563,434,589"/>
-<area shape="rect" href="classTileset.html#adffdd1eda76615393d0d6b085ac61cf9" title="Retourne tileMapHeight." alt="" coords="256,613,448,640"/>
-<area shape="rect" href="classTileset.html#a937a18ca2f53d7261d3eff752e8afb91" title="Retourne tileMapPath." alt="" coords="263,664,441,691"/>
-<area shape="rect" href="classTileset.html#ae109a25be64886c5139162186da7919b" title="Retourne tileMapWidth." alt="" coords="259,715,445,741"/>
-<area shape="rect" href="classTileset.html#a91f1063653764e3e799a0331336d9e00" title="Retourne tileWidth." alt="" coords="273,765,431,792"/>
+<area shape="rect" title=" " alt="" coords="5,1072,60,1099"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,1047,203,1073"/>
+<area shape="rect" href="winTxt_8cpp.html#abfddca010a6ceb2c5292c98247a434ce" title="Nettoie le terminal courant." alt="" coords="112,1097,199,1124"/>
+<area shape="rect" href="classUniqueID.html#a4e40e08960447165fdfa0e611711500b" title=" " alt="" coords="274,81,390,108"/>
+<area shape="rect" href="classMapLayer.html#a518003984f69ae63b7e7392184799c42" title=" " alt="" coords="272,132,392,159"/>
+<area shape="rect" href="classLayer.html#a3a0eb5638a197a61e529965a2755af72" title="Test de regression." alt="" coords="286,259,378,285"/>
+<area shape="rect" href="classCollisionBox.html#a7ff1898829497e2344a65404a4cc4901" title="Fonction test de la classe CollisionBox." alt="" coords="263,512,401,539"/>
+<area shape="rect" href="classSpawnPoint.html#a1f65d03e003ddc89378b5571c52ff8c5" title="Fonction test de la classe Box." alt="" coords="266,563,398,589"/>
+<area shape="rect" href="classPlayer.html#a1866265c265b6f179309034e8a68a9a7" title=" " alt="" coords="283,1731,381,1757"/>
+<area shape="rect" href="classEnemy.html#ac29d3a12f5433e7d8b7be08ca29b9248" title=" " alt="" coords="282,1871,382,1897"/>
+<area shape="rect" href="classSpawnsLayer.html#a4d0337aca595347a27d441575f6a0296" title="Test de regression." alt="" coords="261,908,403,935"/>
+<area shape="rect" href="classCollisionLayer.html#a399a9c33d2ef2c935e42e605697b85e1" title="Test de regression." alt="" coords="258,1160,406,1187"/>
+<area shape="rect" href="classMap.html#a5a8b1d219211664f0df882e35104d035" title="Fonction de test de la classe Map." alt="" coords="290,1495,374,1521"/>
+<area shape="rect" href="classBox.html#ab30d8d08bfff9e0505d1baa518b01fba" title="Fonction test de la classe Box." alt="" coords="291,664,373,691"/>
+<area shape="rect" href="classTileset.html#ab5cc1858ffd883c9d32cd42bed9532d9" title="Fonction de test de la classe Tileset." alt="" coords="282,1680,382,1707"/>
+<area shape="rect" href="classEntityWithHP.html#aa0728f0c49ff24e42aa1a055651f7846" title="Fonction de test de regression." alt="" coords="261,2187,403,2213"/>
+<area shape="rect" href="classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="251,2769,413,2796"/>
+<area shape="rect" href="classMapLayer.html#a9710e1d180cac781c1a407251ef763a9" title=" " alt="" coords="505,5,653,32"/>
+<area shape="rect" href="classMapLayer.html#a2202c4093be0ec8e4fb0719b87633f76" title=" " alt="" coords="499,56,659,83"/>
+<area shape="rect" href="classLayer.html#abdce2567af5aed3065143dd622a3f4c4" title="Retourne name." alt="" coords="515,157,643,184"/>
+<area shape="rect" href="classMapLayer.html#a92b9f83ea738bd22ceee375441800b60" title=" " alt="" coords="501,107,656,133"/>
+<area shape="rect" href="classLayer.html#a66e5f1c31b9bf3b4fb50290429319fc3" title="Retourne id." alt="" coords="527,208,630,235"/>
+<area shape="rect" href="classLayer.html#a3cb596a4a47a48abb1f6e5b29ccacc88" title="Modifie l&#39;id du Layer par celui en paramètre." alt="" coords="529,259,628,285"/>
+<area shape="rect" href="classLayer.html#a7cba120f9a527e80bf9f28dc8fd16dda" title="Modifie l&#39;id du Layer par celui en paramètre." alt="" coords="515,309,642,336"/>
+<area shape="rect" href="classSpawnPoint.html#a5c964c2c4a6f04d8a0203b3e347b3fd4" title="Retourne anme." alt="" coords="495,512,663,539"/>
+<area shape="rect" href="classSpawnPoint.html#af18d38897bcee75e0ef78c19c302da02" title="Modifie le du SpawnPoint par celui en paramètre." alt="" coords="495,360,662,387"/>
+<area shape="rect" href="classEnemy.html#a59e340b5be743c22f0b5e2992e5e9344" title=" " alt="" coords="495,1959,662,1985"/>
+<area shape="rect" href="classSpawnsLayer.html#a212ce62f6d8d3c48800df0c43604261b" title="Fonction permettant d&#39;ajouter un ennemi." alt="" coords="485,832,672,859"/>
+<area shape="rect" href="classSpawnsLayer.html#aea7cc260944c1133ad79d2a8b311969b" title="Fonction permettant d&#39;ajouter un NPC." alt="" coords="495,883,663,909"/>
+<area shape="rect" href="classSpawnsLayer.html#a187426d0aa634922c8a7224278efd924" title="Fonction permettant de modifier le SpawnPoint du joueur." alt="" coords="475,766,682,807"/>
+<area shape="rect" href="classSpawnsLayer.html#a7975487310f901bd55794ef0d72e0f09" title="Fonction permettant de récupérer les SpawnPoint des Ennemy." alt="" coords="461,1385,696,1412"/>
+<area shape="rect" href="classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="518,715,639,741"/>
+<area shape="rect" href="classSpawnsLayer.html#a7145285c09080eaf00fb9c621a4ac3a6" title="Fonction permettant de récupérer les SpawnPoint des NPC." alt="" coords="471,1284,687,1311"/>
+<area shape="rect" href="classSpawnsLayer.html#a1da8dbff59ce20770ef7a33c78823147" title="Fonction permettant de récupérer le SpawnPoint du joueur." alt="" coords="467,1335,690,1361"/>
+<area shape="rect" href="classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="521,933,637,960"/>
+<area shape="rect" href="classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="535,984,622,1011"/>
+<area shape="rect" href="classBox.html#af86b090508898469761c0d61c8230133" title="Retourne y." alt="" coords="535,664,622,691"/>
+<area shape="rect" href="classCollisionLayer.html#a818d3c9c83d99a9b13bd9fb04fda9cef" title="Fonction permettant d&#39;ajouter une boîte de collision à la couche." alt="" coords="465,1101,693,1128"/>
+<area shape="rect" href="classCollisionLayer.html#a7dfb68848be430bad4397424534a7084" title="Fonction permettant d&#39;ajouter une boîte de collision d&#39;entité à la couche." alt="" coords="477,1153,680,1194"/>
+<area shape="rect" href="classCollisionLayer.html#ae1accba79321890918f40613ba32f957" title="Permet de savoir si une clé existe." alt="" coords="755,1323,933,1365"/>
+<area shape="rect" href="classCollisionLayer.html#a7a97cfca95d4fa88e7c68925d56b5b8b" title="Supprime la CollisionBox d&#39;une entité." alt="" coords="463,1218,694,1259"/>
+<area shape="rect" href="classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="478,1487,679,1529"/>
+<area shape="rect" href="classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="478,1035,679,1077"/>
+<area shape="rect" href="classTileset.html#ad636679bf81f2aa5ad00beff2d5c9ef2" title="Retourne column." alt="" coords="505,1604,652,1631"/>
+<area shape="rect" href="classTileset.html#a8015df88b62c9b7cf6e19c55dc398f69" title="Retourne name." alt="" coords="511,1655,647,1681"/>
+<area shape="rect" href="classTileset.html#a060020f7a21a85d854f1b8fdf6ea192a" title="Retourne tileCount." alt="" coords="499,1705,658,1732"/>
+<area shape="rect" href="classTileset.html#a586d2ecc83c354bcc981e49ed579d359" title="Retourne tileHeight." alt="" coords="497,1756,661,1783"/>
+<area shape="rect" href="classTileset.html#adffdd1eda76615393d0d6b085ac61cf9" title="Retourne tileMapHeight." alt="" coords="483,1807,675,1833"/>
+<area shape="rect" href="classTileset.html#a937a18ca2f53d7261d3eff752e8afb91" title="Retourne tileMapPath." alt="" coords="490,1857,667,1884"/>
+<area shape="rect" href="classTileset.html#ae109a25be64886c5139162186da7919b" title="Retourne tileMapWidth." alt="" coords="485,1908,672,1935"/>
+<area shape="rect" href="classTileset.html#a91f1063653764e3e799a0331336d9e00" title="Retourne tileWidth." alt="" coords="499,1553,658,1580"/>
+<area shape="rect" href="classBox.html#abed04a814d9eff8927701b98e486db1c" title="Modifie la taille de la Box par celle en paramètre." alt="" coords="502,411,655,437"/>
+<area shape="rect" href="classBox.html#a0f3f1e3acf82ac45cccb611be4b79206" title="Modifie la position de la Box par celle en paramètre." alt="" coords="515,563,643,589"/>
+<area shape="rect" href="classBox.html#aebb3d713f415ee36e6c245c45053223c" title="Modifie la position sur l&#39;axe horizontal." alt="" coords="801,487,887,513"/>
+<area shape="rect" href="classBox.html#a05649a7f4b8aa9c0524141672f6edfea" title="Modifie la position sur l&#39;axe vertical." alt="" coords="802,588,886,615"/>
+<area shape="rect" href="classEntityWithHP.html#aac09e4aa3eda7d8c49719dc457545acf" title="Permet d&#39;infliger damage dégats à l&#39;entité target." alt="" coords="499,2161,658,2188"/>
+<area shape="rect" href="classEntityWithHP.html#a8f6ed941c723036a8c208b39fd8cd7ee" title="Permet de faire en sorte qu&#39;une entité subisse le nombre &quot;damage&quot; dégats." alt="" coords="744,2187,944,2213"/>
+<area shape="rect" href="classEntityWithHP.html#a2141d7cca91bd206e229efcc1c02d4d0" title="Permet de retourner le nombre de dégats q&#39;inflige l&#39;entité EntityWithHP." alt="" coords="481,2263,676,2289"/>
+<area shape="rect" href="classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa" title="Retourne le nombre de points de vie de l&#39;entité." alt="" coords="500,2313,657,2340"/>
+<area shape="rect" href="classEntityWithHP.html#a500d3f8c3a23e1a2cf43abb28bf3a3fe" title="Retourne l&#39;état de vie/mort de l&#39;entité." alt="" coords="469,2364,688,2391"/>
+<area shape="rect" href="classEntityWithHP.html#a489e4fe33d4541ff1fab8fddfaeadb93" title="Retourne le cap maximum de points de vie de l&#39;entité." alt="" coords="486,2415,671,2441"/>
+<area shape="rect" href="classEntityWithHP.html#a289cf70a442545d73777548149028569" title="Permet de modofier les dégats infligés par l&#39;entité EntityWithHP." alt="" coords="483,2009,675,2036"/>
+<area shape="rect" href="classEntityWithHP.html#a27e4773b47d1ba1f8eba71e9a8fd69c5" title="Permets de modifier le nombre de points de vie d&#39;une entité EntityWithHP." alt="" coords="501,2060,656,2087"/>
+<area shape="rect" href="classEntityWithHP.html#abe560d6a4c2c7cc80d228857a7a34785" title="Modifie l&#39;état de vie/mort de l&#39;entité." alt="" coords="470,2111,687,2137"/>
+<area shape="rect" href="classEntityWithoutHP.html#a7642f894c466f34541045454e49ba72d" title="Retourne la direction de l&#39;entité." alt="" coords="469,2516,688,2543"/>
+<area shape="rect" href="classEntityWithoutHP.html#a1a5d732b9f322135fbd5e5f227064b26" title="Retourne l&#39;ID de l&#39;entité." alt="" coords="491,2567,666,2593"/>
+<area shape="rect" href="classEntityWithoutHP.html#abcef03103dfc1168f713041b8e6ed97f" title="Retourne le statut de déplacement de l&#39;entité. False, l&#39;entité est immobile et True elle est en mouve..." alt="" coords="469,2617,688,2644"/>
+<area shape="rect" href="classEntityWithoutHP.html#a81b700a10e5a22d4dd5ca5966acfa3e4" title="Retourne le nom de l&#39;entité." alt="" coords="479,2668,678,2695"/>
+<area shape="rect" href="classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792" title="Retourne la position sur l&#39;axe des x de l&#39;entité (horizontale)." alt="" coords="479,2719,678,2745"/>
+<area shape="rect" href="classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92" title="Retourne la position sur l&#39;axe des y de l&#39;entité (verticale)." alt="" coords="479,2769,678,2796"/>
+<area shape="rect" href="classEntityWithoutHP.html#a9b71c69d24f4c557f024f2a101513da0" title="Retourne la vitesse de l&#39;entité." alt="" coords="479,2820,679,2847"/>
+<area shape="rect" href="classEntityWithoutHP.html#a0cfc433ea705c507da7912a8e039722e" title="Déplace l&#39;entité." alt="" coords="492,2871,665,2897"/>
+<area shape="rect" href="classEntityWithoutHP.html#a0c000f5c03af273546b317aaad42254c" title="Permets de modifier la direction de l&#39;entité." alt="" coords="470,2921,687,2948"/>
+<area shape="rect" href="classEntityWithoutHP.html#a4617bcd51a4d400decfddb402ef412d4" title="Remet isMoving à false." alt="" coords="470,2973,687,3014"/>
+<area shape="rect" href="classEntityWithoutHP.html#ab82f5b07a0a39880b29b96859f68c557" title="Permets de modifier le nom de l&#39;entité." alt="" coords="480,3039,677,3065"/>
+<area shape="rect" href="classEntityWithoutHP.html#a71d0f35f8ec801afca2b0a3d1c5e8c60" title="Permets de modifier la position sur l&#39;axe des x de l&#39;entité (horizontale)." alt="" coords="481,3089,677,3116"/>
+<area shape="rect" href="classEntityWithoutHP.html#a2911e0307397dde003fdcfa71b738495" title="Permets de modifier la position sur l&#39;axe des y de l&#39;entité (verticale)." alt="" coords="481,3140,677,3167"/>
+<area shape="rect" href="classEntityWithoutHP.html#a87424952f6ec1c19bd5f370ed573a1c3" title="Permets de modifier la vitesse de l&#39;entité." alt="" coords="479,2465,678,2492"/>
 </map>
 </div>
 

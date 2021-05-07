@@ -1,4 +1,4 @@
 <map id="StateGameTxt::MoveWithCollision" name="StateGameTxt::MoveWithCollision">
-<area shape="rect" id="node1" title=" " alt="" coords="224,5,471,32"/>
+<area shape="rect" id="node1" title="Permet le mouvement du joueur à travers le monde Prend en compte les collisions." alt="" coords="224,5,471,32"/>
 <area shape="rect" id="node2" href="$classStateGameTxt.html#a14e11db9b9ccea3fcc75829656bb18f4" title="Fonction de mise à jour du State." alt="" coords="5,5,176,32"/>
 </map>

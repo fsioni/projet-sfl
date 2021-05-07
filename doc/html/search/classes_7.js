@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['player_300',['Player',['../classPlayer.html',1,'']]]
+  ['npc_423',['NPC',['../classNPC.html',1,'']]]
 ];

@@ -12,6 +12,8 @@ var classBox =
     [ "SetDimensions", "classBox.html#abed04a814d9eff8927701b98e486db1c", null ],
     [ "SetId", "classBox.html#a7d84cb0e69da66427ae6173ddfbdee48", null ],
     [ "SetPosition", "classBox.html#a0f3f1e3acf82ac45cccb611be4b79206", null ],
+    [ "SetX", "classBox.html#aebb3d713f415ee36e6c245c45053223c", null ],
+    [ "SetY", "classBox.html#a05649a7f4b8aa9c0524141672f6edfea", null ],
     [ "Test", "classBox.html#ab30d8d08bfff9e0505d1baa518b01fba", null ],
     [ "height", "classBox.html#a6851eb8f64b4cbe58488f7dcfe04bdb8", null ],
     [ "id", "classBox.html#aaa58eab76ed5927841ac1e0773f8ca08", null ],

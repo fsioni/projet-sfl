@@ -90,14 +90,17 @@ $(document).ready(function(){initNavTree('classStateGameSFML.html',''); initResi
 </div><!--header-->
 <div class="contents">
 
+<p>Classe représentant l'état jeu du mode graphique (SFML)  
+ <a href="classStateGameSFML.html#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="StateGameSFML_8h_source.html">StateGameSFML.h</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de StateGameSFML:</div>
 <div class="dyncontent">
 <div class="center"><img src="classStateGameSFML__inherit__graph.png" border="0" usemap="#StateGameSFML_inherit__map" alt="Inheritance graph"/></div>
 <map name="StateGameSFML_inherit__map" id="StateGameSFML_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,233,175,751"/>
-<area shape="rect" href="classState.html" title="Classe représentant un état de l&#39;application." alt="" coords="25,5,155,185"/>
+<area shape="rect" title="Classe représentant l&#39;état jeu du mode graphique (SFML)" alt="" coords="5,233,183,1235"/>
+<area shape="rect" href="classState.html" title="Classe représentant un état de l&#39;application." alt="" coords="29,5,159,185"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -118,17 +121,40 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:aee4825df0279125785ce4cb6dea1cdf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2">Update</a> ()</td></tr>
 <tr class="memdesc:aee4825df0279125785ce4cb6dea1cdf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de mise à jour du <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>.  <a href="classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aee4825df0279125785ce4cb6dea1cdf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a954213023746cb5187490fd1f2c806bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a954213023746cb5187490fd1f2c806bc">UpdatePlayer</a> ()</td></tr>
+<tr class="memdesc:a954213023746cb5187490fd1f2c806bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Met à jour les données correspondant au joueur.  <a href="classStateGameSFML.html#a954213023746cb5187490fd1f2c806bc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a954213023746cb5187490fd1f2c806bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a34aefe47e9f0d1fcfc9130c9f1d27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a11a34aefe47e9f0d1fcfc9130c9f1d27">UpdateEnemies</a> ()</td></tr>
+<tr class="memdesc:a11a34aefe47e9f0d1fcfc9130c9f1d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Met à jour les données correspondant aux ennemis.  <a href="classStateGameSFML.html#a11a34aefe47e9f0d1fcfc9130c9f1d27">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a11a34aefe47e9f0d1fcfc9130c9f1d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4fe7bfafedf61d28cc6db3608dd2bd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#ae4fe7bfafedf61d28cc6db3608dd2bd9">UpdateNPCs</a> ()</td></tr>
+<tr class="separator:ae4fe7bfafedf61d28cc6db3608dd2bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b3d8bb0ea49142cc712a59db6da566a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a">Display</a> ()</td></tr>
 <tr class="memdesc:a4b3d8bb0ea49142cc712a59db6da566a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction d'affichage du <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>.  <a href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a4b3d8bb0ea49142cc712a59db6da566a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b1f85fa6cb33dc1bd01bcfa73498f9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a2b1f85fa6cb33dc1bd01bcfa73498f9d">DisplayMap</a> ()</td></tr>
+<tr class="memdesc:a2b1f85fa6cb33dc1bd01bcfa73498f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage la carte sur la fenêtre SFML.  <a href="classStateGameSFML.html#a2b1f85fa6cb33dc1bd01bcfa73498f9d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2b1f85fa6cb33dc1bd01bcfa73498f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8edc971c531e6f8f91f9b966fe43df2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#ab8edc971c531e6f8f91f9b966fe43df2">DisplayPlayer</a> ()</td></tr>
+<tr class="memdesc:ab8edc971c531e6f8f91f9b966fe43df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage le joueur sur la fenêtre SFML.  <a href="classStateGameSFML.html#ab8edc971c531e6f8f91f9b966fe43df2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab8edc971c531e6f8f91f9b966fe43df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6ee90de35ff10823393abd805a9c5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#adf6ee90de35ff10823393abd805a9c5a">DisplayEnemies</a> ()</td></tr>
+<tr class="memdesc:adf6ee90de35ff10823393abd805a9c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage les ennemis sur la fenêtre SFML.  <a href="classStateGameSFML.html#adf6ee90de35ff10823393abd805a9c5a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adf6ee90de35ff10823393abd805a9c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0d355889710621e18c19a3a9bd3fce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a5f0d355889710621e18c19a3a9bd3fce">DisplayNPC</a> ()</td></tr>
+<tr class="separator:a5f0d355889710621e18c19a3a9bd3fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ea8128db236996490e7ff310226746"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a72ea8128db236996490e7ff310226746">DisplayCollisionBox</a> (<a class="el" href="classCollisionBox.html">CollisionBox</a> *cb, const sf::Color &amp;color, int id)</td></tr>
+<tr class="memdesc:a72ea8128db236996490e7ff310226746"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage une <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> sur la fenêtre SFML.  <a href="classStateGameSFML.html#a72ea8128db236996490e7ff310226746">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a72ea8128db236996490e7ff310226746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e856a9c6fca122ce3a10e3cf877531b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a8e856a9c6fca122ce3a10e3cf877531b">DisplayDebug</a> ()</td></tr>
+<tr class="memdesc:a8e856a9c6fca122ce3a10e3cf877531b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage le mode debug sur la fenêtre SFML.  <a href="classStateGameSFML.html#a8e856a9c6fca122ce3a10e3cf877531b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8e856a9c6fca122ce3a10e3cf877531b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fcbe81293cbf704722897e92760ea95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a2fcbe81293cbf704722897e92760ea95">Pause</a> ()</td></tr>
 <tr class="memdesc:a2fcbe81293cbf704722897e92760ea95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de mise en pause du <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>.  <a href="classStateGameSFML.html#a2fcbe81293cbf704722897e92760ea95">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2fcbe81293cbf704722897e92760ea95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade470ee70456341d9487d277fa01ca64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#ade470ee70456341d9487d277fa01ca64">Start</a> ()</td></tr>
 <tr class="memdesc:ade470ee70456341d9487d277fa01ca64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de remise en marche du <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>.  <a href="classStateGameSFML.html#ade470ee70456341d9487d277fa01ca64">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ade470ee70456341d9487d277fa01ca64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7664f05c9e2da4f359096b158a870bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#aa7664f05c9e2da4f359096b158a870bc">MoveWithCollision</a> (float vx, float vy)</td></tr>
-<tr class="separator:aa7664f05c9e2da4f359096b158a870bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classState"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classState')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="classState.html">State</a></td></tr>
 <tr class="memitem:ab91bb1dd5aa6260ab2a456581daf9ec2 inherit pub_methods_classState"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classState.html#ab91bb1dd5aa6260ab2a456581daf9ec2">State</a> ()</td></tr>
 <tr class="separator:ab91bb1dd5aa6260ab2a456581daf9ec2 inherit pub_methods_classState"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,6 +164,7 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
 <tr class="memitem:a563ef5f25f63ea6a2df16b4321a61e73"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structContext.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a563ef5f25f63ea6a2df16b4321a61e73">context</a></td></tr>
+<tr class="memdesc:a563ef5f25f63ea6a2df16b4321a61e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Etat courant du programme.  <a href="classStateGameSFML.html#a563ef5f25f63ea6a2df16b4321a61e73">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a563ef5f25f63ea6a2df16b4321a61e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a809c09d955c8bfca50d1358cb96a10"><td class="memItemLeft" align="right" valign="top">sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a1a809c09d955c8bfca50d1358cb96a10">tileTexture</a></td></tr>
 <tr class="separator:a1a809c09d955c8bfca50d1358cb96a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,14 +176,48 @@ Attributs privés</h2></td></tr>
 <tr class="separator:a96d3fb072ec1a9ec9e1fe4a264db35ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d1e8e5c8bca9ff4e25577b40ed0ea2f"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a1d1e8e5c8bca9ff4e25577b40ed0ea2f">enemySprite</a></td></tr>
 <tr class="separator:a1d1e8e5c8bca9ff4e25577b40ed0ea2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac904e00cc332126dbf3d23a382d65a52"><td class="memItemLeft" align="right" valign="top">sf::Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#ac904e00cc332126dbf3d23a382d65a52">clock</a></td></tr>
-<tr class="separator:ac904e00cc332126dbf3d23a382d65a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc870c4780ea18b757d0270c3d0810e1"><td class="memItemLeft" align="right" valign="top">sf::Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#afc870c4780ea18b757d0270c3d0810e1">deltaClock</a></td></tr>
+<tr class="memdesc:afc870c4780ea18b757d0270c3d0810e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horloge pour le delta time.  <a href="classStateGameSFML.html#afc870c4780ea18b757d0270c3d0810e1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afc870c4780ea18b757d0270c3d0810e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a583e8c4051d0ef83394f4832b3ef18e6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a583e8c4051d0ef83394f4832b3ef18e6">deltaTime</a></td></tr>
+<tr class="memdesc:a583e8c4051d0ef83394f4832b3ef18e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delta time.  <a href="classStateGameSFML.html#a583e8c4051d0ef83394f4832b3ef18e6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a583e8c4051d0ef83394f4832b3ef18e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e307271cb5115faa3bb018bffa128a"><td class="memItemLeft" align="right" valign="top">sf::Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#ad7e307271cb5115faa3bb018bffa128a">spriteClock</a></td></tr>
+<tr class="memdesc:ad7e307271cb5115faa3bb018bffa128a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horloge pour la gestion de l'animation du joueur.  <a href="classStateGameSFML.html#ad7e307271cb5115faa3bb018bffa128a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad7e307271cb5115faa3bb018bffa128a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81e6c121c0b9030196825a63fac38eb3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a81e6c121c0b9030196825a63fac38eb3">posX</a> = 0</td></tr>
+<tr class="memdesc:a81e6c121c0b9030196825a63fac38eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique l'image à jouer pour l'animation du joueur.  <a href="classStateGameSFML.html#a81e6c121c0b9030196825a63fac38eb3">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a81e6c121c0b9030196825a63fac38eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54c4df5826fa8e2f78aa9965b41df52b"><td class="memItemLeft" align="right" valign="top">sf::Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a54c4df5826fa8e2f78aa9965b41df52b">fpsClock</a></td></tr>
+<tr class="memdesc:a54c4df5826fa8e2f78aa9965b41df52b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horloge pour les fps.  <a href="classStateGameSFML.html#a54c4df5826fa8e2f78aa9965b41df52b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a54c4df5826fa8e2f78aa9965b41df52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d69a9d0f7ed52922150ccb5c32306f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#ac9d69a9d0f7ed52922150ccb5c32306f">fps</a></td></tr>
+<tr class="memdesc:ac9d69a9d0f7ed52922150ccb5c32306f"><td class="mdescLeft">&#160;</td><td class="mdescRight">nombre actuel de fps  <a href="classStateGameSFML.html#ac9d69a9d0f7ed52922150ccb5c32306f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac9d69a9d0f7ed52922150ccb5c32306f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab130b0964f2ee8243691aa7f7a9868d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#ab130b0964f2ee8243691aa7f7a9868d2">playerX</a></td></tr>
+<tr class="memdesc:ab130b0964f2ee8243691aa7f7a9868d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position du joueur sur l'axe horizontale.  <a href="classStateGameSFML.html#ab130b0964f2ee8243691aa7f7a9868d2">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ab130b0964f2ee8243691aa7f7a9868d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a733b528636a6d8185718890e32898794"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a733b528636a6d8185718890e32898794">playerY</a></td></tr>
+<tr class="memdesc:a733b528636a6d8185718890e32898794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position du joueur sur l'axe verticale.  <a href="classStateGameSFML.html#a733b528636a6d8185718890e32898794">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a733b528636a6d8185718890e32898794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085503fa8dac1b361654dad751ff2fa6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a085503fa8dac1b361654dad751ff2fa6">isGoingUp</a></td></tr>
+<tr class="memdesc:a085503fa8dac1b361654dad751ff2fa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si la direction du joueur est vers le haut.  <a href="classStateGameSFML.html#a085503fa8dac1b361654dad751ff2fa6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a085503fa8dac1b361654dad751ff2fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc315b7bca2168d4b77a635e78f7a3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#adfc315b7bca2168d4b77a635e78f7a3d">isGoingDown</a></td></tr>
+<tr class="memdesc:adfc315b7bca2168d4b77a635e78f7a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si la direction du joueur est vers le bas.  <a href="classStateGameSFML.html#adfc315b7bca2168d4b77a635e78f7a3d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adfc315b7bca2168d4b77a635e78f7a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab710e7f993e0776b9a98e8a25d654922"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#ab710e7f993e0776b9a98e8a25d654922">isGoingLeft</a></td></tr>
+<tr class="memdesc:ab710e7f993e0776b9a98e8a25d654922"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si la direction du joueur est vers la gauche.  <a href="classStateGameSFML.html#ab710e7f993e0776b9a98e8a25d654922">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab710e7f993e0776b9a98e8a25d654922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1f58bff79c7e0db39de9fb1a138268"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a3d1f58bff79c7e0db39de9fb1a138268">isGoingRight</a></td></tr>
+<tr class="memdesc:a3d1f58bff79c7e0db39de9fb1a138268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si la direction du joueur est vers la droite.  <a href="classStateGameSFML.html#a3d1f58bff79c7e0db39de9fb1a138268">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3d1f58bff79c7e0db39de9fb1a138268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad692f21bba8eb59cb9fed32175d14952"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#ad692f21bba8eb59cb9fed32175d14952">isWalking</a></td></tr>
+<tr class="memdesc:ad692f21bba8eb59cb9fed32175d14952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si le joueur est en train de marcher.  <a href="classStateGameSFML.html#ad692f21bba8eb59cb9fed32175d14952">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad692f21bba8eb59cb9fed32175d14952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c8f283c8e3cc349ed8333b13f37d38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a34c8f283c8e3cc349ed8333b13f37d38">isAttacking</a></td></tr>
+<tr class="memdesc:a34c8f283c8e3cc349ed8333b13f37d38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si le joueur attaque.  <a href="classStateGameSFML.html#a34c8f283c8e3cc349ed8333b13f37d38">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a34c8f283c8e3cc349ed8333b13f37d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2575dbd63a006583ca61777165ac098a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a2575dbd63a006583ca61777165ac098a">w</a></td></tr>
 <tr class="separator:a2575dbd63a006583ca61777165ac098a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47261667f88159849c3ccb7e36a1ecb6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a47261667f88159849c3ccb7e36a1ecb6">h</a></td></tr>
@@ -174,15 +235,66 @@ Attributs privés</h2></td></tr>
 <tr class="memitem:af1ab46f790133eaee742ede834519797"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#af1ab46f790133eaee742ede834519797">substY</a></td></tr>
 <tr class="separator:af1ab46f790133eaee742ede834519797"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9e4b12b2a1bf539f6ef776baf6a5f36"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#ae9e4b12b2a1bf539f6ef776baf6a5f36">winWidth</a></td></tr>
+<tr class="memdesc:ae9e4b12b2a1bf539f6ef776baf6a5f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largeur de la fenetre.  <a href="classStateGameSFML.html#ae9e4b12b2a1bf539f6ef776baf6a5f36">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae9e4b12b2a1bf539f6ef776baf6a5f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa13076059243f2048f702a5a44d717d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#aa13076059243f2048f702a5a44d717d4">winHeight</a></td></tr>
+<tr class="memdesc:aa13076059243f2048f702a5a44d717d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hauteur de la fenetre.  <a href="classStateGameSFML.html#aa13076059243f2048f702a5a44d717d4">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa13076059243f2048f702a5a44d717d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b1210445f4ef9ec45ad9e420f746908"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a2b1210445f4ef9ec45ad9e420f746908">mapWidth</a></td></tr>
+<tr class="memdesc:a2b1210445f4ef9ec45ad9e420f746908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largeur de la map.  <a href="classStateGameSFML.html#a2b1210445f4ef9ec45ad9e420f746908">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2b1210445f4ef9ec45ad9e420f746908"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ab37a66e072d60b62d224484e5a1e06"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a1ab37a66e072d60b62d224484e5a1e06">mapHeight</a></td></tr>
+<tr class="memdesc:a1ab37a66e072d60b62d224484e5a1e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hauteur de la map.  <a href="classStateGameSFML.html#a1ab37a66e072d60b62d224484e5a1e06">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1ab37a66e072d60b62d224484e5a1e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d6b92cd0f349c04c75d0d273ef1af96"><td class="memItemLeft" align="right" valign="top">sf::Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a3d6b92cd0f349c04c75d0d273ef1af96">textFont</a></td></tr>
+<tr class="memdesc:a3d6b92cd0f349c04c75d0d273ef1af96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Police des textes.  <a href="classStateGameSFML.html#a3d6b92cd0f349c04c75d0d273ef1af96">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3d6b92cd0f349c04c75d0d273ef1af96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d385a3df35bc7bca0ea936df8c56c12"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a1d385a3df35bc7bca0ea936df8c56c12">hpText</a></td></tr>
+<tr class="memdesc:a1d385a3df35bc7bca0ea936df8c56c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texte indiquant le nombre d'hp du joueur.  <a href="classStateGameSFML.html#a1d385a3df35bc7bca0ea936df8c56c12">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1d385a3df35bc7bca0ea936df8c56c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9569eacceeccde9b67ccc1e832f2fc5b"><td class="memItemLeft" align="right" valign="top">sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a9569eacceeccde9b67ccc1e832f2fc5b">heartText</a></td></tr>
+<tr class="memdesc:a9569eacceeccde9b67ccc1e832f2fc5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture du coeur.  <a href="classStateGameSFML.html#a9569eacceeccde9b67ccc1e832f2fc5b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9569eacceeccde9b67ccc1e832f2fc5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b3d7ec52d6359ce2a99320b6251b24"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a76b3d7ec52d6359ce2a99320b6251b24">heartSprite</a></td></tr>
+<tr class="memdesc:a76b3d7ec52d6359ce2a99320b6251b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite du coeur.  <a href="classStateGameSFML.html#a76b3d7ec52d6359ce2a99320b6251b24">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a76b3d7ec52d6359ce2a99320b6251b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c8a05525713cec1e221062addff4464"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a0c8a05525713cec1e221062addff4464">isPaused</a></td></tr>
+<tr class="memdesc:a0c8a05525713cec1e221062addff4464"><td class="mdescLeft">&#160;</td><td class="mdescRight">indique si le jeu est en pause  <a href="classStateGameSFML.html#a0c8a05525713cec1e221062addff4464">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0c8a05525713cec1e221062addff4464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeda841ec1d35d7b5082c093d092d53b3"><td class="memItemLeft" align="right" valign="top">sf::Clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#aeda841ec1d35d7b5082c093d092d53b3">playerHitClock</a></td></tr>
+<tr class="memdesc:aeda841ec1d35d7b5082c093d092d53b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horloge pour le scintillement du joueur lorsqu'il reçoit des dégâts.  <a href="classStateGameSFML.html#aeda841ec1d35d7b5082c093d092d53b3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aeda841ec1d35d7b5082c093d092d53b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e85d38927716619fc01ed779a1c0320"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a0e85d38927716619fc01ed779a1c0320">playerLastHP</a></td></tr>
+<tr class="memdesc:a0e85d38927716619fc01ed779a1c0320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre d'HP du joueur lors du dernier update.  <a href="classStateGameSFML.html#a0e85d38927716619fc01ed779a1c0320">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0e85d38927716619fc01ed779a1c0320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac41db4c11549832070261fe3edf1fef"><td class="memItemLeft" align="right" valign="top">std::vector&lt; sf::Clock &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#aac41db4c11549832070261fe3edf1fef">enemiesHitClocks</a></td></tr>
+<tr class="memdesc:aac41db4c11549832070261fe3edf1fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horloges pour le scintillement des ennemis lorsqu'ils reçoivent des dégâts.  <a href="classStateGameSFML.html#aac41db4c11549832070261fe3edf1fef">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aac41db4c11549832070261fe3edf1fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc4980519d16ad0adf411caacd9d1bc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#aafc4980519d16ad0adf411caacd9d1bc">enemiesLastHP</a></td></tr>
+<tr class="memdesc:aafc4980519d16ad0adf411caacd9d1bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre d'HP des ennemis lors du dernier update.  <a href="classStateGameSFML.html#aafc4980519d16ad0adf411caacd9d1bc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aafc4980519d16ad0adf411caacd9d1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab15b3fe15fb5c3bc47c3a207e338ef18"><td class="memItemLeft" align="right" valign="top">std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#ab15b3fe15fb5c3bc47c3a207e338ef18">enemiesGotHitted</a></td></tr>
+<tr class="memdesc:ab15b3fe15fb5c3bc47c3a207e338ef18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si l'ennemi a perdu des HP depuis le dernier update.  <a href="classStateGameSFML.html#ab15b3fe15fb5c3bc47c3a207e338ef18">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab15b3fe15fb5c3bc47c3a207e338ef18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ebf519abb4e31c58ca76ba12f616a20"><td class="memItemLeft" align="right" valign="top">sf::Music&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a7ebf519abb4e31c58ca76ba12f616a20">music</a></td></tr>
+<tr class="memdesc:a7ebf519abb4e31c58ca76ba12f616a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Musique du jeu.  <a href="classStateGameSFML.html#a7ebf519abb4e31c58ca76ba12f616a20">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7ebf519abb4e31c58ca76ba12f616a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ca47ee416ea9f4ebd98687cf778469"><td class="memItemLeft" align="right" valign="top">sf::SoundBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a06ca47ee416ea9f4ebd98687cf778469">runningBuffer</a></td></tr>
+<tr class="memdesc:a06ca47ee416ea9f4ebd98687cf778469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Son tampon des pas du joueur.  <a href="classStateGameSFML.html#a06ca47ee416ea9f4ebd98687cf778469">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a06ca47ee416ea9f4ebd98687cf778469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad693a13cfa2b3beb992e90519e2bc43a"><td class="memItemLeft" align="right" valign="top">sf::Sound&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#ad693a13cfa2b3beb992e90519e2bc43a">runningSound</a></td></tr>
+<tr class="memdesc:ad693a13cfa2b3beb992e90519e2bc43a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Son des pas du joueur.  <a href="classStateGameSFML.html#ad693a13cfa2b3beb992e90519e2bc43a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad693a13cfa2b3beb992e90519e2bc43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26d7cdb3eb3a7a44bf3b64e0b8fb11c8"><td class="memItemLeft" align="right" valign="top">sf::SoundBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a26d7cdb3eb3a7a44bf3b64e0b8fb11c8">hitBuffer</a></td></tr>
+<tr class="memdesc:a26d7cdb3eb3a7a44bf3b64e0b8fb11c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Son tampon de coup.  <a href="classStateGameSFML.html#a26d7cdb3eb3a7a44bf3b64e0b8fb11c8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a26d7cdb3eb3a7a44bf3b64e0b8fb11c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c55a4a62c35bccb322cfc6da395a979"><td class="memItemLeft" align="right" valign="top">sf::Sound&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameSFML.html#a1c55a4a62c35bccb322cfc6da395a979">hitSound</a></td></tr>
+<tr class="memdesc:a1c55a4a62c35bccb322cfc6da395a979"><td class="mdescLeft">&#160;</td><td class="mdescRight">Son de coup.  <a href="classStateGameSFML.html#a1c55a4a62c35bccb322cfc6da395a979">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1c55a4a62c35bccb322cfc6da395a979"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Classe représentant l'état jeu du mode graphique (SFML) </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="a5071544b65d80f9ecc2201bffa8057cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5071544b65d80f9ecc2201bffa8057cf">&#9670;&nbsp;</a></span>StateGameSFML() <span class="overload">[1/2]</span></h2>
 
@@ -268,8 +380,242 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classStateGameSFML_a4b3d8bb0ea49142cc712a59db6da566a_cgraph.png" border="0" usemap="#classStateGameSFML_a4b3d8bb0ea49142cc712a59db6da566a_cgraph" alt=""/></div>
 <map name="classStateGameSFML_a4b3d8bb0ea49142cc712a59db6da566a_cgraph" id="classStateGameSFML_a4b3d8bb0ea49142cc712a59db6da566a_cgraph">
-<area shape="rect" title="Fonction d&#39;affichage du State." alt="" coords="5,5,192,32"/>
-<area shape="rect" href="classMapLayer.html#a9710e1d180cac781c1a407251ef763a9" title=" " alt="" coords="240,5,388,32"/>
+<area shape="rect" title="Fonction d&#39;affichage du State." alt="" coords="5,253,192,280"/>
+<area shape="rect" href="classStateGameSFML.html#a8e856a9c6fca122ce3a10e3cf877531b" title="Affichage le mode debug sur la fenêtre SFML." alt="" coords="247,140,476,167"/>
+<area shape="rect" href="classStateGameSFML.html#adf6ee90de35ff10823393abd805a9c5a" title="Affichage les ennemis sur la fenêtre SFML." alt="" coords="240,203,483,229"/>
+<area shape="rect" href="classStateGameSFML.html#a2b1f85fa6cb33dc1bd01bcfa73498f9d" title="Affichage la carte sur la fenêtre SFML." alt="" coords="254,253,469,280"/>
+<area shape="rect" href="classStateGameSFML.html#a5f0d355889710621e18c19a3a9bd3fce" title=" " alt="" coords="254,304,469,331"/>
+<area shape="rect" href="classStateGameSFML.html#ab8edc971c531e6f8f91f9b966fe43df2" title="Affichage le joueur sur la fenêtre SFML." alt="" coords="247,355,475,381"/>
+<area shape="rect" href="classCollisionLayer.html#ae1accba79321890918f40613ba32f957" title="Permet de savoir si une clé existe." alt="" coords="575,15,754,57"/>
+<area shape="rect" href="classStateGameSFML.html#a72ea8128db236996490e7ff310226746" title="Affichage une CollisionBox sur la fenêtre SFML." alt="" coords="531,81,799,108"/>
+<area shape="rect" href="classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="564,133,765,174"/>
+<area shape="rect" href="classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="564,198,765,239"/>
+<area shape="rect" href="classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="847,5,968,32"/>
+<area shape="rect" href="classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="849,56,965,83"/>
+<area shape="rect" href="classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="864,107,951,133"/>
+<area shape="rect" href="classBox.html#af86b090508898469761c0d61c8230133" title="Retourne y." alt="" coords="864,157,951,184"/>
+<area shape="rect" href="classMapLayer.html#a9710e1d180cac781c1a407251ef763a9" title=" " alt="" coords="591,264,739,291"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a72ea8128db236996490e7ff310226746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72ea8128db236996490e7ff310226746">&#9670;&nbsp;</a></span>DisplayCollisionBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateGameSFML::DisplayCollisionBox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCollisionBox.html">CollisionBox</a> *&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sf::Color &amp;&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affichage une <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a> sur la fenêtre SFML. </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_a72ea8128db236996490e7ff310226746_cgraph.png" border="0" usemap="#classStateGameSFML_a72ea8128db236996490e7ff310226746_cgraph" alt=""/></div>
+<map name="classStateGameSFML_a72ea8128db236996490e7ff310226746_cgraph" id="classStateGameSFML_a72ea8128db236996490e7ff310226746_cgraph">
+<area shape="rect" title="Affichage une CollisionBox sur la fenêtre SFML." alt="" coords="5,81,273,108"/>
+<area shape="rect" href="classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="321,5,443,32"/>
+<area shape="rect" href="classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="324,56,440,83"/>
+<area shape="rect" href="classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="339,107,425,133"/>
+<area shape="rect" href="classBox.html#af86b090508898469761c0d61c8230133" title="Retourne y." alt="" coords="339,157,425,184"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_a72ea8128db236996490e7ff310226746_icgraph.png" border="0" usemap="#classStateGameSFML_a72ea8128db236996490e7ff310226746_icgraph" alt=""/></div>
+<map name="classStateGameSFML_a72ea8128db236996490e7ff310226746_icgraph" id="classStateGameSFML_a72ea8128db236996490e7ff310226746_icgraph">
+<area shape="rect" title="Affichage une CollisionBox sur la fenêtre SFML." alt="" coords="517,5,785,32"/>
+<area shape="rect" href="classStateGameSFML.html#a8e856a9c6fca122ce3a10e3cf877531b" title="Affichage le mode debug sur la fenêtre SFML." alt="" coords="240,5,469,32"/>
+<area shape="rect" href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a" title="Fonction d&#39;affichage du State." alt="" coords="5,5,192,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8e856a9c6fca122ce3a10e3cf877531b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e856a9c6fca122ce3a10e3cf877531b">&#9670;&nbsp;</a></span>DisplayDebug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateGameSFML::DisplayDebug </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affichage le mode debug sur la fenêtre SFML. </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_a8e856a9c6fca122ce3a10e3cf877531b_cgraph.png" border="0" usemap="#classStateGameSFML_a8e856a9c6fca122ce3a10e3cf877531b_cgraph" alt=""/></div>
+<map name="classStateGameSFML_a8e856a9c6fca122ce3a10e3cf877531b_cgraph" id="classStateGameSFML_a8e856a9c6fca122ce3a10e3cf877531b_cgraph">
+<area shape="rect" title="Affichage le mode debug sur la fenêtre SFML." alt="" coords="5,111,235,137"/>
+<area shape="rect" href="classCollisionLayer.html#ae1accba79321890918f40613ba32f957" title="Permet de savoir si une clé existe." alt="" coords="327,15,506,57"/>
+<area shape="rect" href="classStateGameSFML.html#a72ea8128db236996490e7ff310226746" title="Affichage une CollisionBox sur la fenêtre SFML." alt="" coords="283,81,551,108"/>
+<area shape="rect" href="classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="316,133,517,174"/>
+<area shape="rect" href="classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="316,198,517,239"/>
+<area shape="rect" href="classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="599,5,720,32"/>
+<area shape="rect" href="classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="601,56,717,83"/>
+<area shape="rect" href="classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="616,107,703,133"/>
+<area shape="rect" href="classBox.html#af86b090508898469761c0d61c8230133" title="Retourne y." alt="" coords="616,157,703,184"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_a8e856a9c6fca122ce3a10e3cf877531b_icgraph.png" border="0" usemap="#classStateGameSFML_a8e856a9c6fca122ce3a10e3cf877531b_icgraph" alt=""/></div>
+<map name="classStateGameSFML_a8e856a9c6fca122ce3a10e3cf877531b_icgraph" id="classStateGameSFML_a8e856a9c6fca122ce3a10e3cf877531b_icgraph">
+<area shape="rect" title="Affichage le mode debug sur la fenêtre SFML." alt="" coords="240,5,469,32"/>
+<area shape="rect" href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a" title="Fonction d&#39;affichage du State." alt="" coords="5,5,192,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adf6ee90de35ff10823393abd805a9c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf6ee90de35ff10823393abd805a9c5a">&#9670;&nbsp;</a></span>DisplayEnemies()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateGameSFML::DisplayEnemies </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affichage les ennemis sur la fenêtre SFML. </p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_adf6ee90de35ff10823393abd805a9c5a_icgraph.png" border="0" usemap="#classStateGameSFML_adf6ee90de35ff10823393abd805a9c5a_icgraph" alt=""/></div>
+<map name="classStateGameSFML_adf6ee90de35ff10823393abd805a9c5a_icgraph" id="classStateGameSFML_adf6ee90de35ff10823393abd805a9c5a_icgraph">
+<area shape="rect" title="Affichage les ennemis sur la fenêtre SFML." alt="" coords="240,5,483,32"/>
+<area shape="rect" href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a" title="Fonction d&#39;affichage du State." alt="" coords="5,5,192,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2b1f85fa6cb33dc1bd01bcfa73498f9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b1f85fa6cb33dc1bd01bcfa73498f9d">&#9670;&nbsp;</a></span>DisplayMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateGameSFML::DisplayMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affichage la carte sur la fenêtre SFML. </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_a2b1f85fa6cb33dc1bd01bcfa73498f9d_cgraph.png" border="0" usemap="#classStateGameSFML_a2b1f85fa6cb33dc1bd01bcfa73498f9d_cgraph" alt=""/></div>
+<map name="classStateGameSFML_a2b1f85fa6cb33dc1bd01bcfa73498f9d_cgraph" id="classStateGameSFML_a2b1f85fa6cb33dc1bd01bcfa73498f9d_cgraph">
+<area shape="rect" title="Affichage la carte sur la fenêtre SFML." alt="" coords="5,5,220,32"/>
+<area shape="rect" href="classMapLayer.html#a9710e1d180cac781c1a407251ef763a9" title=" " alt="" coords="268,5,416,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_a2b1f85fa6cb33dc1bd01bcfa73498f9d_icgraph.png" border="0" usemap="#classStateGameSFML_a2b1f85fa6cb33dc1bd01bcfa73498f9d_icgraph" alt=""/></div>
+<map name="classStateGameSFML_a2b1f85fa6cb33dc1bd01bcfa73498f9d_icgraph" id="classStateGameSFML_a2b1f85fa6cb33dc1bd01bcfa73498f9d_icgraph">
+<area shape="rect" title="Affichage la carte sur la fenêtre SFML." alt="" coords="240,5,455,32"/>
+<area shape="rect" href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a" title="Fonction d&#39;affichage du State." alt="" coords="5,5,192,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5f0d355889710621e18c19a3a9bd3fce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f0d355889710621e18c19a3a9bd3fce">&#9670;&nbsp;</a></span>DisplayNPC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateGameSFML::DisplayNPC </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_a5f0d355889710621e18c19a3a9bd3fce_icgraph.png" border="0" usemap="#classStateGameSFML_a5f0d355889710621e18c19a3a9bd3fce_icgraph" alt=""/></div>
+<map name="classStateGameSFML_a5f0d355889710621e18c19a3a9bd3fce_icgraph" id="classStateGameSFML_a5f0d355889710621e18c19a3a9bd3fce_icgraph">
+<area shape="rect" title=" " alt="" coords="240,5,455,32"/>
+<area shape="rect" href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a" title="Fonction d&#39;affichage du State." alt="" coords="5,5,192,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab8edc971c531e6f8f91f9b966fe43df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8edc971c531e6f8f91f9b966fe43df2">&#9670;&nbsp;</a></span>DisplayPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateGameSFML::DisplayPlayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affichage le joueur sur la fenêtre SFML. </p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_ab8edc971c531e6f8f91f9b966fe43df2_icgraph.png" border="0" usemap="#classStateGameSFML_ab8edc971c531e6f8f91f9b966fe43df2_icgraph" alt=""/></div>
+<map name="classStateGameSFML_ab8edc971c531e6f8f91f9b966fe43df2_icgraph" id="classStateGameSFML_ab8edc971c531e6f8f91f9b966fe43df2_icgraph">
+<area shape="rect" title="Affichage le joueur sur la fenêtre SFML." alt="" coords="240,5,468,32"/>
+<area shape="rect" href="classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a" title="Fonction d&#39;affichage du State." alt="" coords="5,5,192,32"/>
 </map>
 </div>
 
@@ -302,43 +648,6 @@ Voici le graphe d'appel pour cette fonction :</div>
 <p>Appelée une seule fois : au début du <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> Fonction virtuelle pure : doit être implémentée par l'enfant </p>
 
 <p>Implémente <a class="el" href="classState.html#a7ab4d8c6aa239a17ed579d89a209b156">State</a>.</p>
-
-</div>
-</div>
-<a id="aa7664f05c9e2da4f359096b158a870bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7664f05c9e2da4f359096b158a870bc">&#9670;&nbsp;</a></span>MoveWithCollision()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StateGameSFML::MoveWithCollision </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>vx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>vy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Voici le graphe des appelants de cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="classStateGameSFML_aa7664f05c9e2da4f359096b158a870bc_icgraph.png" border="0" usemap="#classStateGameSFML_aa7664f05c9e2da4f359096b158a870bc_icgraph" alt=""/></div>
-<map name="classStateGameSFML_aa7664f05c9e2da4f359096b158a870bc_icgraph" id="classStateGameSFML_aa7664f05c9e2da4f359096b158a870bc_icgraph">
-<area shape="rect" title=" " alt="" coords="275,5,535,32"/>
-<area shape="rect" href="classStateGameSFML.html#a69502c694d866bce70c460e42f6b2d66" title="Fonction de gestion des touches du State." alt="" coords="5,5,227,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -399,15 +708,6 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Une touche peut avoir un comportement différent selon le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> Fonction virtuelle pure : doit être implémentée par l'enfant </p>
 
 <p>Implémente <a class="el" href="classState.html#a57fe7b3edd9223a68e4e55c039feb5d4">State</a>.</p>
-<div class="dynheader">
-Voici le graphe d'appel pour cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="classStateGameSFML_a69502c694d866bce70c460e42f6b2d66_cgraph.png" border="0" usemap="#classStateGameSFML_a69502c694d866bce70c460e42f6b2d66_cgraph" alt=""/></div>
-<map name="classStateGameSFML_a69502c694d866bce70c460e42f6b2d66_cgraph" id="classStateGameSFML_a69502c694d866bce70c460e42f6b2d66_cgraph">
-<area shape="rect" title="Fonction de gestion des touches du State." alt="" coords="5,5,227,32"/>
-<area shape="rect" href="classStateGameSFML.html#aa7664f05c9e2da4f359096b158a870bc" title=" " alt="" coords="275,5,535,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -468,32 +768,132 @@ Voici le graphe d'appel pour cette fonction :</div>
 <p>Est appelée à chaque mise à jour de l'application Fonction virtuelle pure : doit être implémentée par l'enfant </p>
 
 <p>Implémente <a class="el" href="classState.html#a43d4ca30d927c023316c058b700c0716">State</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_aee4825df0279125785ce4cb6dea1cdf2_cgraph.png" border="0" usemap="#classStateGameSFML_aee4825df0279125785ce4cb6dea1cdf2_cgraph" alt=""/></div>
+<map name="classStateGameSFML_aee4825df0279125785ce4cb6dea1cdf2_cgraph" id="classStateGameSFML_aee4825df0279125785ce4cb6dea1cdf2_cgraph">
+<area shape="rect" title="Fonction de mise à jour du State." alt="" coords="5,118,191,145"/>
+<area shape="rect" href="classStateGameSFML.html#a11a34aefe47e9f0d1fcfc9130c9f1d27" title="Met à jour les données correspondant aux ennemis." alt="" coords="239,67,480,94"/>
+<area shape="rect" href="classStateGameSFML.html#ae4fe7bfafedf61d28cc6db3608dd2bd9" title=" " alt="" coords="250,118,469,145"/>
+<area shape="rect" href="classStateGameSFML.html#a954213023746cb5187490fd1f2c806bc" title="Met à jour les données correspondant au joueur." alt="" coords="246,169,473,195"/>
+<area shape="rect" href="classCollisionLayer.html#ae1accba79321890918f40613ba32f957" title="Permet de savoir si une clé existe." alt="" coords="539,5,718,47"/>
+<area shape="rect" href="classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="528,71,729,112"/>
+<area shape="rect" href="classBox.html#a0f3f1e3acf82ac45cccb611be4b79206" title="Modifie la position de la Box par celle en paramètre." alt="" coords="565,147,693,174"/>
+<area shape="rect" href="classBox.html#aebb3d713f415ee36e6c245c45053223c" title="Modifie la position sur l&#39;axe horizontal." alt="" coords="777,122,863,149"/>
+<area shape="rect" href="classBox.html#a05649a7f4b8aa9c0524141672f6edfea" title="Modifie la position sur l&#39;axe vertical." alt="" coords="778,173,862,199"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a11a34aefe47e9f0d1fcfc9130c9f1d27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a34aefe47e9f0d1fcfc9130c9f1d27">&#9670;&nbsp;</a></span>UpdateEnemies()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateGameSFML::UpdateEnemies </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Met à jour les données correspondant aux ennemis. </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_a11a34aefe47e9f0d1fcfc9130c9f1d27_cgraph.png" border="0" usemap="#classStateGameSFML_a11a34aefe47e9f0d1fcfc9130c9f1d27_cgraph" alt=""/></div>
+<map name="classStateGameSFML_a11a34aefe47e9f0d1fcfc9130c9f1d27_cgraph" id="classStateGameSFML_a11a34aefe47e9f0d1fcfc9130c9f1d27_cgraph">
+<area shape="rect" title="Met à jour les données correspondant aux ennemis." alt="" coords="5,78,247,105"/>
+<area shape="rect" href="classCollisionLayer.html#ae1accba79321890918f40613ba32f957" title="Permet de savoir si une clé existe." alt="" coords="306,5,485,47"/>
+<area shape="rect" href="classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="295,71,496,112"/>
+<area shape="rect" href="classBox.html#a0f3f1e3acf82ac45cccb611be4b79206" title="Modifie la position de la Box par celle en paramètre." alt="" coords="331,137,459,163"/>
+<area shape="rect" href="classBox.html#aebb3d713f415ee36e6c245c45053223c" title="Modifie la position sur l&#39;axe horizontal." alt="" coords="544,111,629,138"/>
+<area shape="rect" href="classBox.html#a05649a7f4b8aa9c0524141672f6edfea" title="Modifie la position sur l&#39;axe vertical." alt="" coords="545,162,629,189"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_a11a34aefe47e9f0d1fcfc9130c9f1d27_icgraph.png" border="0" usemap="#classStateGameSFML_a11a34aefe47e9f0d1fcfc9130c9f1d27_icgraph" alt=""/></div>
+<map name="classStateGameSFML_a11a34aefe47e9f0d1fcfc9130c9f1d27_icgraph" id="classStateGameSFML_a11a34aefe47e9f0d1fcfc9130c9f1d27_icgraph">
+<area shape="rect" title="Met à jour les données correspondant aux ennemis." alt="" coords="239,5,480,32"/>
+<area shape="rect" href="classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2" title="Fonction de mise à jour du State." alt="" coords="5,5,191,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae4fe7bfafedf61d28cc6db3608dd2bd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4fe7bfafedf61d28cc6db3608dd2bd9">&#9670;&nbsp;</a></span>UpdateNPCs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateGameSFML::UpdateNPCs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_ae4fe7bfafedf61d28cc6db3608dd2bd9_icgraph.png" border="0" usemap="#classStateGameSFML_ae4fe7bfafedf61d28cc6db3608dd2bd9_icgraph" alt=""/></div>
+<map name="classStateGameSFML_ae4fe7bfafedf61d28cc6db3608dd2bd9_icgraph" id="classStateGameSFML_ae4fe7bfafedf61d28cc6db3608dd2bd9_icgraph">
+<area shape="rect" title=" " alt="" coords="239,5,457,32"/>
+<area shape="rect" href="classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2" title="Fonction de mise à jour du State." alt="" coords="5,5,191,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a954213023746cb5187490fd1f2c806bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a954213023746cb5187490fd1f2c806bc">&#9670;&nbsp;</a></span>UpdatePlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateGameSFML::UpdatePlayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Met à jour les données correspondant au joueur. </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_a954213023746cb5187490fd1f2c806bc_cgraph.png" border="0" usemap="#classStateGameSFML_a954213023746cb5187490fd1f2c806bc_cgraph" alt=""/></div>
+<map name="classStateGameSFML_a954213023746cb5187490fd1f2c806bc_cgraph" id="classStateGameSFML_a954213023746cb5187490fd1f2c806bc_cgraph">
+<area shape="rect" title="Met à jour les données correspondant au joueur." alt="" coords="5,31,232,57"/>
+<area shape="rect" href="classBox.html#a0f3f1e3acf82ac45cccb611be4b79206" title="Modifie la position de la Box par celle en paramètre." alt="" coords="280,31,408,57"/>
+<area shape="rect" href="classBox.html#aebb3d713f415ee36e6c245c45053223c" title="Modifie la position sur l&#39;axe horizontal." alt="" coords="456,5,541,32"/>
+<area shape="rect" href="classBox.html#a05649a7f4b8aa9c0524141672f6edfea" title="Modifie la position sur l&#39;axe vertical." alt="" coords="457,56,541,83"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameSFML_a954213023746cb5187490fd1f2c806bc_icgraph.png" border="0" usemap="#classStateGameSFML_a954213023746cb5187490fd1f2c806bc_icgraph" alt=""/></div>
+<map name="classStateGameSFML_a954213023746cb5187490fd1f2c806bc_icgraph" id="classStateGameSFML_a954213023746cb5187490fd1f2c806bc_icgraph">
+<area shape="rect" title="Met à jour les données correspondant au joueur." alt="" coords="239,5,465,32"/>
+<area shape="rect" href="classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2" title="Fonction de mise à jour du State." alt="" coords="5,5,191,32"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des champs</h2>
-<a id="ac904e00cc332126dbf3d23a382d65a52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac904e00cc332126dbf3d23a382d65a52">&#9670;&nbsp;</a></span>clock</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">sf::Clock StateGameSFML::clock</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a563ef5f25f63ea6a2df16b4321a61e73"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a563ef5f25f63ea6a2df16b4321a61e73">&#9670;&nbsp;</a></span>context</h2>
 
@@ -513,6 +913,8 @@ Voici le graphe d'appel pour cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Etat courant du programme. </p>
 
 </div>
 </div>
@@ -538,6 +940,126 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
+<a id="afc870c4780ea18b757d0270c3d0810e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc870c4780ea18b757d0270c3d0810e1">&#9670;&nbsp;</a></span>deltaClock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Clock StateGameSFML::deltaClock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Horloge pour le delta time. </p>
+
+</div>
+</div>
+<a id="a583e8c4051d0ef83394f4832b3ef18e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a583e8c4051d0ef83394f4832b3ef18e6">&#9670;&nbsp;</a></span>deltaTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float StateGameSFML::deltaTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Delta time. </p>
+
+</div>
+</div>
+<a id="ab15b3fe15fb5c3bc47c3a207e338ef18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab15b3fe15fb5c3bc47c3a207e338ef18">&#9670;&nbsp;</a></span>enemiesGotHitted</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;bool&gt; StateGameSFML::enemiesGotHitted</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si l'ennemi a perdu des HP depuis le dernier update. </p>
+
+</div>
+</div>
+<a id="aac41db4c11549832070261fe3edf1fef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac41db4c11549832070261fe3edf1fef">&#9670;&nbsp;</a></span>enemiesHitClocks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;sf::Clock&gt; StateGameSFML::enemiesHitClocks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Horloges pour le scintillement des ennemis lorsqu'ils reçoivent des dégâts. </p>
+
+</div>
+</div>
+<a id="aafc4980519d16ad0adf411caacd9d1bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafc4980519d16ad0adf411caacd9d1bc">&#9670;&nbsp;</a></span>enemiesLastHP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; StateGameSFML::enemiesLastHP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Nombre d'HP des ennemis lors du dernier update. </p>
+
+</div>
+</div>
 <a id="a1d1e8e5c8bca9ff4e25577b40ed0ea2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d1e8e5c8bca9ff4e25577b40ed0ea2f">&#9670;&nbsp;</a></span>enemySprite</h2>
 
@@ -557,6 +1079,54 @@ Voici le graphe d'appel pour cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9d69a9d0f7ed52922150ccb5c32306f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9d69a9d0f7ed52922150ccb5c32306f">&#9670;&nbsp;</a></span>fps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int StateGameSFML::fps</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>nombre actuel de fps </p>
+
+</div>
+</div>
+<a id="a54c4df5826fa8e2f78aa9965b41df52b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54c4df5826fa8e2f78aa9965b41df52b">&#9670;&nbsp;</a></span>fpsClock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Clock StateGameSFML::fpsClock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Horloge pour les fps. </p>
 
 </div>
 </div>
@@ -582,6 +1152,294 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
+<a id="a76b3d7ec52d6359ce2a99320b6251b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76b3d7ec52d6359ce2a99320b6251b24">&#9670;&nbsp;</a></span>heartSprite</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Sprite StateGameSFML::heartSprite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sprite du coeur. </p>
+
+</div>
+</div>
+<a id="a9569eacceeccde9b67ccc1e832f2fc5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9569eacceeccde9b67ccc1e832f2fc5b">&#9670;&nbsp;</a></span>heartText</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Texture StateGameSFML::heartText</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Texture du coeur. </p>
+
+</div>
+</div>
+<a id="a26d7cdb3eb3a7a44bf3b64e0b8fb11c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26d7cdb3eb3a7a44bf3b64e0b8fb11c8">&#9670;&nbsp;</a></span>hitBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::SoundBuffer StateGameSFML::hitBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Son tampon de coup. </p>
+
+</div>
+</div>
+<a id="a1c55a4a62c35bccb322cfc6da395a979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c55a4a62c35bccb322cfc6da395a979">&#9670;&nbsp;</a></span>hitSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Sound StateGameSFML::hitSound</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Son de coup. </p>
+
+</div>
+</div>
+<a id="a1d385a3df35bc7bca0ea936df8c56c12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d385a3df35bc7bca0ea936df8c56c12">&#9670;&nbsp;</a></span>hpText</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text StateGameSFML::hpText</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Texte indiquant le nombre d'hp du joueur. </p>
+
+</div>
+</div>
+<a id="a34c8f283c8e3cc349ed8333b13f37d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34c8f283c8e3cc349ed8333b13f37d38">&#9670;&nbsp;</a></span>isAttacking</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateGameSFML::isAttacking</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si le joueur attaque. </p>
+
+</div>
+</div>
+<a id="adfc315b7bca2168d4b77a635e78f7a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfc315b7bca2168d4b77a635e78f7a3d">&#9670;&nbsp;</a></span>isGoingDown</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateGameSFML::isGoingDown</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si la direction du joueur est vers le bas. </p>
+
+</div>
+</div>
+<a id="ab710e7f993e0776b9a98e8a25d654922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab710e7f993e0776b9a98e8a25d654922">&#9670;&nbsp;</a></span>isGoingLeft</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateGameSFML::isGoingLeft</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si la direction du joueur est vers la gauche. </p>
+
+</div>
+</div>
+<a id="a3d1f58bff79c7e0db39de9fb1a138268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d1f58bff79c7e0db39de9fb1a138268">&#9670;&nbsp;</a></span>isGoingRight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateGameSFML::isGoingRight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si la direction du joueur est vers la droite. </p>
+
+</div>
+</div>
+<a id="a085503fa8dac1b361654dad751ff2fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a085503fa8dac1b361654dad751ff2fa6">&#9670;&nbsp;</a></span>isGoingUp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateGameSFML::isGoingUp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si la direction du joueur est vers le haut. </p>
+
+</div>
+</div>
+<a id="a0c8a05525713cec1e221062addff4464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c8a05525713cec1e221062addff4464">&#9670;&nbsp;</a></span>isPaused</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateGameSFML::isPaused</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>indique si le jeu est en pause </p>
+
+</div>
+</div>
+<a id="ad692f21bba8eb59cb9fed32175d14952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad692f21bba8eb59cb9fed32175d14952">&#9670;&nbsp;</a></span>isWalking</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateGameSFML::isWalking</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si le joueur est en train de marcher. </p>
+
+</div>
+</div>
 <a id="a1ab37a66e072d60b62d224484e5a1e06"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ab37a66e072d60b62d224484e5a1e06">&#9670;&nbsp;</a></span>mapHeight</h2>
 
@@ -601,6 +1459,8 @@ Voici le graphe d'appel pour cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Hauteur de la map. </p>
 
 </div>
 </div>
@@ -624,6 +1484,32 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>Largeur de la map. </p>
+
+</div>
+</div>
+<a id="a7ebf519abb4e31c58ca76ba12f616a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ebf519abb4e31c58ca76ba12f616a20">&#9670;&nbsp;</a></span>music</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Music StateGameSFML::music</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Musique du jeu. </p>
+
 </div>
 </div>
 <a id="aa0702a645708d454986af982ca16b6b3"></a>
@@ -645,6 +1531,54 @@ Voici le graphe d'appel pour cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeda841ec1d35d7b5082c093d092d53b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeda841ec1d35d7b5082c093d092d53b3">&#9670;&nbsp;</a></span>playerHitClock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Clock StateGameSFML::playerHitClock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Horloge pour le scintillement du joueur lorsqu'il reçoit des dégâts. </p>
+
+</div>
+</div>
+<a id="a0e85d38927716619fc01ed779a1c0320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e85d38927716619fc01ed779a1c0320">&#9670;&nbsp;</a></span>playerLastHP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int StateGameSFML::playerLastHP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Nombre d'HP du joueur lors du dernier update. </p>
 
 </div>
 </div>
@@ -690,6 +1624,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>Position du joueur sur l'axe horizontale. </p>
+
 </div>
 </div>
 <a id="a733b528636a6d8185718890e32898794"></a>
@@ -711,6 +1647,8 @@ Voici le graphe d'appel pour cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Position du joueur sur l'axe verticale. </p>
 
 </div>
 </div>
@@ -734,6 +1672,56 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>Indique l'image à jouer pour l'animation du joueur. </p>
+
+</div>
+</div>
+<a id="a06ca47ee416ea9f4ebd98687cf778469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ca47ee416ea9f4ebd98687cf778469">&#9670;&nbsp;</a></span>runningBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::SoundBuffer StateGameSFML::runningBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Son tampon des pas du joueur. </p>
+
+</div>
+</div>
+<a id="ad693a13cfa2b3beb992e90519e2bc43a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad693a13cfa2b3beb992e90519e2bc43a">&#9670;&nbsp;</a></span>runningSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Sound StateGameSFML::runningSound</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Son des pas du joueur. </p>
+
 </div>
 </div>
 <a id="a96d3fb072ec1a9ec9e1fe4a264db35ce"></a>
@@ -755,6 +1743,30 @@ Voici le graphe d'appel pour cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7e307271cb5115faa3bb018bffa128a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e307271cb5115faa3bb018bffa128a">&#9670;&nbsp;</a></span>spriteClock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Clock StateGameSFML::spriteClock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Horloge pour la gestion de l'animation du joueur. </p>
 
 </div>
 </div>
@@ -799,6 +1811,30 @@ Voici le graphe d'appel pour cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d6b92cd0f349c04c75d0d273ef1af96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d6b92cd0f349c04c75d0d273ef1af96">&#9670;&nbsp;</a></span>textFont</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Font StateGameSFML::textFont</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Police des textes. </p>
 
 </div>
 </div>
@@ -888,6 +1924,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>Hauteur de la fenetre. </p>
+
 </div>
 </div>
 <a id="ae9e4b12b2a1bf539f6ef776baf6a5f36"></a>
@@ -909,6 +1947,8 @@ Voici le graphe d'appel pour cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Largeur de la fenetre. </p>
 
 </div>
 </div>

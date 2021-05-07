@@ -5,6 +5,10 @@
 #include "../Core/StateManager/State.h"
 #include <SFML/Audio.hpp>
 
+/*! \class StateGameOverSFML
+*   \brief Classe représentant l'état game over du mode graphique (SFML)
+* 
+*/
 class StateGameOverSFML : public State
 {
 public:
@@ -27,12 +31,19 @@ public:
     void Start();
 
 private:
+    /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
 
+    /*! \brief Police des textes */
     sf::Font textFont;
+    /*! \brief Couleur des textes de l'UI */
+    sf::Color textColor;
+    /*! \brief Texte de game over */
     sf::Text gameOverText;
+    /*! \brief Texte indiquant comment relancer la partie */
     sf::Text restartText;
 
+    /*! \brief Musique de Game Over */
     sf::Music music;
 };
 

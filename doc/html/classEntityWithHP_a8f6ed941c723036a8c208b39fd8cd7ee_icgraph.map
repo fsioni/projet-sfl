@@ -1,0 +1,7 @@
+<map id="EntityWithHP::TakeDamage" name="EntityWithHP::TakeDamage">
+<area shape="rect" id="node1" title="Permet de faire en sorte qu&#39;une entité subisse le nombre &quot;damage&quot; dégats." alt="" coords="648,31,848,57"/>
+<area shape="rect" id="node2" href="$classEntityWithHP.html#aac09e4aa3eda7d8c49719dc457545acf" title="Permet d&#39;infliger damage dégats à l&#39;entité target." alt="" coords="441,5,600,32"/>
+<area shape="rect" id="node3" href="$classEntityWithHP.html#aa0728f0c49ff24e42aa1a055651f7846" title="Fonction de test de regression." alt="" coords="251,31,393,57"/>
+<area shape="rect" id="node4" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,31,203,57"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,60,57"/>
+</map>

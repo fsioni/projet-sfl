@@ -1,0 +1,4 @@
+<map id="StateGameSFML::DisplayMap" name="StateGameSFML::DisplayMap">
+<area shape="rect" id="node1" title="Affichage la carte sur la fenêtre SFML." alt="" coords="5,5,220,32"/>
+<area shape="rect" id="node2" href="$classMapLayer.html#a9710e1d180cac781c1a407251ef763a9" title=" " alt="" coords="268,5,416,32"/>
+</map>

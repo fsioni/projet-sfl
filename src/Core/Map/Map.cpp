@@ -2,7 +2,7 @@
 #include "tmxParsing.h"
 #include <iostream>
 #include <assert.h>
-#include "CollisionBox.h"
+#include "Box.h"
 
 Map::Map()
 {
@@ -21,7 +21,7 @@ Map::Map(std::string tmxFile, std::string tsxFile)
     int tileH = tileset->GetTileHeight();
 
     // Ajout de collisionBox tout autour de la Map
-    CollisionBox colBox;
+    Box colBox;
 
     // bottom colBox
     colBox.SetPosition(0, h * tileH - 10);
@@ -91,53 +91,61 @@ std::vector<MapLayer> Map::GetMapLayers() const
 
 void Map::TmxLoadLayers(std::string fileName)
 {
-    std::string strFile = fileToString(fileName);
+    std::string strFile = FileToString(fileName);
 
     // MapLayers
     std::string strLayer;
 
-    int nbLayer = countTag(strFile, "layer");
+    int nbLayer = CountTag(strFile, "layer");
 
     for (int i = 0; i < nbLayer; i++)
     {
-        strLayer = getFullTag(strFile, "layer", i);
+        strLayer = GetFullTag(strFile, "layer", i);
         MapLayer tmp(strLayer);
         AddMapLayer(tmp);
     }
 
     // objectgroup => CollisionLayers + SpawnLayer
-    int nbObjectgroup = countTag(strFile, "objectgroup");
-    int indCollision = 0, indSpawnPlayer = 0, indSpawnEnnemy = 0;
+    int nbObjectgroup = CountTag(strFile, "objectgroup");
+    int indCollision = 0;
+    int indSpawnPlayer = 0;
+    int indSpawnEnnemy = 0;
+    int indSpawnNPC = 0;
     std::string tmpObjectGroup;
     std::string name;
 
     for (int i = 0; i < nbObjectgroup; i++)
     {
-        tmpObjectGroup = getInsideTag(strFile, "objectgroup", i);
-        name = getAttributeValue(tmpObjectGroup, "name");
+        tmpObjectGroup = GetInsideTag(strFile, "objectgroup", i);
+        name = GetAttributeValue(tmpObjectGroup, "name");
 
-        if (name == "Collision")
+        if(name == "Collision")
             indCollision = i;
-        if (name == "EnemySpawn")
+        if(name == "EnemySpawn")
             indSpawnEnnemy = i;
-        if (name == "PlayerSpawn")
+        if(name == "PlayerSpawn")
             indSpawnPlayer = i;
+        if(name == "NPCSpawn")
+            indSpawnNPC = i;
     }
 
-    std::string strCollisionLayer = getFullTag(strFile, "objectgroup",
+    std::string strCollisionLayer = GetFullTag(strFile, "objectgroup",
                                                 indCollision);
     collisionLayer = new CollisionLayer(strCollisionLayer);
 
-    std::string strPlayerSpawn = getFullTag(strFile, "objectgroup",
+    std::string strPlayerSpawn = GetFullTag(strFile, "objectgroup",
                                             indSpawnPlayer);
-    std::string strEnnemySpawn = getFullTag(strFile, "objectgroup", 
+    std::string strEnnemySpawn = GetFullTag(strFile, "objectgroup", 
                                             indSpawnEnnemy);
-    spawnsLayer = new SpawnsLayer(strPlayerSpawn, strEnnemySpawn);
+    std::string strNpcSpawn = GetFullTag(strFile, "objectgroup",
+                                            indSpawnNPC);
+
+    spawnsLayer = new SpawnsLayer(strPlayerSpawn, strEnnemySpawn, strNpcSpawn);
 }
 
 void Map::TsxLoadTileset(std::string fileName)
 {
-    std::string strTileset = fileToString(fileName);
+    std::string strTileset = FileToString(fileName);
     Tileset tmp(strTileset);
 
     SetTileset(tmp);
@@ -145,7 +153,44 @@ void Map::TsxLoadTileset(std::string fileName)
 
 void Map::Test() const
 {
-    std::string tmxFile = "data/maps/tilemaps/mainTilemap.tmx";
+    std::cout << "===== Class Map =====" << std::endl;
+    std::string tmxFile = "data/maps/tilemaps/mapTestRegression.tmx";
     std::string tsxFile = "data/maps/tilesets/mainTileSet.tsx";
     Map map(tmxFile, tsxFile);
+    std::cout << "TmxLoadLayers(std::string fileName) : " << std::endl;
+    std::cout << "  -mapLayer : "; 
+    assert(map.mapLayers.size()==3);
+    assert(map.mapLayers[0].GetWidth()==20);
+    assert(map.mapLayers[0].GetHeight()==20);
+    std::cout << "ok" << std::endl;
+
+    std::cout << "  -collisionLayer : ";
+    // 5 collision dans le fichier + 
+    // ajout "à la main" des 4 collision des bord de map
+    assert(map.collisionLayer->GetCollisionBoxes().size()==5+4);
+    std::cout << "ok" << std::endl;
+    
+    std::cout << "  -spawnLayer : ";
+    // 3 spawn enemy dans le fichier
+    assert(map.spawnsLayer->GetEnemySpawns().size()==3);
+    // 3 spawn NPC dans le fichier
+    assert(map.spawnsLayer->GetNPCSpawns().size()==3);
+    // Test des valeurs du spawnPlayer
+    assert(map.spawnsLayer->GetPlayerSpawn().GetX()==575);
+    assert(map.spawnsLayer->GetPlayerSpawn().GetY()==473);
+    std::cout << "ok" << std::endl;
+  
+
+    std::cout << "TsxLoadTileset(std::string fileName) : ";
+    assert(map.tileset->GetTileWidth()==32);
+    assert(map.tileset->GetTileHeight()==32);
+    assert(map.tileset->GetTileCount()==1064);
+    assert(map.tileset->GetColumn()==8);
+    assert(map.tileset->GetTileMapHeight()==4256);
+    assert(map.tileset->GetTileMapWidth()==256);
+    assert(map.tileset->GetTileMapPath()=="./data/textures/tilesets/mainTileset.png");
+    std::cout << "ok" << std::endl;
+
+
+    std::cout << std::endl << std::endl;
 }

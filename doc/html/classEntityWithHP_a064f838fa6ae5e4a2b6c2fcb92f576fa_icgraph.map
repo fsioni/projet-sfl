@@ -1,6 +1,8 @@
 <map id="EntityWithHP::GetHP" name="EntityWithHP::GetHP">
-<area shape="rect" id="node1" title="Retourne le nombre de points de vie de l&#39;entité." alt="" coords="333,5,491,32"/>
-<area shape="rect" id="node2" href="$gameTxt_8h.html#a8660cc91c8dc47b28c5bf324284499e9" title=" " alt="" coords="227,5,285,32"/>
-<area shape="rect" id="node3" href="$gameTxt_8h.html#a5eeb0d13b5fe5eba2c9d7415842d36d9" title=" " alt="" coords="108,5,179,32"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node1" title="Retourne le nombre de points de vie de l&#39;entité." alt="" coords="461,56,619,83"/>
+<area shape="rect" id="node2" href="$classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="251,5,413,32"/>
+<area shape="rect" id="node3" href="$classNPC.html#ac0294086ef3a1ca80d7d170d1100ed8c" title="Permet à un NPC de donner des points de vie à un Player." alt="" coords="279,56,385,83"/>
+<area shape="rect" id="node4" href="$classEntityWithHP.html#aa0728f0c49ff24e42aa1a055651f7846" title="Fonction de test de regression." alt="" coords="261,107,403,133"/>
+<area shape="rect" id="node5" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,107,203,133"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,107,60,133"/>
 </map>

@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['gametext_541',['gameText',['../classStateSplashScreenSFML.html#ad3750f06193ba18acd197a2e36b049c6',1,'StateSplashScreenSFML']]],
-  ['gametitle_542',['gameTitle',['../classStateMenuSFML.html#ad3a40f5cd81e052c62366484c9ce9e54',1,'StateMenuSFML']]]
+  ['enemies_739',['enemies',['../structContext.html#a7b772a83981d3122a430f53d8e23b376',1,'Context']]],
+  ['enemiesgothitted_740',['enemiesGotHitted',['../classStateGameSFML.html#ab15b3fe15fb5c3bc47c3a207e338ef18',1,'StateGameSFML']]],
+  ['enemieshitclocks_741',['enemiesHitClocks',['../classStateGameSFML.html#aac41db4c11549832070261fe3edf1fef',1,'StateGameSFML']]],
+  ['enemieslasthp_742',['enemiesLastHP',['../classStateGameSFML.html#aafc4980519d16ad0adf411caacd9d1bc',1,'StateGameSFML']]],
+  ['enemysprite_743',['enemySprite',['../classStateGameSFML.html#a1d1e8e5c8bca9ff4e25577b40ed0ea2f',1,'StateGameSFML']]],
+  ['ennemyspawns_744',['ennemySpawns',['../classSpawnsLayer.html#ad98136bad4f71e5f7e6371780f31e629',1,'SpawnsLayer']]],
+  ['exitbutton_745',['exitButton',['../classStateMenuSFML.html#ad207d52a1490fdd9b46aa8d2332bfa76',1,'StateMenuSFML']]]
 ];
