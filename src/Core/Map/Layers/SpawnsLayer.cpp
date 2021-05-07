@@ -14,47 +14,43 @@ SpawnsLayer::SpawnsLayer(const std::string &objectgroupTagPlayer,
 {
     std::string objectTag;
     
-    objectTag = getInsideTag(objectgroupTagPlayer, "object", 0);
-    playerSpawn = SpawnPoint("PlayerSpawn", objectTag);
+    objectTag = GetInsideTag(objectgroupTagPlayer, "object", 0);
+    playerSpawn = SpawnPoint(objectTag);
 
-
-    int count;
-    count = countTag(objectgroupTagEnnemy, "object");
+    int count = CountTag(objectgroupTagEnnemy, "object");
     for (int i = 0; i < count; i++)
     {
-        objectTag = getInsideTag(objectgroupTagEnnemy, "object", i);
-        ennemySpawns.push_back(SpawnPoint("EnemySpawn", objectTag));
+        objectTag = GetInsideTag(objectgroupTagEnnemy, "object", i);
+        ennemySpawns.push_back(SpawnPoint(objectTag));
     }
 
 
 
-    std::string dialog, propertyTag;
-    count = countTag(objectgroupTagNPC, "object");
+    std::string dialog, propertyTag, dataTag;
+    count = CountTag(objectgroupTagNPC, "object");
     for (int i = 0; i < count; i++)
     {
-        objectTag = getInsideTag(objectgroupTagNPC, "object", i);
-        NpcSpawns.push_back(SpawnPoint("NPCSpawn", objectTag));
+        objectTag = GetFullTag(objectgroupTagNPC, "object", i);
+        NpcSpawns.push_back(SpawnPoint(objectTag));
 
-        std::string direction = getAttributeValue(objectTag, "rotation");
-        if(direction!="NULL"){
-            // Conversion string to int
-            int angle = std::stoi(direction);
-            NpcDirection.push_back(AngleToDirection(angle));
-        }
-        else{
-            NpcDirection.push_back(Up);
-        }
+        // Si balise rotation pas trouvé renvoie -1 donc direction Up
+        int angle = GetIntAttributeValue(objectTag, "rotation");
+        NpcDirection.push_back(AngleToDirection(angle));
+       
         
-
-        propertyTag = getInsideTag(objectgroupTagNPC, "property", i);
+        // On cherche la balise property
+        propertyTag = GetInsideTag(objectTag, "property", 0);
         
-        
+        // Si on trouve, on cheche la valeur du paramètre value
+        // et on la met dans le tableau de dialog associé à l'indice
+        // du npc.
         if(propertyTag!="NULL"){
-            dialog = getAttributeValue(propertyTag, "value");
+            dialog = GetAttributeValue(propertyTag, "value");
             NpcDialog.push_back(dialog);
         }
+        // Sinon on met au npc la phrase "Nothing to say."
         else{
-            NpcDialog.push_back("Rien à dire");
+            NpcDialog.push_back("Nothing to say.");
         }
         
     }
@@ -126,11 +122,8 @@ void SpawnsLayer::Test() const{
 
     std::cout << "SpawnsLayer() : ";
     SpawnsLayer spawnsLayer1;
-    assert(spawnsLayer1.GetPlayerSpawn().GetX()==-1);
-    assert(spawnsLayer1.GetPlayerSpawn().GetY()==-1);
-    assert(spawnsLayer1.GetPlayerSpawn().GetWidth()==-1);
-    assert(spawnsLayer1.GetPlayerSpawn().GetHeight()==-1);
-    assert(spawnsLayer1.GetPlayerSpawn().GetName()=="NULL");
+    assert(spawnsLayer1.GetPlayerSpawn().GetX()==0);
+    assert(spawnsLayer1.GetPlayerSpawn().GetY()==0);
     assert(spawnsLayer1.GetEnemySpawns().empty());
     std::cout << "ok" << std::endl;
 
@@ -147,26 +140,23 @@ void SpawnsLayer::Test() const{
     std::cout << "ok" << std::endl;
 
     std::cout << "AddEnemy(SpawnPoint const &newSpawn) : ";
-    spawnsLayer2.AddEnemy(SpawnPoint("salut", "<object id=\"11\" x=\"368\" y=\"190\"/>"));
+    spawnsLayer2.AddEnemy(SpawnPoint("<object id=\"11\" x=\"368\" y=\"190\"/>"));
     assert(spawnsLayer2.GetEnemySpawns().size()==4);
     assert(spawnsLayer2.GetEnemySpawns()[3].GetX()==368);
     assert(spawnsLayer2.GetEnemySpawns()[3].GetY()==190);
-    assert(spawnsLayer2.GetEnemySpawns()[3].GetName()=="salut");
     std::cout << "ok" << std::endl;
 
     std::cout << "AddNPC(SpawnPoint const &newSpawn) : ";
-    spawnsLayer2.AddNPC(SpawnPoint("salut", "<object id=\"11\" x=\"368\" y=\"190\"/>"));
+    spawnsLayer2.AddNPC(SpawnPoint("<object id=\"11\" x=\"368\" y=\"190\"/>"));
     assert(spawnsLayer2.GetNPCSpawns().size()==4);
     assert(spawnsLayer2.GetNPCSpawns()[3].GetX()==368);
     assert(spawnsLayer2.GetNPCSpawns()[3].GetY()==190);
-    assert(spawnsLayer2.GetNPCSpawns()[3].GetName()=="salut");
     std::cout << "ok" << std::endl;
 
     std::cout << "ChangePlayerSpawn(SpawnPoint const &newSpawn) : ";
-    spawnsLayer2.ChangePlayerSpawn(SpawnPoint("salut", "<object id=\"11\" x=\"368\" y=\"190\"/>"));
+    spawnsLayer2.ChangePlayerSpawn(SpawnPoint("<object id=\"11\" x=\"368\" y=\"190\"/>"));
     assert(spawnsLayer2.GetPlayerSpawn().GetX()==368);
     assert(spawnsLayer2.GetPlayerSpawn().GetY()==190);
-    assert(spawnsLayer2.GetPlayerSpawn().GetName()=="salut");
     std::cout << "ok" << std::endl;
 
     std::cout << std::endl << std::endl;

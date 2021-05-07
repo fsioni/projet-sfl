@@ -11,12 +11,12 @@ CollisionLayer::CollisionLayer()
 
 CollisionLayer::CollisionLayer(const std::string &objectgroupTagCollision)
 {
-    int count = countTag(objectgroupTagCollision, "object");
+    int count = CountTag(objectgroupTagCollision, "object");
     std::string strObject;
     for (int i = 0; i < count; i++)
     {
-        strObject = getInsideTag(objectgroupTagCollision, "object", i);
-        CollisionBox cb(strObject);
+        strObject = GetInsideTag(objectgroupTagCollision, "object", i);
+        Box cb(strObject);
         collisionBoxes.push_back(cb);
     }
 }
@@ -24,15 +24,15 @@ CollisionLayer::CollisionLayer(const std::string &objectgroupTagCollision)
 CollisionLayer::~CollisionLayer()
 {
     collisionBoxes.clear();
-    //collisionBoxesEntity.clear();
+    collisionBoxesEntity.clear();
 }
 
-void CollisionLayer::AddCollisionBox(const CollisionBox &newColBox)
+void CollisionLayer::AddCollisionBox(const Box &newColBox)
 {
     collisionBoxes.push_back(newColBox);
 }
 
-void CollisionLayer::AddCollisionBoxEntity(int id, CollisionBox* newColBox){
+void CollisionLayer::AddCollisionBoxEntity(int id, Box* newColBox){
     collisionBoxesEntity[id] = newColBox;
 }
 
@@ -40,7 +40,6 @@ void CollisionLayer::DisplayTXT() const
 {
     for (long unsigned int i = 0; i < collisionBoxes.size(); i++)
     {
-        std::cout << "Id : " << collisionBoxes[i].GetId() << std::endl;
         std::cout << "X : " << collisionBoxes[i].GetX() << std::endl;
         std::cout << "Y : " << collisionBoxes[i].GetY() << std::endl;
         std::cout << "W : " << collisionBoxes[i].GetWidth() << std::endl;
@@ -49,12 +48,12 @@ void CollisionLayer::DisplayTXT() const
     }
 }
 
-std::vector<CollisionBox> CollisionLayer::GetCollisionBoxes() const
+std::vector<Box> CollisionLayer::GetCollisionBoxes() const
 {
     return collisionBoxes;
 }
 
-std::map<int, CollisionBox*> CollisionLayer::GetCollisionBoxesEntity() 
+std::map<int, Box*> CollisionLayer::GetCollisionBoxesEntity() 
 {
     return collisionBoxesEntity;
 }
@@ -100,7 +99,7 @@ void CollisionLayer::Test() const{
 
     std::cout << "AddCollisionBox(const CollisionBox &newColBox)"<<
                 " et GetCollisionBoxes() : ";
-    colLayer1.AddCollisionBox(CollisionBox(1, 2, 3, 4));
+    colLayer1.AddCollisionBox(Box(1, 2, 3, 4));
     assert(colLayer1.GetCollisionBoxes().size()==1);
     assert(colLayer1.GetCollisionBoxes()[0].GetX()==1);
     assert(colLayer1.GetCollisionBoxes()[0].GetY()==2);
@@ -110,7 +109,7 @@ void CollisionLayer::Test() const{
 
     std::cout << "AddCollisionBoxEntity(int id, const CollisionBox &newColBox)"<<
                 " et GetCollisionBoxesEntity() : ";
-    colLayer1.AddCollisionBoxEntity(23, new CollisionBox(11, 21, 31, 41));
+    colLayer1.AddCollisionBoxEntity(23, new Box(11, 21, 31, 41));
     assert(colLayer1.GetCollisionBoxesEntity().size()==1);
     assert(colLayer1.GetCollisionBoxesEntity()[23]->GetX()==11);
     assert(colLayer1.GetCollisionBoxesEntity()[23]->GetY()==21);

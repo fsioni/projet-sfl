@@ -3,6 +3,7 @@
 #include <assert.h>
 #include "../SFML/StateSplashScreenSFML.h"
 #include "../txt/StateSplashScreenTxt.h"
+#include "Map/tmxParsing.h"
 
 #include <iostream>
 
@@ -67,14 +68,8 @@ void Game::Run(int mode)
         Box box;
         box.Test();
 
-        CollisionBox collisionBox;
-        collisionBox.Test();
-
         SpawnPoint spawnPoint;
         spawnPoint.Test();
-
-        Layer layer;
-        layer.Test();
 
         CollisionLayer collisionLayer;
         collisionLayer.Test();
@@ -91,6 +86,8 @@ void Game::Run(int mode)
         UniqueID uniqueID;
         uniqueID.Test();
 
+        
+        TestRegressionTmxParsing();
 
         std::cout << "TOUS LES TESTS ONT ETE PASSES AVEC SUCCES !" << std::endl;
         break;

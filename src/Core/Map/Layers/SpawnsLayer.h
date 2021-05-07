@@ -1,7 +1,6 @@
 #ifndef _SPAWNS_LAYER_
 #define _SPAWNS_LAYER_
 
-#include "Layer.h"
 #include "../SpawnPoint.h"
 #include "../../Entity/EntityWithoutHP.h" 
 #include <vector>
@@ -9,11 +8,10 @@
 
 /*! \class SpawnsLayer 
 *   \brief Classe représentant une couche de SpawnPoint
-*   Hérité de Layer
+*
 *   Représente tous les SpawnPoint du jeu, ceux des ennemis, du joueurs, des PNJ...
 */
-class SpawnsLayer : Layer
-{
+class SpawnsLayer{
 public:
     /*// === Fonctions membres privées === //*/
 

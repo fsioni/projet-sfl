@@ -186,13 +186,13 @@ bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * col
 
     // CollisionBox de l'entité
     
-    CollisionBox * cbThisEntity = colLayer->GetCollisionBoxesEntity()[GetID()];
+    Box * cbThisEntity = colLayer->GetCollisionBoxesEntity()[GetID()];
     
     int posX = cbThisEntity->GetX() + vx*speed;
     int posY = cbThisEntity->GetY() + vy*speed;
     
     // Collision avec la map
-    std::vector<CollisionBox> cbMap = colLayer->GetCollisionBoxes();
+    std::vector<Box> cbMap = colLayer->GetCollisionBoxes();
     for(int i=0; i< (int)cbMap.size(); i++){
 
         //Detection collision axe X
@@ -210,11 +210,11 @@ bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * col
     // pour empecher de se bloquer entre 2 enemy
     if(GetID()==1) offset+=3;
     // Collision entre entity
-    std::map<int, CollisionBox *> cbEntities = colLayer->GetCollisionBoxesEntity();
-    for(std::map<int, CollisionBox *>::iterator it= cbEntities.begin();
+    std::map<int, Box *> cbEntities = colLayer->GetCollisionBoxesEntity();
+    for(std::map<int, Box *>::iterator it= cbEntities.begin();
         it != cbEntities.end(); it++){
         if(it->first != GetID()){
-            CollisionBox * cbEntity = it->second;
+            Box * cbEntity = it->second;
             // X
             if(posX + cbThisEntity->GetWidth() - offset>= cbEntity->GetX()
                 && posX - offset <= cbEntity->GetX() + cbEntity->GetWidth()){

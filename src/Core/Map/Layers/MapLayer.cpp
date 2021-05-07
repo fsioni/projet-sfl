@@ -4,7 +4,7 @@
 
 #include "MapLayer.h"
 
-MapLayer::MapLayer() : Layer(){
+MapLayer::MapLayer(){
     width = -1;
     height = -1;
 }
@@ -14,20 +14,16 @@ MapLayer::~MapLayer()
 }
 
 MapLayer::MapLayer(std::string rawData){
-    // std::stoi(std::string) => int
-
-    id = std::stoi(getAttributeValue(rawData, "id"));
-    height = std::stoi(getAttributeValue(rawData, "height"));
-    width = std::stoi(getAttributeValue(rawData, "width"));
-    name = getAttributeValue(rawData, "name");
+    height = GetIntAttributeValue(rawData, "height");
+    width = GetIntAttributeValue(rawData, "width");
 
     // On recupère les données entre <data> et </data>
-    std::string strData = getDataTag(rawData, "data", 0);
+    std::string strData = GetDataTag(rawData, "data", 0);
 
     // Appel de la fonction du module tmxParsing pour transformer
     // une string sous format CSV (Comma separated values) en un
     // tableau dynamique d'entier.
-    data = csvToInt(strData);
+    data = CsvToInt(strData);
 }
 
 int MapLayer::GetWidth() const{
@@ -48,7 +44,6 @@ void MapLayer::Test() const{
     MapLayer mapLayer1;
     assert(mapLayer1.GetWidth()==-1);
     assert(mapLayer1.GetHeight()==-1);
-    assert(mapLayer1.GetName()=="NULL");
     assert(mapLayer1.data.empty());
     std::cout << "ok"<<std::endl;
 

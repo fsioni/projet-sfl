@@ -377,7 +377,7 @@ void StateGameSFML::UpdatePlayer()
     int playerY = context->player->GetPos_y();
     
 
-    CollisionBox * cbPlayer = 
+    Box * cbPlayer = 
         context->map->GetCollisionLayer()->GetCollisionBoxesEntity()[playerID];
     
 
@@ -431,7 +431,7 @@ void StateGameSFML::UpdateEnemies()
             int enemyID = context->enemies[i]->GetID();
 
             if(colLayer->CollisionBoxEntityExist(enemyID)){
-                CollisionBox * cbEnemy = colLayer->GetCollisionBoxesEntity()[enemyID];
+                Box * cbEnemy = colLayer->GetCollisionBoxesEntity()[enemyID];
                 cbEnemy->SetPosition(posX, posY);
             }
         } 
@@ -630,7 +630,7 @@ void StateGameSFML::DisplayNPC(){
 }
 
 void StateGameSFML::DisplayCollisionBox(
-            CollisionBox * cb, const sf::Color & color, int id)
+            Box * cb, const sf::Color & color, int id)
 {
     sf::RectangleShape rectColBox(
         sf::Vector2f(cb->GetWidth(), cb->GetHeight())
@@ -669,7 +669,7 @@ void StateGameSFML::DisplayDebug(){
 
     //Affichage du debug du joueur
     int playerID = context->player->GetID();
-    CollisionBox * cbPlayer = colLayer->GetCollisionBoxesEntity()[playerID];
+    Box * cbPlayer = colLayer->GetCollisionBoxesEntity()[playerID];
 
     //Affichage de la collision box player
     DisplayCollisionBox(cbPlayer, sf::Color(170, 30, 155, 200), playerID);
@@ -679,7 +679,7 @@ void StateGameSFML::DisplayDebug(){
     {
         int enemyID = context->enemies[i]->GetID();
         if(colLayer->CollisionBoxEntityExist(enemyID)){
-            CollisionBox * enemyBoxe = 
+            Box * enemyBoxe = 
                 colLayer->GetCollisionBoxesEntity()[enemyID]; 
             DisplayCollisionBox(enemyBoxe, sf::Color(170, 30, 155, 200), enemyID);
         }
@@ -690,7 +690,7 @@ void StateGameSFML::DisplayDebug(){
     {
         int npcID = context->npc[i]->GetID();
         if(colLayer->CollisionBoxEntityExist(npcID)){
-            CollisionBox * npcBoxe = 
+            Box * npcBoxe = 
                 colLayer->GetCollisionBoxesEntity()[ npcID]; 
             DisplayCollisionBox(npcBoxe, sf::Color(170, 30, 155, 200),  npcID);
         }
@@ -698,7 +698,7 @@ void StateGameSFML::DisplayDebug(){
 
 
     // Affichage des collision boxes de la map
-    std::vector<CollisionBox> collisionBoxes = colLayer->GetCollisionBoxes();
+    std::vector<Box> collisionBoxes = colLayer->GetCollisionBoxes();
 
     for (long unsigned int i=0; i < collisionBoxes.size(); i++)
     {

@@ -18,9 +18,7 @@ EnemyPatrol *EnemyPatrol::Instance()
     return singleton;
 }
 
-void EnemyPatrol::Enter(Enemy *enemy)
-{
-    std::cout << "Enemy enter in Patrol State." << std::endl;
+void EnemyPatrol::Enter(Enemy *enemy){
 }
 
 void EnemyPatrol::Execute(Enemy *enemy, std::unique_ptr<Player> &player_,
@@ -51,9 +49,7 @@ void EnemyPatrol::Execute(Enemy *enemy, std::unique_ptr<Player> &player_,
     }
 }
 
-void EnemyPatrol::Exit(Enemy *enemy)
-{
-    std::cout << "Enemy leaving Patrol State." << std::endl;
+void EnemyPatrol::Exit(Enemy *enemy){
 }
 
 // ======== ENEMY ATTACK STATE ===========
@@ -68,9 +64,7 @@ EnemyAttack *EnemyAttack::Instance()
     return singleton;
 }
 
-void EnemyAttack::Enter(Enemy *enemy)
-{
-    std::cout << "Enemy enter in Attack State." << std::endl;
+void EnemyAttack::Enter(Enemy *enemy){
 }
 
 void EnemyAttack::Execute(Enemy *enemy, std::unique_ptr<Player> &player_,
@@ -99,9 +93,7 @@ void EnemyAttack::Execute(Enemy *enemy, std::unique_ptr<Player> &player_,
     }
 }
 
-void EnemyAttack::Exit(Enemy *enemy)
-{
-    std::cout << "Enemy leaving Attack State." << std::endl;
+void EnemyAttack::Exit(Enemy *enemy){
 }
 
 // ======== ENEMY RUNAWAY STATE ===========
@@ -116,10 +108,7 @@ EnemyRunAway *EnemyRunAway::Instance()
     return singleton;
 }
 
-void EnemyRunAway::Enter(Enemy *enemy)
-{
-    std::cout << "Enemy enter in RunAway State." << std::endl;
-
+void EnemyRunAway::Enter(Enemy *enemy){
     // On double la vitesse de l'enemy
     int speed = enemy->GetSpeed();
     enemy->SetSpeed(speed * 2);
@@ -144,8 +133,6 @@ void EnemyRunAway::Execute(Enemy *enemy, std::unique_ptr<Player> &player_,
 
 void EnemyRunAway::Exit(Enemy *enemy)
 {
-    std::cout << "Enemy leaving RunAway State." << std::endl;
-
     // On remet la vitesse de base de l'enemy
     int speed = enemy->GetSpeed();
     enemy->SetSpeed(speed / 2);

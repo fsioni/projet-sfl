@@ -28,13 +28,12 @@ public:
 
     /*! \brief Constructeur depuis les paramètres entrés
     *
-    * \param [in] nID : id de la Box
     * \param [in] nX : position horizontale de la Box
     * \param [in] nY : position verticale de la Box
     * \param [in] nWidth : largeur de la Box
     * \param [in] nHeight : hauteur de la Box
     */
-    Box(int nId, int nX, int nY, int nWidth, int nHeight);
+    Box(int nX, int nY, int nWidth, int nHeight);
 
     /*! \brief Destructeur
     *
@@ -42,17 +41,6 @@ public:
     */
     ~Box();
 
-    /*! \brief Modifie l'id de la Box par celui en paramètre
-    *
-    * \param [in] nID : nouvel id de la Box
-    */
-    void SetId(int nId);
-
-    /*! \brief Retourne id
-    *
-    * \return id de la Box
-    */
-    int GetId() const;
 
     /*! \brief Modifie la position de la Box par celle en paramètre
     *
@@ -112,9 +100,6 @@ public:
 
 private:
     /*// === Données membres privées === //*/
-
-    /*! \brief ID de la Box (unique car information récupéré de la map .tmx). */
-    int id;
 
     /*! \brief Position de la Box sur l'axe x (horizontal, avec l'origine en haut à gauche). */
     int x;
