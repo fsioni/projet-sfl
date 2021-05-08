@@ -155,13 +155,13 @@ void StatePauseSFML::ProcessInput()
                 case sf::Keyboard::S :
                     if (isResumeButSelected)
                     {
-                        isResumeButPressed = false;
-                        isMenuButPressed = true;
+                        isResumeButSelected = false;
+                        isMenuButSelected = true;
                         sound.play();
                     }
                     else if (isMenuButSelected)
                     {
-                        isMenuButPressed = false;
+                        isMenuButSelected = false;
                         isExitButSelected = true;
                         sound.play();
                     }
