@@ -725,6 +725,8 @@ void StateGameSFML::Pause()
 {
     isPaused = true;
     runningSound.stop();
+    music.pause();
+    hitSound.stop();
 }
 
 void StateGameSFML::Start()
@@ -733,4 +735,5 @@ void StateGameSFML::Start()
     deltaTime = 0;
     deltaClock.restart();
     fpsClock.restart();
+    music.play();
 }

@@ -289,6 +289,32 @@ void StateMenuSFML::ProcessInput()
             break;
         }
     }
+
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+    {
+        isPlayButPressed = false;
+        isInstructionButPressed = false;
+        isExitButPressed = false;
+
+        if (isPlayButSelected)
+        {
+            isPlayButPressed = true;
+        }
+        else if (isInInstructionSubMenu)
+        {
+            isInInstructionSubMenu = false;
+            sound.play();
+        }
+        else if (isInstructionButSelected)
+        {
+            isInstructionButPressed = true;
+            sound.play();
+        }
+        else if (isExitButSelected)
+        {
+            isExitButPressed = true;
+        }
+    }
 }
 
 void StateMenuSFML::Update()
@@ -346,6 +372,8 @@ void StateMenuSFML::Update()
         music.setVolume(70);
         sound.setVolume(100);
     }
+
+
 }
 
 void StateMenuSFML::Display()
@@ -375,8 +403,10 @@ void StateMenuSFML::Display()
 
 void StateMenuSFML::Pause()
 {
+    music.stop();
 }
 
 void StateMenuSFML::Start()
 {
+    music.play();
 }
