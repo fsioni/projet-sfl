@@ -29,6 +29,8 @@ public:
     void Start();
 
 private:
+    void OnClick();
+
     /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
 

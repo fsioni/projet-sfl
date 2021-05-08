@@ -103,6 +103,10 @@ void StatePauseSFML::ProcessInput()
             context->renderWin->close();
             context->quit = true;
         }
+        else if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+        {
+            OnClick();
+        }
         else if (event.type == sf::Event::KeyPressed)
         {
             switch (event.key.code)
@@ -168,22 +172,7 @@ void StatePauseSFML::ProcessInput()
                 break;
 
                 case sf::Keyboard::Return:
-                    isResumeButPressed = false;
-                    isMenuButPressed = false;
-                    isExitButPressed = false;
-
-                    if (isResumeButSelected)
-                    {
-                        isResumeButPressed = true;
-                    }
-                    else if (isMenuButSelected)
-                    {
-                        isMenuButPressed = true;
-                    }
-                    else if (isExitButSelected)
-                    {
-                        isExitButPressed = true;
-                    }
+                    OnClick();
                 break;
 
                 case sf::Keyboard::Escape:
@@ -203,6 +192,41 @@ void StatePauseSFML::ProcessInput()
                 break;
             }
         }
+    }
+
+    sf::Vector2i mousePos = sf::Mouse::getPosition(*context->renderWin.get());
+
+    // Bouton Reprendre
+    sf::IntRect button(resumeButton.getPosition().x-10, resumeButton.getPosition().y,
+        resumeButton.getGlobalBounds().width+10, resumeButton.getGlobalBounds().height);
+
+    if (button.contains(mousePos))
+    {
+        isResumeButSelected = true;
+        isMenuButSelected = false;
+        isExitButSelected = false;
+    }
+    
+    // Bouton Instructions
+    button = sf::IntRect(menuButton.getPosition().x-10, menuButton.getPosition().y,
+        menuButton.getGlobalBounds().width+10, menuButton.getGlobalBounds().height);
+
+    if (button.contains(mousePos))
+    {
+        isResumeButSelected = false;
+        isMenuButSelected = true;
+        isExitButSelected = false;
+    }
+    
+    // Bouton Quitter
+    button = sf::IntRect(exitButton.getPosition().x-10, exitButton.getPosition().y,
+        exitButton.getGlobalBounds().width+10, exitButton.getGlobalBounds().height);
+
+    if (button.contains(mousePos))
+    {
+        isResumeButSelected = false;
+        isMenuButSelected = false;
+        isExitButSelected = true;
     }
 }
 
@@ -278,4 +302,24 @@ void StatePauseSFML::Pause()
 
 void StatePauseSFML::Start()
 {
+}
+
+void StatePauseSFML::OnClick() 
+{
+    isResumeButPressed = false;
+    isMenuButPressed = false;
+    isExitButPressed = false;
+
+    if (isResumeButSelected)
+    {
+        isResumeButPressed = true;
+    }
+    else if (isMenuButSelected)
+    {
+        isMenuButPressed = true;
+    }
+    else if (isExitButSelected)
+    {
+        isExitButPressed = true;
+    }
 }

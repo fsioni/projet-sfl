@@ -258,28 +258,7 @@ void StateMenuSFML::ProcessInput()
                 break;
 
             case sf::Keyboard::Return:
-                isPlayButPressed = false;
-                isInstructionButPressed = false;
-                isExitButPressed = false;
-
-                if (isPlayButSelected)
-                {
-                    isPlayButPressed = true;
-                }
-                else if (isInInstructionSubMenu)
-                {
-                    isInInstructionSubMenu = false;
-                    sound.play();
-                }
-                else if (isInstructionButSelected)
-                {
-                    isInstructionButPressed = true;
-                    sound.play();
-                }
-                else if (isExitButSelected)
-                {
-                    isExitButPressed = true;
-                }
+                OnClick();
                 break;
 
             default:
@@ -288,33 +267,46 @@ void StateMenuSFML::ProcessInput()
         default:
             if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
             {
-                isPlayButPressed = false;
-                isInstructionButPressed = false;
-                isExitButPressed = false;
-
-                if (isPlayButSelected)
-                {
-                    isPlayButPressed = true;
-                }
-                else if (isInInstructionSubMenu)
-                {
-                    isInInstructionSubMenu = false;
-                    sound.play();
-                }
-                else if (isInstructionButSelected)
-                {
-                    isInstructionButPressed = true;
-                    sound.play();
-                }
-                else if (isExitButSelected)
-                {
-                    isExitButPressed = true;
-                }
+                OnClick();
             }
             break;
         }
     }
 
+    sf::Vector2i mousePos = sf::Mouse::getPosition(*context->renderWin.get());
+
+    // Bouton Jouer
+    sf::IntRect button(playButton.getPosition().x-10, playButton.getPosition().y,
+        playButton.getGlobalBounds().width+10, playButton.getGlobalBounds().height);
+
+    if (button.contains(mousePos))
+    {
+        isPlayButSelected = true;
+        isInstructionButSelected = false;
+        isExitButSelected = false;
+    }
+    
+    // Bouton Instructions
+    button = sf::IntRect(instructionButton.getPosition().x-10, instructionButton.getPosition().y,
+        instructionButton.getGlobalBounds().width+10, instructionButton.getGlobalBounds().height);
+
+    if (button.contains(mousePos))
+    {
+        isPlayButSelected = false;
+        isInstructionButSelected = true;
+        isExitButSelected = false;
+    }
+    
+    // Bouton Quitter
+    button = sf::IntRect(exitButton.getPosition().x-10, exitButton.getPosition().y,
+        exitButton.getGlobalBounds().width+10, exitButton.getGlobalBounds().height);
+
+    if (button.contains(mousePos))
+    {
+        isPlayButSelected = false;
+        isInstructionButSelected = false;
+        isExitButSelected = true;
+    }
 }
 
 void StateMenuSFML::Update()
@@ -409,4 +401,30 @@ void StateMenuSFML::Pause()
 void StateMenuSFML::Start()
 {
     music.play();
+}
+
+void StateMenuSFML::OnClick() 
+{
+    isPlayButPressed = false;
+    isInstructionButPressed = false;
+    isExitButPressed = false;
+
+    if (isPlayButSelected)
+    {
+        isPlayButPressed = true;
+    }
+    else if (isInInstructionSubMenu)
+    {
+        isInInstructionSubMenu = false;
+        sound.play();
+    }
+    else if (isInstructionButSelected)
+    {
+        isInstructionButPressed = true;
+        sound.play();
+    }
+    else if (isExitButSelected)
+    {
+        isExitButPressed = true;
+    }
 }

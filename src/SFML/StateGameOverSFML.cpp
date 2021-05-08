@@ -99,6 +99,10 @@ void StateGameOverSFML::ProcessInput()
         {
             context->renderWin->close();
         }
+        else if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                OnClick();
+            }
         else if (event.type == sf::Event::KeyPressed)
         {
             switch (event.key.code)
@@ -164,37 +168,57 @@ void StateGameOverSFML::ProcessInput()
                 break;
 
                 case sf::Keyboard::Return:
-                    isRestartButPressed = false;
-                    isMenuButPressed = false;
-                    isExitButPressed = false;
-
-                    if (isRestartButSelected)
-                    {
-                        isRestartButPressed = true;
-                    }
-                    else if (isMenuButSelected)
-                    {
-                        isMenuButPressed = true;
-                    }
-                    else if (isExitButSelected)
-                    {
-                        isExitButPressed = true;
-                    }
+                    OnClick();
                 break;
 
-            case sf::Keyboard::Key::X:
-                context->renderWin->close();
-                context->quit = true;
-                break;
+                case sf::Keyboard::Key::X:
+                    context->renderWin->close();
+                    context->quit = true;
+                    break;
 
-            case sf::Keyboard::M:
-                context->isMute = !(context->isMute);
-                break;                
+                case sf::Keyboard::M:
+                    context->isMute = !(context->isMute);
+                    break;                
 
-            default:
-                break;
+                default:
+                    break;
             }
         }
+    }
+
+    sf::Vector2i mousePos = sf::Mouse::getPosition(*context->renderWin.get());
+
+    // Bouton Rejouer
+    sf::IntRect button(restartButton.getPosition().x-10, restartButton.getPosition().y,
+        restartButton.getGlobalBounds().width+10, restartButton.getGlobalBounds().height);
+
+    if (button.contains(mousePos))
+    {
+        isRestartButSelected = true;
+        isMenuButSelected = false;
+        isExitButSelected = false;
+    }
+    
+    // Bouton Instructions
+    button = sf::IntRect(menuButton.getPosition().x-10, menuButton.getPosition().y,
+        menuButton.getGlobalBounds().width+10, menuButton.getGlobalBounds().height);
+
+    if (button.contains(mousePos))
+    {
+        isRestartButSelected = false;
+        isMenuButSelected = true;
+        isExitButSelected = false;
+    }
+    
+    // Bouton Quitter
+    button = sf::IntRect(exitButton.getPosition().x-10, exitButton.getPosition().y,
+        exitButton.getGlobalBounds().width+10, exitButton.getGlobalBounds().height);
+
+    if (button.contains(mousePos))
+    {
+        isRestartButSelected = false;
+        isMenuButSelected = false;
+        isExitButSelected = true;
     }
 }
 
@@ -355,4 +379,24 @@ void StateGameOverSFML::Pause()
 
 void StateGameOverSFML::Start()
 {
+}
+
+void StateGameOverSFML::OnClick() 
+{
+    isRestartButPressed = false;
+    isMenuButPressed = false;
+    isExitButPressed = false;
+
+    if (isRestartButSelected)
+    {
+        isRestartButPressed = true;
+    }
+    else if (isMenuButSelected)
+    {
+        isMenuButPressed = true;
+    }
+    else if (isExitButSelected)
+    {
+        isExitButPressed = true;
+    }
 }
