@@ -36,24 +36,24 @@ void StateMenuSFML::Init()
     int winy = context->renderWin->getSize().y;
 
     // Title
-    gameTitle.setFont(context->assetMan->GetMainFont());
-    gameTitle.setFillColor(context->assetMan->GetMainTextColor());
-    gameTitle.setOutlineColor(sf::Color::Black);
-    gameTitle.setOutlineThickness(3);
-    gameTitle.setString("Legend of Nautibus");
-    gameTitle.setCharacterSize(100);
-    gameTitle.setOrigin(gameTitle.getLocalBounds().left +
-                        gameTitle.getLocalBounds().width / 2.0f,
-                        gameTitle.getLocalBounds().top + 
-                        gameTitle.getLocalBounds().height / 2.0f);
-    gameTitle.setPosition(winx / 2.0f, 235);
+    menuTitle.setFont(context->assetMan->GetMainFont());
+    menuTitle.setFillColor(context->assetMan->GetMainTextColor());
+    menuTitle.setOutlineColor(sf::Color::Black);
+    menuTitle.setOutlineThickness(3);
+    menuTitle.setString("Menu");
+    menuTitle.setCharacterSize(50);
+    menuTitle.setOrigin(menuTitle.getLocalBounds().left +
+                        menuTitle.getLocalBounds().width / 2.0f,
+                        menuTitle.getLocalBounds().top + 
+                        menuTitle.getLocalBounds().height / 2.0f);
+    menuTitle.setPosition(winx / 2.0f, winy - 50);
 
     logoSprite.setTexture(context->assetMan->GetTextureLogo());
     logoSprite.setOrigin(logoSprite.getLocalBounds().left +
                             logoSprite.getLocalBounds().width / 2.0f,
                             logoSprite.getLocalBounds().top +
                             logoSprite.getLocalBounds().height / 2.0f);
-    logoSprite.setPosition(winx/2, winy/2-150);
+    logoSprite.setPosition(winx/2, winy/2 - 150);
 
 
     ///// BUTTONS
@@ -355,6 +355,7 @@ void StateMenuSFML::Display()
 
     if(!isInInstructionSubMenu)
     {
+        context->renderWin->draw(menuTitle);
         context->renderWin->draw(logoSprite);
         context->renderWin->draw(playButton);
         context->renderWin->draw(instructionButton);

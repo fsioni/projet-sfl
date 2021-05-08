@@ -37,8 +37,8 @@ private:
     /*! \brief Sprite du logo du jeu */
     sf::Sprite logoSprite;
 
-    /*! \brief Texte du titre du jeu */
-    sf::Text gameTitle;
+    /*! \brief Texte du menu du jeu */
+    sf::Text menuTitle;
 
     // Main Menu
     /*! \brief Texte du bouton jouer */

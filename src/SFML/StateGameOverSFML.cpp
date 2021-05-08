@@ -1,5 +1,6 @@
 #include "StateGameOverSFML.h"
 #include "StateGameSFML.h"
+#include "StateMenuSFML.h"
 #include <assert.h>
 
 StateGameOverSFML::StateGameOverSFML(/* args */)
@@ -7,7 +8,9 @@ StateGameOverSFML::StateGameOverSFML(/* args */)
 }
 
 StateGameOverSFML::StateGameOverSFML(std::shared_ptr<Context> &cContext)
-    : context(cContext)
+    : context(cContext), isRestartButSelected(true), isRestartButPressed(false),
+    isMenuButSelected(false), isMenuButPressed(false), isExitButSelected(false),
+    isExitButPressed(false)
 {
 }
 
@@ -17,15 +20,24 @@ StateGameOverSFML::~StateGameOverSFML()
 
 void StateGameOverSFML::Init()
 {
+    assert(buffer.loadFromFile("data/sounds/sfx/menuNav.wav"));
+
+    sound.setBuffer(buffer);
+
+    int winx = context->renderWin->getSize().x;
+    int winy = context->renderWin->getSize().y;
     assert(music.openFromFile("data/sounds/music/13gameover1V1NL.wav"));
 
     music.play();
 
     bgSprite.setTexture(context->assetMan->GetTextureBackground());
     bgSprite.setScale(0.5f, 0.5f);
-
-    int winx = context->renderWin->getSize().x;
-    int winy = context->renderWin->getSize().y;
+    logoSprite.setTexture(context->assetMan->GetTextureLogo());
+    logoSprite.setOrigin(logoSprite.getLocalBounds().left +
+                            logoSprite.getLocalBounds().width / 2.0f,
+                            logoSprite.getLocalBounds().top +
+                            logoSprite.getLocalBounds().height / 2.0f);
+    logoSprite.setPosition(winx/2, winy/2-150);
 
     gameOverText.setFont(context->assetMan->GetMainFont());
     gameOverText.setFillColor(context->assetMan->GetMainTextColor());
@@ -37,19 +49,49 @@ void StateGameOverSFML::Init()
                             gameOverText.getLocalBounds().width / 2.0f,
                             gameOverText.getLocalBounds().top + 
                             gameOverText.getLocalBounds().height / 2.0f);
-    gameOverText.setPosition(winx / 2.0f, winy / 2.0f);
+    gameOverText.setPosition(winx / 2.0f, winy - 50);
 
-    restartText.setFont(context->assetMan->GetMainFont());
-    restartText.setFillColor(context->assetMan->GetMainTextColor());
-    restartText.setOutlineColor(sf::Color::Black);
-    restartText.setOutlineThickness(2);
-    restartText.setString("Press Space to restart");
-    restartText.setCharacterSize(50);
-    restartText.setOrigin(restartText.getLocalBounds().left +
-                            restartText.getLocalBounds().width / 2.0f,
-                            restartText.getLocalBounds().top +
-                            restartText.getLocalBounds().height / 2.0f);
-    restartText.setPosition(winx / 2.0f, winy / 2.0f + 150);
+   ///// BUTTONS
+    int butSize = 50;
+
+    // Play Button
+    restartButton.setFont(context->assetMan->GetMainFont());
+    restartButton.setFillColor(context->assetMan->GetMainTextColor());
+    restartButton.setOutlineColor(sf::Color::Black);
+    restartButton.setOutlineThickness(3);
+    restartButton.setString("Restart");
+    restartButton.setCharacterSize(butSize);
+    restartButton.setOrigin(restartButton.getLocalBounds().left +
+                            restartButton.getLocalBounds().width / 2.0f,
+                            restartButton.getLocalBounds().top + 
+                            restartButton.getLocalBounds().height / 2.0f);
+    restartButton.setPosition(winx / 2.0f, winy / 2.0f + 45.f);
+
+    // Instruction Button
+    menuButton.setFont(context->assetMan->GetMainFont());
+    menuButton.setFillColor(context->assetMan->GetMainTextColor());
+    menuButton.setOutlineColor(sf::Color::Black);
+    menuButton.setOutlineThickness(3);
+    menuButton.setString("Menu");
+    menuButton.setCharacterSize(butSize);
+    menuButton.setOrigin(menuButton.getLocalBounds().left +
+                            menuButton.getLocalBounds().width / 2.0f,
+                            menuButton.getLocalBounds().top + 
+                            menuButton.getLocalBounds().height / 2.0f);
+    menuButton.setPosition(winx / 2.0f, winy / 2.0f + 105);
+
+    // Exit Button
+    exitButton.setFont(context->assetMan->GetMainFont());
+    exitButton.setFillColor(context->assetMan->GetMainTextColor());
+    exitButton.setOutlineColor(sf::Color::Black);
+    exitButton.setOutlineThickness(3);
+    exitButton.setString("Exit");
+    exitButton.setCharacterSize(butSize);
+    exitButton.setOrigin(exitButton.getLocalBounds().left +
+                            exitButton.getLocalBounds().width / 2.0f,
+                            exitButton.getLocalBounds().top + 
+                            exitButton.getLocalBounds().height / 2.0f);
+    exitButton.setPosition(winx / 2.0f, winy / 2.0f + 165.f);
 }
 
 void StateGameOverSFML::ProcessInput()
@@ -66,10 +108,83 @@ void StateGameOverSFML::ProcessInput()
         {
             switch (event.key.code)
             {
-            case sf::Keyboard::Space:
-                RestartGame();
-                context->stateMan->Add(std::make_unique<StateGameSFML>(context),
-                                        true);
+                case sf::Keyboard::Up:
+                    if (isExitButSelected)
+                    {
+                        isMenuButSelected = true;
+                        isExitButSelected = false;
+                        sound.play();
+                    }
+                    else if (isMenuButSelected)
+                    {
+                        isRestartButSelected = true;
+                        isMenuButSelected = false;
+                        sound.play();
+                    }
+                break;
+                
+                case sf::Keyboard::Z:
+                    if (isExitButSelected)
+                    {
+                        isMenuButSelected = true;
+                        isExitButSelected = false;
+                        sound.play();
+                    }
+                    else if (isMenuButSelected)
+                    {
+                        isRestartButSelected = true;
+                        isMenuButSelected = false;
+                        sound.play();
+                    }
+                break;            
+
+                case sf::Keyboard::Down:
+                    if (isRestartButSelected)
+                    {
+                        isRestartButSelected = false;
+                        isMenuButSelected = true;
+                        sound.play();
+                    }
+                    else if (isMenuButSelected)
+                    {
+                        isMenuButSelected = false;
+                        isExitButSelected = true;
+                        sound.play();
+                    }
+                break;
+
+                case sf::Keyboard::S :
+                    if (isRestartButSelected)
+                    {
+                        isRestartButSelected = false;
+                        isMenuButPressed = true;
+                        sound.play();
+                    }
+                    else if (isMenuButSelected)
+                    {
+                        isMenuButPressed = false;
+                        isExitButSelected = true;
+                        sound.play();
+                    }
+                break;
+
+                case sf::Keyboard::Return:
+                    isRestartButPressed = false;
+                    isMenuButPressed = false;
+                    isExitButPressed = false;
+
+                    if (isRestartButSelected)
+                    {
+                        isRestartButPressed = true;
+                    }
+                    else if (isMenuButSelected)
+                    {
+                        isMenuButPressed = true;
+                    }
+                    else if (isExitButSelected)
+                    {
+                        isExitButPressed = true;
+                    }
                 break;
 
             case sf::Keyboard::Key::X:
@@ -139,22 +254,71 @@ void StateGameOverSFML::RestartGame()
 
 void StateGameOverSFML::Update()
 {
-    if (context->isMute && music.getVolume() != 0)
+    if (isRestartButSelected)
+    {
+        restartButton.setFillColor(sf::Color::White);
+        restartButton.setOutlineColor(sf::Color::Black);
+        menuButton.setFillColor(context->assetMan->GetMainTextColor());
+        menuButton.setOutlineColor(sf::Color::Black);
+        exitButton.setFillColor(context->assetMan->GetMainTextColor());
+        exitButton.setOutlineColor(sf::Color::Black);
+    }
+    else if (isMenuButSelected)
+    {
+        menuButton.setFillColor(sf::Color::White);
+        menuButton.setOutlineColor(sf::Color::Black);
+        restartButton.setFillColor(context->assetMan->GetMainTextColor());
+        restartButton.setOutlineColor(sf::Color::Black);
+        exitButton.setFillColor(context->assetMan->GetMainTextColor());
+        exitButton.setOutlineColor(sf::Color::Black);
+    }
+        else if (isExitButSelected)
+    {
+        exitButton.setFillColor(sf::Color::White);
+        exitButton.setOutlineColor(sf::Color::Black);
+        restartButton.setFillColor(context->assetMan->GetMainTextColor());
+        restartButton.setOutlineColor(sf::Color::Black);
+        menuButton.setFillColor(context->assetMan->GetMainTextColor());
+        menuButton.setOutlineColor(sf::Color::Black);
+    }
+
+    if (isRestartButPressed)
+    {
+        RestartGame();
+        context->stateMan->Add(std::make_unique<StateGameSFML>(context), true);
+    }
+    else if (isMenuButPressed)
+    {
+        RestartGame();
+        context->stateMan->Add(std::make_unique<StateMenuSFML>(context), true);
+    }
+    else if (isExitButPressed)
+    {
+        context->renderWin->close();
+        context->quit = true;
+    }
+
+    if (context->isMute && music.getVolume() != 0 && sound.getVolume() != 0)
     {
         music.setVolume(0);
+        sound.setVolume(0);
     }
     
-    if (!context->isMute && music.getVolume() == 0)
+    if (!context->isMute && music.getVolume() == 0 && sound.getVolume() != 0)
     {
         music.setVolume(70);
+        sound.setVolume(100);
     }
 }
 
 void StateGameOverSFML::Display()
 {
     context->renderWin->draw(bgSprite);
+    context->renderWin->draw(logoSprite);
     context->renderWin->draw(gameOverText);
-    context->renderWin->draw(restartText);
+    context->renderWin->draw(restartButton);
+    context->renderWin->draw(menuButton);
+    context->renderWin->draw(exitButton);
     context->renderWin->display();
 }
 

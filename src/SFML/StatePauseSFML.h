@@ -34,11 +34,39 @@ private:
     /*! \brief Texte du titre de pause */
     sf::Text pauseText;
 
-    /*! \brief Texte indiquant la touche pour reprendre le jeu */
-    sf::Text resumeText;
-
     /*! \brief Sprite du fond d'écran */
     sf::Sprite bgSprite;
+    /*! \brief Sprite du logo du jeu */
+    sf::Sprite logoSprite;
+
+    // Boutons
+
+    /*! \brief Texte du bouton reprendre */
+    sf::Text resumeButton;
+    /*! \brief Texte du bouton menu */
+    sf::Text menuButton;
+    /*! \brief Texte du bouton quitter */
+    sf::Text exitButton;
+
+    /*! \brief Indique si le bouton "reprendre" est selectionné */
+    bool isResumeButSelected;
+    /*! \brief Indique si le bouton "reprendre" est pressé */
+    bool isResumeButPressed;
+
+    /*! \brief Indique si le bouton "Menu" est selectionné */
+    bool isMenuButSelected;
+    /*! \brief Indique si le bouton "Menu" est pressé */
+    bool isMenuButPressed;
+
+    /*! \brief Indique si le bouton "quitter" est selectionné */
+    bool isExitButSelected;
+    /*! \brief Indique si le bouton "quitter" est pressé */
+    bool isExitButPressed;
+
+    /*! \brief Son tampon de l'effet sonore du menu */
+    sf::SoundBuffer buffer;
+    /*! \brief Effet sonore du menu */
+    sf::Sound sound;
 };
 
 #endif // __STATEPAUSESFML_H__
