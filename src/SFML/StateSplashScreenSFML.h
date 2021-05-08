@@ -38,18 +38,10 @@ private:
     /*! \brief Correspond à la durée de l'Etat */
     double duration;
 
-    /*! \brief Texture du fond d'écran */
-    sf::Texture bgTex;
     /*! \brief Sprite du fond d'écran */
     sf::Sprite bgSprite;
-
-    /*! \brief Police d'ecriture des textes */
-    sf::Font textFont;
-    /*! \brief Couleur des textes de l'UI */
-    sf::Color textColor;
-
-    /*! \brief Texte du titre principal */
-    sf::Text gameText;
+    /*! \brief Sprite du logo du jeu */
+    sf::Sprite logoSprite;
 
     /*! \brief Texte du sous titre */
     sf::Text madeByText;

@@ -37,25 +37,17 @@ void StateGameSFML::Init()
     hitSound.setBuffer(hitBuffer);
 
     // Chargement de la tileMap
-    tileTexture.loadFromFile(context->map->GetTileset()->GetTileMapPath());
-    tileSprite.setTexture(tileTexture);
+    context->assetMan->SetTileTexture(context->map->GetTileset()->GetTileMapPath());
+    tileSprite.setTexture(context->assetMan->GetTileTexture());
 
     // Chargement de la texture du joueur
     playerSprite.setTexture(context->assetMan->GetPlayerTexture());
 
-    // Chargement de la texture des ennemies
-    enemySprite.setTexture(context->assetMan->GetTextureEnemy()[0]);
-
     // Chargement de la texture de l'ombre
     shadowSprite.setTexture(context->assetMan->GetShadowTexture());
 
-    // Initialisation UI
-    assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
-    textColor = sf::Color(245, 222, 92);
-
     // Initialisation coeur et vie pour l'UI
-    heartTex.loadFromFile("./data/textures/UI/heart.png");
-    heartSprite.setTexture(heartTex);
+    heartSprite.setTexture(context->assetMan->GetTextureHeart());
     heartSprite.setScale(0.1f, 0.1f);
     heartSprite.setOrigin(heartSprite.getLocalBounds().left +
                               heartSprite.getLocalBounds().width / 2.0f,
@@ -63,8 +55,8 @@ void StateGameSFML::Init()
                               heartSprite.getLocalBounds().height / 2.0f);
     heartSprite.setPosition(20, 30);
 
-    hpText.setFont(textFont);
-    hpText.setFillColor(textColor);
+    hpText.setFont(context->assetMan->GetMainFont());
+    hpText.setFillColor(context->assetMan->GetMainTextColor());
     hpText.setOutlineColor(sf::Color::Black);
     hpText.setOutlineThickness(2);
     hpText.setString("0/0");
@@ -74,8 +66,8 @@ void StateGameSFML::Init()
     hpText.setPosition(60, 30);
 
     // Initialisation du texte des PNJ
-    npcText.setFont(textFont);
-    npcText.setFillColor(textColor);
+    npcText.setFont(context->assetMan->GetMainFont());
+    npcText.setFillColor(context->assetMan->GetMainTextColor());
     npcText.setOutlineColor(sf::Color::Black);
     npcText.setOutlineThickness(2);
     npcText.setString("");
@@ -109,6 +101,16 @@ void StateGameSFML::Init()
     isAttacking=false;
     
     hasInteracted=false;
+
+    for (int i = 0; i < (int)context->enemies.size(); i++)
+    {
+        enemySpritesID.push_back(rand()%context->assetMan->GetTextureEnemy().size());
+    }
+    
+    for (int i = 0; i < (int)context->npc.size(); i++)
+    {
+        npcSpritesID.push_back(rand()%context->assetMan->GetTextureNPC().size());
+    }
 }
 
 void StateGameSFML::ProcessInput()
@@ -498,7 +500,7 @@ void StateGameSFML::UpdateNPCs(){
 
 void StateGameSFML::Display()
 {
-    context->renderWin->clear();
+    context->renderWin->clear(sf::Color(128,128,0));
 
     DisplayMap();
     DisplayPlayer();
@@ -608,6 +610,9 @@ void StateGameSFML::DisplayEnemies()
                 enemySprite.setColor(sf::Color::White);
             }
 
+            // Chargement de la texture des ennemies
+            enemySprite.setTexture(context->assetMan->GetTextureEnemy()[enemySpritesID[i]]);
+            
             context->renderWin->draw(enemySprite);
         }
     }
@@ -626,11 +631,14 @@ void StateGameSFML::DisplayNPC(){
         context->renderWin->draw(shadowSprite);
 
         // Affichage des NPC
-        playerSprite.setPosition(npcX, npcY);
+        npcSprite.setPosition(npcX, npcY);
         
-        playerSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
+        npcSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
+
+        // Chargement de la texture des npc
+        npcSprite.setTexture(context->assetMan->GetTextureNPC()[npcSpritesID[i]]);
     
-        context->renderWin->draw(playerSprite);
+        context->renderWin->draw(npcSprite);
     }    
 }
 
@@ -653,7 +661,7 @@ void StateGameSFML::DisplayCollisionBox(
                     + std::to_string(cb->GetY()) + " )";
     
     
-    sf::Text pos_text(position, textFont);   
+    sf::Text pos_text(position, context->assetMan->GetMainFont());   
 
     pos_text.setPosition(cb->GetX() -substX -25, cb->GetY() -substY+10);
     pos_text.setCharacterSize(15);
@@ -662,7 +670,7 @@ void StateGameSFML::DisplayCollisionBox(
 
     // Affichage ID
     std::string ID = "ID = " + std::to_string(id);
-    sf::Text id_text(ID, textFont);
+    sf::Text id_text(ID, context->assetMan->GetMainFont());
     id_text.setPosition(cb->GetX() -substX -17, cb->GetY() -substY-10);
 
     id_text.setCharacterSize(15);
@@ -717,7 +725,7 @@ void StateGameSFML::DisplayDebug(){
 
    
     //Affichage des FPS
-    sf::Text fps_text(std::to_string(fps), textFont);
+    sf::Text fps_text(std::to_string(fps), context->assetMan->GetMainFont());
 
     fps_text.setPosition(winWidth - 35, 10);
     fps_text.setCharacterSize(20);
@@ -730,6 +738,8 @@ void StateGameSFML::Pause()
 {
     isPaused = true;
     runningSound.stop();
+    music.pause();
+    hitSound.stop();
 }
 
 void StateGameSFML::Start()
@@ -738,4 +748,5 @@ void StateGameSFML::Start()
     deltaTime = 0;
     deltaClock.restart();
     fpsClock.restart();
+    music.play();
 }

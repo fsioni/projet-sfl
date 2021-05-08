@@ -72,8 +72,8 @@ private:
     /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
 
-    sf::Texture tileTexture;
-    sf::Sprite tileSprite, playerSprite, shadowSprite, enemySprite;
+    sf::Sprite tileSprite, playerSprite, shadowSprite, enemySprite, npcSprite;
+    std::vector<int> enemySpritesID, npcSpritesID; 
 
     /*! \brief Horloge pour le delta time */
     sf::Clock deltaClock;
@@ -127,17 +127,11 @@ private:
     /*! \brief Hauteur de la map */
     int mapHeight;
 
-    /*! \brief Police des textes */
-    sf::Font textFont;
-    /*! \brief Couleur des textes de l'UI */
-    sf::Color textColor;
     /*! \brief Texte indiquant le nombre d'hp du joueur */
     sf::Text hpText;
     /*! \brief Texte indiquant la phrase que dit le PNJ à proximité*/
     sf::Text npcText;
 
-    /*! \brief Texture du coeur */
-    sf::Texture heartTex;
     /*! \brief Sprite du coeur */
     sf::Sprite heartSprite;
 
