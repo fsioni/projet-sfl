@@ -30,6 +30,9 @@ void StateGameOverSFML::Init()
 
     music.play();
 
+    bgSprite.setTexture(context->assetMan->GetTextureBackground());
+    bgSprite.setScale(0.5f, 0.5f);
+
     gameOverText.setFont(context->assetMan->GetMainFont());
     gameOverText.setFillColor(sf::Color::Red);
     gameOverText.setOutlineColor(sf::Color::Black);
@@ -41,6 +44,7 @@ void StateGameOverSFML::Init()
                             gameOverText.getLocalBounds().top + 
                             gameOverText.getLocalBounds().height / 2.0f);
     gameOverText.setPosition(winx / 2.0f, 200);
+    gameOverText.setFillColor(sf::Color::Transparent);
 
    ///// BUTTONS
     int butSize = 50;
@@ -300,6 +304,39 @@ void StateGameOverSFML::Update()
         music.setVolume(70);
         sound.setVolume(100);
     }
+        sf::Uint8 brightness = gameOverText.getFillColor().a;
+        if (brightness < 254)
+        {
+            brightness += 2;
+
+            sf::Color color = sf::Color(sf::Color::Red);
+            color.a = brightness;
+
+            gameOverText.setFillColor(color);
+
+            color = restartButton.getFillColor();
+            color.a = brightness;
+            restartButton.setFillColor(color);
+
+            color = menuButton.getFillColor();
+            color.a = brightness;
+            menuButton.setFillColor(color);
+
+            color = exitButton.getFillColor();
+            color.a = brightness;
+            exitButton.setFillColor(color);
+
+            color = sf::Color::Black;
+            color.a = brightness;
+            gameOverText.setOutlineColor(color);
+            restartButton.setOutlineColor(color);
+            menuButton.setOutlineColor(color);
+            exitButton.setOutlineColor(color);
+
+            color = sf::Color::White;
+            color.a = brightness;
+            bgSprite.setColor(color);
+        }
 }
 
 void StateGameOverSFML::Display()
