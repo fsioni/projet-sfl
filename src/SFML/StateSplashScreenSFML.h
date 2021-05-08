@@ -32,9 +32,6 @@ private:
     /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
 
-    /*! \brief Correspond à la durée de l'Etat */
-    double duration;
-
     /*! \brief Sprite du fond d'écran */
     sf::Sprite bgSprite;
     /*! \brief Sprite du logo du jeu */
