@@ -43,9 +43,6 @@ void StateGameSFML::Init()
     // Chargement de la texture du joueur
     playerSprite.setTexture(context->assetMan->GetPlayerTexture());
 
-    // Chargement de la texture des ennemies
-    enemySprite.setTexture(context->assetMan->GetTextureEnemy()[0]);
-
     // Chargement de la texture de l'ombre
     shadowSprite.setTexture(context->assetMan->GetShadowTexture());
 
@@ -104,6 +101,16 @@ void StateGameSFML::Init()
     isAttacking=false;
     
     hasInteracted=false;
+
+    for (int i = 0; i < (int)context->enemies.size(); i++)
+    {
+        enemySpritesID.push_back(rand()%context->assetMan->GetTextureEnemy().size());
+    }
+    
+    for (int i = 0; i < (int)context->npc.size(); i++)
+    {
+        npcSpritesID.push_back(rand()%context->assetMan->GetTextureNPC().size());
+    }
 }
 
 void StateGameSFML::ProcessInput()
@@ -603,6 +610,9 @@ void StateGameSFML::DisplayEnemies()
                 enemySprite.setColor(sf::Color::White);
             }
 
+            // Chargement de la texture des ennemies
+            enemySprite.setTexture(context->assetMan->GetTextureEnemy()[enemySpritesID[i]]);
+            
             context->renderWin->draw(enemySprite);
         }
     }
@@ -621,11 +631,14 @@ void StateGameSFML::DisplayNPC(){
         context->renderWin->draw(shadowSprite);
 
         // Affichage des NPC
-        playerSprite.setPosition(npcX, npcY);
+        npcSprite.setPosition(npcX, npcY);
         
-        playerSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
+        npcSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
+
+        // Chargement de la texture des npc
+        npcSprite.setTexture(context->assetMan->GetTextureNPC()[npcSpritesID[i]]);
     
-        context->renderWin->draw(playerSprite);
+        context->renderWin->draw(npcSprite);
     }    
 }
 

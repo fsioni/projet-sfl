@@ -72,7 +72,8 @@ private:
     /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
 
-    sf::Sprite tileSprite, playerSprite, shadowSprite, enemySprite;
+    sf::Sprite tileSprite, playerSprite, shadowSprite, enemySprite, npcSprite;
+    std::vector<int> enemySpritesID, npcSpritesID; 
 
     /*! \brief Horloge pour le delta time */
     sf::Clock deltaClock;

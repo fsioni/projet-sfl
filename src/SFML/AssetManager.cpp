@@ -6,13 +6,67 @@ AssetManager::AssetManager()
 {
     SetPlayerTexture("data/textures/characters/Male/Male 01-1.png");
     SetShadowTexture("data/textures/characters/Shadow/Shadow 1.png");
-    AddTextureEnemy("data/textures/characters/Soldier/Soldier 01-1.png");
-    AddTextureNPC("data/textures/characters/Female/Female 01-1.png");
     SetBackgroundTexture("data/textures/UI/menuBackground.png");
     SetHeartTexture("data/textures/UI/heart.png");
     SetLogoTexture("data/textures/logo.png");
     SetMainFont("data/fonts/BebasNeue-Regular.ttf");
     setMainTextColor(sf::Color(245, 222, 92));
+
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 01-1.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 01-2.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 01-3.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 01-4.png");
+
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 02-1.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 02-2.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 02-3.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 02-4.png");
+
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 03-1.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 03-2.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 03-3.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 03-4.png");
+
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 04-1.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 04-2.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 04-2.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 04-2.png");
+
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 05-1.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 05-2.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 05-3.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 05-4.png");
+
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 06-1.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 06-2.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 06-3.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 06-4.png");
+
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 07-1.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 07-2.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 07-3.png");
+    AddTextureEnemy("data/textures/characters/Soldier/Soldier 07-4.png");
+
+
+    AddTextureNPC("data/textures/characters/Female/Female 01-1.png");
+    AddTextureNPC("data/textures/characters/Female/Female 01-2.png");
+    AddTextureNPC("data/textures/characters/Female/Female 01-3.png");
+    AddTextureNPC("data/textures/characters/Female/Female 01-4.png");
+
+    AddTextureNPC("data/textures/characters/Female/Female 02-1.png");
+    AddTextureNPC("data/textures/characters/Female/Female 02-2.png");
+    AddTextureNPC("data/textures/characters/Female/Female 02-3.png");
+    AddTextureNPC("data/textures/characters/Female/Female 02-4.png");
+
+    AddTextureNPC("data/textures/characters/Female/Female 03-1.png");
+    AddTextureNPC("data/textures/characters/Female/Female 03-2.png");
+    AddTextureNPC("data/textures/characters/Female/Female 03-3.png");
+    AddTextureNPC("data/textures/characters/Female/Female 03-4.png");
+
+    AddTextureNPC("data/textures/characters/Female/Female 04-1.png");
+    AddTextureNPC("data/textures/characters/Female/Female 04-2.png");
+    AddTextureNPC("data/textures/characters/Female/Female 04-3.png");
+    AddTextureNPC("data/textures/characters/Female/Female 04-4.png");
 }
 
 AssetManager::~AssetManager()
@@ -51,14 +105,6 @@ void AssetManager::AddTextureNPC(std::string fileTexture)
         std::cout << "Echec AddTextureNPC("
                   << fileTexture << ") : fichier inexistant"
                   << std::endl;
-}
-
-void AssetManager::RemoveTextureEnemy(int indice)
-{
-}
-
-void AssetManager::RemoveTextureNPC(int indice)
-{
 }
 
 void AssetManager::SetPlayerTexture(std::string fileTexture)

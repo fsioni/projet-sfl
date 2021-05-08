@@ -19,8 +19,6 @@ public:
 
     void AddTextureEnemy(std::string fileTexture);
     void AddTextureNPC(std::string fileTexture);
-    void RemoveTextureEnemy(int indice);
-    void RemoveTextureNPC(int indice);
 
     void SetPlayerTexture(std::string fileTexture);
     void SetTileTexture(std::string fileTexture);
