@@ -20,6 +20,8 @@ StateGameOverSFML::~StateGameOverSFML()
 
 void StateGameOverSFML::Init()
 {
+    handCursor.loadFromSystem(sf::Cursor::Hand);
+    pointCursor.loadFromSystem(sf::Cursor::Arrow);
     assert(buffer.loadFromFile("data/sounds/sfx/menuNav.wav"));
 
     sound.setBuffer(buffer);
@@ -171,11 +173,6 @@ void StateGameOverSFML::ProcessInput()
                     OnClick();
                 break;
 
-                case sf::Keyboard::Key::X:
-                    context->renderWin->close();
-                    context->quit = true;
-                    break;
-
                 case sf::Keyboard::M:
                     context->isMute = !(context->isMute);
                     break;                
@@ -187,10 +184,13 @@ void StateGameOverSFML::ProcessInput()
     }
 
     sf::Vector2i mousePos = sf::Mouse::getPosition(*context->renderWin.get());
+    context->renderWin->setMouseCursor(pointCursor);
 
     // Bouton Rejouer
-    sf::IntRect button(restartButton.getPosition().x-10, restartButton.getPosition().y,
-        restartButton.getGlobalBounds().width+10, restartButton.getGlobalBounds().height);
+    sf::IntRect button(restartButton.getPosition().x-
+        restartButton.getGlobalBounds().width/2, restartButton.getPosition().y-
+        restartButton.getGlobalBounds().height/2, restartButton.getGlobalBounds().width,
+        restartButton.getGlobalBounds().height);
 
     if (button.contains(mousePos))
     {
@@ -200,8 +200,10 @@ void StateGameOverSFML::ProcessInput()
     }
     
     // Bouton Instructions
-    button = sf::IntRect(menuButton.getPosition().x-10, menuButton.getPosition().y,
-        menuButton.getGlobalBounds().width+10, menuButton.getGlobalBounds().height);
+    button = sf::IntRect(menuButton.getPosition().x-
+        menuButton.getGlobalBounds().width/2, menuButton.getPosition().y-
+        menuButton.getGlobalBounds().height/2, menuButton.getGlobalBounds().width,
+        menuButton.getGlobalBounds().height);
 
     if (button.contains(mousePos))
     {
@@ -211,8 +213,10 @@ void StateGameOverSFML::ProcessInput()
     }
     
     // Bouton Quitter
-    button = sf::IntRect(exitButton.getPosition().x-10, exitButton.getPosition().y,
-        exitButton.getGlobalBounds().width+10, exitButton.getGlobalBounds().height);
+    button = sf::IntRect(exitButton.getPosition().x-
+        exitButton.getGlobalBounds().width/2, exitButton.getPosition().y-
+        exitButton.getGlobalBounds().height/2, exitButton.getGlobalBounds().width,
+        exitButton.getGlobalBounds().height);
 
     if (button.contains(mousePos))
     {

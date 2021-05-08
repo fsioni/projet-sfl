@@ -73,6 +73,9 @@ private:
     sf::SoundBuffer buffer;
     /*! \brief Effet sonore du menu */
     sf::Sound sound;
+
+    sf::Cursor handCursor;
+    sf::Cursor pointCursor;
 };
 
 #endif // __STATEGAMEOVERSFML_H__

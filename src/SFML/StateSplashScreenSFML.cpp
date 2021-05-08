@@ -46,8 +46,6 @@ void StateSplashScreenSFML::Init()
                             madeByText.getLocalBounds().top +
                             madeByText.getLocalBounds().height / 2.0f);
     madeByText.setPosition(220, winy / 2.0f + 200.0f);
-
-    start = std::clock();
 }
 
 void StateSplashScreenSFML::ProcessInput()
@@ -75,10 +73,9 @@ void StateSplashScreenSFML::ProcessInput()
                 context->stateMan->
                     Add(std::make_unique<StateMenuSFML>(context), true);
                 break;
-
-            case sf::Keyboard::X:
-                context->renderWin->close();
-                context->quit = true;
+        
+                context->stateMan->
+                    Add(std::make_unique<StateMenuSFML>(context), true);
                 break;
 
             case sf::Keyboard::M:
@@ -95,6 +92,11 @@ void StateSplashScreenSFML::ProcessInput()
             }
 
         default:
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                context->stateMan->
+                Add(std::make_unique<StateMenuSFML>(context), true);
+            }
             break;
         }
     }
@@ -102,7 +104,6 @@ void StateSplashScreenSFML::ProcessInput()
 
 void StateSplashScreenSFML::Update()
 {
-    duration = (std::clock() - start) / (double)CLOCKS_PER_SEC;
 
     if (music.getStatus() == sf::Music::Status::Stopped)
     {

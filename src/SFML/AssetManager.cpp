@@ -11,6 +11,7 @@ AssetManager::AssetManager()
     SetLogoTexture("data/textures/logo.png");
     SetMainFont("data/fonts/BebasNeue-Regular.ttf");
     setMainTextColor(sf::Color(245, 222, 92));
+    SetSoundTexture("data/textures/UI/volume.png");
 
     AddTextureEnemy("data/textures/characters/Soldier/Soldier 01-1.png");
     AddTextureEnemy("data/textures/characters/Soldier/Soldier 01-2.png");
@@ -191,6 +192,20 @@ void AssetManager::SetLogoTexture(std::string fileTexture)
                   << std::endl;
 }
 
+void AssetManager::SetSoundTexture(std::string fileTexture) 
+{
+    std::fstream file;
+    file.open(fileTexture.c_str(), std::fstream::in);
+    if (file)
+    {
+        textureSound.loadFromFile(fileTexture);
+    }
+    else
+        std::cout << "Echec SetSoundTexture( "
+                  << fileTexture << " ) : fichier inexistant"
+                  << std::endl;
+}
+
 void AssetManager::SetMainFont(std::string fileFont) 
 {
     std::fstream file;
@@ -282,6 +297,11 @@ const sf::Texture& AssetManager::GetTextureHeart() const
 const sf::Texture& AssetManager::GetTextureLogo() const
 {
     return textureLogo;
+}
+
+const sf::Texture& AssetManager::GetTextureSound() const
+{
+    return textureSound;
 }
 
 const sf::Font& AssetManager::GetMainFont() const

@@ -32,9 +32,6 @@ private:
     /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
 
-    /*! \brief Horloge correspondant au temps d'execution de l'Etat */
-    std::clock_t start;
-
     /*! \brief Correspond à la durée de l'Etat */
     double duration;
 

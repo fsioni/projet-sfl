@@ -18,10 +18,16 @@ StateGameSFML::StateGameSFML(std::shared_ptr<Context> &cContext)
 
 StateGameSFML::~StateGameSFML()
 {
+    sf::Cursor pointCursor;
+    pointCursor.loadFromSystem(sf::Cursor::Arrow);
+    context->renderWin->setMouseCursor(pointCursor);
 }
 
 void StateGameSFML::Init()
 {
+    sf::Cursor pointCursor;
+    pointCursor.loadFromSystem(sf::Cursor::Arrow);
+    context->renderWin->setMouseCursor(pointCursor);
     // Chargement et lecture de la musique
     assert(music.openFromFile("data/sounds/music/01town2.wav"));
     assert(runningBuffer.loadFromFile("data/sounds/sfx/walking.wav"));
@@ -204,11 +210,6 @@ void StateGameSFML::ProcessInput()
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::P))
             {
                 context->isDebug = (!context->isDebug);
-            }
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X))
-            {
-                context->renderWin->close();
-                context->quit = true;
             }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::M))
             {
@@ -749,4 +750,7 @@ void StateGameSFML::Start()
     deltaClock.restart();
     fpsClock.restart();
     music.play();
+    sf::Cursor pointCursor;
+    pointCursor.loadFromSystem(sf::Cursor::Arrow);
+    context->renderWin->setMouseCursor(pointCursor);
 }

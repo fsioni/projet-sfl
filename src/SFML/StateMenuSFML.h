@@ -38,6 +38,9 @@ private:
     sf::Sprite bgSprite;
     /*! \brief Sprite du logo du jeu */
     sf::Sprite logoSprite;
+    /*! \brief Sprite de l'icone de son du jeu */
+    sf::Sprite soundSprite;
+
 
     /*! \brief Texte du menu du jeu */
     sf::Text menuTitle;
@@ -64,6 +67,11 @@ private:
     /*! \brief Texte indiquant la touche pour quitter */
     sf::Text quitSubMenuText;
 
+    /*! \brief Indique si le bouton "son" est selectionné */
+    bool isSoundButSelected;
+    /*! \brief Indique si le bouton "son" est pressé */
+    bool isSoundButPressed;
+
     /*! \brief Indique si le bouton "jouer" est selectionné */
     bool isPlayButSelected;
     /*! \brief Indique si le bouton "jouer" est pressé */
@@ -89,5 +97,8 @@ private:
     sf::SoundBuffer buffer;
     /*! \brief Effet sonore du menu */
     sf::Sound sound;
+
+    sf::Cursor handCursor;
+    sf::Cursor pointCursor;
 };
 #endif // __STATEMENUSFML_H__
