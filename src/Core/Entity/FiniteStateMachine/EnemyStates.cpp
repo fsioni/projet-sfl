@@ -1,6 +1,6 @@
 #include "EnemyStates.h"
 #include "../Enemy.h"
-#include "StateBehavior.h"
+//#include "StateBehavior.h"
 
 #include <iostream>
 #include <math.h>

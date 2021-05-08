@@ -26,7 +26,8 @@ public:
     */
     SpawnsLayer(const std::string &objectgroupTagPlayer,
                 const std::string &objectgroupTagEnnemy,
-                const std::string &objectgroupTagNPC);
+                const std::string &objectgroupTagNPC,
+                const std::string &objectgroupTagAnimal);
 
     /*! \brief Destructeur
     *
@@ -73,6 +74,12 @@ public:
     */
     std::vector<SpawnPoint> GetNPCSpawns() const;
 
+    /*! \brief Fonction permettant de récupérer les SpawnPoint des Animal.
+    *
+    *   \return Retourne le tableau dynamique de SpawnPoint des Animal.
+    */
+    std::vector<SpawnPoint> GetAnimalSpawns() const;
+
     /*! \brief Test de regression.
     *
     *  Effectue une série de test sur toutes les fonctions
@@ -98,6 +105,9 @@ private:
 
     std::vector<std::string> NpcDialog;
     std::vector<EntityDirection> NpcDirection;
+
+
+    std::vector<SpawnPoint> animalSpawns;
 };
 
 #endif

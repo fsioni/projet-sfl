@@ -32,7 +32,9 @@ public:
     *
     */
     void UpdateEnemies();
+
     void UpdateNPCs();
+    void UpdateAnimals();
 
     void Display();
 
@@ -52,6 +54,7 @@ public:
     void DisplayEnemies();
 
     void DisplayNPC();
+    void DisplayAnimals();
 
     /*! \brief Affichage une CollisionBox sur la fenêtre SFML
     *

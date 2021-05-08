@@ -10,7 +10,8 @@ SpawnsLayer::SpawnsLayer()
 
 SpawnsLayer::SpawnsLayer(const std::string &objectgroupTagPlayer,
                          const std::string &objectgroupTagEnnemy,
-                         const std::string &objectgroupTagNPC)
+                         const std::string &objectgroupTagNPC,
+                         const std::string &objectgroupTagAnimal)
 {
     std::string objectTag;
     
@@ -22,6 +23,13 @@ SpawnsLayer::SpawnsLayer(const std::string &objectgroupTagPlayer,
     {
         objectTag = GetInsideTag(objectgroupTagEnnemy, "object", i);
         ennemySpawns.push_back(SpawnPoint(objectTag));
+    }
+
+    count = CountTag(objectgroupTagAnimal, "object");
+    for (int i = 0; i < count; i++)
+    {
+        objectTag = GetInsideTag(objectgroupTagAnimal, "object", i);
+        animalSpawns.push_back(SpawnPoint(objectTag));
     }
 
 
@@ -85,6 +93,11 @@ std::vector<SpawnPoint> SpawnsLayer::GetNPCSpawns() const
     return NpcSpawns;
 }
 
+std::vector<SpawnPoint> SpawnsLayer::GetAnimalSpawns() const
+{
+    return animalSpawns;
+}
+
 void SpawnsLayer::AddNPC(SpawnPoint const &newSpawn)
 {
     NpcSpawns.push_back(newSpawn);
@@ -132,11 +145,13 @@ void SpawnsLayer::Test() const{
     std::string tagPlayer = "<objectgroup id=\"4\" name=\"PlayerSpawn\">\n<object id=\"14\" x=\"575\" y=\"473\"/>\n</objectgroup>";
     std::string tagEnemies = "<objectgroup id=\"6\" name=\"EnemySpawn\">\n<object id=\"11\" x=\"368.374\" y=\"190.925\"/>\n<object id=\"12\" x=\"316.712\" y=\"372.866\"/>\n<object id=\"13\" x=\"183.064\" y=\"216.757\"/>\n</objectgroup>";
     std::string tagNPC = "<objectgroup id=\"7\" name=\"NPCSpawn\">\n<object id=\"11\" x=\"368.374\" y=\"190.925\"/>\n<object id=\"12\" x=\"316.712\" y=\"372.866\"/>\n<object id=\"13\" x=\"183.064\" y=\"216.757\"/>\n</objectgroup>";
-    SpawnsLayer spawnsLayer2(tagPlayer, tagEnemies, tagNPC);
+    std::string tagAnimal = "<objectgroup id=\"8\" name=\"NPCSpawn\">\n<object id=\"11\" x=\"368.374\" y=\"190.925\"/>\n<object id=\"12\" x=\"316.712\" y=\"372.866\"/>\n</objectgroup>";
+    SpawnsLayer spawnsLayer2(tagPlayer, tagEnemies, tagNPC, tagAnimal);
     assert(spawnsLayer2.GetPlayerSpawn().GetX()==575);
     assert(spawnsLayer2.GetPlayerSpawn().GetY()==473);
     assert(spawnsLayer2.GetEnemySpawns().size()==3);
     assert(spawnsLayer2.GetNPCSpawns().size()==3);
+    assert(spawnsLayer2.animalSpawns.size()==2);
     std::cout << "ok" << std::endl;
 
     std::cout << "AddEnemy(SpawnPoint const &newSpawn) : ";

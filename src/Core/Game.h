@@ -7,6 +7,7 @@
 #include "Entity/Player.h"
 #include "Entity/Enemy.h"
 #include "Entity/NPC.h"
+#include "Entity/Animal.h"
 
 #include "../SFML/AssetManager.h"
 #include <string>
@@ -29,6 +30,7 @@ struct Context
     std::unique_ptr<Player> player;
     std::vector<std::shared_ptr<Enemy>> enemies;
     std::vector<NPC *> npc;
+    std::vector<Animal *> animals;
     bool isDebug;
     bool isMute;
     bool quit;
@@ -81,6 +83,20 @@ struct Context
             map->GetCollisionLayer()->AddCollisionBoxEntity(
                 newNPC->GetID(), new Box(x, y, 32, 32));
 
+        }
+
+        
+        // Initialisation des animaux
+        count = map->GetSpawnsLayer()->GetAnimalSpawns().size();
+        for (int i = 0; i < count; i++){
+            x = map->GetSpawnsLayer()->GetAnimalSpawns()[i].GetX();
+            y = map->GetSpawnsLayer()->GetAnimalSpawns()[i].GetY();
+
+            Animal * animal = new Animal(x, y, 2, "animal");
+            animals.push_back(animal);
+            
+            map->GetCollisionLayer()->AddCollisionBoxEntity(
+                animal->GetID(), new Box(x, y, 32, 32));
         }
 
         isDebug = false;

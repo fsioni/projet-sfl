@@ -7,7 +7,7 @@ OBJ_FILES += obj/main.o obj/Game.o
 
 ##Entity
 OBJ_FILES += obj/EntityWithoutHP.o obj/EntityWithHP.o obj/Player.o 
-OBJ_FILES += obj/Enemy.o obj/UniqueID.o obj/NPC.o
+OBJ_FILES += obj/Enemy.o obj/UniqueID.o obj/NPC.o obj/Animal.o
 ##Layers
 OBJ_FILES += obj/MapLayer.o obj/CollisionLayer.o obj/SpawnsLayer.o
 
@@ -28,7 +28,7 @@ OBJ_FILES += obj/StateSplashScreenSFML.o obj/StateMenuSFML.o obj/StateGameSFML.o
 OBJ_FILES += obj/StatePauseSFML.o obj/StateGameOverSFML.o
 
 ## Finite State Machine 
-OBJ_FILES += obj/StateBehavior.o obj/EnemyStates.o obj/StateMachine.o
+OBJ_FILES += obj/StateBehavior.o obj/EnemyStates.o obj/StateMachine.o obj/AnimalStates.o
 
 
 
@@ -55,26 +55,29 @@ bin/exec : $(OBJ_FILES)
 obj/main.o: src/main.cpp src/Core/Game.h
 	$(COMPILATIONOBJ)
 
-obj/Game.o : src/Core/Game.cpp src/Core/StateManager/StateManager.h src/txt/StateSplashScreenTxt.h src/SFML/StateSplashScreenSFML.h
+obj/Game.o : src/Core/Game.cpp src/Core/Game.h src/Core/StateManager/StateManager.h src/txt/StateSplashScreenTxt.h src/SFML/StateSplashScreenSFML.h
 	$(COMPILATIONOBJ)
 
 ##Entity
-obj/UniqueID.o : src/Core/Entity/UniqueID.cpp
+obj/UniqueID.o : src/Core/Entity/UniqueID.cpp src/Core/Entity/UniqueID.h
 	$(COMPILATIONOBJ)
 
-obj/EntityWithoutHP.o : src/Core/Entity/EntityWithoutHP.cpp src/Core/Entity/UniqueID.h
+obj/EntityWithoutHP.o : src/Core/Entity/EntityWithoutHP.cpp src/Core/Entity/EntityWithoutHP.h src/Core/Entity/UniqueID.h
 	$(COMPILATIONOBJ)
 
-obj/EntityWithHP.o : src/Core/Entity/EntityWithHP.cpp src/Core/Entity/EntityWithoutHP.h 
+obj/EntityWithHP.o : src/Core/Entity/EntityWithHP.cpp  src/Core/Entity/EntityWithHP.h src/Core/Entity/EntityWithoutHP.h 
 	$(COMPILATIONOBJ)
 
-obj/Player.o : src/Core/Entity/Player.cpp src/Core/Entity/EntityWithHP.h src/Core/Entity/Enemy.h
+obj/Player.o : src/Core/Entity/Player.cpp src/Core/Entity/Player.h src/Core/Entity/EntityWithHP.h src/Core/Entity/Enemy.h
 	$(COMPILATIONOBJ)
 
-obj/Enemy.o : src/Core/Entity/Enemy.cpp src/Core/Entity/EntityWithHP.h src/Core/Entity/Player.h
+obj/Enemy.o : src/Core/Entity/Enemy.cpp  src/Core/Entity/Enemy.h src/Core/Entity/EntityWithHP.h src/Core/Entity/Player.h
 	$(COMPILATIONOBJ)
 
-obj/NPC.o : src/Core/Entity/NPC.cpp src/Core/Entity/EntityWithoutHP.h 
+obj/NPC.o : src/Core/Entity/NPC.cpp src/Core/Entity/NPC.h src/Core/Entity/EntityWithoutHP.h 
+	$(COMPILATIONOBJ)
+
+obj/Animal.o : src/Core/Entity/Animal.cpp src/Core/Entity/Animal.h src/Core/Entity/EntityWithoutHP.h 
 	$(COMPILATIONOBJ)
 
 ##Layers
@@ -146,10 +149,13 @@ obj/StateGameOverSFML.o : src/SFML/StateGameOverSFML.cpp src/SFML/StateGameOverS
 obj/StateBehavior.o : $(FSM)/StateBehavior.cpp  $(FSM)/StateBehavior.h
 	$(COMPILATIONOBJ)
 
-obj/EnemyStates.o : $(FSM)/EnemyStates.cpp $(FSM)/EnemyStates.h src/Core/Entity/EntityWithHP.h
+obj/EnemyStates.o : $(FSM)/EnemyStates.cpp $(FSM)/EnemyStates.h src/Core/Entity/Enemy.h
 	$(COMPILATIONOBJ)
 
 obj/StateMachine.o : $(FSM)/StateMachine.cpp $(FSM)/StateMachine.h  $(FSM)/StateMachine.h 
+	$(COMPILATIONOBJ)
+
+obj/AnimalStates.o : $(FSM)/AnimalStates.cpp $(FSM)/AnimalStates.h src/Core/Entity/Animal.h
 	$(COMPILATIONOBJ)
 
 

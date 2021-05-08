@@ -2,18 +2,27 @@
 #define ANIMAL_H
 
 #include "EntityWithoutHP.h"
+#include "FiniteStateMachine/StateMachine.h"
 
 class Animal : public EntityWithoutHP
 {
 public:
     Animal();
 
-    Animal(float x, float y, std::string name);
+    Animal(float x, float y, float speed, std::string name);
 
     ~Animal();
 
-    EntityDirection RandDirection();
+    StateMachine<Animal> *GetStateMachine() const;
 
-    void MoveRandomly(float vx, float vy);
+    void UpdateStateMachine(std::unique_ptr<Player> &player_,
+                            CollisionLayer *collision, int dt);
+
+    void RandDirection();
+    void ChangeDirection(bool collision);
+    void SetTimeNextChangeDirection();
+private:
+    StateMachine<Animal> *stateMachine;
+    double timeNextChangeDirection;
 };
 #endif // ANIMAL_H

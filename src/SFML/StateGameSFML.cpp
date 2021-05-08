@@ -272,6 +272,7 @@ void StateGameSFML::Update()
         UpdatePlayer();
         UpdateEnemies();
         UpdateNPCs();
+        UpdateAnimals();
         
     
         // Mise à jour texte UI
@@ -491,6 +492,24 @@ void StateGameSFML::UpdateNPCs(){
     }
 }
 
+void StateGameSFML::UpdateAnimals(){
+    CollisionLayer * colLayer = context->map->GetCollisionLayer();
+    for(int i=0; i<context->animals.size(); i++){
+        context->animals[i]->UpdateStateMachine(
+                context->player, colLayer,deltaTime);
+
+        float posX = context->animals[i]->GetPos_x();
+        float posY = context->animals[i]->GetPos_y();
+        int animalID = context->animals[i]->GetID();
+
+        if(colLayer->CollisionBoxEntityExist(animalID)){
+            Box * cbAnimal = colLayer->GetCollisionBoxesEntity()[animalID];
+            cbAnimal->SetPosition(posX, posY);
+        }
+    }
+}
+
+
 void StateGameSFML::Display()
 {
     context->renderWin->clear();
@@ -499,6 +518,7 @@ void StateGameSFML::Display()
     DisplayPlayer();
     DisplayEnemies();
     DisplayNPC();
+    DisplayAnimals();
 
     if (context->isDebug) //Affichage DEBUG
     {
@@ -624,6 +644,30 @@ void StateGameSFML::DisplayNPC(){
         playerSprite.setPosition(npcX, npcY);
         
         playerSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
+    
+        context->renderWin->draw(playerSprite);
+    }    
+}
+
+void StateGameSFML::DisplayAnimals(){
+    for (int i = 0; i < (int)context->animals.size(); i++)
+    {
+        int direction = context->animals[i]->GetDirection();
+        int animalX = context->animals[i]->GetPos_x() - substX - w / 2;
+        int animalY = context->animals[i]->GetPos_y() - substY - h / 2;
+
+        // Affichage de l'ombre
+        shadowSprite.setPosition(animalX, animalY);
+        shadowSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32, 32));
+        context->renderWin->draw(shadowSprite);
+
+        // Affichage des NPC
+        playerSprite.setPosition(animalX, animalY);
+        
+        if (context->animals[i]->GetIsMoving())
+            playerSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32, 32));
+        else
+            playerSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
     
         context->renderWin->draw(playerSprite);
     }    
