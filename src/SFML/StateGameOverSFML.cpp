@@ -30,26 +30,17 @@ void StateGameOverSFML::Init()
 
     music.play();
 
-    bgSprite.setTexture(context->assetMan->GetTextureBackground());
-    bgSprite.setScale(0.5f, 0.5f);
-    logoSprite.setTexture(context->assetMan->GetTextureLogo());
-    logoSprite.setOrigin(logoSprite.getLocalBounds().left +
-                            logoSprite.getLocalBounds().width / 2.0f,
-                            logoSprite.getLocalBounds().top +
-                            logoSprite.getLocalBounds().height / 2.0f);
-    logoSprite.setPosition(winx/2, winy/2-150);
-
     gameOverText.setFont(context->assetMan->GetMainFont());
-    gameOverText.setFillColor(context->assetMan->GetMainTextColor());
+    gameOverText.setFillColor(sf::Color::Red);
     gameOverText.setOutlineColor(sf::Color::Black);
     gameOverText.setOutlineThickness(2);
     gameOverText.setString("GAME OVER");
-    gameOverText.setCharacterSize(50);
+    gameOverText.setCharacterSize(150);
     gameOverText.setOrigin(gameOverText.getLocalBounds().left + 
                             gameOverText.getLocalBounds().width / 2.0f,
                             gameOverText.getLocalBounds().top + 
                             gameOverText.getLocalBounds().height / 2.0f);
-    gameOverText.setPosition(winx / 2.0f, winy - 50);
+    gameOverText.setPosition(winx / 2.0f, 200);
 
    ///// BUTTONS
     int butSize = 50;
@@ -157,12 +148,12 @@ void StateGameOverSFML::ProcessInput()
                     if (isRestartButSelected)
                     {
                         isRestartButSelected = false;
-                        isMenuButPressed = true;
+                        isMenuButSelected = true;
                         sound.play();
                     }
                     else if (isMenuButSelected)
                     {
-                        isMenuButPressed = false;
+                        isMenuButSelected = false;
                         isExitButSelected = true;
                         sound.play();
                     }
@@ -314,7 +305,6 @@ void StateGameOverSFML::Update()
 void StateGameOverSFML::Display()
 {
     context->renderWin->draw(bgSprite);
-    context->renderWin->draw(logoSprite);
     context->renderWin->draw(gameOverText);
     context->renderWin->draw(restartButton);
     context->renderWin->draw(menuButton);
