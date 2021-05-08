@@ -17,48 +17,35 @@ StateSplashScreenSFML::~StateSplashScreenSFML()
 
 void StateSplashScreenSFML::Init()
 {
-    assert(textFont.loadFromFile("./data/fonts/BebasNeue-Regular.ttf"));
-    assert(music.openFromFile("data/sounds/music/14entranceNL.wav"));
-    assert(bgTex.loadFromFile("data/textures/UI/menuBackground.png"));
-    textColor = sf::Color(245, 222, 92);
-
-    music.play();
-
-    bgSprite.setTexture(bgTex);
-    bgSprite.setScale(0.5f, 0.5f);
-
-    gameText.setFont(textFont);
-    madeByText.setFont(textFont);
-
-    gameText.setFillColor(textColor);
-    gameText.setOutlineColor(sf::Color::Black);
-    gameText.setOutlineThickness(3);
-
-    madeByText.setFillColor(textColor);
-    madeByText.setOutlineColor(sf::Color::Black);
-    madeByText.setOutlineThickness(2);
-
-    gameText.setString("Legend Of Nautibus");
-    madeByText.setString("Made by :\nSIONI Fares\nBAGNOl Stanislas\nCHOUGAR Lyes");
-
-    gameText.setCharacterSize(100);
-    madeByText.setCharacterSize(36);
-
     int winx = context->renderWin->getSize().x;
     int winy = context->renderWin->getSize().y;
 
-    gameText.setOrigin(gameText.getLocalBounds().left + 
-                        gameText.getLocalBounds().width / 2.0f,
-                        gameText.getLocalBounds().top + 
-                        gameText.getLocalBounds().height / 2.0f);
+    assert(music.openFromFile("data/sounds/music/14entranceNL.wav"));
 
+    music.play();
+
+    bgSprite.setTexture(context->assetMan->GetTextureBackground());
+    bgSprite.setScale(0.5f, 0.5f);
+
+    logoSprite.setTexture(context->assetMan->GetTextureLogo());
+    logoSprite.setOrigin(logoSprite.getLocalBounds().left +
+                            logoSprite.getLocalBounds().width / 2.0f,
+                            logoSprite.getLocalBounds().top +
+                            logoSprite.getLocalBounds().height / 2.0f);
+    logoSprite.setPosition(winx/2, winy/2-150);
+    logoSprite.setColor(sf::Color::Transparent);
+
+    madeByText.setFont(context->assetMan->GetMainFont());
+    madeByText.setFillColor(context->assetMan->GetMainTextColor());
+    madeByText.setOutlineColor(sf::Color::Black);
+    madeByText.setOutlineThickness(2);
+    madeByText.setString("Made by :\nSIONI Fares\nBAGNOl Stanislas\nCHOUGAR Lyes");
+    madeByText.setCharacterSize(46);
     madeByText.setOrigin(madeByText.getLocalBounds().left +
                             madeByText.getLocalBounds().width / 2.0f,
                             madeByText.getLocalBounds().top +
                             madeByText.getLocalBounds().height / 2.0f);
-
-    gameText.setPosition(winx / 2.0f, 235);
-    madeByText.setPosition(150, winy / 2.0f + 200.0f);
+    madeByText.setPosition(220, winy / 2.0f + 200.0f);
 
     start = std::clock();
 }
@@ -117,9 +104,25 @@ void StateSplashScreenSFML::Update()
 {
     duration = (std::clock() - start) / (double)CLOCKS_PER_SEC;
 
-    if (duration > 2)
+    if (music.getStatus() == sf::Music::Status::Stopped)
     {
         context->stateMan->Add(std::make_unique<StateMenuSFML>(context), true);
+    }else
+    {
+        sf::Uint8 brightness = logoSprite.getColor().a;
+        if (brightness < 255)
+        {
+            brightness += 3;
+        }
+        
+        sf::Color color = sf::Color(255, 255, 255, brightness);
+        logoSprite.setColor(color);
+        color = context->assetMan->GetMainTextColor();
+        color.a = brightness;
+        madeByText.setFillColor(color);
+        color = sf::Color::Black;
+        color.a = brightness;
+        madeByText.setOutlineColor(color);
     }
 
     if (context->isMute && music.getVolume() != 0)
@@ -137,7 +140,7 @@ void StateSplashScreenSFML::Display()
 {
     context->renderWin->clear(sf::Color(1, 31, 75));
     context->renderWin->draw(bgSprite);
-    context->renderWin->draw(gameText);
+    context->renderWin->draw(logoSprite);
     context->renderWin->draw(madeByText);
 
     context->renderWin->display();
