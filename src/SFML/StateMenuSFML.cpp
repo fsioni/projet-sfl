@@ -286,35 +286,35 @@ void StateMenuSFML::ProcessInput()
                 break;
             }
         default:
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                isPlayButPressed = false;
+                isInstructionButPressed = false;
+                isExitButPressed = false;
+
+                if (isPlayButSelected)
+                {
+                    isPlayButPressed = true;
+                }
+                else if (isInInstructionSubMenu)
+                {
+                    isInInstructionSubMenu = false;
+                    sound.play();
+                }
+                else if (isInstructionButSelected)
+                {
+                    isInstructionButPressed = true;
+                    sound.play();
+                }
+                else if (isExitButSelected)
+                {
+                    isExitButPressed = true;
+                }
+            }
             break;
         }
     }
 
-    if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-    {
-        isPlayButPressed = false;
-        isInstructionButPressed = false;
-        isExitButPressed = false;
-
-        if (isPlayButSelected)
-        {
-            isPlayButPressed = true;
-        }
-        else if (isInInstructionSubMenu)
-        {
-            isInInstructionSubMenu = false;
-            sound.play();
-        }
-        else if (isInstructionButSelected)
-        {
-            isInstructionButPressed = true;
-            sound.play();
-        }
-        else if (isExitButSelected)
-        {
-            isExitButPressed = true;
-        }
-    }
 }
 
 void StateMenuSFML::Update()
