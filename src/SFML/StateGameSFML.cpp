@@ -500,7 +500,7 @@ void StateGameSFML::UpdateNPCs(){
 
 void StateGameSFML::Display()
 {
-    context->renderWin->clear();
+    context->renderWin->clear(sf::Color(128,128,0));
 
     DisplayMap();
     DisplayPlayer();
