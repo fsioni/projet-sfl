@@ -29,6 +29,9 @@ public:
     void Start();
 
 private:
+    /*! \brief Effectue les actions nécessaires lors du clic
+    *
+    */
     void OnClick();
 
     /*! \brief Etat courant du programme */
@@ -96,7 +99,9 @@ private:
     /*! \brief Effet sonore du menu */
     sf::Sound sound;
 
+    /*! \brief Curseur de main*/
     sf::Cursor handCursor;
+    /*! \brief Curseur de pointage*/
     sf::Cursor pointCursor;
 };
 #endif // __STATEMENUSFML_H__

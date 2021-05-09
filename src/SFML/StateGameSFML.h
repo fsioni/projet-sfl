@@ -32,6 +32,10 @@ public:
     *
     */
     void UpdateEnemies();
+
+    /*! \brief Met à jour les données correspondant aux PNJ
+    *
+    */
     void UpdateNPCs();
 
     void Display();
@@ -46,11 +50,14 @@ public:
     */
     void DisplayPlayer();
 
-    /*! \brief Affichage les ennemis sur la fenêtre SFML
+    /*! \brief Affichage des ennemis sur la fenêtre SFML
     *
     */
     void DisplayEnemies();
 
+    /*! \brief Affichage des PNJ sur la fenêtre SFML
+    *
+    */
     void DisplayNPC();
 
     /*! \brief Affichage une CollisionBox sur la fenêtre SFML
