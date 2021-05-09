@@ -156,12 +156,8 @@ private:
 
     /*! \brief Musique du jeu */
     sf::Music music;
-    /*! \brief Son tampon des pas du joueur */
-    sf::SoundBuffer runningBuffer;
     /*! \brief Son des pas du joueur */
     sf::Sound runningSound;
-    /*! \brief Son tampon de coup */
-    sf::SoundBuffer hitBuffer;
     /*! \brief Son de coup */
     sf::Sound hitSound;
 };

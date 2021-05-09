@@ -23,9 +23,8 @@ StateMenuSFML::~StateMenuSFML()
 void StateMenuSFML::Init()
 {
     assert(music.openFromFile("data/sounds/music/01town0.wav"));
-    assert(buffer.loadFromFile("data/sounds/sfx/menuNav.wav"));
 
-    sound.setBuffer(buffer);
+    sound.setBuffer(context->assetMan->GetSoundBuffers()[0]);
 
     music.play();
     music.setLoop(true);

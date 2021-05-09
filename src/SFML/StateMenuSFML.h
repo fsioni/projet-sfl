@@ -93,8 +93,6 @@ private:
     /*! \brief Musique du menu*/
     sf::Music music;
 
-    /*! \brief Son tampon de l'effet sonore du menu */
-    sf::SoundBuffer buffer;
     /*! \brief Effet sonore du menu */
     sf::Sound sound;
 

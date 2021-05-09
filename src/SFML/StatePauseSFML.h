@@ -72,8 +72,6 @@ private:
     /*! \brief Indique si le bouton "quitter" est pressé */
     bool isExitButPressed;
 
-    /*! \brief Son tampon de l'effet sonore du menu */
-    sf::SoundBuffer buffer;
     /*! \brief Effet sonore du menu */
     sf::Sound sound;
 

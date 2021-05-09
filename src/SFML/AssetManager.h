@@ -31,7 +31,6 @@ public:
     void SetMainFont(std::string fileFont);
     void setMainTextColor(sf::Color color);
 
-    void AddMusic(std::string fileMusic);
     void AddSoundBuffer(std::string fileBuffer);
 
     const std::vector<sf::Texture> &GetTextureEnemy() const;
@@ -46,7 +45,6 @@ public:
 
     const sf::Font &GetMainFont() const;
     const sf::Color &GetMainTextColor() const;
-    const std::vector<sf::Music> &GetMusics() const;
     const std::vector<sf::SoundBuffer> &GetSoundBuffers() const;
 
 private:
@@ -75,8 +73,6 @@ private:
     /*! \brief Couleur d'écriture principale */
     sf::Color textColor;
     
-    /*! \brief Tableau vbers les musiques du jeu */
-    std::vector<sf::Music> musics;
     /*! \brief Tableau vers les buffers des sons du jeu */
     std::vector<sf::SoundBuffer> soundBuffers;
 };

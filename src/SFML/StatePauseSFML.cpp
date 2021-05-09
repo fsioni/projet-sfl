@@ -21,9 +21,7 @@ StatePauseSFML::~StatePauseSFML()
 
 void StatePauseSFML::Init()
 {
-    assert(buffer.loadFromFile("data/sounds/sfx/menuNav.wav"));
-
-    sound.setBuffer(buffer);
+    sound.setBuffer(context->assetMan->GetSoundBuffers()[0]);
 
     int winx = context->renderWin->getSize().x;
     int winy = context->renderWin->getSize().y;

@@ -30,17 +30,15 @@ void StateGameSFML::Init()
     context->renderWin->setMouseCursor(pointCursor);
     // Chargement et lecture de la musique
     assert(music.openFromFile("data/sounds/music/01town2.wav"));
-    assert(runningBuffer.loadFromFile("data/sounds/sfx/walking.wav"));
-    assert(hitBuffer.loadFromFile("data/sounds/sfx/Slash_1.wav"));
 
     music.setVolume(70);
     music.setLoop(true);
     music.play();
-    runningSound.setBuffer(runningBuffer);
+    runningSound.setBuffer(context->assetMan->GetSoundBuffers()[1]);
     runningSound.setLoop(true);
     runningSound.stop();
 
-    hitSound.setBuffer(hitBuffer);
+    hitSound.setBuffer(context->assetMan->GetSoundBuffers()[2]);
 
     // Chargement de la tileMap
     context->assetMan->SetTileTexture(context->map->GetTileset()->GetTileMapPath());

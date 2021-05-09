@@ -68,6 +68,10 @@ AssetManager::AssetManager()
     AddTextureNPC("data/textures/characters/Female/Female 04-2.png");
     AddTextureNPC("data/textures/characters/Female/Female 04-3.png");
     AddTextureNPC("data/textures/characters/Female/Female 04-4.png");
+
+    AddSoundBuffer("data/sounds/sfx/menuNav.wav");
+    AddSoundBuffer("data/sounds/sfx/walking.wav");
+    AddSoundBuffer("data/sounds/sfx/Slash_1.wav");
 }
 
 AssetManager::~AssetManager()
@@ -225,23 +229,6 @@ void AssetManager::setMainTextColor(sf::Color color)
     textColor = color;
 }
 
-/*void AssetManager::AddMusic(std::string fileMusic) 
-{
-    std::fstream file;
-    file.open(fileMusic.c_str(), std::fstream::in);
-
-    sf::Music music;
-    if (file)
-    {
-        music.openFromFile(fileMusic);
-        musics.push_back(music);
-    }
-    else
-        std::cout << "Echec AddMusic("
-                  << fileMusic << ") : fichier inexistant"
-                  << std::endl;
-}
-
 void AssetManager::AddSoundBuffer(std::string fileBuffer) 
 {
         std::fstream file;
@@ -257,7 +244,7 @@ void AssetManager::AddSoundBuffer(std::string fileBuffer)
         std::cout << "Echec AddSoundBuffer("
                   << fileBuffer << ") : fichier inexistant"
                   << std::endl;
-}*/
+}
 
 const std::vector<sf::Texture> &AssetManager::GetTextureEnemy() const
 {
@@ -312,11 +299,6 @@ const sf::Font& AssetManager::GetMainFont() const
 const sf::Color& AssetManager::GetMainTextColor() const
 {
     return textColor;
-}
-
-const std::vector<sf::Music>& AssetManager::GetMusics() const
-{
-    return musics;
 }
 
 const std::vector<sf::SoundBuffer>& AssetManager::GetSoundBuffers() const
