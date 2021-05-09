@@ -207,7 +207,7 @@ Attributs protégés</h2></td></tr>
 <tr class="memdesc:a4c0bb5404cced499f98b76aa03651762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id unique.  <a href="classEntityWithoutHP.html#a4c0bb5404cced499f98b76aa03651762">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a4c0bb5404cced499f98b76aa03651762"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c7ed81350ce164f7c5206d773411bac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac">offset</a></td></tr>
-<tr class="memdesc:a8c7ed81350ce164f7c5206d773411bac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset de la <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a>.  <a href="classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a8c7ed81350ce164f7c5206d773411bac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset de la CollisionBox.  <a href="classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8c7ed81350ce164f7c5206d773411bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
@@ -394,15 +394,17 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classEntityWithoutHP_a1a5d732b9f322135fbd5e5f227064b26_icgraph.png" border="0" usemap="#classEntityWithoutHP_a1a5d732b9f322135fbd5e5f227064b26_icgraph" alt=""/></div>
 <map name="classEntityWithoutHP_a1a5d732b9f322135fbd5e5f227064b26_icgraph" id="classEntityWithoutHP_a1a5d732b9f322135fbd5e5f227064b26_icgraph">
-<area shape="rect" title="Retourne l&#39;ID de l&#39;entité." alt="" coords="593,67,768,93"/>
-<area shape="rect" href="structContext.html#a652cdcd2eedc8dbd9110bd284c5d5cf0" title=" " alt="" coords="378,8,510,35"/>
-<area shape="rect" href="classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="343,59,545,101"/>
-<area shape="rect" href="classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="363,136,525,163"/>
+<area shape="rect" title="Retourne l&#39;ID de l&#39;entité." alt="" coords="593,133,768,160"/>
+<area shape="rect" href="structContext.html#a652cdcd2eedc8dbd9110bd284c5d5cf0" title=" " alt="" coords="378,41,510,68"/>
+<area shape="rect" href="classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="343,93,545,134"/>
+<area shape="rect" href="classStateGameOverSFML.html#aa166a17b191164097564aeafa3bbe954" title=" " alt="" coords="359,158,529,199"/>
+<area shape="rect" href="classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="363,224,525,251"/>
 <area shape="rect" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="120,5,283,32"/>
 <area shape="rect" href="classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="117,56,285,83"/>
 <area shape="rect" href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="108,107,295,133"/>
-<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="154,157,249,184"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,157,60,184"/>
+<area shape="rect" href="classStateGameOverSFML.html#ae9de1308673333e563430309b542f1dd" title="Fonction de mise à jour du State." alt="" coords="117,158,286,199"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="154,224,249,251"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,224,60,251"/>
 </map>
 </div>
 
@@ -685,7 +687,7 @@ Voici le graphe des appelants de cette fonction :</div>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">vx</td><td>réel, valeur de déplacement sur l'axe X. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">vy</td><td>réel, valeur de déplacement sur l'axe Y. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">colLayer</td><td>pointeur sur <a class="el" href="classCollisionLayer.html" title="Classe représentant une couche de CollisionBox Hérité de Layer Représente toutes les CollisionBox d&#39;u...">CollisionLayer</a>, couche qui stocke les boites de collision. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colLayer</td><td>pointeur sur <a class="el" href="classCollisionLayer.html" title="Classe représentant une couche de CollisionBox.">CollisionLayer</a>, couche qui stocke les boites de collision. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dt</td><td>: entier, deltaTime. </td></tr>
   </table>
   </dd>
@@ -696,8 +698,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="center"><img src="classEntityWithoutHP_a6b62dd7761b9a29a9ccda13b5be40a18_cgraph.png" border="0" usemap="#classEntityWithoutHP_a6b62dd7761b9a29a9ccda13b5be40a18_cgraph" alt=""/></div>
 <map name="classEntityWithoutHP_a6b62dd7761b9a29a9ccda13b5be40a18_cgraph" id="classEntityWithoutHP_a6b62dd7761b9a29a9ccda13b5be40a18_cgraph">
 <area shape="rect" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="5,205,208,247"/>
-<area shape="rect" href="classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="256,5,457,47"/>
-<area shape="rect" href="classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="256,71,457,112"/>
+<area shape="rect" href="classCollisionLayer.html#a620b4ce21e4699a1a067ffaa60848667" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="256,5,457,47"/>
+<area shape="rect" href="classCollisionLayer.html#ac58218b7888e319365025f92265cf1de" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="256,71,457,112"/>
 <area shape="rect" href="classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="296,137,417,163"/>
 <area shape="rect" href="classEntityWithoutHP.html#a1a5d732b9f322135fbd5e5f227064b26" title="Retourne l&#39;ID de l&#39;entité." alt="" coords="269,187,444,214"/>
 <area shape="rect" href="classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="299,238,415,265"/>
@@ -826,13 +828,16 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classEntityWithoutHP_a0c000f5c03af273546b317aaad42254c_icgraph.png" border="0" usemap="#classEntityWithoutHP_a0c000f5c03af273546b317aaad42254c_icgraph" alt=""/></div>
 <map name="classEntityWithoutHP_a0c000f5c03af273546b317aaad42254c_icgraph" id="classEntityWithoutHP_a0c000f5c03af273546b317aaad42254c_icgraph">
-<area shape="rect" title="Permets de modifier la direction de l&#39;entité." alt="" coords="485,81,703,108"/>
-<area shape="rect" href="classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="260,5,428,32"/>
-<area shape="rect" href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="251,56,437,83"/>
-<area shape="rect" href="classAnimal.html#a5421645bed098ce5eaf31569db2ea031" title=" " alt="" coords="255,107,433,133"/>
-<area shape="rect" href="classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="263,157,425,184"/>
-<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,157,203,184"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,157,60,184"/>
+<area shape="rect" title="Permets de modifier la direction de l&#39;entité." alt="" coords="560,132,777,159"/>
+<area shape="rect" href="structContext.html#a652cdcd2eedc8dbd9110bd284c5d5cf0" title=" " alt="" coords="353,5,485,32"/>
+<area shape="rect" href="classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="335,56,503,83"/>
+<area shape="rect" href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="325,107,512,133"/>
+<area shape="rect" href="classAnimal.html#a5421645bed098ce5eaf31569db2ea031" title=" " alt="" coords="329,157,508,184"/>
+<area shape="rect" href="classStateGameOverSFML.html#aa166a17b191164097564aeafa3bbe954" title=" " alt="" coords="334,209,503,250"/>
+<area shape="rect" href="classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="337,275,500,301"/>
+<area shape="rect" href="classStateGameOverSFML.html#ae9de1308673333e563430309b542f1dd" title="Fonction de mise à jour du State." alt="" coords="108,209,277,250"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="145,275,240,301"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,275,60,301"/>
 </map>
 </div>
 
@@ -1226,7 +1231,7 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>Offset de la <a class="el" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D.">CollisionBox</a>. </p>
+<p>Offset de la CollisionBox. </p>
 
 </div>
 </div>

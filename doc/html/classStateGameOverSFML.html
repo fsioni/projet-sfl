@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('classStateGameOverSFML.html',''); init
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pri-methods">Fonctions membres privées</a> &#124;
 <a href="#pri-attribs">Attributs privés</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe StateGameOverSFML</div>  </div>
@@ -99,7 +100,7 @@ Graphe d'héritage de StateGameOverSFML:</div>
 <div class="dyncontent">
 <div class="center"><img src="classStateGameOverSFML__inherit__graph.png" border="0" usemap="#StateGameOverSFML_inherit__map" alt="Inheritance graph"/></div>
 <map name="StateGameOverSFML_inherit__map" id="StateGameOverSFML_inherit__map">
-<area shape="rect" title="Classe représentant l&#39;état game over du mode graphique (SFML)" alt="" coords="5,233,203,501"/>
+<area shape="rect" title="Classe représentant l&#39;état game over du mode graphique (SFML)" alt="" coords="5,233,203,677"/>
 <area shape="rect" href="classState.html" title="Classe représentant un état de l&#39;application." alt="" coords="39,5,169,185"/>
 </map>
 </div>
@@ -138,23 +139,62 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a9ddc1df6f998184d6477b48fab90281c inherit pub_methods_classState"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classState.html#a9ddc1df6f998184d6477b48fab90281c">~State</a> ()</td></tr>
 <tr class="separator:a9ddc1df6f998184d6477b48fab90281c inherit pub_methods_classState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Fonctions membres privées</h2></td></tr>
+<tr class="memitem:ae013163587af69b42438fa0c7f9873ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#ae013163587af69b42438fa0c7f9873ae">OnClick</a> ()</td></tr>
+<tr class="memdesc:ae013163587af69b42438fa0c7f9873ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue les actions nécessaires lors du clic.  <a href="classStateGameOverSFML.html#ae013163587af69b42438fa0c7f9873ae">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae013163587af69b42438fa0c7f9873ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
 <tr class="memitem:a19727eb7d11b3a5d0427c06950e07b47"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structContext.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#a19727eb7d11b3a5d0427c06950e07b47">context</a></td></tr>
 <tr class="memdesc:a19727eb7d11b3a5d0427c06950e07b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Etat courant du programme.  <a href="classStateGameOverSFML.html#a19727eb7d11b3a5d0427c06950e07b47">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a19727eb7d11b3a5d0427c06950e07b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b619fc12789bc1fc0ab43fe95468410"><td class="memItemLeft" align="right" valign="top">sf::Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#a6b619fc12789bc1fc0ab43fe95468410">textFont</a></td></tr>
-<tr class="memdesc:a6b619fc12789bc1fc0ab43fe95468410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Police des textes.  <a href="classStateGameOverSFML.html#a6b619fc12789bc1fc0ab43fe95468410">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a6b619fc12789bc1fc0ab43fe95468410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a846d44dfb0ebdc8004feaefd3e2e7321"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#a846d44dfb0ebdc8004feaefd3e2e7321">gameOverText</a></td></tr>
 <tr class="memdesc:a846d44dfb0ebdc8004feaefd3e2e7321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texte de game over.  <a href="classStateGameOverSFML.html#a846d44dfb0ebdc8004feaefd3e2e7321">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a846d44dfb0ebdc8004feaefd3e2e7321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fff43469bf04dbe02d8ffbffc751466"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#a4fff43469bf04dbe02d8ffbffc751466">restartText</a></td></tr>
-<tr class="memdesc:a4fff43469bf04dbe02d8ffbffc751466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texte indiquant comment relancer la partie.  <a href="classStateGameOverSFML.html#a4fff43469bf04dbe02d8ffbffc751466">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a4fff43469bf04dbe02d8ffbffc751466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e8fb47120aff042dc2b6fa7ee44249"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#aa9e8fb47120aff042dc2b6fa7ee44249">bgSprite</a></td></tr>
+<tr class="memdesc:aa9e8fb47120aff042dc2b6fa7ee44249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite du fond d'écran.  <a href="classStateGameOverSFML.html#aa9e8fb47120aff042dc2b6fa7ee44249">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa9e8fb47120aff042dc2b6fa7ee44249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cda1a590fcf53464241bd45c743c98d"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#a8cda1a590fcf53464241bd45c743c98d">restartButton</a></td></tr>
+<tr class="memdesc:a8cda1a590fcf53464241bd45c743c98d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texte du bouton rejouer.  <a href="classStateGameOverSFML.html#a8cda1a590fcf53464241bd45c743c98d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8cda1a590fcf53464241bd45c743c98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a476f53b3f18a40335e404758fc02f0dd"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#a476f53b3f18a40335e404758fc02f0dd">menuButton</a></td></tr>
+<tr class="memdesc:a476f53b3f18a40335e404758fc02f0dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texte du bouton menu.  <a href="classStateGameOverSFML.html#a476f53b3f18a40335e404758fc02f0dd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a476f53b3f18a40335e404758fc02f0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a652b6b38ad6ff2a0bfb6bb1af0cf88b4"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#a652b6b38ad6ff2a0bfb6bb1af0cf88b4">exitButton</a></td></tr>
+<tr class="memdesc:a652b6b38ad6ff2a0bfb6bb1af0cf88b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texte du bouton quitter.  <a href="classStateGameOverSFML.html#a652b6b38ad6ff2a0bfb6bb1af0cf88b4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a652b6b38ad6ff2a0bfb6bb1af0cf88b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac58cfd48382529d9d2ca17414593d4ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#ac58cfd48382529d9d2ca17414593d4ee">isRestartButSelected</a></td></tr>
+<tr class="memdesc:ac58cfd48382529d9d2ca17414593d4ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si le bouton "rejouer" est selectionné  <a href="classStateGameOverSFML.html#ac58cfd48382529d9d2ca17414593d4ee">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac58cfd48382529d9d2ca17414593d4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b1ef3c913c86229b9a82d891127b1a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#a7b1ef3c913c86229b9a82d891127b1a2">isRestartButPressed</a></td></tr>
+<tr class="memdesc:a7b1ef3c913c86229b9a82d891127b1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si le bouton "rejouer" est pressé  <a href="classStateGameOverSFML.html#a7b1ef3c913c86229b9a82d891127b1a2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7b1ef3c913c86229b9a82d891127b1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa03ee77152db72d8cc5f89ab6b2907c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#aa03ee77152db72d8cc5f89ab6b2907c8">isMenuButSelected</a></td></tr>
+<tr class="memdesc:aa03ee77152db72d8cc5f89ab6b2907c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si le bouton "Menu" est selectionné  <a href="classStateGameOverSFML.html#aa03ee77152db72d8cc5f89ab6b2907c8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa03ee77152db72d8cc5f89ab6b2907c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d76296453ce320358d6b57bd8cb0a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#ae0d76296453ce320358d6b57bd8cb0a1">isMenuButPressed</a></td></tr>
+<tr class="memdesc:ae0d76296453ce320358d6b57bd8cb0a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si le bouton "Menu" est pressé  <a href="classStateGameOverSFML.html#ae0d76296453ce320358d6b57bd8cb0a1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae0d76296453ce320358d6b57bd8cb0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4574c2e852059f38b1fba23acbfc8ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#af4574c2e852059f38b1fba23acbfc8ac">isExitButSelected</a></td></tr>
+<tr class="memdesc:af4574c2e852059f38b1fba23acbfc8ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si le bouton "quitter" est selectionné  <a href="classStateGameOverSFML.html#af4574c2e852059f38b1fba23acbfc8ac">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af4574c2e852059f38b1fba23acbfc8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace36b5b08859cfaaf945d85321039c53"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#ace36b5b08859cfaaf945d85321039c53">isExitButPressed</a></td></tr>
+<tr class="memdesc:ace36b5b08859cfaaf945d85321039c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si le bouton "quitter" est pressé  <a href="classStateGameOverSFML.html#ace36b5b08859cfaaf945d85321039c53">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ace36b5b08859cfaaf945d85321039c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad72024be1623b80b175cb9883a7f8b51"><td class="memItemLeft" align="right" valign="top">sf::Music&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#ad72024be1623b80b175cb9883a7f8b51">music</a></td></tr>
 <tr class="memdesc:ad72024be1623b80b175cb9883a7f8b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Musique de <a class="el" href="classGame.html" title="Classe représentant le programme dans sa généralité.">Game</a> Over.  <a href="classStateGameOverSFML.html#ad72024be1623b80b175cb9883a7f8b51">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ad72024be1623b80b175cb9883a7f8b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a906303086a85144a150debcf6fdb8196"><td class="memItemLeft" align="right" valign="top">sf::Sound&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#a906303086a85144a150debcf6fdb8196">sound</a></td></tr>
+<tr class="memdesc:a906303086a85144a150debcf6fdb8196"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effet sonore du menu.  <a href="classStateGameOverSFML.html#a906303086a85144a150debcf6fdb8196">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a906303086a85144a150debcf6fdb8196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229a36aa8d8a7de19da38faca73d77b1"><td class="memItemLeft" align="right" valign="top">sf::Cursor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#a229a36aa8d8a7de19da38faca73d77b1">handCursor</a></td></tr>
+<tr class="memdesc:a229a36aa8d8a7de19da38faca73d77b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Curseur de main.  <a href="classStateGameOverSFML.html#a229a36aa8d8a7de19da38faca73d77b1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a229a36aa8d8a7de19da38faca73d77b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91e98e54cdcab6069b9b257cc332128b"><td class="memItemLeft" align="right" valign="top">sf::Cursor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateGameOverSFML.html#a91e98e54cdcab6069b9b257cc332128b">pointCursor</a></td></tr>
+<tr class="memdesc:a91e98e54cdcab6069b9b257cc332128b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Curseur de pointage.  <a href="classStateGameOverSFML.html#a91e98e54cdcab6069b9b257cc332128b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a91e98e54cdcab6069b9b257cc332128b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe représentant l'état game over du mode graphique (SFML) </p>
@@ -272,6 +312,42 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
+<a id="ae013163587af69b42438fa0c7f9873ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae013163587af69b42438fa0c7f9873ae">&#9670;&nbsp;</a></span>OnClick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateGameOverSFML::OnClick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Effectue les actions nécessaires lors du clic. </p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameOverSFML_ae013163587af69b42438fa0c7f9873ae_icgraph.png" border="0" usemap="#classStateGameOverSFML_ae013163587af69b42438fa0c7f9873ae_icgraph" alt=""/></div>
+<map name="classStateGameOverSFML_ae013163587af69b42438fa0c7f9873ae_icgraph" id="classStateGameOverSFML_ae013163587af69b42438fa0c7f9873ae_icgraph">
+<area shape="rect" title="Effectue les actions nécessaires lors du clic." alt="" coords="223,5,392,47"/>
+<area shape="rect" href="classStateGameOverSFML.html#a6f4f979548e39a9c8c2c46c61805e387" title="Fonction de gestion des touches du State." alt="" coords="5,5,175,47"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ab684b64616defc1f15b117f153343b44"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab684b64616defc1f15b117f153343b44">&#9670;&nbsp;</a></span>Pause()</h2>
 
@@ -335,7 +411,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="center"><img src="classStateGameOverSFML_a6f4f979548e39a9c8c2c46c61805e387_cgraph.png" border="0" usemap="#classStateGameOverSFML_a6f4f979548e39a9c8c2c46c61805e387_cgraph" alt=""/></div>
 <map name="classStateGameOverSFML_a6f4f979548e39a9c8c2c46c61805e387_cgraph" id="classStateGameOverSFML_a6f4f979548e39a9c8c2c46c61805e387_cgraph">
 <area shape="rect" title="Fonction de gestion des touches du State." alt="" coords="5,5,175,47"/>
-<area shape="rect" href="classStateGameOverSFML.html#aa166a17b191164097564aeafa3bbe954" title=" " alt="" coords="223,5,392,47"/>
+<area shape="rect" href="classStateGameOverSFML.html#ae013163587af69b42438fa0c7f9873ae" title="Effectue les actions nécessaires lors du clic." alt="" coords="223,5,392,47"/>
 </map>
 </div>
 
@@ -356,12 +432,22 @@ Voici le graphe d'appel pour cette fonction :</div>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameOverSFML_aa166a17b191164097564aeafa3bbe954_cgraph.png" border="0" usemap="#classStateGameOverSFML_aa166a17b191164097564aeafa3bbe954_cgraph" alt=""/></div>
+<map name="classStateGameOverSFML_aa166a17b191164097564aeafa3bbe954_cgraph" id="classStateGameOverSFML_aa166a17b191164097564aeafa3bbe954_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,175,65"/>
+<area shape="rect" href="classEntityWithoutHP.html#a1a5d732b9f322135fbd5e5f227064b26" title="Retourne l&#39;ID de l&#39;entité." alt="" coords="244,5,419,32"/>
+<area shape="rect" href="classEntityWithoutHP.html#a0c000f5c03af273546b317aaad42254c" title="Permets de modifier la direction de l&#39;entité." alt="" coords="223,56,440,83"/>
+</map>
+</div>
+<div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classStateGameOverSFML_aa166a17b191164097564aeafa3bbe954_icgraph.png" border="0" usemap="#classStateGameOverSFML_aa166a17b191164097564aeafa3bbe954_icgraph" alt=""/></div>
 <map name="classStateGameOverSFML_aa166a17b191164097564aeafa3bbe954_icgraph" id="classStateGameOverSFML_aa166a17b191164097564aeafa3bbe954_icgraph">
 <area shape="rect" title=" " alt="" coords="223,5,392,47"/>
-<area shape="rect" href="classStateGameOverSFML.html#a6f4f979548e39a9c8c2c46c61805e387" title="Fonction de gestion des touches du State." alt="" coords="5,5,175,47"/>
+<area shape="rect" href="classStateGameOverSFML.html#ae9de1308673333e563430309b542f1dd" title="Fonction de mise à jour du State." alt="" coords="5,5,175,47"/>
 </map>
 </div>
 
@@ -424,10 +510,45 @@ Voici le graphe des appelants de cette fonction :</div>
 <p>Est appelée à chaque mise à jour de l'application Fonction virtuelle pure : doit être implémentée par l'enfant </p>
 
 <p>Implémente <a class="el" href="classState.html#a43d4ca30d927c023316c058b700c0716">State</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateGameOverSFML_ae9de1308673333e563430309b542f1dd_cgraph.png" border="0" usemap="#classStateGameOverSFML_ae9de1308673333e563430309b542f1dd_cgraph" alt=""/></div>
+<map name="classStateGameOverSFML_ae9de1308673333e563430309b542f1dd_cgraph" id="classStateGameOverSFML_ae9de1308673333e563430309b542f1dd_cgraph">
+<area shape="rect" title="Fonction de mise à jour du State." alt="" coords="5,23,175,65"/>
+<area shape="rect" href="classStateGameOverSFML.html#aa166a17b191164097564aeafa3bbe954" title=" " alt="" coords="223,23,392,65"/>
+<area shape="rect" href="classEntityWithoutHP.html#a1a5d732b9f322135fbd5e5f227064b26" title="Retourne l&#39;ID de l&#39;entité." alt="" coords="461,5,636,32"/>
+<area shape="rect" href="classEntityWithoutHP.html#a0c000f5c03af273546b317aaad42254c" title="Permets de modifier la direction de l&#39;entité." alt="" coords="440,56,657,83"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des champs</h2>
+<a id="aa9e8fb47120aff042dc2b6fa7ee44249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9e8fb47120aff042dc2b6fa7ee44249">&#9670;&nbsp;</a></span>bgSprite</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Sprite StateGameOverSFML::bgSprite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sprite du fond d'écran. </p>
+
+</div>
+</div>
 <a id="a19727eb7d11b3a5d0427c06950e07b47"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a19727eb7d11b3a5d0427c06950e07b47">&#9670;&nbsp;</a></span>context</h2>
 
@@ -449,6 +570,30 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><div class="memdoc">
 
 <p>Etat courant du programme. </p>
+
+</div>
+</div>
+<a id="a652b6b38ad6ff2a0bfb6bb1af0cf88b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a652b6b38ad6ff2a0bfb6bb1af0cf88b4">&#9670;&nbsp;</a></span>exitButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text StateGameOverSFML::exitButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Texte du bouton quitter. </p>
 
 </div>
 </div>
@@ -476,6 +621,198 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
+<a id="a229a36aa8d8a7de19da38faca73d77b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229a36aa8d8a7de19da38faca73d77b1">&#9670;&nbsp;</a></span>handCursor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Cursor StateGameOverSFML::handCursor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Curseur de main. </p>
+
+</div>
+</div>
+<a id="ace36b5b08859cfaaf945d85321039c53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace36b5b08859cfaaf945d85321039c53">&#9670;&nbsp;</a></span>isExitButPressed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateGameOverSFML::isExitButPressed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si le bouton "quitter" est pressé </p>
+
+</div>
+</div>
+<a id="af4574c2e852059f38b1fba23acbfc8ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4574c2e852059f38b1fba23acbfc8ac">&#9670;&nbsp;</a></span>isExitButSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateGameOverSFML::isExitButSelected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si le bouton "quitter" est selectionné </p>
+
+</div>
+</div>
+<a id="ae0d76296453ce320358d6b57bd8cb0a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d76296453ce320358d6b57bd8cb0a1">&#9670;&nbsp;</a></span>isMenuButPressed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateGameOverSFML::isMenuButPressed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si le bouton "Menu" est pressé </p>
+
+</div>
+</div>
+<a id="aa03ee77152db72d8cc5f89ab6b2907c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa03ee77152db72d8cc5f89ab6b2907c8">&#9670;&nbsp;</a></span>isMenuButSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateGameOverSFML::isMenuButSelected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si le bouton "Menu" est selectionné </p>
+
+</div>
+</div>
+<a id="a7b1ef3c913c86229b9a82d891127b1a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b1ef3c913c86229b9a82d891127b1a2">&#9670;&nbsp;</a></span>isRestartButPressed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateGameOverSFML::isRestartButPressed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si le bouton "rejouer" est pressé </p>
+
+</div>
+</div>
+<a id="ac58cfd48382529d9d2ca17414593d4ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac58cfd48382529d9d2ca17414593d4ee">&#9670;&nbsp;</a></span>isRestartButSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateGameOverSFML::isRestartButSelected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si le bouton "rejouer" est selectionné </p>
+
+</div>
+</div>
+<a id="a476f53b3f18a40335e404758fc02f0dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a476f53b3f18a40335e404758fc02f0dd">&#9670;&nbsp;</a></span>menuButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text StateGameOverSFML::menuButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Texte du bouton menu. </p>
+
+</div>
+</div>
 <a id="ad72024be1623b80b175cb9883a7f8b51"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad72024be1623b80b175cb9883a7f8b51">&#9670;&nbsp;</a></span>music</h2>
 
@@ -500,8 +837,8 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
-<a id="a4fff43469bf04dbe02d8ffbffc751466"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fff43469bf04dbe02d8ffbffc751466">&#9670;&nbsp;</a></span>restartText</h2>
+<a id="a91e98e54cdcab6069b9b257cc332128b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91e98e54cdcab6069b9b257cc332128b">&#9670;&nbsp;</a></span>pointCursor</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -510,7 +847,7 @@ Voici le graphe des appelants de cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">sf::Text StateGameOverSFML::restartText</td>
+          <td class="memname">sf::Cursor StateGameOverSFML::pointCursor</td>
         </tr>
       </table>
   </td>
@@ -520,12 +857,12 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>Texte indiquant comment relancer la partie. </p>
+<p>Curseur de pointage. </p>
 
 </div>
 </div>
-<a id="a6b619fc12789bc1fc0ab43fe95468410"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b619fc12789bc1fc0ab43fe95468410">&#9670;&nbsp;</a></span>textFont</h2>
+<a id="a8cda1a590fcf53464241bd45c743c98d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cda1a590fcf53464241bd45c743c98d">&#9670;&nbsp;</a></span>restartButton</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -534,7 +871,7 @@ Voici le graphe des appelants de cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">sf::Font StateGameOverSFML::textFont</td>
+          <td class="memname">sf::Text StateGameOverSFML::restartButton</td>
         </tr>
       </table>
   </td>
@@ -544,7 +881,31 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>Police des textes. </p>
+<p>Texte du bouton rejouer. </p>
+
+</div>
+</div>
+<a id="a906303086a85144a150debcf6fdb8196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a906303086a85144a150debcf6fdb8196">&#9670;&nbsp;</a></span>sound</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Sound StateGameOverSFML::sound</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Effet sonore du menu. </p>
 
 </div>
 </div>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['npc_615',['NPC',['../classNPC.html#a59b45912692304d555df9d6957046962',1,'NPC::NPC()'],['../classNPC.html#a5f1f3a7dd298c188a5d0499f12fbc204',1,'NPC::NPC(float x, float y, std::string dialog_)']]]
+  ['onclick_648',['OnClick',['../classStateGameOverSFML.html#ae013163587af69b42438fa0c7f9873ae',1,'StateGameOverSFML::OnClick()'],['../classStateMenuSFML.html#afb434003460b3a74ad4c14de4682104d',1,'StateMenuSFML::OnClick()'],['../classStatePauseSFML.html#aec50c11f091000d58a819700054df5c8',1,'StatePauseSFML::OnClick()']]],
+  ['operator_3d_649',['operator=',['../classEnemyPatrol.html#a36581340aeeada2e0eaf3f4cf2d6e5a0',1,'EnemyPatrol::operator=()'],['../classEnemyAttack.html#a6004bfa0e52e2e82e8b6ef5c5e911bbf',1,'EnemyAttack::operator=()'],['../classEnemyRunAway.html#a1a4c831793fa506ce77c5188a59ead54',1,'EnemyRunAway::operator=()'],['../classTileset.html#afe577c2af89a7596fa62772ca9f5930b',1,'Tileset::operator=()']]]
 ];

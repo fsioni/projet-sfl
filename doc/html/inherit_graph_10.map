@@ -1,3 +1,11 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$classStateMachine.html" title=" " alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node1" href="$classState.html" title="Classe représentant un état de l&#39;application." alt="" coords="5,183,61,209"/>
+<area shape="rect" id="node2" href="$classStateGameOverSFML.html" title="Classe représentant l&#39;état game over du mode graphique (SFML)" alt="" coords="118,5,279,32"/>
+<area shape="rect" id="node3" href="$classStateGameSFML.html" title="Classe représentant l&#39;état jeu du mode graphique (SFML)" alt="" coords="133,56,264,83"/>
+<area shape="rect" id="node4" href="$classStateGameTxt.html" title="Classe représentant l&#39;état jeu du mode texte." alt="" coords="141,107,257,133"/>
+<area shape="rect" id="node5" href="$classStateMenuSFML.html" title="Classe représentant l&#39;état menu du mode graphique (SFML)" alt="" coords="135,157,262,184"/>
+<area shape="rect" id="node6" href="$classStateMenuTxt.html" title="Classe représentant l&#39;état menu du mode texte." alt="" coords="142,208,255,235"/>
+<area shape="rect" id="node7" href="$classStatePauseSFML.html" title="Classe représentant l&#39;état pause du mode graphique (SFML)" alt="" coords="134,259,263,285"/>
+<area shape="rect" id="node8" href="$classStateSplashScreenSFML.html" title="Classe représentant l&#39;état SplashScreen du mode graphique (SFML)" alt="" coords="109,309,288,336"/>
+<area shape="rect" id="node9" href="$classStateSplashScreenTxt.html" title="Classe représentant l&#39;état SplashScreen du mode texte." alt="" coords="117,360,281,387"/>
 </map>

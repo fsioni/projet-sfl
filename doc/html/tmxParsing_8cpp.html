@@ -91,6 +91,7 @@ $(document).ready(function(){initNavTree('tmxParsing_8cpp.html',''); initResizab
 <div class="textblock"><code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;regex&gt;</code><br />
 <code>#include &quot;assert.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="tmxParsing_8h_source.html">tmxParsing.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -98,50 +99,57 @@ Graphe des dépendances par inclusion de tmxParsing.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="tmxParsing_8cpp__incl.png" border="0" usemap="#src_2Core_2Map_2tmxParsing_8cpp" alt=""/></div>
 <map name="src_2Core_2Map_2tmxParsing_8cpp" id="src_2Core_2Map_2tmxParsing_8cpp">
-<area shape="rect" title=" " alt="" coords="140,5,351,32"/>
+<area shape="rect" title=" " alt="" coords="185,5,396,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,80,107"/>
 <area shape="rect" title=" " alt="" coords="104,80,184,107"/>
 <area shape="rect" title=" " alt="" coords="209,80,282,107"/>
-<area shape="rect" title=" " alt="" coords="307,80,381,107"/>
-<area shape="rect" href="tmxParsing_8h.html" title=" " alt="" coords="405,80,512,107"/>
-<area shape="rect" title=" " alt="" coords="387,155,445,181"/>
-<area shape="rect" title=" " alt="" coords="470,155,533,181"/>
+<area shape="rect" title=" " alt="" coords="307,80,365,107"/>
+<area shape="rect" title=" " alt="" coords="389,80,464,107"/>
+<area shape="rect" href="tmxParsing_8h.html" title=" " alt="" coords="488,80,595,107"/>
+<area shape="rect" title=" " alt="" coords="469,155,528,181"/>
+<area shape="rect" title=" " alt="" coords="553,155,615,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a6b9ffd87ce2b45473317a2a57e0750ee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a6b9ffd87ce2b45473317a2a57e0750ee">fileToString</a> (std::string filename)</td></tr>
-<tr class="memdesc:a6b9ffd87ce2b45473317a2a57e0750ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne un fichier dans une std::string.  <a href="tmxParsing_8cpp.html#a6b9ffd87ce2b45473317a2a57e0750ee">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a6b9ffd87ce2b45473317a2a57e0750ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f798bd46c19c61d7e3f0356018bc0c9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a7f798bd46c19c61d7e3f0356018bc0c9">getAttributeValue</a> (std::string str, std::string attribute)</td></tr>
-<tr class="memdesc:a7f798bd46c19c61d7e3f0356018bc0c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la valeur d'un attribut d'un balise XML.  <a href="tmxParsing_8cpp.html#a7f798bd46c19c61d7e3f0356018bc0c9">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a7f798bd46c19c61d7e3f0356018bc0c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a948722115df7fcc4021dea32c47a19b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a948722115df7fcc4021dea32c47a19b5">getIntAttributeValue</a> (std::string str, std::string attribute)</td></tr>
-<tr class="separator:a948722115df7fcc4021dea32c47a19b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cce2d96dd209722a445091ace78dae4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a4cce2d96dd209722a445091ace78dae4">csvToInt</a> (std::string data)</td></tr>
-<tr class="memdesc:a4cce2d96dd209722a445091ace78dae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforme une std::string sous format csv en tableau dynamique d'entiers.  <a href="tmxParsing_8cpp.html#a4cce2d96dd209722a445091ace78dae4">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a4cce2d96dd209722a445091ace78dae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fc864f80bb4b71341f7189e9a5c9bcd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a8fc864f80bb4b71341f7189e9a5c9bcd">getFullTag</a> (std::string data, std::string tag, int indice)</td></tr>
-<tr class="separator:a8fc864f80bb4b71341f7189e9a5c9bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01a1670c28de93ece461380677bb7d89"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a01a1670c28de93ece461380677bb7d89">getInsideTag</a> (std::string data, std::string tag, int indice)</td></tr>
-<tr class="separator:a01a1670c28de93ece461380677bb7d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe8a4464102791b21b37cc37f76eb1c9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#afe8a4464102791b21b37cc37f76eb1c9">getDataTag</a> (std::string data, std::string tag, int indice)</td></tr>
-<tr class="separator:afe8a4464102791b21b37cc37f76eb1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae74660aeef7041eda55965e62997a6e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#ae74660aeef7041eda55965e62997a6e8">countTag</a> (std::string data, std::string tag)</td></tr>
-<tr class="separator:ae74660aeef7041eda55965e62997a6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a317f87c9a3888b89d04c33aa204600c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a317f87c9a3888b89d04c33aa204600c2">testRegression</a> ()</td></tr>
-<tr class="separator:a317f87c9a3888b89d04c33aa204600c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a426593f72114ddaa73435d5587d4100f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a426593f72114ddaa73435d5587d4100f">FileToString</a> (std::string filename)</td></tr>
+<tr class="memdesc:a426593f72114ddaa73435d5587d4100f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne un fichier dans une std::string.  <a href="tmxParsing_8cpp.html#a426593f72114ddaa73435d5587d4100f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a426593f72114ddaa73435d5587d4100f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11672fc9dccbc12b5853edc3de6b9dbc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a11672fc9dccbc12b5853edc3de6b9dbc">GetAttributeValue</a> (std::string str, std::string attribute)</td></tr>
+<tr class="memdesc:a11672fc9dccbc12b5853edc3de6b9dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la valeur d'un attribut d'un balise XML.  <a href="tmxParsing_8cpp.html#a11672fc9dccbc12b5853edc3de6b9dbc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a11672fc9dccbc12b5853edc3de6b9dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e759647152efbca273187768f806d1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a9e759647152efbca273187768f806d1a">GetIntAttributeValue</a> (std::string str, std::string attribute)</td></tr>
+<tr class="memdesc:a9e759647152efbca273187768f806d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la valeur d'un attribut d'un balise XML.  <a href="tmxParsing_8cpp.html#a9e759647152efbca273187768f806d1a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9e759647152efbca273187768f806d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed11077df068f825e6c7e20f838f881"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#aeed11077df068f825e6c7e20f838f881">CsvToInt</a> (std::string data)</td></tr>
+<tr class="memdesc:aeed11077df068f825e6c7e20f838f881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforme une std::string sous format csv en tableau dynamique d'entiers.  <a href="tmxParsing_8cpp.html#aeed11077df068f825e6c7e20f838f881">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aeed11077df068f825e6c7e20f838f881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe85c0a596d406c2dd903fa66eb961b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#abbe85c0a596d406c2dd903fa66eb961b">GetFullTag</a> (std::string data, std::string tag, int indice)</td></tr>
+<tr class="memdesc:abbe85c0a596d406c2dd903fa66eb961b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne ce qu'il y entre la balise ouvrante et fermante (avec les balises).  <a href="tmxParsing_8cpp.html#abbe85c0a596d406c2dd903fa66eb961b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abbe85c0a596d406c2dd903fa66eb961b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0306f58af4bcbdd0cb9969f128a4313e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a0306f58af4bcbdd0cb9969f128a4313e">GetInsideTag</a> (std::string data, std::string tag, int indice)</td></tr>
+<tr class="memdesc:a0306f58af4bcbdd0cb9969f128a4313e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le contenu de la balise ouvrante.  <a href="tmxParsing_8cpp.html#a0306f58af4bcbdd0cb9969f128a4313e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0306f58af4bcbdd0cb9969f128a4313e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb303ae67be65e125950c06afe8f030"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a3eb303ae67be65e125950c06afe8f030">GetDataTag</a> (std::string data, std::string tag, int indice)</td></tr>
+<tr class="memdesc:a3eb303ae67be65e125950c06afe8f030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne ce qu'il y entre la balise ouvrante et fermante (sans les balises).  <a href="tmxParsing_8cpp.html#a3eb303ae67be65e125950c06afe8f030">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3eb303ae67be65e125950c06afe8f030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a632f143e2572aaf8c0221ff7c7195053"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a632f143e2572aaf8c0221ff7c7195053">CountTag</a> (std::string data, std::string tag)</td></tr>
+<tr class="memdesc:a632f143e2572aaf8c0221ff7c7195053"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compte le nombre d'occurence d'une balise.  <a href="tmxParsing_8cpp.html#a632f143e2572aaf8c0221ff7c7195053">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a632f143e2572aaf8c0221ff7c7195053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa1a7abecf83a7b024f031c9ccac69f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tmxParsing_8cpp.html#a9fa1a7abecf83a7b024f031c9ccac69f">TestRegressionTmxParsing</a> ()</td></tr>
+<tr class="memdesc:a9fa1a7abecf83a7b024f031c9ccac69f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de test de regression.  <a href="tmxParsing_8cpp.html#a9fa1a7abecf83a7b024f031c9ccac69f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9fa1a7abecf83a7b024f031c9ccac69f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des fonctions</h2>
-<a id="ae74660aeef7041eda55965e62997a6e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae74660aeef7041eda55965e62997a6e8">&#9670;&nbsp;</a></span>countTag()</h2>
+<a id="a632f143e2572aaf8c0221ff7c7195053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a632f143e2572aaf8c0221ff7c7195053">&#9670;&nbsp;</a></span>CountTag()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int countTag </td>
+          <td class="memname">int CountTag </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -159,30 +167,42 @@ Fonctions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compte le nombre d'occurence d'une balise. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>: std::string, chaine de caractère dans laquelle on cherche. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tag</td><td>: std::string, nom de la balise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne le nombre d'occurence d'une balise. </dd></dl>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="tmxParsing_8cpp_ae74660aeef7041eda55965e62997a6e8_icgraph.png" border="0" usemap="#tmxParsing_8cpp_ae74660aeef7041eda55965e62997a6e8_icgraph" alt=""/></div>
-<map name="tmxParsing_8cpp_ae74660aeef7041eda55965e62997a6e8_icgraph" id="tmxParsing_8cpp_ae74660aeef7041eda55965e62997a6e8_icgraph">
-<area shape="rect" title=" " alt="" coords="391,97,471,123"/>
-<area shape="rect" href="classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1" title="Constructeur par balise." alt="" coords="152,5,331,47"/>
-<area shape="rect" href="classSpawnsLayer.html#a0a9c7b77d0eb67c80e71c06b3cfbda4c" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="140,71,343,98"/>
-<area shape="rect" href="tmxParsing_8h.html#a317f87c9a3888b89d04c33aa204600c2" title=" " alt="" coords="182,122,301,149"/>
-<area shape="rect" href="classMap.html#ab57f33273034a118bb9434befbeb4263" title="Charge les données d&#39;un fichier .tmx." alt="" coords="161,173,322,199"/>
-<area shape="rect" href="classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="5,173,92,199"/>
+<div class="center"><img src="tmxParsing_8cpp_a632f143e2572aaf8c0221ff7c7195053_icgraph.png" border="0" usemap="#tmxParsing_8cpp_a632f143e2572aaf8c0221ff7c7195053_icgraph" alt=""/></div>
+<map name="tmxParsing_8cpp_a632f143e2572aaf8c0221ff7c7195053_icgraph" id="tmxParsing_8cpp_a632f143e2572aaf8c0221ff7c7195053_icgraph">
+<area shape="rect" title="Compte le nombre d&#39;occurence d&#39;une balise." alt="" coords="501,97,584,123"/>
+<area shape="rect" href="classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1" title="Constructeur par balise." alt="" coords="263,5,441,47"/>
+<area shape="rect" href="classSpawnsLayer.html#a0a9c7b77d0eb67c80e71c06b3cfbda4c" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="251,71,453,98"/>
+<area shape="rect" href="tmxParsing_8h.html#a9fa1a7abecf83a7b024f031c9ccac69f" title="Fonction de test de regression." alt="" coords="254,122,450,149"/>
+<area shape="rect" href="classMap.html#ab57f33273034a118bb9434befbeb4263" title="Charge les données d&#39;un fichier .tmx." alt="" coords="271,173,433,199"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,122,203,149"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,122,60,149"/>
+<area shape="rect" href="classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="112,173,199,199"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a4cce2d96dd209722a445091ace78dae4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cce2d96dd209722a445091ace78dae4">&#9670;&nbsp;</a></span>csvToInt()</h2>
+<a id="aeed11077df068f825e6c7e20f838f881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeed11077df068f825e6c7e20f838f881">&#9670;&nbsp;</a></span>CsvToInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;int&gt; csvToInt </td>
+          <td class="memname">std::vector&lt;int&gt; CsvToInt </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
@@ -201,23 +221,26 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="tmxParsing_8cpp_a4cce2d96dd209722a445091ace78dae4_icgraph.png" border="0" usemap="#tmxParsing_8cpp_a4cce2d96dd209722a445091ace78dae4_icgraph" alt=""/></div>
-<map name="tmxParsing_8cpp_a4cce2d96dd209722a445091ace78dae4_icgraph" id="tmxParsing_8cpp_a4cce2d96dd209722a445091ace78dae4_icgraph">
-<area shape="rect" title="Transforme une std::string sous format csv en tableau dynamique d&#39;entiers." alt="" coords="212,5,287,32"/>
-<area shape="rect" href="classMapLayer.html#aaa68e0a5062ae9f9dc97383d3687b19e" title="Constructeur avec data brut comme parametre." alt="" coords="5,5,164,32"/>
+<div class="center"><img src="tmxParsing_8cpp_aeed11077df068f825e6c7e20f838f881_icgraph.png" border="0" usemap="#tmxParsing_8cpp_aeed11077df068f825e6c7e20f838f881_icgraph" alt=""/></div>
+<map name="tmxParsing_8cpp_aeed11077df068f825e6c7e20f838f881_icgraph" id="tmxParsing_8cpp_aeed11077df068f825e6c7e20f838f881_icgraph">
+<area shape="rect" title="Transforme une std::string sous format csv en tableau dynamique d&#39;entiers." alt="" coords="495,31,572,57"/>
+<area shape="rect" href="classMapLayer.html#aaa68e0a5062ae9f9dc97383d3687b19e" title="Constructeur avec data brut comme parametre." alt="" coords="269,5,428,32"/>
+<area shape="rect" href="tmxParsing_8h.html#a9fa1a7abecf83a7b024f031c9ccac69f" title="Fonction de test de regression." alt="" coords="251,56,447,83"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,56,203,83"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,60,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a6b9ffd87ce2b45473317a2a57e0750ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b9ffd87ce2b45473317a2a57e0750ee">&#9670;&nbsp;</a></span>fileToString()</h2>
+<a id="a426593f72114ddaa73435d5587d4100f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a426593f72114ddaa73435d5587d4100f">&#9670;&nbsp;</a></span>FileToString()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string fileToString </td>
+          <td class="memname">std::string FileToString </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>fileName</em></td><td>)</td>
@@ -237,9 +260,9 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="tmxParsing_8cpp_a6b9ffd87ce2b45473317a2a57e0750ee_icgraph.png" border="0" usemap="#tmxParsing_8cpp_a6b9ffd87ce2b45473317a2a57e0750ee_icgraph" alt=""/></div>
-<map name="tmxParsing_8cpp_a6b9ffd87ce2b45473317a2a57e0750ee_icgraph" id="tmxParsing_8cpp_a6b9ffd87ce2b45473317a2a57e0750ee_icgraph">
-<area shape="rect" title="Retourne un fichier dans une std::string." alt="" coords="349,31,444,57"/>
+<div class="center"><img src="tmxParsing_8cpp_a426593f72114ddaa73435d5587d4100f_icgraph.png" border="0" usemap="#tmxParsing_8cpp_a426593f72114ddaa73435d5587d4100f_icgraph" alt=""/></div>
+<map name="tmxParsing_8cpp_a426593f72114ddaa73435d5587d4100f_icgraph" id="tmxParsing_8cpp_a426593f72114ddaa73435d5587d4100f_icgraph">
+<area shape="rect" title="Retourne un fichier dans une std::string." alt="" coords="349,31,447,57"/>
 <area shape="rect" href="classMap.html#ab57f33273034a118bb9434befbeb4263" title="Charge les données d&#39;un fichier .tmx." alt="" coords="140,5,301,32"/>
 <area shape="rect" href="classMap.html#a731bab75a964df89b6568831f3824df7" title="Charge les données d&#39;un fichier .tsx." alt="" coords="143,56,298,83"/>
 <area shape="rect" href="classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="5,31,92,57"/>
@@ -248,14 +271,14 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
-<a id="a7f798bd46c19c61d7e3f0356018bc0c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f798bd46c19c61d7e3f0356018bc0c9">&#9670;&nbsp;</a></span>getAttributeValue()</h2>
+<a id="a11672fc9dccbc12b5853edc3de6b9dbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11672fc9dccbc12b5853edc3de6b9dbc">&#9670;&nbsp;</a></span>GetAttributeValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string getAttributeValue </td>
+          <td class="memname">std::string GetAttributeValue </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>str</em>, </td>
@@ -282,34 +305,37 @@ Voici le graphe des appelants de cette fonction :</div>
   </table>
   </dd>
 </dl>
-<p>Exemple : std::string str = "&lt;layer id=\"1" name="ground"&gt;";
-getAttributeValue(str, "id"); // renvoie =&gt; "1" </p>
+<dl class="section return"><dt>Renvoie</dt><dd>La valeur en std::string d'un paramètre dans la balise ouvrante. </dd></dl>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="tmxParsing_8cpp_a7f798bd46c19c61d7e3f0356018bc0c9_icgraph.png" border="0" usemap="#tmxParsing_8cpp_a7f798bd46c19c61d7e3f0356018bc0c9_icgraph" alt=""/></div>
-<map name="tmxParsing_8cpp_a7f798bd46c19c61d7e3f0356018bc0c9_icgraph" id="tmxParsing_8cpp_a7f798bd46c19c61d7e3f0356018bc0c9_icgraph">
-<area shape="rect" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="391,107,527,133"/>
-<area shape="rect" href="tmxParsing_8h.html#a948722115df7fcc4021dea32c47a19b5" title=" " alt="" coords="165,5,318,32"/>
-<area shape="rect" href="classMapLayer.html#aaa68e0a5062ae9f9dc97383d3687b19e" title="Constructeur avec data brut comme parametre." alt="" coords="162,56,321,83"/>
-<area shape="rect" href="classSpawnsLayer.html#a0a9c7b77d0eb67c80e71c06b3cfbda4c" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="140,107,343,133"/>
-<area shape="rect" href="classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54" title="Constructeur par copie." alt="" coords="182,157,301,184"/>
-<area shape="rect" href="classMap.html#ab57f33273034a118bb9434befbeb4263" title="Charge les données d&#39;un fichier .tmx." alt="" coords="161,208,322,235"/>
-<area shape="rect" href="classBox.html#a929e51c7af7daa185f5fd6a8956c8e76" title="Constructeur depuis balise d&#39;une map .tmx." alt="" coords="9,5,89,32"/>
-<area shape="rect" href="classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="5,208,92,235"/>
+<div class="center"><img src="tmxParsing_8cpp_a11672fc9dccbc12b5853edc3de6b9dbc_icgraph.png" border="0" usemap="#tmxParsing_8cpp_a11672fc9dccbc12b5853edc3de6b9dbc_icgraph" alt=""/></div>
+<map name="tmxParsing_8cpp_a11672fc9dccbc12b5853edc3de6b9dbc_icgraph" id="tmxParsing_8cpp_a11672fc9dccbc12b5853edc3de6b9dbc_icgraph">
+<area shape="rect" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="711,208,849,235"/>
+<area shape="rect" href="tmxParsing_8h.html#a9e759647152efbca273187768f806d1a" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="505,107,659,133"/>
+<area shape="rect" href="classSpawnsLayer.html#a0a9c7b77d0eb67c80e71c06b3cfbda4c" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="251,157,453,184"/>
+<area shape="rect" href="tmxParsing_8h.html#a9fa1a7abecf83a7b024f031c9ccac69f" title="Fonction de test de regression." alt="" coords="254,208,450,235"/>
+<area shape="rect" href="classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54" title="Constructeur par copie." alt="" coords="293,259,411,285"/>
+<area shape="rect" href="classMap.html#ab57f33273034a118bb9434befbeb4263" title="Charge les données d&#39;un fichier .tmx." alt="" coords="501,309,663,336"/>
+<area shape="rect" href="classBox.html#a929e51c7af7daa185f5fd6a8956c8e76" title="Constructeur depuis balise d&#39;une map .tmx." alt="" coords="312,5,392,32"/>
+<area shape="rect" href="classMapLayer.html#aaa68e0a5062ae9f9dc97383d3687b19e" title="Constructeur avec data brut comme parametre." alt="" coords="273,56,431,83"/>
+<area shape="rect" href="classSpawnPoint.html#aad5dc128d02b983a3ccf52ee57a125b4" title="Constructeur depuis balise d&#39;une map .tmx." alt="" coords="261,107,443,133"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,208,203,235"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,208,60,235"/>
+<area shape="rect" href="classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="309,309,395,336"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="afe8a4464102791b21b37cc37f76eb1c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe8a4464102791b21b37cc37f76eb1c9">&#9670;&nbsp;</a></span>getDataTag()</h2>
+<a id="a3eb303ae67be65e125950c06afe8f030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb303ae67be65e125950c06afe8f030">&#9670;&nbsp;</a></span>GetDataTag()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string getDataTag </td>
+          <td class="memname">std::string GetDataTag </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -333,36 +359,49 @@ Voici le graphe des appelants de cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retourne ce qu'il y entre la balise ouvrante et fermante (sans les balises). </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>: std::string, chaine de caractère dans laquelle on cherche. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tag</td><td>: std::string, nom de la balise. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indice</td><td>: entier positif, ième occurence de la balise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne ce qu'il y a entre &lt;balise&gt; et &lt;/balise&gt; de la balise ouvrante. </dd></dl>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="tmxParsing_8cpp_afe8a4464102791b21b37cc37f76eb1c9_cgraph.png" border="0" usemap="#tmxParsing_8cpp_afe8a4464102791b21b37cc37f76eb1c9_cgraph" alt=""/></div>
-<map name="tmxParsing_8cpp_afe8a4464102791b21b37cc37f76eb1c9_cgraph" id="tmxParsing_8cpp_afe8a4464102791b21b37cc37f76eb1c9_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,101,32"/>
-<area shape="rect" href="tmxParsing_8cpp.html#a8fc864f80bb4b71341f7189e9a5c9bcd" title=" " alt="" coords="149,5,237,32"/>
+<div class="center"><img src="tmxParsing_8cpp_a3eb303ae67be65e125950c06afe8f030_cgraph.png" border="0" usemap="#tmxParsing_8cpp_a3eb303ae67be65e125950c06afe8f030_cgraph" alt=""/></div>
+<map name="tmxParsing_8cpp_a3eb303ae67be65e125950c06afe8f030_cgraph" id="tmxParsing_8cpp_a3eb303ae67be65e125950c06afe8f030_cgraph">
+<area shape="rect" title="Retourne ce qu&#39;il y entre la balise ouvrante et fermante (sans les balises)." alt="" coords="5,5,104,32"/>
+<area shape="rect" href="tmxParsing_8cpp.html#abbe85c0a596d406c2dd903fa66eb961b" title="Retourne ce qu&#39;il y entre la balise ouvrante et fermante (avec les balises)." alt="" coords="152,5,243,32"/>
 </map>
 </div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="tmxParsing_8cpp_afe8a4464102791b21b37cc37f76eb1c9_icgraph.png" border="0" usemap="#tmxParsing_8cpp_afe8a4464102791b21b37cc37f76eb1c9_icgraph" alt=""/></div>
-<map name="tmxParsing_8cpp_afe8a4464102791b21b37cc37f76eb1c9_icgraph" id="tmxParsing_8cpp_afe8a4464102791b21b37cc37f76eb1c9_icgraph">
-<area shape="rect" title=" " alt="" coords="212,31,308,57"/>
-<area shape="rect" href="classMapLayer.html#aaa68e0a5062ae9f9dc97383d3687b19e" title="Constructeur avec data brut comme parametre." alt="" coords="5,5,164,32"/>
-<area shape="rect" href="tmxParsing_8h.html#a317f87c9a3888b89d04c33aa204600c2" title=" " alt="" coords="25,56,144,83"/>
+<div class="center"><img src="tmxParsing_8cpp_a3eb303ae67be65e125950c06afe8f030_icgraph.png" border="0" usemap="#tmxParsing_8cpp_a3eb303ae67be65e125950c06afe8f030_icgraph" alt=""/></div>
+<map name="tmxParsing_8cpp_a3eb303ae67be65e125950c06afe8f030_icgraph" id="tmxParsing_8cpp_a3eb303ae67be65e125950c06afe8f030_icgraph">
+<area shape="rect" title="Retourne ce qu&#39;il y entre la balise ouvrante et fermante (sans les balises)." alt="" coords="495,31,593,57"/>
+<area shape="rect" href="classMapLayer.html#aaa68e0a5062ae9f9dc97383d3687b19e" title="Constructeur avec data brut comme parametre." alt="" coords="269,5,428,32"/>
+<area shape="rect" href="tmxParsing_8h.html#a9fa1a7abecf83a7b024f031c9ccac69f" title="Fonction de test de regression." alt="" coords="251,56,447,83"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,56,203,83"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,60,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a8fc864f80bb4b71341f7189e9a5c9bcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fc864f80bb4b71341f7189e9a5c9bcd">&#9670;&nbsp;</a></span>getFullTag()</h2>
+<a id="abbe85c0a596d406c2dd903fa66eb961b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbe85c0a596d406c2dd903fa66eb961b">&#9670;&nbsp;</a></span>GetFullTag()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string getFullTag </td>
+          <td class="memname">std::string GetFullTag </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -386,34 +425,47 @@ Voici le graphe des appelants de cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retourne ce qu'il y entre la balise ouvrante et fermante (avec les balises). </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>: std::string, chaine de caractère dans laquelle on cherche. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tag</td><td>: std::string, nom de la balise. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indice</td><td>: entier positif, ième occurence de la balise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne ce qu'il y a entre &lt; et &gt;. </dd></dl>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="tmxParsing_8cpp_a8fc864f80bb4b71341f7189e9a5c9bcd_icgraph.png" border="0" usemap="#tmxParsing_8cpp_a8fc864f80bb4b71341f7189e9a5c9bcd_icgraph" alt=""/></div>
-<map name="tmxParsing_8cpp_a8fc864f80bb4b71341f7189e9a5c9bcd_icgraph" id="tmxParsing_8cpp_a8fc864f80bb4b71341f7189e9a5c9bcd_icgraph">
-<area shape="rect" title=" " alt="" coords="543,136,631,163"/>
-<area shape="rect" href="tmxParsing_8h.html#afe8a4464102791b21b37cc37f76eb1c9" title=" " alt="" coords="395,56,491,83"/>
-<area shape="rect" href="tmxParsing_8h.html#a317f87c9a3888b89d04c33aa204600c2" title=" " alt="" coords="182,56,301,83"/>
-<area shape="rect" href="tmxParsing_8h.html#a01a1670c28de93ece461380677bb7d89" title=" " alt="" coords="391,169,495,196"/>
-<area shape="rect" href="classMap.html#ab57f33273034a118bb9434befbeb4263" title="Charge les données d&#39;un fichier .tmx." alt="" coords="161,275,322,301"/>
-<area shape="rect" href="classMapLayer.html#aaa68e0a5062ae9f9dc97383d3687b19e" title="Constructeur avec data brut comme parametre." alt="" coords="162,5,321,32"/>
-<area shape="rect" href="classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1" title="Constructeur par balise." alt="" coords="152,107,331,149"/>
-<area shape="rect" href="classSpawnsLayer.html#a0a9c7b77d0eb67c80e71c06b3cfbda4c" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="140,173,343,200"/>
-<area shape="rect" href="classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54" title="Constructeur par copie." alt="" coords="182,224,301,251"/>
-<area shape="rect" href="classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="5,275,92,301"/>
+<div class="center"><img src="tmxParsing_8cpp_abbe85c0a596d406c2dd903fa66eb961b_icgraph.png" border="0" usemap="#tmxParsing_8cpp_abbe85c0a596d406c2dd903fa66eb961b_icgraph" alt=""/></div>
+<map name="tmxParsing_8cpp_abbe85c0a596d406c2dd903fa66eb961b_icgraph" id="tmxParsing_8cpp_abbe85c0a596d406c2dd903fa66eb961b_icgraph">
+<area shape="rect" title="Retourne ce qu&#39;il y entre la balise ouvrante et fermante (avec les balises)." alt="" coords="656,173,747,200"/>
+<area shape="rect" href="tmxParsing_8h.html#a3eb303ae67be65e125950c06afe8f030" title="Retourne ce qu&#39;il y entre la balise ouvrante et fermante (sans les balises)." alt="" coords="505,56,604,83"/>
+<area shape="rect" href="tmxParsing_8h.html#a9fa1a7abecf83a7b024f031c9ccac69f" title="Fonction de test de regression." alt="" coords="254,56,450,83"/>
+<area shape="rect" href="tmxParsing_8h.html#a0306f58af4bcbdd0cb9969f128a4313e" title="Retourne le contenu de la balise ouvrante." alt="" coords="501,173,608,200"/>
+<area shape="rect" href="classSpawnsLayer.html#a0a9c7b77d0eb67c80e71c06b3cfbda4c" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="251,224,453,251"/>
+<area shape="rect" href="classMap.html#ab57f33273034a118bb9434befbeb4263" title="Charge les données d&#39;un fichier .tmx." alt="" coords="271,275,433,301"/>
+<area shape="rect" href="classMapLayer.html#aaa68e0a5062ae9f9dc97383d3687b19e" title="Constructeur avec data brut comme parametre." alt="" coords="273,5,431,32"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,56,203,83"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,60,83"/>
+<area shape="rect" href="classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1" title="Constructeur par balise." alt="" coords="263,107,441,149"/>
+<area shape="rect" href="classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54" title="Constructeur par copie." alt="" coords="293,173,411,200"/>
+<area shape="rect" href="classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="112,275,199,301"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a01a1670c28de93ece461380677bb7d89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01a1670c28de93ece461380677bb7d89">&#9670;&nbsp;</a></span>getInsideTag()</h2>
+<a id="a0306f58af4bcbdd0cb9969f128a4313e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0306f58af4bcbdd0cb9969f128a4313e">&#9670;&nbsp;</a></span>GetInsideTag()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string getInsideTag </td>
+          <td class="memname">std::string GetInsideTag </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -437,40 +489,53 @@ Voici le graphe des appelants de cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retourne le contenu de la balise ouvrante. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>: std::string, chaine de caractère dans laquelle on cherche. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tag</td><td>: std::string, nom de la balise. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indice</td><td>: entier positif, ième occurence de la balise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Retourne ce qu'il y a entre &lt; et &gt; de la balise ouvrante. </dd></dl>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="tmxParsing_8cpp_a01a1670c28de93ece461380677bb7d89_cgraph.png" border="0" usemap="#tmxParsing_8cpp_a01a1670c28de93ece461380677bb7d89_cgraph" alt=""/></div>
-<map name="tmxParsing_8cpp_a01a1670c28de93ece461380677bb7d89_cgraph" id="tmxParsing_8cpp_a01a1670c28de93ece461380677bb7d89_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,109,32"/>
-<area shape="rect" href="tmxParsing_8cpp.html#a8fc864f80bb4b71341f7189e9a5c9bcd" title=" " alt="" coords="157,5,245,32"/>
+<div class="center"><img src="tmxParsing_8cpp_a0306f58af4bcbdd0cb9969f128a4313e_cgraph.png" border="0" usemap="#tmxParsing_8cpp_a0306f58af4bcbdd0cb9969f128a4313e_cgraph" alt=""/></div>
+<map name="tmxParsing_8cpp_a0306f58af4bcbdd0cb9969f128a4313e_cgraph" id="tmxParsing_8cpp_a0306f58af4bcbdd0cb9969f128a4313e_cgraph">
+<area shape="rect" title="Retourne le contenu de la balise ouvrante." alt="" coords="5,5,112,32"/>
+<area shape="rect" href="tmxParsing_8cpp.html#abbe85c0a596d406c2dd903fa66eb961b" title="Retourne ce qu&#39;il y entre la balise ouvrante et fermante (avec les balises)." alt="" coords="160,5,251,32"/>
 </map>
 </div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="tmxParsing_8cpp_a01a1670c28de93ece461380677bb7d89_icgraph.png" border="0" usemap="#tmxParsing_8cpp_a01a1670c28de93ece461380677bb7d89_icgraph" alt=""/></div>
-<map name="tmxParsing_8cpp_a01a1670c28de93ece461380677bb7d89_icgraph" id="tmxParsing_8cpp_a01a1670c28de93ece461380677bb7d89_icgraph">
-<area shape="rect" title=" " alt="" coords="391,122,495,149"/>
-<area shape="rect" href="classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1" title="Constructeur par balise." alt="" coords="152,5,331,47"/>
-<area shape="rect" href="classSpawnsLayer.html#a0a9c7b77d0eb67c80e71c06b3cfbda4c" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="140,71,343,98"/>
-<area shape="rect" href="tmxParsing_8h.html#a317f87c9a3888b89d04c33aa204600c2" title=" " alt="" coords="182,122,301,149"/>
-<area shape="rect" href="classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54" title="Constructeur par copie." alt="" coords="182,173,301,199"/>
-<area shape="rect" href="classMap.html#ab57f33273034a118bb9434befbeb4263" title="Charge les données d&#39;un fichier .tmx." alt="" coords="161,223,322,250"/>
-<area shape="rect" href="classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="5,223,92,250"/>
+<div class="center"><img src="tmxParsing_8cpp_a0306f58af4bcbdd0cb9969f128a4313e_icgraph.png" border="0" usemap="#tmxParsing_8cpp_a0306f58af4bcbdd0cb9969f128a4313e_icgraph" alt=""/></div>
+<map name="tmxParsing_8cpp_a0306f58af4bcbdd0cb9969f128a4313e_icgraph" id="tmxParsing_8cpp_a0306f58af4bcbdd0cb9969f128a4313e_icgraph">
+<area shape="rect" title="Retourne le contenu de la balise ouvrante." alt="" coords="501,122,608,149"/>
+<area shape="rect" href="classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1" title="Constructeur par balise." alt="" coords="263,5,441,47"/>
+<area shape="rect" href="classSpawnsLayer.html#a0a9c7b77d0eb67c80e71c06b3cfbda4c" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="251,71,453,98"/>
+<area shape="rect" href="tmxParsing_8h.html#a9fa1a7abecf83a7b024f031c9ccac69f" title="Fonction de test de regression." alt="" coords="254,122,450,149"/>
+<area shape="rect" href="classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54" title="Constructeur par copie." alt="" coords="293,173,411,199"/>
+<area shape="rect" href="classMap.html#ab57f33273034a118bb9434befbeb4263" title="Charge les données d&#39;un fichier .tmx." alt="" coords="271,223,433,250"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,122,203,149"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,122,60,149"/>
+<area shape="rect" href="classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="112,223,199,250"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a948722115df7fcc4021dea32c47a19b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a948722115df7fcc4021dea32c47a19b5">&#9670;&nbsp;</a></span>getIntAttributeValue()</h2>
+<a id="a9e759647152efbca273187768f806d1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e759647152efbca273187768f806d1a">&#9670;&nbsp;</a></span>GetIntAttributeValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int getIntAttributeValue </td>
+          <td class="memname">int GetIntAttributeValue </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>str</em>, </td>
@@ -488,51 +553,85 @@ Voici le graphe des appelants de cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retourne la valeur d'un attribut d'un balise XML. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>: std::string, chaine de caractère dans laquelle on cherche la valeur. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attribute</td><td>: std::string, attribut dont on veut connaitre la valeur.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Teste que la valeur est bien uniquement numérique.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>La valeur en int d'un paramètre dans la balise ouvrante. </dd></dl>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="tmxParsing_8cpp_a948722115df7fcc4021dea32c47a19b5_cgraph.png" border="0" usemap="#tmxParsing_8cpp_a948722115df7fcc4021dea32c47a19b5_cgraph" alt=""/></div>
-<map name="tmxParsing_8cpp_a948722115df7fcc4021dea32c47a19b5_cgraph" id="tmxParsing_8cpp_a948722115df7fcc4021dea32c47a19b5_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,159,32"/>
-<area shape="rect" href="tmxParsing_8cpp.html#a7f798bd46c19c61d7e3f0356018bc0c9" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="207,5,343,32"/>
+<div class="center"><img src="tmxParsing_8cpp_a9e759647152efbca273187768f806d1a_cgraph.png" border="0" usemap="#tmxParsing_8cpp_a9e759647152efbca273187768f806d1a_cgraph" alt=""/></div>
+<map name="tmxParsing_8cpp_a9e759647152efbca273187768f806d1a_cgraph" id="tmxParsing_8cpp_a9e759647152efbca273187768f806d1a_cgraph">
+<area shape="rect" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="5,5,160,32"/>
+<area shape="rect" href="tmxParsing_8cpp.html#a11672fc9dccbc12b5853edc3de6b9dbc" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="208,5,347,32"/>
 </map>
 </div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="tmxParsing_8cpp_a948722115df7fcc4021dea32c47a19b5_icgraph.png" border="0" usemap="#tmxParsing_8cpp_a948722115df7fcc4021dea32c47a19b5_icgraph" alt=""/></div>
-<map name="tmxParsing_8cpp_a948722115df7fcc4021dea32c47a19b5_icgraph" id="tmxParsing_8cpp_a948722115df7fcc4021dea32c47a19b5_icgraph">
-<area shape="rect" title=" " alt="" coords="133,5,287,32"/>
-<area shape="rect" href="classBox.html#a929e51c7af7daa185f5fd6a8956c8e76" title="Constructeur depuis balise d&#39;une map .tmx." alt="" coords="5,5,85,32"/>
+<div class="center"><img src="tmxParsing_8cpp_a9e759647152efbca273187768f806d1a_icgraph.png" border="0" usemap="#tmxParsing_8cpp_a9e759647152efbca273187768f806d1a_icgraph" alt=""/></div>
+<map name="tmxParsing_8cpp_a9e759647152efbca273187768f806d1a_icgraph" id="tmxParsing_8cpp_a9e759647152efbca273187768f806d1a_icgraph">
+<area shape="rect" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="501,132,656,159"/>
+<area shape="rect" href="classBox.html#a929e51c7af7daa185f5fd6a8956c8e76" title="Constructeur depuis balise d&#39;une map .tmx." alt="" coords="312,5,392,32"/>
+<area shape="rect" href="classMapLayer.html#aaa68e0a5062ae9f9dc97383d3687b19e" title="Constructeur avec data brut comme parametre." alt="" coords="273,56,431,83"/>
+<area shape="rect" href="classSpawnPoint.html#aad5dc128d02b983a3ccf52ee57a125b4" title="Constructeur depuis balise d&#39;une map .tmx." alt="" coords="261,107,443,133"/>
+<area shape="rect" href="classSpawnsLayer.html#a0a9c7b77d0eb67c80e71c06b3cfbda4c" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="251,157,453,184"/>
+<area shape="rect" href="tmxParsing_8h.html#a9fa1a7abecf83a7b024f031c9ccac69f" title="Fonction de test de regression." alt="" coords="254,208,450,235"/>
+<area shape="rect" href="classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54" title="Constructeur par copie." alt="" coords="293,259,411,285"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,208,203,235"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,208,60,235"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a317f87c9a3888b89d04c33aa204600c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a317f87c9a3888b89d04c33aa204600c2">&#9670;&nbsp;</a></span>testRegression()</h2>
+<a id="a9fa1a7abecf83a7b024f031c9ccac69f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fa1a7abecf83a7b024f031c9ccac69f">&#9670;&nbsp;</a></span>TestRegressionTmxParsing()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void testRegression </td>
+          <td class="memname">void TestRegressionTmxParsing </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Fonction de test de regression. </p>
+<p>Effectue une série de test de regression sur l'ensemble des fonction membre pour vérifié qu'elles font ce qu'elles sont censé faire. </p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="tmxParsing_8cpp_a317f87c9a3888b89d04c33aa204600c2_cgraph.png" border="0" usemap="#tmxParsing_8cpp_a317f87c9a3888b89d04c33aa204600c2_cgraph" alt=""/></div>
-<map name="tmxParsing_8cpp_a317f87c9a3888b89d04c33aa204600c2_cgraph" id="tmxParsing_8cpp_a317f87c9a3888b89d04c33aa204600c2_cgraph">
-<area shape="rect" title=" " alt="" coords="5,81,124,108"/>
-<area shape="rect" href="tmxParsing_8cpp.html#ae74660aeef7041eda55965e62997a6e8" title=" " alt="" coords="184,5,264,32"/>
-<area shape="rect" href="tmxParsing_8cpp.html#afe8a4464102791b21b37cc37f76eb1c9" title=" " alt="" coords="176,56,272,83"/>
-<area shape="rect" href="tmxParsing_8cpp.html#a8fc864f80bb4b71341f7189e9a5c9bcd" title=" " alt="" coords="324,107,412,133"/>
-<area shape="rect" href="tmxParsing_8cpp.html#a01a1670c28de93ece461380677bb7d89" title=" " alt="" coords="172,157,276,184"/>
+<div class="center"><img src="tmxParsing_8cpp_a9fa1a7abecf83a7b024f031c9ccac69f_cgraph.png" border="0" usemap="#tmxParsing_8cpp_a9fa1a7abecf83a7b024f031c9ccac69f_cgraph" alt=""/></div>
+<map name="tmxParsing_8cpp_a9fa1a7abecf83a7b024f031c9ccac69f_cgraph" id="tmxParsing_8cpp_a9fa1a7abecf83a7b024f031c9ccac69f_cgraph">
+<area shape="rect" title="Fonction de test de regression." alt="" coords="5,157,201,184"/>
+<area shape="rect" href="tmxParsing_8cpp.html#a632f143e2572aaf8c0221ff7c7195053" title="Compte le nombre d&#39;occurence d&#39;une balise." alt="" coords="285,5,368,32"/>
+<area shape="rect" href="tmxParsing_8cpp.html#aeed11077df068f825e6c7e20f838f881" title="Transforme une std::string sous format csv en tableau dynamique d&#39;entiers." alt="" coords="288,56,365,83"/>
+<area shape="rect" href="tmxParsing_8cpp.html#a11672fc9dccbc12b5853edc3de6b9dbc" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="452,132,591,159"/>
+<area shape="rect" href="tmxParsing_8cpp.html#a3eb303ae67be65e125950c06afe8f030" title="Retourne ce qu&#39;il y entre la balise ouvrante et fermante (sans les balises)." alt="" coords="277,208,376,235"/>
+<area shape="rect" href="tmxParsing_8cpp.html#abbe85c0a596d406c2dd903fa66eb961b" title="Retourne ce qu&#39;il y entre la balise ouvrante et fermante (avec les balises)." alt="" coords="476,259,567,285"/>
+<area shape="rect" href="tmxParsing_8cpp.html#a0306f58af4bcbdd0cb9969f128a4313e" title="Retourne le contenu de la balise ouvrante." alt="" coords="273,309,380,336"/>
+<area shape="rect" href="tmxParsing_8cpp.html#a9e759647152efbca273187768f806d1a" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="249,157,404,184"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="tmxParsing_8cpp_a9fa1a7abecf83a7b024f031c9ccac69f_icgraph.png" border="0" usemap="#tmxParsing_8cpp_a9fa1a7abecf83a7b024f031c9ccac69f_icgraph" alt=""/></div>
+<map name="tmxParsing_8cpp_a9fa1a7abecf83a7b024f031c9ccac69f_icgraph" id="tmxParsing_8cpp_a9fa1a7abecf83a7b024f031c9ccac69f_icgraph">
+<area shape="rect" title="Fonction de test de regression." alt="" coords="251,5,447,32"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,5,203,32"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
 </map>
 </div>
 

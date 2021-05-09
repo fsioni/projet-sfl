@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uniqueid_442',['UniqueID',['../classUniqueID.html',1,'']]]
+  ['wintxt_470',['WinTXT',['../classWinTXT.html',1,'']]]
 ];

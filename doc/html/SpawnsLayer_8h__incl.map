@@ -1,8 +1,16 @@
 <map id="src/Core/Map/Layers/SpawnsLayer.h" name="src/Core/Map/Layers/SpawnsLayer.h">
-<area shape="rect" id="node1" title=" " alt="" coords="84,5,239,47"/>
-<area shape="rect" id="node2" href="$Layer_8h.html" title=" " alt="" coords="5,169,75,196"/>
-<area shape="rect" id="node3" title=" " alt="" coords="108,244,167,271"/>
-<area shape="rect" id="node4" href="$SpawnPoint_8h.html" title=" " alt="" coords="149,95,272,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="297,95,359,121"/>
-<area shape="rect" id="node5" href="$Box_8h.html" title=" " alt="" coords="200,169,259,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="285,5,439,47"/>
+<area shape="rect" id="node2" href="$SpawnPoint_8h.html" title=" " alt="" coords="27,169,150,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="158,319,217,345"/>
+<area shape="rect" id="node5" href="$EntityWithoutHP_8h.html" title=" " alt="" coords="351,95,557,121"/>
+<area shape="rect" id="node12" title=" " alt="" coords="964,244,1027,271"/>
+<area shape="rect" id="node3" href="$Box_8h.html" title=" " alt="" coords="225,244,283,271"/>
+<area shape="rect" id="node6" title=" " alt="" coords="225,169,299,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="324,169,389,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="414,169,494,196"/>
+<area shape="rect" id="node9" title=" " alt="" coords="569,169,637,196"/>
+<area shape="rect" id="node10" title=" " alt="" coords="595,244,673,271"/>
+<area shape="rect" id="node11" href="$CollisionLayer_8h.html" title=" " alt="" coords="781,169,997,196"/>
+<area shape="rect" id="node14" href="$UniqueID_8h.html" title=" " alt="" coords="661,169,756,196"/>
+<area shape="rect" id="node13" title=" " alt="" coords="801,244,851,271"/>
 </map>
