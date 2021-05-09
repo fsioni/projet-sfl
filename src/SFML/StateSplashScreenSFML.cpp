@@ -73,10 +73,6 @@ void StateSplashScreenSFML::ProcessInput()
                 context->stateMan->
                     Add(std::make_unique<StateMenuSFML>(context), true);
                 break;
-        
-                context->stateMan->
-                    Add(std::make_unique<StateMenuSFML>(context), true);
-                break;
 
             case sf::Keyboard::M:
                 context->isMute = !(context->isMute);

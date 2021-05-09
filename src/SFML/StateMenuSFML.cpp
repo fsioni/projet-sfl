@@ -303,7 +303,6 @@ void StateMenuSFML::ProcessInput()
     }
 
     sf::Vector2i mousePos = sf::Mouse::getPosition(*context->renderWin.get());
-
     context->renderWin->setMouseCursor(pointCursor);
 
     // Bouton Son

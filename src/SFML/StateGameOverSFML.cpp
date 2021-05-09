@@ -197,6 +197,7 @@ void StateGameOverSFML::ProcessInput()
         isRestartButSelected = true;
         isMenuButSelected = false;
         isExitButSelected = false;
+        context->renderWin->setMouseCursor(handCursor);
     }
     
     // Bouton Instructions
@@ -210,6 +211,7 @@ void StateGameOverSFML::ProcessInput()
         isRestartButSelected = false;
         isMenuButSelected = true;
         isExitButSelected = false;
+        context->renderWin->setMouseCursor(handCursor);    
     }
     
     // Bouton Quitter
@@ -223,6 +225,7 @@ void StateGameOverSFML::ProcessInput()
         isRestartButSelected = false;
         isMenuButSelected = false;
         isExitButSelected = true;
+        context->renderWin->setMouseCursor(handCursor);
     }
 }
 
