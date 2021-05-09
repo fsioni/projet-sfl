@@ -19,8 +19,6 @@ public:
 
     void AddTextureEnemy(std::string fileTexture);
     void AddTextureNPC(std::string fileTexture);
-    void RemoveTextureEnemy(int indice);
-    void RemoveTextureNPC(int indice);
 
     void SetPlayerTexture(std::string fileTexture);
     void SetTileTexture(std::string fileTexture);
@@ -28,11 +26,12 @@ public:
     void SetBackgroundTexture(std::string fileTexture);
     void SetHeartTexture(std::string fileTexture);
     void SetLogoTexture(std::string fileTexture);
+    void SetSoundTexture(std::string fileTexture);
+    void SetAnimalTexture(std::string fileTexture);
 
     void SetMainFont(std::string fileFont);
     void setMainTextColor(sf::Color color);
 
-    void AddMusic(std::string fileMusic);
     void AddSoundBuffer(std::string fileBuffer);
 
     const std::vector<sf::Texture> &GetTextureEnemy() const;
@@ -43,10 +42,11 @@ public:
     const sf::Texture &GetTextureBackground() const;
     const sf::Texture &GetTextureHeart() const;
     const sf::Texture &GetTextureLogo() const;
+    const sf::Texture &GetTextureSound() const;
+    const sf::Texture &GetTextureAnimal() const;
 
     const sf::Font &GetMainFont() const;
     const sf::Color &GetMainTextColor() const;
-    const std::vector<sf::Music> &GetMusics() const;
     const std::vector<sf::SoundBuffer> &GetSoundBuffers() const;
 
 private:
@@ -67,14 +67,16 @@ private:
     sf::Texture textureHeart;
     /*! \brief Texture du logo du jeu */
     sf::Texture textureLogo;
+    /*! \brief Texture de l'icone son du jeu */
+    sf::Texture textureSound;
+    /*! \brief Texture des animaux */
+    sf::Texture textureAnimal;
 
     /*! \brief Police d'écriture principale */
     sf::Font mainFont;
     /*! \brief Couleur d'écriture principale */
     sf::Color textColor;
     
-    /*! \brief Tableau vbers les musiques du jeu */
-    std::vector<sf::Music> musics;
     /*! \brief Tableau vers les buffers des sons du jeu */
     std::vector<sf::SoundBuffer> soundBuffers;
 };

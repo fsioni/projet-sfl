@@ -92,7 +92,7 @@ struct Context
             x = map->GetSpawnsLayer()->GetAnimalSpawns()[i].GetX();
             y = map->GetSpawnsLayer()->GetAnimalSpawns()[i].GetY();
 
-            Animal * animal = new Animal(x, y, 2, "animal");
+            Animal * animal = new Animal(x, y, 1, "animal");
             animals.push_back(animal);
             
             map->GetCollisionLayer()->AddCollisionBoxEntity(

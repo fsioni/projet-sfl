@@ -1,16 +1,17 @@
 var searchData=
 [
-  ['enemies_63',['enemies',['../structContext.html#a7b772a83981d3122a430f53d8e23b376',1,'Context']]],
-  ['enemiesgothitted_64',['enemiesGotHitted',['../classStateGameSFML.html#ab15b3fe15fb5c3bc47c3a207e338ef18',1,'StateGameSFML']]],
-  ['enemieshitclocks_65',['enemiesHitClocks',['../classStateGameSFML.html#aac41db4c11549832070261fe3edf1fef',1,'StateGameSFML']]],
-  ['enemieslasthp_66',['enemiesLastHP',['../classStateGameSFML.html#aafc4980519d16ad0adf411caacd9d1bc',1,'StateGameSFML']]],
-  ['enemy_67',['Enemy',['../classEnemy.html',1,'Enemy'],['../classEnemy.html#a94f30d348b6d2840fd71675472ba38dd',1,'Enemy::Enemy()'],['../classEnemy.html#a566d219279ca1c61223ae4c44f5d78dd',1,'Enemy::Enemy(float x_, float y_, std::string name_, int hp_, int damage_, int speed_, int maxHP_)']]],
-  ['enemy_2ecpp_68',['Enemy.cpp',['../Enemy_8cpp.html',1,'']]],
-  ['enemy_2eh_69',['Enemy.h',['../Enemy_8h.html',1,'']]],
-  ['enemyattack_70',['EnemyAttack',['../classEnemyAttack.html',1,'EnemyAttack'],['../classEnemyAttack.html#af374183ad08e0e9959e3eab12b1c1f68',1,'EnemyAttack::EnemyAttack(const EnemyAttack &amp;other)=delete'],['../classEnemyAttack.html#a54977db476e524b343786bae4c0d2e8b',1,'EnemyAttack::EnemyAttack()']]],
-  ['enemypatrol_71',['EnemyPatrol',['../classEnemyPatrol.html',1,'EnemyPatrol'],['../classEnemyPatrol.html#a15b78bf01b43b0dc14c3a0eb9e3452be',1,'EnemyPatrol::EnemyPatrol(const EnemyPatrol &amp;other)=delete'],['../classEnemyPatrol.html#aa7bad085d7911a0b8952c18b248dce37',1,'EnemyPatrol::EnemyPatrol()']]],
-  ['enemyrunaway_72',['EnemyRunAway',['../classEnemyRunAway.html',1,'EnemyRunAway'],['../classEnemyRunAway.html#a015d787b5ff7e66a7927c4a9c047e0bc',1,'EnemyRunAway::EnemyRunAway(const EnemyRunAway &amp;other)=delete'],['../classEnemyRunAway.html#a5d56fabaf2823d44a491ea7f43083b47',1,'EnemyRunAway::EnemyRunAway()']]],
-  ['enemysprite_73',['enemySprite',['../classStateGameSFML.html#a1d1e8e5c8bca9ff4e25577b40ed0ea2f',1,'StateGameSFML']]],
+  ['enemies_62',['enemies',['../structContext.html#a7b772a83981d3122a430f53d8e23b376',1,'Context']]],
+  ['enemiesgothitted_63',['enemiesGotHitted',['../classStateGameSFML.html#ab15b3fe15fb5c3bc47c3a207e338ef18',1,'StateGameSFML']]],
+  ['enemieshitclocks_64',['enemiesHitClocks',['../classStateGameSFML.html#aac41db4c11549832070261fe3edf1fef',1,'StateGameSFML']]],
+  ['enemieslasthp_65',['enemiesLastHP',['../classStateGameSFML.html#aafc4980519d16ad0adf411caacd9d1bc',1,'StateGameSFML']]],
+  ['enemy_66',['Enemy',['../classEnemy.html',1,'Enemy'],['../classEnemy.html#a94f30d348b6d2840fd71675472ba38dd',1,'Enemy::Enemy()'],['../classEnemy.html#a566d219279ca1c61223ae4c44f5d78dd',1,'Enemy::Enemy(float x_, float y_, std::string name_, int hp_, int damage_, int speed_, int maxHP_)']]],
+  ['enemy_2ecpp_67',['Enemy.cpp',['../Enemy_8cpp.html',1,'']]],
+  ['enemy_2eh_68',['Enemy.h',['../Enemy_8h.html',1,'']]],
+  ['enemyattack_69',['EnemyAttack',['../classEnemyAttack.html',1,'EnemyAttack'],['../classEnemyAttack.html#af374183ad08e0e9959e3eab12b1c1f68',1,'EnemyAttack::EnemyAttack(const EnemyAttack &amp;other)=delete'],['../classEnemyAttack.html#a54977db476e524b343786bae4c0d2e8b',1,'EnemyAttack::EnemyAttack()']]],
+  ['enemypatrol_70',['EnemyPatrol',['../classEnemyPatrol.html',1,'EnemyPatrol'],['../classEnemyPatrol.html#a15b78bf01b43b0dc14c3a0eb9e3452be',1,'EnemyPatrol::EnemyPatrol(const EnemyPatrol &amp;other)=delete'],['../classEnemyPatrol.html#aa7bad085d7911a0b8952c18b248dce37',1,'EnemyPatrol::EnemyPatrol()']]],
+  ['enemyrunaway_71',['EnemyRunAway',['../classEnemyRunAway.html',1,'EnemyRunAway'],['../classEnemyRunAway.html#a015d787b5ff7e66a7927c4a9c047e0bc',1,'EnemyRunAway::EnemyRunAway(const EnemyRunAway &amp;other)=delete'],['../classEnemyRunAway.html#a5d56fabaf2823d44a491ea7f43083b47',1,'EnemyRunAway::EnemyRunAway()']]],
+  ['enemysprite_72',['enemySprite',['../classStateGameSFML.html#a1d1e8e5c8bca9ff4e25577b40ed0ea2f',1,'StateGameSFML']]],
+  ['enemyspritesid_73',['enemySpritesID',['../classStateGameSFML.html#a088f3b1b62ff0d52fcb7921cbf79211f',1,'StateGameSFML']]],
   ['enemystates_2ecpp_74',['EnemyStates.cpp',['../EnemyStates_8cpp.html',1,'']]],
   ['enemystates_2eh_75',['EnemyStates.h',['../EnemyStates_8h.html',1,'']]],
   ['ennemyspawns_76',['ennemySpawns',['../classSpawnsLayer.html#ad98136bad4f71e5f7e6371780f31e629',1,'SpawnsLayer']]],
@@ -24,5 +25,5 @@ var searchData=
   ['entitywithouthp_2eh_84',['EntityWithoutHP.h',['../EntityWithoutHP_8h.html',1,'']]],
   ['execute_85',['Execute',['../classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5',1,'EnemyPatrol::Execute()'],['../classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30',1,'EnemyAttack::Execute()'],['../classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020',1,'EnemyRunAway::Execute()'],['../classStateBehavior.html#aacf3f8e6bbcc9129f8bb534cc9c678f2',1,'StateBehavior::Execute()']]],
   ['exit_86',['Exit',['../classEnemyPatrol.html#a047f2ad9a9c6961cdf158130ca9e71be',1,'EnemyPatrol::Exit()'],['../classEnemyAttack.html#aa1601701d970679d6b10da16115c5524',1,'EnemyAttack::Exit()'],['../classEnemyRunAway.html#a93148440120dfd61c14e3059bab1d7b6',1,'EnemyRunAway::Exit()'],['../classStateBehavior.html#a0f0b2e000ce2d42646be7beceec23417',1,'StateBehavior::Exit()']]],
-  ['exitbutton_87',['exitButton',['../classStateMenuSFML.html#ad207d52a1490fdd9b46aa8d2332bfa76',1,'StateMenuSFML']]]
+  ['exitbutton_87',['exitButton',['../classStateGameOverSFML.html#a652b6b38ad6ff2a0bfb6bb1af0cf88b4',1,'StateGameOverSFML::exitButton()'],['../classStateMenuSFML.html#ad207d52a1490fdd9b46aa8d2332bfa76',1,'StateMenuSFML::exitButton()'],['../classStatePauseSFML.html#ab97f15fadb743118dadb2c025923ffd3',1,'StatePauseSFML::exitButton()']]]
 ];

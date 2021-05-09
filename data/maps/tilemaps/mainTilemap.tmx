@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="416">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="100" height="50" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="421">
  <tileset firstgid="1" source="../tilesets/mainTileSet.tsx"/>
  <layer id="1" name="Ground" width="100" height="50">
   <data encoding="csv">
@@ -330,9 +330,13 @@
   <object id="38" x="1435.11" y="1072.08"/>
  </objectgroup>
  <objectgroup id="12" name="AnimalSpawn">
-  <object id="413" x="483.543" y="1022.14"/>
-  <object id="414" x="602.035" y="1023.34"/>
-  <object id="415" x="539.797" y="1089.17"/>
+  <object id="413" x="1039.88" y="849.756"/>
+  <object id="414" x="805.765" y="794.535" height="1.56715"/>
+  <object id="416" x="1277.23" y="429.4"/>
+  <object id="417" x="1501.33" y="847.829"/>
+  <object id="418" x="2540.35" y="363.579"/>
+  <object id="419" x="3184.45" y="467.011"/>
+  <object id="420" x="3038.71" y="1222.38"/>
  </objectgroup>
  <objectgroup id="8" name="Collision" visible="0">
   <object id="14" x="770" y="926" width="64" height="64"/>

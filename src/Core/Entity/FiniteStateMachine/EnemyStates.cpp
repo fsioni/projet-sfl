@@ -72,12 +72,12 @@ void EnemyAttack::Execute(Enemy *enemy, std::unique_ptr<Player> &player_,
 {
     float x = player_->GetPos_x() - enemy->GetPos_x();
     float y = player_->GetPos_y() - enemy->GetPos_y();
-    float dist = sqrt(x * x + y * y);
+    float dist = player_->Distance(enemy);
     x = x / abs(dist);
     y = y / abs(dist);
     enemy->SetDirection(x, y);
     enemy->MoveWithCollision(x, y, collision, dt);
-    dist = player_->Distance(enemy);
+    
     if(dist > 5*32){
         enemy->GetStateMachine()->ChangeState(EnemyPatrol::Instance());
     }

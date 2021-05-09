@@ -1,13 +1,12 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 #include "Core/Game.h"
-
-#include "Core/Entity/FiniteStateMachine/StateMachine.h"
-#include "Core/Entity/FiniteStateMachine/EnemyStates.h"
 
 
 int main(int argc, char *argv[])
 {
+    srand(time(NULL));
 
     if (argc == 1 || argc > 2) //////CHECK DU NOMBRE D'ARGUMENTS
     {

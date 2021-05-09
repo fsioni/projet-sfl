@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['layer_420',['Layer',['../classLayer.html',1,'']]]
+  ['map_448',['Map',['../classMap.html',1,'']]],
+  ['maplayer_449',['MapLayer',['../classMapLayer.html',1,'']]]
 ];

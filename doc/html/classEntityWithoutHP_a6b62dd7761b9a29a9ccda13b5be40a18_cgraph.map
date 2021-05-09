@@ -1,7 +1,7 @@
 <map id="EntityWithoutHP::MoveWithCollision" name="EntityWithoutHP::MoveWithCollision">
 <area shape="rect" id="node1" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="5,205,208,247"/>
-<area shape="rect" id="node2" href="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="256,5,457,47"/>
-<area shape="rect" id="node3" href="$classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="256,71,457,112"/>
+<area shape="rect" id="node2" href="$classCollisionLayer.html#a620b4ce21e4699a1a067ffaa60848667" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="256,5,457,47"/>
+<area shape="rect" id="node3" href="$classCollisionLayer.html#ac58218b7888e319365025f92265cf1de" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="256,71,457,112"/>
 <area shape="rect" id="node4" href="$classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="296,137,417,163"/>
 <area shape="rect" id="node5" href="$classEntityWithoutHP.html#a1a5d732b9f322135fbd5e5f227064b26" title="Retourne l&#39;ID de l&#39;entité." alt="" coords="269,187,444,214"/>
 <area shape="rect" id="node6" href="$classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="299,238,415,265"/>

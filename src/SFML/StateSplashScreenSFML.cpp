@@ -33,20 +33,19 @@ void StateSplashScreenSFML::Init()
                             logoSprite.getLocalBounds().top +
                             logoSprite.getLocalBounds().height / 2.0f);
     logoSprite.setPosition(winx/2, winy/2-150);
+    logoSprite.setColor(sf::Color::Transparent);
 
     madeByText.setFont(context->assetMan->GetMainFont());
     madeByText.setFillColor(context->assetMan->GetMainTextColor());
     madeByText.setOutlineColor(sf::Color::Black);
     madeByText.setOutlineThickness(2);
     madeByText.setString("Made by :\nSIONI Fares\nBAGNOl Stanislas\nCHOUGAR Lyes");
-    madeByText.setCharacterSize(36);
+    madeByText.setCharacterSize(46);
     madeByText.setOrigin(madeByText.getLocalBounds().left +
                             madeByText.getLocalBounds().width / 2.0f,
                             madeByText.getLocalBounds().top +
                             madeByText.getLocalBounds().height / 2.0f);
-    madeByText.setPosition(150, winy / 2.0f + 200.0f);
-
-    start = std::clock();
+    madeByText.setPosition(220, winy / 2.0f + 200.0f);
 }
 
 void StateSplashScreenSFML::ProcessInput()
@@ -75,11 +74,6 @@ void StateSplashScreenSFML::ProcessInput()
                     Add(std::make_unique<StateMenuSFML>(context), true);
                 break;
 
-            case sf::Keyboard::X:
-                context->renderWin->close();
-                context->quit = true;
-                break;
-
             case sf::Keyboard::M:
                 context->isMute = !(context->isMute);
                 break;
@@ -94,6 +88,11 @@ void StateSplashScreenSFML::ProcessInput()
             }
 
         default:
+            if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                context->stateMan->
+                Add(std::make_unique<StateMenuSFML>(context), true);
+            }
             break;
         }
     }
@@ -101,11 +100,26 @@ void StateSplashScreenSFML::ProcessInput()
 
 void StateSplashScreenSFML::Update()
 {
-    duration = (std::clock() - start) / (double)CLOCKS_PER_SEC;
 
-    if (duration > 2)
+    if (music.getStatus() == sf::Music::Status::Stopped)
     {
         context->stateMan->Add(std::make_unique<StateMenuSFML>(context), true);
+    }else
+    {
+        sf::Uint8 brightness = logoSprite.getColor().a;
+        if (brightness < 255)
+        {
+            brightness += 3;
+        }
+        
+        sf::Color color = sf::Color(255, 255, 255, brightness);
+        logoSprite.setColor(color);
+        color = context->assetMan->GetMainTextColor();
+        color.a = brightness;
+        madeByText.setFillColor(color);
+        color = sf::Color::Black;
+        color.a = brightness;
+        madeByText.setOutlineColor(color);
     }
 
     if (context->isMute && music.getVolume() != 0)

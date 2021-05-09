@@ -90,19 +90,10 @@ $(document).ready(function(){initNavTree('classSpawnsLayer.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 
-<p>Classe représentant une couche de <a class="el" href="classSpawnPoint.html" title="Classe représentant un point d&#39;apparition dans un monde 2D.">SpawnPoint</a> Hérité de <a class="el" href="classLayer.html" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer.">Layer</a> Représente tous les <a class="el" href="classSpawnPoint.html" title="Classe représentant un point d&#39;apparition dans un monde 2D.">SpawnPoint</a> du jeu, ceux des ennemis, du joueurs, des PNJ...  
+<p>Classe représentant une couche de <a class="el" href="classSpawnPoint.html" title="Classe représentant un point d&#39;apparition dans un monde 2D.">SpawnPoint</a>.  
  <a href="classSpawnsLayer.html#details">Plus de détails...</a></p>
 
 <p><code>#include &lt;<a class="el" href="SpawnsLayer_8h_source.html">SpawnsLayer.h</a>&gt;</code></p>
-<div class="dynheader">
-Graphe d'héritage de SpawnsLayer:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSpawnsLayer__inherit__graph.png" border="0" usemap="#SpawnsLayer_inherit__map" alt="Inheritance graph"/></div>
-<map name="SpawnsLayer_inherit__map" id="SpawnsLayer_inherit__map">
-<area shape="rect" title="Classe représentant une couche de SpawnPoint Hérité de Layer Représente tous les SpawnPoint du jeu,..." alt="" coords="5,233,185,501"/>
-<area shape="rect" href="classLayer.html" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer." alt="" coords="41,5,150,185"/>
-</map>
-</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
@@ -138,6 +129,10 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="separator:a4d0337aca595347a27d441575f6a0296"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8f5ca046ec43bfd3c2a59da2c95b674"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawnsLayer.html#ad8f5ca046ec43bfd3c2a59da2c95b674">GetADialog</a> (int ind) const</td></tr>
 <tr class="separator:ad8f5ca046ec43bfd3c2a59da2c95b674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13bfb63937983e6d66d007c73d8b3e2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380">EntityDirection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawnsLayer.html#a13bfb63937983e6d66d007c73d8b3e2b">GetADirection</a> (int ind) const</td></tr>
+<tr class="separator:a13bfb63937983e6d66d007c73d8b3e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a8a540026371e7f3fab7f6695239c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380">EntityDirection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawnsLayer.html#af6a8a540026371e7f3fab7f6695239c2">AngleToDirection</a> (int angle) const</td></tr>
+<tr class="separator:af6a8a540026371e7f3fab7f6695239c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
@@ -152,41 +147,12 @@ Attributs privés</h2></td></tr>
 <tr class="separator:af9911b245623191eeaeb9218d1cd4333"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93342af632fc3d4192e7a63436b4e454"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawnsLayer.html#a93342af632fc3d4192e7a63436b4e454">NpcDialog</a></td></tr>
 <tr class="separator:a93342af632fc3d4192e7a63436b4e454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_classLayer"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classLayer')"><img src="closed.png" alt="-"/>&#160;Attributs privés hérités de <a class="el" href="classLayer.html">Layer</a></td></tr>
-<tr class="memitem:ad8c4d484a5efce0cbbd0cf81b3958d17 inherit pub_attribs_classLayer"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#ad8c4d484a5efce0cbbd0cf81b3958d17">id</a></td></tr>
-<tr class="memdesc:ad8c4d484a5efce0cbbd0cf81b3958d17 inherit pub_attribs_classLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifiant de la couche représenté par un entier.  <a href="classLayer.html#ad8c4d484a5efce0cbbd0cf81b3958d17">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ad8c4d484a5efce0cbbd0cf81b3958d17 inherit pub_attribs_classLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2071349b5667273725ae7f05a42db7a6 inherit pub_attribs_classLayer"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a2071349b5667273725ae7f05a42db7a6">name</a></td></tr>
-<tr class="memdesc:a2071349b5667273725ae7f05a42db7a6 inherit pub_attribs_classLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nom de la couche.  <a href="classLayer.html#a2071349b5667273725ae7f05a42db7a6">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a2071349b5667273725ae7f05a42db7a6 inherit pub_attribs_classLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Membres hérités additionnels</h2></td></tr>
-<tr class="inherit_header pub_methods_classLayer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classLayer')"><img src="closed.png" alt="-"/>&#160;Fonctions membres privées hérités de <a class="el" href="classLayer.html">Layer</a></td></tr>
-<tr class="memitem:a8f623c7c4737dc29ecc86978d243ac6f inherit pub_methods_classLayer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a8f623c7c4737dc29ecc86978d243ac6f">Layer</a> ()</td></tr>
-<tr class="memdesc:a8f623c7c4737dc29ecc86978d243ac6f inherit pub_methods_classLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut.  <a href="classLayer.html#a8f623c7c4737dc29ecc86978d243ac6f">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a8f623c7c4737dc29ecc86978d243ac6f inherit pub_methods_classLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b1ba4804451dfe6cc357194e42762ae inherit pub_methods_classLayer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a1b1ba4804451dfe6cc357194e42762ae">~Layer</a> ()</td></tr>
-<tr class="memdesc:a1b1ba4804451dfe6cc357194e42762ae inherit pub_methods_classLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="classLayer.html#a1b1ba4804451dfe6cc357194e42762ae">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a1b1ba4804451dfe6cc357194e42762ae inherit pub_methods_classLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cb596a4a47a48abb1f6e5b29ccacc88 inherit pub_methods_classLayer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a3cb596a4a47a48abb1f6e5b29ccacc88">SetId</a> (int id_)</td></tr>
-<tr class="memdesc:a3cb596a4a47a48abb1f6e5b29ccacc88 inherit pub_methods_classLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie l'id du <a class="el" href="classLayer.html" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer.">Layer</a> par celui en paramètre.  <a href="classLayer.html#a3cb596a4a47a48abb1f6e5b29ccacc88">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a3cb596a4a47a48abb1f6e5b29ccacc88 inherit pub_methods_classLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cba120f9a527e80bf9f28dc8fd16dda inherit pub_methods_classLayer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a7cba120f9a527e80bf9f28dc8fd16dda">SetName</a> (std::string name_)</td></tr>
-<tr class="memdesc:a7cba120f9a527e80bf9f28dc8fd16dda inherit pub_methods_classLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie l'id du <a class="el" href="classLayer.html" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer.">Layer</a> par celui en paramètre.  <a href="classLayer.html#a7cba120f9a527e80bf9f28dc8fd16dda">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a7cba120f9a527e80bf9f28dc8fd16dda inherit pub_methods_classLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66e5f1c31b9bf3b4fb50290429319fc3 inherit pub_methods_classLayer"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a66e5f1c31b9bf3b4fb50290429319fc3">GetID</a> () const</td></tr>
-<tr class="memdesc:a66e5f1c31b9bf3b4fb50290429319fc3 inherit pub_methods_classLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne id.  <a href="classLayer.html#a66e5f1c31b9bf3b4fb50290429319fc3">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a66e5f1c31b9bf3b4fb50290429319fc3 inherit pub_methods_classLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdce2567af5aed3065143dd622a3f4c4 inherit pub_methods_classLayer"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#abdce2567af5aed3065143dd622a3f4c4">GetName</a> () const</td></tr>
-<tr class="memdesc:abdce2567af5aed3065143dd622a3f4c4 inherit pub_methods_classLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne name.  <a href="classLayer.html#abdce2567af5aed3065143dd622a3f4c4">Plus de détails...</a><br /></td></tr>
-<tr class="separator:abdce2567af5aed3065143dd622a3f4c4 inherit pub_methods_classLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a0eb5638a197a61e529965a2755af72 inherit pub_methods_classLayer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLayer.html#a3a0eb5638a197a61e529965a2755af72">Test</a> () const</td></tr>
-<tr class="memdesc:a3a0eb5638a197a61e529965a2755af72 inherit pub_methods_classLayer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de regression.  <a href="classLayer.html#a3a0eb5638a197a61e529965a2755af72">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a3a0eb5638a197a61e529965a2755af72 inherit pub_methods_classLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa87d1b9d7891afc810a6eea5cb3fd1a0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380">EntityDirection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSpawnsLayer.html#aa87d1b9d7891afc810a6eea5cb3fd1a0">NpcDirection</a></td></tr>
+<tr class="separator:aa87d1b9d7891afc810a6eea5cb3fd1a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Classe représentant une couche de <a class="el" href="classSpawnPoint.html" title="Classe représentant un point d&#39;apparition dans un monde 2D.">SpawnPoint</a> Hérité de <a class="el" href="classLayer.html" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer.">Layer</a> Représente tous les <a class="el" href="classSpawnPoint.html" title="Classe représentant un point d&#39;apparition dans un monde 2D.">SpawnPoint</a> du jeu, ceux des ennemis, du joueurs, des PNJ... </p>
+<div class="textblock"><p>Classe représentant une couche de <a class="el" href="classSpawnPoint.html" title="Classe représentant un point d&#39;apparition dans un monde 2D.">SpawnPoint</a>. </p>
+<p>Représente tous les <a class="el" href="classSpawnPoint.html" title="Classe représentant un point d&#39;apparition dans un monde 2D.">SpawnPoint</a> du jeu, ceux des ennemis, du joueurs, des PNJ... </p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="abb989d3b7bffd0d65eb884ff48133366"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb989d3b7bffd0d65eb884ff48133366">&#9670;&nbsp;</a></span>SpawnsLayer() <span class="overload">[1/2]</span></h2>
@@ -252,11 +218,13 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classSpawnsLayer_a0a9c7b77d0eb67c80e71c06b3cfbda4c_cgraph.png" border="0" usemap="#classSpawnsLayer_a0a9c7b77d0eb67c80e71c06b3cfbda4c_cgraph" alt=""/></div>
 <map name="classSpawnsLayer_a0a9c7b77d0eb67c80e71c06b3cfbda4c_cgraph" id="classSpawnsLayer_a0a9c7b77d0eb67c80e71c06b3cfbda4c_cgraph">
-<area shape="rect" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="5,56,208,83"/>
-<area shape="rect" href="tmxParsing_8cpp.html#ae74660aeef7041eda55965e62997a6e8" title=" " alt="" coords="284,5,364,32"/>
-<area shape="rect" href="tmxParsing_8cpp.html#a7f798bd46c19c61d7e3f0356018bc0c9" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="256,56,392,83"/>
-<area shape="rect" href="tmxParsing_8cpp.html#a01a1670c28de93ece461380677bb7d89" title=" " alt="" coords="272,107,376,133"/>
-<area shape="rect" href="tmxParsing_8cpp.html#a8fc864f80bb4b71341f7189e9a5c9bcd" title=" " alt="" coords="440,107,528,133"/>
+<area shape="rect" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="5,132,208,159"/>
+<area shape="rect" href="classSpawnsLayer.html#af6a8a540026371e7f3fab7f6695239c2" title=" " alt="" coords="256,5,483,32"/>
+<area shape="rect" href="tmxParsing_8cpp.html#a632f143e2572aaf8c0221ff7c7195053" title="Compte le nombre d&#39;occurence d&#39;une balise." alt="" coords="328,56,411,83"/>
+<area shape="rect" href="tmxParsing_8cpp.html#a11672fc9dccbc12b5853edc3de6b9dbc" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="531,145,669,172"/>
+<area shape="rect" href="tmxParsing_8cpp.html#abbe85c0a596d406c2dd903fa66eb961b" title="Retourne ce qu&#39;il y entre la balise ouvrante et fermante (avec les balises)." alt="" coords="555,221,645,248"/>
+<area shape="rect" href="tmxParsing_8cpp.html#a0306f58af4bcbdd0cb9969f128a4313e" title="Retourne le contenu de la balise ouvrante." alt="" coords="316,259,423,285"/>
+<area shape="rect" href="tmxParsing_8cpp.html#a9e759647152efbca273187768f806d1a" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="292,157,447,184"/>
 </map>
 </div>
 
@@ -357,6 +325,33 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
+<a id="af6a8a540026371e7f3fab7f6695239c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6a8a540026371e7f3fab7f6695239c2">&#9670;&nbsp;</a></span>AngleToDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380">EntityDirection</a> SpawnsLayer::AngleToDirection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>angle</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classSpawnsLayer_af6a8a540026371e7f3fab7f6695239c2_icgraph.png" border="0" usemap="#classSpawnsLayer_af6a8a540026371e7f3fab7f6695239c2_icgraph" alt=""/></div>
+<map name="classSpawnsLayer_af6a8a540026371e7f3fab7f6695239c2_icgraph" id="classSpawnsLayer_af6a8a540026371e7f3fab7f6695239c2_icgraph">
+<area shape="rect" title=" " alt="" coords="256,5,483,32"/>
+<area shape="rect" href="classSpawnsLayer.html#a0a9c7b77d0eb67c80e71c06b3cfbda4c" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="5,5,208,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a187426d0aa634922c8a7224278efd924"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a187426d0aa634922c8a7224278efd924">&#9670;&nbsp;</a></span>ChangePlayerSpawn()</h2>
 
@@ -402,6 +397,24 @@ Voici le graphe des appelants de cette fonction :</div>
       <table class="memname">
         <tr>
           <td class="memname">std::string SpawnsLayer::GetADialog </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ind</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13bfb63937983e6d66d007c73d8b3e2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13bfb63937983e6d66d007c73d8b3e2b">&#9670;&nbsp;</a></span>GetADirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380">EntityDirection</a> SpawnsLayer::GetADirection </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>ind</em></td><td>)</td>
@@ -530,18 +543,15 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classSpawnsLayer_a4d0337aca595347a27d441575f6a0296_cgraph.png" border="0" usemap="#classSpawnsLayer_a4d0337aca595347a27d441575f6a0296_cgraph" alt=""/></div>
 <map name="classSpawnsLayer_a4d0337aca595347a27d441575f6a0296_cgraph" id="classSpawnsLayer_a4d0337aca595347a27d441575f6a0296_cgraph">
-<area shape="rect" title="Test de regression." alt="" coords="5,275,148,301"/>
+<area shape="rect" title="Test de regression." alt="" coords="5,199,148,225"/>
 <area shape="rect" href="classSpawnsLayer.html#a212ce62f6d8d3c48800df0c43604261b" title="Fonction permettant d&#39;ajouter un ennemi." alt="" coords="220,5,407,32"/>
 <area shape="rect" href="classSpawnsLayer.html#aea7cc260944c1133ad79d2a8b311969b" title="Fonction permettant d&#39;ajouter un NPC." alt="" coords="229,56,397,83"/>
 <area shape="rect" href="classSpawnsLayer.html#a187426d0aa634922c8a7224278efd924" title="Fonction permettant de modifier le SpawnPoint du joueur." alt="" coords="210,107,417,149"/>
 <area shape="rect" href="classSpawnsLayer.html#a7975487310f901bd55794ef0d72e0f09" title="Fonction permettant de récupérer les SpawnPoint des Ennemy." alt="" coords="196,173,431,200"/>
-<area shape="rect" href="classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="253,224,374,251"/>
-<area shape="rect" href="classSpawnPoint.html#a5c964c2c4a6f04d8a0203b3e347b3fd4" title="Retourne anme." alt="" coords="229,275,397,301"/>
-<area shape="rect" href="classSpawnsLayer.html#a7145285c09080eaf00fb9c621a4ac3a6" title="Fonction permettant de récupérer les SpawnPoint des NPC." alt="" coords="205,325,421,352"/>
-<area shape="rect" href="classSpawnsLayer.html#a1da8dbff59ce20770ef7a33c78823147" title="Fonction permettant de récupérer le SpawnPoint du joueur." alt="" coords="202,376,425,403"/>
-<area shape="rect" href="classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="255,427,371,453"/>
-<area shape="rect" href="classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="270,477,357,504"/>
-<area shape="rect" href="classBox.html#af86b090508898469761c0d61c8230133" title="Retourne y." alt="" coords="270,528,357,555"/>
+<area shape="rect" href="classSpawnsLayer.html#a7145285c09080eaf00fb9c621a4ac3a6" title="Fonction permettant de récupérer les SpawnPoint des NPC." alt="" coords="205,224,421,251"/>
+<area shape="rect" href="classSpawnsLayer.html#a1da8dbff59ce20770ef7a33c78823147" title="Fonction permettant de récupérer le SpawnPoint du joueur." alt="" coords="202,275,425,301"/>
+<area shape="rect" href="classSpawnPoint.html#a791c9309814f32726d2e53b40d2e69b6" title="Retourne x." alt="" coords="244,325,383,352"/>
+<area shape="rect" href="classSpawnPoint.html#ac366cdb682979658afa83c39aa4f1b0f" title="Retourne y." alt="" coords="245,376,382,403"/>
 </map>
 </div>
 <div class="dynheader">
@@ -593,6 +603,28 @@ Voici le graphe des appelants de cette fonction :</div>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;std::string&gt; SpawnsLayer::NpcDialog</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa87d1b9d7891afc810a6eea5cb3fd1a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa87d1b9d7891afc810a6eea5cb3fd1a0">&#9670;&nbsp;</a></span>NpcDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380">EntityDirection</a>&gt; SpawnsLayer::NpcDirection</td>
         </tr>
       </table>
   </td>

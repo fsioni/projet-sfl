@@ -18,23 +18,27 @@ StateGameSFML::StateGameSFML(std::shared_ptr<Context> &cContext)
 
 StateGameSFML::~StateGameSFML()
 {
+    sf::Cursor pointCursor;
+    pointCursor.loadFromSystem(sf::Cursor::Arrow);
+    context->renderWin->setMouseCursor(pointCursor);
 }
 
 void StateGameSFML::Init()
 {
+    sf::Cursor pointCursor;
+    pointCursor.loadFromSystem(sf::Cursor::Arrow);
+    context->renderWin->setMouseCursor(pointCursor);
     // Chargement et lecture de la musique
     assert(music.openFromFile("data/sounds/music/01town2.wav"));
-    assert(runningBuffer.loadFromFile("data/sounds/sfx/walking.wav"));
-    assert(hitBuffer.loadFromFile("data/sounds/sfx/Slash_1.wav"));
 
     music.setVolume(70);
     music.setLoop(true);
     music.play();
-    runningSound.setBuffer(runningBuffer);
+    runningSound.setBuffer(context->assetMan->GetSoundBuffers()[1]);
     runningSound.setLoop(true);
     runningSound.stop();
 
-    hitSound.setBuffer(hitBuffer);
+    hitSound.setBuffer(context->assetMan->GetSoundBuffers()[2]);
 
     // Chargement de la tileMap
     context->assetMan->SetTileTexture(context->map->GetTileset()->GetTileMapPath());
@@ -43,11 +47,11 @@ void StateGameSFML::Init()
     // Chargement de la texture du joueur
     playerSprite.setTexture(context->assetMan->GetPlayerTexture());
 
-    // Chargement de la texture des ennemies
-    enemySprite.setTexture(context->assetMan->GetTextureEnemy()[0]);
-
     // Chargement de la texture de l'ombre
     shadowSprite.setTexture(context->assetMan->GetShadowTexture());
+
+    // Chargement de la texture des animaux
+    animalSprite.setTexture(context->assetMan->GetTextureAnimal());
 
     // Initialisation coeur et vie pour l'UI
     heartSprite.setTexture(context->assetMan->GetTextureHeart());
@@ -104,6 +108,16 @@ void StateGameSFML::Init()
     isAttacking=false;
     
     hasInteracted=false;
+
+    for (int i = 0; i < (int)context->enemies.size(); i++)
+    {
+        enemySpritesID.push_back(rand()%context->assetMan->GetTextureEnemy().size());
+    }
+    
+    for (int i = 0; i < (int)context->npc.size(); i++)
+    {
+        npcSpritesID.push_back(rand()%context->assetMan->GetTextureNPC().size());
+    }
 }
 
 void StateGameSFML::ProcessInput()
@@ -197,11 +211,6 @@ void StateGameSFML::ProcessInput()
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::P))
             {
                 context->isDebug = (!context->isDebug);
-            }
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X))
-            {
-                context->renderWin->close();
-                context->quit = true;
             }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::M))
             {
@@ -512,7 +521,7 @@ void StateGameSFML::UpdateAnimals(){
 
 void StateGameSFML::Display()
 {
-    context->renderWin->clear();
+    context->renderWin->clear(sf::Color(128,128,0));
 
     DisplayMap();
     DisplayPlayer();
@@ -623,6 +632,9 @@ void StateGameSFML::DisplayEnemies()
                 enemySprite.setColor(sf::Color::White);
             }
 
+            // Chargement de la texture des ennemies
+            enemySprite.setTexture(context->assetMan->GetTextureEnemy()[enemySpritesID[i]]);
+            
             context->renderWin->draw(enemySprite);
         }
     }
@@ -641,11 +653,14 @@ void StateGameSFML::DisplayNPC(){
         context->renderWin->draw(shadowSprite);
 
         // Affichage des NPC
-        playerSprite.setPosition(npcX, npcY);
+        npcSprite.setPosition(npcX, npcY);
         
-        playerSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
+        npcSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
+
+        // Chargement de la texture des npc
+        npcSprite.setTexture(context->assetMan->GetTextureNPC()[npcSpritesID[i]]);
     
-        context->renderWin->draw(playerSprite);
+        context->renderWin->draw(npcSprite);
     }    
 }
 
@@ -661,15 +676,15 @@ void StateGameSFML::DisplayAnimals(){
         shadowSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32, 32));
         context->renderWin->draw(shadowSprite);
 
-        // Affichage des NPC
-        playerSprite.setPosition(animalX, animalY);
+        // Affichage des animaux
+        animalSprite.setPosition(animalX, animalY);
         
         if (context->animals[i]->GetIsMoving())
-            playerSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32, 32));
+            animalSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32, 32));
         else
-            playerSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
+            animalSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
     
-        context->renderWin->draw(playerSprite);
+        context->renderWin->draw(animalSprite);
     }    
 }
 
@@ -769,6 +784,8 @@ void StateGameSFML::Pause()
 {
     isPaused = true;
     runningSound.stop();
+    music.pause();
+    hitSound.stop();
 }
 
 void StateGameSFML::Start()
@@ -777,4 +794,8 @@ void StateGameSFML::Start()
     deltaTime = 0;
     deltaClock.restart();
     fpsClock.restart();
+    music.play();
+    sf::Cursor pointCursor;
+    pointCursor.loadFromSystem(sf::Cursor::Arrow);
+    context->renderWin->setMouseCursor(pointCursor);
 }

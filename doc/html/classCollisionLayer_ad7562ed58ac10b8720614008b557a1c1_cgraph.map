@@ -1,6 +1,6 @@
 <map id="CollisionLayer::CollisionLayer" name="CollisionLayer::CollisionLayer">
 <area shape="rect" id="node1" title="Constructeur par balise." alt="" coords="5,23,184,65"/>
-<area shape="rect" id="node2" href="$tmxParsing_8cpp.html#ae74660aeef7041eda55965e62997a6e8" title=" " alt="" coords="244,5,324,32"/>
-<area shape="rect" id="node3" href="$tmxParsing_8cpp.html#a01a1670c28de93ece461380677bb7d89" title=" " alt="" coords="232,56,336,83"/>
-<area shape="rect" id="node4" href="$tmxParsing_8cpp.html#a8fc864f80bb4b71341f7189e9a5c9bcd" title=" " alt="" coords="384,56,472,83"/>
+<area shape="rect" id="node2" href="$tmxParsing_8cpp.html#a632f143e2572aaf8c0221ff7c7195053" title="Compte le nombre d&#39;occurence d&#39;une balise." alt="" coords="244,5,327,32"/>
+<area shape="rect" id="node3" href="$tmxParsing_8cpp.html#a0306f58af4bcbdd0cb9969f128a4313e" title="Retourne le contenu de la balise ouvrante." alt="" coords="232,56,339,83"/>
+<area shape="rect" id="node4" href="$tmxParsing_8cpp.html#abbe85c0a596d406c2dd903fa66eb961b" title="Retourne ce qu&#39;il y entre la balise ouvrante et fermante (avec les balises)." alt="" coords="387,56,477,83"/>
 </map>

@@ -28,6 +28,11 @@ public:
     void Start();
 
 private:
+    /*! \brief Effectue les actions nécessaires lors du clic
+    *
+    */
+    void OnClick();
+
     /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
 
@@ -38,6 +43,8 @@ private:
     sf::Sprite bgSprite;
     /*! \brief Sprite du logo du jeu */
     sf::Sprite logoSprite;
+    /*! \brief Sprite de l'icone de son du jeu */
+    sf::Sprite soundSprite;
 
     // Boutons
 
@@ -47,6 +54,11 @@ private:
     sf::Text menuButton;
     /*! \brief Texte du bouton quitter */
     sf::Text exitButton;
+
+    /*! \brief Indique si le bouton "son" est selectionné */
+    bool isSoundButSelected;
+    /*! \brief Indique si le bouton "son" est pressé */
+    bool isSoundButPressed;
 
     /*! \brief Indique si le bouton "reprendre" est selectionné */
     bool isResumeButSelected;
@@ -63,10 +75,13 @@ private:
     /*! \brief Indique si le bouton "quitter" est pressé */
     bool isExitButPressed;
 
-    /*! \brief Son tampon de l'effet sonore du menu */
-    sf::SoundBuffer buffer;
     /*! \brief Effet sonore du menu */
     sf::Sound sound;
+
+    /*! \brief Curseur de main*/
+    sf::Cursor handCursor;
+    /*! \brief Curseur de pointage*/
+    sf::Cursor pointCursor;
 };
 
 #endif // __STATEPAUSESFML_H__

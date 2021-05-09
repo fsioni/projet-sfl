@@ -1,9 +1,9 @@
 <map id="StateGameSFML::DisplayDebug" name="StateGameSFML::DisplayDebug">
 <area shape="rect" id="node1" title="Affichage le mode debug sur la fenêtre SFML." alt="" coords="5,111,235,137"/>
 <area shape="rect" id="node2" href="$classCollisionLayer.html#ae1accba79321890918f40613ba32f957" title="Permet de savoir si une clé existe." alt="" coords="327,15,506,57"/>
-<area shape="rect" id="node3" href="$classStateGameSFML.html#a72ea8128db236996490e7ff310226746" title="Affichage une CollisionBox sur la fenêtre SFML." alt="" coords="283,81,551,108"/>
-<area shape="rect" id="node8" href="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="316,133,517,174"/>
-<area shape="rect" id="node9" href="$classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="316,198,517,239"/>
+<area shape="rect" id="node3" href="$classStateGameSFML.html#a2ec0094030ed96a2de4128de5de3ea6b" title="Affichage une CollisionBox sur la fenêtre SFML." alt="" coords="283,81,551,108"/>
+<area shape="rect" id="node8" href="$classCollisionLayer.html#a620b4ce21e4699a1a067ffaa60848667" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="316,133,517,174"/>
+<area shape="rect" id="node9" href="$classCollisionLayer.html#ac58218b7888e319365025f92265cf1de" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="316,198,517,239"/>
 <area shape="rect" id="node4" href="$classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="599,5,720,32"/>
 <area shape="rect" id="node5" href="$classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="601,56,717,83"/>
 <area shape="rect" id="node6" href="$classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="616,107,703,133"/>
