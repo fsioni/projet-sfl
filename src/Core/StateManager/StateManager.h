@@ -5,7 +5,7 @@
 #include <stack>
 #include <memory>
 
-/*! \class StateManager 
+/*! \class StateManager
 *   \brief Classe représentant un gestionnaire d'états (State)
 *
 *   Possède un tas de State
@@ -17,7 +17,7 @@ class StateManager
 public:
     /*// === Fonctions membres publiques === //*/
 
-    /*! \brief Constructeur par défaut 
+    /*! \brief Constructeur par défaut
     *
     */
     StateManager(/* args */);
@@ -64,7 +64,7 @@ private:
     std::stack<std::unique_ptr<State>> sStates;
     /*! \brief State en attente */
     std::unique_ptr<State> sNewState;
-    
+
     /*! \brief Indique si un état a été ajouté */
     bool add;
     /*! \brief Indique si l'état courant doit être remplacé */

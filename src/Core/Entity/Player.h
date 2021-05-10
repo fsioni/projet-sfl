@@ -79,7 +79,5 @@ public:
     *   fonctions fait ce qu'elle doit faire.
     */
     void Test() const;
-
-private:
 };
 #endif

@@ -70,6 +70,7 @@ Tileset *Map::GetTileset() const
 }
 
 CollisionLayer *Map::GetCollisionLayer() const{
+
     return collisionLayer;
 }
 
@@ -132,12 +133,12 @@ void Map::TmxLoadLayers(std::string fileName)
 
     std::string strPlayerSpawn = GetFullTag(strFile, "objectgroup",
                                             indSpawnPlayer);
-    std::string strEnnemySpawn = GetFullTag(strFile, "objectgroup", 
+    std::string strEnnemySpawn = GetFullTag(strFile, "objectgroup",
                                             indSpawnEnnemy);
     std::string strNpcSpawn = GetFullTag(strFile, "objectgroup",
                                             indSpawnNPC);
     std::string strAnimalSpawn = GetFullTag(strFile, "objectgroup",
-                                            indSpawnAnimal);                   
+                                            indSpawnAnimal);
 
     spawnsLayer = new SpawnsLayer(strPlayerSpawn, strEnnemySpawn,
                                   strNpcSpawn, strAnimalSpawn);
@@ -158,18 +159,18 @@ void Map::Test() const
     std::string tsxFile = "data/maps/tilesets/mainTileSet.tsx";
     Map map(tmxFile, tsxFile);
     std::cout << "TmxLoadLayers(std::string fileName) : " << std::endl;
-    std::cout << "  -mapLayer : "; 
+    std::cout << "  -mapLayer : ";
     assert(map.mapLayers.size()==3);
     assert(map.mapLayers[0].GetWidth()==20);
     assert(map.mapLayers[0].GetHeight()==20);
     std::cout << "ok" << std::endl;
 
     std::cout << "  -collisionLayer : ";
-    // 5 collision dans le fichier + 
+    // 5 collision dans le fichier +
     // ajout "à la main" des 4 collision des bord de map
     assert(map.collisionLayer->GetCollisionBoxes().size()==5+4);
     std::cout << "ok" << std::endl;
-    
+
     std::cout << "  -spawnLayer : ";
     // 3 spawn enemy dans le fichier
     assert(map.spawnsLayer->GetEnemySpawns().size()==3);
@@ -179,7 +180,7 @@ void Map::Test() const
     assert(map.spawnsLayer->GetPlayerSpawn().GetX()==575);
     assert(map.spawnsLayer->GetPlayerSpawn().GetY()==473);
     std::cout << "ok" << std::endl;
-  
+
 
     std::cout << "TsxLoadTileset(std::string fileName) : ";
     assert(map.tileset->GetTileWidth()==32);

@@ -19,7 +19,7 @@
 
 /*! \class Context
 *   \brief Classe représentant l'état du programme.
-* 
+*
 */
 struct Context
 {
@@ -70,7 +70,7 @@ struct Context
 
             std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, 100, 1, 1, 100);
             enemies.push_back(enemy);
-            
+
             map->GetCollisionLayer()->AddCollisionBoxEntity(
                 enemy->GetID(), new Box(x, y, 32, 32));
         }
@@ -89,7 +89,7 @@ struct Context
             newNPC->SetDirection(direction);
 
             npc.push_back(newNPC);
-            
+
             // Ajout de sa CollisionBox au CollisionLayer
             // y + 5 pour descendre la collisionBox au niveau des pieds
             map->GetCollisionLayer()->AddCollisionBoxEntity(
@@ -97,7 +97,7 @@ struct Context
 
         }
 
-        
+
         // Initialisation des animaux
         count = map->GetSpawnsLayer()->GetAnimalSpawns().size();
         for (int i = 0; i < count; i++){
@@ -106,7 +106,7 @@ struct Context
 
             Animal * animal = new Animal(x, y, 1);
             animals.push_back(animal);
-            
+
             map->GetCollisionLayer()->AddCollisionBoxEntity(
                 animal->GetID(), new Box(x, y, 32, 32));
         }
@@ -118,8 +118,8 @@ struct Context
 };
 
 /*! \class Game
-*   \brief Classe représentant le programme dans sa généralité. 
-* 
+*   \brief Classe représentant le programme dans sa généralité.
+*
 */
 class Game
 {

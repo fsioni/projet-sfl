@@ -53,7 +53,9 @@ std::vector<Box> CollisionLayer::GetCollisionBoxes() const
     return collisionBoxes;
 }
 
+
 std::map<int, Box*> CollisionLayer::GetCollisionBoxesEntity() const {
+
     return collisionBoxesEntity;
 }
 
@@ -77,7 +79,7 @@ void CollisionLayer::Test() const{
     assert(colLayer1.collisionBoxesEntity.empty());
     std::cout << "ok" << std::endl;
 
-    std::string strCollision = 
+    std::string strCollision =
         std::string("<object id=\"14\" x=\"770\" y=\"926\" width=\"64\" height=\"64\"/>\n")+
         std::string("<object id=\"162\" x=\"833\" y=\"992\" width=\"64\" height=\"64\"/>\n")+
         std::string("<object id=\"154\" x=\"608\" y=\"928\" width=\"64\" height=\"64\"/>\n")+

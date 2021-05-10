@@ -41,7 +41,7 @@ public:
     */
     ~NPC();
 
-    
+
     /*! \brief Retourne la phrase que le NPC peut dire au joueur.
     *   \return std::string, la phrase type du NPC.
     */
