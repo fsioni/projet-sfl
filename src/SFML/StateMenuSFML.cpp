@@ -195,6 +195,28 @@ void StateMenuSFML::ProcessInput()
     sf::Event event;
     while (context->renderWin->pollEvent(event))
     {
+        if(event.type == sf::Event::Resized){
+            context->renderWin->setView(sf::View(
+                sf::FloatRect(0, 0, event.size.width, event.size.height)));
+            int winX = context->renderWin->getSize().x;
+            int winY = context->renderWin->getSize().y;
+            soundSprite.setPosition(winX-50, 50);
+            logoSprite.setPosition(winX/2, winY/2-150);
+            playButton.setPosition(winX / 2.0f, winY / 2.0f + 45.f);
+            pauseText.setPosition(winX / 2.0f, winY - 50);
+            instructionButton.setPosition(winX / 2.0f, winY / 2.0f + 105);
+            exitButton.setPosition(winX / 2.0f, winY / 2.0f + 165.f);
+            menuTitle.setPosition(winX / 2.0f, winY - 50);
+
+            quitSubMenuText.setPosition(60.f, winY - 40.f);
+            debugModeText.setPosition(winX / 2.0f, winY / 2.0f + 120.f);
+            pauseText.setPosition(winX / 2.0f, winY / 2.0f + 60.f);
+            interactText.setPosition(winX / 2.0f, winY / 2.0f);
+            attackText.setPosition(winX / 2.0f, winY / 2.0f - 60.f);
+            moveText.setPosition(winX / 2.0f, winY / 2.0f - 120.f);
+        }
+
+
         switch (event.type)
         {
         case sf::Event::Closed:
