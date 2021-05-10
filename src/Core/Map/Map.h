@@ -59,7 +59,7 @@ public:
     *
     * \return Le collisionLayers de la Map.
     */
-    CollisionLayer *GetCollisionLayer();
+    CollisionLayer *GetCollisionLayer() const;
 
     /*! \brief Retourne mapLayers
     *
