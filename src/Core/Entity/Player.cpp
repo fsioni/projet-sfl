@@ -40,11 +40,14 @@ float Player::DistanceShared_ptr(std::shared_ptr<Enemy> enemy) const{
 void Player::Attack(std::shared_ptr<Enemy> enemy, CollisionLayer * colLayer) const{
     int radius = 3*32; // <=> 3 cases;
     float dist = DistanceShared_ptr(enemy);
+
     
     if(dist <= radius){
-        float vx = -x / abs(dist);
-        float vy = -y / abs(dist);
+        float vx = x - enemy->GetPos_x();
+        float vy = y - enemy->GetPos_y();
+        vx = -vx/dist;
+        vy = -vy/dist;
         enemy->TakeDamage(10);
-        enemy->MoveWithCollision(vx*5, vy*5, colLayer, 1);
+        enemy->MoveWithCollision(vx*10, vy*10, colLayer, 20);
     }
 }   

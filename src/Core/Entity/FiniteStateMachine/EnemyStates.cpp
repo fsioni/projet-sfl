@@ -73,8 +73,8 @@ void EnemyAttack::Execute(Enemy *enemy, std::unique_ptr<Player> &player_,
     float x = player_->GetPos_x() - enemy->GetPos_x();
     float y = player_->GetPos_y() - enemy->GetPos_y();
     float dist = player_->Distance(enemy);
-    x = x / abs(dist);
-    y = y / abs(dist);
+    x = x / dist;
+    y = y / dist;
     enemy->SetDirection(x, y);
     enemy->MoveWithCollision(x, y, collision, dt);
     
