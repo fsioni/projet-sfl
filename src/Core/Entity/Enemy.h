@@ -32,7 +32,6 @@ public:
     /*! \brief Constructeur avec spécifités d'un Enemy en paramètre.
     *   \param [in] x : réel positif, position de l'Enemy  sur l'axe X (horizontal).
     *   \param [in] y : réel positif, position de l'Enemy  sur l'axe Y (vertical).
-    *   \param [in] name : chaine de caractères, nom de l'Enemy.
     *   \param [in] hp : entier, nombre de points de vie de l'Enemy.
     *   \param [in] dammage : entier, nombre de points de vie infligé lors d'une attaque.
     *   \param [in] maxHP : entier, maximum de points de vie qu'une Enemy peut avoir.
@@ -43,7 +42,7 @@ public:
     *   Créer un Enemy (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
-    Enemy(float x_, float y_, std::string name_, int hp_, int damage_,
+    Enemy(float x_, float y_, int hp_, int damage_,
           int speed_, int maxHP_);
 
     /*! \brief Destructeur.

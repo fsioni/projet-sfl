@@ -12,14 +12,13 @@ EntityWithoutHP::EntityWithoutHP()
     x = 0;
     y = 0;
     speed = 1;
-    name = "Unknown";
     direction = Right;
     isMoving = false;
 
     offset= 7;
 }
 
-EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, std::string name_)
+EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_)
 {
     if (x_ < 0) x = 0;
     else x = x_;
@@ -27,7 +26,6 @@ EntityWithoutHP::EntityWithoutHP(float x_, float y_, int speed_, std::string nam
     if(y_ < 0) y = 0;
     else y = y_;
     
-    name = name_;
     speed = speed_;
 
 
@@ -40,29 +38,14 @@ EntityWithoutHP::~EntityWithoutHP()
 {
     x = 0;
     y= 0;
-    name = "delete";
     direction = Right;
 }
 
 void EntityWithoutHP::PrintEntityInfo()
 {
 
-    std::cout << "x = " << x << ", y = " << y << ", nom : " << name 
-                << std::endl;
+    std::cout << "x = " << x << ", y = " << y << ", nom : " << std::endl;
 }
-
-void EntityWithoutHP::SetName(std::string newName)
-{
-
-    name = newName;
-}
-
-std::string EntityWithoutHP::GetName() const
-{
-
-    return name;
-}
-
 
 void EntityWithoutHP::SetPos_x(float newx)
 {
@@ -251,18 +234,16 @@ void EntityWithoutHP::Test() const{
     assert(entity1.x == 0.);
     assert(entity1.y == 0.);
     assert(entity1.speed == 1);
-    assert(entity1.name == "Unknown");
     assert(entity1.direction == Right);
     assert(!entity1.isMoving);
     std::cout << "ok" << std::endl;
 
     std::cout << "Constructeur EntityWithoutHP(float x_, float y_,"
               << "float speed_, string name_) : ";
-    EntityWithoutHP entity2(12.3, 13.4, 3, "Entity2");
+    EntityWithoutHP entity2(12.3, 13.4, 3);
     assert(entity2.x == float(12.3));
     assert(entity2.y == float(13.4));
     assert(entity2.speed == 3);
-    assert(entity2.name == "Entity2");
     assert(entity2.direction == Right);
     assert(!entity2.isMoving);
     std::cout << "ok" << std::endl;
@@ -280,12 +261,6 @@ void EntityWithoutHP::Test() const{
     entity1.SetPos_y(-4);
     assert(entity1.GetPos_y() == float(20.4));
     std::cout << "ok" << std::endl;
-
-    std::cout << "SetName(float newName) et GetName() : ";
-    entity1.SetName("Méchant");
-    assert(entity1.GetName() == "Méchant");
-    std::cout << "ok" << std::endl;
-
 
     std::cout << "SetSpeed(int newSpeed) et GetSpeed() : ";
     entity1.SetSpeed(11);

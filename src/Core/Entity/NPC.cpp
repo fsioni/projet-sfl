@@ -9,7 +9,7 @@ NPC::NPC() : EntityWithoutHP::EntityWithoutHP()
 }
 
 NPC::NPC(float x, float y, std::string dialog_) : 
-            EntityWithoutHP::EntityWithoutHP(x, y, 1, "NPC")
+            EntityWithoutHP::EntityWithoutHP(x, y, 1)
 {
     direction = Down;
     dialog = dialog_;

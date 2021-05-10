@@ -46,7 +46,7 @@ struct Context
         float x = map->GetSpawnsLayer()->GetPlayerSpawn().GetX();
         float y = map->GetSpawnsLayer()->GetPlayerSpawn().GetY();
 
-        player = std::make_unique<Player>(x, y, "Player", 10, 10, 4, 10);
+        player = std::make_unique<Player>(x, y, 10, 10, 4, 10);
 
         map->GetCollisionLayer()->AddCollisionBoxEntity(
             player->GetID(), new Box(x, y, 32, 32));
@@ -57,7 +57,7 @@ struct Context
             x = map->GetSpawnsLayer()->GetEnemySpawns()[i].GetX();
             y = map->GetSpawnsLayer()->GetEnemySpawns()[i].GetY();
 
-            std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 100, 1, 1, 100);
+            std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, 100, 1, 1, 100);
             enemies.push_back(enemy);
             
             map->GetCollisionLayer()->AddCollisionBoxEntity(
@@ -93,7 +93,7 @@ struct Context
             x = map->GetSpawnsLayer()->GetAnimalSpawns()[i].GetX();
             y = map->GetSpawnsLayer()->GetAnimalSpawns()[i].GetY();
 
-            Animal * animal = new Animal(x, y, 1, "animal");
+            Animal * animal = new Animal(x, y, 1);
             animals.push_back(animal);
             
             map->GetCollisionLayer()->AddCollisionBoxEntity(

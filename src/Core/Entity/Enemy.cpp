@@ -15,9 +15,9 @@ Enemy::Enemy() : EntityWithHP()
     SetTimeNextAttack();
 }
 
-Enemy::Enemy(float x_, float y_, std::string name_, int hp_, int damage_,
+Enemy::Enemy(float x_, float y_, int hp_, int damage_,
              int speed_, int maxHP_)
-    : EntityWithHP::EntityWithHP(x_, y_, name_, hp_, damage_, speed_, maxHP_)
+    : EntityWithHP::EntityWithHP(x_, y_, hp_, damage_, speed_, maxHP_)
 {
     stateMachine = new StateMachine<Enemy>(this);
     stateMachine->SetCurrentState(EnemyPatrol::Instance());
@@ -28,10 +28,8 @@ Enemy::Enemy(float x_, float y_, std::string name_, int hp_, int damage_,
 
 Enemy::~Enemy()
 {
-
     this->x = 0.0;
     this->y = 0.0;
-    this->name = "deletedEnemy";
     this->hp = 0;
     this->damage = 0;
     this->speed = 0.0;
@@ -128,9 +126,9 @@ void Enemy::Test() const
     assert(enemy1.stateMachine != nullptr);
     std::cout << "ok" << std::endl;
 
-    std::cout << "Constructeur Enemy(int x, int y, string name, "
-              << "int hp, int damage,int speed, int int maxHealth) : ";
-    Enemy enemy2(10, 10, "enemy", 10, 10, 2, 400);
+    std::cout << "Constructeur Enemy(int x, int y, int hp, "
+              << "int damage,int speed, int int maxHealth) : ";
+    Enemy enemy2(10, 10, 10, 10, 2, 400);
     assert(enemy2.stateMachine != nullptr);
     std::cout << "ok" << std::endl;
 

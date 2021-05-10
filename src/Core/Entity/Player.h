@@ -31,7 +31,6 @@ public:
     /*! \brief Constructeur avec spécifités d'un Player en paramètre.
     *   \param [in] x : réel positif, position du Player sur l'axe X (horizontal).
     *   \param [in] y : réel positif, position du Player sur l'axe Y (vertical).
-    *   \param [in] name : chaine de caractères, nom du Player.
     *   \param [in] hp : entier, nombre de points de vie du Player.
     *   \param [in] dammage : entier, nombre de points de vie infligé lors d'une attaque.
     *   \param [in] maxHP : entier, maximum de points de vie qu'un Player peut avoir.
@@ -42,7 +41,7 @@ public:
     *   Créer un Player (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
-    Player(float x, float y, std::string name, int hp, int damage,
+    Player(float x, float y, int hp, int damage,
            float speed, int maxHP);
 
     /*! \brief Destructeur.

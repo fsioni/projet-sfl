@@ -18,9 +18,8 @@ public:
     *   \param [in] x : entier positif, position sur l'axe x.
     *   \param [in] y : entier positif, position sur l'axe y.
     *   \param [in] speed : entier positif, vitesse.
-    *   \param [in] name : std::string, nom.
     */
-    Animal(float x, float y, float speed, std::string name);
+    Animal(float x, float y, float speed);
 
     /*! \brief Destructeur. */
     ~Animal();

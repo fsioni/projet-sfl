@@ -9,8 +9,8 @@ Animal::Animal() : EntityWithoutHP() {
     SetTimeNextChangeDirection();
 }
 
-Animal::Animal(float x, float y, float speed, std::string name) :
-     EntityWithoutHP(x, y, speed, name) {
+Animal::Animal(float x, float y, float speed) :
+     EntityWithoutHP(x, y, speed) {
     stateMachine = new StateMachine<Animal>(this);
     stateMachine->SetCurrentState(AnimalWalking::Instance());
 

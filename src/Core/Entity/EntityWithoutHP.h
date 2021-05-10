@@ -22,7 +22,8 @@ enum EntityDirection
 /*! \class EntityWithoutHP
 *   \brief Classe représentant une entité immobile et immortel.
 *
-*   La classe représente une entité avec une position et un nom.
+*   La classe représente une entité avec une position, direction,
+*   vitesse, ID, status de mouvement, offset.
 *
 */
 class EntityWithoutHP
@@ -42,12 +43,11 @@ public:
     /*! \brief Constructeur avec spécifités de l'entité en paramètre.
     *   \param [in] x_ : réel positif, position de l'entité sur l'axe X (horizontale).
     *   \param [in] y_ : réel positif, position de l'entité sur l'axe Y (verticale).
-    *   \param [in] speed_ : réel positif, vitesse de l'entité?.
-    *   \param [in] name_ : chaine de caractères, nom de l'entité.
+    *   \param [in] speed_ : réel positif, vitesse de l'entité.
     *
     *   Créer une EntityWithoutHP (x_, y_, speed_, name_).
     */
-    EntityWithoutHP(float x_, float y_, int speed_, std::string name_);
+    EntityWithoutHP(float x_, float y_, int speed_);
 
     /*! \brief Destructeur.
     *
@@ -87,23 +87,6 @@ public:
     *
     */
     void SetPos_y(float newY);
-
-    /*! \brief Retourne le nom de l'entité.
-    *
-    *   Retourne une chaine de caractères, le nom de l'entité.
-    *
-    *
-    */
-    std::string GetName() const;
-
-    /*! \brief Permets de modifier le nom de l'entité.
-    *
-    *
-    *   \param [in] newName: chaine de caractères, nouveau nom de l'entité.
-    *
-    */
-    void SetName(std::string newName);
-
 
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.
     *
@@ -239,9 +222,6 @@ protected :
 
     /*! \brief Vitesse de l'entité. */
     int speed;
-
-    /*! \brief Nom de l'entité. */
-    std::string name;
 
     /*! \brief Direction de l'entité. */
     EntityDirection direction;

@@ -504,7 +504,6 @@ void StateGameSFML::UpdateNPCs(){
         for(int i=1; i*30< dialog.size(); i++)
             dialog.insert(30*i, "\n");
         
-
         npcText.setString(dialog);
     }
 }

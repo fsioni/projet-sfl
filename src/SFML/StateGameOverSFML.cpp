@@ -244,7 +244,7 @@ void StateGameOverSFML::RestartGame()
     float x = context->map->GetSpawnsLayer()->GetPlayerSpawn().GetX();
     float y = context->map->GetSpawnsLayer()->GetPlayerSpawn().GetY();
 
-    context->player = std::make_unique<Player>(x, y, "Player", 10, 10, 4, 10);
+    context->player = std::make_unique<Player>(x, y, 10, 10, 4, 10);
 
     context->map->GetCollisionLayer()->AddCollisionBoxEntity(
         context->player->GetID(), new Box(x, y, 26, 26));
@@ -258,7 +258,8 @@ void StateGameOverSFML::RestartGame()
         x = context->map->GetSpawnsLayer()->GetEnemySpawns()[i].GetX();
         y = context->map->GetSpawnsLayer()->GetEnemySpawns()[i].GetY();
 
-        std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 100, 3, 1, 100);
+        std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(
+            x, y, 100, 3, 1, 100);
         context->enemies.push_back(enemy);
         
         context->map->GetCollisionLayer()->AddCollisionBoxEntity(
@@ -291,7 +292,7 @@ void StateGameOverSFML::RestartGame()
         x = context->map->GetSpawnsLayer()->GetAnimalSpawns()[i].GetX();
         y = context->map->GetSpawnsLayer()->GetAnimalSpawns()[i].GetY();
 
-        Animal * animal = new Animal(x, y, 1, "animal");
+        Animal * animal = new Animal(x, y, 1);
         context->animals.push_back(animal);
             
         context->map->GetCollisionLayer()->AddCollisionBoxEntity(
