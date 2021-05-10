@@ -1,10 +1,8 @@
 var hierarchy =
 [
     [ "AssetManager", "classAssetManager.html", null ],
-    [ "Box", "classBox.html", [
-      [ "CollisionBox", "classCollisionBox.html", null ],
-      [ "SpawnPoint", "classSpawnPoint.html", null ]
-    ] ],
+    [ "Box", "classBox.html", null ],
+    [ "CollisionLayer", "classCollisionLayer.html", null ],
     [ "Context", "structContext.html", null ],
     [ "EntityWithoutHP", "classEntityWithoutHP.html", [
       [ "Animal", "classAnimal.html", null ],
@@ -15,12 +13,10 @@ var hierarchy =
       [ "NPC", "classNPC.html", null ]
     ] ],
     [ "Game", "classGame.html", null ],
-    [ "Layer", "classLayer.html", [
-      [ "CollisionLayer", "classCollisionLayer.html", null ],
-      [ "MapLayer", "classMapLayer.html", null ],
-      [ "SpawnsLayer", "classSpawnsLayer.html", null ]
-    ] ],
     [ "Map", "classMap.html", null ],
+    [ "MapLayer", "classMapLayer.html", null ],
+    [ "SpawnPoint", "classSpawnPoint.html", null ],
+    [ "SpawnsLayer", "classSpawnsLayer.html", null ],
     [ "State", "classState.html", [
       [ "StateGameOverSFML", "classStateGameOverSFML.html", null ],
       [ "StateGameSFML", "classStateGameSFML.html", null ],

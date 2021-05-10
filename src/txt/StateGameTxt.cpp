@@ -83,7 +83,7 @@ void StateGameTxt::Display()
 
     //Affichage des données du joueurs
     std::cout << std::endl
-              << context->player->GetName() << " Informations : "
+              << " Informations : "
               << std::endl
               << "Position : (" << context->player->GetPos_x() << ", "
               << context->player->GetPos_y() << ")" << std::endl

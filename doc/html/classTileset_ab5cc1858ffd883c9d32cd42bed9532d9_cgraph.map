@@ -1,11 +1,10 @@
 <map id="Tileset::Test" name="Tileset::Test">
-<area shape="rect" id="node1" title="Fonction de test de la classe Tileset." alt="" coords="5,183,105,209"/>
+<area shape="rect" id="node1" title="Fonction de test de la classe Tileset." alt="" coords="5,157,105,184"/>
 <area shape="rect" id="node2" href="$classTileset.html#ad636679bf81f2aa5ad00beff2d5c9ef2" title="Retourne column." alt="" coords="176,5,323,32"/>
-<area shape="rect" id="node3" href="$classTileset.html#a8015df88b62c9b7cf6e19c55dc398f69" title="Retourne name." alt="" coords="181,56,317,83"/>
-<area shape="rect" id="node4" href="$classTileset.html#a060020f7a21a85d854f1b8fdf6ea192a" title="Retourne tileCount." alt="" coords="170,107,329,133"/>
-<area shape="rect" id="node5" href="$classTileset.html#a586d2ecc83c354bcc981e49ed579d359" title="Retourne tileHeight." alt="" coords="167,157,331,184"/>
-<area shape="rect" id="node6" href="$classTileset.html#adffdd1eda76615393d0d6b085ac61cf9" title="Retourne tileMapHeight." alt="" coords="153,208,345,235"/>
-<area shape="rect" id="node7" href="$classTileset.html#a937a18ca2f53d7261d3eff752e8afb91" title="Retourne tileMapPath." alt="" coords="161,259,338,285"/>
-<area shape="rect" id="node8" href="$classTileset.html#ae109a25be64886c5139162186da7919b" title="Retourne tileMapWidth." alt="" coords="156,309,343,336"/>
-<area shape="rect" id="node9" href="$classTileset.html#a91f1063653764e3e799a0331336d9e00" title="Retourne tileWidth." alt="" coords="170,360,329,387"/>
+<area shape="rect" id="node3" href="$classTileset.html#a060020f7a21a85d854f1b8fdf6ea192a" title="Retourne tileCount." alt="" coords="170,56,329,83"/>
+<area shape="rect" id="node4" href="$classTileset.html#a586d2ecc83c354bcc981e49ed579d359" title="Retourne tileHeight." alt="" coords="167,107,331,133"/>
+<area shape="rect" id="node5" href="$classTileset.html#adffdd1eda76615393d0d6b085ac61cf9" title="Retourne tileMapHeight." alt="" coords="153,157,345,184"/>
+<area shape="rect" id="node6" href="$classTileset.html#a937a18ca2f53d7261d3eff752e8afb91" title="Retourne tileMapPath." alt="" coords="161,208,338,235"/>
+<area shape="rect" id="node7" href="$classTileset.html#ae109a25be64886c5139162186da7919b" title="Retourne tileMapWidth." alt="" coords="156,259,343,285"/>
+<area shape="rect" id="node8" href="$classTileset.html#a91f1063653764e3e799a0331336d9e00" title="Retourne tileWidth." alt="" coords="170,309,329,336"/>
 </map>

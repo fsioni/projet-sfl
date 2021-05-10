@@ -13,8 +13,8 @@
 <area shape="rect" id="node4" href="$classEnemy.html#a3b8fda3171cad67a7c0ff9fa872496f3" title=" " alt="" coords="499,57,707,98"/>
 <area shape="rect" id="node11" href="$classEnemyAttack.html#a54977db476e524b343786bae4c0d2e8b" title=" " alt="" coords="501,339,705,365"/>
 <area shape="rect" id="node13" href="$classEnemyRunAway.html#a5d56fabaf2823d44a491ea7f43083b47" title=" " alt="" coords="483,389,724,416"/>
-<area shape="rect" id="node15" href="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="503,441,704,482"/>
-<area shape="rect" id="node16" href="$classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="503,506,704,547"/>
+<area shape="rect" id="node15" href="$classCollisionLayer.html#a620b4ce21e4699a1a067ffaa60848667" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="503,441,704,482"/>
+<area shape="rect" id="node16" href="$classCollisionLayer.html#ac58218b7888e319365025f92265cf1de" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="503,506,704,547"/>
 <area shape="rect" id="node17" href="$classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="543,572,664,599"/>
 <area shape="rect" id="node18" href="$classEntityWithoutHP.html#a1a5d732b9f322135fbd5e5f227064b26" title="Retourne l&#39;ID de l&#39;entité." alt="" coords="516,623,691,649"/>
 <area shape="rect" id="node19" href="$classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="545,673,661,700"/>

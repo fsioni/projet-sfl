@@ -32,7 +32,12 @@ public:
     *
     */
     void UpdateEnemies();
+
+    /*! \brief Met à jour les données correspondant aux PNJ
+    *
+    */
     void UpdateNPCs();
+    void UpdateAnimals();
 
     void Display();
 
@@ -46,18 +51,22 @@ public:
     */
     void DisplayPlayer();
 
-    /*! \brief Affichage les ennemis sur la fenêtre SFML
+    /*! \brief Affichage des ennemis sur la fenêtre SFML
     *
     */
     void DisplayEnemies();
 
+    /*! \brief Affichage des PNJ sur la fenêtre SFML
+    *
+    */
     void DisplayNPC();
+    void DisplayAnimals();
 
     /*! \brief Affichage une CollisionBox sur la fenêtre SFML
     *
     */
     void DisplayCollisionBox(
-        Box * cb, const sf::Color & color, int id);
+        Box * cb, const sf::Color & color, int id, int offset);
 
     /*! \brief Affichage le mode debug sur la fenêtre SFML
     *
@@ -72,7 +81,7 @@ private:
     /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
 
-    sf::Sprite tileSprite, playerSprite, shadowSprite, enemySprite, npcSprite;
+    sf::Sprite tileSprite, playerSprite, shadowSprite, enemySprite, npcSprite, animalSprite;
     std::vector<int> enemySpritesID, npcSpritesID; 
 
     /*! \brief Horloge pour le delta time */
@@ -156,12 +165,8 @@ private:
 
     /*! \brief Musique du jeu */
     sf::Music music;
-    /*! \brief Son tampon des pas du joueur */
-    sf::SoundBuffer runningBuffer;
     /*! \brief Son des pas du joueur */
     sf::Sound runningSound;
-    /*! \brief Son tampon de coup */
-    sf::SoundBuffer hitBuffer;
     /*! \brief Son de coup */
     sf::Sound hitSound;
 };

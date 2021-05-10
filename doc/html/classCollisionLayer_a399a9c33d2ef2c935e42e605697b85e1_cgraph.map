@@ -1,9 +1,9 @@
 <map id="CollisionLayer::Test" name="CollisionLayer::Test">
 <area shape="rect" id="node1" title="Test de regression." alt="" coords="5,152,153,179"/>
-<area shape="rect" id="node2" href="$classCollisionLayer.html#a818d3c9c83d99a9b13bd9fb04fda9cef" title="Fonction permettant d&#39;ajouter une boîte de collision à la couche." alt="" coords="203,5,431,32"/>
-<area shape="rect" id="node3" href="$classCollisionLayer.html#a7dfb68848be430bad4397424534a7084" title="Fonction permettant d&#39;ajouter une boîte de collision d&#39;entité à la couche." alt="" coords="215,57,418,98"/>
+<area shape="rect" id="node2" href="$classCollisionLayer.html#a33602792ee8ee0a72f5b133131c8ab51" title="Fonction permettant d&#39;ajouter une boîte de collision à la couche." alt="" coords="203,5,431,32"/>
+<area shape="rect" id="node3" href="$classCollisionLayer.html#aecbcd3e856196f04ef67bf340033ffe3" title="Fonction permettant d&#39;ajouter une boîte de collision d&#39;entité à la couche." alt="" coords="215,57,418,98"/>
 <area shape="rect" id="node4" href="$classCollisionLayer.html#ae1accba79321890918f40613ba32f957" title="Permet de savoir si une clé existe." alt="" coords="480,145,659,186"/>
 <area shape="rect" id="node5" href="$classCollisionLayer.html#a7a97cfca95d4fa88e7c68925d56b5b8b" title="Supprime la CollisionBox d&#39;une entité." alt="" coords="201,174,432,215"/>
-<area shape="rect" id="node6" href="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="216,239,417,281"/>
-<area shape="rect" id="node7" href="$classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="216,305,417,346"/>
+<area shape="rect" id="node6" href="$classCollisionLayer.html#a620b4ce21e4699a1a067ffaa60848667" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="216,239,417,281"/>
+<area shape="rect" id="node7" href="$classCollisionLayer.html#ac58218b7888e319365025f92265cf1de" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="216,305,417,346"/>
 </map>

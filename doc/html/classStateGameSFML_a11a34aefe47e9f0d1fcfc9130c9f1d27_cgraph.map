@@ -1,7 +1,7 @@
 <map id="StateGameSFML::UpdateEnemies" name="StateGameSFML::UpdateEnemies">
 <area shape="rect" id="node1" title="Met à jour les données correspondant aux ennemis." alt="" coords="5,78,247,105"/>
 <area shape="rect" id="node2" href="$classCollisionLayer.html#ae1accba79321890918f40613ba32f957" title="Permet de savoir si une clé existe." alt="" coords="306,5,485,47"/>
-<area shape="rect" id="node3" href="$classCollisionLayer.html#a85cf4e9e341f186346b55457e8ccc3f8" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="295,71,496,112"/>
+<area shape="rect" id="node3" href="$classCollisionLayer.html#ac58218b7888e319365025f92265cf1de" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="295,71,496,112"/>
 <area shape="rect" id="node4" href="$classBox.html#a0f3f1e3acf82ac45cccb611be4b79206" title="Modifie la position de la Box par celle en paramètre." alt="" coords="331,137,459,163"/>
 <area shape="rect" id="node5" href="$classBox.html#aebb3d713f415ee36e6c245c45053223c" title="Modifie la position sur l&#39;axe horizontal." alt="" coords="544,111,629,138"/>
 <area shape="rect" id="node6" href="$classBox.html#a05649a7f4b8aa9c0524141672f6edfea" title="Modifie la position sur l&#39;axe vertical." alt="" coords="545,162,629,189"/>

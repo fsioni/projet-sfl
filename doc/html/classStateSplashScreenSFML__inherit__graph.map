@@ -1,4 +1,4 @@
 <map id="StateSplashScreenSFML" name="StateSplashScreenSFML">
-<area shape="rect" id="node1" title="Classe représentant l&#39;état SplashScreen du mode graphique (SFML)" alt="" coords="5,233,220,516"/>
+<area shape="rect" id="node1" title="Classe représentant l&#39;état SplashScreen du mode graphique (SFML)" alt="" coords="5,233,220,487"/>
 <area shape="rect" id="node2" href="$classState.html" title="Classe représentant un état de l&#39;application." alt="" coords="47,5,178,185"/>
 </map>

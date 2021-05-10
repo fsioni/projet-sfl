@@ -91,22 +91,25 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 </div><table border="0" cellspacing="10" cellpadding="0">
 <tr><td><img src="inherit_graph_0.png" border="0" usemap="#AssetManager" alt=""/>
 <map name="AssetManager" id="AssetManager">
-<area shape="rect" href="classAssetManager.html" title="Classe représentant le gestionnaire des données de l&#39;application (Textures)" alt="" coords="5,5,120,32"/>
+<area shape="rect" href="classAssetManager.html" title="Classe représentant le gestionnaire des données de l&#39;application (Textures, sons, polices...." alt="" coords="5,5,120,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_1.png" border="0" usemap="#Box" alt=""/>
 <map name="Box" id="Box">
-<area shape="rect" href="classBox.html" title="Classe représentant une boîte dans un monde 2D." alt="" coords="5,31,52,57"/>
-<area shape="rect" href="classCollisionBox.html" title="Classe représentant une boîte de collision dans un monde 2D." alt="" coords="100,5,203,32"/>
-<area shape="rect" href="classSpawnPoint.html" title="Classe représentant un point d&#39;apparition dans un monde 2D." alt="" coords="102,56,201,83"/>
+<area shape="rect" href="classBox.html" title="Classe représentant une boîte dans un monde 2D." alt="" coords="5,5,52,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_2.png" border="0" usemap="#Context" alt=""/>
+<tr><td><img src="inherit_graph_2.png" border="0" usemap="#CollisionLayer" alt=""/>
+<map name="CollisionLayer" id="CollisionLayer">
+<area shape="rect" href="classCollisionLayer.html" title="Classe représentant une couche de CollisionBox." alt="" coords="5,5,120,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_3.png" border="0" usemap="#Context" alt=""/>
 <map name="Context" id="Context">
 <area shape="rect" href="structContext.html" title="Classe représentant l&#39;état du programme." alt="" coords="5,5,79,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_3.png" border="0" usemap="#EntityWithoutHP" alt=""/>
+<tr><td><img src="inherit_graph_4.png" border="0" usemap="#EntityWithoutHP" alt=""/>
 <map name="EntityWithoutHP" id="EntityWithoutHP">
 <area shape="rect" href="classEntityWithoutHP.html" title="Classe représentant une entité immobile et immortel." alt="" coords="5,56,135,83"/>
 <area shape="rect" href="classAnimal.html" title=" " alt="" coords="203,5,271,32"/>
@@ -116,17 +119,9 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="rect" href="classPlayer.html" title="Classe représentant un joueur qui peut infliger/subir des dégats et se déplacer." alt="" coords="341,81,403,108"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_4.png" border="0" usemap="#Game" alt=""/>
+<tr><td><img src="inherit_graph_5.png" border="0" usemap="#Game" alt=""/>
 <map name="Game" id="Game">
 <area shape="rect" href="classGame.html" title="Classe représentant le programme dans sa généralité." alt="" coords="5,5,67,32"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_5.png" border="0" usemap="#Layer" alt=""/>
-<map name="Layer" id="Layer">
-<area shape="rect" href="classLayer.html" title="Classe représentant une couche. Doit être héritée. Hérité par CollisionLayer et SpawnsLayer." alt="" coords="5,56,64,83"/>
-<area shape="rect" href="classCollisionLayer.html" title="Classe représentant une couche de CollisionBox Hérité de Layer Représente toutes les CollisionBox d&#39;u..." alt="" coords="112,5,227,32"/>
-<area shape="rect" href="classMapLayer.html" title="Classe représentant une couche de tuiles." alt="" coords="126,56,213,83"/>
-<area shape="rect" href="classSpawnsLayer.html" title="Classe représentant une couche de SpawnPoint Hérité de Layer Représente tous les SpawnPoint du jeu,..." alt="" coords="115,107,223,133"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_6.png" border="0" usemap="#Map" alt=""/>
@@ -134,7 +129,22 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="rect" href="classMap.html" title="Classe stockant la map." alt="" coords="5,5,56,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_7.png" border="0" usemap="#State" alt=""/>
+<tr><td><img src="inherit_graph_7.png" border="0" usemap="#MapLayer" alt=""/>
+<map name="MapLayer" id="MapLayer">
+<area shape="rect" href="classMapLayer.html" title="Classe représentant une couche de tuiles." alt="" coords="5,5,92,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_8.png" border="0" usemap="#SpawnPoint" alt=""/>
+<map name="SpawnPoint" id="SpawnPoint">
+<area shape="rect" href="classSpawnPoint.html" title="Classe représentant un point d&#39;apparition dans un monde 2D." alt="" coords="5,5,104,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_9.png" border="0" usemap="#SpawnsLayer" alt=""/>
+<map name="SpawnsLayer" id="SpawnsLayer">
+<area shape="rect" href="classSpawnsLayer.html" title="Classe représentant une couche de SpawnPoint." alt="" coords="5,5,113,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_10.png" border="0" usemap="#State" alt=""/>
 <map name="State" id="State">
 <area shape="rect" href="classState.html" title="Classe représentant un état de l&#39;application." alt="" coords="5,183,61,209"/>
 <area shape="rect" href="classStateGameOverSFML.html" title="Classe représentant l&#39;état game over du mode graphique (SFML)" alt="" coords="118,5,279,32"/>
@@ -147,7 +157,7 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="rect" href="classStateSplashScreenTxt.html" title="Classe représentant l&#39;état SplashScreen du mode texte." alt="" coords="117,360,281,387"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_8.png" border="0" usemap="#StateBehavior_3_01Enemy_01_4" alt=""/>
+<tr><td><img src="inherit_graph_11.png" border="0" usemap="#StateBehavior_3_01Enemy_01_4" alt=""/>
 <map name="StateBehavior_3_01Enemy_01_4" id="StateBehavior_3_01Enemy_01_4">
 <area shape="rect" href="classStateBehavior.html" title=" " alt="" coords="5,56,195,83"/>
 <area shape="rect" href="classEnemyAttack.html" title=" " alt="" coords="252,5,361,32"/>
@@ -155,37 +165,37 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="rect" href="classEnemyRunAway.html" title=" " alt="" coords="243,107,371,133"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_9.png" border="0" usemap="#StateBehavior_3_01entity__type_01_4" alt=""/>
+<tr><td><img src="inherit_graph_12.png" border="0" usemap="#StateBehavior_3_01entity__type_01_4" alt=""/>
 <map name="StateBehavior_3_01entity__type_01_4" id="StateBehavior_3_01entity__type_01_4">
 <area shape="rect" href="classStateBehavior.html" title=" " alt="" coords="5,5,172,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_10.png" border="0" usemap="#StateMachine_3_01Enemy_01_4" alt=""/>
+<tr><td><img src="inherit_graph_13.png" border="0" usemap="#StateMachine_3_01Enemy_01_4" alt=""/>
 <map name="StateMachine_3_01Enemy_01_4" id="StateMachine_3_01Enemy_01_4">
 <area shape="rect" href="classStateMachine.html" title=" " alt="" coords="5,5,192,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_11.png" border="0" usemap="#StateMachine_3_01entity__type_01_4" alt=""/>
+<tr><td><img src="inherit_graph_14.png" border="0" usemap="#StateMachine_3_01entity__type_01_4" alt=""/>
 <map name="StateMachine_3_01entity__type_01_4" id="StateMachine_3_01entity__type_01_4">
 <area shape="rect" href="classStateMachine.html" title=" " alt="" coords="5,5,169,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_12.png" border="0" usemap="#StateManager" alt=""/>
+<tr><td><img src="inherit_graph_15.png" border="0" usemap="#StateManager" alt=""/>
 <map name="StateManager" id="StateManager">
 <area shape="rect" href="classStateManager.html" title="Classe représentant un gestionnaire d&#39;états (State)" alt="" coords="5,5,119,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_13.png" border="0" usemap="#Tileset" alt=""/>
+<tr><td><img src="inherit_graph_16.png" border="0" usemap="#Tileset" alt=""/>
 <map name="Tileset" id="Tileset">
 <area shape="rect" href="classTileset.html" title="Classe représentant un tileset (ensemble de tuile stocké sur une image)." alt="" coords="5,5,72,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_14.png" border="0" usemap="#UniqueID" alt=""/>
+<tr><td><img src="inherit_graph_17.png" border="0" usemap="#UniqueID" alt=""/>
 <map name="UniqueID" id="UniqueID">
 <area shape="rect" href="classUniqueID.html" title=" " alt="" coords="5,5,88,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_15.png" border="0" usemap="#WinTXT" alt=""/>
+<tr><td><img src="inherit_graph_18.png" border="0" usemap="#WinTXT" alt=""/>
 <map name="WinTXT" id="WinTXT">
 <area shape="rect" href="classWinTXT.html" title="une fenêtre texte est un tableau 2D de caractères" alt="" coords="5,5,77,32"/>
 </map>

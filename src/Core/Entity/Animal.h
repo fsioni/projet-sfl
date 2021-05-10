@@ -2,42 +2,30 @@
 #define ANIMAL_H
 
 #include "EntityWithoutHP.h"
+#include "FiniteStateMachine/StateMachine.h"
 
 /*! \class Animal
-*   \brief Classe représentant une entité qui se déplace aléatoirement.
-*
-*   La classe représente un Animal avec un nom et une position.
+*   \brief Représente un animal, hérite de EntityWithouHP.
 *
 */
 class Animal : public EntityWithoutHP
 {
-public:
-
-    /*! \brief Constructeur par défaut.
-    *
-    *
-    *   Créer un Animal avec une position x 0.0, une position y 0.0, un nom "Unknown".
-    *
-    */
+    /*! \brief Constructeur par défaut. */
     Animal();
 
-    /*! \brief Constructeur avec spécifités d'un Animal en paramètre.
-    *   \param [in] x : réel positif, position de l'Animal sur l'axe X (horizontal).
-    *   \param [in] y : réel positif, position de l'Animal sur l'axe Y (vertical).
-    *   \param [in] name : chaine de caractères, nom de l'Animal.
-    *
-    *
-    *   Créer un Animal (x, y, name)
-    *
-    */
-    Animal(float x, float y, std::string name);
 
-    /*! \brief Destructeur.
+    /*! \brief Constructeur paramétré.
     *
-    *  Destructeur de la classe Animal.
-    *
+    *   \param [in] x : entier positif, position sur l'axe x.
+    *   \param [in] y : entier positif, position sur l'axe y.
+    *   \param [in] speed : entier positif, vitesse.
     */
+    Animal(float x, float y, float speed);
+
+
+    /*! \brief Destructeur. */
     ~Animal();
+
 
     /*! \brief Retourne une direction aléatoire.
     *
@@ -47,14 +35,58 @@ public:
     EntityDirection RandDirection();
 
 
-    /*! \brief Permets à un Animal de se déplacer aléatoirement.
-    *   \param [in] vx : réel positif, vitesse de déplacement de l'Animal sur l'axe X (horizontal).
-    *   \param [in] vy : réel positif, vitesse de déplacement de l'Animal sur l'axe Y (vertical).
-    *
-    *
-    *   Permets à un animal de se déplacer avec une vitesse vx sur l'axe X (horizontal) et d'une vitesse vy sur l'axe Y (vertical).
-    *
+    /*! \brief Retourne le StateMachine.
+    *   \return Pointeur sur StateMachine<Animal>.
     */
-    void MoveRandomly(float vx, float vy);
+    StateMachine<Animal> *GetStateMachine() const;
+
+
+    /*! \brief Update le StateMachine.
+    *
+    *   \param [in] player_ : std::unique_ptr<Player>, le joueur.
+    *   \param [in] collision : pointeur sur CollisionLayer, permet d'avoir accès
+    *                           à la couche de collision pour les déplacements.
+    *   \param [in] dt : entier positif, deltaTime.
+    */
+    void UpdateStateMachine(std::unique_ptr<Player> &player_,
+                            CollisionLayer *collision, int dt);
+
+    /*! \brief Affecte une EntityDirection aléatoire à l'Animal.*/
+    void RandDirection();
+
+    /*! \brief Change la direction de l'Animal.
+    *   Utilise timeNextChangeDirection pour savoir si il est temps
+    *   de changer de direction ou si le booléen de collision est true
+    *   alors on change la direction en utilisant RandDirection().
+    *
+    *   \param [in] collision : booléen, Animal en collision ou non.
+    */
+    void ChangeDirection(bool collision);
+
+    /*! \brief Affecte à timeNextChangeDirection une valeur aléatoire.
+    *
+    *   Affecte à timeNextChangeDirection l'heure actuelle + une valeur aléatoire
+    *   pour définir une heure dans le future, le moment où l'Enemy pourra à nouveau
+    *   changer de direction.
+    */
+    void SetTimeNextChangeDirection();
+
+    /*! \brief Fonction de test de regression.
+    *
+    *   Effectue une série de test pour vérifié que chaque
+    *   fonctions fait ce qu'elle doit faire.
+    */
+    void Test() const;
+private:
+
+    /*! \brief Pointeur sur le StateMachine<Animal>. */
+    StateMachine<Animal> *stateMachine;
+
+
+    /*! \brief Heure du prochain changement de direction possible.
+    *   Permet d'empecher l'Enemy de changer de direction trop souvent.
+    */
+    double timeNextChangeDirection;
+
 };
 #endif // ANIMAL_H

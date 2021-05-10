@@ -20,9 +20,10 @@ StateGameOverSFML::~StateGameOverSFML()
 
 void StateGameOverSFML::Init()
 {
-    assert(buffer.loadFromFile("data/sounds/sfx/menuNav.wav"));
+    handCursor.loadFromSystem(sf::Cursor::Hand);
+    pointCursor.loadFromSystem(sf::Cursor::Arrow);
 
-    sound.setBuffer(buffer);
+    sound.setBuffer(context->assetMan->GetSoundBuffers()[0]);
 
     int winx = context->renderWin->getSize().x;
     int winy = context->renderWin->getSize().y;
@@ -95,6 +96,16 @@ void StateGameOverSFML::ProcessInput()
 
     while (context->renderWin->pollEvent(event))
     {
+        if(event.type == sf::Event::Resized){
+            context->renderWin->setView(sf::View(
+                sf::FloatRect(0, 0, event.size.width, event.size.height)));
+            int winX = context->renderWin->getSize().x;
+            int winY = context->renderWin->getSize().y;
+            exitButton.setPosition(winX / 2.0f, winY / 2.0f + 165.f);
+            menuButton.setPosition(winX / 2.0f, winY / 2.0f + 105);
+            restartButton.setPosition(winX / 2.0f, winY / 2.0f + 45.f);
+            gameOverText.setPosition(winX / 2.0f, 200);
+        }
         if (event.type == sf::Event::Closed)
         {
             context->renderWin->close();
@@ -171,11 +182,6 @@ void StateGameOverSFML::ProcessInput()
                     OnClick();
                 break;
 
-                case sf::Keyboard::Key::X:
-                    context->renderWin->close();
-                    context->quit = true;
-                    break;
-
                 case sf::Keyboard::M:
                     context->isMute = !(context->isMute);
                     break;                
@@ -187,38 +193,48 @@ void StateGameOverSFML::ProcessInput()
     }
 
     sf::Vector2i mousePos = sf::Mouse::getPosition(*context->renderWin.get());
+    context->renderWin->setMouseCursor(pointCursor);
 
     // Bouton Rejouer
-    sf::IntRect button(restartButton.getPosition().x-10, restartButton.getPosition().y,
-        restartButton.getGlobalBounds().width+10, restartButton.getGlobalBounds().height);
+    sf::IntRect button(restartButton.getPosition().x-
+        restartButton.getGlobalBounds().width/2, restartButton.getPosition().y-
+        restartButton.getGlobalBounds().height/2, restartButton.getGlobalBounds().width,
+        restartButton.getGlobalBounds().height);
 
     if (button.contains(mousePos))
     {
         isRestartButSelected = true;
         isMenuButSelected = false;
         isExitButSelected = false;
+        context->renderWin->setMouseCursor(handCursor);
     }
     
     // Bouton Instructions
-    button = sf::IntRect(menuButton.getPosition().x-10, menuButton.getPosition().y,
-        menuButton.getGlobalBounds().width+10, menuButton.getGlobalBounds().height);
+    button = sf::IntRect(menuButton.getPosition().x-
+        menuButton.getGlobalBounds().width/2, menuButton.getPosition().y-
+        menuButton.getGlobalBounds().height/2, menuButton.getGlobalBounds().width,
+        menuButton.getGlobalBounds().height);
 
     if (button.contains(mousePos))
     {
         isRestartButSelected = false;
         isMenuButSelected = true;
         isExitButSelected = false;
+        context->renderWin->setMouseCursor(handCursor);    
     }
     
     // Bouton Quitter
-    button = sf::IntRect(exitButton.getPosition().x-10, exitButton.getPosition().y,
-        exitButton.getGlobalBounds().width+10, exitButton.getGlobalBounds().height);
+    button = sf::IntRect(exitButton.getPosition().x-
+        exitButton.getGlobalBounds().width/2, exitButton.getPosition().y-
+        exitButton.getGlobalBounds().height/2, exitButton.getGlobalBounds().width,
+        exitButton.getGlobalBounds().height);
 
     if (button.contains(mousePos))
     {
         isRestartButSelected = false;
         isMenuButSelected = false;
         isExitButSelected = true;
+        context->renderWin->setMouseCursor(handCursor);
     }
 }
 
@@ -228,7 +244,7 @@ void StateGameOverSFML::RestartGame()
     float x = context->map->GetSpawnsLayer()->GetPlayerSpawn().GetX();
     float y = context->map->GetSpawnsLayer()->GetPlayerSpawn().GetY();
 
-    context->player = std::make_unique<Player>(x, y, "Player", 10, 10, 4, 10);
+    context->player = std::make_unique<Player>(x, y, 10, 10, 4, 10);
 
     context->map->GetCollisionLayer()->AddCollisionBoxEntity(
         context->player->GetID(), new Box(x, y, 26, 26));
@@ -242,7 +258,8 @@ void StateGameOverSFML::RestartGame()
         x = context->map->GetSpawnsLayer()->GetEnemySpawns()[i].GetX();
         y = context->map->GetSpawnsLayer()->GetEnemySpawns()[i].GetY();
 
-        std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(x, y, "Enemy", 100, 3, 1, 100);
+        std::shared_ptr<Enemy> enemy = std::make_shared<Enemy>(
+            x, y, 100, 3, 1, 100);
         context->enemies.push_back(enemy);
         
         context->map->GetCollisionLayer()->AddCollisionBoxEntity(
@@ -267,7 +284,19 @@ void StateGameOverSFML::RestartGame()
         // Ajout de sa CollisionBox au CollisionLayer
         context->map->GetCollisionLayer()->AddCollisionBoxEntity(
             newNPC->GetID(), new Box(x, y, 32, 32));
+    }
 
+    // Initialisation des animaux
+    count = context->map->GetSpawnsLayer()->GetAnimalSpawns().size();
+    for (int i = 0; i < count; i++){
+        x = context->map->GetSpawnsLayer()->GetAnimalSpawns()[i].GetX();
+        y = context->map->GetSpawnsLayer()->GetAnimalSpawns()[i].GetY();
+
+        Animal * animal = new Animal(x, y, 1);
+        context->animals.push_back(animal);
+            
+        context->map->GetCollisionLayer()->AddCollisionBoxEntity(
+            animal->GetID(), new Box(x, y, 32, 32));
     }
 }
 

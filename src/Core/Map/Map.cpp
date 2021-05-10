@@ -111,6 +111,7 @@ void Map::TmxLoadLayers(std::string fileName)
     int indSpawnPlayer = 0;
     int indSpawnEnnemy = 0;
     int indSpawnNPC = 0;
+    int indSpawnAnimal = 0;
     std::string tmpObjectGroup;
     std::string name;
 
@@ -127,6 +128,8 @@ void Map::TmxLoadLayers(std::string fileName)
             indSpawnPlayer = i;
         if(name == "NPCSpawn")
             indSpawnNPC = i;
+        if(name == "AnimalSpawn")
+            indSpawnAnimal = i;
     }
 
     std::string strCollisionLayer = GetFullTag(strFile, "objectgroup",
@@ -139,8 +142,11 @@ void Map::TmxLoadLayers(std::string fileName)
                                             indSpawnEnnemy);
     std::string strNpcSpawn = GetFullTag(strFile, "objectgroup",
                                             indSpawnNPC);
+    std::string strAnimalSpawn = GetFullTag(strFile, "objectgroup",
+                                            indSpawnAnimal);                   
 
-    spawnsLayer = new SpawnsLayer(strPlayerSpawn, strEnnemySpawn, strNpcSpawn);
+    spawnsLayer = new SpawnsLayer(strPlayerSpawn, strEnnemySpawn,
+                                  strNpcSpawn, strAnimalSpawn);
 }
 
 void Map::TsxLoadTileset(std::string fileName)

@@ -1,4 +1,4 @@
 <map id="StateGameSFML::DisplayEnemies" name="StateGameSFML::DisplayEnemies">
-<area shape="rect" id="node1" title="Affichage les ennemis sur la fenêtre SFML." alt="" coords="240,5,483,32"/>
+<area shape="rect" id="node1" title="Affichage des ennemis sur la fenêtre SFML." alt="" coords="240,5,483,32"/>
 <area shape="rect" id="node2" href="$classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a" title="Fonction d&#39;affichage du State." alt="" coords="5,5,192,32"/>
 </map>

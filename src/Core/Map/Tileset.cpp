@@ -68,37 +68,6 @@ Tileset &Tileset::operator=(const Tileset &ts)
     return *this;
 }
 
-// ====== SETERS ET GETERS =======
-void Tileset::SetTileWidth(int tw)
-{
-    tileWidth = tw;
-}
-void Tileset::SetTileHeight(int th)
-{
-    tileHeight = th;
-}
-void Tileset::SetTileCount(int tc)
-{
-    tileCount = tc;
-}
-void Tileset::SetColumn(int col)
-{
-    column = col;
-}
-void Tileset::SetTileMapPath(std::string tmp)
-{
-    tileMapPath = tmp;
-}
-void Tileset::SetTileMapWidth(int tmw)
-{
-    tileMapWidth = tmw;
-}
-void Tileset::SetTileMapHeight(int tmh)
-{
-    tileMapHeight = tmh;
-}
-
-
 int Tileset::GetTileWidth() const
 {
     return tileWidth;

@@ -10,9 +10,9 @@ EntityWithHP::EntityWithHP() : EntityWithHP::EntityWithoutHP()
     this->speed = 1.0;
 }
 
-EntityWithHP::EntityWithHP(float x_, float y_, std::string name_, int hp_,
+EntityWithHP::EntityWithHP(float x_, float y_, int hp_,
                         int damage_, int speed_, int maxHP_)
-                        : EntityWithoutHP::EntityWithoutHP(x_, y_, speed_, name_)
+                        : EntityWithoutHP::EntityWithoutHP(x_, y_, speed_)
 {
     hp = hp_;
     damage = damage_;
@@ -48,7 +48,6 @@ void EntityWithHP::PrintEntityInfo()
 {
 
     std::cout << "x = " << x << ", y = " << y << std::endl;
-    std::cout << "nom : " << name << std::endl;
     std::cout << "points de vie : " << hp << std::endl;
     std::cout << "Dégâts : " << damage << std::endl;
     std::cout << "Speed : " << speed << std::endl;
@@ -120,9 +119,9 @@ void EntityWithHP::Test() const
     assert(entity1.livingStatus);
     std::cout << "ok" << std::endl;
 
-    std::cout << "Constructeur EntityWithHP(int x_, int y_, string name_, "
-              << "int hp_, int damage_, int speed_, int maxHealth_) : ";
-    EntityWithHP entity2(10, 10, "Entité", 120, 23, 10, 300);
+    std::cout << "Constructeur EntityWithHP(int x_, int y_, int hp_,"
+              << " int damage_, int speed_, int maxHealth_) : ";
+    EntityWithHP entity2(10, 10, 120, 23, 10, 300);
     assert(entity2.hp == 120);
     assert(entity2.damage == 23);
     assert(entity2.maxHP == 300);
