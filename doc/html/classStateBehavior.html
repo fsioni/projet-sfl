@@ -95,23 +95,30 @@ Graphe d'héritage de StateBehavior&lt; entity_type &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classStateBehavior__inherit__graph.png" border="0" usemap="#StateBehavior_3_01entity__type_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="StateBehavior_3_01entity__type_01_4_inherit__map" id="StateBehavior_3_01entity__type_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="145,5,312,141"/>
-<area shape="rect" href="classStateBehavior.html" title=" " alt="" coords="134,204,323,325"/>
-<area shape="rect" href="classEnemyAttack.html" title=" " alt="" coords="5,375,140,540"/>
-<area shape="rect" href="classEnemyPatrol.html" title=" " alt="" coords="164,375,293,540"/>
-<area shape="rect" href="classEnemyRunAway.html" title=" " alt="" coords="317,375,471,540"/>
+<area shape="rect" title=" " alt="" coords="317,5,484,141"/>
+<area shape="rect" href="classStateBehavior.html" title=" " alt="" coords="199,204,389,325"/>
+<area shape="rect" href="classStateBehavior.html" title=" " alt="" coords="477,204,668,325"/>
+<area shape="rect" href="classEnemyAttack.html" title="Etat d&#39;attaque pour les Enemy, hérite de StateBehavior&lt;Enemy&gt;." alt="" coords="5,375,140,540"/>
+<area shape="rect" href="classEnemyPatrol.html" title="Etat de patrouille pour les Enemy, hérite de StateBehavior&lt;Enemy&gt;." alt="" coords="164,375,293,540"/>
+<area shape="rect" href="classEnemyRunAway.html" title="Etat de fuite pour les enemy, hérite de StateBehavior&lt;Enemy&gt;." alt="" coords="317,375,471,540"/>
+<area shape="rect" href="classAnimalFollowing.html" title="Etat de suivi d&#39;un Animal, il se déplace en direction du joueur, pour jouer ?" alt="" coords="495,375,650,540"/>
+<area shape="rect" href="classAnimalWalking.html" title="Etat de &quot;balade&quot; d&#39;un Animal, il se déplace aléatoirement." alt="" coords="675,375,820,540"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a7606de8394f3ef18ed4669440c5fceea"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateBehavior.html#a7606de8394f3ef18ed4669440c5fceea">Enter</a> (entity_type *)=0</td></tr>
+<tr class="memdesc:a7606de8394f3ef18ed4669440c5fceea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entré dans l'état. Peut modifier des valeur de entity type, par exemple la vitesse et ensuite la remettre à la normal dans Exit.  <a href="classStateBehavior.html#a7606de8394f3ef18ed4669440c5fceea">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a7606de8394f3ef18ed4669440c5fceea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacf3f8e6bbcc9129f8bb534cc9c678f2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateBehavior.html#aacf3f8e6bbcc9129f8bb534cc9c678f2">Execute</a> (entity_type *, std::unique_ptr&lt; <a class="el" href="classPlayer.html">Player</a> &gt; &amp;player_, <a class="el" href="classCollisionLayer.html">CollisionLayer</a> *collision, int dt)=0</td></tr>
-<tr class="separator:aacf3f8e6bbcc9129f8bb534cc9c678f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79fef698206f9ea37a2955520af91d52"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateBehavior.html#a79fef698206f9ea37a2955520af91d52">Execute</a> (entity_type *entity, std::unique_ptr&lt; <a class="el" href="classPlayer.html">Player</a> &gt; &amp;player_, <a class="el" href="classCollisionLayer.html">CollisionLayer</a> *collision, int dt)=0</td></tr>
+<tr class="memdesc:a79fef698206f9ea37a2955520af91d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution de l'état, fait une série d'action sur l'entity_type.  <a href="classStateBehavior.html#a79fef698206f9ea37a2955520af91d52">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a79fef698206f9ea37a2955520af91d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f0b2e000ce2d42646be7beceec23417"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateBehavior.html#a0f0b2e000ce2d42646be7beceec23417">Exit</a> (entity_type *)=0</td></tr>
+<tr class="memdesc:a0f0b2e000ce2d42646be7beceec23417"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sortie de l'état. Peut remettre une valeur à la normal si modifié dans Enter par exemple.  <a href="classStateBehavior.html#a0f0b2e000ce2d42646be7beceec23417">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a0f0b2e000ce2d42646be7beceec23417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a492860e1a788ef9fd3558f809a59fbbd"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateBehavior.html#a492860e1a788ef9fd3558f809a59fbbd">~StateBehavior</a> ()</td></tr>
+<tr class="memdesc:a492860e1a788ef9fd3558f809a59fbbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="classStateBehavior.html#a492860e1a788ef9fd3558f809a59fbbd">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a492860e1a788ef9fd3558f809a59fbbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
@@ -139,6 +146,8 @@ template&lt;class entity_type &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destructeur. </p>
 
 </div>
 </div>
@@ -169,21 +178,14 @@ template&lt;class entity_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Implémenté dans <a class="el" href="classEnemyRunAway.html#af3b404b770b2ad508b7e2ad85077e328">EnemyRunAway</a>, <a class="el" href="classEnemyAttack.html#a5ddfcee027741f02f2e6f19abd21669b">EnemyAttack</a>, et <a class="el" href="classEnemyPatrol.html#ac3ef33444ea8612af105f2933917bf3b">EnemyPatrol</a>.</p>
-<div class="dynheader">
-Voici le graphe des appelants de cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="classStateBehavior_a7606de8394f3ef18ed4669440c5fceea_icgraph.png" border="0" usemap="#classStateBehavior_a7606de8394f3ef18ed4669440c5fceea_icgraph" alt=""/></div>
-<map name="classStateBehavior_a7606de8394f3ef18ed4669440c5fceea_icgraph" id="classStateBehavior_a7606de8394f3ef18ed4669440c5fceea_icgraph">
-<area shape="rect" title=" " alt="" coords="224,13,380,39"/>
-<area shape="rect" href="classStateMachine.html#a5e928960ba29b86f878768e556ae8eb4" title=" " alt="" coords="5,5,176,47"/>
-</map>
-</div>
+<p>Entré dans l'état. Peut modifier des valeur de entity type, par exemple la vitesse et ensuite la remettre à la normal dans Exit. </p>
+
+<p>Implémenté dans <a class="el" href="classEnemyRunAway.html#af3b404b770b2ad508b7e2ad85077e328">EnemyRunAway</a>, <a class="el" href="classEnemyAttack.html#a5ddfcee027741f02f2e6f19abd21669b">EnemyAttack</a>, <a class="el" href="classEnemyPatrol.html#ac3ef33444ea8612af105f2933917bf3b">EnemyPatrol</a>, <a class="el" href="classAnimalFollowing.html#a630ca60dcf1769303dfbf86c714ceb22">AnimalFollowing</a>, et <a class="el" href="classAnimalWalking.html#a3efadb79b309cc93320db574a63ecbd0">AnimalWalking</a>.</p>
 
 </div>
 </div>
-<a id="aacf3f8e6bbcc9129f8bb534cc9c678f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacf3f8e6bbcc9129f8bb534cc9c678f2">&#9670;&nbsp;</a></span>Execute()</h2>
+<a id="a79fef698206f9ea37a2955520af91d52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79fef698206f9ea37a2955520af91d52">&#9670;&nbsp;</a></span>Execute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,7 +199,7 @@ template&lt;class entity_type &gt; </div>
           <td class="memname">virtual void <a class="el" href="classStateBehavior.html">StateBehavior</a>&lt; entity_type &gt;::Execute </td>
           <td>(</td>
           <td class="paramtype">entity_type *&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>entity</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -230,7 +232,18 @@ template&lt;class entity_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Implémenté dans <a class="el" href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020">EnemyRunAway</a>, <a class="el" href="classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30">EnemyAttack</a>, et <a class="el" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5">EnemyPatrol</a>.</p>
+<p>Execution de l'état, fait une série d'action sur l'entity_type. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">entity</td><td>: pointeur sur entity_type, entité utilisé par l'état. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">player_</td><td>: std::unique_ptr&lt;Player&gt;, le joueur. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">collision</td><td>: pointeur sur <a class="el" href="classCollisionLayer.html" title="Classe représentant une couche de CollisionBox.">CollisionLayer</a>, permet d'avoir accès à la couche de collision pour les déplacements. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dt</td><td>: entier positif, deltaTime. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implémenté dans <a class="el" href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020">EnemyRunAway</a>, <a class="el" href="classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30">EnemyAttack</a>, <a class="el" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5">EnemyPatrol</a>, <a class="el" href="classAnimalFollowing.html#af1712ef260f6e99602db5acc868825f5">AnimalFollowing</a>, et <a class="el" href="classAnimalWalking.html#a43a258f2a7665923b12b16763f4863b4">AnimalWalking</a>.</p>
 
 </div>
 </div>
@@ -260,7 +273,9 @@ template&lt;class entity_type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Implémenté dans <a class="el" href="classEnemyRunAway.html#a93148440120dfd61c14e3059bab1d7b6">EnemyRunAway</a>, <a class="el" href="classEnemyAttack.html#aa1601701d970679d6b10da16115c5524">EnemyAttack</a>, et <a class="el" href="classEnemyPatrol.html#a047f2ad9a9c6961cdf158130ca9e71be">EnemyPatrol</a>.</p>
+<p>Sortie de l'état. Peut remettre une valeur à la normal si modifié dans Enter par exemple. </p>
+
+<p>Implémenté dans <a class="el" href="classEnemyRunAway.html#a93148440120dfd61c14e3059bab1d7b6">EnemyRunAway</a>, <a class="el" href="classEnemyAttack.html#aa1601701d970679d6b10da16115c5524">EnemyAttack</a>, <a class="el" href="classEnemyPatrol.html#a047f2ad9a9c6961cdf158130ca9e71be">EnemyPatrol</a>, <a class="el" href="classAnimalFollowing.html#a253e877261e5fd82ab8a684c21397b83">AnimalFollowing</a>, et <a class="el" href="classAnimalWalking.html#a0727c3cc8307520acebf0d2cdb4dbf2d">AnimalWalking</a>.</p>
 
 </div>
 </div>

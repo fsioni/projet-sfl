@@ -1,0 +1,4 @@
+<map id="AnimalWalking::Instance" name="AnimalWalking::Instance">
+<area shape="rect" id="node1" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node2" href="$classAnimalWalking.html#add0d3a458d7eaf7c2ebd579e814d9424" title="Constructeur par défaut." alt="" coords="236,5,463,32"/>
+</map>

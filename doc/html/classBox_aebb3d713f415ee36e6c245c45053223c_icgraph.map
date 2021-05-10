@@ -1,12 +1,13 @@
 <map id="Box::SetX" name="Box::SetX">
-<area shape="rect" id="node1" title="Modifie la position sur l&#39;axe horizontal." alt="" coords="807,56,892,83"/>
-<area shape="rect" id="node2" href="$classBox.html#a0f3f1e3acf82ac45cccb611be4b79206" title="Modifie la position de la Box par celle en paramètre." alt="" coords="631,81,759,108"/>
+<area shape="rect" id="node1" title="Modifie la position sur l&#39;axe horizontal." alt="" coords="807,81,892,108"/>
+<area shape="rect" id="node2" href="$classBox.html#a0f3f1e3acf82ac45cccb611be4b79206" title="Modifie la position de la Box par celle en paramètre." alt="" coords="631,107,759,133"/>
 <area shape="rect" id="node4" href="$classBox.html#ab30d8d08bfff9e0505d1baa518b01fba" title="Fonction test de la classe Box." alt="" coords="421,5,503,32"/>
 <area shape="rect" id="node3" href="$classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="419,56,505,83"/>
 <area shape="rect" id="node7" href="$classStateGameTxt.html#a14e11db9b9ccea3fcc75829656bb18f4" title="Fonction de mise à jour du State." alt="" coords="377,107,547,133"/>
-<area shape="rect" id="node8" href="$classStateGameSFML.html#a11a34aefe47e9f0d1fcfc9130c9f1d27" title="Met à jour les données correspondant aux ennemis." alt="" coords="341,157,583,184"/>
-<area shape="rect" id="node10" href="$classStateGameSFML.html#a954213023746cb5187490fd1f2c806bc" title="Met à jour les données correspondant au joueur." alt="" coords="349,208,575,235"/>
+<area shape="rect" id="node8" href="$classStateGameSFML.html#ac366941243b495e81764d9d3e234ae69" title=" " alt="" coords="343,157,581,184"/>
+<area shape="rect" id="node10" href="$classStateGameSFML.html#a11a34aefe47e9f0d1fcfc9130c9f1d27" title="Met à jour les données correspondant aux ennemis." alt="" coords="341,208,583,235"/>
+<area shape="rect" id="node11" href="$classStateGameSFML.html#a954213023746cb5187490fd1f2c806bc" title="Met à jour les données correspondant au joueur." alt="" coords="349,259,575,285"/>
 <area shape="rect" id="node5" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="153,5,248,32"/>
 <area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
-<area shape="rect" id="node9" href="$classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2" title="Fonction de mise à jour du State." alt="" coords="108,183,293,209"/>
+<area shape="rect" id="node9" href="$classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2" title="Fonction de mise à jour du State." alt="" coords="108,208,293,235"/>
 </map>

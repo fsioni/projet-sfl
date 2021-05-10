@@ -1,5 +1,5 @@
 <map id="EnemyRunAway" name="EnemyRunAway">
-<area shape="rect" id="node1" title=" " alt="" coords="23,375,177,540"/>
+<area shape="rect" id="node1" title="Etat de fuite pour les enemy, hérite de StateBehavior&lt;Enemy&gt;." alt="" coords="23,375,177,540"/>
 <area shape="rect" id="node2" href="$classStateBehavior.html" title=" " alt="" coords="5,204,195,325"/>
 <area shape="rect" id="node3" href="$classStateBehavior.html" title=" " alt="" coords="17,5,183,141"/>
 </map>

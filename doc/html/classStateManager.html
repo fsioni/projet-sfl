@@ -115,6 +115,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:afafbb0471dab93222bee37b6be6d2d0d"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classState.html">State</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#afafbb0471dab93222bee37b6be6d2d0d">GetCurrent</a> ()</td></tr>
 <tr class="memdesc:afafbb0471dab93222bee37b6be6d2d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> en cours d'execution.  <a href="classStateManager.html#afafbb0471dab93222bee37b6be6d2d0d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:afafbb0471dab93222bee37b6be6d2d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14d6caa91524e506f7d15ae86c677f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateManager.html#ac14d6caa91524e506f7d15ae86c677f9">Test</a> () const</td></tr>
+<tr class="memdesc:ac14d6caa91524e506f7d15ae86c677f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction test de la classe <a class="el" href="classStateManager.html" title="Classe représentant un gestionnaire d&#39;états (State)">StateManager</a>.  <a href="classStateManager.html#ac14d6caa91524e506f7d15ae86c677f9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac14d6caa91524e506f7d15ae86c677f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
@@ -207,7 +210,7 @@ Attributs privés</h2></td></tr>
 <p>Ajoute le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> en paramètre à la pile. </p>
 <p>Met en pause l'état actuel et ajoute l'état en paramètre à la pile avant de le lancer </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nID</td><td>: <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> qui est lancé </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nState</td><td>: <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> qui est lancé </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">replace</td><td>: true si il doit remplacé le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> actuel </td></tr>
   </table>
   </dd>
@@ -252,6 +255,17 @@ Attributs privés</h2></td></tr>
 
 <p>Passe au prochain <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a>. </p>
 <p>Supprime le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> courant et lance le suivant dans la pile </p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateManager_a1738b442d5a7e3a38ff06bace098f157_icgraph.png" border="0" usemap="#classStateManager_a1738b442d5a7e3a38ff06bace098f157_icgraph" alt=""/></div>
+<map name="classStateManager_a1738b442d5a7e3a38ff06bace098f157_icgraph" id="classStateManager_a1738b442d5a7e3a38ff06bace098f157_icgraph">
+<area shape="rect" title="Passe au prochain State." alt="" coords="445,5,639,32"/>
+<area shape="rect" href="classStateManager.html#ac14d6caa91524e506f7d15ae86c677f9" title="Fonction test de la classe StateManager." alt="" coords="251,5,397,32"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,5,203,32"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -271,6 +285,45 @@ Attributs privés</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gère les changements de States. </p>
+
+</div>
+</div>
+<a id="ac14d6caa91524e506f7d15ae86c677f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac14d6caa91524e506f7d15ae86c677f9">&#9670;&nbsp;</a></span>Test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateManager::Test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction test de la classe <a class="el" href="classStateManager.html" title="Classe représentant un gestionnaire d&#39;états (State)">StateManager</a>. </p>
+<p>Effectue des tests pour vérifier l'intégrité de la classe <a class="el" href="classStateManager.html" title="Classe représentant un gestionnaire d&#39;états (State)">StateManager</a> et son fonctionnement </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateManager_ac14d6caa91524e506f7d15ae86c677f9_cgraph.png" border="0" usemap="#classStateManager_ac14d6caa91524e506f7d15ae86c677f9_cgraph" alt=""/></div>
+<map name="classStateManager_ac14d6caa91524e506f7d15ae86c677f9_cgraph" id="classStateManager_ac14d6caa91524e506f7d15ae86c677f9_cgraph">
+<area shape="rect" title="Fonction test de la classe StateManager." alt="" coords="5,5,152,32"/>
+<area shape="rect" href="classStateManager.html#a1738b442d5a7e3a38ff06bace098f157" title="Passe au prochain State." alt="" coords="200,5,393,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateManager_ac14d6caa91524e506f7d15ae86c677f9_icgraph.png" border="0" usemap="#classStateManager_ac14d6caa91524e506f7d15ae86c677f9_icgraph" alt=""/></div>
+<map name="classStateManager_ac14d6caa91524e506f7d15ae86c677f9_icgraph" id="classStateManager_ac14d6caa91524e506f7d15ae86c677f9_icgraph">
+<area shape="rect" title="Fonction test de la classe StateManager." alt="" coords="251,5,397,32"/>
+<area shape="rect" href="classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,5,203,32"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
 
 </div>
 </div>

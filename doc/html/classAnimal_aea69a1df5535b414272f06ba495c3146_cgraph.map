@@ -1,0 +1,7 @@
+<map id="Animal::Animal" name="Animal::Animal">
+<area shape="rect" id="node1" title="Constructeur paramétré." alt="" coords="5,64,128,91"/>
+<area shape="rect" id="node2" href="$classAnimalWalking.html#a3749456f9f4c3e9bb1c7a16e02ff464a" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="190,5,373,32"/>
+<area shape="rect" id="node4" href="$classStateMachine.html#a1cb139c64722aacbf7feb510215c994b" title="Modifie l&#39;état courrant par celui passé en paramètre." alt="" coords="187,57,375,98"/>
+<area shape="rect" id="node5" href="$classAnimal.html#afca8963969b647cbb423ea65198393c6" title="Affecte à timeNextChangeDirection une valeur aléatoire." alt="" coords="176,122,387,163"/>
+<area shape="rect" id="node3" href="$classAnimalWalking.html#add0d3a458d7eaf7c2ebd579e814d9424" title="Constructeur par défaut." alt="" coords="435,5,661,32"/>
+</map>

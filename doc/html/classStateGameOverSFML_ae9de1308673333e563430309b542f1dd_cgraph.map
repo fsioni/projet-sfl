@@ -1,0 +1,6 @@
+<map id="StateGameOverSFML::Update" name="StateGameOverSFML::Update">
+<area shape="rect" id="node1" title="Fonction de mise à jour du State." alt="" coords="5,23,175,65"/>
+<area shape="rect" id="node2" href="$classStateGameOverSFML.html#aa166a17b191164097564aeafa3bbe954" title=" " alt="" coords="223,23,392,65"/>
+<area shape="rect" id="node3" href="$classEntityWithoutHP.html#a1a5d732b9f322135fbd5e5f227064b26" title="Retourne l&#39;ID de l&#39;entité." alt="" coords="461,5,636,32"/>
+<area shape="rect" id="node4" href="$classEntityWithoutHP.html#a0c000f5c03af273546b317aaad42254c" title="Permets de modifier la direction de l&#39;entité." alt="" coords="440,56,657,83"/>
+</map>

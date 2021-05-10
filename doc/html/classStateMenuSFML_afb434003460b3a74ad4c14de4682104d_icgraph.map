@@ -1,0 +1,4 @@
+<map id="StateMenuSFML::OnClick" name="StateMenuSFML::OnClick">
+<area shape="rect" id="node1" title="Effectue les actions nécessaires lors du clic." alt="" coords="272,5,457,32"/>
+<area shape="rect" id="node2" href="$classStateMenuSFML.html#ae869b58348e95261a94c868fdcbef771" title="Fonction de gestion des touches du State." alt="" coords="5,5,224,32"/>
+</map>

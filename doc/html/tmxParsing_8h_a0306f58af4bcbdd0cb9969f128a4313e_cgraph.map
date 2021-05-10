@@ -1,0 +1,4 @@
+<map id="GetInsideTag" name="GetInsideTag">
+<area shape="rect" id="node1" title="Retourne le contenu de la balise ouvrante." alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$tmxParsing_8cpp.html#abbe85c0a596d406c2dd903fa66eb961b" title="Retourne ce qu&#39;il y entre la balise ouvrante et fermante (avec les balises)." alt="" coords="160,5,251,32"/>
+</map>

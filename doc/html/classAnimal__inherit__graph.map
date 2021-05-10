@@ -1,4 +1,4 @@
 <map id="Animal" name="Animal">
-<area shape="rect" id="node1" title=" " alt="" coords="29,571,179,707"/>
-<area shape="rect" id="node2" href="$classEntityWithoutHP.html" title="Classe représentant une entité immobile et immortel." alt="" coords="5,5,203,523"/>
+<area shape="rect" id="node1" title="Représente un animal, hérite de EntityWithouHP." alt="" coords="5,527,245,736"/>
+<area shape="rect" id="node2" href="$classEntityWithoutHP.html" title="Classe représentant une entité immobile et immortel." alt="" coords="41,5,210,479"/>
 </map>

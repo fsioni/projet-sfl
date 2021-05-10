@@ -501,7 +501,7 @@ void StateGameSFML::UpdateNPCs(){
     {
         std::string dialog = context->npc[npcInRange]->GetDialog();
 
-        for(int i=1; i*30< dialog.size(); i++)
+        for(int i=1; i*30< (int)dialog.size(); i++)
             dialog.insert(30*i, "\n");
         
         npcText.setString(dialog);
@@ -510,7 +510,7 @@ void StateGameSFML::UpdateNPCs(){
 
 void StateGameSFML::UpdateAnimals(){
     CollisionLayer * colLayer = context->map->GetCollisionLayer();
-    for(int i=0; i<context->animals.size(); i++){
+    for(int i=0; i<(int)context->animals.size(); i++){
         context->animals[i]->UpdateStateMachine(
                 context->player, colLayer,deltaTime);
 

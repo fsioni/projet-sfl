@@ -1,0 +1,5 @@
+<map id="Animal::ChangeDirection" name="Animal::ChangeDirection">
+<area shape="rect" id="node1" title="Change la direction de l&#39;Animal. Utilise timeNextChangeDirection pour savoir si il est temps de chang..." alt="" coords="5,35,189,61"/>
+<area shape="rect" id="node2" href="$classAnimal.html#a1a548a0e03b5e15794696e203d6110c3" title="Affecte une EntityDirection aléatoire à l&#39;Animal." alt="" coords="259,5,427,32"/>
+<area shape="rect" id="node3" href="$classAnimal.html#afca8963969b647cbb423ea65198393c6" title="Affecte à timeNextChangeDirection une valeur aléatoire." alt="" coords="237,57,448,98"/>
+</map>

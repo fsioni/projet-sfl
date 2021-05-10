@@ -1,4 +1,4 @@
 <map id="EnemyRunAway::Instance" name="EnemyRunAway::Instance">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,196,32"/>
-<area shape="rect" id="node2" href="$classEnemyRunAway.html#a5d56fabaf2823d44a491ea7f43083b47" title=" " alt="" coords="244,5,485,32"/>
+<area shape="rect" id="node1" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node2" href="$classEnemyRunAway.html#a5d56fabaf2823d44a491ea7f43083b47" title="Constructeur par défaut." alt="" coords="244,5,485,32"/>
 </map>

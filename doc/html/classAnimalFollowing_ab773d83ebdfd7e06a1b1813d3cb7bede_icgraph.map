@@ -1,0 +1,4 @@
+<map id="AnimalFollowing::Instance" name="AnimalFollowing::Instance">
+<area shape="rect" id="node1" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="232,5,425,32"/>
+<area shape="rect" id="node2" href="$classAnimalWalking.html#a43a258f2a7665923b12b16763f4863b4" title="Execution de l&#39;état. L&#39;Animal se déplace aléatoirement et entre en état AnimalFollowing si le joueur ..." alt="" coords="5,5,184,32"/>
+</map>

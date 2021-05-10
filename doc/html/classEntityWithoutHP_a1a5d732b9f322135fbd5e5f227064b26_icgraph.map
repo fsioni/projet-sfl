@@ -1,13 +1,15 @@
 <map id="EntityWithoutHP::GetID" name="EntityWithoutHP::GetID">
-<area shape="rect" id="node1" title="Retourne l&#39;ID de l&#39;entité." alt="" coords="593,133,768,160"/>
-<area shape="rect" id="node2" href="$structContext.html#a652cdcd2eedc8dbd9110bd284c5d5cf0" title=" " alt="" coords="378,41,510,68"/>
-<area shape="rect" id="node3" href="$classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="343,93,545,134"/>
-<area shape="rect" id="node7" href="$classStateGameOverSFML.html#aa166a17b191164097564aeafa3bbe954" title=" " alt="" coords="359,158,529,199"/>
-<area shape="rect" id="node9" href="$classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="363,224,525,251"/>
-<area shape="rect" id="node4" href="$classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="120,5,283,32"/>
-<area shape="rect" id="node5" href="$classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="117,56,285,83"/>
-<area shape="rect" id="node6" href="$classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="108,107,295,133"/>
-<area shape="rect" id="node8" href="$classStateGameOverSFML.html#ae9de1308673333e563430309b542f1dd" title="Fonction de mise à jour du State." alt="" coords="117,158,286,199"/>
-<area shape="rect" id="node10" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="154,224,249,251"/>
-<area shape="rect" id="node11" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,224,60,251"/>
+<area shape="rect" id="node1" title="Retourne l&#39;ID de l&#39;entité." alt="" coords="596,201,771,228"/>
+<area shape="rect" id="node2" href="$structContext.html#a652cdcd2eedc8dbd9110bd284c5d5cf0" title=" " alt="" coords="381,99,513,125"/>
+<area shape="rect" id="node3" href="$classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="345,150,548,191"/>
+<area shape="rect" id="node9" href="$classStateGameOverSFML.html#aa166a17b191164097564aeafa3bbe954" title=" " alt="" coords="362,226,531,267"/>
+<area shape="rect" id="node11" href="$classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="365,313,528,340"/>
+<area shape="rect" id="node4" href="$classAnimalWalking.html#a43a258f2a7665923b12b16763f4863b4" title="Execution de l&#39;état. L&#39;Animal se déplace aléatoirement et entre en état AnimalFollowing si le joueur ..." alt="" coords="113,5,292,32"/>
+<area shape="rect" id="node5" href="$classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title="Execution de l&#39;état. L&#39;Enemy se déplace aléatoirement et entre en état EnemyAttack si le joueur est a..." alt="" coords="121,56,284,83"/>
+<area shape="rect" id="node6" href="$classAnimalFollowing.html#af1712ef260f6e99602db5acc868825f5" title="Execution de l&#39;état. L&#39;Animal se déplace en direction du joueur. Il entre en état AnimalWalking si il..." alt="" coords="108,107,297,133"/>
+<area shape="rect" id="node7" href="$classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title="Execution de l&#39;état. L&#39;Enemy se déplace en direciton du Player, et si il est assez proche il l&#39;attaqu..." alt="" coords="119,157,287,184"/>
+<area shape="rect" id="node8" href="$classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title="Execution de l&#39;état. L&#39;Enemy se déplace dans la direciton opposé du Player. Si il est assez loin,..." alt="" coords="109,208,296,235"/>
+<area shape="rect" id="node10" href="$classStateGameOverSFML.html#ae9de1308673333e563430309b542f1dd" title="Fonction de mise à jour du State." alt="" coords="118,259,287,301"/>
+<area shape="rect" id="node12" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="155,325,250,352"/>
+<area shape="rect" id="node13" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,325,60,352"/>
 </map>

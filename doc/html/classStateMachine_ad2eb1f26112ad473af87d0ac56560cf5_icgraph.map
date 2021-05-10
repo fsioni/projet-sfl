@@ -1,4 +1,5 @@
 <map id="StateMachine::UpdateCurrentState" name="StateMachine::UpdateCurrentState">
-<area shape="rect" id="node1" title=" " alt="" coords="264,5,479,47"/>
-<area shape="rect" id="node2" href="$classEnemy.html#a2d56f1b1e74431c1a78185728b8787de" title=" " alt="" coords="5,13,216,39"/>
+<area shape="rect" id="node1" title="Actualise l&#39;état courrant." alt="" coords="265,23,480,65"/>
+<area shape="rect" id="node2" href="$classAnimal.html#a56804e40927ca91b57c577d819451c9b" title="Update le StateMachine." alt="" coords="5,5,217,32"/>
+<area shape="rect" id="node3" href="$classEnemy.html#a2d56f1b1e74431c1a78185728b8787de" title="Update le StateMachine." alt="" coords="6,56,217,83"/>
 </map>

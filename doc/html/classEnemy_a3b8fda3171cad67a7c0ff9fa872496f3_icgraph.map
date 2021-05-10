@@ -1,6 +1,6 @@
 <map id="Enemy::SetTimeNextChangeDirection" name="Enemy::SetTimeNextChangeDirection">
-<area shape="rect" id="node1" title=" " alt="" coords="447,23,655,65"/>
-<area shape="rect" id="node2" href="$classEnemy.html#a941acdd84d21c2324013cf7492cf11e2" title=" " alt="" coords="216,5,399,32"/>
+<area shape="rect" id="node1" title="Affecte à timeNextChangeDirection une valeur aléatoire." alt="" coords="447,23,655,65"/>
+<area shape="rect" id="node2" href="$classEnemy.html#a941acdd84d21c2324013cf7492cf11e2" title="Change la direction de l&#39;Enemy. Utilise timeNextChangeDirection pour savoir si il est temps de change..." alt="" coords="216,5,399,32"/>
 <area shape="rect" id="node4" href="$classEnemy.html#a94f30d348b6d2840fd71675472ba38dd" title="Constructeur par défaut." alt="" coords="248,56,367,83"/>
-<area shape="rect" id="node3" href="$classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node3" href="$classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title="Execution de l&#39;état. L&#39;Enemy se déplace aléatoirement et entre en état EnemyAttack si le joueur est a..." alt="" coords="5,5,168,32"/>
 </map>

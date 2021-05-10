@@ -1,4 +1,4 @@
 <map id="StateGameSFML" name="StateGameSFML">
-<area shape="rect" id="node1" title="Classe représentant l&#39;état jeu du mode graphique (SFML)" alt="" coords="5,233,183,1235"/>
+<area shape="rect" id="node1" title="Classe représentant l&#39;état jeu du mode graphique (SFML)" alt="" coords="5,233,183,1279"/>
 <area shape="rect" id="node2" href="$classState.html" title="Classe représentant un état de l&#39;application." alt="" coords="29,5,159,185"/>
 </map>

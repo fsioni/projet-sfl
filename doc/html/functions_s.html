@@ -85,11 +85,11 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <div class="textblock">Liste de tous les champs de structure et d'union avec des liens vers les structures/unions auxquelles ils appartiennent :</div>
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>SetAnimalTexture()
+: <a class="el" href="classAssetManager.html#ade17b8457bb4d91d5c6de04cb8909c8d">AssetManager</a>
+</li>
 <li>SetBackgroundTexture()
 : <a class="el" href="classAssetManager.html#a7b301d2ce2b23d4598d531f724d3beef">AssetManager</a>
-</li>
-<li>SetColumn()
-: <a class="el" href="classTileset.html#a09fa40bb633c78919f0da4a99a4d66c7">Tileset</a>
 </li>
 <li>SetCurrentState()
 : <a class="el" href="classStateMachine.html#a1cb139c64722aacbf7feb510215c994b">StateMachine&lt; entity_type &gt;</a>
@@ -124,9 +124,6 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>setMainTextColor()
 : <a class="el" href="classAssetManager.html#aeb116eeb40662754ff5b5e5f6e15606b">AssetManager</a>
 </li>
-<li>SetName()
-: <a class="el" href="classEntityWithoutHP.html#ab82f5b07a0a39880b29b96859f68c557">EntityWithoutHP</a>
-</li>
 <li>SetPlayerTexture()
 : <a class="el" href="classAssetManager.html#a9ba5c903d7ee37305a18747c1b34403f">AssetManager</a>
 </li>
@@ -151,35 +148,18 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 <li>SetSpeed()
 : <a class="el" href="classEntityWithoutHP.html#a87424952f6ec1c19bd5f370ed573a1c3">EntityWithoutHP</a>
 </li>
-<li>SetTileCount()
-: <a class="el" href="classTileset.html#aa0f601faed9f3c6042cfe032b5191c3d">Tileset</a>
-</li>
-<li>SetTileHeight()
-: <a class="el" href="classTileset.html#a3c505da0c69ae1b70564c07a50872132">Tileset</a>
-</li>
-<li>SetTileMapHeight()
-: <a class="el" href="classTileset.html#a46538c42bf435aa6ac6643123da63d93">Tileset</a>
-</li>
-<li>SetTileMapPath()
-: <a class="el" href="classTileset.html#a57f639dbd97728ded9f694fec2c31f2c">Tileset</a>
-</li>
-<li>SetTileMapWidth()
-: <a class="el" href="classTileset.html#a2d6544b1cf1a49600bfe9e4b58772a41">Tileset</a>
-</li>
 <li>SetTileset()
 : <a class="el" href="classMap.html#af77b94a8baf896afbda493bf4ac2cd57">Map</a>
 </li>
 <li>SetTileTexture()
 : <a class="el" href="classAssetManager.html#ad55bc0e4d72c74e98efc7fe226309057">AssetManager</a>
 </li>
-<li>SetTileWidth()
-: <a class="el" href="classTileset.html#af39b8948f4f79fb216a1b3d81815485e">Tileset</a>
-</li>
 <li>SetTimeNextAttack()
 : <a class="el" href="classEnemy.html#abeaf8d77cd05862d568a01fe86a25595">Enemy</a>
 </li>
 <li>SetTimeNextChangeDirection()
-: <a class="el" href="classEnemy.html#a3b8fda3171cad67a7c0ff9fa872496f3">Enemy</a>
+: <a class="el" href="classAnimal.html#afca8963969b647cbb423ea65198393c6">Animal</a>
+, <a class="el" href="classEnemy.html#a3b8fda3171cad67a7c0ff9fa872496f3">Enemy</a>
 </li>
 <li>SetX()
 : <a class="el" href="classBox.html#aebb3d713f415ee36e6c245c45053223c">Box</a>
@@ -191,7 +171,9 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classStateGameSFML.html#a96d3fb072ec1a9ec9e1fe4a264db35ce">StateGameSFML</a>
 </li>
 <li>singleton
-: <a class="el" href="classEnemyAttack.html#abb63e61882711435e005dd09ecab7250">EnemyAttack</a>
+: <a class="el" href="classAnimalFollowing.html#a027cd86dedb917b8fe7fe81050285327">AnimalFollowing</a>
+, <a class="el" href="classAnimalWalking.html#ae7bcbf4d3f279c8f72cc70bf53db404c">AnimalWalking</a>
+, <a class="el" href="classEnemyAttack.html#abb63e61882711435e005dd09ecab7250">EnemyAttack</a>
 , <a class="el" href="classEnemyPatrol.html#ad33782e7e6f2546b5d157621ad1be51e">EnemyPatrol</a>
 , <a class="el" href="classEnemyRunAway.html#a4fd12ec3c8049ef912b97667d869158f">EnemyRunAway</a>
 </li>
@@ -217,7 +199,7 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classMap.html#a06d8f18e6085bbf0d105ab693f4fe75e">Map</a>
 </li>
 <li>SpawnsLayer()
-: <a class="el" href="classSpawnsLayer.html#abb989d3b7bffd0d65eb884ff48133366">SpawnsLayer</a>
+: <a class="el" href="classSpawnsLayer.html#aeb16f8270a085d422870501d1fcd3409">SpawnsLayer</a>
 </li>
 <li>speed
 : <a class="el" href="classEntityWithoutHP.html#a13a2999311649f8d217fae9f8c413221">EntityWithoutHP</a>
@@ -237,18 +219,16 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 , <a class="el" href="classStateMenuTxt.html#a688df12370ae3037086c8852a29bc6eb">StateMenuTxt</a>
 , <a class="el" href="classStatePauseSFML.html#af52e985bcbbb7d2be101f83ff0f14b6b">StatePauseSFML</a>
 , <a class="el" href="classStateSplashScreenSFML.html#a2150708c6e58fd088e3a2463e90a2f30">StateSplashScreenSFML</a>
+, <a class="el" href="classStateSplashScreenTxt.html#a47eba0ceca06deabe3bc806b5b83bcb3">StateSplashScreenTxt</a>
 </li>
 <li>start
 : <a class="el" href="classStateSplashScreenTxt.html#a32faa4276843f9b0f59b1730f9ba7b04">StateSplashScreenTxt</a>
-</li>
-<li>Start()
-: <a class="el" href="classStateSplashScreenTxt.html#a47eba0ceca06deabe3bc806b5b83bcb3">StateSplashScreenTxt</a>
 </li>
 <li>State()
 : <a class="el" href="classState.html#ab91bb1dd5aa6260ab2a456581daf9ec2">State</a>
 </li>
 <li>StateGameOverSFML()
-: <a class="el" href="classStateGameOverSFML.html#ae779b53fc098111ce18dfee40c27d5ad">StateGameOverSFML</a>
+: <a class="el" href="classStateGameOverSFML.html#adcf227c2a571bb845dac1c302edd664b">StateGameOverSFML</a>
 </li>
 <li>StateGameSFML()
 : <a class="el" href="classStateGameSFML.html#a5071544b65d80f9ecc2201bffa8057cf">StateGameSFML</a>
@@ -257,7 +237,8 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classStateGameTxt.html#a610d842acd05668d98808a34f82448d0">StateGameTxt</a>
 </li>
 <li>stateMachine
-: <a class="el" href="classEnemy.html#a34321562a6fecec8dd4b932fe7bf6680">Enemy</a>
+: <a class="el" href="classAnimal.html#a150ade60152695a4dae7d948d14b3ef4">Animal</a>
+, <a class="el" href="classEnemy.html#a34321562a6fecec8dd4b932fe7bf6680">Enemy</a>
 </li>
 <li>StateMachine()
 : <a class="el" href="classStateMachine.html#a1ee081f066a4d0e1efe097f8cb1a539d">StateMachine&lt; entity_type &gt;</a>
@@ -269,13 +250,13 @@ $(document).ready(function(){initNavTree('functions_s.html',''); initResizable()
 : <a class="el" href="classStateManager.html#a3e2be96d935eb56813b096a885d58587">StateManager</a>
 </li>
 <li>StateMenuSFML()
-: <a class="el" href="classStateMenuSFML.html#a00c6aa2a0e8b00cfb3be85b1176a00be">StateMenuSFML</a>
+: <a class="el" href="classStateMenuSFML.html#a682e30f443d33f9593171411156c9047">StateMenuSFML</a>
 </li>
 <li>StateMenuTxt()
 : <a class="el" href="classStateMenuTxt.html#a3a6de6945fd91b306f0762380123f470">StateMenuTxt</a>
 </li>
 <li>StatePauseSFML()
-: <a class="el" href="classStatePauseSFML.html#a60847872616a61d001273eeaf34439e5">StatePauseSFML</a>
+: <a class="el" href="classStatePauseSFML.html#a004e2c9718524cbc93c09d02349eadfe">StatePauseSFML</a>
 </li>
 <li>StateSplashScreenSFML()
 : <a class="el" href="classStateSplashScreenSFML.html#aebf1aea8c9c9b8e606c0142df3239853">StateSplashScreenSFML</a>
