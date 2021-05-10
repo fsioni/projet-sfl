@@ -136,14 +136,6 @@ public:
     */
     void Run(int mode); //mode = 0 for SFML, 1 for txt, 2 for tests
 
-    /*! \brief Fonction de test de la classe Tileset.
-    *
-    *   Effectue une série de test de regression sur l'ensemble des
-    *   fonction membre pour vérifié qu'elles font ce qu'elles sont
-    *   censé faire.
-    */
-    void Test();
-
 private:
     /*! \brief Etat courant du programme */
     std::shared_ptr<Context> context;
