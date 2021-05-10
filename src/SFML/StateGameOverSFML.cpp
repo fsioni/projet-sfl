@@ -96,6 +96,16 @@ void StateGameOverSFML::ProcessInput()
 
     while (context->renderWin->pollEvent(event))
     {
+        if(event.type == sf::Event::Resized){
+            context->renderWin->setView(sf::View(
+                sf::FloatRect(0, 0, event.size.width, event.size.height)));
+            int winX = context->renderWin->getSize().x;
+            int winY = context->renderWin->getSize().y;
+            exitButton.setPosition(winX / 2.0f, winY / 2.0f + 165.f);
+            menuButton.setPosition(winX / 2.0f, winY / 2.0f + 105);
+            restartButton.setPosition(winX / 2.0f, winY / 2.0f + 45.f);
+            gameOverText.setPosition(winX / 2.0f, 200);
+        }
         if (event.type == sf::Event::Closed)
         {
             context->renderWin->close();
