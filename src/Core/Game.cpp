@@ -105,7 +105,3 @@ void Game::Run(int mode)
         break;
     }
 }
-
-void Game::Test()
-{
-}

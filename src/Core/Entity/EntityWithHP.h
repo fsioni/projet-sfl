@@ -45,16 +45,6 @@ public:
     */
     virtual ~EntityWithHP();
 
-    /*! \brief Permets de modifier le nombre de points de vie d'une entité EntityWithHP.
-    *
-    *
-    *   Permet de remplacer la valeur actuelle de Hp de l'entité en une valeur newHp.
-    *
-    *   \param [in] newHp : entier positif, nouveau nombre de points de vie de l'entité.
-    *
-    *
-    */
-    void SetHP(int newHp);
 
     /*! \brief Retourne le nombre de points de vie de l'entité.
     *
@@ -63,16 +53,6 @@ public:
     *
     */
     int GetHP() const;
-
-    /*! \brief Permet de modofier les dégats infligés par l'entité EntityWithHP.
-    *
-    *   Modifie la quantité de dégats qu'inflige l'entité EntityWithP.
-    *
-    *   \param [in] newDmg : entier positif, nouveau nombre de points de vie de l'entité.
-    *
-    *
-    */
-    void SetDamage(int newDmg);
 
     /*! \brief Permet de retourner le nombre de dégats q'inflige l'entité EntityWithHP.
     *
@@ -94,15 +74,6 @@ public:
     *
     */
     void TakeDamage(int damage);
-
-    /*! \brief Permet d'infliger damage dégats à l'entité target.
-    *
-    *
-    *   \param [in] target : EntityWithHP qui va subir le nombre "damage" dégats.
-    *
-    *
-    */
-    void Attack(EntityWithHP &target) const;
 
     /*! \brief Modifie l'état de vie/mort de l'entité.
     *

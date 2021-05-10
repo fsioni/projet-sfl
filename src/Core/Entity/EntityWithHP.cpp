@@ -28,16 +28,6 @@ EntityWithHP::~EntityWithHP()
     this->maxHP = 0;
 }
 
-void EntityWithHP::SetHP(int newHp)
-{
-    if (newHp >= 0)
-    {
-        if (newHp > maxHP)
-            hp = maxHP;
-        else
-            hp = newHp;
-    }
-}
 
 int EntityWithHP::GetHP() const
 {
@@ -67,11 +57,6 @@ int EntityWithHP::GetDamage() const
     return damage;
 }
 
-void EntityWithHP::SetDamage(int newDmg)
-{
-    if (newDmg >= 0)
-        damage = newDmg;
-}
 
 void EntityWithHP::TakeDamage(int damage)
 {
@@ -86,10 +71,6 @@ void EntityWithHP::TakeDamage(int damage)
     }
 }
 
-void EntityWithHP::Attack(EntityWithHP &target) const
-{
-    target.TakeDamage(damage);
-}
 
 void EntityWithHP::SetLivingStatus(bool newStatus)
 {
@@ -128,20 +109,6 @@ void EntityWithHP::Test() const
     assert(entity2.livingStatus);
     std::cout << "ok" << std::endl;
 
-    std::cout << "SetHP(int newHP) et GetHP() : ";
-    entity1.SetHP(13);
-    assert(entity1.GetHP() == 13);
-    entity1.SetHP(-15);
-    assert(entity1.GetHP() == 13);
-    std::cout << "ok" << std::endl;
-
-    std::cout << "SetDamage(int newDmg) et GetDamage() : ";
-    entity1.SetDamage(30);
-    assert(entity1.GetDamage() == 30);
-    entity1.SetDamage(-10);
-    assert(entity1.GetDamage() == 30);
-    std::cout << "ok" << std::endl;
-
     std::cout << "TakeDamage(int damage) : ";
     int hp = entity1.hp;
     entity1.TakeDamage(4);
@@ -151,18 +118,10 @@ void EntityWithHP::Test() const
     entity1.TakeDamage(-8);
     assert(entity1.GetHP() == hp);
 
-    entity1.SetHP(10);
+    entity1.hp = 10;
     entity1.TakeDamage(13);
     assert(!entity1.livingStatus);
     assert(entity1.hp == 0);
-    std::cout << "ok" << std::endl;
-
-    std::cout << "Attack(EntityWithHP &target) : ";
-    entity1.SetDamage(10);
-    entity2.SetHP(30);
-    hp = entity2.GetHP();
-    entity1.Attack(entity2);
-    assert(entity2.GetHP() == 20);
     std::cout << "ok" << std::endl;
 
     std::cout << "SetLivingStatus(bool newStatus) et GetLivingStatus : ";

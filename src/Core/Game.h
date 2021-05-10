@@ -93,7 +93,7 @@ struct Context
             // Ajout de sa CollisionBox au CollisionLayer
             // y + 5 pour descendre la collisionBox au niveau des pieds
             map->GetCollisionLayer()->AddCollisionBoxEntity(
-                newNPC->GetID(), new Box(x, y+5, 32, 32));
+                newNPC->GetID(), new Box(x, y+5, 32, 27));
 
         }
 
@@ -135,14 +135,6 @@ public:
     *   \param [in] mode : Selectionne le mode à lancer
     */
     void Run(int mode); //mode = 0 for SFML, 1 for txt, 2 for tests
-
-    /*! \brief Fonction de test de la classe Tileset.
-    *
-    *   Effectue une série de test de regression sur l'ensemble des
-    *   fonction membre pour vérifié qu'elles font ce qu'elles sont
-    *   censé faire.
-    */
-    void Test();
 
 private:
     /*! \brief Etat courant du programme */

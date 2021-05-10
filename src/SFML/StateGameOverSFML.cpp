@@ -247,7 +247,7 @@ void StateGameOverSFML::RestartGame()
     context->player = std::make_unique<Player>(x, y, 10, 10, 4, 10);
 
     context->map->GetCollisionLayer()->AddCollisionBoxEntity(
-        context->player->GetID(), new Box(x, y, 26, 26));
+        context->player->GetID(), new Box(x, y, 32, 32));
 
     // Initialisation des ennemies
     int count = context->map->GetSpawnsLayer()->GetEnemySpawns().size();
@@ -263,7 +263,7 @@ void StateGameOverSFML::RestartGame()
         context->enemies.push_back(enemy);
         
         context->map->GetCollisionLayer()->AddCollisionBoxEntity(
-            enemy->GetID(), new Box(x, y, 26, 26));
+            enemy->GetID(), new Box(x, y, 32, 32));
     }
 
     // Initialisation des NPC
@@ -283,7 +283,7 @@ void StateGameOverSFML::RestartGame()
             
         // Ajout de sa CollisionBox au CollisionLayer
         context->map->GetCollisionLayer()->AddCollisionBoxEntity(
-            newNPC->GetID(), new Box(x, y, 32, 32));
+            newNPC->GetID(), new Box(x, y, 32, 27));
     }
 
     // Initialisation des animaux
