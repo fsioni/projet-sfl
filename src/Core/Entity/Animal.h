@@ -10,6 +10,7 @@
 */
 class Animal : public EntityWithoutHP
 {
+public :
     /*! \brief Constructeur par défaut. */
     Animal();
 
