@@ -113,7 +113,10 @@ struct Context
 class Game
 {
 public:
+    /*! \brief Constructeur par défaut. */
     Game(/* args */);
+
+    /*! \brief Destructeur. */
     ~Game();
 
     /*! \brief Lance le jeu dans le mode selectionné
@@ -121,6 +124,13 @@ public:
     *   \param [in] mode : Selectionne le mode à lancer
     */
     void Run(int mode); //mode = 0 for SFML, 1 for txt, 2 for tests
+
+    /*! \brief Fonction de test de la classe Tileset.
+    *
+    *   Effectue une série de test de regression sur l'ensemble des
+    *   fonction membre pour vérifié qu'elles font ce qu'elles sont
+    *   censé faire.
+    */
     void Test();
 
 private:
