@@ -23,16 +23,27 @@
 */
 struct Context
 {
+    /*! \brief AssetManager du jeu */
     std::unique_ptr<AssetManager> assetMan;
+    /*! \brief StateManager du jeu*/
     std::unique_ptr<StateManager> stateMan;
+    /*! \brief Fenêtre de rendu du jeu du jeu */
     std::unique_ptr<sf::RenderWindow> renderWin;
+    /*! \brief Carte du jeu */
     std::unique_ptr<Map> map;
+    /*! \brief TLe joueur */
     std::unique_ptr<Player> player;
+    /*! \brief Tableau vers les ennemies */
     std::vector<std::shared_ptr<Enemy>> enemies;
+    /*! \brief Tableau vers les PNJ*/
     std::vector<NPC *> npc;
+    /*! \brief Tableau vers les animaux*/
     std::vector<Animal *> animals;
+    /*! \brief Indique si le mode debug est activé */
     bool isDebug;
+    /*! \brief Indique si le jeu est en muet ou non */
     bool isMute;
+    /*! \brief Indique si le jeu doit être quitté */
     bool quit;
 
     Context()
