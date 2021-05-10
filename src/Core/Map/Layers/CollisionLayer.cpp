@@ -53,12 +53,13 @@ std::vector<Box> CollisionLayer::GetCollisionBoxes() const
     return collisionBoxes;
 }
 
-std::map<int, Box*> CollisionLayer::GetCollisionBoxesEntity() const
-{
+
+std::map<int, Box*> CollisionLayer::GetCollisionBoxesEntity() const {
+
     return collisionBoxesEntity;
 }
 
-bool CollisionLayer::CollisionBoxEntityExist(int id){
+bool CollisionLayer::CollisionBoxEntityExist(int id) const{
     return collisionBoxesEntity.find(id) != collisionBoxesEntity.end();
 }
 

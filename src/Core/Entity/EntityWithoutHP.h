@@ -64,14 +64,6 @@ public:
     */
     float GetPos_x() const;
 
-    /*! \brief Permets de modifier la position sur l'axe des x de l'entité (horizontale).
-    *
-    *
-    *   \param [in] newX: réel positif, nouvelle position sur l'axe des x de l'entité.
-    *
-    */
-    void SetPos_x(float newX);
-
     /*! \brief Retourne la position sur l'axe des y de l'entité (verticale).
     *
     *  Retourne un réel y, une position sur l'axe des y de l'entité (verticale).
@@ -79,14 +71,6 @@ public:
     *
     */
     float GetPos_y() const;
-
-    /*! \brief Permets de modifier la position sur l'axe des y de l'entité (verticale).
-    *
-    *
-    *   \param [in] newY: réel positif, nouvelle position sur l'axe des y de l'entité.
-    *
-    */
-    void SetPos_y(float newY);
 
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.
     *

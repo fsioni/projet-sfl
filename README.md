@@ -215,7 +215,7 @@ You must use object layers named :
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [Farès SIONI](https://forge.univ-lyon1.fr/p1907037)
-- [Stanislas BAGNOL](https://forge.univ-lyon1.fr/p1909886)
-- [Lyes CHOUGAR](https://forge.univ-lyon1.fr/p1925126)
+- [Farès SIONI](https://forge.univ-lyon1.fr/p1907037) : p1907037
+- [Stanislas BAGNOL](https://forge.univ-lyon1.fr/p1909886) : p1909886
+- [Lyes CHOUGAR](https://forge.univ-lyon1.fr/p1925126) : p1925126
 

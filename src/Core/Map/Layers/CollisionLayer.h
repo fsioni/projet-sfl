@@ -79,7 +79,7 @@ public:
     *
     *   \return Retourne true si la clé existe et false sinon.
     */
-    bool  CollisionBoxEntityExist(int id);
+    bool  CollisionBoxEntityExist(int id) const;
 
     /*! \brief Supprime la CollisionBox d'une entité.
     *

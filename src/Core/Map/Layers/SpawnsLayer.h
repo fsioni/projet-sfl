@@ -35,27 +35,6 @@ public:
     */
     ~SpawnsLayer();
 
-    /*! \brief Fonction permettant de modifier le SpawnPoint du joueur
-    *
-    *   Remplace le SpawnPoint du Player actuel par celui en paramètre.
-    *   \param [in] newSpawn : nouveau spawn du joueur 
-    */
-    void ChangePlayerSpawn(SpawnPoint const &newSpawn);
-
-    /*! \brief Fonction permettant d'ajouter un ennemi. 
-    *
-    *   Un ennemi est ajouté en ajoutant un SpawnPoint pour un Ennemy
-    *   \param [in] newSpawn : nouveau spawn du nouvel Ennemy
-    */
-    void AddEnemy(SpawnPoint const &newSpawn);
-
-    /*! \brief Fonction permettant d'ajouter un NPC. 
-    *
-    *   Un ennemi est ajouté en ajoutant un SpawnPoint pour un NPC.
-    *   \param [in] newSpawn : nouveau spawn du nouvel NPC.
-    */
-    void AddNPC(SpawnPoint const &newSpawn);
-
     /*! \brief Fonction permettant de récupérer le SpawnPoint du joueur
     *
     *   \return Retourne le SpawnPoint du Player en mode donnée 
