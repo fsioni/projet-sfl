@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Legends of Nautibus:  Fichier source de src/txt/StateGameTxt.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -34,10 +34,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.17 -->
+<!-- Généré par Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -118,37 +118,27 @@ $(document).ready(function(){initNavTree('StateGameTxt_8h_source.html',''); init
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classStateGameTxt.html#adf8ff2df9b5f1207d5f991ad98e91fb4">   36</a></span>&#160;    std::unique_ptr&lt;WinTXT&gt; <a class="code" href="classStateGameTxt.html#adf8ff2df9b5f1207d5f991ad98e91fb4">win</a>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif // __STATEGAMETXT_H__</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// __STATEGAMETXT_H__</span></div>
+<div class="ttc" id="aclassStateGameTxt_html"><div class="ttname"><a href="classStateGameTxt.html">StateGameTxt</a></div><div class="ttdoc">Classe représentant l'état jeu du mode texte.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.h:14</div></div>
+<div class="ttc" id="aclassStateGameTxt_html_a07f02b63b0dce18316a5128a7f244aaf"><div class="ttname"><a href="classStateGameTxt.html#a07f02b63b0dce18316a5128a7f244aaf">StateGameTxt::ProcessInput</a></div><div class="ttdeci">void ProcessInput()</div><div class="ttdoc">Fonction de gestion des touches du State.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:23</div></div>
+<div class="ttc" id="aclassStateGameTxt_html_a14e11db9b9ccea3fcc75829656bb18f4"><div class="ttname"><a href="classStateGameTxt.html#a14e11db9b9ccea3fcc75829656bb18f4">StateGameTxt::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Fonction de mise à jour du State.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:27</div></div>
+<div class="ttc" id="aclassStateGameTxt_html_a18e90d3f3f04461c26d02f4795674001"><div class="ttname"><a href="classStateGameTxt.html#a18e90d3f3f04461c26d02f4795674001">StateGameTxt::Display</a></div><div class="ttdeci">void Display()</div><div class="ttdoc">Fonction d'affichage du State.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:74</div></div>
+<div class="ttc" id="aclassStateGameTxt_html_a22a576f05c48f31ae7d75cc3ae762f12"><div class="ttname"><a href="classStateGameTxt.html#a22a576f05c48f31ae7d75cc3ae762f12">StateGameTxt::StateGameTxt</a></div><div class="ttdeci">StateGameTxt()</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:3</div></div>
+<div class="ttc" id="aclassStateGameTxt_html_a2e6b31e7b5a7d1861bda28b930376b80"><div class="ttname"><a href="classStateGameTxt.html#a2e6b31e7b5a7d1861bda28b930376b80">StateGameTxt::Pause</a></div><div class="ttdeci">void Pause()</div><div class="ttdoc">Fonction de mise en pause du State.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:122</div></div>
+<div class="ttc" id="aclassStateGameTxt_html_a3d0676321b499bfb77048f625c08c4fa"><div class="ttname"><a href="classStateGameTxt.html#a3d0676321b499bfb77048f625c08c4fa">StateGameTxt::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">Fonction d'initialisation du State.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:16</div></div>
+<div class="ttc" id="aclassStateGameTxt_html_a696798981b047c3842912ffa9b95306d"><div class="ttname"><a href="classStateGameTxt.html#a696798981b047c3842912ffa9b95306d">StateGameTxt::context</a></div><div class="ttdeci">std::shared_ptr&lt; Context &gt; context</div><div class="ttdoc">Etat courant du programme.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.h:34</div></div>
+<div class="ttc" id="aclassStateGameTxt_html_adf8ff2df9b5f1207d5f991ad98e91fb4"><div class="ttname"><a href="classStateGameTxt.html#adf8ff2df9b5f1207d5f991ad98e91fb4">StateGameTxt::win</a></div><div class="ttdeci">std::unique_ptr&lt; WinTXT &gt; win</div><div class="ttdoc">Fenetre de jeu representée par des cases.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.h:36</div></div>
+<div class="ttc" id="aclassStateGameTxt_html_ae1cd93fd51c80fd069f7b871fcd4e32e"><div class="ttname"><a href="classStateGameTxt.html#ae1cd93fd51c80fd069f7b871fcd4e32e">StateGameTxt::Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">Fonction de remise en marche du State.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:126</div></div>
+<div class="ttc" id="aclassStateGameTxt_html_aff352c6670e1e10ad98c6da5a42f7f60"><div class="ttname"><a href="classStateGameTxt.html#aff352c6670e1e10ad98c6da5a42f7f60">StateGameTxt::~StateGameTxt</a></div><div class="ttdeci">~StateGameTxt()</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:12</div></div>
+<div class="ttc" id="aclassState_html"><div class="ttname"><a href="classState.html">State</a></div><div class="ttdoc">Classe représentant un état de l'application.</div><div class="ttdef"><b>Definition:</b> State.h:12</div></div>
+<div class="ttc" id="awinTxt_8h_html"><div class="ttname"><a href="winTxt_8h.html">winTxt.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aStateGameTxt_8h_html"><div class="ttname"><a href="StateGameTxt_8h.html">StateGameTxt.h</a></div></div>
-<div class="ttc" id="aEntityWithoutHP_8h_html_a0017b68a69d03986d465ef2dca6e4380ad48f7af8c070184f3774c8e85854eb66"><div class="ttname"><a href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380ad48f7af8c070184f3774c8e85854eb66">Right</a></div><div class="ttdeci">@ Right</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:18</div></div>
-<div class="ttc" id="aclassState_html"><div class="ttname"><a href="classState.html">State</a></div><div class="ttdoc">Classe représentant un état de l'application.</div><div class="ttdef"><b>Definition:</b> State.h:11</div></div>
-<div class="ttc" id="aclassStateGameTxt_html_adf8ff2df9b5f1207d5f991ad98e91fb4"><div class="ttname"><a href="classStateGameTxt.html#adf8ff2df9b5f1207d5f991ad98e91fb4">StateGameTxt::win</a></div><div class="ttdeci">std::unique_ptr&lt; WinTXT &gt; win</div><div class="ttdoc">Fenetre de jeu representée par des cases.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.h:36</div></div>
-<div class="ttc" id="aclassStateGameTxt_html_a07f02b63b0dce18316a5128a7f244aaf"><div class="ttname"><a href="classStateGameTxt.html#a07f02b63b0dce18316a5128a7f244aaf">StateGameTxt::ProcessInput</a></div><div class="ttdeci">void ProcessInput()</div><div class="ttdoc">Fonction de gestion des touches du State.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:23</div></div>
-<div class="ttc" id="aclassStateGameTxt_html"><div class="ttname"><a href="classStateGameTxt.html">StateGameTxt</a></div><div class="ttdoc">Classe représentant l'état jeu du mode texte.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.h:13</div></div>
-<div class="ttc" id="aclassStateGameTxt_html_a696798981b047c3842912ffa9b95306d"><div class="ttname"><a href="classStateGameTxt.html#a696798981b047c3842912ffa9b95306d">StateGameTxt::context</a></div><div class="ttdeci">std::shared_ptr&lt; Context &gt; context</div><div class="ttdoc">Etat courant du programme.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.h:34</div></div>
-<div class="ttc" id="aclassStateGameTxt_html_ae1cd93fd51c80fd069f7b871fcd4e32e"><div class="ttname"><a href="classStateGameTxt.html#ae1cd93fd51c80fd069f7b871fcd4e32e">StateGameTxt::Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">Fonction de remise en marche du State.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:126</div></div>
-<div class="ttc" id="aEntityWithoutHP_8h_html_a0017b68a69d03986d465ef2dca6e4380abcf8c79e9a5f5f9d606fb35645a0fb27"><div class="ttname"><a href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380abcf8c79e9a5f5f9d606fb35645a0fb27">Down</a></div><div class="ttdeci">@ Down</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:16</div></div>
-<div class="ttc" id="aclassCollisionLayer_html"><div class="ttname"><a href="classCollisionLayer.html">CollisionLayer</a></div><div class="ttdoc">Classe représentant une couche de CollisionBox.</div><div class="ttdef"><b>Definition:</b> CollisionLayer.h:17</div></div>
-<div class="ttc" id="aclassBox_html"><div class="ttname"><a href="classBox.html">Box</a></div><div class="ttdoc">Classe représentant une boîte dans un monde 2D.</div><div class="ttdef"><b>Definition:</b> Box.h:11</div></div>
-<div class="ttc" id="aclassStateGameTxt_html_a14e11db9b9ccea3fcc75829656bb18f4"><div class="ttname"><a href="classStateGameTxt.html#a14e11db9b9ccea3fcc75829656bb18f4">StateGameTxt::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Fonction de mise à jour du State.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:27</div></div>
-<div class="ttc" id="aEntityWithoutHP_8h_html_a0017b68a69d03986d465ef2dca6e4380a57a7edcbc04d6175683383cad5c3e0a2"><div class="ttname"><a href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380a57a7edcbc04d6175683383cad5c3e0a2">Up</a></div><div class="ttdeci">@ Up</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:19</div></div>
-<div class="ttc" id="aclassBox_html_a0f3f1e3acf82ac45cccb611be4b79206"><div class="ttname"><a href="classBox.html#a0f3f1e3acf82ac45cccb611be4b79206">Box::SetPosition</a></div><div class="ttdeci">void SetPosition(int nX, int nY)</div><div class="ttdoc">Modifie la position de la Box par celle en paramètre.</div><div class="ttdef"><b>Definition:</b> Box.cpp:34</div></div>
-<div class="ttc" id="aclassStateGameTxt_html_a3d0676321b499bfb77048f625c08c4fa"><div class="ttname"><a href="classStateGameTxt.html#a3d0676321b499bfb77048f625c08c4fa">StateGameTxt::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">Fonction d'initialisation du State.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:16</div></div>
-<div class="ttc" id="aEntityWithoutHP_8h_html_a0017b68a69d03986d465ef2dca6e4380a9d4d8b0b72fc2659da772d761a3c5ecb"><div class="ttname"><a href="EntityWithoutHP_8h.html#a0017b68a69d03986d465ef2dca6e4380a9d4d8b0b72fc2659da772d761a3c5ecb">Left</a></div><div class="ttdeci">@ Left</div><div class="ttdef"><b>Definition:</b> EntityWithoutHP.h:17</div></div>
-<div class="ttc" id="aclassStateGameTxt_html_a22a576f05c48f31ae7d75cc3ae762f12"><div class="ttname"><a href="classStateGameTxt.html#a22a576f05c48f31ae7d75cc3ae762f12">StateGameTxt::StateGameTxt</a></div><div class="ttdeci">StateGameTxt()</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:3</div></div>
-<div class="ttc" id="awinTxt_8h_html"><div class="ttname"><a href="winTxt_8h.html">winTxt.h</a></div></div>
-<div class="ttc" id="aclassStateGameTxt_html_a18e90d3f3f04461c26d02f4795674001"><div class="ttname"><a href="classStateGameTxt.html#a18e90d3f3f04461c26d02f4795674001">StateGameTxt::Display</a></div><div class="ttdeci">void Display()</div><div class="ttdoc">Fonction d'affichage du State.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:74</div></div>
-<div class="ttc" id="aclassStateGameTxt_html_aff352c6670e1e10ad98c6da5a42f7f60"><div class="ttname"><a href="classStateGameTxt.html#aff352c6670e1e10ad98c6da5a42f7f60">StateGameTxt::~StateGameTxt</a></div><div class="ttdeci">~StateGameTxt()</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:12</div></div>
-<div class="ttc" id="aclassStateGameTxt_html_a2e6b31e7b5a7d1861bda28b930376b80"><div class="ttname"><a href="classStateGameTxt.html#a2e6b31e7b5a7d1861bda28b930376b80">StateGameTxt::Pause</a></div><div class="ttdeci">void Pause()</div><div class="ttdoc">Fonction de mise en pause du State.</div><div class="ttdef"><b>Definition:</b> StateGameTxt.cpp:122</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_74d70b51b5aa2eb3cb5baf13d2756485.html">txt</a></li><li class="navelem"><a class="el" href="StateGameTxt_8h.html">StateGameTxt.h</a></li>
-    <li class="footer">Généré par
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

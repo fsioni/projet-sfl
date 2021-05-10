@@ -1,0 +1,43 @@
+digraph "AnimalWalking::Execute"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="AnimalWalking::Execute",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Execution de l'état. L'Animal se déplace aléatoirement et entre en état AnimalFollowing si le joueur ..."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Animal::ChangeDirection",height=0.2,width=0.4,color="black",URL="$classAnimal.html#ab5662e8d869c2d5938d2deff70a12548",tooltip="Change la direction de l'Animal. Utilise timeNextChangeDirection pour savoir si il est temps de chang..."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Animal::RandDirection",height=0.2,width=0.4,color="black",URL="$classAnimal.html#a1a548a0e03b5e15794696e203d6110c3",tooltip="Affecte une EntityDirection aléatoire à l'Animal."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Animal::SetTimeNextChange\lDirection",height=0.2,width=0.4,color="black",URL="$classAnimal.html#afca8963969b647cbb423ea65198393c6",tooltip="Affecte à timeNextChangeDirection une valeur aléatoire."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="StateMachine::ChangeState",height=0.2,width=0.4,color="black",URL="$classStateMachine.html#a5e928960ba29b86f878768e556ae8eb4",tooltip="Permet de changer l'état courrant."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="EntityWithoutHP::GetDirection",height=0.2,width=0.4,color="black",URL="$classEntityWithoutHP.html#a7642f894c466f34541045454e49ba72d",tooltip="Retourne la direction de l'entité."];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Animal::GetStateMachine",height=0.2,width=0.4,color="black",URL="$classAnimal.html#a490a04fdf3ac5434f32819c8be55627d",tooltip="Retourne le StateMachine."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="AnimalFollowing::Instance",height=0.2,width=0.4,color="black",URL="$classAnimalFollowing.html#ab773d83ebdfd7e06a1b1813d3cb7bede",tooltip="Retourne une Instance de l'objet, un singleton."];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="AnimalFollowing::AnimalFollowing",height=0.2,width=0.4,color="black",URL="$classAnimalFollowing.html#a941268bab66a047446f4b4ef15d27865",tooltip="Constructeur par défaut."];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="EntityWithoutHP::MoveWith\lCollision",height=0.2,width=0.4,color="black",URL="$classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18",tooltip="Déplace l'entité en vérifiant les collisions."];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CollisionLayer::GetCollision\lBoxes",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#a620b4ce21e4699a1a067ffaa60848667",tooltip="Fonction permettant de récupérer les CollisionBox de l'objet."];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CollisionLayer::GetCollision\lBoxesEntity",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#a88cf3f7e5b55058df61d24f199c54b5b",tooltip="Fonction permettant de récupérer les CollisionBox des entités de l'objet."];
+  Node10 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Box::GetHeight",height=0.2,width=0.4,color="black",URL="$classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3",tooltip="Retourne height."];
+  Node10 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="EntityWithoutHP::GetID",height=0.2,width=0.4,color="black",URL="$classEntityWithoutHP.html#a1a5d732b9f322135fbd5e5f227064b26",tooltip="Retourne l'ID de l'entité."];
+  Node10 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="Box::GetWidth",height=0.2,width=0.4,color="black",URL="$classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04",tooltip="Retourne width."];
+  Node10 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="Box::GetX",height=0.2,width=0.4,color="black",URL="$classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29",tooltip="Retourne x."];
+  Node10 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="Box::GetY",height=0.2,width=0.4,color="black",URL="$classBox.html#af86b090508898469761c0d61c8230133",tooltip="Retourne y."];
+  Node10 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="EntityWithoutHP::Move",height=0.2,width=0.4,color="black",URL="$classEntityWithoutHP.html#a0cfc433ea705c507da7912a8e039722e",tooltip="Déplace l'entité."];
+}

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Legends of Nautibus:  Fichier source de src/Core/StateManager/StateManager.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -34,10 +34,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.17 -->
+<!-- Généré par Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -115,37 +115,34 @@ $(document).ready(function(){initNavTree('StateManager_8h_source.html',''); init
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classStateManager.html#abc8b2d54658982fb970a9fd006b77ebf">   64</a></span>&#160;    std::stack&lt;std::unique_ptr&lt;State&gt;&gt; <a class="code" href="classStateManager.html#abc8b2d54658982fb970a9fd006b77ebf">sStates</a>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classStateManager.html#a3638556d408204bf6b9386c40ddd771e">   66</a></span>&#160;    std::unique_ptr&lt;State&gt; <a class="code" href="classStateManager.html#a3638556d408204bf6b9386c40ddd771e">sNewState</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classStateManager.html#a6960665b6b872d158f6286656876a799">   69</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStateManager.html#a6960665b6b872d158f6286656876a799">add</a>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classStateManager.html#ae75d92b664a69e724568f9cbd1615b3a">   71</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStateManager.html#ae75d92b664a69e724568f9cbd1615b3a">replace</a>;</div>
 <div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classStateManager.html#a1a3387efb8b70dbb46d55b4459407eba">   73</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classStateManager.html#a1a3387efb8b70dbb46d55b4459407eba">remove</a>;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif // __STATEMANAGER_H__</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// __STATEMANAGER_H__</span></div>
+<div class="ttc" id="aState_8h_html"><div class="ttname"><a href="State_8h.html">State.h</a></div></div>
+<div class="ttc" id="aclassStateManager_html"><div class="ttname"><a href="classStateManager.html">StateManager</a></div><div class="ttdoc">Classe représentant un gestionnaire d'états (State)</div><div class="ttdef"><b>Definition:</b> StateManager.h:16</div></div>
+<div class="ttc" id="aclassStateManager_html_a05a43504a033f1befad5c5118249ec6f"><div class="ttname"><a href="classStateManager.html#a05a43504a033f1befad5c5118249ec6f">StateManager::~StateManager</a></div><div class="ttdeci">~StateManager()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:9</div></div>
+<div class="ttc" id="aclassStateManager_html_a1738b442d5a7e3a38ff06bace098f157"><div class="ttname"><a href="classStateManager.html#a1738b442d5a7e3a38ff06bace098f157">StateManager::PopCurrent</a></div><div class="ttdeci">void PopCurrent()</div><div class="ttdoc">Passe au prochain State.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:21</div></div>
+<div class="ttc" id="aclassStateManager_html_a1a3387efb8b70dbb46d55b4459407eba"><div class="ttname"><a href="classStateManager.html#a1a3387efb8b70dbb46d55b4459407eba">StateManager::remove</a></div><div class="ttdeci">bool remove</div><div class="ttdoc">Indique si l'état courant doit être supprimé</div><div class="ttdef"><b>Definition:</b> StateManager.h:73</div></div>
+<div class="ttc" id="aclassStateManager_html_a3638556d408204bf6b9386c40ddd771e"><div class="ttname"><a href="classStateManager.html#a3638556d408204bf6b9386c40ddd771e">StateManager::sNewState</a></div><div class="ttdeci">std::unique_ptr&lt; State &gt; sNewState</div><div class="ttdoc">State en attente.</div><div class="ttdef"><b>Definition:</b> StateManager.h:66</div></div>
+<div class="ttc" id="aclassStateManager_html_a3e2be96d935eb56813b096a885d58587"><div class="ttname"><a href="classStateManager.html#a3e2be96d935eb56813b096a885d58587">StateManager::StateManager</a></div><div class="ttdeci">StateManager()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:5</div></div>
+<div class="ttc" id="aclassStateManager_html_a5dd6d7a9b1262c22bb860820716745c4"><div class="ttname"><a href="classStateManager.html#a5dd6d7a9b1262c22bb860820716745c4">StateManager::ProcessStateChange</a></div><div class="ttdeci">void ProcessStateChange()</div><div class="ttdoc">Gère les changements de States.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:26</div></div>
+<div class="ttc" id="aclassStateManager_html_a6960665b6b872d158f6286656876a799"><div class="ttname"><a href="classStateManager.html#a6960665b6b872d158f6286656876a799">StateManager::add</a></div><div class="ttdeci">bool add</div><div class="ttdoc">Indique si un état a été ajouté</div><div class="ttdef"><b>Definition:</b> StateManager.h:69</div></div>
+<div class="ttc" id="aclassStateManager_html_abc8b2d54658982fb970a9fd006b77ebf"><div class="ttname"><a href="classStateManager.html#abc8b2d54658982fb970a9fd006b77ebf">StateManager::sStates</a></div><div class="ttdeci">std::stack&lt; std::unique_ptr&lt; State &gt; &gt; sStates</div><div class="ttdoc">Tas d'états. Le dernier état du tableau est celui qui doit être joué</div><div class="ttdef"><b>Definition:</b> StateManager.h:64</div></div>
+<div class="ttc" id="aclassStateManager_html_ac14d6caa91524e506f7d15ae86c677f9"><div class="ttname"><a href="classStateManager.html#ac14d6caa91524e506f7d15ae86c677f9">StateManager::Test</a></div><div class="ttdeci">void Test() const</div><div class="ttdoc">Fonction test de la classe StateManager.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:65</div></div>
+<div class="ttc" id="aclassStateManager_html_ad88e3ae0024f37f72b5a4a564b47df9c"><div class="ttname"><a href="classStateManager.html#ad88e3ae0024f37f72b5a4a564b47df9c">StateManager::Add</a></div><div class="ttdeci">void Add(std::unique_ptr&lt; State &gt; nState, bool replace_=false)</div><div class="ttdoc">Ajoute le State en paramètre à la pile.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:13</div></div>
+<div class="ttc" id="aclassStateManager_html_ae75d92b664a69e724568f9cbd1615b3a"><div class="ttname"><a href="classStateManager.html#ae75d92b664a69e724568f9cbd1615b3a">StateManager::replace</a></div><div class="ttdeci">bool replace</div><div class="ttdoc">Indique si l'état courant doit être remplacé</div><div class="ttdef"><b>Definition:</b> StateManager.h:71</div></div>
+<div class="ttc" id="aclassStateManager_html_afafbb0471dab93222bee37b6be6d2d0d"><div class="ttname"><a href="classStateManager.html#afafbb0471dab93222bee37b6be6d2d0d">StateManager::GetCurrent</a></div><div class="ttdeci">std::unique_ptr&lt; State &gt; &amp; GetCurrent()</div><div class="ttdoc">Renvoie le State en cours d'execution.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:60</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassStateManager_html_abc8b2d54658982fb970a9fd006b77ebf"><div class="ttname"><a href="classStateManager.html#abc8b2d54658982fb970a9fd006b77ebf">StateManager::sStates</a></div><div class="ttdeci">std::stack&lt; std::unique_ptr&lt; State &gt; &gt; sStates</div><div class="ttdoc">Tas d'états. Le dernier état du tableau est celui qui doit être joué</div><div class="ttdef"><b>Definition:</b> StateManager.h:64</div></div>
-<div class="ttc" id="aclassStateManager_html_a3e2be96d935eb56813b096a885d58587"><div class="ttname"><a href="classStateManager.html#a3e2be96d935eb56813b096a885d58587">StateManager::StateManager</a></div><div class="ttdeci">StateManager()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:5</div></div>
-<div class="ttc" id="aclassStateManager_html_a1738b442d5a7e3a38ff06bace098f157"><div class="ttname"><a href="classStateManager.html#a1738b442d5a7e3a38ff06bace098f157">StateManager::PopCurrent</a></div><div class="ttdeci">void PopCurrent()</div><div class="ttdoc">Passe au prochain State.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:21</div></div>
-<div class="ttc" id="aclassStateManager_html_a6960665b6b872d158f6286656876a799"><div class="ttname"><a href="classStateManager.html#a6960665b6b872d158f6286656876a799">StateManager::add</a></div><div class="ttdeci">bool add</div><div class="ttdoc">Indique si un état a été ajouté</div><div class="ttdef"><b>Definition:</b> StateManager.h:69</div></div>
-<div class="ttc" id="aclassStateManager_html_ae75d92b664a69e724568f9cbd1615b3a"><div class="ttname"><a href="classStateManager.html#ae75d92b664a69e724568f9cbd1615b3a">StateManager::replace</a></div><div class="ttdeci">bool replace</div><div class="ttdoc">Indique si l'état courant doit être remplacé</div><div class="ttdef"><b>Definition:</b> StateManager.h:71</div></div>
-<div class="ttc" id="aclassStateManager_html"><div class="ttname"><a href="classStateManager.html">StateManager</a></div><div class="ttdoc">Classe représentant un gestionnaire d'états (State)</div><div class="ttdef"><b>Definition:</b> StateManager.h:15</div></div>
-<div class="ttc" id="aStateManager_8h_html"><div class="ttname"><a href="StateManager_8h.html">StateManager.h</a></div></div>
-<div class="ttc" id="aclassStateManager_html_afafbb0471dab93222bee37b6be6d2d0d"><div class="ttname"><a href="classStateManager.html#afafbb0471dab93222bee37b6be6d2d0d">StateManager::GetCurrent</a></div><div class="ttdeci">std::unique_ptr&lt; State &gt; &amp; GetCurrent()</div><div class="ttdoc">Renvoie le State en cours d'execution.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:60</div></div>
-<div class="ttc" id="aclassStateManager_html_a3638556d408204bf6b9386c40ddd771e"><div class="ttname"><a href="classStateManager.html#a3638556d408204bf6b9386c40ddd771e">StateManager::sNewState</a></div><div class="ttdeci">std::unique_ptr&lt; State &gt; sNewState</div><div class="ttdoc">State en attente.</div><div class="ttdef"><b>Definition:</b> StateManager.h:66</div></div>
-<div class="ttc" id="aclassStateManager_html_a1a3387efb8b70dbb46d55b4459407eba"><div class="ttname"><a href="classStateManager.html#a1a3387efb8b70dbb46d55b4459407eba">StateManager::remove</a></div><div class="ttdeci">bool remove</div><div class="ttdoc">Indique si l'état courant doit être supprimé</div><div class="ttdef"><b>Definition:</b> StateManager.h:73</div></div>
-<div class="ttc" id="aclassStateManager_html_ad88e3ae0024f37f72b5a4a564b47df9c"><div class="ttname"><a href="classStateManager.html#ad88e3ae0024f37f72b5a4a564b47df9c">StateManager::Add</a></div><div class="ttdeci">void Add(std::unique_ptr&lt; State &gt; nState, bool replace_=false)</div><div class="ttdoc">Ajoute le State en paramètre à la pile.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:13</div></div>
-<div class="ttc" id="aState_8h_html"><div class="ttname"><a href="State_8h.html">State.h</a></div></div>
-<div class="ttc" id="aclassStateManager_html_a5dd6d7a9b1262c22bb860820716745c4"><div class="ttname"><a href="classStateManager.html#a5dd6d7a9b1262c22bb860820716745c4">StateManager::ProcessStateChange</a></div><div class="ttdeci">void ProcessStateChange()</div><div class="ttdoc">Gère les changements de States.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:26</div></div>
-<div class="ttc" id="aclassStateManager_html_a05a43504a033f1befad5c5118249ec6f"><div class="ttname"><a href="classStateManager.html#a05a43504a033f1befad5c5118249ec6f">StateManager::~StateManager</a></div><div class="ttdeci">~StateManager()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:9</div></div>
-<div class="ttc" id="aclassStateManager_html_ac14d6caa91524e506f7d15ae86c677f9"><div class="ttname"><a href="classStateManager.html#ac14d6caa91524e506f7d15ae86c677f9">StateManager::Test</a></div><div class="ttdeci">void Test() const</div><div class="ttdoc">Fonction test de la classe StateManager.</div><div class="ttdef"><b>Definition:</b> StateManager.cpp:65</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a2f0e5642e47e7ed59fe0f0829eafb5f.html">Core</a></li><li class="navelem"><a class="el" href="dir_7214f3075b7e54abe449413ecb03e635.html">StateManager</a></li><li class="navelem"><a class="el" href="StateManager_8h.html">StateManager.h</a></li>
-    <li class="footer">Généré par
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

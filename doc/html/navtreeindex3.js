@@ -1,16 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"tmxParsing_8cpp.html":[1,0,0,0,1,9],
-"tmxParsing_8cpp.html#a0306f58af4bcbdd0cb9969f128a4313e":[1,0,0,0,1,9,6],
-"tmxParsing_8cpp.html#a11672fc9dccbc12b5853edc3de6b9dbc":[1,0,0,0,1,9,3],
-"tmxParsing_8cpp.html#a3eb303ae67be65e125950c06afe8f030":[1,0,0,0,1,9,4],
-"tmxParsing_8cpp.html#a426593f72114ddaa73435d5587d4100f":[1,0,0,0,1,9,2],
-"tmxParsing_8cpp.html#a632f143e2572aaf8c0221ff7c7195053":[1,0,0,0,1,9,0],
-"tmxParsing_8cpp.html#a9e759647152efbca273187768f806d1a":[1,0,0,0,1,9,7],
-"tmxParsing_8cpp.html#a9fa1a7abecf83a7b024f031c9ccac69f":[1,0,0,0,1,9,8],
-"tmxParsing_8cpp.html#abbe85c0a596d406c2dd903fa66eb961b":[1,0,0,0,1,9,5],
-"tmxParsing_8cpp.html#aeed11077df068f825e6c7e20f838f881":[1,0,0,0,1,9,1],
-"tmxParsing_8h.html":[1,0,0,0,1,10],
 "tmxParsing_8h.html#a0306f58af4bcbdd0cb9969f128a4313e":[1,0,0,0,1,10,6],
 "tmxParsing_8h.html#a11672fc9dccbc12b5853edc3de6b9dbc":[1,0,0,0,1,10,3],
 "tmxParsing_8h.html#a3eb303ae67be65e125950c06afe8f030":[1,0,0,0,1,10,4],

@@ -1,0 +1,51 @@
+digraph "EnemyPatrol::Execute"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="EnemyPatrol::Execute",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Execution de l'état. L'Enemy se déplace aléatoirement et entre en état EnemyAttack si le joueur est a..."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Enemy::ChangeDirection",height=0.2,width=0.4,color="black",URL="$classEnemy.html#a941acdd84d21c2324013cf7492cf11e2",tooltip="Change la direction de l'Enemy. Utilise timeNextChangeDirection pour savoir si il est temps de change..."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Enemy::RandDirection",height=0.2,width=0.4,color="black",URL="$classEnemy.html#a59e340b5be743c22f0b5e2992e5e9344",tooltip="Affecte une EntityDirection aléatoire à l'Enemy."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Enemy::SetTimeNextChange\lDirection",height=0.2,width=0.4,color="black",URL="$classEnemy.html#a3b8fda3171cad67a7c0ff9fa872496f3",tooltip="Affecte à timeNextChangeDirection une valeur aléatoire."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="StateMachine::ChangeState",height=0.2,width=0.4,color="black",URL="$classStateMachine.html#a5e928960ba29b86f878768e556ae8eb4",tooltip="Permet de changer l'état courrant."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="EntityWithoutHP::GetDirection",height=0.2,width=0.4,color="black",URL="$classEntityWithoutHP.html#a7642f894c466f34541045454e49ba72d",tooltip="Retourne la direction de l'entité."];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="EntityWithHP::GetHP",height=0.2,width=0.4,color="black",URL="$classEntityWithHP.html#a064f838fa6ae5e4a2b6c2fcb92f576fa",tooltip="Retourne le nombre de points de vie de l'entité."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="EntityWithHP::GetMaxHP",height=0.2,width=0.4,color="black",URL="$classEntityWithHP.html#a489e4fe33d4541ff1fab8fddfaeadb93",tooltip="Retourne le cap maximum de points de vie de l'entité."];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Enemy::GetStateMachine",height=0.2,width=0.4,color="black",URL="$classEnemy.html#a7d3f9586b50a46b996250cf16959c65f",tooltip="Retourne le StateMachine."];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="EnemyAttack::Instance",height=0.2,width=0.4,color="black",URL="$classEnemyAttack.html#a37ac29da56e9516774ed33f2a8a3b7b7",tooltip="Retourne une Instance de l'objet, un singleton."];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="EnemyAttack::EnemyAttack",height=0.2,width=0.4,color="black",URL="$classEnemyAttack.html#a54977db476e524b343786bae4c0d2e8b",tooltip="Constructeur par défaut."];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="EnemyRunAway::Instance",height=0.2,width=0.4,color="black",URL="$classEnemyRunAway.html#a57fcb322589ab9dbc671f19f98df3b5b",tooltip="Retourne une Instance de l'objet, un singleton."];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="EnemyRunAway::EnemyRunAway",height=0.2,width=0.4,color="black",URL="$classEnemyRunAway.html#a5d56fabaf2823d44a491ea7f43083b47",tooltip="Constructeur par défaut."];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="EntityWithoutHP::MoveWith\lCollision",height=0.2,width=0.4,color="black",URL="$classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18",tooltip="Déplace l'entité en vérifiant les collisions."];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="CollisionLayer::GetCollision\lBoxes",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#a620b4ce21e4699a1a067ffaa60848667",tooltip="Fonction permettant de récupérer les CollisionBox de l'objet."];
+  Node14 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="CollisionLayer::GetCollision\lBoxesEntity",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#a88cf3f7e5b55058df61d24f199c54b5b",tooltip="Fonction permettant de récupérer les CollisionBox des entités de l'objet."];
+  Node14 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="Box::GetHeight",height=0.2,width=0.4,color="black",URL="$classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3",tooltip="Retourne height."];
+  Node14 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="EntityWithoutHP::GetID",height=0.2,width=0.4,color="black",URL="$classEntityWithoutHP.html#a1a5d732b9f322135fbd5e5f227064b26",tooltip="Retourne l'ID de l'entité."];
+  Node14 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="Box::GetWidth",height=0.2,width=0.4,color="black",URL="$classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04",tooltip="Retourne width."];
+  Node14 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="Box::GetX",height=0.2,width=0.4,color="black",URL="$classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29",tooltip="Retourne x."];
+  Node14 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="Box::GetY",height=0.2,width=0.4,color="black",URL="$classBox.html#af86b090508898469761c0d61c8230133",tooltip="Retourne y."];
+  Node14 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="EntityWithoutHP::Move",height=0.2,width=0.4,color="black",URL="$classEntityWithoutHP.html#a0cfc433ea705c507da7912a8e039722e",tooltip="Déplace l'entité."];
+}

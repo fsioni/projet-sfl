@@ -1,0 +1,29 @@
+digraph "CollisionLayer::CollisionBoxEntityExist"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="CollisionLayer::Collision\lBoxEntityExist",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Permet de savoir si une clé existe."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CollisionLayer::DeleteACollision\lBoxEntity",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#a7a97cfca95d4fa88e7c68925d56b5b8b",tooltip="Supprime la CollisionBox d'une entité."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CollisionLayer::Test",height=0.2,width=0.4,color="black",URL="$classCollisionLayer.html#a399a9c33d2ef2c935e42e605697b85e1",tooltip="Test de regression."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Game::Run",height=0.2,width=0.4,color="black",URL="$classGame.html#a13910abb0107f073d1627043003b909b",tooltip="Lance le jeu dans le mode selectionné"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="main",height=0.2,width=0.4,color="black",URL="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="StateGameSFML::DisplayDebug",height=0.2,width=0.4,color="black",URL="$classStateGameSFML.html#a8e856a9c6fca122ce3a10e3cf877531b",tooltip="Affichage le mode debug sur la fenêtre SFML."];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="StateGameSFML::Display",height=0.2,width=0.4,color="black",URL="$classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a",tooltip="Fonction d'affichage du State."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="StateGameSFML::UpdateAnimals",height=0.2,width=0.4,color="black",URL="$classStateGameSFML.html#ac366941243b495e81764d9d3e234ae69",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="StateGameSFML::Update",height=0.2,width=0.4,color="black",URL="$classStateGameSFML.html#aee4825df0279125785ce4cb6dea1cdf2",tooltip="Fonction de mise à jour du State."];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="StateGameSFML::UpdateEnemies",height=0.2,width=0.4,color="black",URL="$classStateGameSFML.html#a11a34aefe47e9f0d1fcfc9130c9f1d27",tooltip="Met à jour les données correspondant aux ennemis."];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
