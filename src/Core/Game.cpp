@@ -94,6 +94,9 @@ void Game::Run(int mode)
         StateMachine<Enemy> stateMachine(new Enemy);
         stateMachine.Test();
 
+        StateManager sm;
+        sm.Test();
+
         std::cout << "TOUS LES TESTS ONT ETE PASSES AVEC SUCCES !" << std::endl;
         break;
     }

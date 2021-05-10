@@ -1,7 +1,7 @@
 var classEnemy =
 [
     [ "Enemy", "classEnemy.html#a94f30d348b6d2840fd71675472ba38dd", null ],
-    [ "Enemy", "classEnemy.html#a566d219279ca1c61223ae4c44f5d78dd", null ],
+    [ "Enemy", "classEnemy.html#ac7d62f93697cc74096b8f5578230618d", null ],
     [ "~Enemy", "classEnemy.html#ac0eec4755e28c02688065f9657150ac3", null ],
     [ "ChangeDirection", "classEnemy.html#a941acdd84d21c2324013cf7492cf11e2", null ],
     [ "GetStateMachine", "classEnemy.html#a7d3f9586b50a46b996250cf16959c65f", null ],

@@ -1,7 +1,7 @@
 var classEntityWithHP =
 [
     [ "EntityWithHP", "classEntityWithHP.html#a6c871524778adffcdf9fcd9a514244d3", null ],
-    [ "EntityWithHP", "classEntityWithHP.html#af7b97a05877a28551ce795fdcd03cd0e", null ],
+    [ "EntityWithHP", "classEntityWithHP.html#a18f878178c7eaa2977ca7e617c3116b0", null ],
     [ "~EntityWithHP", "classEntityWithHP.html#a3898bba6518b7bf7464d98e0d839d604", null ],
     [ "Attack", "classEntityWithHP.html#aac09e4aa3eda7d8c49719dc457545acf", null ],
     [ "GetDamage", "classEntityWithHP.html#a2141d7cca91bd206e229efcc1c02d4d0", null ],

@@ -1,0 +1,4 @@
+<map id="SpawnsLayer::AngleToDirection" name="SpawnsLayer::AngleToDirection">
+<area shape="rect" id="node1" title="Convertie un angle en degré en une EntityDirection." alt="" coords="256,5,483,32"/>
+<area shape="rect" id="node2" href="$classSpawnsLayer.html#aeb16f8270a085d422870501d1fcd3409" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="5,5,208,32"/>
+</map>

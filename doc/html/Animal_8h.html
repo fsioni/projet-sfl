@@ -89,24 +89,29 @@ $(document).ready(function(){initNavTree('Animal_8h.html',''); initResizable(); 
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="EntityWithoutHP_8h_source.html">EntityWithoutHP.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="StateMachine_8h_source.html">FiniteStateMachine/StateMachine.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de Animal.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="Animal_8h__incl.png" border="0" usemap="#src_2Core_2Entity_2Animal_8h" alt=""/></div>
 <map name="src_2Core_2Entity_2Animal_8h" id="src_2Core_2Entity_2Animal_8h">
-<area shape="rect" title=" " alt="" coords="245,5,424,32"/>
-<area shape="rect" href="EntityWithoutHP_8h.html" title=" " alt="" coords="265,80,404,107"/>
-<area shape="rect" title=" " alt="" coords="5,155,80,181"/>
-<area shape="rect" title=" " alt="" coords="503,304,561,331"/>
-<area shape="rect" title=" " alt="" coords="155,155,221,181"/>
-<area shape="rect" title=" " alt="" coords="245,155,325,181"/>
-<area shape="rect" title=" " alt="" coords="350,155,418,181"/>
-<area shape="rect" title=" " alt="" coords="417,229,495,256"/>
-<area shape="rect" href="CollisionLayer_8h.html" title=" " alt="" coords="493,155,709,181"/>
-<area shape="rect" href="UniqueID_8h.html" title=" " alt="" coords="734,155,829,181"/>
-<area shape="rect" title=" " alt="" coords="570,229,633,256"/>
-<area shape="rect" title=" " alt="" coords="657,229,708,256"/>
-<area shape="rect" href="Box_8h.html" title=" " alt="" coords="733,229,803,256"/>
+<area shape="rect" title=" " alt="" coords="140,5,319,32"/>
+<area shape="rect" href="EntityWithoutHP_8h.html" title=" " alt="" coords="313,393,452,420"/>
+<area shape="rect" href="StateMachine_8h.html" title=" " alt="" coords="212,80,359,121"/>
+<area shape="rect" title=" " alt="" coords="5,468,80,495"/>
+<area shape="rect" title=" " alt="" coords="708,617,767,644"/>
+<area shape="rect" title=" " alt="" coords="259,468,325,495"/>
+<area shape="rect" title=" " alt="" coords="104,468,184,495"/>
+<area shape="rect" title=" " alt="" coords="349,468,417,495"/>
+<area shape="rect" title=" " alt="" coords="505,543,583,569"/>
+<area shape="rect" href="CollisionLayer_8h.html" title=" " alt="" coords="663,468,879,495"/>
+<area shape="rect" href="UniqueID_8h.html" title=" " alt="" coords="493,468,587,495"/>
+<area shape="rect" title=" " alt="" coords="658,543,721,569"/>
+<area shape="rect" title=" " alt="" coords="745,543,796,569"/>
+<area shape="rect" href="Box_8h.html" title=" " alt="" coords="821,543,891,569"/>
+<area shape="rect" href="StateBehavior_8h.html" title=" " alt="" coords="575,169,700,196"/>
+<area shape="rect" href="Player_8h.html" title=" " alt="" coords="722,244,809,271"/>
+<area shape="rect" href="EntityWithHP_8h.html" title=" " alt="" coords="714,319,833,345"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -114,8 +119,29 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 <div class="dyncontent">
 <div class="center"><img src="Animal_8h__dep__incl.png" border="0" usemap="#src_2Core_2Entity_2Animal_8hdep" alt=""/></div>
 <map name="src_2Core_2Entity_2Animal_8hdep" id="src_2Core_2Entity_2Animal_8hdep">
-<area shape="rect" title=" " alt="" coords="13,5,192,32"/>
-<area shape="rect" href="Animal_8cpp.html" title=" " alt="" coords="5,80,200,107"/>
+<area shape="rect" title=" " alt="" coords="213,5,392,32"/>
+<area shape="rect" href="Animal_8cpp.html" title=" " alt="" coords="5,177,200,203"/>
+<area shape="rect" href="AnimalStates_8h.html" title=" " alt="" coords="141,80,331,121"/>
+<area shape="rect" href="AnimalStates_8cpp.html" title=" " alt="" coords="224,169,419,211"/>
+<area shape="rect" href="Game_8h.html" title=" " alt="" coords="1404,87,1535,114"/>
+<area shape="rect" href="Game_8cpp.html" title=" " alt="" coords="2217,266,2362,293"/>
+<area shape="rect" href="StateSplashScreenSFML_8h.html" title=" " alt="" coords="1775,169,1980,211"/>
+<area shape="rect" href="StateSplashScreenTxt_8h.html" title=" " alt="" coords="2005,169,2193,211"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="2269,177,2374,203"/>
+<area shape="rect" href="StateGameOverSFML_8h.html" title=" " alt="" coords="669,177,904,203"/>
+<area shape="rect" href="StateGameSFML_8h.html" title=" " alt="" coords="929,177,1133,203"/>
+<area shape="rect" href="StateMenuSFML_8h.html" title=" " alt="" coords="1157,177,1358,203"/>
+<area shape="rect" href="StatePauseSFML_8h.html" title=" " alt="" coords="443,177,645,203"/>
+<area shape="rect" href="StateGameTxt_8h.html" title=" " alt="" coords="1383,177,1556,203"/>
+<area shape="rect" href="StateMenuTxt_8h.html" title=" " alt="" coords="1580,177,1751,203"/>
+<area shape="rect" href="StateSplashScreenSFML_8cpp.html" title=" " alt="" coords="1565,259,1771,300"/>
+<area shape="rect" href="StateSplashScreenTxt_8cpp.html" title=" " alt="" coords="2005,259,2193,300"/>
+<area shape="rect" href="StateGameOverSFML_8cpp.html" title=" " alt="" coords="837,266,1088,293"/>
+<area shape="rect" href="StateGameSFML_8cpp.html" title=" " alt="" coords="352,266,571,293"/>
+<area shape="rect" href="StateMenuSFML_8cpp.html" title=" " alt="" coords="1112,266,1328,293"/>
+<area shape="rect" href="StatePauseSFML_8cpp.html" title=" " alt="" coords="595,266,813,293"/>
+<area shape="rect" href="StateGameTxt_8cpp.html" title=" " alt="" coords="1353,266,1541,293"/>
+<area shape="rect" href="StateMenuTxt_8cpp.html" title=" " alt="" coords="1795,266,1981,293"/>
 </map>
 </div>
 </div>
@@ -124,6 +150,7 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Structures de données</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAnimal.html">Animal</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Représente un animal, hérite de EntityWithouHP.  <a href="classAnimal.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

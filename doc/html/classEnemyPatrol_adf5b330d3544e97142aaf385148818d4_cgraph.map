@@ -1,4 +1,4 @@
 <map id="EnemyPatrol::Instance" name="EnemyPatrol::Instance">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,172,32"/>
-<area shape="rect" id="node2" href="$classEnemyPatrol.html#aa7bad085d7911a0b8952c18b248dce37" title=" " alt="" coords="220,5,415,32"/>
+<area shape="rect" id="node1" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="5,5,172,32"/>
+<area shape="rect" id="node2" href="$classEnemyPatrol.html#aa7bad085d7911a0b8952c18b248dce37" title="Constructeur par défaut." alt="" coords="220,5,415,32"/>
 </map>

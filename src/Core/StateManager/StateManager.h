@@ -31,7 +31,7 @@ public:
     /*! \brief Ajoute le State en paramètre à la pile
     *
     *   Met en pause l'état actuel et ajoute l'état en paramètre à la pile avant de le lancer
-    *   \param [in] nID : State qui est lancé
+    *   \param [in] nState : State qui est lancé
     *   \param [in] replace : true si il doit remplacé le State actuel
     */
     void Add(std::unique_ptr<State> nState, bool replace_ = false);
@@ -52,6 +52,12 @@ public:
     * \return Le State actuel
     */
     std::unique_ptr<State> &GetCurrent();
+
+    /*! \brief Fonction test de la classe StateManager
+    *
+    *   Effectue des tests pour vérifier l'intégrité de la classe StateManager et son fonctionnement
+    */
+    void Test() const;
 
 private:
     /*! \brief Tas d'états. Le dernier état du tableau est celui qui doit être joué */

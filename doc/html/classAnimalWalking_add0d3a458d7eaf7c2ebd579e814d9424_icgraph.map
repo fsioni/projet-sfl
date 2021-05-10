@@ -1,0 +1,6 @@
+<map id="AnimalWalking::AnimalWalking" name="AnimalWalking::AnimalWalking">
+<area shape="rect" id="node1" title="Constructeur par défaut." alt="" coords="473,31,700,57"/>
+<area shape="rect" id="node2" href="$classAnimalWalking.html#a3749456f9f4c3e9bb1c7a16e02ff464a" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="243,31,425,57"/>
+<area shape="rect" id="node3" href="$classAnimal.html#a1e726a49ec952443190ac62dad22353c" title="Constructeur par défaut." alt="" coords="39,5,161,32"/>
+<area shape="rect" id="node4" href="$classAnimalFollowing.html#af1712ef260f6e99602db5acc868825f5" title="Execution de l&#39;état. L&#39;Animal se déplace en direction du joueur. Il entre en état AnimalWalking si il..." alt="" coords="5,56,195,83"/>
+</map>

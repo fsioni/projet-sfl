@@ -1,6 +1,6 @@
 <map id="MapLayer::Test" name="MapLayer::Test">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,125,83"/>
-<area shape="rect" id="node2" href="$classMapLayer.html#a9710e1d180cac781c1a407251ef763a9" title=" " alt="" coords="179,5,327,32"/>
-<area shape="rect" id="node3" href="$classMapLayer.html#a2202c4093be0ec8e4fb0719b87633f76" title=" " alt="" coords="173,56,333,83"/>
-<area shape="rect" id="node4" href="$classMapLayer.html#a92b9f83ea738bd22ceee375441800b60" title=" " alt="" coords="176,107,331,133"/>
+<area shape="rect" id="node1" title="Fonction de test de regression." alt="" coords="5,56,125,83"/>
+<area shape="rect" id="node2" href="$classMapLayer.html#a9710e1d180cac781c1a407251ef763a9" title="Retourne la valeur de la MapLayer au coordonnées (x, y). Converti les indices du tableau 1D en indice..." alt="" coords="179,5,327,32"/>
+<area shape="rect" id="node3" href="$classMapLayer.html#a2202c4093be0ec8e4fb0719b87633f76" title="Retourne la hauteur de la map." alt="" coords="173,56,333,83"/>
+<area shape="rect" id="node4" href="$classMapLayer.html#a92b9f83ea738bd22ceee375441800b60" title="Retourne la largeur de la map." alt="" coords="176,107,331,133"/>
 </map>

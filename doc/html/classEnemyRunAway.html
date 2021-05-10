@@ -92,13 +92,16 @@ $(document).ready(function(){initNavTree('classEnemyRunAway.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 
+<p>Etat de fuite pour les enemy, hérite de <a class="el" href="classStateBehavior.html">StateBehavior&lt;Enemy&gt;</a>.  
+ <a href="classEnemyRunAway.html#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="EnemyStates_8h_source.html">EnemyStates.h</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de EnemyRunAway:</div>
 <div class="dyncontent">
 <div class="center"><img src="classEnemyRunAway__inherit__graph.png" border="0" usemap="#EnemyRunAway_inherit__map" alt="Inheritance graph"/></div>
 <map name="EnemyRunAway_inherit__map" id="EnemyRunAway_inherit__map">
-<area shape="rect" title=" " alt="" coords="23,375,177,540"/>
+<area shape="rect" title="Etat de fuite pour les enemy, hérite de StateBehavior&lt;Enemy&gt;." alt="" coords="23,375,177,540"/>
 <area shape="rect" href="classStateBehavior.html" title=" " alt="" coords="5,204,195,325"/>
 <area shape="rect" href="classStateBehavior.html" title=" " alt="" coords="17,5,183,141"/>
 </map>
@@ -107,35 +110,47 @@ Graphe d'héritage de EnemyRunAway:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a015d787b5ff7e66a7927c4a9c047e0bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnemyRunAway.html#a015d787b5ff7e66a7927c4a9c047e0bc">EnemyRunAway</a> (const <a class="el" href="classEnemyRunAway.html">EnemyRunAway</a> &amp;other)=delete</td></tr>
+<tr class="memdesc:a015d787b5ff7e66a7927c4a9c047e0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par copie.  <a href="classEnemyRunAway.html#a015d787b5ff7e66a7927c4a9c047e0bc">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a015d787b5ff7e66a7927c4a9c047e0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a4c831793fa506ce77c5188a59ead54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnemyRunAway.html#a1a4c831793fa506ce77c5188a59ead54">operator=</a> (const <a class="el" href="classEnemyRunAway.html">EnemyRunAway</a> &amp;other)=delete</td></tr>
+<tr class="memdesc:a1a4c831793fa506ce77c5188a59ead54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opérateur par copie.  <a href="classEnemyRunAway.html#a1a4c831793fa506ce77c5188a59ead54">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1a4c831793fa506ce77c5188a59ead54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3b404b770b2ad508b7e2ad85077e328"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnemyRunAway.html#af3b404b770b2ad508b7e2ad85077e328">Enter</a> (<a class="el" href="classEnemy.html">Enemy</a> *enemy)</td></tr>
+<tr class="memdesc:af3b404b770b2ad508b7e2ad85077e328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entré dans l'état. Augmente la vitesse de l'enemy.  <a href="classEnemyRunAway.html#af3b404b770b2ad508b7e2ad85077e328">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af3b404b770b2ad508b7e2ad85077e328"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5024c29a69c0229bc6a34ffa44436020"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020">Execute</a> (<a class="el" href="classEnemy.html">Enemy</a> *enemy, std::unique_ptr&lt; <a class="el" href="classPlayer.html">Player</a> &gt; &amp;player_, <a class="el" href="classCollisionLayer.html">CollisionLayer</a> *collision, int dt)</td></tr>
+<tr class="memdesc:a5024c29a69c0229bc6a34ffa44436020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution de l'état. L'<a class="el" href="classEnemy.html" title="Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer.">Enemy</a> se déplace dans la direciton opposé du <a class="el" href="classPlayer.html" title="Classe représentant un joueur qui peut infliger/subir des dégats et se déplacer.">Player</a>. Si il est assez loin, il entre dans l'état <a class="el" href="classEnemyPatrol.html" title="Etat de patrouille pour les Enemy, hérite de StateBehavior&lt;Enemy&gt;.">EnemyPatrol</a>.  <a href="classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5024c29a69c0229bc6a34ffa44436020"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93148440120dfd61c14e3059bab1d7b6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnemyRunAway.html#a93148440120dfd61c14e3059bab1d7b6">Exit</a> (<a class="el" href="classEnemy.html">Enemy</a> *enemy)</td></tr>
+<tr class="memdesc:a93148440120dfd61c14e3059bab1d7b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sortie de l'état. Remet la vitesse à la normal.  <a href="classEnemyRunAway.html#a93148440120dfd61c14e3059bab1d7b6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a93148440120dfd61c14e3059bab1d7b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStateBehavior"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStateBehavior')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="classStateBehavior.html">StateBehavior&lt; Enemy &gt;</a></td></tr>
 <tr class="memitem:a492860e1a788ef9fd3558f809a59fbbd inherit pub_methods_classStateBehavior"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateBehavior.html#a492860e1a788ef9fd3558f809a59fbbd">~StateBehavior</a> ()</td></tr>
+<tr class="memdesc:a492860e1a788ef9fd3558f809a59fbbd inherit pub_methods_classStateBehavior"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="classStateBehavior.html#a492860e1a788ef9fd3558f809a59fbbd">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a492860e1a788ef9fd3558f809a59fbbd inherit pub_methods_classStateBehavior"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Fonctions membres publiques statiques</h2></td></tr>
 <tr class="memitem:a57fcb322589ab9dbc671f19f98df3b5b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classEnemyRunAway.html">EnemyRunAway</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnemyRunAway.html#a57fcb322589ab9dbc671f19f98df3b5b">Instance</a> ()</td></tr>
+<tr class="memdesc:a57fcb322589ab9dbc671f19f98df3b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne une Instance de l'objet, un singleton.  <a href="classEnemyRunAway.html#a57fcb322589ab9dbc671f19f98df3b5b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a57fcb322589ab9dbc671f19f98df3b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Fonctions membres privées</h2></td></tr>
 <tr class="memitem:a5d56fabaf2823d44a491ea7f43083b47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnemyRunAway.html#a5d56fabaf2823d44a491ea7f43083b47">EnemyRunAway</a> ()</td></tr>
+<tr class="memdesc:a5d56fabaf2823d44a491ea7f43083b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut.  <a href="classEnemyRunAway.html#a5d56fabaf2823d44a491ea7f43083b47">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5d56fabaf2823d44a491ea7f43083b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Attributs privés statiques</h2></td></tr>
 <tr class="memitem:a4fd12ec3c8049ef912b97667d869158f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classEnemyRunAway.html">EnemyRunAway</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnemyRunAway.html#a4fd12ec3c8049ef912b97667d869158f">singleton</a> = nullptr</td></tr>
+<tr class="memdesc:a4fd12ec3c8049ef912b97667d869158f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton, instance unique de l'objet.  <a href="classEnemyRunAway.html#a4fd12ec3c8049ef912b97667d869158f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a4fd12ec3c8049ef912b97667d869158f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Etat de fuite pour les enemy, hérite de <a class="el" href="classStateBehavior.html">StateBehavior&lt;Enemy&gt;</a>. </p>
+<p>L'<a class="el" href="classEnemy.html" title="Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer.">Enemy</a> se déplace dans la direction opposé du joueur, si il est assez loin du joueur il entre en état <a class="el" href="classEnemyPatrol.html" title="Etat de patrouille pour les Enemy, hérite de StateBehavior&lt;Enemy&gt;.">EnemyPatrol</a>. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="a015d787b5ff7e66a7927c4a9c047e0bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a015d787b5ff7e66a7927c4a9c047e0bc">&#9670;&nbsp;</a></span>EnemyRunAway() <span class="overload">[1/2]</span></h2>
 
@@ -159,6 +174,8 @@ Attributs privés statiques</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructeur par copie. </p>
 
 </div>
 </div>
@@ -184,14 +201,16 @@ Attributs privés statiques</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructeur par défaut. </p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classEnemyRunAway_a5d56fabaf2823d44a491ea7f43083b47_icgraph.png" border="0" usemap="#classEnemyRunAway_a5d56fabaf2823d44a491ea7f43083b47_icgraph" alt=""/></div>
 <map name="classEnemyRunAway_a5d56fabaf2823d44a491ea7f43083b47_icgraph" id="classEnemyRunAway_a5d56fabaf2823d44a491ea7f43083b47_icgraph">
-<area shape="rect" title=" " alt="" coords="455,5,696,32"/>
-<area shape="rect" href="classEnemyRunAway.html#a57fcb322589ab9dbc671f19f98df3b5b" title=" " alt="" coords="216,5,407,32"/>
-<area shape="rect" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="5,5,168,32"/>
+<area shape="rect" title="Constructeur par défaut." alt="" coords="455,5,696,32"/>
+<area shape="rect" href="classEnemyRunAway.html#a57fcb322589ab9dbc671f19f98df3b5b" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="216,5,407,32"/>
+<area shape="rect" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title="Execution de l&#39;état. L&#39;Enemy se déplace aléatoirement et entre en état EnemyAttack si le joueur est a..." alt="" coords="5,5,168,32"/>
 </map>
 </div>
 
@@ -222,13 +241,15 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>Entré dans l'état. Augmente la vitesse de l'enemy. </p>
+
 <p>Implémente <a class="el" href="classStateBehavior.html#a7606de8394f3ef18ed4669440c5fceea">StateBehavior&lt; Enemy &gt;</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classEnemyRunAway_af3b404b770b2ad508b7e2ad85077e328_cgraph.png" border="0" usemap="#classEnemyRunAway_af3b404b770b2ad508b7e2ad85077e328_cgraph" alt=""/></div>
 <map name="classEnemyRunAway_af3b404b770b2ad508b7e2ad85077e328_cgraph" id="classEnemyRunAway_af3b404b770b2ad508b7e2ad85077e328_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,175,57"/>
+<area shape="rect" title="Entré dans l&#39;état. Augmente la vitesse de l&#39;enemy." alt="" coords="5,31,175,57"/>
 <area shape="rect" href="classEntityWithoutHP.html#a9b71c69d24f4c557f024f2a101513da0" title="Retourne la vitesse de l&#39;entité." alt="" coords="223,5,423,32"/>
 <area shape="rect" href="classEntityWithoutHP.html#a87424952f6ec1c19bd5f370ed573a1c3" title="Permets de modifier la vitesse de l&#39;entité." alt="" coords="223,56,422,83"/>
 </map>
@@ -282,21 +303,32 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implémente <a class="el" href="classStateBehavior.html#aacf3f8e6bbcc9129f8bb534cc9c678f2">StateBehavior&lt; Enemy &gt;</a>.</p>
+<p>Execution de l'état. L'<a class="el" href="classEnemy.html" title="Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer.">Enemy</a> se déplace dans la direciton opposé du <a class="el" href="classPlayer.html" title="Classe représentant un joueur qui peut infliger/subir des dégats et se déplacer.">Player</a>. Si il est assez loin, il entre dans l'état <a class="el" href="classEnemyPatrol.html" title="Etat de patrouille pour les Enemy, hérite de StateBehavior&lt;Enemy&gt;.">EnemyPatrol</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">enemy</td><td>: pointeur sur <a class="el" href="classEnemy.html" title="Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer.">Enemy</a>, <a class="el" href="classEnemy.html" title="Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer.">Enemy</a> utilisé par l'état. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">player_</td><td>: std::unique_ptr&lt;Player&gt;, le joueur. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">collision</td><td>: pointeur sur <a class="el" href="classCollisionLayer.html" title="Classe représentant une couche de CollisionBox.">CollisionLayer</a>, permet d'avoir accès à la couche de collision pour les déplacements. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dt</td><td>: entier positif, deltaTime. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implémente <a class="el" href="classStateBehavior.html#a79fef698206f9ea37a2955520af91d52">StateBehavior&lt; Enemy &gt;</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classEnemyRunAway_a5024c29a69c0229bc6a34ffa44436020_cgraph.png" border="0" usemap="#classEnemyRunAway_a5024c29a69c0229bc6a34ffa44436020_cgraph" alt=""/></div>
 <map name="classEnemyRunAway_a5024c29a69c0229bc6a34ffa44436020_cgraph" id="classEnemyRunAway_a5024c29a69c0229bc6a34ffa44436020_cgraph">
-<area shape="rect" title=" " alt="" coords="5,157,192,184"/>
-<area shape="rect" href="classStateMachine.html#a5e928960ba29b86f878768e556ae8eb4" title=" " alt="" coords="247,5,450,32"/>
+<area shape="rect" title="Execution de l&#39;état. L&#39;Enemy se déplace dans la direciton opposé du Player. Si il est assez loin,..." alt="" coords="5,157,192,184"/>
+<area shape="rect" href="classStateMachine.html#a5e928960ba29b86f878768e556ae8eb4" title="Permet de changer l&#39;état courrant." alt="" coords="247,5,450,32"/>
 <area shape="rect" href="classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792" title="Retourne la position sur l&#39;axe des x de l&#39;entité (horizontale)." alt="" coords="249,56,448,83"/>
 <area shape="rect" href="classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92" title="Retourne la position sur l&#39;axe des y de l&#39;entité (verticale)." alt="" coords="249,107,448,133"/>
-<area shape="rect" href="classEnemy.html#a7d3f9586b50a46b996250cf16959c65f" title=" " alt="" coords="255,157,442,184"/>
-<area shape="rect" href="classEnemyPatrol.html#adf5b330d3544e97142aaf385148818d4" title=" " alt="" coords="265,208,432,235"/>
+<area shape="rect" href="classEnemy.html#a7d3f9586b50a46b996250cf16959c65f" title="Retourne le StateMachine." alt="" coords="255,157,442,184"/>
+<area shape="rect" href="classEnemyPatrol.html#adf5b330d3544e97142aaf385148818d4" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="265,208,432,235"/>
 <area shape="rect" href="classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="247,259,450,301"/>
 <area shape="rect" href="classEntityWithoutHP.html#a0c000f5c03af273546b317aaad42254c" title="Permets de modifier la direction de l&#39;entité." alt="" coords="240,325,457,352"/>
-<area shape="rect" href="classEnemyPatrol.html#aa7bad085d7911a0b8952c18b248dce37" title=" " alt="" coords="509,33,703,60"/>
+<area shape="rect" href="classEnemyPatrol.html#aa7bad085d7911a0b8952c18b248dce37" title="Constructeur par défaut." alt="" coords="509,33,703,60"/>
 <area shape="rect" href="classCollisionLayer.html#a620b4ce21e4699a1a067ffaa60848667" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="505,85,707,126"/>
 <area shape="rect" href="classCollisionLayer.html#ac58218b7888e319365025f92265cf1de" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="505,150,707,191"/>
 <area shape="rect" href="classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="545,216,667,243"/>
@@ -334,13 +366,15 @@ Voici le graphe d'appel pour cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>Sortie de l'état. Remet la vitesse à la normal. </p>
+
 <p>Implémente <a class="el" href="classStateBehavior.html#a0f0b2e000ce2d42646be7beceec23417">StateBehavior&lt; Enemy &gt;</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classEnemyRunAway_a93148440120dfd61c14e3059bab1d7b6_cgraph.png" border="0" usemap="#classEnemyRunAway_a93148440120dfd61c14e3059bab1d7b6_cgraph" alt=""/></div>
 <map name="classEnemyRunAway_a93148440120dfd61c14e3059bab1d7b6_cgraph" id="classEnemyRunAway_a93148440120dfd61c14e3059bab1d7b6_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,165,57"/>
+<area shape="rect" title="Sortie de l&#39;état. Remet la vitesse à la normal." alt="" coords="5,31,165,57"/>
 <area shape="rect" href="classEntityWithoutHP.html#a9b71c69d24f4c557f024f2a101513da0" title="Retourne la vitesse de l&#39;entité." alt="" coords="213,5,413,32"/>
 <area shape="rect" href="classEntityWithoutHP.html#a87424952f6ec1c19bd5f370ed573a1c3" title="Permets de modifier la vitesse de l&#39;entité." alt="" coords="214,56,413,83"/>
 </map>
@@ -370,13 +404,15 @@ Voici le graphe d'appel pour cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Retourne une Instance de l'objet, un singleton. </p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classEnemyRunAway_a57fcb322589ab9dbc671f19f98df3b5b_cgraph.png" border="0" usemap="#classEnemyRunAway_a57fcb322589ab9dbc671f19f98df3b5b_cgraph" alt=""/></div>
 <map name="classEnemyRunAway_a57fcb322589ab9dbc671f19f98df3b5b_cgraph" id="classEnemyRunAway_a57fcb322589ab9dbc671f19f98df3b5b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,196,32"/>
-<area shape="rect" href="classEnemyRunAway.html#a5d56fabaf2823d44a491ea7f43083b47" title=" " alt="" coords="244,5,485,32"/>
+<area shape="rect" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="5,5,196,32"/>
+<area shape="rect" href="classEnemyRunAway.html#a5d56fabaf2823d44a491ea7f43083b47" title="Constructeur par défaut." alt="" coords="244,5,485,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -384,8 +420,8 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="classEnemyRunAway_a57fcb322589ab9dbc671f19f98df3b5b_icgraph.png" border="0" usemap="#classEnemyRunAway_a57fcb322589ab9dbc671f19f98df3b5b_icgraph" alt=""/></div>
 <map name="classEnemyRunAway_a57fcb322589ab9dbc671f19f98df3b5b_icgraph" id="classEnemyRunAway_a57fcb322589ab9dbc671f19f98df3b5b_icgraph">
-<area shape="rect" title=" " alt="" coords="216,5,407,32"/>
-<area shape="rect" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="5,5,168,32"/>
+<area shape="rect" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="216,5,407,32"/>
+<area shape="rect" href="classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title="Execution de l&#39;état. L&#39;Enemy se déplace aléatoirement et entre en état EnemyAttack si le joueur est a..." alt="" coords="5,5,168,32"/>
 </map>
 </div>
 
@@ -415,6 +451,8 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>Opérateur par copie. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Documentation des champs</h2>
@@ -437,6 +475,8 @@ Voici le graphe des appelants de cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Singleton, instance unique de l'objet. </p>
 
 </div>
 </div>

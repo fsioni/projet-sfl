@@ -5,7 +5,6 @@ var classStateGameTxt =
     [ "~StateGameTxt", "classStateGameTxt.html#aff352c6670e1e10ad98c6da5a42f7f60", null ],
     [ "Display", "classStateGameTxt.html#a18e90d3f3f04461c26d02f4795674001", null ],
     [ "Init", "classStateGameTxt.html#a3d0676321b499bfb77048f625c08c4fa", null ],
-    [ "MoveWithCollision", "classStateGameTxt.html#a261e45535cd2d3253e5a314c12602b0f", null ],
     [ "Pause", "classStateGameTxt.html#a2e6b31e7b5a7d1861bda28b930376b80", null ],
     [ "ProcessInput", "classStateGameTxt.html#a07f02b63b0dce18316a5128a7f244aaf", null ],
     [ "Start", "classStateGameTxt.html#ae1cd93fd51c80fd069f7b871fcd4e32e", null ],

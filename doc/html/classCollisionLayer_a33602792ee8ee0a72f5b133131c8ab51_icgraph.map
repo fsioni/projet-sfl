@@ -1,0 +1,7 @@
+<map id="CollisionLayer::AddCollisionBox" name="CollisionLayer::AddCollisionBox">
+<area shape="rect" id="node1" title="Fonction permettant d&#39;ajouter une boîte de collision à la couche." alt="" coords="447,31,675,57"/>
+<area shape="rect" id="node2" href="$classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="281,5,368,32"/>
+<area shape="rect" id="node3" href="$classCollisionLayer.html#a399a9c33d2ef2c935e42e605697b85e1" title="Test de regression." alt="" coords="251,56,399,83"/>
+<area shape="rect" id="node4" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,56,203,83"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,60,83"/>
+</map>

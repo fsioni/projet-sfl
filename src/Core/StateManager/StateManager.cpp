@@ -1,5 +1,6 @@
 #include "StateManager.h"
 #include <iostream>
+#include <assert.h>
 
 StateManager::StateManager() : add(false), replace(false), remove(false)
 {
@@ -59,4 +60,24 @@ void StateManager::ProcessStateChange()
 std::unique_ptr<State> &StateManager::GetCurrent()
 {
     return sStates.top();
+}
+
+void StateManager::Test() const
+{
+    std::cout << "===== Class StateManager =====" << std::endl;
+
+    StateManager sm1;
+
+    std::cout << "Constructeur StateManager() : ";
+    assert(sm1.add == false);
+    assert(sm1.replace == false);
+    assert(sm1.remove == false);
+    std::cout << "ok" << std::endl;
+
+    std::cout << "Fonction PopCurrent() : ";
+    sm1.PopCurrent();
+    assert(sm1.add == false);
+    assert(sm1.replace == false);
+    assert(sm1.remove == true);
+    std::cout << "ok" << std::endl;
 }
