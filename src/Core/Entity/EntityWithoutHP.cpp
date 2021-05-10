@@ -47,21 +47,11 @@ void EntityWithoutHP::PrintEntityInfo()
     std::cout << "x = " << x << ", y = " << y << ", nom : " << std::endl;
 }
 
-void EntityWithoutHP::SetPos_x(float newx)
-{
-    if (newx >= 0)
-        x = newx;
-}
+
 
 float EntityWithoutHP::GetPos_x() const
 {
     return x;
-}
-
-void EntityWithoutHP::SetPos_y(float newy)
-{
-    if (newy >= 0)
-        y = newy;
 }
 
 
@@ -236,20 +226,6 @@ void EntityWithoutHP::Test() const{
     assert(entity2.speed == 3);
     assert(entity2.direction == Right);
     assert(!entity2.isMoving);
-    std::cout << "ok" << std::endl;
-
-    std::cout << "SetPos_x(float newX) et GetPos_x() : ";
-    entity1.SetPos_x(10.3);
-    assert(entity1.GetPos_x() == float(10.3));
-    entity1.SetPos_x(-2);
-    assert(entity1.GetPos_x() == float(10.3));
-    std::cout << "ok" << std::endl;
-
-    std::cout << "SetPos_y(float newY) et GetPos_y() : ";
-    entity1.SetPos_y(20.4);
-    assert(entity1.GetPos_y() == float(20.4));
-    entity1.SetPos_y(-4);
-    assert(entity1.GetPos_y() == float(20.4));
     std::cout << "ok" << std::endl;
 
     std::cout << "SetSpeed(int newSpeed) et GetSpeed() : ";

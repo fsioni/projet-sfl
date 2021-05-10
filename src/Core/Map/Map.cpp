@@ -64,18 +64,12 @@ void Map::AddMapLayer(const MapLayer &layer)
     mapLayers.push_back(layer);
 }
 
-void Map::SetSpawnLayer(const SpawnsLayer &nLayer)
-{
-    *spawnsLayer = nLayer;
-}
-
 Tileset *Map::GetTileset() const
 {
     return tileset;
 }
 
-CollisionLayer *Map::GetCollisionLayer()
-{
+CollisionLayer *Map::GetCollisionLayer() const{
     return collisionLayer;
 }
 
