@@ -78,15 +78,6 @@ std::vector<SpawnPoint> SpawnsLayer::GetEnemySpawns() const
     return ennemySpawns;
 }
 
-void SpawnsLayer::ChangePlayerSpawn(SpawnPoint const &newSpawn)
-{
-    playerSpawn = newSpawn;
-}
-
-void SpawnsLayer::AddEnemy(SpawnPoint const &newSpawn)
-{
-    ennemySpawns.push_back(newSpawn);
-}
 
 std::vector<SpawnPoint> SpawnsLayer::GetNPCSpawns() const
 {
@@ -96,11 +87,6 @@ std::vector<SpawnPoint> SpawnsLayer::GetNPCSpawns() const
 std::vector<SpawnPoint> SpawnsLayer::GetAnimalSpawns() const
 {
     return animalSpawns;
-}
-
-void SpawnsLayer::AddNPC(SpawnPoint const &newSpawn)
-{
-    NpcSpawns.push_back(newSpawn);
 }
 
 
@@ -154,25 +140,18 @@ void SpawnsLayer::Test() const{
     assert(spawnsLayer2.animalSpawns.size()==2);
     std::cout << "ok" << std::endl;
 
-    std::cout << "AddEnemy(SpawnPoint const &newSpawn) : ";
-    spawnsLayer2.AddEnemy(SpawnPoint("<object id=\"11\" x=\"368\" y=\"190\"/>"));
-    assert(spawnsLayer2.GetEnemySpawns().size()==4);
-    assert(spawnsLayer2.GetEnemySpawns()[3].GetX()==368);
-    assert(spawnsLayer2.GetEnemySpawns()[3].GetY()==190);
+    std::cout << "AngleToDirection(int angle) : ";
+    assert(AngleToDirection(350)==Up);
+    assert(AngleToDirection(10)==Up);
+    assert(AngleToDirection(-360)==Up);
+    assert(AngleToDirection(90)==Right);
+    assert(AngleToDirection(430)==Right);
+    assert(AngleToDirection(180)==Down);
+    assert(AngleToDirection(900)==Down);
+    assert(AngleToDirection(270)==Left);
     std::cout << "ok" << std::endl;
 
-    std::cout << "AddNPC(SpawnPoint const &newSpawn) : ";
-    spawnsLayer2.AddNPC(SpawnPoint("<object id=\"11\" x=\"368\" y=\"190\"/>"));
-    assert(spawnsLayer2.GetNPCSpawns().size()==4);
-    assert(spawnsLayer2.GetNPCSpawns()[3].GetX()==368);
-    assert(spawnsLayer2.GetNPCSpawns()[3].GetY()==190);
-    std::cout << "ok" << std::endl;
 
-    std::cout << "ChangePlayerSpawn(SpawnPoint const &newSpawn) : ";
-    spawnsLayer2.ChangePlayerSpawn(SpawnPoint("<object id=\"11\" x=\"368\" y=\"190\"/>"));
-    assert(spawnsLayer2.GetPlayerSpawn().GetX()==368);
-    assert(spawnsLayer2.GetPlayerSpawn().GetY()==190);
-    std::cout << "ok" << std::endl;
 
     std::cout << std::endl << std::endl;
 }

@@ -48,11 +48,6 @@ public:
     */
     void AddMapLayer(const MapLayer &l);
 
-    /*! \brief Modifie spawnsLayers par celui en paramètre.
-    *   
-    *   \param [in] nLayer : SpawnsLayer à copié dans spawnsLayer
-    */
-    void SetSpawnLayer(const SpawnsLayer &nLayer);
 
     /*! \brief Retourne tileset
     *
