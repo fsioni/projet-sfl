@@ -222,6 +222,12 @@ public:
     */
     void Test() const;
 
+    /*! \brief Retourne l'offset de l'entité.
+    *
+    *   \return Valeur de l'offset de l'entité.
+    */ 
+    int GetOffset() const;
+
 protected :
     /*// ==== Données membres protégées === //*/
 

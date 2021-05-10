@@ -177,6 +177,10 @@ int EntityWithoutHP::GetID() const{
     return id.id;
 }
 
+int EntityWithoutHP::GetOffset() const{
+    return offset;
+}
+
 bool EntityWithoutHP::MoveWithCollision(float vx, float vy, CollisionLayer * colLayer, int dt){
     
     bool isColliding = false;

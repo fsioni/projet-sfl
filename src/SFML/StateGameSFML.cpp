@@ -689,13 +689,13 @@ void StateGameSFML::DisplayAnimals(){
 }
 
 void StateGameSFML::DisplayCollisionBox(
-            Box * cb, const sf::Color & color, int id)
+            Box * cb, const sf::Color & color, int id, int offset)
 {
     sf::RectangleShape rectColBox(
-        sf::Vector2f(cb->GetWidth(), cb->GetHeight())
+        sf::Vector2f(cb->GetWidth()-2*offset, cb->GetHeight()-2*offset)
     );
-    int x = cb->GetX() - substX - 16;
-    int y = cb->GetY() - substY - 16;
+    int x = cb->GetX() - substX - offset;
+    int y = cb->GetY() - substY - offset;
 
     rectColBox.setPosition(x, y);
     rectColBox.setFillColor(color);
@@ -728,19 +728,23 @@ void StateGameSFML::DisplayDebug(){
 
     //Affichage du debug du joueur
     int playerID = context->player->GetID();
+    int offset = context->player->GetOffset();
     Box * cbPlayer = colLayer->GetCollisionBoxesEntity()[playerID];
 
     //Affichage de la collision box player
-    DisplayCollisionBox(cbPlayer, sf::Color(170, 30, 155, 200), playerID);
+    DisplayCollisionBox(cbPlayer, sf::Color(170, 30, 155, 200),
+                        playerID, offset);
     
     // CollisionBoxes enemy
     for (long unsigned int i=0; i < context->enemies.size(); i++)
     {
         int enemyID = context->enemies[i]->GetID();
+        offset = context->enemies[i]->GetOffset();
+        // On vérifie que la clé existe 
         if(colLayer->CollisionBoxEntityExist(enemyID)){
-            Box * enemyBoxe = 
-                colLayer->GetCollisionBoxesEntity()[enemyID]; 
-            DisplayCollisionBox(enemyBoxe, sf::Color(170, 30, 155, 200), enemyID);
+            Box * enemyBoxe = colLayer->GetCollisionBoxesEntity()[enemyID]; 
+            DisplayCollisionBox(enemyBoxe, sf::Color(170, 30, 155, 200),
+                                enemyID, offset);
         }
     } 
 
@@ -748,12 +752,26 @@ void StateGameSFML::DisplayDebug(){
     for (long unsigned int i=0; i < context->npc.size(); i++)
     {
         int npcID = context->npc[i]->GetID();
+        offset = context->npc[i]->GetOffset();
+        // On vérifie que la clé existe
         if(colLayer->CollisionBoxEntityExist(npcID)){
-            Box * npcBoxe = 
-                colLayer->GetCollisionBoxesEntity()[ npcID]; 
-            DisplayCollisionBox(npcBoxe, sf::Color(170, 30, 155, 200),  npcID);
+            Box * npcBoxe = colLayer->GetCollisionBoxesEntity()[ npcID]; 
+            DisplayCollisionBox(npcBoxe, sf::Color(170, 30, 155, 200),
+                                npcID, offset);
         }
     }     
+
+    // CollisionBoxes Animal
+    for(long unsigned int i = 0; i < context->animals.size(); i++){
+        int animalID = context->animals[i]->GetID();
+        offset = context->animals[i]->GetOffset();
+        // On vérifie que la clé existe
+        if(colLayer->CollisionBoxEntityExist(animalID)){
+            Box * animalBox = colLayer->GetCollisionBoxesEntity()[animalID];
+            DisplayCollisionBox(animalBox, sf::Color(170, 30, 155, 200),
+                                animalID, offset);
+        }
+    }
 
 
     // Affichage des collision boxes de la map

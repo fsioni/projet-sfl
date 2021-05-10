@@ -66,7 +66,7 @@ public:
     *
     */
     void DisplayCollisionBox(
-        Box * cb, const sf::Color & color, int id);
+        Box * cb, const sf::Color & color, int id, int offset);
 
     /*! \brief Affichage le mode debug sur la fenêtre SFML
     *
