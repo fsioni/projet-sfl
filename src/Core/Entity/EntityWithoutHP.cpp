@@ -82,16 +82,6 @@ void EntityWithoutHP::SetDirection(EntityDirection nDirection)
     direction = nDirection;
 }
 
-int EntityWithoutHP::RandNumberGenerator(int minimum, int maximum)
-{
-
-    int random;
-    int plage = maximum - minimum + 1;
-
-    random = (rand() % plage) + minimum;
-
-    return random;
-}
 
 void EntityWithoutHP::SetDirection(float vx, float vy)
 {

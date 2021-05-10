@@ -119,7 +119,7 @@ EntityDirection SpawnsLayer::GetADirection(int ind) const{
 EntityDirection SpawnsLayer::AngleToDirection(int angle) const{
     // On replace angle dans l'intervalle [0, 360]
     angle = angle%360;
-    if(angle >=315 && angle < 45)
+    if(angle >=315 || angle < 45)
         return Up;
     if(angle >=45 && angle < 135)
         return Right;

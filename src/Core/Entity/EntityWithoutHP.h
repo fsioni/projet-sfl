@@ -147,17 +147,7 @@ public:
     *   \param [in] vy: réel, valeur de déplacement sur l'axe Y.
     */    
     void Move(float vx, float vy);
-
-    /*! \brief Permet de générer un numéro de ligne aléatoirement.
-    *
-    *   \param [in] minimum : entier positif, nombre minimum possible lors du tirage.
-    *   \param [in] maximum : entier positif, nombre maximum possible lors du tirage.
-    *
-    *
-    *   Retourne un chiffre compris entre minimum et maximum aléatoirement.
-    *
-    */
-    int RandNumberGenerator(int minimum, int maximum);
+    
 
     /*! \brief Retourne le statut de déplacement de l'entité.
     *  False, l'entité est immobile et True elle est en mouvement.
