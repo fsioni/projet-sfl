@@ -220,7 +220,7 @@ void AssetManager::SetAnimalTexture(std::string fileTexture)
         textureAnimal.loadFromFile(fileTexture);
     }
     else
-        std::cout << "Echec SetSoundTexture( "
+        std::cout << "Echec SetAnimalTexture( "
                   << fileTexture << " ) : fichier inexistant"
                   << std::endl;
 }
