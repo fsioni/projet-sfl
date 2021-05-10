@@ -1,0 +1,5 @@
+<map id="StateGameSFML::DisplayCollisionBox" name="StateGameSFML::DisplayCollisionBox">
+<area shape="rect" id="node1" title="Affichage une CollisionBox sur la fenêtre SFML." alt="" coords="517,5,785,32"/>
+<area shape="rect" id="node2" href="$classStateGameSFML.html#a8e856a9c6fca122ce3a10e3cf877531b" title="Affichage le mode debug sur la fenêtre SFML." alt="" coords="240,5,469,32"/>
+<area shape="rect" id="node3" href="$classStateGameSFML.html#a4b3d8bb0ea49142cc712a59db6da566a" title="Fonction d&#39;affichage du State." alt="" coords="5,5,192,32"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="CountTag" name="CountTag">
+<area shape="rect" id="node1" title="Compte le nombre d&#39;occurence d&#39;une balise." alt="" coords="501,97,584,123"/>
+<area shape="rect" id="node2" href="$classCollisionLayer.html#ad7562ed58ac10b8720614008b557a1c1" title="Constructeur par balise." alt="" coords="263,5,441,47"/>
+<area shape="rect" id="node3" href="$classSpawnsLayer.html#aeb16f8270a085d422870501d1fcd3409" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="251,71,453,98"/>
+<area shape="rect" id="node4" href="$tmxParsing_8h.html#a9fa1a7abecf83a7b024f031c9ccac69f" title="Fonction de test de regression." alt="" coords="254,122,450,149"/>
+<area shape="rect" id="node7" href="$classMap.html#ab57f33273034a118bb9434befbeb4263" title="Charge les données d&#39;un fichier .tmx." alt="" coords="271,173,433,199"/>
+<area shape="rect" id="node5" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,122,203,149"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,122,60,149"/>
+<area shape="rect" id="node8" href="$classMap.html#aabdba839fca85548ccc15926cdb5f68a" title="Constructeur prennant en parametre un fichier .tmx et un .tsx." alt="" coords="112,173,199,199"/>
+</map>

@@ -1,11 +1,11 @@
 <map id="EntityWithoutHP::SetDirection" name="EntityWithoutHP::SetDirection">
-<area shape="rect" id="node1" title="Permets de modifier la direction de l&#39;entité." alt="" coords="560,132,777,159"/>
-<area shape="rect" id="node2" href="$structContext.html#a652cdcd2eedc8dbd9110bd284c5d5cf0" title=" " alt="" coords="353,5,485,32"/>
-<area shape="rect" id="node3" href="$classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title=" " alt="" coords="335,56,503,83"/>
-<area shape="rect" id="node4" href="$classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title=" " alt="" coords="325,107,512,133"/>
-<area shape="rect" id="node5" href="$classAnimal.html#a5421645bed098ce5eaf31569db2ea031" title=" " alt="" coords="329,157,508,184"/>
-<area shape="rect" id="node6" href="$classStateGameOverSFML.html#aa166a17b191164097564aeafa3bbe954" title=" " alt="" coords="334,209,503,250"/>
-<area shape="rect" id="node8" href="$classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="337,275,500,301"/>
+<area shape="rect" id="node1" title="Permets de modifier la direction de l&#39;entité." alt="" coords="563,132,780,159"/>
+<area shape="rect" id="node2" href="$structContext.html#a652cdcd2eedc8dbd9110bd284c5d5cf0" title=" " alt="" coords="354,5,486,32"/>
+<area shape="rect" id="node3" href="$classAnimalFollowing.html#af1712ef260f6e99602db5acc868825f5" title="Execution de l&#39;état. L&#39;Animal se déplace en direction du joueur. Il entre en état AnimalWalking si il..." alt="" coords="325,56,515,83"/>
+<area shape="rect" id="node4" href="$classEnemyAttack.html#a3da580ed9a1f68dab67de66a210bfe30" title="Execution de l&#39;état. L&#39;Enemy se déplace en direciton du Player, et si il est assez proche il l&#39;attaqu..." alt="" coords="336,107,504,133"/>
+<area shape="rect" id="node5" href="$classEnemyRunAway.html#a5024c29a69c0229bc6a34ffa44436020" title="Execution de l&#39;état. L&#39;Enemy se déplace dans la direciton opposé du Player. Si il est assez loin,..." alt="" coords="327,157,513,184"/>
+<area shape="rect" id="node6" href="$classStateGameOverSFML.html#aa166a17b191164097564aeafa3bbe954" title=" " alt="" coords="335,209,505,250"/>
+<area shape="rect" id="node8" href="$classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="339,275,501,301"/>
 <area shape="rect" id="node7" href="$classStateGameOverSFML.html#ae9de1308673333e563430309b542f1dd" title="Fonction de mise à jour du State." alt="" coords="108,209,277,250"/>
 <area shape="rect" id="node9" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="145,275,240,301"/>
 <area shape="rect" id="node10" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,275,60,301"/>

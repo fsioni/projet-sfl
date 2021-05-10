@@ -1,0 +1,5 @@
+<map id="SpawnPoint::SpawnPoint" name="SpawnPoint::SpawnPoint">
+<area shape="rect" id="node1" title="Constructeur depuis balise d&#39;une map .tmx." alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node2" href="$tmxParsing_8cpp.html#a9e759647152efbca273187768f806d1a" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="236,5,391,32"/>
+<area shape="rect" id="node3" href="$tmxParsing_8cpp.html#a11672fc9dccbc12b5853edc3de6b9dbc" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="439,5,577,32"/>
+</map>

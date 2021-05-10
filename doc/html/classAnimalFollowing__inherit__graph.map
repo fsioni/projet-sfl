@@ -1,0 +1,5 @@
+<map id="AnimalFollowing" name="AnimalFollowing">
+<area shape="rect" id="node1" title="Etat de suivi d&#39;un Animal, il se déplace en direction du joueur, pour jouer ?" alt="" coords="23,375,178,540"/>
+<area shape="rect" id="node2" href="$classStateBehavior.html" title=" " alt="" coords="5,204,196,325"/>
+<area shape="rect" id="node3" href="$classStateBehavior.html" title=" " alt="" coords="17,5,184,141"/>
+</map>

@@ -1,4 +1,4 @@
 <map id="Enemy::ChangeDirection" name="Enemy::ChangeDirection">
-<area shape="rect" id="node1" title=" " alt="" coords="216,5,399,32"/>
-<area shape="rect" id="node2" href="$classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title=" " alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node1" title="Change la direction de l&#39;Enemy. Utilise timeNextChangeDirection pour savoir si il est temps de change..." alt="" coords="216,5,399,32"/>
+<area shape="rect" id="node2" href="$classEnemyPatrol.html#a92c0b7b89f54d977fcbbc22704c445c5" title="Execution de l&#39;état. L&#39;Enemy se déplace aléatoirement et entre en état EnemyAttack si le joueur est a..." alt="" coords="5,5,168,32"/>
 </map>

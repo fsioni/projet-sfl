@@ -1,5 +1,10 @@
 var dir_f8b222e72c43d347d0b18d056289c891 =
 [
+    [ "AnimalStates.cpp", "AnimalStates_8cpp.html", null ],
+    [ "AnimalStates.h", "AnimalStates_8h.html", [
+      [ "AnimalWalking", "classAnimalWalking.html", "classAnimalWalking" ],
+      [ "AnimalFollowing", "classAnimalFollowing.html", "classAnimalFollowing" ]
+    ] ],
     [ "EnemyStates.cpp", "EnemyStates_8cpp.html", null ],
     [ "EnemyStates.h", "EnemyStates_8h.html", [
       [ "EnemyPatrol", "classEnemyPatrol.html", "classEnemyPatrol" ],

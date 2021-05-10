@@ -1,6 +1,6 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
 <area shape="rect" id="node1" href="$classEntityWithoutHP.html" title="Classe représentant une entité immobile et immortel." alt="" coords="5,56,135,83"/>
-<area shape="rect" id="node2" href="$classAnimal.html" title=" " alt="" coords="203,5,271,32"/>
+<area shape="rect" id="node2" href="$classAnimal.html" title="Représente un animal, hérite de EntityWithouHP." alt="" coords="203,5,271,32"/>
 <area shape="rect" id="node3" href="$classEntityWithHP.html" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer." alt="" coords="183,56,291,83"/>
 <area shape="rect" id="node6" href="$classNPC.html" title="Classe représentant un personnage immobile non&#45;joueur qui peut donner des points de vie et communique..." alt="" coords="212,107,261,133"/>
 <area shape="rect" id="node4" href="$classEnemy.html" title="Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer." alt="" coords="339,31,405,57"/>

@@ -1,0 +1,4 @@
+<map id="StateMenuSFML::ProcessInput" name="StateMenuSFML::ProcessInput">
+<area shape="rect" id="node1" title="Fonction de gestion des touches du State." alt="" coords="5,5,224,32"/>
+<area shape="rect" id="node2" href="$classStateMenuSFML.html#afb434003460b3a74ad4c14de4682104d" title="Effectue les actions nécessaires lors du clic." alt="" coords="272,5,457,32"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="GetIntAttributeValue" name="GetIntAttributeValue">
+<area shape="rect" id="node1" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="501,132,656,159"/>
+<area shape="rect" id="node2" href="$classBox.html#a929e51c7af7daa185f5fd6a8956c8e76" title="Constructeur depuis balise d&#39;une map .tmx." alt="" coords="312,5,392,32"/>
+<area shape="rect" id="node3" href="$classMapLayer.html#aaa68e0a5062ae9f9dc97383d3687b19e" title="Constructeur avec data brut comme parametre." alt="" coords="273,56,431,83"/>
+<area shape="rect" id="node4" href="$classSpawnPoint.html#aad5dc128d02b983a3ccf52ee57a125b4" title="Constructeur depuis balise d&#39;une map .tmx." alt="" coords="261,107,443,133"/>
+<area shape="rect" id="node5" href="$classSpawnsLayer.html#aeb16f8270a085d422870501d1fcd3409" title="Constructeur avec la balise des spawns du joueur et celle des ennemis." alt="" coords="251,157,453,184"/>
+<area shape="rect" id="node6" href="$tmxParsing_8h.html#a9fa1a7abecf83a7b024f031c9ccac69f" title="Fonction de test de regression." alt="" coords="254,208,450,235"/>
+<area shape="rect" id="node9" href="$classTileset.html#af8a961b7dea8aa1172a6b1caa8b94e54" title="Constructeur par copie." alt="" coords="293,259,411,285"/>
+<area shape="rect" id="node7" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,208,203,235"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,208,60,235"/>
+</map>

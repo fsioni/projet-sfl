@@ -1,8 +1,8 @@
 <map id="Enemy::Enemy" name="Enemy::Enemy">
 <area shape="rect" id="node1" title="Constructeur par défaut." alt="" coords="5,93,124,120"/>
-<area shape="rect" id="node2" href="$classEnemyPatrol.html#adf5b330d3544e97142aaf385148818d4" title=" " alt="" coords="193,5,359,32"/>
-<area shape="rect" id="node4" href="$classStateMachine.html#a1cb139c64722aacbf7feb510215c994b" title=" " alt="" coords="182,57,370,98"/>
-<area shape="rect" id="node5" href="$classEnemy.html#abeaf8d77cd05862d568a01fe86a25595" title=" " alt="" coords="175,123,377,149"/>
-<area shape="rect" id="node6" href="$classEnemy.html#a3b8fda3171cad67a7c0ff9fa872496f3" title=" " alt="" coords="172,174,380,215"/>
-<area shape="rect" id="node3" href="$classEnemyPatrol.html#aa7bad085d7911a0b8952c18b248dce37" title=" " alt="" coords="428,5,623,32"/>
+<area shape="rect" id="node2" href="$classEnemyPatrol.html#adf5b330d3544e97142aaf385148818d4" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="193,5,359,32"/>
+<area shape="rect" id="node4" href="$classStateMachine.html#a1cb139c64722aacbf7feb510215c994b" title="Modifie l&#39;état courrant par celui passé en paramètre." alt="" coords="182,57,370,98"/>
+<area shape="rect" id="node5" href="$classEnemy.html#abeaf8d77cd05862d568a01fe86a25595" title="Affecte à timeNextAttack une valeur aléatoire." alt="" coords="175,123,377,149"/>
+<area shape="rect" id="node6" href="$classEnemy.html#a3b8fda3171cad67a7c0ff9fa872496f3" title="Affecte à timeNextChangeDirection une valeur aléatoire." alt="" coords="172,174,380,215"/>
+<area shape="rect" id="node3" href="$classEnemyPatrol.html#aa7bad085d7911a0b8952c18b248dce37" title="Constructeur par défaut." alt="" coords="428,5,623,32"/>
 </map>

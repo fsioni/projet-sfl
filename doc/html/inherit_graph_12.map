@@ -1,3 +1,6 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$classStateBehavior.html" title=" " alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node1" href="$classStateBehavior.html" title=" " alt="" coords="5,56,195,83"/>
+<area shape="rect" id="node2" href="$classEnemyAttack.html" title="Etat d&#39;attaque pour les Enemy, hérite de StateBehavior&lt;Enemy&gt;." alt="" coords="252,5,361,32"/>
+<area shape="rect" id="node3" href="$classEnemyPatrol.html" title="Etat de patrouille pour les Enemy, hérite de StateBehavior&lt;Enemy&gt;." alt="" coords="255,56,359,83"/>
+<area shape="rect" id="node4" href="$classEnemyRunAway.html" title="Etat de fuite pour les enemy, hérite de StateBehavior&lt;Enemy&gt;." alt="" coords="243,107,371,133"/>
 </map>

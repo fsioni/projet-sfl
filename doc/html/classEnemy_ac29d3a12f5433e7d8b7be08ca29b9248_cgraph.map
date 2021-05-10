@@ -1,4 +1,4 @@
 <map id="Enemy::Test" name="Enemy::Test">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,105,32"/>
-<area shape="rect" id="node2" href="$classEnemy.html#a59e340b5be743c22f0b5e2992e5e9344" title=" " alt="" coords="153,5,320,32"/>
+<area shape="rect" id="node1" title="Fonction de test de regression." alt="" coords="5,5,105,32"/>
+<area shape="rect" id="node2" href="$classEnemy.html#a59e340b5be743c22f0b5e2992e5e9344" title="Affecte une EntityDirection aléatoire à l&#39;Enemy." alt="" coords="153,5,320,32"/>
 </map>

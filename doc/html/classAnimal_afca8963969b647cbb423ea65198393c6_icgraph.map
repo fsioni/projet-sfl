@@ -1,0 +1,6 @@
+<map id="Animal::SetTimeNextChangeDirection" name="Animal::SetTimeNextChangeDirection">
+<area shape="rect" id="node1" title="Affecte à timeNextChangeDirection une valeur aléatoire." alt="" coords="464,23,675,65"/>
+<area shape="rect" id="node2" href="$classAnimal.html#a1e726a49ec952443190ac62dad22353c" title="Constructeur par défaut." alt="" coords="263,5,385,32"/>
+<area shape="rect" id="node3" href="$classAnimal.html#ab5662e8d869c2d5938d2deff70a12548" title="Change la direction de l&#39;Animal. Utilise timeNextChangeDirection pour savoir si il est temps de chang..." alt="" coords="232,56,416,83"/>
+<area shape="rect" id="node4" href="$classAnimalWalking.html#a43a258f2a7665923b12b16763f4863b4" title="Execution de l&#39;état. L&#39;Animal se déplace aléatoirement et entre en état AnimalFollowing si le joueur ..." alt="" coords="5,56,184,83"/>
+</map>

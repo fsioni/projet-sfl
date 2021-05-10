@@ -1,6 +1,6 @@
 <map id="EntityWithHP" name="EntityWithHP">
-<area shape="rect" id="node1" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer." alt="" coords="166,571,317,883"/>
-<area shape="rect" id="node3" href="$classEnemy.html" title="Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer." alt="" coords="5,931,245,1184"/>
-<area shape="rect" id="node4" href="$classPlayer.html" title="Classe représentant un joueur qui peut infliger/subir des dégats et se déplacer." alt="" coords="270,982,445,1133"/>
-<area shape="rect" id="node2" href="$classEntityWithoutHP.html" title="Classe représentant une entité immobile et immortel." alt="" coords="143,5,340,523"/>
+<area shape="rect" id="node1" title="Classe représentant une entité qui peut infliger/subir des dégats et se déplacer." alt="" coords="166,527,317,839"/>
+<area shape="rect" id="node3" href="$classEnemy.html" title="Classe représentant un ennemi qui peut infliger/subir des dégats et se déplacer." alt="" coords="5,887,245,1140"/>
+<area shape="rect" id="node4" href="$classPlayer.html" title="Classe représentant un joueur qui peut infliger/subir des dégats et se déplacer." alt="" coords="270,938,445,1089"/>
+<area shape="rect" id="node2" href="$classEntityWithoutHP.html" title="Classe représentant une entité immobile et immortel." alt="" coords="157,5,326,479"/>
 </map>

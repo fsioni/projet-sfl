@@ -1,0 +1,7 @@
+<map id="GetDataTag" name="GetDataTag">
+<area shape="rect" id="node1" title="Retourne ce qu&#39;il y entre la balise ouvrante et fermante (sans les balises)." alt="" coords="495,31,593,57"/>
+<area shape="rect" id="node2" href="$classMapLayer.html#aaa68e0a5062ae9f9dc97383d3687b19e" title="Constructeur avec data brut comme parametre." alt="" coords="269,5,428,32"/>
+<area shape="rect" id="node3" href="$tmxParsing_8h.html#a9fa1a7abecf83a7b024f031c9ccac69f" title="Fonction de test de regression." alt="" coords="251,56,447,83"/>
+<area shape="rect" id="node4" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,56,203,83"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,60,83"/>
+</map>

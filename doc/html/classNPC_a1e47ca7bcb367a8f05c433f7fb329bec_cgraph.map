@@ -1,0 +1,5 @@
+<map id="NPC::Test" name="NPC::Test">
+<area shape="rect" id="node1" title="Fonction de test de regression." alt="" coords="5,31,88,57"/>
+<area shape="rect" id="node2" href="$classNPC.html#a55cb5273c2f2e1c89d9f48a873ec7e41" title="Retourne la phrase que le NPC peut dire au joueur." alt="" coords="184,5,307,32"/>
+<area shape="rect" id="node3" href="$classEntityWithoutHP.html#a7642f894c466f34541045454e49ba72d" title="Retourne la direction de l&#39;entité." alt="" coords="136,56,355,83"/>
+</map>

@@ -1,0 +1,20 @@
+<map id="AnimalWalking::Execute" name="AnimalWalking::Execute">
+<area shape="rect" id="node1" title="Execution de l&#39;état. L&#39;Animal se déplace aléatoirement et entre en état AnimalFollowing si le joueur ..." alt="" coords="5,161,184,188"/>
+<area shape="rect" id="node2" href="$classAnimal.html#ab5662e8d869c2d5938d2deff70a12548" title="Change la direction de l&#39;Animal. Utilise timeNextChangeDirection pour savoir si il est temps de chang..." alt="" coords="249,35,433,61"/>
+<area shape="rect" id="node5" href="$classStateMachine.html#a5e928960ba29b86f878768e556ae8eb4" title="Permet de changer l&#39;état courrant." alt="" coords="240,85,443,112"/>
+<area shape="rect" id="node6" href="$classEntityWithoutHP.html#a7642f894c466f34541045454e49ba72d" title="Retourne la direction de l&#39;entité." alt="" coords="232,136,451,163"/>
+<area shape="rect" id="node7" href="$classAnimal.html#a490a04fdf3ac5434f32819c8be55627d" title="Retourne le StateMachine." alt="" coords="247,187,435,213"/>
+<area shape="rect" id="node8" href="$classAnimalFollowing.html#ab773d83ebdfd7e06a1b1813d3cb7bede" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="245,237,438,264"/>
+<area shape="rect" id="node10" href="$classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="240,421,443,462"/>
+<area shape="rect" id="node3" href="$classAnimal.html#a1a548a0e03b5e15794696e203d6110c3" title="Affecte une EntityDirection aléatoire à l&#39;Animal." alt="" coords="538,5,706,32"/>
+<area shape="rect" id="node4" href="$classAnimal.html#afca8963969b647cbb423ea65198393c6" title="Affecte à timeNextChangeDirection une valeur aléatoire." alt="" coords="517,57,727,98"/>
+<area shape="rect" id="node9" href="$classAnimalFollowing.html#a941268bab66a047446f4b4ef15d27865" title="Constructeur par défaut." alt="" coords="499,195,745,221"/>
+<area shape="rect" id="node11" href="$classCollisionLayer.html#a620b4ce21e4699a1a067ffaa60848667" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="521,246,723,287"/>
+<area shape="rect" id="node12" href="$classCollisionLayer.html#ac58218b7888e319365025f92265cf1de" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="521,311,723,353"/>
+<area shape="rect" id="node13" href="$classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="561,377,683,404"/>
+<area shape="rect" id="node14" href="$classEntityWithoutHP.html#a1a5d732b9f322135fbd5e5f227064b26" title="Retourne l&#39;ID de l&#39;entité." alt="" coords="535,428,709,455"/>
+<area shape="rect" id="node15" href="$classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="564,479,680,505"/>
+<area shape="rect" id="node16" href="$classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="579,529,665,556"/>
+<area shape="rect" id="node17" href="$classBox.html#af86b090508898469761c0d61c8230133" title="Retourne y." alt="" coords="579,580,665,607"/>
+<area shape="rect" id="node18" href="$classEntityWithoutHP.html#a0cfc433ea705c507da7912a8e039722e" title="Déplace l&#39;entité." alt="" coords="535,631,709,657"/>
+</map>

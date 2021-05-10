@@ -1,5 +1,5 @@
 <map id="EnemyRunAway::Exit" name="EnemyRunAway::Exit">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,165,57"/>
+<area shape="rect" id="node1" title="Sortie de l&#39;état. Remet la vitesse à la normal." alt="" coords="5,31,165,57"/>
 <area shape="rect" id="node2" href="$classEntityWithoutHP.html#a9b71c69d24f4c557f024f2a101513da0" title="Retourne la vitesse de l&#39;entité." alt="" coords="213,5,413,32"/>
 <area shape="rect" id="node3" href="$classEntityWithoutHP.html#a87424952f6ec1c19bd5f370ed573a1c3" title="Permets de modifier la vitesse de l&#39;entité." alt="" coords="214,56,413,83"/>
 </map>
