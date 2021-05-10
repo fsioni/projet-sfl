@@ -68,10 +68,10 @@ public:
     void UpdateStateMachine(std::unique_ptr<Player> &player_,
                             CollisionLayer *collision, int dt);
 
-    /*! \brief Affecte une EntityDirection aléatoire à l'enemy.*/
+    /*! \brief Affecte une EntityDirection aléatoire à l'Enemy.*/
     void RandDirection();
 
-    /*! \brief Change la direction de l'enemy.
+    /*! \brief Change la direction de l'Enemy.
     *   Utilise timeNextChangeDirection pour savoir si il est temps
     *   de changer de direction ou si le booléen de collision est true 
     *   alors on change la direction en utilisant RandDirection().
@@ -112,8 +112,17 @@ public:
     void Test() const;
 
 private:
+    /*! \brief Pointeur sur le StateMachine<Enemy>. */
     StateMachine<Enemy> *stateMachine;
+
+    /*! \brief Heure du prochain changement de direction possible.
+    *   Permet d'empecher l'Enemy de changer de direction trop souvent.
+    */
     double timeNextChangeDirection;
+
+    /*! \brief Heure de la prochaine attaque possible.
+    *   Permet d'empecher l'Enemy d'attaquer en continu à chaque update.
+    */
     double timeNextAttack;
 };
 

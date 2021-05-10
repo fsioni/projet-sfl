@@ -51,6 +51,9 @@ public:
     */
     void GiveHP(Player &p, int hpToGive);
 
+    /*! \brief Retourne la phrase que le NPC peut dire au joueur.
+    *   \return std::string, la phrase type du NPC.
+    */
     std::string GetDialog() const;
 
 private:
