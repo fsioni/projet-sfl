@@ -53,6 +53,14 @@ void StateSplashScreenSFML::ProcessInput()
     sf::Event Event;
     while (context->renderWin->pollEvent(Event))
     {
+        if(Event.type == sf::Event::Resized){
+            context->renderWin->setView(sf::View(
+                sf::FloatRect(0, 0, Event.size.width, Event.size.height)));
+            int winX = context->renderWin->getSize().x;
+            int winY = context->renderWin->getSize().y;
+            madeByText.setPosition(220, winY / 2.0f + 200.0f);
+            logoSprite.setPosition(winX/2, winY/2-150);
+        }
 
         switch (Event.type)
         {
