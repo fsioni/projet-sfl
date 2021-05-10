@@ -4,6 +4,9 @@
 #include "StateBehavior.h"
 #include "../Player.h"
 
+#include <iostream>
+#include <assert.h>
+
 /*! \class StateMachine<entity_type> 
 *   \brief Modélise un Finite State Machine (FSM) qui permet de
 *          créer des comportement prédéfinit pour des entité.
@@ -35,6 +38,12 @@ public:
     */
     void ChangeState(StateBehavior<entity_type> *newState);
 
+    /*! \brief Fonction de test de regression.
+    *
+    *   Effectue une série de test pour vérifié que chaque
+    *   fonctions fait ce qu'elle doit faire.
+    */
+    void Test() const;
 
 private:
     /*! \brief Pointeur sur l'entité du StateMachine. */
@@ -72,6 +81,19 @@ void StateMachine<entity_type>::ChangeState(StateBehavior<entity_type> *newState
     currentState->Exit(owner);
     currentState = newState;
     currentState->Enter(owner);
+}
+
+template <class entity_type>
+void StateMachine<entity_type>::Test() const{
+    std::cout << "===== Class StateMachine<entity_type> =====" << std::endl;
+    std::cout << "StateMachine(entity_type *owner_) : ";
+    entity_type * entity = new entity_type;
+    StateMachine<entity_type> stateMachine(entity);
+    assert(stateMachine.owner==entity);
+    assert(stateMachine.currentState==nullptr);
+    std::cout << "ok" << std::endl;
+
+    std::cout << std::endl << std::endl;
 }
 
 #endif

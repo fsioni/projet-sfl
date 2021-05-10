@@ -86,8 +86,13 @@ void Game::Run(int mode)
         UniqueID uniqueID;
         uniqueID.Test();
 
-        
         TestRegressionTmxParsing();
+
+        NPC npc;
+        npc.Test();
+
+        StateMachine<Enemy> stateMachine(new Enemy);
+        stateMachine.Test();
 
         std::cout << "TOUS LES TESTS ONT ETE PASSES AVEC SUCCES !" << std::endl;
         break;
