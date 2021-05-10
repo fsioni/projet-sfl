@@ -280,7 +280,7 @@
     <property name="Dialog" value="There was a time when we controlled the whole village and it may still be the case ..."/>
    </properties>
   </object>
-  <object id="406" x="2291.33" y="1142" rotation="0">
+  <object id="406" x="2291.33" y="1142">
    <properties>
     <property name="Dialog" value="I love animals ! But they     don't want to play with me..."/>
    </properties>
@@ -352,7 +352,7 @@
   <object id="419" x="3184.45" y="467.011"/>
   <object id="420" x="3038.71" y="1222.38" rotation="180"/>
  </objectgroup>
- <objectgroup id="8" name="Collision" visible="0">
+ <objectgroup id="8" name="Collision">
   <object id="14" x="770" y="926" width="64" height="64"/>
   <object id="162" x="833.333" y="992" width="64" height="64"/>
   <object id="154" x="608.667" y="928" width="64" height="64"/>
@@ -471,7 +471,7 @@
   <object id="363" x="546.28" y="1344.74" width="28.871" height="222.843"/>
   <object id="129" x="2848.72" y="32.3703" width="31.682" height="287.032"/>
   <object id="71" x="767.65" y="1024.37" width="31.98" height="63.0045"/>
-  <object id="227" x="255.645" y="481.02" width="63.3207" height="31.0045" rotation="270.128"/>
+  <object id="227" x="255.645" y="415.351" width="31.364" height="64.2255"/>
   <object id="228" x="96.3153" y="415.611" width="63.3207" height="63.6651"/>
   <object id="72" x="321.598" y="1249.01" width="27.2931" height="84.0059"/>
   <object id="332" x="64.2689" y="1250.01" width="31.2931" height="85.0059"/>
