@@ -30,10 +30,28 @@ public:
     /*! \brief Destructeur. */
     ~MapLayer();
 
+    /*! \brief Retourne la largeur de la map.
+    *   \return Un entier positif, la largeur de la map. 
+    */
     int GetWidth() const;
+
+    /*! \brief Retourne la hauteur de la map.
+    *   \return Un entier positif, la hauteur de la map. 
+    */
     int GetHeight() const;
+
+    /*! \brief Retourne la valeur de la MapLayer au coordonnées (x, y).
+    *   Converti les indices du tableau 1D en indice de tableau 2D.   
+    *
+    *   \return Un entier positif, la valeur de la map au coordonnées (x, y).
+    */
     int GetData(int x, int y) const;
 
+    /*! \brief Fonction de test de regression.
+    *
+    *   Effectue une série de test pour vérifié que chaque
+    *   fonctions fait ce qu'elle doit faire.
+    */
     void Test() const;
 
 private:
