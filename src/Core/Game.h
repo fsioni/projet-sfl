@@ -82,7 +82,7 @@ struct Context
             // Ajout de sa CollisionBox au CollisionLayer
             // y + 5 pour descendre la collisionBox au niveau des pieds
             map->GetCollisionLayer()->AddCollisionBoxEntity(
-                newNPC->GetID(), new Box(x, y+5, 32, 32));
+                newNPC->GetID(), new Box(x, y+5, 32, 25));
 
         }
 
