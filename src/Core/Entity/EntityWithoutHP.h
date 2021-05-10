@@ -78,12 +78,6 @@ public:
     */
     virtual void PrintEntityInfo();
 
-    /*! \brief Retourne la largeur de l'entité.
-    *
-    *   Retourne un réel, la largeur de l'entité.
-    */
-    float GetWidth() const;
-
 
     /*! \brief Retourne la vitesse de l'entité.
     *
