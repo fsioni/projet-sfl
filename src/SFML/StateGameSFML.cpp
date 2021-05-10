@@ -384,7 +384,8 @@ void StateGameSFML::UpdatePlayer()
 
     int playerID= context->player->GetID();
     int playerX = context->player->GetPos_x();
-    int playerY = context->player->GetPos_y();
+    // + 5 pour descendre la collisionBox au niveau des pieds
+    int playerY = context->player->GetPos_y()+5;
     
 
     Box * cbPlayer = 
@@ -437,7 +438,8 @@ void StateGameSFML::UpdateEnemies()
             
             
             float posX = context->enemies[i]->GetPos_x();
-            float posY = context->enemies[i]->GetPos_y();
+            // + 5 pour descendre la collisionBox au niveau des pieds
+            float posY = context->enemies[i]->GetPos_y()+5;
             int enemyID = context->enemies[i]->GetID();
 
             if(colLayer->CollisionBoxEntityExist(enemyID)){

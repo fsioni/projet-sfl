@@ -283,7 +283,19 @@ void StateGameOverSFML::RestartGame()
         // Ajout de sa CollisionBox au CollisionLayer
         context->map->GetCollisionLayer()->AddCollisionBoxEntity(
             newNPC->GetID(), new Box(x, y, 32, 32));
+    }
 
+    // Initialisation des animaux
+    count = context->map->GetSpawnsLayer()->GetAnimalSpawns().size();
+    for (int i = 0; i < count; i++){
+        x = context->map->GetSpawnsLayer()->GetAnimalSpawns()[i].GetX();
+        y = context->map->GetSpawnsLayer()->GetAnimalSpawns()[i].GetY();
+
+        Animal * animal = new Animal(x, y, 1, "animal");
+        context->animals.push_back(animal);
+            
+        context->map->GetCollisionLayer()->AddCollisionBoxEntity(
+            animal->GetID(), new Box(x, y, 32, 32));
     }
 }
 
