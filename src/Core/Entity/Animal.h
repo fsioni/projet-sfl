@@ -27,14 +27,6 @@ class Animal : public EntityWithoutHP
     ~Animal();
 
 
-    /*! \brief Retourne une direction aléatoire.
-    *
-    *   Permets de retouner une direction aléatoire.
-    *
-    */
-    EntityDirection RandDirection();
-
-
     /*! \brief Retourne le StateMachine.
     *   \return Pointeur sur StateMachine<Animal>.
     */
