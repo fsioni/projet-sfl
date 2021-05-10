@@ -499,7 +499,13 @@ void StateGameSFML::UpdateNPCs(){
     }
     else if (isInRange && hasInteracted)
     {
-        npcText.setString(context->npc[npcInRange]->GetDialog());
+        std::string dialog = context->npc[npcInRange]->GetDialog();
+
+        for(int i=1; i*30< dialog.size(); i++)
+            dialog.insert(30*i, "\n");
+        
+
+        npcText.setString(dialog);
     }
 }
 
