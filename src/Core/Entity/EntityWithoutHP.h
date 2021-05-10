@@ -94,12 +94,6 @@ public:
     */
     virtual void PrintEntityInfo();
 
-    /*! \brief Retourne la largeur de l'entité.
-    *
-    *   Retourne un réel, la largeur de l'entité.
-    */
-    float GetWidth() const;
-
 
     /*! \brief Retourne la vitesse de l'entité.
     *
@@ -108,10 +102,10 @@ public:
     int GetSpeed() const;
 
     /*! \brief Permets de modifier la vitesse de l'entité.
-    *   
+    *
     *   \param [in] newSpeed: entier positif, nouvelle vitesse de l'entité.
-    *   
-    *   Vérifie que newSpeed est positif. 
+    *
+    *   Vérifie que newSpeed est positif.
     */
     void SetSpeed(int newSpeed);
 
@@ -128,10 +122,10 @@ public:
 
 
     /*! \brief Permets de modifier la direction de l'entité.
-    *   
+    *
     *   Assigne la direction en fonction de l'axe sur lequel
     *   il y a le plus grand déplacement.
-    *   
+    *
     *   \param [in] vx: réel, valeur de déplacement sur l'axe X.
     *   \param [in] vy: réel, valeur de déplacement sur l'axe Y.
     *
@@ -139,15 +133,15 @@ public:
     void SetDirection(float vx, float vy);
 
     /*! \brief Déplace l'entité.
-    *   
+    *
     *   Modifie la position de l'entité en fonction de sa vitesse
     *   et des valeur de déplacement passé en paramètre
-    *   
+    *
     *   \param [in] vx: réel, valeur de déplacement sur l'axe X.
     *   \param [in] vy: réel, valeur de déplacement sur l'axe Y.
-    */    
+    */
     void Move(float vx, float vy);
-    
+
 
     /*! \brief Retourne le statut de déplacement de l'entité.
     *  False, l'entité est immobile et True elle est en mouvement.
@@ -160,7 +154,7 @@ public:
     void SetIsMovingFalse();
 
     /*! \brief Calcul de distance entre l'entité et une autre entité.
-    *   
+    *
     *   \param [in] entity : Pointeur sur EntityWithoutHP, l'autre entité.
     */
     float Distance(const EntityWithoutHP * entity) const;
@@ -168,24 +162,24 @@ public:
     /*! \brief Retourne l'ID de l'entité.
     *
     *   Retourne la valeur de UniqueID de l'entité.
-    */ 
+    */
     int GetID() const;
 
 
     /*! \brief Déplace l'entité en vérifiant les collisions.
-    *   
-    *   Modifie la position de l'entité en fonction de sa vitesse, 
+    *
+    *   Modifie la position de l'entité en fonction de sa vitesse,
     *   des valeur de déplacement, de la couche de collision et du delta
     *   time passé en paramètre. Vérifie les collisions avec la map et
     *   avec les autres entités. Si il n'y a pas de collision, fait appel
     *   à Move(float vx, float vy).
-    *   
+    *
     *   \param [in] vx: réel, valeur de déplacement sur l'axe X.
     *   \param [in] vy: réel, valeur de déplacement sur l'axe Y.
-    *   \param [in] colLayer: pointeur sur CollisionLayer, couche qui stocke 
+    *   \param [in] colLayer: pointeur sur CollisionLayer, couche qui stocke
     *                         les boites de collision.
     *   \param [in] dt : entier, deltaTime.
-    */    
+    */
     bool MoveWithCollision(float vx, float vy, CollisionLayer * colLayer, int dt);
 
     /*! \brief Test de regression.
@@ -198,7 +192,7 @@ public:
     /*! \brief Retourne l'offset de l'entité.
     *
     *   \return Valeur de l'offset de l'entité.
-    */ 
+    */
     int GetOffset() const;
 
 protected :
@@ -227,7 +221,7 @@ protected :
     /*! \brief Offset de la CollisionBox */
     int offset;
 
-    
+
 };
 
 #endif
