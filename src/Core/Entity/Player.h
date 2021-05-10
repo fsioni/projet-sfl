@@ -52,9 +52,33 @@ public:
     */
     ~Player();
 
+
+    /*! \brief Calcul de distance avec un enemy.
+    *   
+    *   \param [in] enemy : std::shared_ptr sur Enemy, 
+    *                       Enemy dont on veut connaitre la distance.
+    * 
+    *   \return La distance entre le joueur et un Enemy.
+    */
     float DistanceShared_ptr(std::shared_ptr<Enemy> enemy) const;
+
+    /*! \brief Le joueur attaque un enemy.
+    *   
+    *   Test si l'Enemy est dans le rayon d'attaque du joueur,
+    *   si oui, il lui inflige des dégats et le fait reculer.
+    * 
+    *   \param [in] enemy : std::shared_ptr sur Enemy, Enemy à attaquer.
+    *   \param [in] colLayer : pointeur sur CollisionLayer, pour faire reculer 
+    *                       l'Enemy en prenant en compte les collisions.
+    */
     void Attack(std::shared_ptr<Enemy> enemy, CollisionLayer * colLayer) const;
 
+
+    /*! \brief Fonction de test de regression.
+    *
+    *   Effectue une série de test pour vérifié que chaque
+    *   fonctions fait ce qu'elle doit faire.
+    */
     void Test() const;
 
 private:
