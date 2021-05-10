@@ -1,4 +1,4 @@
 <map id="Player::DistanceShared_ptr" name="Player::DistanceShared_ptr">
-<area shape="rect" id="node1" title=" " alt="" coords="167,5,365,32"/>
-<area shape="rect" id="node2" href="$classPlayer.html#a2300ae43b17d7f5e0cb55fb095f36890" title=" " alt="" coords="5,5,119,32"/>
+<area shape="rect" id="node1" title="Calcul de distance avec un enemy." alt="" coords="167,5,365,32"/>
+<area shape="rect" id="node2" href="$classPlayer.html#a2300ae43b17d7f5e0cb55fb095f36890" title="Le joueur attaque un enemy." alt="" coords="5,5,119,32"/>
 </map>

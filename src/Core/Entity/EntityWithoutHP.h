@@ -64,14 +64,6 @@ public:
     */
     float GetPos_x() const;
 
-    /*! \brief Permets de modifier la position sur l'axe des x de l'entité (horizontale).
-    *
-    *
-    *   \param [in] newX: réel positif, nouvelle position sur l'axe des x de l'entité.
-    *
-    */
-    void SetPos_x(float newX);
-
     /*! \brief Retourne la position sur l'axe des y de l'entité (verticale).
     *
     *  Retourne un réel y, une position sur l'axe des y de l'entité (verticale).
@@ -79,14 +71,6 @@ public:
     *
     */
     float GetPos_y() const;
-
-    /*! \brief Permets de modifier la position sur l'axe des y de l'entité (verticale).
-    *
-    *
-    *   \param [in] newY: réel positif, nouvelle position sur l'axe des y de l'entité.
-    *
-    */
-    void SetPos_y(float newY);
 
     /*! \brief Permet d'imprimer sur la console des informations générales concernant l'entité.
     *
@@ -147,17 +131,7 @@ public:
     *   \param [in] vy: réel, valeur de déplacement sur l'axe Y.
     */    
     void Move(float vx, float vy);
-
-    /*! \brief Permet de générer un numéro de ligne aléatoirement.
-    *
-    *   \param [in] minimum : entier positif, nombre minimum possible lors du tirage.
-    *   \param [in] maximum : entier positif, nombre maximum possible lors du tirage.
-    *
-    *
-    *   Retourne un chiffre compris entre minimum et maximum aléatoirement.
-    *
-    */
-    int RandNumberGenerator(int minimum, int maximum);
+    
 
     /*! \brief Retourne le statut de déplacement de l'entité.
     *  False, l'entité est immobile et True elle est en mouvement.

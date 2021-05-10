@@ -1,7 +1,7 @@
 <map id="EntityWithoutHP::SetSpeed" name="EntityWithoutHP::SetSpeed">
 <area shape="rect" id="node1" title="Permets de modifier la vitesse de l&#39;entité." alt="" coords="468,56,667,83"/>
-<area shape="rect" id="node2" href="$classEnemyRunAway.html#af3b404b770b2ad508b7e2ad85077e328" title=" " alt="" coords="251,5,420,32"/>
-<area shape="rect" id="node3" href="$classEnemyRunAway.html#a93148440120dfd61c14e3059bab1d7b6" title=" " alt="" coords="255,56,415,83"/>
+<area shape="rect" id="node2" href="$classEnemyRunAway.html#af3b404b770b2ad508b7e2ad85077e328" title="Entré dans l&#39;état. Augmente la vitesse de l&#39;enemy." alt="" coords="251,5,420,32"/>
+<area shape="rect" id="node3" href="$classEnemyRunAway.html#a93148440120dfd61c14e3059bab1d7b6" title="Sortie de l&#39;état. Remet la vitesse à la normal." alt="" coords="255,56,415,83"/>
 <area shape="rect" id="node4" href="$classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="254,107,417,133"/>
 <area shape="rect" id="node5" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,107,203,133"/>
 <area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,107,60,133"/>

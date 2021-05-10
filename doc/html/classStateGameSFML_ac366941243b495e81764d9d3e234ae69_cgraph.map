@@ -1,0 +1,8 @@
+<map id="StateGameSFML::UpdateAnimals" name="StateGameSFML::UpdateAnimals">
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,244,105"/>
+<area shape="rect" id="node2" href="$classCollisionLayer.html#ae1accba79321890918f40613ba32f957" title="Permet de savoir si une clé existe." alt="" coords="303,5,482,47"/>
+<area shape="rect" id="node3" href="$classCollisionLayer.html#ac58218b7888e319365025f92265cf1de" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="292,71,493,112"/>
+<area shape="rect" id="node4" href="$classBox.html#a0f3f1e3acf82ac45cccb611be4b79206" title="Modifie la position de la Box par celle en paramètre." alt="" coords="329,137,457,163"/>
+<area shape="rect" id="node5" href="$classBox.html#aebb3d713f415ee36e6c245c45053223c" title="Modifie la position sur l&#39;axe horizontal." alt="" coords="541,111,627,138"/>
+<area shape="rect" id="node6" href="$classBox.html#a05649a7f4b8aa9c0524141672f6edfea" title="Modifie la position sur l&#39;axe vertical." alt="" coords="542,162,626,189"/>
+</map>

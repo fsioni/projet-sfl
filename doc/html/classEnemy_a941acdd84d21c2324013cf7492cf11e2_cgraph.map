@@ -1,5 +1,5 @@
 <map id="Enemy::ChangeDirection" name="Enemy::ChangeDirection">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,188,61"/>
-<area shape="rect" id="node2" href="$classEnemy.html#a59e340b5be743c22f0b5e2992e5e9344" title=" " alt="" coords="257,5,423,32"/>
-<area shape="rect" id="node3" href="$classEnemy.html#a3b8fda3171cad67a7c0ff9fa872496f3" title=" " alt="" coords="236,57,444,98"/>
+<area shape="rect" id="node1" title="Change la direction de l&#39;Enemy. Utilise timeNextChangeDirection pour savoir si il est temps de change..." alt="" coords="5,35,188,61"/>
+<area shape="rect" id="node2" href="$classEnemy.html#a59e340b5be743c22f0b5e2992e5e9344" title="Affecte une EntityDirection aléatoire à l&#39;Enemy." alt="" coords="257,5,423,32"/>
+<area shape="rect" id="node3" href="$classEnemy.html#a3b8fda3171cad67a7c0ff9fa872496f3" title="Affecte à timeNextChangeDirection une valeur aléatoire." alt="" coords="236,57,444,98"/>
 </map>

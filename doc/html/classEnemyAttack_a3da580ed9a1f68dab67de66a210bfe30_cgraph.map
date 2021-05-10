@@ -1,16 +1,16 @@
 <map id="EnemyAttack::Execute" name="EnemyAttack::Execute">
-<area shape="rect" id="node1" title=" " alt="" coords="5,233,173,260"/>
-<area shape="rect" id="node2" href="$classStateMachine.html#a5e928960ba29b86f878768e556ae8eb4" title=" " alt="" coords="229,5,431,32"/>
+<area shape="rect" id="node1" title="Execution de l&#39;état. L&#39;Enemy se déplace en direciton du Player, et si il est assez proche il l&#39;attaqu..." alt="" coords="5,233,173,260"/>
+<area shape="rect" id="node2" href="$classStateMachine.html#a5e928960ba29b86f878768e556ae8eb4" title="Permet de changer l&#39;état courrant." alt="" coords="229,5,431,32"/>
 <area shape="rect" id="node3" href="$classEntityWithHP.html#a2141d7cca91bd206e229efcc1c02d4d0" title="Permet de retourner le nombre de dégats q&#39;inflige l&#39;entité EntityWithHP." alt="" coords="233,56,427,83"/>
 <area shape="rect" id="node4" href="$classEntityWithoutHP.html#aa919d21efd6f9e28bcbd71696b418792" title="Retourne la position sur l&#39;axe des x de l&#39;entité (horizontale)." alt="" coords="231,107,429,133"/>
 <area shape="rect" id="node5" href="$classEntityWithoutHP.html#ac5fa20e8f737d5c7eee11ebafeee3d92" title="Retourne la position sur l&#39;axe des y de l&#39;entité (verticale)." alt="" coords="231,157,429,184"/>
-<area shape="rect" id="node6" href="$classEnemy.html#a7d3f9586b50a46b996250cf16959c65f" title=" " alt="" coords="237,208,423,235"/>
-<area shape="rect" id="node7" href="$classEnemyPatrol.html#adf5b330d3544e97142aaf385148818d4" title=" " alt="" coords="247,259,413,285"/>
-<area shape="rect" id="node9" href="$classEnemy.html#a2d6f1e48fc4b19f9fef6404577fae765" title=" " alt="" coords="243,309,417,336"/>
+<area shape="rect" id="node6" href="$classEnemy.html#a7d3f9586b50a46b996250cf16959c65f" title="Retourne le StateMachine." alt="" coords="237,208,423,235"/>
+<area shape="rect" id="node7" href="$classEnemyPatrol.html#adf5b330d3544e97142aaf385148818d4" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="247,259,413,285"/>
+<area shape="rect" id="node9" href="$classEnemy.html#a2d6f1e48fc4b19f9fef6404577fae765" title="Retourne si l&#39;Enemy peut attaquer ou non." alt="" coords="243,309,417,336"/>
 <area shape="rect" id="node10" href="$classEntityWithoutHP.html#a6b62dd7761b9a29a9ccda13b5be40a18" title="Déplace l&#39;entité en vérifiant les collisions." alt="" coords="229,361,431,402"/>
 <area shape="rect" id="node19" href="$classEntityWithoutHP.html#a0c000f5c03af273546b317aaad42254c" title="Permets de modifier la direction de l&#39;entité." alt="" coords="221,427,439,453"/>
-<area shape="rect" id="node20" href="$classEnemy.html#abeaf8d77cd05862d568a01fe86a25595" title=" " alt="" coords="229,477,431,504"/>
-<area shape="rect" id="node8" href="$classEnemyPatrol.html#aa7bad085d7911a0b8952c18b248dce37" title=" " alt="" coords="490,135,685,161"/>
+<area shape="rect" id="node20" href="$classEnemy.html#abeaf8d77cd05862d568a01fe86a25595" title="Affecte à timeNextAttack une valeur aléatoire." alt="" coords="229,477,431,504"/>
+<area shape="rect" id="node8" href="$classEnemyPatrol.html#aa7bad085d7911a0b8952c18b248dce37" title="Constructeur par défaut." alt="" coords="490,135,685,161"/>
 <area shape="rect" id="node11" href="$classCollisionLayer.html#a620b4ce21e4699a1a067ffaa60848667" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="487,186,688,227"/>
 <area shape="rect" id="node12" href="$classCollisionLayer.html#ac58218b7888e319365025f92265cf1de" title="Fonction permettant de récupérer les CollisionBox des entités de l&#39;objet." alt="" coords="487,251,688,293"/>
 <area shape="rect" id="node13" href="$classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="527,317,648,344"/>

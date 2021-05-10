@@ -1,0 +1,4 @@
+<map id="StatePauseSFML::OnClick" name="StatePauseSFML::OnClick">
+<area shape="rect" id="node1" title="Effectue les actions nécessaires lors du clic." alt="" coords="273,5,460,32"/>
+<area shape="rect" id="node2" href="$classStatePauseSFML.html#a115452e092d07847654ed8253e8fe9b3" title="Fonction de gestion des touches du State." alt="" coords="5,5,225,32"/>
+</map>

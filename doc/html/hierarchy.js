@@ -28,13 +28,20 @@ var hierarchy =
       [ "StateSplashScreenTxt", "classStateSplashScreenTxt.html", null ]
     ] ],
     [ "StateBehavior< entity_type >", "classStateBehavior.html", null ],
+    [ "StateBehavior< Animal >", "classStateBehavior.html", [
+      [ "AnimalFollowing", "classAnimalFollowing.html", null ],
+      [ "AnimalWalking", "classAnimalWalking.html", null ]
+    ] ],
     [ "StateBehavior< Enemy >", "classStateBehavior.html", [
       [ "EnemyAttack", "classEnemyAttack.html", null ],
       [ "EnemyPatrol", "classEnemyPatrol.html", null ],
       [ "EnemyRunAway", "classEnemyRunAway.html", null ]
     ] ],
+    [ "StateBehavior< entity_type >", "classStateBehavior_3_01entity__type_01_4.html", null ],
     [ "StateMachine< entity_type >", "classStateMachine.html", null ],
+    [ "StateMachine< Animal >", "classStateMachine.html", null ],
     [ "StateMachine< Enemy >", "classStateMachine.html", null ],
+    [ "StateMachine< entity_type >", "classStateMachine_3_01entity__type_01_4.html", null ],
     [ "StateManager", "classStateManager.html", null ],
     [ "Tileset", "classTileset.html", null ],
     [ "UniqueID", "classUniqueID.html", null ],

@@ -71,7 +71,7 @@ public:
     *
     *   \return Retourne le tableau associatif de CollisionBox*.
     */
-    std::map<int, Box*> GetCollisionBoxesEntity();
+    std::map<int, Box*> GetCollisionBoxesEntity() const;
 
     /*! \brief Permet de savoir si une clé existe.
     *   
@@ -79,7 +79,7 @@ public:
     * 
     *   \return Retourne true si la clé existe et false sinon.
     */
-    bool  CollisionBoxEntityExist(int id);
+    bool  CollisionBoxEntityExist(int id) const;
 
     /*! \brief Supprime la CollisionBox d'une entité.
     *

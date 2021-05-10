@@ -1,4 +1,4 @@
 <map id="EnemyAttack::Instance" name="EnemyAttack::Instance">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,177,32"/>
-<area shape="rect" id="node2" href="$classEnemyAttack.html#a54977db476e524b343786bae4c0d2e8b" title=" " alt="" coords="225,5,429,32"/>
+<area shape="rect" id="node1" title="Retourne une Instance de l&#39;objet, un singleton." alt="" coords="5,5,177,32"/>
+<area shape="rect" id="node2" href="$classEnemyAttack.html#a54977db476e524b343786bae4c0d2e8b" title="Constructeur par défaut." alt="" coords="225,5,429,32"/>
 </map>

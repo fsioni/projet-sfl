@@ -280,9 +280,9 @@
     <property name="Dialog" value="There was a time when we controlled the whole village and it may still be the case ..."/>
    </properties>
   </object>
-  <object id="406" x="2291.33" y="1142" rotation="90">
+  <object id="406" x="2291.33" y="1142" rotation="0">
    <properties>
-    <property name="Dialog" value="I love animals ! But they don't want to play with me ..."/>
+    <property name="Dialog" value="I love animals ! But they     don't want to play with me..."/>
    </properties>
   </object>
   <object id="410" x="858.667" y="229.333">
@@ -307,7 +307,7 @@
   </object>
   <object id="422" x="2975.92" y="272.603" rotation="180">
    <properties>
-    <property name="Dialog" value="Trust me, you are going in the right direction ... or not."/>
+    <property name="Dialog" value="Trust me, you are going in the right direction... or not."/>
    </properties>
   </object>
  </objectgroup>

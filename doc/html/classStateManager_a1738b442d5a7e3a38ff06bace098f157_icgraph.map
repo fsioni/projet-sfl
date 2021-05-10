@@ -1,0 +1,6 @@
+<map id="StateManager::PopCurrent" name="StateManager::PopCurrent">
+<area shape="rect" id="node1" title="Passe au prochain State." alt="" coords="445,5,639,32"/>
+<area shape="rect" id="node2" href="$classStateManager.html#ac14d6caa91524e506f7d15ae86c677f9" title="Fonction test de la classe StateManager." alt="" coords="251,5,397,32"/>
+<area shape="rect" id="node3" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,5,203,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
+</map>

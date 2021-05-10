@@ -1,6 +1,7 @@
 <map id="EntityWithoutHP::SetIsMovingFalse" name="EntityWithoutHP::SetIsMovingFalse">
-<area shape="rect" id="node1" title="Remet isMoving à false." alt="" coords="461,5,679,47"/>
-<area shape="rect" id="node2" href="$classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="251,13,413,39"/>
-<area shape="rect" id="node3" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,13,203,39"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,39"/>
+<area shape="rect" id="node1" title="Remet isMoving à false." alt="" coords="488,23,705,65"/>
+<area shape="rect" id="node2" href="$classAnimalFollowing.html#af1712ef260f6e99602db5acc868825f5" title="Execution de l&#39;état. L&#39;Animal se déplace en direction du joueur. Il entre en état AnimalWalking si il..." alt="" coords="251,5,440,32"/>
+<area shape="rect" id="node3" href="$classEntityWithoutHP.html#a30c27f1b02d5850fd737e9193c644e19" title="Test de regression." alt="" coords="264,56,427,83"/>
+<area shape="rect" id="node4" href="$classGame.html#a13910abb0107f073d1627043003b909b" title="Lance le jeu dans le mode selectionné" alt="" coords="108,56,203,83"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,60,83"/>
 </map>

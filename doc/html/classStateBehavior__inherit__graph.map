@@ -1,7 +1,10 @@
 <map id="StateBehavior&lt; entity_type &gt;" name="StateBehavior&lt; entity_type &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="145,5,312,141"/>
-<area shape="rect" id="node2" href="$classStateBehavior.html" title=" " alt="" coords="134,204,323,325"/>
-<area shape="rect" id="node3" href="$classEnemyAttack.html" title=" " alt="" coords="5,375,140,540"/>
-<area shape="rect" id="node4" href="$classEnemyPatrol.html" title=" " alt="" coords="164,375,293,540"/>
-<area shape="rect" id="node5" href="$classEnemyRunAway.html" title=" " alt="" coords="317,375,471,540"/>
+<area shape="rect" id="node1" title=" " alt="" coords="317,5,484,141"/>
+<area shape="rect" id="node2" href="$classStateBehavior.html" title=" " alt="" coords="199,204,389,325"/>
+<area shape="rect" id="node6" href="$classStateBehavior.html" title=" " alt="" coords="477,204,668,325"/>
+<area shape="rect" id="node3" href="$classEnemyAttack.html" title="Etat d&#39;attaque pour les Enemy, hérite de StateBehavior&lt;Enemy&gt;." alt="" coords="5,375,140,540"/>
+<area shape="rect" id="node4" href="$classEnemyPatrol.html" title="Etat de patrouille pour les Enemy, hérite de StateBehavior&lt;Enemy&gt;." alt="" coords="164,375,293,540"/>
+<area shape="rect" id="node5" href="$classEnemyRunAway.html" title="Etat de fuite pour les enemy, hérite de StateBehavior&lt;Enemy&gt;." alt="" coords="317,375,471,540"/>
+<area shape="rect" id="node7" href="$classAnimalFollowing.html" title="Etat de suivi d&#39;un Animal, il se déplace en direction du joueur, pour jouer ?" alt="" coords="495,375,650,540"/>
+<area shape="rect" id="node8" href="$classAnimalWalking.html" title="Etat de &quot;balade&quot; d&#39;un Animal, il se déplace aléatoirement." alt="" coords="675,375,820,540"/>
 </map>

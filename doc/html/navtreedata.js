@@ -47,10 +47,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"Animal_8cpp.html",
-"classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac",
-"classStateMenuSFML.html#a9536e586dc0ea952532dcd7389792a91",
-"winTxt_8cpp.html#a67191e6d920e10b82b0868cb240228ae"
+"AnimalStates_8cpp.html",
+"classEntityWithoutHP.html",
+"classStateManager.html#abc8b2d54658982fb970a9fd006b77ebf",
+"tmxParsing_8cpp.html"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

@@ -1,6 +1,8 @@
 var annotated_dup =
 [
     [ "Animal", "classAnimal.html", "classAnimal" ],
+    [ "AnimalFollowing", "classAnimalFollowing.html", "classAnimalFollowing" ],
+    [ "AnimalWalking", "classAnimalWalking.html", "classAnimalWalking" ],
     [ "AssetManager", "classAssetManager.html", "classAssetManager" ],
     [ "Box", "classBox.html", "classBox" ],
     [ "CollisionLayer", "classCollisionLayer.html", "classCollisionLayer" ],
@@ -20,10 +22,12 @@ var annotated_dup =
     [ "SpawnsLayer", "classSpawnsLayer.html", "classSpawnsLayer" ],
     [ "State", "classState.html", "classState" ],
     [ "StateBehavior", "classStateBehavior.html", "classStateBehavior" ],
+    [ "StateBehavior< entity_type >", "classStateBehavior_3_01entity__type_01_4.html", null ],
     [ "StateGameOverSFML", "classStateGameOverSFML.html", "classStateGameOverSFML" ],
     [ "StateGameSFML", "classStateGameSFML.html", "classStateGameSFML" ],
     [ "StateGameTxt", "classStateGameTxt.html", "classStateGameTxt" ],
     [ "StateMachine", "classStateMachine.html", "classStateMachine" ],
+    [ "StateMachine< entity_type >", "classStateMachine_3_01entity__type_01_4.html", null ],
     [ "StateManager", "classStateManager.html", "classStateManager" ],
     [ "StateMenuSFML", "classStateMenuSFML.html", "classStateMenuSFML" ],
     [ "StateMenuTxt", "classStateMenuTxt.html", "classStateMenuTxt" ],

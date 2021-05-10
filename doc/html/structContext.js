@@ -1,6 +1,7 @@
 var structContext =
 [
     [ "Context", "structContext.html#a652cdcd2eedc8dbd9110bd284c5d5cf0", null ],
+    [ "animals", "structContext.html#a4e207cad5f25f7d60000595709f4c6c2", null ],
     [ "assetMan", "structContext.html#a2cced4183e86a6447b4fd608b1ed6aec", null ],
     [ "enemies", "structContext.html#a7b772a83981d3122a430f53d8e23b376", null ],
     [ "isDebug", "structContext.html#a2ff03b7f35e62b990bd6a81972c1350b", null ],
