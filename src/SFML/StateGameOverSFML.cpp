@@ -283,7 +283,7 @@ void StateGameOverSFML::RestartGame()
             
         // Ajout de sa CollisionBox au CollisionLayer
         context->map->GetCollisionLayer()->AddCollisionBoxEntity(
-            newNPC->GetID(), new Box(x, y, 32, 25));
+            newNPC->GetID(), new Box(x, y, 32, 27));
     }
 
     // Initialisation des animaux
