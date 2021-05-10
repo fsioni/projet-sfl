@@ -8,9 +8,9 @@
 
 #include "../Box.h"
 
-/*! \class CollisionLayer 
+/*! \class CollisionLayer
 *   \brief Classe représentant une couche de CollisionBox
-*   
+*
 *   Représente toutes les CollisionBox d'une partie particulière de la Map
 *   Par exemple : des objets, des ennemis...
 */
@@ -18,7 +18,7 @@ class CollisionLayer{
 public:
     /*// === Fonctions membres privées === //*/
 
-    /*! \brief Constructeur par défaut 
+    /*! \brief Constructeur par défaut
     *
     *   Ne suffit pas pour utilisation.
     */
@@ -44,7 +44,7 @@ public:
     */
     void AddCollisionBox(const Box &newColBox);
 
-    /*! \brief Fonction permettant d'ajouter une boîte de 
+    /*! \brief Fonction permettant d'ajouter une boîte de
     *           collision d'entité à la couche
     *
     *   Ajoute une CollisionBox au tableau dynamique des collisions
@@ -60,23 +60,23 @@ public:
     */
     void DisplayTXT() const;
 
-    /*! \brief Fonction permettant de récupérer les CollisionBox de l'objet. 
+    /*! \brief Fonction permettant de récupérer les CollisionBox de l'objet.
     *
     *   \return Retourne le tableau dynamique de CollisionBox.
     */
     std::vector<Box> GetCollisionBoxes() const;
 
-    /*! \brief Fonction permettant de récupérer les CollisionBox 
-    *         des entités de l'objet 
+    /*! \brief Fonction permettant de récupérer les CollisionBox
+    *         des entités de l'objet
     *
     *   \return Retourne le tableau associatif de CollisionBox*.
     */
-    std::map<int, Box*> GetCollisionBoxesEntity();
+    std::map<int, Box*> GetCollisionBoxesEntity() const;
 
     /*! \brief Permet de savoir si une clé existe.
-    *   
-    *   \param [in] id : entier, clé de la CollisionBox * à tester.  
-    * 
+    *
+    *   \param [in] id : entier, clé de la CollisionBox * à tester.
+    *
     *   \return Retourne true si la clé existe et false sinon.
     */
     bool  CollisionBoxEntityExist(int id);
@@ -93,7 +93,7 @@ public:
     *   et vérifie qu'elles font bien ce qu'elles sont censés faire.
     */
     void Test() const;
-    
+
 private:
     /*// === Données membres privées === //*/
 
@@ -101,8 +101,8 @@ private:
     std::vector<Box> collisionBoxes;
 
     /*! \brief Tableau associatif des Box des entités.
-    *   
-    *    La clé est un entier correspondant à l'ID de l'entité 
+    *
+    *    La clé est un entier correspondant à l'ID de l'entité
     *    et le pointeur sur Box est sa boite de collision
     *    associé.
     */
