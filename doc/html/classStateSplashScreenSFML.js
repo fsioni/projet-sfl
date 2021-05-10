@@ -9,11 +9,9 @@ var classStateSplashScreenSFML =
     [ "ProcessInput", "classStateSplashScreenSFML.html#aa9251be2ad668df570999dd76261681d", null ],
     [ "Start", "classStateSplashScreenSFML.html#a2150708c6e58fd088e3a2463e90a2f30", null ],
     [ "Update", "classStateSplashScreenSFML.html#a1156a8e52fef8c377da416a940e1a51e", null ],
+    [ "bgSprite", "classStateSplashScreenSFML.html#a10ec2518734aef55f2bf3095dfbe3c35", null ],
     [ "context", "classStateSplashScreenSFML.html#aae211142b4528d90e9cd0de094621048", null ],
-    [ "duration", "classStateSplashScreenSFML.html#aa8f00c3580ccb244f1cf2be0f09770e1", null ],
-    [ "gameText", "classStateSplashScreenSFML.html#ad3750f06193ba18acd197a2e36b049c6", null ],
+    [ "logoSprite", "classStateSplashScreenSFML.html#a6d3f21b4e6e0d6122ee2d193ba17a3b2", null ],
     [ "madeByText", "classStateSplashScreenSFML.html#a57d7590ce871517cdc89dfe5feb73f5f", null ],
-    [ "music", "classStateSplashScreenSFML.html#ac128053f641b1a3a5598e2360b3f3b52", null ],
-    [ "start", "classStateSplashScreenSFML.html#acd6d2af4d175723d227b356ae4263f66", null ],
-    [ "textFont", "classStateSplashScreenSFML.html#a6719e37ee29be4b02741a36c1c7d200a", null ]
+    [ "music", "classStateSplashScreenSFML.html#ac128053f641b1a3a5598e2360b3f3b52", null ]
 ];

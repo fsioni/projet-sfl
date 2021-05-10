@@ -34,14 +34,10 @@ int main(int argc, char *argv[])
         Game game;
         game.Run(2);
     }
-    else if (argv[1] == std::string("debug"))
-    {
-        
-    }
 
     else /////////L'ARGUMENT NE CORRESPOND A AUCUN MODE
     {
-        std::cerr << "The argument need to be 0 for SFML or 1 for txt"
+        std::cerr << "The argument need to be 0 for SFML or 1 for txt or 2 for tests."
                   << std::endl;
     }
     return 0;

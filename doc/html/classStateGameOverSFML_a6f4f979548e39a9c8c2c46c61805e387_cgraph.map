@@ -1,4 +1,4 @@
 <map id="StateGameOverSFML::ProcessInput" name="StateGameOverSFML::ProcessInput">
 <area shape="rect" id="node1" title="Fonction de gestion des touches du State." alt="" coords="5,5,175,47"/>
-<area shape="rect" id="node2" href="$classStateGameOverSFML.html#aa166a17b191164097564aeafa3bbe954" title=" " alt="" coords="223,5,392,47"/>
+<area shape="rect" id="node2" href="$classStateGameOverSFML.html#ae013163587af69b42438fa0c7f9873ae" title="Effectue les actions nécessaires lors du clic." alt="" coords="223,5,392,47"/>
 </map>

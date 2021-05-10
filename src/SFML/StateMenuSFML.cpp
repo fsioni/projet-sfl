@@ -7,10 +7,11 @@ StateMenuSFML::StateMenuSFML(/* args */)
 }
 
 StateMenuSFML::StateMenuSFML(std::shared_ptr<Context> &cContext)
-    : context(cContext), isPlayButSelected(true),
-      isPlayButPressed(false), isInstructionButSelected(false),
-      isInstructionButPressed(false), isInInstructionSubMenu(false),
-      isExitButSelected(false), isExitButPressed(false)
+    : context(cContext), isSoundButSelected(false), isSoundButPressed(false),
+     isPlayButSelected(true), isPlayButPressed(false),
+     isInstructionButSelected(false), isInstructionButPressed(false),
+     isInInstructionSubMenu(false), isExitButSelected(false),
+     isExitButPressed(false)
 {
 }
 
@@ -22,18 +23,26 @@ StateMenuSFML::~StateMenuSFML()
 void StateMenuSFML::Init()
 {
     assert(music.openFromFile("data/sounds/music/01town0.wav"));
-    assert(buffer.loadFromFile("data/sounds/sfx/menuNav.wav"));
 
-    sound.setBuffer(buffer);
+    sound.setBuffer(context->assetMan->GetSoundBuffers()[0]);
 
     music.play();
     music.setLoop(true);
 
+    int winx = context->renderWin->getSize().x;
+    int winy = context->renderWin->getSize().y;
+
     bgSprite.setTexture(context->assetMan->GetTextureBackground());
     bgSprite.setScale(0.5f, 0.5f);
 
-    int winx = context->renderWin->getSize().x;
-    int winy = context->renderWin->getSize().y;
+    soundSprite.setTexture(context->assetMan->GetTextureSound());
+    soundSprite.setOrigin(soundSprite.getLocalBounds().left +
+                        soundSprite.getLocalBounds().width / 2.0f,
+                        soundSprite.getLocalBounds().top +
+                        soundSprite.getLocalBounds().height / 2.0f);
+    soundSprite.setScale(0.5f, 0.5f);
+    soundSprite.setPosition(winx-50, 50);
+
 
     // Title
     menuTitle.setFont(context->assetMan->GetMainFont());
@@ -176,6 +185,9 @@ void StateMenuSFML::Init()
                                     quitSubMenuText.getLocalBounds().top + 
                                     quitSubMenuText.getLocalBounds().height / 2.0f);
             quitSubMenuText.setPosition(60.f, winy - 40.f);
+
+    handCursor.loadFromSystem(sf::Cursor::Hand);
+    pointCursor.loadFromSystem(sf::Cursor::Arrow);
 }
 
 void StateMenuSFML::ProcessInput()
@@ -183,6 +195,28 @@ void StateMenuSFML::ProcessInput()
     sf::Event event;
     while (context->renderWin->pollEvent(event))
     {
+        if(event.type == sf::Event::Resized){
+            context->renderWin->setView(sf::View(
+                sf::FloatRect(0, 0, event.size.width, event.size.height)));
+            int winX = context->renderWin->getSize().x;
+            int winY = context->renderWin->getSize().y;
+            soundSprite.setPosition(winX-50, 50);
+            logoSprite.setPosition(winX/2, winY/2-150);
+            playButton.setPosition(winX / 2.0f, winY / 2.0f + 45.f);
+            pauseText.setPosition(winX / 2.0f, winY - 50);
+            instructionButton.setPosition(winX / 2.0f, winY / 2.0f + 105);
+            exitButton.setPosition(winX / 2.0f, winY / 2.0f + 165.f);
+            menuTitle.setPosition(winX / 2.0f, winY - 50);
+
+            quitSubMenuText.setPosition(60.f, winY - 40.f);
+            debugModeText.setPosition(winX / 2.0f, winY / 2.0f + 120.f);
+            pauseText.setPosition(winX / 2.0f, winY / 2.0f + 60.f);
+            interactText.setPosition(winX / 2.0f, winY / 2.0f);
+            attackText.setPosition(winX / 2.0f, winY / 2.0f - 60.f);
+            moveText.setPosition(winX / 2.0f, winY / 2.0f - 120.f);
+        }
+
+
         switch (event.type)
         {
         case sf::Event::Closed:
@@ -206,6 +240,11 @@ void StateMenuSFML::ProcessInput()
                     isInstructionButSelected = false;
                     sound.play();
                 }
+                else if (isPlayButSelected)
+                {
+                    isPlayButSelected = false;
+                    isSoundButSelected = true;
+                }
                 break;
             
             case sf::Keyboard::Z:
@@ -220,6 +259,11 @@ void StateMenuSFML::ProcessInput()
                     isPlayButSelected = true;
                     isInstructionButSelected = false;
                     sound.play();
+                }
+                else if (isPlayButSelected)
+                {
+                    isPlayButSelected = false;
+                    isSoundButSelected = true;
                 }
                 break;            
 
@@ -236,6 +280,11 @@ void StateMenuSFML::ProcessInput()
                     isExitButSelected = true;
                     sound.play();
                 }
+                else if (isSoundButSelected)
+                {
+                    isPlayButSelected = true;
+                    isSoundButSelected = false;
+                }
                 break;
 
             case sf::Keyboard::S :
@@ -251,11 +300,12 @@ void StateMenuSFML::ProcessInput()
                     isExitButSelected = true;
                     sound.play();
                 }
+                else if (isSoundButSelected)
+                {
+                    isPlayButSelected = true;
+                    isSoundButSelected = false;
+                }
                 break;            
-
-            case sf::Keyboard::M:
-                context->isMute = !(context->isMute);
-                break;
 
             case sf::Keyboard::Return:
                 OnClick();
@@ -274,38 +324,77 @@ void StateMenuSFML::ProcessInput()
     }
 
     sf::Vector2i mousePos = sf::Mouse::getPosition(*context->renderWin.get());
+    context->renderWin->setMouseCursor(pointCursor);
+
+    // Bouton Son
+    sf::IntRect button(soundSprite.getPosition().x-
+        soundSprite.getGlobalBounds().width/2, soundSprite.getPosition().y-
+        soundSprite.getGlobalBounds().height/2, soundSprite.getGlobalBounds().width,
+        soundSprite.getGlobalBounds().height);
+
+    if (button.contains(mousePos))
+    {
+        isPlayButSelected = false;
+        isInstructionButSelected = false;
+        isExitButSelected = false;
+        isSoundButSelected = true;
+        context->renderWin->setMouseCursor(handCursor);
+    }
 
     // Bouton Jouer
-    sf::IntRect button(playButton.getPosition().x-10, playButton.getPosition().y,
-        playButton.getGlobalBounds().width+10, playButton.getGlobalBounds().height);
+    button = sf::IntRect(playButton.getPosition().x-
+        playButton.getGlobalBounds().width/2, playButton.getPosition().y-
+        playButton.getGlobalBounds().height/2, playButton.getGlobalBounds().width,
+        playButton.getGlobalBounds().height);
 
     if (button.contains(mousePos))
     {
         isPlayButSelected = true;
         isInstructionButSelected = false;
         isExitButSelected = false;
+        isSoundButSelected = false;
+        context->renderWin->setMouseCursor(handCursor);
     }
     
     // Bouton Instructions
-    button = sf::IntRect(instructionButton.getPosition().x-10, instructionButton.getPosition().y,
-        instructionButton.getGlobalBounds().width+10, instructionButton.getGlobalBounds().height);
+    button = sf::IntRect(instructionButton.getPosition().x-
+        instructionButton.getGlobalBounds().width/2, instructionButton.getPosition().y-
+        instructionButton.getGlobalBounds().height/2, instructionButton.getGlobalBounds().width,
+        instructionButton.getGlobalBounds().height);
 
     if (button.contains(mousePos))
     {
         isPlayButSelected = false;
         isInstructionButSelected = true;
         isExitButSelected = false;
+        isSoundButSelected = false;
+        context->renderWin->setMouseCursor(handCursor);
+    }
+
+    // Bouton Retour
+    button = sf::IntRect(quitSubMenuText.getPosition().x-
+        quitSubMenuText.getGlobalBounds().width/2, quitSubMenuText.getPosition().y-
+        quitSubMenuText.getGlobalBounds().height/2, quitSubMenuText.getGlobalBounds().width,
+        quitSubMenuText.getGlobalBounds().height);
+
+    if (button.contains(mousePos))
+    {
+        context->renderWin->setMouseCursor(handCursor);
     }
     
     // Bouton Quitter
-    button = sf::IntRect(exitButton.getPosition().x-10, exitButton.getPosition().y,
-        exitButton.getGlobalBounds().width+10, exitButton.getGlobalBounds().height);
+    button = sf::IntRect(exitButton.getPosition().x-
+        exitButton.getGlobalBounds().width/2, exitButton.getPosition().y-
+        exitButton.getGlobalBounds().height/2, exitButton.getGlobalBounds().width,
+        exitButton.getGlobalBounds().height);
 
     if (button.contains(mousePos))
     {
         isPlayButSelected = false;
         isInstructionButSelected = false;
         isExitButSelected = true;
+        isSoundButSelected = false;
+        context->renderWin->setMouseCursor(handCursor);
     }
 }
 
@@ -319,6 +408,7 @@ void StateMenuSFML::Update()
         instructionButton.setOutlineColor(sf::Color::Black);
         exitButton.setFillColor(context->assetMan->GetMainTextColor());
         exitButton.setOutlineColor(sf::Color::Black);
+        soundSprite.setColor(sf::Color::Black);
     }
     else if (isInstructionButSelected)
     {
@@ -328,8 +418,9 @@ void StateMenuSFML::Update()
         playButton.setOutlineColor(sf::Color::Black);
         exitButton.setFillColor(context->assetMan->GetMainTextColor());
         exitButton.setOutlineColor(sf::Color::Black);
+        soundSprite.setColor(sf::Color::Black);
     }
-        else if (isExitButSelected)
+    else if (isExitButSelected)
     {
         exitButton.setFillColor(sf::Color::White);
         exitButton.setOutlineColor(sf::Color::Black);
@@ -337,6 +428,17 @@ void StateMenuSFML::Update()
         playButton.setOutlineColor(sf::Color::Black);
         instructionButton.setFillColor(context->assetMan->GetMainTextColor());
         instructionButton.setOutlineColor(sf::Color::Black);
+        soundSprite.setColor(sf::Color::Black);
+    }
+    else if (isSoundButSelected)
+    {
+        exitButton.setFillColor(context->assetMan->GetMainTextColor());
+        exitButton.setOutlineColor(sf::Color::Black);
+        playButton.setFillColor(context->assetMan->GetMainTextColor());
+        playButton.setOutlineColor(sf::Color::Black);
+        instructionButton.setFillColor(context->assetMan->GetMainTextColor());
+        instructionButton.setOutlineColor(sf::Color::Black);
+        soundSprite.setColor(sf::Color::White);
     }
 
     if (isPlayButPressed)
@@ -352,17 +454,24 @@ void StateMenuSFML::Update()
         context->renderWin->close();
         context->quit = true;
     }
+    else if (isSoundButPressed)
+    {
+        isSoundButPressed = false;
+        context->isMute = !(context->isMute); 
+    }
 
     if (context->isMute && (music.getVolume() != 0 || sound.getVolume() != 0))
     {
         music.setVolume(0);
         sound.setVolume(0);
+        soundSprite.setTextureRect(sf::IntRect(0, 0, 75, 128));
     }
     
-    if (!context->isMute && (music.getVolume() == 0 || sound.getVolume() != 0))
+    if (!context->isMute && (music.getVolume() == 0 || sound.getVolume() == 0))
     {
         music.setVolume(70);
         sound.setVolume(100);
+        soundSprite.setTextureRect(sf::IntRect(0, 0, 128, 128));
     }
 
 
@@ -377,6 +486,7 @@ void StateMenuSFML::Display()
     {
         context->renderWin->draw(menuTitle);
         context->renderWin->draw(logoSprite);
+        context->renderWin->draw(soundSprite);
         context->renderWin->draw(playButton);
         context->renderWin->draw(instructionButton);
         context->renderWin->draw(exitButton);
@@ -426,5 +536,10 @@ void StateMenuSFML::OnClick()
     else if (isExitButSelected)
     {
         isExitButPressed = true;
+    }
+    else if (isSoundButSelected)
+    {
+        isSoundButPressed = true;
+        sound.play();
     }
 }

@@ -31,6 +31,9 @@ public:
     void Start();
 
 private:
+    /*! \brief Effectue les actions nécessaires lors du clic
+    *
+    */
     void OnClick();
 
     /*! \brief Etat courant du programme */
@@ -68,11 +71,14 @@ private:
 
     /*! \brief Musique de Game Over */
     sf::Music music;
-
-    /*! \brief Son tampon de l'effet sonore du menu */
-    sf::SoundBuffer buffer;
+    
     /*! \brief Effet sonore du menu */
     sf::Sound sound;
+
+    /*! \brief Curseur de main*/
+    sf::Cursor handCursor;
+    /*! \brief Curseur de pointage*/
+    sf::Cursor pointCursor;
 };
 
 #endif // __STATEGAMEOVERSFML_H__

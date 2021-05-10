@@ -1,7 +1,14 @@
 <map id="AssetManager::AssetManager" name="AssetManager::AssetManager">
-<area shape="rect" id="node1" title=" " alt="" coords="5,97,221,123"/>
-<area shape="rect" id="node2" href="$classAssetManager.html#a54c0a40c80c6a1efa1b4119dc44b863b" title=" " alt="" coords="293,5,489,47"/>
-<area shape="rect" id="node3" href="$classAssetManager.html#af057522215a43a55e217ce04dea291a9" title=" " alt="" coords="279,71,502,98"/>
-<area shape="rect" id="node4" href="$classAssetManager.html#a9ba5c903d7ee37305a18747c1b34403f" title=" " alt="" coords="274,122,507,149"/>
-<area shape="rect" id="node5" href="$classAssetManager.html#a4c092b29c772a3345a5dfe1d6423a246" title=" " alt="" coords="269,173,512,199"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,291,221,317"/>
+<area shape="rect" id="node2" href="$classAssetManager.html#a1adf6eb66dd81c336e2fda0d14a55b2c" title=" " alt="" coords="277,5,504,32"/>
+<area shape="rect" id="node3" href="$classAssetManager.html#a54c0a40c80c6a1efa1b4119dc44b863b" title=" " alt="" coords="293,57,489,98"/>
+<area shape="rect" id="node4" href="$classAssetManager.html#af057522215a43a55e217ce04dea291a9" title=" " alt="" coords="279,123,502,149"/>
+<area shape="rect" id="node5" href="$classAssetManager.html#a7b301d2ce2b23d4598d531f724d3beef" title=" " alt="" coords="280,174,501,215"/>
+<area shape="rect" id="node6" href="$classAssetManager.html#a5f746278320ca0237f3620eec1546221" title=" " alt="" coords="277,240,505,267"/>
+<area shape="rect" id="node7" href="$classAssetManager.html#a7c41a91ccd91eaf18e17ffe4aba85737" title=" " alt="" coords="279,291,502,317"/>
+<area shape="rect" id="node8" href="$classAssetManager.html#ae68f7577fbd6ae76a3849ef84dc5c8f2" title=" " alt="" coords="289,341,493,368"/>
+<area shape="rect" id="node9" href="$classAssetManager.html#aeb116eeb40662754ff5b5e5f6e15606b" title=" " alt="" coords="289,393,492,434"/>
+<area shape="rect" id="node10" href="$classAssetManager.html#a9ba5c903d7ee37305a18747c1b34403f" title=" " alt="" coords="274,459,507,485"/>
+<area shape="rect" id="node11" href="$classAssetManager.html#a4c092b29c772a3345a5dfe1d6423a246" title=" " alt="" coords="269,509,512,536"/>
+<area shape="rect" id="node12" href="$classAssetManager.html#aea4cd4b856286d3313192b20bd571ed2" title=" " alt="" coords="275,560,507,587"/>
 </map>

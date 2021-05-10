@@ -1,16 +1,14 @@
 <map id="src/Core/Entity/EntityWithoutHP.h" name="src/Core/Entity/EntityWithoutHP.h">
 <area shape="rect" id="node1" title=" " alt="" coords="215,5,454,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,80,80,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="637,304,696,331"/>
+<area shape="rect" id="node3" title=" " alt="" coords="503,229,561,256"/>
 <area shape="rect" id="node4" title=" " alt="" coords="155,80,221,107"/>
 <area shape="rect" id="node5" title=" " alt="" coords="245,80,325,107"/>
 <area shape="rect" id="node6" title=" " alt="" coords="350,80,418,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="376,155,453,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="417,155,495,181"/>
 <area shape="rect" id="node8" href="$CollisionLayer_8h.html" title=" " alt="" coords="493,80,709,107"/>
-<area shape="rect" id="node14" href="$UniqueID_8h.html" title=" " alt="" coords="734,80,829,107"/>
-<area shape="rect" id="node9" title=" " alt="" coords="529,155,591,181"/>
-<area shape="rect" id="node10" title=" " alt="" coords="616,155,667,181"/>
-<area shape="rect" id="node11" href="$Layer_8h.html" title=" " alt="" coords="632,229,701,256"/>
-<area shape="rect" id="node12" href="$CollisionBox_8h.html" title=" " alt="" coords="742,155,869,181"/>
-<area shape="rect" id="node13" href="$Box_8h.html" title=" " alt="" coords="776,229,835,256"/>
+<area shape="rect" id="node12" href="$UniqueID_8h.html" title=" " alt="" coords="734,80,829,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="570,155,633,181"/>
+<area shape="rect" id="node10" title=" " alt="" coords="657,155,708,181"/>
+<area shape="rect" id="node11" href="$Box_8h.html" title=" " alt="" coords="733,155,803,181"/>
 </map>

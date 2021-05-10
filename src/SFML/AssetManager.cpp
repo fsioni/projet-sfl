@@ -11,6 +11,8 @@ AssetManager::AssetManager()
     SetLogoTexture("data/textures/logo.png");
     SetMainFont("data/fonts/BebasNeue-Regular.ttf");
     setMainTextColor(sf::Color(245, 222, 92));
+    SetSoundTexture("data/textures/UI/volume.png");
+    SetAnimalTexture("data/textures/characters/Animal/Dog 01-3.png");
 
     AddTextureEnemy("data/textures/characters/Soldier/Soldier 01-1.png");
     AddTextureEnemy("data/textures/characters/Soldier/Soldier 01-2.png");
@@ -67,6 +69,10 @@ AssetManager::AssetManager()
     AddTextureNPC("data/textures/characters/Female/Female 04-2.png");
     AddTextureNPC("data/textures/characters/Female/Female 04-3.png");
     AddTextureNPC("data/textures/characters/Female/Female 04-4.png");
+
+    AddSoundBuffer("data/sounds/sfx/menuNav.wav");
+    AddSoundBuffer("data/sounds/sfx/walking.wav");
+    AddSoundBuffer("data/sounds/sfx/Slash_1.wav");
 }
 
 AssetManager::~AssetManager()
@@ -191,6 +197,34 @@ void AssetManager::SetLogoTexture(std::string fileTexture)
                   << std::endl;
 }
 
+void AssetManager::SetSoundTexture(std::string fileTexture) 
+{
+    std::fstream file;
+    file.open(fileTexture.c_str(), std::fstream::in);
+    if (file)
+    {
+        textureSound.loadFromFile(fileTexture);
+    }
+    else
+        std::cout << "Echec SetSoundTexture( "
+                  << fileTexture << " ) : fichier inexistant"
+                  << std::endl;
+}
+
+void AssetManager::SetAnimalTexture(std::string fileTexture) 
+{
+    std::fstream file;
+    file.open(fileTexture.c_str(), std::fstream::in);
+    if (file)
+    {
+        textureAnimal.loadFromFile(fileTexture);
+    }
+    else
+        std::cout << "Echec SetAnimalTexture( "
+                  << fileTexture << " ) : fichier inexistant"
+                  << std::endl;
+}
+
 void AssetManager::SetMainFont(std::string fileFont) 
 {
     std::fstream file;
@@ -210,23 +244,6 @@ void AssetManager::setMainTextColor(sf::Color color)
     textColor = color;
 }
 
-/*void AssetManager::AddMusic(std::string fileMusic) 
-{
-    std::fstream file;
-    file.open(fileMusic.c_str(), std::fstream::in);
-
-    sf::Music music;
-    if (file)
-    {
-        music.openFromFile(fileMusic);
-        musics.push_back(music);
-    }
-    else
-        std::cout << "Echec AddMusic("
-                  << fileMusic << ") : fichier inexistant"
-                  << std::endl;
-}
-
 void AssetManager::AddSoundBuffer(std::string fileBuffer) 
 {
         std::fstream file;
@@ -242,7 +259,7 @@ void AssetManager::AddSoundBuffer(std::string fileBuffer)
         std::cout << "Echec AddSoundBuffer("
                   << fileBuffer << ") : fichier inexistant"
                   << std::endl;
-}*/
+}
 
 const std::vector<sf::Texture> &AssetManager::GetTextureEnemy() const
 {
@@ -284,6 +301,16 @@ const sf::Texture& AssetManager::GetTextureLogo() const
     return textureLogo;
 }
 
+const sf::Texture& AssetManager::GetTextureSound() const
+{
+    return textureSound;
+}
+
+const sf::Texture& AssetManager::GetTextureAnimal() const
+{
+    return textureAnimal;
+}
+
 const sf::Font& AssetManager::GetMainFont() const
 {
     return mainFont;
@@ -292,11 +319,6 @@ const sf::Font& AssetManager::GetMainFont() const
 const sf::Color& AssetManager::GetMainTextColor() const
 {
     return textColor;
-}
-
-const std::vector<sf::Music>& AssetManager::GetMusics() const
-{
-    return musics;
 }
 
 const std::vector<sf::SoundBuffer>& AssetManager::GetSoundBuffers() const

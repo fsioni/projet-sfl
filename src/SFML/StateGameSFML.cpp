@@ -18,23 +18,27 @@ StateGameSFML::StateGameSFML(std::shared_ptr<Context> &cContext)
 
 StateGameSFML::~StateGameSFML()
 {
+    sf::Cursor pointCursor;
+    pointCursor.loadFromSystem(sf::Cursor::Arrow);
+    context->renderWin->setMouseCursor(pointCursor);
 }
 
 void StateGameSFML::Init()
 {
+    sf::Cursor pointCursor;
+    pointCursor.loadFromSystem(sf::Cursor::Arrow);
+    context->renderWin->setMouseCursor(pointCursor);
     // Chargement et lecture de la musique
     assert(music.openFromFile("data/sounds/music/01town2.wav"));
-    assert(runningBuffer.loadFromFile("data/sounds/sfx/walking.wav"));
-    assert(hitBuffer.loadFromFile("data/sounds/sfx/Slash_1.wav"));
 
     music.setVolume(70);
     music.setLoop(true);
     music.play();
-    runningSound.setBuffer(runningBuffer);
+    runningSound.setBuffer(context->assetMan->GetSoundBuffers()[1]);
     runningSound.setLoop(true);
     runningSound.stop();
 
-    hitSound.setBuffer(hitBuffer);
+    hitSound.setBuffer(context->assetMan->GetSoundBuffers()[2]);
 
     // Chargement de la tileMap
     context->assetMan->SetTileTexture(context->map->GetTileset()->GetTileMapPath());
@@ -45,6 +49,9 @@ void StateGameSFML::Init()
 
     // Chargement de la texture de l'ombre
     shadowSprite.setTexture(context->assetMan->GetShadowTexture());
+
+    // Chargement de la texture des animaux
+    animalSprite.setTexture(context->assetMan->GetTextureAnimal());
 
     // Initialisation coeur et vie pour l'UI
     heartSprite.setTexture(context->assetMan->GetTextureHeart());
@@ -205,11 +212,6 @@ void StateGameSFML::ProcessInput()
             {
                 context->isDebug = (!context->isDebug);
             }
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X))
-            {
-                context->renderWin->close();
-                context->quit = true;
-            }
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::M))
             {
                 context->isMute = (!context->isMute);
@@ -279,6 +281,7 @@ void StateGameSFML::Update()
         UpdatePlayer();
         UpdateEnemies();
         UpdateNPCs();
+        UpdateAnimals();
         
     
         // Mise à jour texte UI
@@ -381,7 +384,8 @@ void StateGameSFML::UpdatePlayer()
 
     int playerID= context->player->GetID();
     int playerX = context->player->GetPos_x();
-    int playerY = context->player->GetPos_y();
+    // + 5 pour descendre la collisionBox au niveau des pieds
+    int playerY = context->player->GetPos_y()+5;
     
 
     Box * cbPlayer = 
@@ -434,7 +438,8 @@ void StateGameSFML::UpdateEnemies()
             
             
             float posX = context->enemies[i]->GetPos_x();
-            float posY = context->enemies[i]->GetPos_y();
+            // + 5 pour descendre la collisionBox au niveau des pieds
+            float posY = context->enemies[i]->GetPos_y()+5;
             int enemyID = context->enemies[i]->GetID();
 
             if(colLayer->CollisionBoxEntityExist(enemyID)){
@@ -494,9 +499,32 @@ void StateGameSFML::UpdateNPCs(){
     }
     else if (isInRange && hasInteracted)
     {
-        npcText.setString(context->npc[npcInRange]->GetDialog());
+        std::string dialog = context->npc[npcInRange]->GetDialog();
+
+        for(int i=1; i*30< dialog.size(); i++)
+            dialog.insert(30*i, "\n");
+        
+        npcText.setString(dialog);
     }
 }
+
+void StateGameSFML::UpdateAnimals(){
+    CollisionLayer * colLayer = context->map->GetCollisionLayer();
+    for(int i=0; i<context->animals.size(); i++){
+        context->animals[i]->UpdateStateMachine(
+                context->player, colLayer,deltaTime);
+
+        float posX = context->animals[i]->GetPos_x();
+        float posY = context->animals[i]->GetPos_y();
+        int animalID = context->animals[i]->GetID();
+
+        if(colLayer->CollisionBoxEntityExist(animalID)){
+            Box * cbAnimal = colLayer->GetCollisionBoxesEntity()[animalID];
+            cbAnimal->SetPosition(posX, posY);
+        }
+    }
+}
+
 
 void StateGameSFML::Display()
 {
@@ -506,6 +534,7 @@ void StateGameSFML::Display()
     DisplayPlayer();
     DisplayEnemies();
     DisplayNPC();
+    DisplayAnimals();
 
     if (context->isDebug) //Affichage DEBUG
     {
@@ -642,14 +671,38 @@ void StateGameSFML::DisplayNPC(){
     }    
 }
 
+void StateGameSFML::DisplayAnimals(){
+    for (int i = 0; i < (int)context->animals.size(); i++)
+    {
+        int direction = context->animals[i]->GetDirection();
+        int animalX = context->animals[i]->GetPos_x() - substX - w / 2;
+        int animalY = context->animals[i]->GetPos_y() - substY - h / 2;
+
+        // Affichage de l'ombre
+        shadowSprite.setPosition(animalX, animalY);
+        shadowSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32, 32));
+        context->renderWin->draw(shadowSprite);
+
+        // Affichage des animaux
+        animalSprite.setPosition(animalX, animalY);
+        
+        if (context->animals[i]->GetIsMoving())
+            animalSprite.setTextureRect(sf::IntRect(posX, direction * 32, 32, 32));
+        else
+            animalSprite.setTextureRect(sf::IntRect(0, direction * 32, 32, 32));
+    
+        context->renderWin->draw(animalSprite);
+    }    
+}
+
 void StateGameSFML::DisplayCollisionBox(
-            Box * cb, const sf::Color & color, int id)
+            Box * cb, const sf::Color & color, int id, int offset)
 {
     sf::RectangleShape rectColBox(
-        sf::Vector2f(cb->GetWidth(), cb->GetHeight())
+        sf::Vector2f(cb->GetWidth()-2*offset, cb->GetHeight()-2*offset)
     );
-    int x = cb->GetX() - substX - 16;
-    int y = cb->GetY() - substY - 16;
+    int x = cb->GetX() - substX - offset;
+    int y = cb->GetY() - substY - offset;
 
     rectColBox.setPosition(x, y);
     rectColBox.setFillColor(color);
@@ -682,19 +735,23 @@ void StateGameSFML::DisplayDebug(){
 
     //Affichage du debug du joueur
     int playerID = context->player->GetID();
+    int offset = context->player->GetOffset();
     Box * cbPlayer = colLayer->GetCollisionBoxesEntity()[playerID];
 
     //Affichage de la collision box player
-    DisplayCollisionBox(cbPlayer, sf::Color(170, 30, 155, 200), playerID);
+    DisplayCollisionBox(cbPlayer, sf::Color(170, 30, 155, 200),
+                        playerID, offset);
     
     // CollisionBoxes enemy
     for (long unsigned int i=0; i < context->enemies.size(); i++)
     {
         int enemyID = context->enemies[i]->GetID();
+        offset = context->enemies[i]->GetOffset();
+        // On vérifie que la clé existe 
         if(colLayer->CollisionBoxEntityExist(enemyID)){
-            Box * enemyBoxe = 
-                colLayer->GetCollisionBoxesEntity()[enemyID]; 
-            DisplayCollisionBox(enemyBoxe, sf::Color(170, 30, 155, 200), enemyID);
+            Box * enemyBoxe = colLayer->GetCollisionBoxesEntity()[enemyID]; 
+            DisplayCollisionBox(enemyBoxe, sf::Color(170, 30, 155, 200),
+                                enemyID, offset);
         }
     } 
 
@@ -702,12 +759,26 @@ void StateGameSFML::DisplayDebug(){
     for (long unsigned int i=0; i < context->npc.size(); i++)
     {
         int npcID = context->npc[i]->GetID();
+        offset = context->npc[i]->GetOffset();
+        // On vérifie que la clé existe
         if(colLayer->CollisionBoxEntityExist(npcID)){
-            Box * npcBoxe = 
-                colLayer->GetCollisionBoxesEntity()[ npcID]; 
-            DisplayCollisionBox(npcBoxe, sf::Color(170, 30, 155, 200),  npcID);
+            Box * npcBoxe = colLayer->GetCollisionBoxesEntity()[ npcID]; 
+            DisplayCollisionBox(npcBoxe, sf::Color(170, 30, 155, 200),
+                                npcID, offset);
         }
     }     
+
+    // CollisionBoxes Animal
+    for(long unsigned int i = 0; i < context->animals.size(); i++){
+        int animalID = context->animals[i]->GetID();
+        offset = context->animals[i]->GetOffset();
+        // On vérifie que la clé existe
+        if(colLayer->CollisionBoxEntityExist(animalID)){
+            Box * animalBox = colLayer->GetCollisionBoxesEntity()[animalID];
+            DisplayCollisionBox(animalBox, sf::Color(170, 30, 155, 200),
+                                animalID, offset);
+        }
+    }
 
 
     // Affichage des collision boxes de la map
@@ -749,4 +820,7 @@ void StateGameSFML::Start()
     deltaClock.restart();
     fpsClock.restart();
     music.play();
+    sf::Cursor pointCursor;
+    pointCursor.loadFromSystem(sf::Cursor::Arrow);
+    context->renderWin->setMouseCursor(pointCursor);
 }

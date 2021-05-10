@@ -5,10 +5,6 @@ var dir_38d5e71d7d94264356c8b2e5ffa968dc =
     [ "Box.h", "Box_8h.html", [
       [ "Box", "classBox.html", "classBox" ]
     ] ],
-    [ "CollisionBox.cpp", "CollisionBox_8cpp.html", null ],
-    [ "CollisionBox.h", "CollisionBox_8h.html", [
-      [ "CollisionBox", "classCollisionBox.html", "classCollisionBox" ]
-    ] ],
     [ "Map.cpp", "Map_8cpp.html", null ],
     [ "Map.h", "Map_8h.html", [
       [ "Map", "classMap.html", "classMap" ]

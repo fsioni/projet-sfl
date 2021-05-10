@@ -26,7 +26,8 @@ public:
     */
     SpawnsLayer(const std::string &objectgroupTagPlayer,
                 const std::string &objectgroupTagEnnemy,
-                const std::string &objectgroupTagNPC);
+                const std::string &objectgroupTagNPC,
+                const std::string &objectgroupTagAnimal);
 
     /*! \brief Destructeur
     *
@@ -73,6 +74,12 @@ public:
     */
     std::vector<SpawnPoint> GetNPCSpawns() const;
 
+    /*! \brief Fonction permettant de récupérer les SpawnPoint des Animal.
+    *
+    *   \return Retourne le tableau dynamique de SpawnPoint des Animal.
+    */
+    std::vector<SpawnPoint> GetAnimalSpawns() const;
+
     /*! \brief Test de regression.
     *
     *  Effectue une série de test sur toutes les fonctions
@@ -81,22 +88,44 @@ public:
     */
     void Test() const;
 
+    /*! \brief Retourne un dialog du tableau.
+    *   Vérifie que l'indice demandé fait parti du tableau.
+    *   \param [in] ind : entier positif, indice du dialog dans le tableau.
+    *   \return std::string, dialog d'un NPC.
+    */
     std::string GetADialog(int ind) const;
+
+    /*! \brief Retourne une direction du tableau.
+    *   Vérifie que l'indice demandé fait parti du tableau.
+    *   \param [in] ind : entier positif, indice de la direction dans le tableau.
+    *   \return EntityDirection, direction de l'entité.
+    */
     EntityDirection GetADirection(int ind) const;
     
+    /*! \brief Convertie un angle en degré en une EntityDirection.
+    *
+    *   \param [in] angle : entier, angle à convertir en EntityDirection.
+    *   \return EntityDirection correspondant à l'angle. 
+    */
     EntityDirection AngleToDirection(int angle) const;
 
 private:
-    /*// === Données membres privées === //*/
     /*! \brief SpawnPoint du joueur. */
     SpawnPoint playerSpawn;
-    /*! \brief Les SpawnPoint des Ennemy. Un SpawnPoint = Un Ennemy */
+
+    /*! \brief Les SpawnPoint des Ennemy. Un SpawnPoint = Un Ennemy. */
     std::vector<SpawnPoint> ennemySpawns;
 
-    /*! \brief Les SpawnPoint des NPC. Un SpawnPoint = Un NPC */
+    /*! \brief Les SpawnPoint des Animal. Un SpawnPoint = Un Animal. */
+    std::vector<SpawnPoint> animalSpawns;
+
+    /*! \brief Les SpawnPoint des NPC. Un SpawnPoint = Un NPC. */
     std::vector<SpawnPoint> NpcSpawns;
 
+    /*! \brief Tableau dynamique de dialog (=phrase type) des NPC. */
     std::vector<std::string> NpcDialog;
+
+    /*! \brief Tableau dynamique de direction EntityDirection des NPC. */
     std::vector<EntityDirection> NpcDirection;
 };
 

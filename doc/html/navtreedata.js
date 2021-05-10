@@ -30,7 +30,7 @@ var NAVTREE =
       [ "Champs de donnée", "functions.html", [
         [ "Tout", "functions.html", "functions_dup" ],
         [ "Fonctions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Variables", "functions_vars.html", "functions_vars" ]
       ] ]
     ] ],
     [ "Fichiers", "files.html", [
@@ -48,8 +48,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Animal_8cpp.html",
-"classGame.html",
-"classStateMenuTxt.html#a6d8d600306adf976d152f50403d59a83"
+"classEntityWithoutHP.html#a8c7ed81350ce164f7c5206d773411bac",
+"classStateMenuSFML.html#a9536e586dc0ea952532dcd7389792a91",
+"winTxt_8cpp.html#a67191e6d920e10b82b0868cb240228ae"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

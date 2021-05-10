@@ -41,17 +41,18 @@ public:
     */
     ~NPC();
 
-    /*! \brief Permet à un NPC de donner des points de vie à un Player.
-    *
-    *   \param [in] p : Player, Player qui va recevoir les points de vie de la part du NPC.
-    *   \param [in] hpToGive : entier positif, nombre de points de vie qui vont etre attribué au Player p.
-    *
-    *   Permet à un NPC de donner des points de vie à un joueur.
-    *
+    
+    /*! \brief Retourne la phrase que le NPC peut dire au joueur.
+    *   \return std::string, la phrase type du NPC.
     */
-    void GiveHP(Player &p, int hpToGive);
-
     std::string GetDialog() const;
+
+    /*! \brief Fonction de test de regression.
+    *
+    *   Effectue une série de test pour vérifié que chaque
+    *   fonctions fait ce qu'elle doit faire.
+    */
+    void Test() const;
 
 private:
     /*// ==== Données membres privées === //*/

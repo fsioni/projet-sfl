@@ -26,7 +26,6 @@ public:
     /*! \brief Constructeur avec spécifités de l'entité en paramètre.
     *   \param [in] x : réel positif, position de l'entité sur l'axe X (horizontal).
     *   \param [in] y : réel positif, position de l'entité sur l'axe Y (vertical).
-    *   \param [in] name : chaine de caractères, nom de l'entité.
     *   \param [in] hp : entier positif, nombre de points de vie de l'entité.
     *   \param [in] dammage : entier positif, nombre de points de vie infligé lors d'une attaque.
     *   \param [in] maxHP : entier positif, maximum de points de vie qu'une entité peut avoir.
@@ -37,7 +36,7 @@ public:
     *   Créer une EntityWithHP (x, y, name, hp, dammage, maxHP, livingStatus, speed)
     *
     */
-    EntityWithHP(float x, float y, std::string name, int hp, int damage, int speed, int maxHP);
+    EntityWithHP(float x, float y, int hp, int damage, int speed, int maxHP);
 
     /*! \brief Destructeur.
     *

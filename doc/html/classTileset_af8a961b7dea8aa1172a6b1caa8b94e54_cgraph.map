@@ -1,6 +1,7 @@
 <map id="Tileset::Tileset" name="Tileset::Tileset">
 <area shape="rect" id="node1" title="Constructeur par copie." alt="" coords="5,31,124,57"/>
-<area shape="rect" id="node2" href="$tmxParsing_8cpp.html#a7f798bd46c19c61d7e3f0356018bc0c9" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="172,5,308,32"/>
-<area shape="rect" id="node3" href="$tmxParsing_8cpp.html#a01a1670c28de93ece461380677bb7d89" title=" " alt="" coords="188,56,292,83"/>
-<area shape="rect" id="node4" href="$tmxParsing_8cpp.html#a8fc864f80bb4b71341f7189e9a5c9bcd" title=" " alt="" coords="356,56,444,83"/>
+<area shape="rect" id="node2" href="$tmxParsing_8cpp.html#a11672fc9dccbc12b5853edc3de6b9dbc" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="375,5,513,32"/>
+<area shape="rect" id="node3" href="$tmxParsing_8cpp.html#a0306f58af4bcbdd0cb9969f128a4313e" title="Retourne le contenu de la balise ouvrante." alt="" coords="196,81,303,108"/>
+<area shape="rect" id="node5" href="$tmxParsing_8cpp.html#a9e759647152efbca273187768f806d1a" title="Retourne la valeur d&#39;un attribut d&#39;un balise XML." alt="" coords="172,31,327,57"/>
+<area shape="rect" id="node4" href="$tmxParsing_8cpp.html#abbe85c0a596d406c2dd903fa66eb961b" title="Retourne ce qu&#39;il y entre la balise ouvrante et fermante (avec les balises)." alt="" coords="399,81,489,108"/>
 </map>

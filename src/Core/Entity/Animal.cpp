@@ -1,42 +1,75 @@
 #include "Animal.h"
 #include "EntityWithoutHP.h"
+#include "FiniteStateMachine/AnimalStates.h"
 
-Animal::Animal() : EntityWithoutHP() {}
+Animal::Animal() : EntityWithoutHP() {
+    stateMachine = new StateMachine<Animal>(this);
+    stateMachine->SetCurrentState(AnimalWalking::Instance());
 
-Animal::Animal(float x, float y, std::string name) : EntityWithoutHP::EntityWithoutHP(x, y, name) {}
-
-Animal::~Animal()
-{
-
-    x = 0.0;
-    y = 0.0;
-    name = "deletedAnimal";
+    SetTimeNextChangeDirection();
 }
 
-EntityDirection Animal::RandDirection()
-{
+Animal::Animal(float x, float y, float speed) :
+     EntityWithoutHP(x, y, speed) {
+    stateMachine = new StateMachine<Animal>(this);
+    stateMachine->SetCurrentState(AnimalWalking::Instance());
 
-    int temp = RandNumberGenerator(1, 4);
-
-    return EntityDirection(temp);
+    SetTimeNextChangeDirection();
 }
 
-void Animal::MoveRandomly(float vx, float vy)
+Animal::~Animal(){
+}
+
+void Animal::UpdateStateMachine(std::unique_ptr<Player> &player_,
+                               CollisionLayer *collision, int dt)
 {
+    stateMachine->UpdateCurrentState(player_, collision, dt);
+}
 
-    x += vx * 1.5;
-    y += vy * 1.5;
+StateMachine<Animal> *Animal::GetStateMachine() const{
+    return stateMachine;
+}
 
-    if (x < 0.0)
+void Animal::RandDirection(){
+    int nb = rand() % 4;
+    switch (nb)
     {
-        x = 0.0;
+    case 0:
+        direction = Down;
+        break;
+    case 1:
+        direction = Left;
+        break;
+    case 2:
+        direction = Right;
+        break;
+    case 3:
+        direction = Up;
+        break;
+
+    default:
+        direction = Right;
+        break;
     }
-    if (y < 0.0)
+}
+
+void Animal::SetTimeNextChangeDirection(){
+    int min = 3;
+    int max = 7;
+    double timer = time(NULL);
+    timeNextChangeDirection = timer + rand() % (max - min) + min;
+}
+
+void Animal::ChangeDirection(bool collision){
+    double timer = time(NULL);
+    if (collision)
     {
-        y = 0.0;
+        RandDirection();
+        SetTimeNextChangeDirection();
     }
-
-    EntityDirection temporary = RandDirection();
-
-    SetDirection(temporary);
+    else if (timer > timeNextChangeDirection)
+    {
+        RandDirection();
+        SetTimeNextChangeDirection();
+    }
 }

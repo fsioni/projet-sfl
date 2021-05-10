@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('classStateMenuSFML.html',''); initResi
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pri-methods">Fonctions membres privées</a> &#124;
 <a href="#pri-attribs">Attributs privés</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe StateMenuSFML</div>  </div>
@@ -99,7 +100,7 @@ Graphe d'héritage de StateMenuSFML:</div>
 <div class="dyncontent">
 <div class="center"><img src="classStateMenuSFML__inherit__graph.png" border="0" usemap="#StateMenuSFML_inherit__map" alt="Inheritance graph"/></div>
 <map name="StateMenuSFML_inherit__map" id="StateMenuSFML_inherit__map">
-<area shape="rect" title="Classe représentant l&#39;état menu du mode graphique (SFML)" alt="" coords="5,233,195,736"/>
+<area shape="rect" title="Classe représentant l&#39;état menu du mode graphique (SFML)" alt="" coords="5,233,195,824"/>
 <area shape="rect" href="classState.html" title="Classe représentant un état de l&#39;application." alt="" coords="35,5,165,185"/>
 </map>
 </div>
@@ -136,17 +137,29 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a9ddc1df6f998184d6477b48fab90281c inherit pub_methods_classState"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classState.html#a9ddc1df6f998184d6477b48fab90281c">~State</a> ()</td></tr>
 <tr class="separator:a9ddc1df6f998184d6477b48fab90281c inherit pub_methods_classState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Fonctions membres privées</h2></td></tr>
+<tr class="memitem:afb434003460b3a74ad4c14de4682104d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#afb434003460b3a74ad4c14de4682104d">OnClick</a> ()</td></tr>
+<tr class="memdesc:afb434003460b3a74ad4c14de4682104d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue les actions nécessaires lors du clic.  <a href="classStateMenuSFML.html#afb434003460b3a74ad4c14de4682104d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afb434003460b3a74ad4c14de4682104d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
 <tr class="memitem:a7e476da3bc66facd03e4bff33cf6553e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structContext.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#a7e476da3bc66facd03e4bff33cf6553e">context</a></td></tr>
 <tr class="memdesc:a7e476da3bc66facd03e4bff33cf6553e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Etat courant du programme.  <a href="classStateMenuSFML.html#a7e476da3bc66facd03e4bff33cf6553e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a7e476da3bc66facd03e4bff33cf6553e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcd4cd5d310506bedd9e569f70b68db1"><td class="memItemLeft" align="right" valign="top">sf::Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#abcd4cd5d310506bedd9e569f70b68db1">textFont</a></td></tr>
-<tr class="memdesc:abcd4cd5d310506bedd9e569f70b68db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Police d'ecriture des textes.  <a href="classStateMenuSFML.html#abcd4cd5d310506bedd9e569f70b68db1">Plus de détails...</a><br /></td></tr>
-<tr class="separator:abcd4cd5d310506bedd9e569f70b68db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3a40f5cd81e052c62366484c9ce9e54"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#ad3a40f5cd81e052c62366484c9ce9e54">gameTitle</a></td></tr>
-<tr class="memdesc:ad3a40f5cd81e052c62366484c9ce9e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texte du titre du jeu.  <a href="classStateMenuSFML.html#ad3a40f5cd81e052c62366484c9ce9e54">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ad3a40f5cd81e052c62366484c9ce9e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cafe5bea4a577978ea605da29081d80"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#a6cafe5bea4a577978ea605da29081d80">bgSprite</a></td></tr>
+<tr class="memdesc:a6cafe5bea4a577978ea605da29081d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite du fond d'écran.  <a href="classStateMenuSFML.html#a6cafe5bea4a577978ea605da29081d80">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6cafe5bea4a577978ea605da29081d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ecb1e01e7a1f6e75280c4d478f91457"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#a4ecb1e01e7a1f6e75280c4d478f91457">logoSprite</a></td></tr>
+<tr class="memdesc:a4ecb1e01e7a1f6e75280c4d478f91457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite du logo du jeu.  <a href="classStateMenuSFML.html#a4ecb1e01e7a1f6e75280c4d478f91457">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4ecb1e01e7a1f6e75280c4d478f91457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a860698da66796bc8f0ffb240691fbd"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#a3a860698da66796bc8f0ffb240691fbd">soundSprite</a></td></tr>
+<tr class="memdesc:a3a860698da66796bc8f0ffb240691fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite de l'icone de son du jeu.  <a href="classStateMenuSFML.html#a3a860698da66796bc8f0ffb240691fbd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3a860698da66796bc8f0ffb240691fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cf6d9ece6ce58c25d2073eaf5c54b11"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#a7cf6d9ece6ce58c25d2073eaf5c54b11">menuTitle</a></td></tr>
+<tr class="memdesc:a7cf6d9ece6ce58c25d2073eaf5c54b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texte du menu du jeu.  <a href="classStateMenuSFML.html#a7cf6d9ece6ce58c25d2073eaf5c54b11">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7cf6d9ece6ce58c25d2073eaf5c54b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a837a24f89795cc7629e02b6f3756996e"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#a837a24f89795cc7629e02b6f3756996e">playButton</a></td></tr>
 <tr class="memdesc:a837a24f89795cc7629e02b6f3756996e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texte du bouton jouer.  <a href="classStateMenuSFML.html#a837a24f89795cc7629e02b6f3756996e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a837a24f89795cc7629e02b6f3756996e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,6 +187,12 @@ Attributs privés</h2></td></tr>
 <tr class="memitem:a0b3b520dfa49ea49e7fddd4eea8af737"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#a0b3b520dfa49ea49e7fddd4eea8af737">quitSubMenuText</a></td></tr>
 <tr class="memdesc:a0b3b520dfa49ea49e7fddd4eea8af737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texte indiquant la touche pour quitter.  <a href="classStateMenuSFML.html#a0b3b520dfa49ea49e7fddd4eea8af737">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a0b3b520dfa49ea49e7fddd4eea8af737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69422975eed08f2798bf4ec27215bbce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#a69422975eed08f2798bf4ec27215bbce">isSoundButSelected</a></td></tr>
+<tr class="memdesc:a69422975eed08f2798bf4ec27215bbce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si le bouton "son" est selectionné  <a href="classStateMenuSFML.html#a69422975eed08f2798bf4ec27215bbce">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a69422975eed08f2798bf4ec27215bbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9287ea3403a3a61890141f6d3c9181c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#ae9287ea3403a3a61890141f6d3c9181c">isSoundButPressed</a></td></tr>
+<tr class="memdesc:ae9287ea3403a3a61890141f6d3c9181c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si le bouton "son" est pressé  <a href="classStateMenuSFML.html#ae9287ea3403a3a61890141f6d3c9181c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae9287ea3403a3a61890141f6d3c9181c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a885d2da43322469985ecbfc8640407ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#a885d2da43322469985ecbfc8640407ee">isPlayButSelected</a></td></tr>
 <tr class="memdesc:a885d2da43322469985ecbfc8640407ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique si le bouton "jouer" est selectionné  <a href="classStateMenuSFML.html#a885d2da43322469985ecbfc8640407ee">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a885d2da43322469985ecbfc8640407ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,12 +217,15 @@ Attributs privés</h2></td></tr>
 <tr class="memitem:a3760501ce2833d0500ad8b0d51d4853a"><td class="memItemLeft" align="right" valign="top">sf::Music&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#a3760501ce2833d0500ad8b0d51d4853a">music</a></td></tr>
 <tr class="memdesc:a3760501ce2833d0500ad8b0d51d4853a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Musique du menu.  <a href="classStateMenuSFML.html#a3760501ce2833d0500ad8b0d51d4853a">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3760501ce2833d0500ad8b0d51d4853a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab77c5983ba1a2c8aaf90d8b1f9fceeb5"><td class="memItemLeft" align="right" valign="top">sf::SoundBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#ab77c5983ba1a2c8aaf90d8b1f9fceeb5">buffer</a></td></tr>
-<tr class="memdesc:ab77c5983ba1a2c8aaf90d8b1f9fceeb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Son tampon de l'effet sonore du menu.  <a href="classStateMenuSFML.html#ab77c5983ba1a2c8aaf90d8b1f9fceeb5">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ab77c5983ba1a2c8aaf90d8b1f9fceeb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace70a5b884abadeb15a56da77beada02"><td class="memItemLeft" align="right" valign="top">sf::Sound&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#ace70a5b884abadeb15a56da77beada02">sound</a></td></tr>
 <tr class="memdesc:ace70a5b884abadeb15a56da77beada02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effet sonore du menu.  <a href="classStateMenuSFML.html#ace70a5b884abadeb15a56da77beada02">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ace70a5b884abadeb15a56da77beada02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e1000813697e10dc5758a2a665a3e60"><td class="memItemLeft" align="right" valign="top">sf::Cursor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#a2e1000813697e10dc5758a2a665a3e60">handCursor</a></td></tr>
+<tr class="memdesc:a2e1000813697e10dc5758a2a665a3e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Curseur de main.  <a href="classStateMenuSFML.html#a2e1000813697e10dc5758a2a665a3e60">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2e1000813697e10dc5758a2a665a3e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca73805ba738b16220ca0dbe5907024"><td class="memItemLeft" align="right" valign="top">sf::Cursor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStateMenuSFML.html#a2ca73805ba738b16220ca0dbe5907024">pointCursor</a></td></tr>
+<tr class="memdesc:a2ca73805ba738b16220ca0dbe5907024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Curseur de pointage.  <a href="classStateMenuSFML.html#a2ca73805ba738b16220ca0dbe5907024">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2ca73805ba738b16220ca0dbe5907024"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe représentant l'état menu du mode graphique (SFML) </p>
@@ -321,6 +343,42 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
+<a id="afb434003460b3a74ad4c14de4682104d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb434003460b3a74ad4c14de4682104d">&#9670;&nbsp;</a></span>OnClick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateMenuSFML::OnClick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Effectue les actions nécessaires lors du clic. </p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateMenuSFML_afb434003460b3a74ad4c14de4682104d_icgraph.png" border="0" usemap="#classStateMenuSFML_afb434003460b3a74ad4c14de4682104d_icgraph" alt=""/></div>
+<map name="classStateMenuSFML_afb434003460b3a74ad4c14de4682104d_icgraph" id="classStateMenuSFML_afb434003460b3a74ad4c14de4682104d_icgraph">
+<area shape="rect" title="Effectue les actions nécessaires lors du clic." alt="" coords="272,5,457,32"/>
+<area shape="rect" href="classStateMenuSFML.html#ae869b58348e95261a94c868fdcbef771" title="Fonction de gestion des touches du State." alt="" coords="5,5,224,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aaff0bf6c550bc13eea90abb79f51af12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaff0bf6c550bc13eea90abb79f51af12">&#9670;&nbsp;</a></span>Pause()</h2>
 
@@ -378,6 +436,15 @@ Attributs privés</h2></td></tr>
 <p>Une touche peut avoir un comportement différent selon le <a class="el" href="classState.html" title="Classe représentant un état de l&#39;application.">State</a> Fonction virtuelle pure : doit être implémentée par l'enfant </p>
 
 <p>Implémente <a class="el" href="classState.html#a57fe7b3edd9223a68e4e55c039feb5d4">State</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="classStateMenuSFML_ae869b58348e95261a94c868fdcbef771_cgraph.png" border="0" usemap="#classStateMenuSFML_ae869b58348e95261a94c868fdcbef771_cgraph" alt=""/></div>
+<map name="classStateMenuSFML_ae869b58348e95261a94c868fdcbef771_cgraph" id="classStateMenuSFML_ae869b58348e95261a94c868fdcbef771_cgraph">
+<area shape="rect" title="Fonction de gestion des touches du State." alt="" coords="5,5,224,32"/>
+<area shape="rect" href="classStateMenuSFML.html#afb434003460b3a74ad4c14de4682104d" title="Effectue les actions nécessaires lors du clic." alt="" coords="272,5,457,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -466,8 +533,8 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a id="ab77c5983ba1a2c8aaf90d8b1f9fceeb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab77c5983ba1a2c8aaf90d8b1f9fceeb5">&#9670;&nbsp;</a></span>buffer</h2>
+<a id="a6cafe5bea4a577978ea605da29081d80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cafe5bea4a577978ea605da29081d80">&#9670;&nbsp;</a></span>bgSprite</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,7 +543,7 @@ Attributs privés</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">sf::SoundBuffer StateMenuSFML::buffer</td>
+          <td class="memname">sf::Sprite StateMenuSFML::bgSprite</td>
         </tr>
       </table>
   </td>
@@ -486,7 +553,7 @@ Attributs privés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Son tampon de l'effet sonore du menu. </p>
+<p>Sprite du fond d'écran. </p>
 
 </div>
 </div>
@@ -562,8 +629,8 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a id="ad3a40f5cd81e052c62366484c9ce9e54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3a40f5cd81e052c62366484c9ce9e54">&#9670;&nbsp;</a></span>gameTitle</h2>
+<a id="a2e1000813697e10dc5758a2a665a3e60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e1000813697e10dc5758a2a665a3e60">&#9670;&nbsp;</a></span>handCursor</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -572,7 +639,7 @@ Attributs privés</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">sf::Text StateMenuSFML::gameTitle</td>
+          <td class="memname">sf::Cursor StateMenuSFML::handCursor</td>
         </tr>
       </table>
   </td>
@@ -582,7 +649,7 @@ Attributs privés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Texte du titre du jeu. </p>
+<p>Curseur de main. </p>
 
 </div>
 </div>
@@ -802,6 +869,102 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
+<a id="ae9287ea3403a3a61890141f6d3c9181c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9287ea3403a3a61890141f6d3c9181c">&#9670;&nbsp;</a></span>isSoundButPressed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateMenuSFML::isSoundButPressed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si le bouton "son" est pressé </p>
+
+</div>
+</div>
+<a id="a69422975eed08f2798bf4ec27215bbce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69422975eed08f2798bf4ec27215bbce">&#9670;&nbsp;</a></span>isSoundButSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateMenuSFML::isSoundButSelected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique si le bouton "son" est selectionné </p>
+
+</div>
+</div>
+<a id="a4ecb1e01e7a1f6e75280c4d478f91457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ecb1e01e7a1f6e75280c4d478f91457">&#9670;&nbsp;</a></span>logoSprite</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Sprite StateMenuSFML::logoSprite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sprite du logo du jeu. </p>
+
+</div>
+</div>
+<a id="a7cf6d9ece6ce58c25d2073eaf5c54b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cf6d9ece6ce58c25d2073eaf5c54b11">&#9670;&nbsp;</a></span>menuTitle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text StateMenuSFML::menuTitle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Texte du menu du jeu. </p>
+
+</div>
+</div>
 <a id="ab1f81317b1ccd5cb04dee3fa324f5c67"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab1f81317b1ccd5cb04dee3fa324f5c67">&#9670;&nbsp;</a></span>moveText</h2>
 
@@ -898,6 +1061,30 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
+<a id="a2ca73805ba738b16220ca0dbe5907024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca73805ba738b16220ca0dbe5907024">&#9670;&nbsp;</a></span>pointCursor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Cursor StateMenuSFML::pointCursor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Curseur de pointage. </p>
+
+</div>
+</div>
 <a id="a0b3b520dfa49ea49e7fddd4eea8af737"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b3b520dfa49ea49e7fddd4eea8af737">&#9670;&nbsp;</a></span>quitSubMenuText</h2>
 
@@ -946,8 +1133,8 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a id="abcd4cd5d310506bedd9e569f70b68db1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcd4cd5d310506bedd9e569f70b68db1">&#9670;&nbsp;</a></span>textFont</h2>
+<a id="a3a860698da66796bc8f0ffb240691fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a860698da66796bc8f0ffb240691fbd">&#9670;&nbsp;</a></span>soundSprite</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -956,7 +1143,7 @@ Attributs privés</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">sf::Font StateMenuSFML::textFont</td>
+          <td class="memname">sf::Sprite StateMenuSFML::soundSprite</td>
         </tr>
       </table>
   </td>
@@ -966,7 +1153,7 @@ Attributs privés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Police d'ecriture des textes. </p>
+<p>Sprite de l'icone de son du jeu. </p>
 
 </div>
 </div>

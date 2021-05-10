@@ -1,19 +1,16 @@
 <map id="Map::Test" name="Map::Test">
-<area shape="rect" id="node1" title="Fonction de test de la classe Map." alt="" coords="5,401,89,427"/>
-<area shape="rect" id="node2" href="$classCollisionLayer.html#a9238c6f5d6a081cb42bb621eb4340435" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="154,5,355,47"/>
+<area shape="rect" id="node1" title="Fonction de test de la classe Map." alt="" coords="5,325,89,351"/>
+<area shape="rect" id="node2" href="$classCollisionLayer.html#a620b4ce21e4699a1a067ffaa60848667" title="Fonction permettant de récupérer les CollisionBox de l&#39;objet." alt="" coords="154,5,355,47"/>
 <area shape="rect" id="node3" href="$classTileset.html#ad636679bf81f2aa5ad00beff2d5c9ef2" title="Retourne column." alt="" coords="181,71,328,98"/>
 <area shape="rect" id="node4" href="$classSpawnsLayer.html#a7975487310f901bd55794ef0d72e0f09" title="Fonction permettant de récupérer les SpawnPoint des Ennemy." alt="" coords="137,122,372,149"/>
-<area shape="rect" id="node5" href="$classBox.html#ad7d6b9ab23698fedd6637fe0a4c40fb3" title="Retourne height." alt="" coords="194,173,315,199"/>
-<area shape="rect" id="node6" href="$classTileset.html#a8015df88b62c9b7cf6e19c55dc398f69" title="Retourne name." alt="" coords="187,223,323,250"/>
-<area shape="rect" id="node7" href="$classSpawnsLayer.html#a7145285c09080eaf00fb9c621a4ac3a6" title="Fonction permettant de récupérer les SpawnPoint des NPC." alt="" coords="147,274,363,301"/>
-<area shape="rect" id="node8" href="$classSpawnsLayer.html#a1da8dbff59ce20770ef7a33c78823147" title="Fonction permettant de récupérer le SpawnPoint du joueur." alt="" coords="143,325,366,351"/>
-<area shape="rect" id="node9" href="$classTileset.html#a060020f7a21a85d854f1b8fdf6ea192a" title="Retourne tileCount." alt="" coords="175,375,334,402"/>
-<area shape="rect" id="node10" href="$classTileset.html#a586d2ecc83c354bcc981e49ed579d359" title="Retourne tileHeight." alt="" coords="173,426,337,453"/>
-<area shape="rect" id="node11" href="$classTileset.html#adffdd1eda76615393d0d6b085ac61cf9" title="Retourne tileMapHeight." alt="" coords="159,477,351,503"/>
-<area shape="rect" id="node12" href="$classTileset.html#a937a18ca2f53d7261d3eff752e8afb91" title="Retourne tileMapPath." alt="" coords="166,527,343,554"/>
-<area shape="rect" id="node13" href="$classTileset.html#ae109a25be64886c5139162186da7919b" title="Retourne tileMapWidth." alt="" coords="161,578,348,605"/>
-<area shape="rect" id="node14" href="$classTileset.html#a91f1063653764e3e799a0331336d9e00" title="Retourne tileWidth." alt="" coords="175,629,334,655"/>
-<area shape="rect" id="node15" href="$classBox.html#ac9e53c8e2f33ef5ef0a11c48f979ab04" title="Retourne width." alt="" coords="197,679,313,706"/>
-<area shape="rect" id="node16" href="$classBox.html#ade06873a13d2d1df5eb5d2cfc2a16d29" title="Retourne x." alt="" coords="211,730,298,757"/>
-<area shape="rect" id="node17" href="$classBox.html#af86b090508898469761c0d61c8230133" title="Retourne y." alt="" coords="211,781,298,807"/>
+<area shape="rect" id="node5" href="$classSpawnsLayer.html#a7145285c09080eaf00fb9c621a4ac3a6" title="Fonction permettant de récupérer les SpawnPoint des NPC." alt="" coords="147,173,363,199"/>
+<area shape="rect" id="node6" href="$classSpawnsLayer.html#a1da8dbff59ce20770ef7a33c78823147" title="Fonction permettant de récupérer le SpawnPoint du joueur." alt="" coords="143,223,366,250"/>
+<area shape="rect" id="node7" href="$classTileset.html#a060020f7a21a85d854f1b8fdf6ea192a" title="Retourne tileCount." alt="" coords="175,274,334,301"/>
+<area shape="rect" id="node8" href="$classTileset.html#a586d2ecc83c354bcc981e49ed579d359" title="Retourne tileHeight." alt="" coords="173,325,337,351"/>
+<area shape="rect" id="node9" href="$classTileset.html#adffdd1eda76615393d0d6b085ac61cf9" title="Retourne tileMapHeight." alt="" coords="159,375,351,402"/>
+<area shape="rect" id="node10" href="$classTileset.html#a937a18ca2f53d7261d3eff752e8afb91" title="Retourne tileMapPath." alt="" coords="166,426,343,453"/>
+<area shape="rect" id="node11" href="$classTileset.html#ae109a25be64886c5139162186da7919b" title="Retourne tileMapWidth." alt="" coords="161,477,348,503"/>
+<area shape="rect" id="node12" href="$classTileset.html#a91f1063653764e3e799a0331336d9e00" title="Retourne tileWidth." alt="" coords="175,527,334,554"/>
+<area shape="rect" id="node13" href="$classSpawnPoint.html#a791c9309814f32726d2e53b40d2e69b6" title="Retourne x." alt="" coords="185,578,324,605"/>
+<area shape="rect" id="node14" href="$classSpawnPoint.html#ac366cdb682979658afa83c39aa4f1b0f" title="Retourne y." alt="" coords="186,629,323,655"/>
 </map>

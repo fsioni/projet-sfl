@@ -45,18 +45,9 @@ public:
     */
     Tileset &operator=(const Tileset &ts);
 
-    // TODO : soit à supprimer ou à documenter => en discuter avec les autres
-    void SetTileWidth(int tw);
-    void SetTileHeight(int th);
-    void SetTileCount(int tc);
-    void SetColumn(int col);
-    void SetTileMapPath(std::string tmp);
-    void SetTileMapWidth(int tmw);
-    void SetTileMapHeight(int tmh);
-
     /*! \brief Retourne tileWidth
     *
-    * \return La largeur des tuiles
+    *   \return La largeur des tuiles
     */
     int GetTileWidth() const;
 
